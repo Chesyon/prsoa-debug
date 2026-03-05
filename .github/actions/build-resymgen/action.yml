@@ -1,27 +1,23 @@
 name: Build resymgen
 description: Build and install resymgen (release profile and tests) or retrieve it from cache
+inputs:
+  version:
+    description: The version of resymgen to install
+    required: true
+    default: 'v0.6.0'
 runs:
   using: composite
   steps:
     - name: Check cache
       id: cache-lookup
-      uses: actions/cache@v3
+      uses: actions/cache@v4
       with:
         path: |
           ~/.cargo/bin/resymgen
           ~/.cargo/registry
           ~/.cargo/git
-          target
-        key: cache-v3_${{ runner.os }}-${{ hashFiles('Cargo.toml') }}-${{ hashFiles('src/**') }}
-    - name: Build resymgen
-      run: cargo build --release --verbose
-      shell: bash
-      if: steps.cache-lookup.outputs.cache-hit != 'true'
-    - name: Build tests
-      run: cargo build --tests --verbose
-      shell: bash
-      if: steps.cache-lookup.outputs.cache-hit != 'true'
+        key: cache-v4_${{ runner.os }}-${{ inputs.version }}
     - name: Install
-      run: cargo install --path .
+      run: cargo install resymgen --version ${{ inputs.version }}
       shell: bash
       if: steps.cache-lookup.outputs.cache-hit != 'true'

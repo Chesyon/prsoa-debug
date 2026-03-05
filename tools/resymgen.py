@@ -21,10 +21,10 @@ class Resymgen:
     CARGO_MANIFEST_PATH_ARG = f"--manifest-path={MANIFEST_PATH}"
 
     def __init__(self):
-        # Eagerly build resymgen so it doesn't happen lazily on the first run
+        # Install resymgen
         # (this also confirms that cargo is available in the user environment)
         subprocess.run(
-            ["cargo", "build", "--release", "--quiet", Resymgen.CARGO_MANIFEST_PATH_ARG]
+            ["cargo", "install", "--quiet", "resymgen"]
         ).check_returncode()
 
     def __getattr__(self, command):
@@ -41,11 +41,7 @@ class Resymgen:
         def run_command(args, **kwargs):
             """Same API as subprocess.run"""
             subprocess_args = [
-                "cargo",
-                "run",
-                "--release",
-                Resymgen.CARGO_MANIFEST_PATH_ARG,
-                "--",
+                "resymgen"
                 command,
             ]
             if type(args) == list:

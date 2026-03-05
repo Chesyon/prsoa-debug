@@ -26,7 +26,7 @@ Additionally, blocks can define _subregions_. A subregion is a separate file spl
 - [`literals.yml`](literals.yml) is a special file for recording the addresses of interesting values that are _arguments for a specific instruction_ rather than standalone data. These "literals" (or "immediate values" in assembly jargon) are often embedded within basic instructions like `mov`, `add`, and `sub`, and hence aren't real symbols, but may be useful regardless. For example, the starting levels for the hero and partner are encoded as literals within the ARM9 binary.
 
 ## Contributing
-If you want to add new symbols (or modify existing ones), all you have to do is edit the appropriate YAML files (although you might also want to add [new types](../headers/README.md#contributing) alongside new symbols, especially for functions). The YAML specification for symbol files should hopefully be intuitive to understand, but you can see the full specification with examples in the [`resymgen` README](../docs/resymgen.md#the-resymgen-yaml-specification).
+If you want to add new symbols (or modify existing ones), all you have to do is edit the appropriate YAML files (although you might also want to add [new types](../headers/README.md#contributing) alongside new symbols, especially for functions). The YAML specification for symbol files should hopefully be intuitive to understand, but you can see the full specification with examples in the [`resymgen` README](https://github.com/UsernameFodder/pmdsky-debug/blob/master/docs/resymgen.md#the-resymgen-yaml-specification).
 
 The following sections describe a few principles and conventions to follow when adding new symbols.
 
@@ -111,9 +111,9 @@ These are enforced by the tests, which also run automatically via GitHub Actions
 ## Local development environment
 **This is not required to contribute**. However, you might find that setting this up makes editing the symbol tables even easier, depending on your preferences. Setting up a development environment is as simple as [installing Rust](https://www.rust-lang.org/tools/install). Once you've installed Rust, you can build and run `resymgen` to manipulate the symbol tables locally. All the following instructions assume a command line environment in which the `cargo` command is available, and the working directory is this directory.
 
-To make things easy, you can run `cargo install`. This will allow you to run the `resymgen` command directly from the command line. If you would prefer not to actually install the package, you can also run the command via `cargo run` (replace any instance of `resymgen` in the instructions below with `cargo run --release --`).
+Running`cargo install resymgen`  will allow you to run the `resymgen` command directly from the command line.
 
-Refer to the [`resymgen` README](../docs/resymgen.md#usage) for a general overview of the `resymgen` command line utility. For convenience, here are the commands you'll want to run when you're contributing to the `symbols/` directory:
+Refer to the [`resymgen` README](https://github.com/UsernameFodder/pmdsky-debug/blob/master/docs/resymgen.md#usage) for a general overview of the `resymgen` command line utility. For convenience, here are the commands you'll want to run when you're contributing to the `symbols/` directory:
 
 - Run the formatter: `resymgen fmt -r <symbol files>`
     - On Unix shells that support globbing (the `*` operator), you can use `*.yml` in place of `<symbol files>` to format everything in the directory.

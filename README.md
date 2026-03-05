@@ -4,7 +4,6 @@ This project is in a ***VERY*** early state. This is directly forked from pmdsky
 # prsoa-debug
 [![Release](https://github.com/Chesyon/prsoa-debug/actions/workflows/release.yml/badge.svg)](https://github.com/Chesyon/prsoa-debug/releases/latest)
 [![GitHub](https://img.shields.io/github/license/Chesyon/prsoa-debug)](LICENSE.txt)
-[![Crates.io](https://img.shields.io/crates/v/resymgen)](https://crates.io/crates/resymgen)
 
 Debug information for reverse engineering _Pokémon Ranger: Shadows of Almia_ (SoA), with accompanying documentation.
 
@@ -17,7 +16,7 @@ The debug information in this repository is split into two complementary pieces:
 In addition, this repository contains some things in support of the debug information:
 
 - Guides and documentation related to reverse engineering _Shadows of Almia_, particularly for beginners. These can be found in the [`docs/`](docs) directory.
-- [`resymgen`](docs/resymgen.md), the Rust package used to transpile the symbol tables from YAML to other formats.
+- [`resymgen`](https://github.com/UsernameFodder/pmdsky-debug/blob/master/docs/resymgen.md), the Rust package used to transpile the symbol tables from YAML to other formats.
 - Miscellaneous reverse engineering tools in the [`tools/`](tools) directory.
 
 ## What's _not_ in this repository?
@@ -50,7 +49,7 @@ This makes it hard to go searching for "just one thing" about how the game works
 2. Getting information from someone else through hand-written documentation, or by asking them directly.
 3. Tedious reverse engineering work, starting with the simplest functions and building up a knowledge base from scratch.
 
-The first method has many advantages: debug information is precise, and under ideal circumstances can be imported automatically into various reverse engineering tools. However, the SoA community has traditionally used the latter two methods due to a variety of [constraints](docs/resymgen.md#motivation). The last method is particularly unideal, since it leads to a lot of duplicated work among different community members.
+The first method has many advantages: debug information is precise, and under ideal circumstances can be imported automatically into various reverse engineering tools. However, the SoA community has traditionally used the latter two methods due to a variety of [constraints](https://github.com/UsernameFodder/pmdsky-debug/blob/master/docs/resymgen.md#motivation). The last method is particularly unideal, since it leads to a lot of duplicated work among different community members.
 
 This repository is an attempt to implement the first sharing method (machine-readable debug information), in a form that's still easy to make contributions to, and can also simultaneously serve as documentation. If you want to help out, [contributions](docs/contributing.md) are welcome!
 

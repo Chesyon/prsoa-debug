@@ -15,8 +15,6 @@ env:
   CARGO_TERM_COLOR: always
 
 jobs:
-  check-resymgen:
-    uses: Chesyon/prsoa-debug/.github/workflows/check-resymgen.yml@master
   check-symbols:
     uses: Chesyon/prsoa-debug/.github/workflows/check-symbols.yml@master
     with:
@@ -35,7 +33,6 @@ jobs:
   generate-and-deploy:
     runs-on: ubuntu-latest
     needs:
-      - check-resymgen
       - check-symbols
       - check-headers
       - check-symbol-header-sync
