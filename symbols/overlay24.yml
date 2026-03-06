@@ -12,7 +12,80 @@ overlay24:
     NA: 0x940
     JP: 0x940
   description: Unknown.
-  functions: []
+  functions:
+    - name: UNK_FUN_overlay_24__0211c9e0
+      address:
+        NA: 0x0211C9E0
+      description: |-
+        Use unknown.
+        
+        r0: undefined4 pointer
+    - name: UNK_FUN_overlay_24__0211ca18
+      address:
+        NA: 0x0211CA18
+      description: |-
+        Use unknown.
+        
+        r0: undefined4 
+    - name: UNK_FUN_overlay_24__0211ca2c
+      address:
+        NA: 0x0211CA2C
+      description: |-
+        Use unknown.
+        
+        r0: undefined4 
+    - name: UNK_FUN_overlay_24__0211ca48
+      address:
+        NA: 0x0211CA48
+      description: |-
+        Use unknown.
+        
+        r0: int32_t 
+        r1: undefined4 
+        r2: undefined4 
+        r3: undefined4 
+    - name: UNK_FUN_overlay_24__0211d008
+      address:
+        NA: 0x0211D008
+      description: |-
+        Does nothing but return. Likely a debug hook for the above function.
+        
+        No params. 
+    - name: UNK_FUN_overlay_24__0211d00c
+      address:
+        NA: 0x0211D00C
+      description: |-
+        Does nothing but return. Likely a debug hook for the above function.
+        
+        No params. 
+    - name: UNK_FUN_overlay_24__0211d010
+      address:
+        NA: 0x0211D010
+      description: |-
+        Use unknown.
+        
+        No params. 
+    - name: UNK_FUN_overlay_24__0211d134
+      address:
+        NA: 0x0211D134
+      description: |-
+        Use unknown.
+        
+        r0: int32_t 
+    - name: UNK_FUN_overlay_24__0211d224
+      address:
+        NA: 0x0211D224
+      description: |-
+        Use unknown.
+        
+        r0: int32_t 
+    - name: UNK_FUN_overlay_24__0211d29c
+      address:
+        NA: 0x0211D29C
+      description: |-
+        Use unknown.
+        
+        No params. 
   data:
     - name: OV24_STATIC_INITIALIZER
       address:

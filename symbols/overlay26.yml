@@ -12,7 +12,87 @@ overlay26:
     NA: 0x1180
     JP: 0x1180
   description: Unknown.
-  functions: []
+  functions:
+    - name: UNK_FUN_overlay_26__0211c9e0
+      address:
+        NA: 0x0211C9E0
+      description: |-
+        Use unknown.
+        
+        r0: undefined4 pointer
+    - name: UNK_FUN_overlay_26__0211ca1c
+      address:
+        NA: 0x0211CA1C
+      description: |-
+        Use unknown.
+        
+        r0: int32_t pointer
+    - name: UNK_FUN_overlay_26__0211ca4c
+      address:
+        NA: 0x0211CA4C
+      description: |-
+        Use unknown.
+        
+        r0: int32_t pointer
+    - name: UNK_FUN_overlay_26__0211ca84
+      address:
+        NA: 0x0211CA84
+      description: |-
+        Use unknown.
+        
+        r0: int32_t 
+    - name: UNK_FUN_overlay_26__0211cef4
+      address:
+        NA: 0x0211CEF4
+      description: |-
+        Use unknown.
+        
+        r0: int32_t 
+    - name: UNK_FUN_overlay_26__0211cf10
+      address:
+        NA: 0x0211CF10
+      description: |-
+        Does nothing but return. Likely a debug hook for the above function.
+        
+        No params. 
+    - name: UNK_FUN_overlay_26__0211cf14
+      address:
+        NA: 0x0211CF14
+      description: |-
+        Use unknown.
+        
+        No params. 
+    - name: UNK_FUN_overlay_26__0211d094
+      address:
+        NA: 0x0211D094
+      description: |-
+        Use unknown.
+        
+        r0: int32_t 
+    - name: UNK_FUN_overlay_26__0211d348
+      address:
+        NA: 0x0211D348
+      description: |-
+        Use unknown.
+        
+        r0: int32_t 
+    - name: UNK_FUN_overlay_26__0211d3c0
+      address:
+        NA: 0x0211D3C0
+      description: |-
+        Use unknown.
+        
+        r0: undefined4 
+        r1: undefined4 
+        r2: undefined4 
+        r3: undefined4 
+    - name: UNK_FUN_overlay_26__0211d5c4
+      address:
+        NA: 0x0211D5C4
+      description: |-
+        Use unknown.
+        
+        No params. 
   data:
     - name: OV26_STATIC_INITIALIZER
       address:

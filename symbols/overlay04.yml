@@ -12,7 +12,95 @@ overlay4:
     NA: 0xF60
     JP: 0xF80
   description: Unknown.
-  functions: []
+  functions:
+    - name: UNK_FUN_overlay_04__0211c9e0
+      address:
+        NA: 0x0211C9E0
+      description: |-
+        Use unknown.
+        
+        r0: undefined4 pointer
+        r1: int32_t 
+    - name: UNK_FUN_overlay_04__0211ca30
+      address:
+        NA: 0x0211CA30
+      description: |-
+        Use unknown.
+        
+        r0: undefined4 pointer
+    - name: UNK_FUN_overlay_04__0211cb28
+      address:
+        NA: 0x0211CB28
+      description: |-
+        Use unknown.
+        
+        r0: undefined4 pointer
+    - name: UNK_FUN_overlay_04__0211cc28
+      address:
+        NA: 0x0211CC28
+      description: |-
+        Use unknown.
+        
+        No params. 
+    - name: UNK_FUN_overlay_04__0211ccd8
+      address:
+        NA: 0x0211CCD8
+      description: |-
+        Use unknown.
+        
+        r0: int32_t 
+    - name: UNK_FUN_overlay_04__0211d060
+      address:
+        NA: 0x0211D060
+      description: |-
+        Use unknown.
+        
+        r0: int32_t 
+    - name: UNK_FUN_overlay_04__0211d394
+      address:
+        NA: 0x0211D394
+      description: |-
+        Use unknown.
+        
+        No params. 
+    - name: UNK_FUN_overlay_04__0211d440
+      address:
+        NA: 0x0211D440
+      description: |-
+        Use unknown.
+        
+        r0: int32_t 
+        r1: undefined4 
+        r2: undefined4 
+        r3: undefined4 
+    - name: UNK_FUN_overlay_04__0211d560
+      address:
+        NA: 0x0211D560
+      description: |-
+        Does nothing but return. Likely a debug hook for the above function.
+        
+        No params. 
+    - name: UNK_FUN_overlay_04__0211d564
+      address:
+        NA: 0x0211D564
+      description: |-
+        Use unknown.
+        
+        r0: int32_t 
+    - name: UNK_FUN_overlay_04__0211d788
+      address:
+        NA: 0x0211D788
+      description: |-
+        Use unknown.
+        
+        r0: int32_t 
+    - name: UNK_FUN_overlay_04__0211d7a4
+      address:
+        NA: 0x0211D7A4
+      description: |-
+        Use unknown.
+        
+        No params.
   data:
     - name: OV4_STATIC_INITIALIZER
       address:

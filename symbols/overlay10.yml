@@ -12,7 +12,70 @@ overlay10:
     NA: 0xC0
     JP: 0xC0
   description: Unknown.
-  functions: []
+  functions:
+    - name: UNK_FUN_overlay_10__0211c9e4
+      address:
+        NA: 0x0211C9E4
+      description: |-
+        Use unknown.
+        
+        No params. 
+    - name: UNK_FUN_overlay_10__0211c9ec
+      address:
+        NA: 0x0211C9EC
+      description: |-
+        Use unknown.
+        
+        r0: undefined4 
+    - name: UNK_FUN_overlay_10__0211ca08
+      address:
+        NA: 0x0211CA08
+      description: |-
+        Does nothing but return. Likely a debug hook for the above function.
+        
+        No params. 
+    - name: UNK_FUN_overlay_10__0211ca0c
+      address:
+        NA: 0x0211CA0C
+      description: |-
+        Does nothing but return. Likely a debug hook for the above function.
+        
+        No params. 
+    - name: UNK_FUN_overlay_10__0211ca10
+      address:
+        NA: 0x0211CA10
+      description: |-
+        Does nothing but return. Likely a debug hook for the above function.
+        
+        No params. 
+    - name: UNK_FUN_overlay_10__0211ca14
+      address:
+        NA: 0x0211CA14
+      description: |-
+        Does nothing but return. Likely a debug hook for the above function.
+        
+        No params. 
+    - name: UNK_FUN_overlay_10__0211ca18
+      address:
+        NA: 0x0211CA18
+      description: |-
+        Does nothing but return. Likely a debug hook for the above function.
+        
+        No params. 
+    - name: UNK_FUN_overlay_10__0211ca1c
+      address:
+        NA: 0x0211CA1C
+      description: |-
+        Does nothing but return. Likely a debug hook for the above function.
+        
+        No params. 
+    - name: UNK_FUN_overlay_10__0211ca20
+      address:
+        NA: 0x0211CA20
+      description: |-
+        Use unknown.
+        
+        No params. 
   data:
     - name: OV10_STATIC_INITIALIZER
       address:
