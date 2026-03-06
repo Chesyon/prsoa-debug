@@ -15,87 +15,87 @@ overlay2:
   functions:
     - name: UNK_FUN_overlay_02__0211c9e0
       address:
-        NA: 0x0211C9E0
+        NA: 0x211C9E0
       description: |-
         Use unknown.
         
-        r0: int32_t 
-        r1: undefined4 
-        r2: undefined4 
-        r3: undefined4 
+        r0: int32_t
+        r1: undefined4
+        r2: undefined4
+        r3: undefined4
     - name: UNK_FUN_overlay_02__0211d08c
       address:
-        NA: 0x0211D08C
+        NA: 0x211D08C
       description: |-
         Use unknown.
         
-        r0: int32_t 
-        r1: undefined4 
-        r2: undefined4 
-        r3: undefined4 
+        r0: int32_t
+        r1: undefined4
+        r2: undefined4
+        r3: undefined4
     - name: UNK_FUN_overlay_02__0211d108
       address:
-        NA: 0x0211D108
+        NA: 0x211D108
       description: |-
         Use unknown.
         
-        r0: undefined4 
+        r0: undefined4
     - name: UNK_FUN_overlay_02__0211d124
       address:
-        NA: 0x0211D124
+        NA: 0x211D124
       description: |-
         Does nothing but return. Likely a debug hook for the above function.
         
-        No params. 
+        No params.
     - name: UNK_FUN_overlay_02__0211d128
       address:
-        NA: 0x0211D128
+        NA: 0x211D128
       description: |-
         Does nothing but return. Likely a debug hook for the above function.
         
-        No params. 
+        No params.
     - name: UNK_FUN_overlay_02__0211d12c
       address:
-        NA: 0x0211D12C
+        NA: 0x211D12C
       description: |-
         Does nothing but return. Likely a debug hook for the above function.
         
-        No params. 
+        No params.
     - name: UNK_FUN_overlay_02__0211d130
       address:
-        NA: 0x0211D130
+        NA: 0x211D130
       description: |-
         Does nothing but return. Likely a debug hook for the above function.
         
-        No params. 
+        No params.
     - name: UNK_FUN_overlay_02__0211d134
       address:
-        NA: 0x0211D134
+        NA: 0x211D134
       description: |-
         Does nothing but return. Likely a debug hook for the above function.
         
-        No params. 
+        No params.
     - name: UNK_FUN_overlay_02__0211d138
       address:
-        NA: 0x0211D138
+        NA: 0x211D138
       description: |-
         Does nothing but return. Likely a debug hook for the above function.
         
-        No params. 
+        No params.
     - name: UNK_FUN_overlay_02__0211d13c
       address:
-        NA: 0x0211D13C
+        NA: 0x211D13C
       description: |-
         Use unknown.
         
-        No params. 
+        No params.
     - name: UNK_FUN_overlay_02__0211d144
       address:
-        NA: 0x0211D144
+        NA: 0x211D144
       description: |-
         Use unknown.
         
-        r0: undefined4 
+        r0: undefined4
   data:
     - name: OV2_STATIC_INITIALIZER
       address:

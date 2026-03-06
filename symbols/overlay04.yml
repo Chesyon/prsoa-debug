@@ -15,88 +15,88 @@ overlay4:
   functions:
     - name: UNK_FUN_overlay_04__0211c9e0
       address:
-        NA: 0x0211C9E0
+        NA: 0x211C9E0
       description: |-
         Use unknown.
         
         r0: undefined4 pointer
-        r1: int32_t 
+        r1: int32_t
     - name: UNK_FUN_overlay_04__0211ca30
       address:
-        NA: 0x0211CA30
+        NA: 0x211CA30
       description: |-
         Use unknown.
         
         r0: undefined4 pointer
     - name: UNK_FUN_overlay_04__0211cb28
       address:
-        NA: 0x0211CB28
+        NA: 0x211CB28
       description: |-
         Use unknown.
         
         r0: undefined4 pointer
     - name: UNK_FUN_overlay_04__0211cc28
       address:
-        NA: 0x0211CC28
+        NA: 0x211CC28
       description: |-
         Use unknown.
         
-        No params. 
+        No params.
     - name: UNK_FUN_overlay_04__0211ccd8
       address:
-        NA: 0x0211CCD8
+        NA: 0x211CCD8
       description: |-
         Use unknown.
         
-        r0: int32_t 
+        r0: int32_t
     - name: UNK_FUN_overlay_04__0211d060
       address:
-        NA: 0x0211D060
+        NA: 0x211D060
       description: |-
         Use unknown.
         
-        r0: int32_t 
+        r0: int32_t
     - name: UNK_FUN_overlay_04__0211d394
       address:
-        NA: 0x0211D394
+        NA: 0x211D394
       description: |-
         Use unknown.
         
-        No params. 
+        No params.
     - name: UNK_FUN_overlay_04__0211d440
       address:
-        NA: 0x0211D440
+        NA: 0x211D440
       description: |-
         Use unknown.
         
-        r0: int32_t 
-        r1: undefined4 
-        r2: undefined4 
-        r3: undefined4 
+        r0: int32_t
+        r1: undefined4
+        r2: undefined4
+        r3: undefined4
     - name: UNK_FUN_overlay_04__0211d560
       address:
-        NA: 0x0211D560
+        NA: 0x211D560
       description: |-
         Does nothing but return. Likely a debug hook for the above function.
         
-        No params. 
+        No params.
     - name: UNK_FUN_overlay_04__0211d564
       address:
-        NA: 0x0211D564
+        NA: 0x211D564
       description: |-
         Use unknown.
         
-        r0: int32_t 
+        r0: int32_t
     - name: UNK_FUN_overlay_04__0211d788
       address:
-        NA: 0x0211D788
+        NA: 0x211D788
       description: |-
         Use unknown.
         
-        r0: int32_t 
+        r0: int32_t
     - name: UNK_FUN_overlay_04__0211d7a4
       address:
-        NA: 0x0211D7A4
+        NA: 0x211D7A4
       description: |-
         Use unknown.
         

@@ -15,455 +15,455 @@ overlay7:
   functions:
     - name: UNK_FUN_overlay_07__0211c9e0
       address:
-        NA: 0x0211C9E0
+        NA: 0x211C9E0
       description: |-
         Use unknown.
         
         r0: undefined4 pointer
-        r1: undefined4 
+        r1: undefined4
     - name: UNK_FUN_overlay_07__0211ca14
       address:
-        NA: 0x0211CA14
+        NA: 0x211CA14
       description: |-
         Use unknown.
         
         r0: undefined4 pointer
     - name: UNK_FUN_overlay_07__0211ca60
       address:
-        NA: 0x0211CA60
+        NA: 0x211CA60
       description: |-
         Use unknown.
         
         r0: undefined4 pointer
     - name: UNK_FUN_overlay_07__0211cab4
       address:
-        NA: 0x0211CAB4
+        NA: 0x211CAB4
       description: |-
         Use unknown.
         
-        r0: int32_t 
+        r0: int32_t
     - name: UNK_FUN_overlay_07__0211cadc
       address:
-        NA: 0x0211CADC
+        NA: 0x211CADC
       description: |-
         Use unknown.
         
-        No params. 
+        No params.
     - name: UNK_FUN_overlay_07__0211cc94
       address:
-        NA: 0x0211CC94
+        NA: 0x211CC94
       description: |-
         Use unknown.
         
-        r0: int32_t 
+        r0: int32_t
     - name: UNK_FUN_overlay_07__0211cccc
       address:
-        NA: 0x0211CCCC
+        NA: 0x211CCCC
       description: |-
         Use unknown.
         
-        r0: int32_t 
+        r0: int32_t
     - name: UNK_FUN_overlay_07__0211ccf4
       address:
-        NA: 0x0211CCF4
+        NA: 0x211CCF4
       description: |-
         Use unknown.
         
-        r0: int32_t 
+        r0: int32_t
     - name: UNK_FUN_overlay_07__0211cd40
       address:
-        NA: 0x0211CD40
+        NA: 0x211CD40
       description: |-
         Use unknown.
         
-        r0: int32_t 
+        r0: int32_t
     - name: UNK_FUN_overlay_07__0211cd58
       address:
-        NA: 0x0211CD58
+        NA: 0x211CD58
       description: |-
         Use unknown.
         
-        r0: int32_t 
+        r0: int32_t
     - name: UNK_FUN_overlay_07__0211cd7c
       address:
-        NA: 0x0211CD7C
+        NA: 0x211CD7C
       description: |-
         Use unknown.
         
-        No params. 
+        No params.
     - name: UNK_FUN_overlay_07__0211cd84
       address:
-        NA: 0x0211CD84
+        NA: 0x211CD84
       description: |-
         Use unknown.
         
-        r0: int32_t 
-        r1: undefined4 
+        r0: int32_t
+        r1: undefined4
     - name: UNK_FUN_overlay_07__0211cdb4
       address:
-        NA: 0x0211CDB4
+        NA: 0x211CDB4
       description: |-
         Use unknown.
         
-        r0: int32_t 
+        r0: int32_t
     - name: UNK_FUN_overlay_07__0211cfb0
       address:
-        NA: 0x0211CFB0
+        NA: 0x211CFB0
       description: |-
         Does nothing but return. Likely a debug hook for the above function.
         
-        No params. 
+        No params.
     - name: UNK_FUN_overlay_07__0211cfb4
       address:
-        NA: 0x0211CFB4
+        NA: 0x211CFB4
       description: |-
         Use unknown.
         
         r0: undefined2 pointer
     - name: UNK_FUN_overlay_07__0211d054
       address:
-        NA: 0x0211D054
+        NA: 0x211D054
       description: |-
         Use unknown.
         
         r0: undefined2 pointer
     - name: UNK_FUN_overlay_07__0211d38c
       address:
-        NA: 0x0211D38C
+        NA: 0x211D38C
       description: |-
         Use unknown.
         
         r0: undefined2 pointer
     - name: UNK_FUN_overlay_07__0211d3f0
       address:
-        NA: 0x0211D3F0
+        NA: 0x211D3F0
       description: |-
         Use unknown.
         
-        r0: int32_t 
-        r1: undefined4 
-        r2: undefined4 
-        r3: undefined4 
+        r0: int32_t
+        r1: undefined4
+        r2: undefined4
+        r3: undefined4
     - name: UNK_FUN_overlay_07__0211d42c
       address:
-        NA: 0x0211D42C
+        NA: 0x211D42C
       description: |-
         Use unknown.
         
-        r0: int32_t 
+        r0: int32_t
     - name: UNK_FUN_overlay_07__0211d62c
       address:
-        NA: 0x0211D62C
+        NA: 0x211D62C
       description: |-
         Use unknown.
         
-        r0: int32_t 
+        r0: int32_t
     - name: UNK_FUN_overlay_07__0211d698
       address:
-        NA: 0x0211D698
+        NA: 0x211D698
       description: |-
         Use unknown.
         
         r0: int16_t pointer
     - name: UNK_FUN_overlay_07__0211d7fc
       address:
-        NA: 0x0211D7FC
+        NA: 0x211D7FC
       description: |-
         Use unknown.
         
-        r0: int32_t 
+        r0: int32_t
     - name: UNK_FUN_overlay_07__0211e018
       address:
-        NA: 0x0211E018
+        NA: 0x211E018
       description: |-
         Use unknown.
         
-        r0: undefined4 
+        r0: undefined4
     - name: UNK_FUN_overlay_07__0211e02c
       address:
-        NA: 0x0211E02C
+        NA: 0x211E02C
       description: |-
         Use unknown.
         
         r0: undefined2 pointer
     - name: UNK_FUN_overlay_07__0211e050
       address:
-        NA: 0x0211E050
+        NA: 0x211E050
       description: |-
         Use unknown.
         
-        r0: int32_t 
+        r0: int32_t
     - name: UNK_FUN_overlay_07__0211e080
       address:
-        NA: 0x0211E080
+        NA: 0x211E080
       description: |-
         Use unknown.
         
-        r0: int32_t 
-        r1: int32_t 
-        r2: undefined4 
-        r3: undefined4 
+        r0: int32_t
+        r1: int32_t
+        r2: undefined4
+        r3: undefined4
     - name: UNK_FUN_overlay_07__0211e168
       address:
-        NA: 0x0211E168
+        NA: 0x211E168
       description: |-
         Use unknown.
         
-        r0: int32_t 
-        r1: int32_t 
-        r2: undefined4 
-        r3: undefined4 
+        r0: int32_t
+        r1: int32_t
+        r2: undefined4
+        r3: undefined4
     - name: UNK_FUN_overlay_07__0211e19c
       address:
-        NA: 0x0211E19C
+        NA: 0x211E19C
       description: |-
         Use unknown.
         
-        r0: int32_t 
+        r0: int32_t
     - name: UNK_FUN_overlay_07__0211e1b4
       address:
-        NA: 0x0211E1B4
+        NA: 0x211E1B4
       description: |-
         Use unknown.
         
-        r0: int32_t 
+        r0: int32_t
     - name: UNK_FUN_overlay_07__0211e680
       address:
-        NA: 0x0211E680
+        NA: 0x211E680
       description: |-
         Use unknown.
         
-        r0: int32_t 
-        r1: undefined4 
-        r2: undefined4 
-        r3: undefined4 
+        r0: int32_t
+        r1: undefined4
+        r2: undefined4
+        r3: undefined4
     - name: UNK_FUN_overlay_07__0211e894
       address:
-        NA: 0x0211E894
+        NA: 0x211E894
       description: |-
         Use unknown.
         
         r0: undefined2 pointer
     - name: UNK_FUN_overlay_07__0211ea74
       address:
-        NA: 0x0211EA74
+        NA: 0x211EA74
       description: |-
         Use unknown.
         
-        r0: int32_t 
+        r0: int32_t
     - name: UNK_FUN_overlay_07__0211eb04
       address:
-        NA: 0x0211EB04
+        NA: 0x211EB04
       description: |-
         Use unknown.
         
-        r0: int32_t 
-        r1: undefined 
-        r2: int32_t 
+        r0: int32_t
+        r1: undefined
+        r2: int32_t
     - name: UNK_FUN_overlay_07__0211eb3c
       address:
-        NA: 0x0211EB3C
+        NA: 0x211EB3C
       description: |-
         Use unknown.
         
-        r0: int32_t 
-        r1: int32_t 
+        r0: int32_t
+        r1: int32_t
     - name: UNK_FUN_overlay_07__0211eb7c
       address:
-        NA: 0x0211EB7C
+        NA: 0x211EB7C
       description: |-
         Use unknown.
         
         r0: undefined2 pointer
     - name: UNK_FUN_overlay_07__0211ec8c
       address:
-        NA: 0x0211EC8C
+        NA: 0x211EC8C
       description: |-
         Use unknown.
         
         r0: undefined2 pointer
     - name: UNK_FUN_overlay_07__0211eca4
       address:
-        NA: 0x0211ECA4
+        NA: 0x211ECA4
       description: |-
         Use unknown.
         
-        r0: int32_t 
-        r1: int32_t 
-        r2: int32_t 
-        r3: undefined4 
+        r0: int32_t
+        r1: int32_t
+        r2: int32_t
+        r3: undefined4
     - name: UNK_FUN_overlay_07__0211ed10
       address:
-        NA: 0x0211ED10
+        NA: 0x211ED10
       description: |-
         Use unknown.
         
-        r0: int32_t 
-        r1: int32_t 
-        r2: undefined4 
-        r3: undefined4 
+        r0: int32_t
+        r1: int32_t
+        r2: undefined4
+        r3: undefined4
     - name: UNK_FUN_overlay_07__0211ee6c
       address:
-        NA: 0x0211EE6C
+        NA: 0x211EE6C
       description: |-
         Use unknown.
         
-        r0: int32_t 
-        r1: int32_t 
-        r2: undefined4 
-        r3: undefined4 
+        r0: int32_t
+        r1: int32_t
+        r2: undefined4
+        r3: undefined4
     - name: UNK_FUN_overlay_07__0211eec4
       address:
-        NA: 0x0211EEC4
+        NA: 0x211EEC4
       description: |-
         Use unknown.
         
-        r0: int32_t 
-        r1: int32_t 
-        r2: undefined4 
-        r3: undefined4 
+        r0: int32_t
+        r1: int32_t
+        r2: undefined4
+        r3: undefined4
     - name: UNK_FUN_overlay_07__0211ef14
       address:
-        NA: 0x0211EF14
+        NA: 0x211EF14
       description: |-
         Use unknown.
         
         r0: undefined2 pointer
-        r1: undefined4 
-        r2: undefined4 
-        r3: undefined4 
+        r1: undefined4
+        r2: undefined4
+        r3: undefined4
     - name: UNK_FUN_overlay_07__0211ef5c
       address:
-        NA: 0x0211EF5C
+        NA: 0x211EF5C
       description: |-
         Use unknown.
         
-        r0: int32_t 
+        r0: int32_t
     - name: UNK_FUN_overlay_07__0211efa0
       address:
-        NA: 0x0211EFA0
+        NA: 0x211EFA0
       description: |-
         Use unknown.
         
-        r0: int32_t 
+        r0: int32_t
     - name: UNK_FUN_overlay_07__0211efe4
       address:
-        NA: 0x0211EFE4
+        NA: 0x211EFE4
       description: |-
         Use unknown.
         
-        No params. 
+        No params.
     - name: UNK_FUN_overlay_07__0211f01c
       address:
-        NA: 0x0211F01C
+        NA: 0x211F01C
       description: |-
         Use unknown.
         
-        r0: int32_t 
+        r0: int32_t
         r1: int16_t pointer
         r2: uint16_t pointer
     - name: UNK_FUN_overlay_07__0211f100
       address:
-        NA: 0x0211F100
+        NA: 0x211F100
       description: |-
         Use unknown.
         
-        r0: int32_t 
+        r0: int32_t
     - name: UNK_FUN_overlay_07__0211f168
       address:
-        NA: 0x0211F168
+        NA: 0x211F168
       description: |-
         Use unknown.
         
-        r0: int32_t 
+        r0: int32_t
     - name: UNK_FUN_overlay_07__0211f1e8
       address:
-        NA: 0x0211F1E8
+        NA: 0x211F1E8
       description: |-
         Use unknown.
         
         r0: undefined2 pointer
     - name: UNK_FUN_overlay_07__0211f1fc
       address:
-        NA: 0x0211F1FC
+        NA: 0x211F1FC
       description: |-
         Use unknown.
         
         r0: undefined2 pointer
-        r1: undefined4 
-        r2: undefined4 
-        r3: int32_t 
-        stack[0]: undefined4 
-        stack[1]: undefined4 
+        r1: undefined4
+        r2: undefined4
+        r3: int32_t
+        stack[0]: undefined4
+        stack[1]: undefined4
     - name: UNK_FUN_overlay_07__0211f29c
       address:
-        NA: 0x0211F29C
+        NA: 0x211F29C
       description: |-
         Use unknown.
         
-        r0: int32_t 
-        r1: uint32_t 
+        r0: int32_t
+        r1: uint32_t
     - name: UNK_FUN_overlay_07__0211f2b0
       address:
-        NA: 0x0211F2B0
+        NA: 0x211F2B0
       description: |-
         Use unknown.
         
-        r0: int32_t 
-        r1: undefined4 
+        r0: int32_t
+        r1: undefined4
     - name: UNK_FUN_overlay_07__0211f2e0
       address:
-        NA: 0x0211F2E0
+        NA: 0x211F2E0
       description: |-
         Use unknown.
         
-        r0: int32_t 
+        r0: int32_t
     - name: UNK_FUN_overlay_07__0211f370
       address:
-        NA: 0x0211F370
+        NA: 0x211F370
       description: |-
         Use unknown.
         
-        r0: int32_t 
-        r1: undefined4 
+        r0: int32_t
+        r1: undefined4
     - name: UNK_FUN_overlay_07__0211f4e0
       address:
-        NA: 0x0211F4E0
+        NA: 0x211F4E0
       description: |-
         Use unknown.
         
-        r0: int32_t 
+        r0: int32_t
     - name: UNK_FUN_overlay_07__0211f4fc
       address:
-        NA: 0x0211F4FC
+        NA: 0x211F4FC
       description: |-
         Use unknown.
         
-        r0: int32_t 
+        r0: int32_t
     - name: UNK_FUN_overlay_07__0211f534
       address:
-        NA: 0x0211F534
+        NA: 0x211F534
       description: |-
         Use unknown.
         
-        r0: int32_t 
+        r0: int32_t
     - name: UNK_FUN_overlay_07__0211f578
       address:
-        NA: 0x0211F578
+        NA: 0x211F578
       description: |-
         Use unknown.
         
-        r0: int32_t 
+        r0: int32_t
     - name: UNK_FUN_overlay_07__0211f5bc
       address:
-        NA: 0x0211F5BC
+        NA: 0x211F5BC
       description: |-
         Use unknown.
         
-        r0: int32_t 
+        r0: int32_t
     - name: UNK_FUN_overlay_07__0211f604
       address:
-        NA: 0x0211F604
+        NA: 0x211F604
       description: |-
         Use unknown.
         

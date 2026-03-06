@@ -12,63 +12,63 @@ overlay29:
   functions:
     - name: UNK_FUN_overlay_29__0211c9e0
       address:
-        NA: 0x0211C9E0
+        NA: 0x211C9E0
       description: |-
         Use unknown.
         
-        No params. 
+        No params.
     - name: UNK_FUN_overlay_29__0211c9e8
       address:
-        NA: 0x0211C9E8
+        NA: 0x211C9E8
       description: |-
         Does nothing but return. Likely a debug hook for the above function.
         
-        No params. 
+        No params.
     - name: UNK_FUN_overlay_29__0211c9ec
       address:
-        NA: 0x0211C9EC
+        NA: 0x211C9EC
       description: |-
         Use unknown.
         
-        No params. 
+        No params.
     - name: UNK_FUN_overlay_29__0211cb54
       address:
-        NA: 0x0211CB54
+        NA: 0x211CB54
       description: |-
         Use unknown.
         
-        No params. 
+        No params.
     - name: UNK_FUN_overlay_29__0211cc44
       address:
-        NA: 0x0211CC44
+        NA: 0x211CC44
       description: |-
         Use unknown.
         
-        r0: undefined4 
-        r1: undefined4 
-        r2: undefined4 
-        r3: undefined4 
+        r0: undefined4
+        r1: undefined4
+        r2: undefined4
+        r3: undefined4
     - name: UNK_FUN_overlay_29__0211cc90
       address:
-        NA: 0x0211CC90
+        NA: 0x211CC90
       description: |-
         Use unknown.
         
-        r0: undefined4 
+        r0: undefined4
     - name: UNK_FUN_overlay_29__0211ccac
       address:
-        NA: 0x0211CCAC
+        NA: 0x211CCAC
       description: |-
         Use unknown.
         
-        No params. 
+        No params.
     - name: UNK_FUN_overlay_29__0211ccb4
       address:
-        NA: 0x0211CCB4
+        NA: 0x211CCB4
       description: |-
         Use unknown.
         
-        r0: undefined4 
+        r0: undefined4
   data:
     - name: OV29_STATIC_INITIALIZER
       address:

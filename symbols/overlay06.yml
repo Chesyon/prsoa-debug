@@ -15,88 +15,88 @@ overlay6:
   functions:
     - name: UNK_FUN_overlay_06__0211c9e0
       address:
-        NA: 0x0211C9E0
+        NA: 0x211C9E0
       description: |-
         Use unknown.
         
         r0: undefined4 pointer
-        r1: int32_t 
+        r1: int32_t
     - name: UNK_FUN_overlay_06__0211ca6c
       address:
-        NA: 0x0211CA6C
+        NA: 0x211CA6C
       description: |-
         Use unknown.
         
         r0: undefined4 pointer
     - name: UNK_FUN_overlay_06__0211cbdc
       address:
-        NA: 0x0211CBDC
+        NA: 0x211CBDC
       description: |-
         Use unknown.
         
         r0: undefined4 pointer
     - name: UNK_FUN_overlay_06__0211cd54
       address:
-        NA: 0x0211CD54
+        NA: 0x211CD54
       description: |-
         Use unknown.
         
-        r0: int32_t 
+        r0: int32_t
     - name: UNK_FUN_overlay_06__0211ce24
       address:
-        NA: 0x0211CE24
+        NA: 0x211CE24
       description: |-
         Use unknown.
         
-        r0: int32_t 
+        r0: int32_t
     - name: UNK_FUN_overlay_06__0211d460
       address:
-        NA: 0x0211D460
+        NA: 0x211D460
       description: |-
         Use unknown.
         
-        No params. 
+        No params.
     - name: UNK_FUN_overlay_06__0211d638
       address:
-        NA: 0x0211D638
+        NA: 0x211D638
       description: |-
         Use unknown.
         
-        No params. 
+        No params.
     - name: UNK_FUN_overlay_06__0211d6b4
       address:
-        NA: 0x0211D6B4
+        NA: 0x211D6B4
       description: |-
         Use unknown.
         
-        r0: int32_t 
-        r1: undefined4 
-        r2: undefined4 
-        r3: undefined4 
+        r0: int32_t
+        r1: undefined4
+        r2: undefined4
+        r3: undefined4
     - name: UNK_FUN_overlay_06__0211d884
       address:
-        NA: 0x0211D884
+        NA: 0x211D884
       description: |-
         Use unknown.
         
-        r0: int32_t 
+        r0: int32_t
     - name: UNK_FUN_overlay_06__0211d89c
       address:
-        NA: 0x0211D89C
+        NA: 0x211D89C
       description: |-
         Use unknown.
         
-        r0: int32_t 
+        r0: int32_t
     - name: UNK_FUN_overlay_06__0211dbd0
       address:
-        NA: 0x0211DBD0
+        NA: 0x211DBD0
       description: |-
         Use unknown.
         
-        r0: int32_t 
+        r0: int32_t
     - name: UNK_FUN_overlay_06__0211dc00
       address:
-        NA: 0x0211DC00
+        NA: 0x211DC00
       description: |-
         Use unknown.
         
