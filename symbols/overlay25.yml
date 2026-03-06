@@ -13,6 +13,13 @@ overlay25:
     JP: 0x3340
   description: Unknown.
   functions:
+    - name: thunk_UNK_FUN_02007d98
+      address:
+        NA: 0x211cef0
+      description: |-
+        Use unknown.
+        
+        No params.
     - name: UNK_FUN_overlay_25__0211c9e0
       address:
         NA: 0x211C9E0

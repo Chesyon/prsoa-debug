@@ -13,6 +13,20 @@ overlay1:
     JP: 0x25D40
   description: Unknown.
   functions:
+    - name: thunk_UNK_FUN_020120b0
+      address:
+        NA: 0x2127280
+      description: |-
+        Use unknown.
+        
+        No params.
+    - name: thunk_UNK_FUN_020121f4
+      address:
+        NA: 0x212e48c
+      description: |-
+        Use unknown.
+        
+        No params.
     - name: UNK_FUN_overlay_01__0211c9e0
       address:
         NA: 0x211C9E0
@@ -6500,7 +6514,7 @@ overlay1:
         r0: int32_t
     - name: thunk_UNK_FUN_overlay_01__0213e12c
       address:
-        NA: 0x213E12C
+        NA: 0x213e7b8
       description: |-
         Use unknown.
         

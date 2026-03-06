@@ -13,6 +13,13 @@ overlay6:
     JP: 0x13A0
   description: Unknown.
   functions:
+    - name: thunk_UNK_FUN_02007d98
+      address:
+        NA: 0x211dbf4
+      description: |-
+        Use unknown.
+        
+        No params.
     - name: UNK_FUN_overlay_06__0211c9e0
       address:
         NA: 0x211C9E0

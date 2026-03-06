@@ -118,28 +118,28 @@ arm9:
         No params.
     - name: thunk_UNK_FUN_02002258
       address:
-        NA: 0x2002258
+        NA: 0x2001458
       description: |-
         Use unknown.
         
         No params.
     - name: thunk_UNK_FUN_02002258
       address:
-        NA: 0x2002258
+        NA: 0x2001464
       description: |-
         Use unknown.
         
         No params.
     - name: thunk_UNK_FUN_020022f4
       address:
-        NA: 0x20022F4
+        NA: 0x2001470
       description: |-
         Use unknown.
         
         No params.
     - name: thunk_UNK_FUN_020022f4
       address:
-        NA: 0x20022F4
+        NA: 0x200147c
       description: |-
         Use unknown.
         
@@ -176,7 +176,7 @@ arm9:
         r0: uint16_t pointer
     - name: thunk_UNK_FUN_0200233c
       address:
-        NA: 0x200233C
+        NA: 0x2001d28
       description: |-
         Use unknown.
         
@@ -218,14 +218,14 @@ arm9:
         r0: int32_t
     - name: thunk_UNK_FUN_0200233c
       address:
-        NA: 0x200233C
+        NA: 0x200203c
       description: |-
         Use unknown.
         
         No params.
     - name: thunk_UNK_FUN_0200235c
       address:
-        NA: 0x200235C
+        NA: 0x2002048
       description: |-
         Use unknown.
         
@@ -3522,7 +3522,7 @@ arm9:
         r1: int32_t
     - name: thunk_UNK_FUN_0200e9a4
       address:
-        NA: 0x200E9A4
+        NA: 0x200eb78
       description: |-
         Use unknown.
         
@@ -3801,7 +3801,7 @@ arm9:
         r1: int32_t
     - name: thunk_UNK_FUN_0200233c
       address:
-        NA: 0x200233C
+        NA: 0x20101a8
       description: |-
         Use unknown.
         
@@ -9309,7 +9309,7 @@ arm9:
         r0: int32_t
     - name: thunk_UNK_FUN_0202a6e8
       address:
-        NA: 0x202A6E8
+        NA: 0x202a5ec
       description: |-
         Use unknown.
         
@@ -11699,7 +11699,7 @@ arm9:
         r0: undefined4 pointer
     - name: thunk_UNK_FUN_0205b9f0
       address:
-        NA: 0x205B9F0
+        NA: 0x203459c
       description: |-
         Use unknown.
         
@@ -14267,7 +14267,7 @@ arm9:
         r0: undefined4 pointer
     - name: thunk_UNK_FUN_02064f9c
       address:
-        NA: 0x2064F9C
+        NA: 0x20441a0
       description: |-
         Use unknown.
         
@@ -14325,7 +14325,7 @@ arm9:
         r3: undefined4
     - name: thunk_UNK_FUN_020442cc
       address:
-        NA: 0x20442CC
+        NA: 0x2044334
       description: |-
         Use unknown.
         
@@ -14342,7 +14342,7 @@ arm9:
         r3: undefined4
     - name: thunk_UNK_FUN_02044308
       address:
-        NA: 0x2044308
+        NA: 0x2044360
       description: |-
         Use unknown.
         
@@ -14429,7 +14429,7 @@ arm9:
         r2: undefined4
     - name: thunk_UNK_FUN_02044b84
       address:
-        NA: 0x2044B84
+        NA: 0x2044b78
       description: |-
         Use unknown.
         
@@ -14478,7 +14478,7 @@ arm9:
         r2: undefined4
     - name: thunk_UNK_FUN_020459b0
       address:
-        NA: 0x20459B0
+        NA: 0x2045a0c
       description: |-
         Use unknown.
         
@@ -15522,14 +15522,14 @@ arm9:
         No params.
     - name: thunk_UNK_FUN_02048b0c
       address:
-        NA: 0x2048B0C
+        NA: 0x2049704
       description: |-
         Use unknown.
         
         No params.
     - name: thunk_UNK_FUN_02048c1c
       address:
-        NA: 0x2048C1C
+        NA: 0x2049710
       description: |-
         Use unknown.
         
@@ -15577,7 +15577,7 @@ arm9:
         r0: int32_t
     - name: thunk_UNK_FUN_02048f60
       address:
-        NA: 0x2048F60
+        NA: 0x204998c
       description: |-
         Use unknown.
         
@@ -17128,7 +17128,7 @@ arm9:
         r2: int32_t
     - name: thunk_UNK_FUN_02052954
       address:
-        NA: 0x2052954
+        NA: 0x205294c
       description: |-
         Use unknown.
         
@@ -17932,7 +17932,7 @@ arm9:
         r1: int32_t
     - name: thunk_UNK_FUN_020565d0
       address:
-        NA: 0x20565D0
+        NA: 0x2056b18
       description: |-
         Use unknown.
         
@@ -18025,7 +18025,7 @@ arm9:
         r1: int32_t
     - name: thunk_UNK_FUN_020565d0
       address:
-        NA: 0x20565D0
+        NA: 0x2056db0
       description: |-
         Use unknown.
         
@@ -18468,7 +18468,7 @@ arm9:
         r3: undefined4
     - name: thunk_UNK_FUN_02057f28
       address:
-        NA: 0x2057F28
+        NA: 0x2057f64
       description: |-
         Use unknown.
         
@@ -19615,7 +19615,7 @@ arm9:
         r2: int32_t
     - name: thunk_UNK_FUN_0205c384
       address:
-        NA: 0x205C384
+        NA: 0x205c0fc
       description: |-
         Use unknown.
         
@@ -22141,7 +22141,7 @@ arm9:
         r0: undefined4
     - name: thunk_UNK_FUN_02064d8c
       address:
-        NA: 0x2064D8C
+        NA: 0x2064dac
       description: |-
         Use unknown.
         
@@ -22216,7 +22216,7 @@ arm9:
         r2: undefined4
     - name: thunk_UNK_FUN_02078a4c
       address:
-        NA: 0x2078A4C
+        NA: 0x2064f90
       description: |-
         Use unknown.
         
@@ -25172,14 +25172,14 @@ arm9:
         r0: int32_t
     - name: thunk_UNK_FUN_0206ef24
       address:
-        NA: 0x206EF24
+        NA: 0x206f728
       description: |-
         Use unknown.
         
         No params.
     - name: thunk_UNK_FUN_0206ef70
       address:
-        NA: 0x206EF70
+        NA: 0x206f734
       description: |-
         Use unknown.
         
@@ -25269,7 +25269,7 @@ arm9:
         No params.
     - name: thunk_UNK_FUN_0206ef24
       address:
-        NA: 0x206EF24
+        NA: 0x206fe1c
       description: |-
         Use unknown.
         
@@ -28159,7 +28159,7 @@ arm9:
         r0: undefined4
     - name: thunk_UNK_FUN_020792c8
       address:
-        NA: 0x20792C8
+        NA: 0x208361c
       description: |-
         Use unknown.
         
@@ -28256,7 +28256,7 @@ arm9:
         r3: undefined4
     - name: thunk_UNK_FUN_02081c2c
       address:
-        NA: 0x2081C2C
+        NA: 0x2083a44
       description: |-
         Use unknown.
         
@@ -28345,99 +28345,6 @@ arm9:
         r1: int32_t
         r2: uint32_t
         r3: undefined4
-    - name: UNK_FUN_0211c9e0
-      address:
-        NA: 0x211C9E0
-      description: |-
-        Use unknown.
-        
-        r0: int32_t
-    - name: UNK_FUN_0211ca50
-      address:
-        NA: 0x211CA50
-      description: |-
-        Use unknown.
-        
-        No params.
-    - name: UNK_FUN_0211def8
-      address:
-        NA: 0x211DEF8
-      description: |-
-        Use unknown.
-        
-        r0: uint32_t
-        r1: uint32_t
-        r2: uint32_t pointer
-    - name: thunk_UNK_FUN_02007cc4
-      address:
-        NA: 0x2007CC4
-      description: |-
-        Use unknown.
-        
-        No params.
-    - name: thunk_UNK_FUN_0203efe4
-      address:
-        NA: 0x203EFE4
-      description: |-
-        Use unknown.
-        
-        No params.
-    - name: thunk_UNK_FUN_0203f034
-      address:
-        NA: 0x203F034
-      description: |-
-        Use unknown.
-        
-        No params.
-    - name: thunk_UNK_FUN_020579d0
-      address:
-        NA: 0x20579D0
-      description: |-
-        Use unknown.
-        
-        No params.
-    - name: thunk_UNK_FUN_02057d50
-      address:
-        NA: 0x2057D50
-      description: |-
-        Use unknown.
-        
-        No params.
-    - name: thunk_UNK_FUN_020120b0
-      address:
-        NA: 0x20120B0
-      description: |-
-        Use unknown.
-        
-        No params.
-    - name: thunk_UNK_FUN_020121f4
-      address:
-        NA: 0x20121F4
-      description: |-
-        Use unknown.
-        
-        No params.
-    - name: thunk_UNK_FUN_02007d98
-      address:
-        NA: 0x2007D98
-      description: |-
-        Use unknown.
-        
-        No params.
-    - name: thunk_UNK_FUN_02007d98
-      address:
-        NA: 0x2007D98
-      description: |-
-        Use unknown.
-        
-        No params.
-    - name: thunk_UNK_FUN_02007d98
-      address:
-        NA: 0x2007D98
-      description: |-
-        Use unknown.
-        
-        No params.
   data:
     - name: SECURE
       address:
