@@ -67,3 +67,4 @@ void UNK_FUN_overlay_07__0211f534(int32_t param_1);
 void UNK_FUN_overlay_07__0211f578(int32_t param_1);
 undefined4 UNK_FUN_overlay_07__0211f5bc(int32_t param_1);
 uint32_t UNK_FUN_overlay_07__0211f604(int16_t* param_1);
+void thunk_UNK_FUN_02007d98(void);
