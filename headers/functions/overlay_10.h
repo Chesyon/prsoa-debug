@@ -1,0 +1,10 @@
+void FUN_overlay_10__0211c9e0(void);
+undefined4 FUN_overlay_10__0211c9e4(void);
+undefined4 FUN_overlay_10__0211c9ec(undefined4 param_1);
+void FUN_overlay_10__0211ca08(void);
+void FUN_overlay_10__0211ca0c(void);
+void FUN_overlay_10__0211ca10(void);
+void FUN_overlay_10__0211ca14(void);
+void FUN_overlay_10__0211ca18(void);
+void FUN_overlay_10__0211ca1c(void);
+undefined4 FUN_overlay_10__0211ca20(void);
