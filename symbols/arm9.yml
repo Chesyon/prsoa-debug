@@ -26841,13 +26841,14 @@ arm9:
         Use unknown.
         
         No params.
-    - name: unk_fun_020794c8
+    - name: abs
       address:
         NA: 0x20794C8
       description: |-
-        Use unknown.
+        Takes the absolute value of an integer.
         
-        r0: int32_t
+        r0: x
+        return: abs(x)
     - name: unk_fun_020794d4
       address:
         NA: 0x20794D4
@@ -26906,30 +26907,36 @@ arm9:
         Use unknown.
         
         No params.
-    - name: unk_fun_02079a64
+    - name: mbtowc
       address:
         NA: 0x2079A64
       description: |-
-        Use unknown.
+        The mbtowc(3) C library function.
         
-        r0: uint16_t pointer
-        r1: byte pointer
-        r2: int32_t
-    - name: unk_fun_02079a9c
+        r0: pwc
+        r1: s
+        r2: n
+        return: number of consumed bytes, or -1 on failure
+    - name: TryAssignByte
       address:
         NA: 0x2079A9C
       description: |-
-        Use unknown.
+        Assign a byte to the target of a pointer if the pointer is non-null.
         
-        r0: undefined pointer
-        r1: undefined
-    - name: unk_fun_02079ab0
+        r0: pointer
+        r1: value
+        return: true on success, false on failure
+    - name: TryAssignByteWrapper
       address:
         NA: 0x2079AB0
       description: |-
-        Use unknown.
+        Wrapper around TryAssignByte.
         
-        No params.
+        Accesses the TryAssignByte function with a weird chain of pointer dereferences.
+        
+        r0: pointer
+        r1: value
+        return: true on success, false on failure
     - name: unk_fun_02079acc
       address:
         NA: 0x2079ACC
@@ -26939,34 +26946,38 @@ arm9:
         r0: undefined2 pointer
         r1: char pointer
         r2: uint32_t
-    - name: unk_fun_02079b54
+    - name: wcstombs
       address:
         NA: 0x2079B54
       description: |-
-        Use unknown.
+        The wcstombs(3) C library function.
         
-        r0: int32_t
-        r1: int16_t pointer
-        r2: uint32_t
-        r3: undefined4
-    - name: unk_fun_02079bcc
+        r0: dest
+        r1: src
+        r2: n
+        return: characters converted
+    - name: memcpy
       address:
         NA: 0x2079BCC
       description: |-
-        Use unknown.
+        The memcpy(3) C library function.
         
-        r0: undefined pointer
-        r1: undefined pointer
-        r2: int32_t
-    - name: unk_fun_02079bec
+        r0: dest
+        r1: src
+        r2: n
+        return: dest
+    - name: memmove
       address:
         NA: 0x2079BEC
       description: |-
-        Use unknown.
+        The memmove(3) C library function.
         
-        r0: undefined pointer
-        r1: undefined pointer
-        r2: int32_t
+        The implementation is nearly the same as memcpy, but it copies bytes from back to front if src < dst.
+        
+        r0: dest
+        r1: src
+        r2: n
+        return: dest
     - name: unk_fun_02079c38
       address:
         NA: 0x2079C38
@@ -27134,63 +27145,83 @@ arm9:
         Use unknown.
         
         r0: int32_t
-    - name: unk_fun_0207c1b0
+    - name: strlen
       address:
         NA: 0x207C1B0
       description: |-
-        Use unknown.
+        The strlen(3) C library function.
         
-        r0: char pointer
-    - name: unk_fun_0207c1cc
+        r0: s
+        return: length of s
+    - name: strcpy
       address:
         NA: 0x207C1CC
       description: |-
-        Use unknown.
+        The strcpy(3) C library function.
         
-        r0: uint32_t pointer
-        r1: uint32_t pointer
-    - name: unk_fun_0207c294
+        This function is optimized to copy characters in aligned 4-byte chunks if possible, correctly handling any unaligned bytes at the front/back.
+        
+        r0: dest
+        r1: src
+        return: dest
+    - name: strncpy
       address:
         NA: 0x207C294
       description: |-
-        Use unknown.
+        The strncpy(3) C library function.
         
-        r0: char pointer
-        r1: char pointer
-        r2: int32_t
-    - name: unk_fun_0207c2e4
+        r0: dest
+        r1: src
+        r2: n
+        return: dest
+    - name: strcat
       address:
         NA: 0x207C2E4
       description: |-
-        Use unknown.
+        The strcat(3) C library function.
         
-        r0: char pointer
-        r1: char pointer
-    - name: unk_fun_0207c314
+        r0: dest
+        r1: src
+        return: dest
+    - name: strcmp
       address:
         NA: 0x207C314
       description: |-
-        Use unknown.
+        The strcmp(3) C library function.
         
-        r0: uint32_t pointer
-        r1: uint32_t pointer
-    - name: unk_fun_0207c45c
+        Similarly to strcpy, this function is optimized to compare characters in aligned 4-byte chunks if possible.
+        
+        r0: s1
+        r1: s2
+        return: comparison value
+    - name: strncmp
+      address:
+        NA: 0x207C428
+      description: |-
+        The strncmp(3) C library function.
+        
+        r0: s1
+        r1: s2
+        r2: n
+        return: comparison value
+    - name: strchr
       address:
         NA: 0x207C45C
       description: |-
-        Use unknown.
+        The strchr(3) C library function.
         
-        r0: char pointer
-        r1: char
-    - name: unk_fun_0207c498
+        r0: string
+        r1: c
+        return: pointer to the located byte c, or null pointer if no match
+    - name: strstr
       address:
         NA: 0x207C498
       description: |-
-        Use unknown.
+        The strstr(3) C library function.
         
-        r0: byte pointer
-        r1: byte pointer
-        r2: uint32_t
+        r0: haystack
+        r1: needle
+        return: pointer into haystack where needle starts, or null pointer if no match
     - name: unk_fun_0207c504
       address:
         NA: 0x207C504

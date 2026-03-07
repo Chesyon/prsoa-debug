@@ -3820,7 +3820,7 @@ void unk_fun_020792c8(void);
 void unk_fun_020792ec(undefined4 param_1);
 void unk_fun_02079338(void);
 undefined4 unk_fun_02079460(void);
-int32_t unk_fun_020794c8(int32_t param_1);
+int abs(int x);
 void unk_fun_020794d4(void);
 void unk_fun_020794d8(int32_t param_1);
 int32_t unk_fun_02079508(undefined4* param_1, undefined4* param_2, undefined4 param_3,
@@ -3830,13 +3830,13 @@ undefined4 unk_fun_02079590(undefined4 param_1, undefined4 param_2, undefined4 p
 undefined4 unk_fun_020796b0(int32_t param_1, int32_t param_2, int32_t param_3, int32_t param_4);
 undefined4 unk_fun_02079960(int32_t param_1);
 void unk_fun_02079a48(void);
-uint32_t unk_fun_02079a64(uint16_t* param_1, undefined1* param_2, int32_t param_3);
-bool unk_fun_02079a9c(undefined* param_1, undefined param_2);
-void unk_fun_02079ab0(void);
+int mbtowc(wchar_t* pwc, const char* s, size_t n);
+bool TryAssignByte(uint8_t* ptr, uint8_t val);
+bool TryAssignByteWrapper(uint8_t* ptr, uint8_t val);
 uint32_t unk_fun_02079acc(undefined2* param_1, char* param_2, uint32_t param_3);
-uint32_t unk_fun_02079b54(int32_t param_1, int16_t* param_2, uint32_t param_3, undefined4 param_4);
-void unk_fun_02079bcc(undefined* param_1, undefined* param_2, int32_t param_3);
-void unk_fun_02079bec(undefined* param_1, undefined* param_2, int32_t param_3);
+size_t wcstombs(char* dest, const wchar_t* src, size_t n);
+void* memcpy(void* dest, const void* src, size_t n);
+void* memmove(void* dest, const void* src, size_t n);
 undefined4 unk_fun_02079c38(undefined4 param_1);
 char* unk_fun_02079c4c(char* param_1, char param_2, int32_t param_3);
 char* unk_fun_02079c78(int32_t param_1, char param_2, int32_t param_3);
@@ -3862,13 +3862,14 @@ undefined4 unk_fun_0207be64(undefined4 param_1, undefined4 param_2, undefined4 p
                             undefined4 param_4);
 void unk_fun_0207bfe4(undefined4 param_1, undefined4 param_2, undefined4 param_3);
 undefined4 unk_fun_0207c080(int32_t param_1);
-int32_t unk_fun_0207c1b0(char* param_1);
-void unk_fun_0207c1cc(uint32_t* param_1, uint32_t* param_2);
-void unk_fun_0207c294(char* param_1, char* param_2, int32_t param_3);
-void unk_fun_0207c2e4(char* param_1, char* param_2);
-int32_t unk_fun_0207c314(uint32_t* param_1, uint32_t* param_2);
-char* unk_fun_0207c45c(char* param_1, char param_2);
-undefined1* unk_fun_0207c498(undefined1* param_1, undefined1* param_2, uint32_t param_3);
+size_t strlen(const char* s);
+char* strcpy(char* dest, const char* src);
+char* strncpy(char* dest, const char* src, size_t n);
+char* strcat(char* dest, const char* src);
+int strcmp(const char* s1, const char* s2);
+int strncmp(const char* s1, const char* s2, size_t n);
+char* strchr(const char* string, int c);
+char* strstr(const char* haystack, const char* needle);
 uint32_t unk_fun_0207c504(int32_t param_1, int32_t param_2, void* param_3, undefined4 param_4,
                           int32_t* param_5, undefined4* param_6, undefined4* param_7);
 uint32_t unk_fun_0207c8ec(int32_t param_1, int32_t* param_2, undefined4 param_3,
