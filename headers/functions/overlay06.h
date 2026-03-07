@@ -13,6 +13,6 @@ void unk_fun_overlay_06_0211d6b4(int32_t param_1, undefined4 param_2, undefined4
 void unk_fun_overlay_06_0211d884(int32_t param_1);
 undefined4 unk_fun_overlay_06_0211d89c(int32_t param_1);
 void unk_fun_overlay_06_0211dbd0(int32_t param_1);
-undefined4 unk_fun_overlay_06_0211dc00(void);
 void thunk_unk_fun_overlay_06_02007d98(void);
+undefined4 unk_fun_overlay_06_0211dc00(void);
 #endif
