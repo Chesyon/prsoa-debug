@@ -8,3 +8,4 @@ other parts of the project, feel free to add yourself to this file!
 
 - UsernameFodder
 - Chesyon
+- happylappy
