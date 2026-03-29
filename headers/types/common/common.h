@@ -6,6 +6,7 @@
 #include "util.h"
 #include "enums.h"
 #include "battle.h"
+#include "script.h"
 
 // Parameters used by the NitroSDK to read the ROM.
 struct start_module_params {

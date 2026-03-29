@@ -81,6 +81,13 @@ arm9:
         r0: New game state
         r1: megastruct ptr
         return: Unknown pointer
+    - name: InitControllerInputs
+      address:
+        NA: 0x2001C04
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: controller_inputs pointer
     - name: ret_02001eb4
       address:
         NA: 0x2001EB4
@@ -587,6 +594,77 @@ arm9:
         Zeroes the footer struct of a quest struct.
         
         r0: quest pointer
+    - name: InitMissionQuestFooter
+      address:
+        NA: 0x2011394
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: mission_quest_data pointer
+        r1: script_manager pointer
+        r2: undefined pointer
+    - name: TryUnlockQuest
+      address:
+        NA: 0x20114C4
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: mission_quest_data pointer
+        r1: int32_t 
+    - name: IsQuestAvailable
+      address:
+        NA: 0x20114F8
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: mission_quest_data pointer
+        r1: int32_t 
+    - name: MakeQuestNameVisible
+      address:
+        NA: 0x2011514
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: mission_quest_data pointer
+        r1: int32_t 
+    - name: HasClearedQuest
+      address:
+        NA: 0x2011528
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: mission_quest_data pointer
+        r1: int32_t 
+    - name: TryAcceptQuest
+      address:
+        NA: 0x2011540
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: mission_quest_data pointer
+        r1: int32_t 
+    - name: TryClearQuest
+      address:
+        NA: 0x20115A8
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: mission_quest_data pointer
+    - name: TryBackOutOfQuest
+      address:
+        NA: 0x20115F8
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: mission_quest_data pointer
+    - name: ShouldShowQuestName
+      address:
+        NA: 0x2011630
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: mission_quest_data pointer
+        r1: int32_t 
     - name: ret_020117ac
       address:
         NA: 0x20117AC
@@ -950,6 +1028,13 @@ arm9:
         
         r0: ranger_data pointer
         r1: short
+    - name: CheckSaveFileValidity
+      address:
+        NA: 0x2017298
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        No params.
     - name: ZeroSettingsAndVariables
       address:
         NA: 0x2018E1C
@@ -1214,6 +1299,34 @@ arm9:
         Retrieves the current ranger HP from RANGER_DATA.
         
         No params.
+    - name: TryClearQuestSafe
+      address:
+        NA: 0x2031684
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        No params.
+    - name: GetActiveQuestIdSafe
+      address:
+        NA: 0x20316CC
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        No params.
+    - name: TryBackOutOfQuestSafe
+      address:
+        NA: 0x20316E8
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        No params.
+    - name: GetChapterNumber
+      address:
+        NA: 0x20319CC
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        No params.
     - name: EnableSlotStatusBit2
       address:
         NA: 0x2032148
@@ -1382,11 +1495,158 @@ arm9:
         Retrieves the game_saves_record from RANGER_DATA->ranger_records.
         
         No params.
+    - name: SetScriptSubroutine1
+      address:
+        NA: 0x2033D58
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: script_data pointer
+        r1: char pointer
+        r2: undefined4 
+        r3: undefined4 
+    - name: SetScriptSubroutine2
+      address:
+        NA: 0x2033DC0
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: script_data pointer
+        r1: char pointer
+        r2: undefined4 
+        r3: undefined4 
+    - name: ZeroInitScriptData
+      address:
+        NA: 0x2033E50
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: script_data pointer
+    - name: AllocateQuestDataPtrsAndMore
+      address:
+        NA: 0x2033F04
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: script_manager pointer
+        r1: undefined4 pointer
+    - name: TryInitSystemScript
+      address:
+        NA: 0x2033F90
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: script_manager pointer
+        r1: int32_t 
+    - name: TryInitAreaScript
+      address:
+        NA: 0x203401C
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: script_manager pointer
+        r1: int32_t 
+        r2: undefined4 
+        r3: undefined4 
+    - name: TryInitChapterScript
+      address:
+        NA: 0x2034084
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: script_manager pointer
+        r1: int32_t 
+        r2: undefined4 
+        r3: undefined4 
+    - name: TryInitQuestScript
+      address:
+        NA: 0x2034120
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: script_manager pointer
+        r1: int32_t 
+    - name: SetScriptSubroutine1ByName
+      address:
+        NA: 0x2034184
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: script_manager pointer
+        r1: char pointer
+    - name: SetScriptSubroutine2ByName
+      address:
+        NA: 0x203421C
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: script_manager pointer
+        r1: char pointer
+        r2: megastruct pointer
+        r3: undefined4 
+    - name: ZeroInitSystemScriptData
+      address:
+        NA: 0x2034290
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: script_manager pointer
+    - name: ZeroInitAreaScriptData
+      address:
+        NA: 0x20342A0
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: script_manager pointer
+    - name: ZeroInitChapterScriptData
+      address:
+        NA: 0x20342B0
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: script_manager pointer
+    - name: ZeroInitQuestScriptData
+      address:
+        NA: 0x20342C0
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: script_manager pointer
+    - name: SetUnkRidingData
+      address:
+        NA: 0x2034374
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: script_manager pointer
+        r1: undefined4 
+    - name: GetUnkRidingData
+      address:
+        NA: 0x203437C
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: script_manager pointer
+    - name: ZeroInitAllScriptData
+      address:
+        NA: 0x2034450
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: script_manager pointer
     - name: GetPartnerIndexFromFormId
       address:
         NA: 0x2035088
       description: |-
         Converts a form_id to the corresponding partner index, if possible.
+        
+        r0: form_id
+    - name: GetPartnerIndexFromFormIdAgain
+      address:
+        NA: 0x2035240
+      description: |-
+        Seems to also convert a form_id to the corresponding partneri index if possible.
+        The code looks completely different, but appears to do the same thing...
         
         r0: form_id
     - name: ret_020358fc
@@ -1683,6 +1943,16 @@ arm9:
     - name: OS_GetLockID
       address:
         NA: 0x2064E78
+    - name: MaybeCopyFileName
+      address:
+        NA: 0x2064F28
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: char pointer
+        r1: char pointer
+        r2: undefined4 
+        r3: undefined4 
     - name: OSi_InsertLinkToQueue
       address:
         NA: 0x2064FC0
