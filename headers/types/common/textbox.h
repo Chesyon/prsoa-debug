@@ -64,17 +64,17 @@ struct textbox_subdata {
 ASSERT_SIZE(struct textbox_subdata, 5692);
 
 struct textbox_data {
-    struct group_msg_wrapper_table* group_msg_wrapper_table_ptr;
-    void* field1_0x4;
-    void* field2_0x8;
-    void* field3_0xc;
-    undefined4 field4_0x10;
-    undefined4 field5_0x14;
-    undefined4 field6_0x18;
-    undefined4 field7_0x1c;
-    undefined4 field8_0x20;
-    undefined4 field9_0x24;
-    undefined4 field10_0x28;
+    struct group_msg_wrapper_table *group_msg_wrapper_table_ptr;
+    struct msg_wrapper *system_msg_wrapper_ptr;
+    struct msg_wrapper *area_msg_wrapper_ptr;
+    struct msg_wrapper *chapter_msg_wrapper_ptr;
+    struct msg_wrapper *quest_msg_wrapper_ptr;
+    struct msg_wrapper *battle_msg_wrapper_ptr;
+    int system_script_id;
+    int area_script_id;
+    int chapter_script_id;
+    int quest_script_id;
+    undefined4 battle_script_id;
     void* field11_0x2c;
     char unk_buffer[24];
     char* unk_string_ptr; // Certain interactions cause the string to also appear here.

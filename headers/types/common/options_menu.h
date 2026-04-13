@@ -4,6 +4,7 @@
 #include "enums.h"
 #include "common.h"
 #include "battle.h"
+#include "textbox.h"
 
 // All ov_06 functions that take parameters seem to take this as param_1.
 struct options_menu {
@@ -31,7 +32,7 @@ struct options_menu {
     int text_speed_setting;
     undefined4* unk_struct_size_0xc_ptr_1; // When poked, the entire menu freezes. Presumed to
                                            // handle idle animations?
-    undefined* unk_struct_size_0xc_ptr_2;  // When poked, the back button causes a freeze.
+    struct msg_wrapper *menu_msg_wrapper_ptr; // When poked, the back button causes a freeze.
 };
 
 ASSERT_SIZE(struct options_menu, 140);
