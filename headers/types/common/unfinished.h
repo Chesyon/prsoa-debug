@@ -1848,6 +1848,10 @@ struct ov_27_unk_struct {
     undefined4* field2_0x8;
     undefined4* field3_0xc;
     struct ov_27_unk_substruct_0x10 field4_0x10;
+    undefined field5_0x370;
+    undefined field6_0x371;
+    undefined field7_0x372;
+    undefined field8_0x373;
     undefined4 field869_0x374;
     undefined field870_0x378;
     undefined field871_0x379;
