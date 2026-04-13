@@ -2271,7 +2271,7 @@ arm9:
         Might be responsible for closing and removing a script file from ram.
         
         r0: script_data pointer
-    - name: InitScriptManager
+    - name: InitScriptManagerOuter
       address:
         NA: 0x2033F04
       description: |-
