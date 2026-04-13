@@ -265,6 +265,24 @@ overlay1:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
+    - name: InitInterfaceFileManagerOuter
+      address:
+        NA: 0x213F9D0
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: interface_file_manager pointer
+        r1: char pointer
+        r2: char pointer
+    - name: InitInterfaceFileManagerInner
+      address:
+        NA: 0x213F9F8
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: interface_file_manager pointer
+        r1: char pointer
+        r2: char pointer
   data:
     - name: OV1_STATIC_INITIALIZER
       address:

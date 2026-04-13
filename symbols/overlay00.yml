@@ -1003,6 +1003,14 @@ overlay0:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
+    - name: MaybeOpenAndInitEffectScriptFile
+      address:
+        NA: 0x2163904
+      description: |-
+        Seems to open an overworld effect script file. Specifically: "data/Script/field/effect/ef%03d.fsb"
+        
+        r0: unknown struct
+        r1: int32_t
     - name: ret_02163cf4
       address:
         NA: 0x2163CF4

@@ -8,7 +8,8 @@ void ret_0211e128(void);
 void ret_0211e12c(void);
 void ret_0211e200(void);
 void ret_0211e250(void);
+undefined4 FillQuestInfoMessageWrapper(msg_wrapper *param_1,char *param_2);
+int32_t * ReturnStringLenFromMsgWrapper(msg_wrapper *param_1,int32_t param_2);
 void ret_02120754(void);
 void ret_02121078(void);
-
 #endif
