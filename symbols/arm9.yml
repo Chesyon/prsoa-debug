@@ -316,7 +316,7 @@ arm9:
         Fills the system msg_wrapper with extracted strings and updates the system script_id in textbox_data.
         
         r0: textbox_data pointer
-        r1: script id 
+        r1: script id
     - name: ClearSystemMsgWrapperAndId
       address:
         NA: 0x200AC90
@@ -394,7 +394,7 @@ arm9:
         Fills the quest msg_wrapper with extracted strings and updates the chapter script_id in textbox_data.
         
         r0: textbox_data pointer
-        r1: int32_t 
+        r1: int32_t
     - name: ClearQuestMsgWrapperAndId
       address:
         NA: 0x200B36C
@@ -420,7 +420,7 @@ arm9:
         Fills the battle msg_wrapper with extracted strings and updates the battle script_id in textbox_data.
         
         r0: textbox_data pointer
-        r1: script id 
+        r1: script id
     - name: ClearBattleMsgWrapperAndId
       address:
         NA: 0x200B59C
