@@ -1,4 +1,5 @@
-
+#ifndef HEADERS_TYPES_FILE_H_
+#define HEADERS_TYPES_FILE_H_
 
 struct fs_archive {
     char* name; // Union with pack_id (uint32_t)
@@ -65,3 +66,5 @@ struct file_wrapper {
     bool file_is_open; // Whether or not the file is open.
     char unk_buffer[96];
 };
+
+#endif
