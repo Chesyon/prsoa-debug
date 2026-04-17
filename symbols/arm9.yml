@@ -2676,6 +2676,41 @@ arm9:
         SysCall Function that converts an input fixed point angle from degrees to 1/65536ths of a rotation.
         
         r0: script stack pointer, interpreted as params.
+    - name: SysCallReturnZero047
+      address:
+        NA: 0x204688C
+      description: |-
+        Syscall Function that always returns zero.
+        
+        No params.
+    - name: SysCallReturnZero048
+      address:
+        NA: 0x2046894
+      description: |-
+        Syscall Function that always returns zero.
+        
+        No params.
+    - name: SysCallReturnZero049
+      address:
+        NA: 0x204689C
+      description: |-
+        Syscall Function that always returns zero.
+        
+        No params.
+    - name: SysCallReturnZero050
+      address:
+        NA: 0x20468A4
+      description: |-
+        Syscall Function that always returns zero.
+        
+        No params.
+    - name: SysCallReturnZero051
+      address:
+        NA: 0x20468AC
+      description: |-
+        Syscall Function that always returns zero.
+        
+        No params.
     - name: SysCallGetFixedPointArcTanFromTable
       address:
         NA: 0x20468B4
@@ -2690,6 +2725,27 @@ arm9:
         SysCall Function that takes a pair of fixed-point input coordinates, and computes an angle with their ratio, accounting for quadrants and zero-based edgecases.
         
         r0: script stack pointer, interpreted as params.
+    - name: SysCallReturnZero052
+      address:
+        NA: 0x20468D8
+      description: |-
+        Syscall Function that always returns zero.
+        
+        No params.
+    - name: SysCallReturnZero053
+      address:
+        NA: 0x20468E0
+      description: |-
+        Syscall Function that always returns zero.
+        
+        No params.
+    - name: SysCallReturnZero054
+      address:
+        NA: 0x20468E8
+      description: |-
+        Syscall Function that always returns zero.
+        
+        No params.
     - name: SysCallFloorFixedPoint
       address:
         NA: 0x204666C
