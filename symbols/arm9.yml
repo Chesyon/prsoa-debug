@@ -147,14 +147,14 @@ arm9:
       address:
         NA: 0x2003108
       description: |-
-        [MANUAL DESCRIPTION]
+        Seems to be the higher level equivalent of FS_ConvertFilePathToId.
         
-        r0: undefined4 
+        r0: file path
     - name: GetMsgLangSuffix
       address:
         NA: 0x2003124
       description: |-
-        [MANUAL DESCRIPTION]
+        Retrieves the correct file suffix for the respective language. Presumed to interact with the megastruct in EU.
         
         No params.
     - name: InitFileWrapperWithLangSuffix
@@ -313,15 +313,15 @@ arm9:
       address:
         NA: 0x200AB28
       description: |-
-        [MANUAL DESCRIPTION]
+        Fills the system msg_wrapper with extracted strings and updates the system script_id in textbox_data.
         
         r0: textbox_data pointer
-        r1: int32_t 
+        r1: script id 
     - name: ClearSystemMsgWrapperAndId
       address:
         NA: 0x200AC90
       description: |-
-        [MANUAL DESCRIPTION]
+        Wipes the system msg_wrapper and system script_id in textbox_data.
         
         r0: textbox_data pointer
     - name: PrintTextboxBySystemMessageId
@@ -339,15 +339,15 @@ arm9:
       address:
         NA: 0x200AD80
       description: |-
-        [MANUAL DESCRIPTION]
+        Fills the area msg_wrapper with extracted strings and updates the area script_id in textbox_data.
         
         r0: textbox_data pointer
-        r1: int32_t 
+        r1: script id
     - name: ClearAreaMsgWrapperAndId
       address:
         NA: 0x200AED0
       description: |-
-        [MANUAL DESCRIPTION]
+        Wipes the area msg_wrapper and area script_id in textbox_data.
         
         r0: textbox_data pointer
     - name: PrintTextboxByAreaMessageId
@@ -365,17 +365,15 @@ arm9:
       address:
         NA: 0x200AFC0
       description: |-
-        [MANUAL DESCRIPTION]
+        Fills the chapter msg_wrapper with extracted strings and updates the chapter script_id in textbox_data.
         
         r0: textbox_data pointer
-        r1: int32_t 
-        r2: undefined4 
-        r3: undefined4 
+        r1: script id
     - name: ClearChapterMsgWrapperAndId
       address:
         NA: 0x200B12C
       description: |-
-        [MANUAL DESCRIPTION]
+        Wipes the chapter msg_wrapper and chapter script_id in textbox_data.
         
         r0: textbox_data pointer
     - name: PrintTextboxByChapterMessageId
@@ -393,7 +391,7 @@ arm9:
       address:
         NA: 0x200B21C
       description: |-
-        [MANUAL DESCRIPTION]
+        Fills the quest msg_wrapper with extracted strings and updates the chapter script_id in textbox_data.
         
         r0: textbox_data pointer
         r1: int32_t 
@@ -401,7 +399,7 @@ arm9:
       address:
         NA: 0x200B36C
       description: |-
-        [MANUAL DESCRIPTION]
+        Wipes the quest msg_wrapper and ques script_id in textbox_data.
         
         r0: textbox_data pointer
     - name: PrintTextboxByQuestMessageId
@@ -419,15 +417,15 @@ arm9:
       address:
         NA: 0x200B45C
       description: |-
-        [MANUAL DESCRIPTION]
+        Fills the battle msg_wrapper with extracted strings and updates the battle script_id in textbox_data.
         
         r0: textbox_data pointer
-        r1: int32_t 
+        r1: script id 
     - name: ClearBattleMsgWrapperAndId
       address:
         NA: 0x200B59C
       description: |-
-        [MANUAL DESCRIPTION]
+        Wipes the battle msg_wrapper and battle script_id in textbox_data.
         
         r0: textbox_data pointer
     - name: PrintTextboxByBattleMessageId
@@ -1592,10 +1590,10 @@ arm9:
       address:
         NA: 0x20215F8
       description: |-
-        [MANUAL DESCRIPTION]
+        Returns a string from a given msg_wrapper struct.
         
         r0: msg_wrapper pointer
-        r1: uint32_t 
+        r1: msg_id
     - name: ret_020222c8
       address:
         NA: 0x20222C8
@@ -2211,15 +2209,15 @@ arm9:
       address:
         NA: 0x2033C60
       description: |-
-        [MANUAL DESCRIPTION]
+        Is called to open a script file, unpack it, and likely more.
         
         r0: script_data pointer
-        r1: char pointer
+        r1: script file name
     - name: OpenAndInitChXScript
       address:
         NA: 0x2033D00
       description: |-
-        [MANUAL DESCRIPTION]
+        A variant of OpenAndInitScriptFile run in place of it for exclusively "chx###" scripts.
         
         r0: script_data pointer
         r1: script_file pointer
@@ -2262,7 +2260,7 @@ arm9:
       address:
         NA: 0x2033ED4
       description: |-
-        [MANUAL DESCRIPTION]
+        Might be responsible for closing and removing a script file from ram.
         
         r0: script_data pointer
     - name: InitScriptManager
@@ -2531,7 +2529,7 @@ arm9:
       address:
         NA: 0x2044AC8
       description: |-
-        [MANUAL DESCRIPTION]
+        Seems to be responsible for unpacking a script file.
         
         r0: script_file pointer
     - name: SetSysCallPage
