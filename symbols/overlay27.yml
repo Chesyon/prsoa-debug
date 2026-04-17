@@ -62,22 +62,6 @@ overlay27:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
-    - name: FillQuestInfoMessageWrapper
-      address:
-        NA: 0x211FA84
-      description: |-
-        Seems to fill a "quest info" message_wrapper. r1 is of the form "data/message/etc/quest_info_%02d[REGION.mes]"
-        
-        r0: msg_wrapper pointer
-        r1: file name pointer
-    - name: ReturnStringLenFromMsgWrapper
-      address:
-        NA: 0x211FB38
-      description: |-
-        Retrieves the length of a specified msg from a msg_wrapper.
-        
-        r0: msg_wrapper pointer
-        r1: msg_id
     - name: ret_02120754
       address:
         NA: 0x2120754

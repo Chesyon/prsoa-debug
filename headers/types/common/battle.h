@@ -6,15 +6,6 @@
 #include "script.h"
 
 
-// Not much known, but is closely related to the battle interface.
-struct interface_file_manager {
-    int file_unk_bitmask_01;
-    int file_unk_bitmask_02;
-    uint file_unk_bitmask_03;
-    uint file_unk_bitmask_04;
-};
-ASSERT_SIZE(struct effect_script_data, 16);
-
 // Likely responsible for animation effects in battle.
 struct effect_script_data {
     void *field0_0x0;

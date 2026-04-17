@@ -144,7 +144,6 @@ void ret_0215f854(void);
 void ret_0215f858(void);
 void ret_021603a8(void);
 void ret_021603ac(void);
-int32_t MaybeOpenAndInitEffectScriptFile(void* param_1,int32_t param_2);
 void ret_02163cf4(void);
 void ret_02163cf8(void);
 void ret_02165868(void);
