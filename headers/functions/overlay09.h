@@ -3,7 +3,5 @@
 struct ov_09_unk_struct* Overlay9EntryPoint(struct ov_09_unk_struct* param_1,
                                             struct megastruct* param_2);
 void ret_0211cc2c(void);
-int16_t GetSelectedFlyLocation(void* unk_struct_size_0x58, int16_t param_2);
-void SetFlyDestinationData(void* unk_struct_size_0x58, int16_t param_2);
 
 #endif

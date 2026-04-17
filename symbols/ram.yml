@@ -54,18 +54,6 @@ ram:
       length:
         NA: 0x70
       description: A table of following_npc structs for up to 2 NPCs following the player around.
-    - name: FLY_TELEPORT_DESTINATION_ROOM
-      address:
-        NA: 0x20BB218
-      length:
-        NA: 0x2
-      description: Stores the destination room_id the player is about to fly or teleport to.
-    - name: FLY_TELEPORT_DESTINATION_COORDS
-      address:
-        NA: 0x20BB21A
-      length:
-        NA: 0x4
-      description: Stores the destination player x and y coordinates the player is about to fly or teleport to.
     - name: ARENA_GRAPHIC_ID
       address:
         NA: 0x20BB240

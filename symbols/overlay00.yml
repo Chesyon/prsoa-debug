@@ -356,27 +356,6 @@ overlay0:
         Seems to handle mounting a specified pokemon. Seems to take a pokemon_data pointer.
         
         r0: pokemon_data pointer
-    - name: SysCallGetFlyTeleportDestinationRoom
-      address:
-        NA: 0x214ABE4
-      description: |-
-        SysCall Function that returns the room_id from FLY_TELEPORT_DESTINATION_ROOM. Known to be used by the system script for flying and teleporting.
-        
-        No params.
-    - name: SysCallGetFlyGetFlyTeleportXCoord
-      address:
-        NA: 0x214AC00
-      description: |-
-        SysCall Function that returns the x coordinate from FLY_TELEPORT_DESTINATION_COORDS. Known to be used by the system script for flying and teleporting.
-        
-        No params.
-    - name: SysCallGetFlyGetFlyTeleportYCoord
-      address:
-        NA: 0x214AC1C
-      description: |-
-        SysCall Function that returns the y coordinate from FLY_TELEPORT_DESTINATION_COORDS. Known to be used by the system script for flying and teleporting.
-        
-        No params.
     - name: ret_0214b6f0
       address:
         NA: 0x214B6F0

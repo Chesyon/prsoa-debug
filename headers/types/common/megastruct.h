@@ -52,7 +52,7 @@ struct megastruct {
     undefined4 field3841_0x1464;
     undefined4 field3842_0x1468;
     undefined field3843_0x146c[32];
-    void* unk_struct_size_0x1ac; // Very likely related to sound, bgm, or sfx.
+    void* unk_struct_size_0x1ac;
     // A pointer to this is present in the mission_quest_footer. Looks to be related to the message
     // given before a quest is accepted. Has ties to "data/message/quest/quest%03d_mes"
     void* unk_struct_size_0x158;
@@ -64,8 +64,8 @@ struct megastruct {
     struct mission_quest_data* mission_quest_data_ptr;
     struct ranger_data_old* ranger_data_ptr;
     undefined4 field3882_0x14a8;
-    struct font_file_data *font_data_ptr_size_0x1c;
-    struct group_msg_wrapper_table *group_msg_wrapper_table;
+    struct font_file_data* font_data_ptr_size_0x1c;
+    struct group_msg_wrapper_table* group_msg_wrapper_table;
     struct settings_and_variables* settings_vars_ptr;
     void* unk_struct_size_0x28;
     void* unk_struct_size_0x1c;   // Might be related to sound registers? See FUN_0200E2D4
@@ -74,9 +74,9 @@ struct megastruct {
         unk_struct_size_0xc7c; // Seems related to 2D display (2D Engine A and B), See FUN_200E4A8.
     void* unk_struct_size_0xc7c_1; // Seems related to 2D display (2D Engine A and B), See
                                    // FUN_200E4A8.
-    struct field_data *field_data_ptr;
-    void* field3892_0x14d0[32];    // These appear to be functions for the below param_0s
-    int field3893_0x1550[32];      // These appear to be param_0 for the above functions
+    struct field_data* field_data_ptr;
+    void* field3892_0x14d0[32]; // These appear to be functions for the below param_0s
+    int field3893_0x1550[32];   // These appear to be param_0 for the above functions
     undefined4 field4021_0x15d0;
     undefined4 field4022_0x15d4;
     void* unk_struct_size_0x58;
