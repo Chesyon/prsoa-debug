@@ -1678,13 +1678,14 @@ struct target_destroyed_nibbles {
 ASSERT_SIZE(struct target_destroyed_nibbles, 16);
 
 struct field_data {
-    struct file_wrapper* field_data_file_wrapper;
-    void* npc_data;   // Not currently understood, but described as such by field_data.bin
-    void* enemy_data; // Not currently understood, but described as such by field_data.bin
-    void* tobj_data;  // Not currently understood, but described as such by field_data.bin
-    void* map_data;   // Not currently understood, but described as such by field_data.bin
+    struct file_wrapper *field_data_file_wrapper;
+    void *npc_data; // Not currently understood, but described as such by field_data.bin
+    void *enemy_data; // Not currently understood, but described as such by field_data.bin
+    void *tobj_data; // Not currently understood, but described as such by field_data.bin
+    void *map_data; // Not currently understood, but described as such by field_data.bin
 };
 ASSERT_SIZE(struct field_data, 20);
+
 
 #include "ranger_data.h"
 
