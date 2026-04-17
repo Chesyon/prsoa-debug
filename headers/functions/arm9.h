@@ -38,22 +38,18 @@ void EnableAutoAdvanceTextWithDelay(struct textbox_data* param_1, int param_2);
 void DisableAutoAdvanceText(struct textbox_data* param_1);
 void EnableAutoCloseTextWithDelay(struct textbox_data* param_1, int param_2);
 void DisableAutoCloseText(struct textbox_data* param_1);
-void PrintTextboxById(textbox_data *param_1,undefined4 script_kind,undefined4 msg_id,undefined4 param_4,undefined4 param_5,undefined4 param_6);
-void FillSystemMsgWrapperAndId(textbox_data *param_1,int32_t param_2);
-void ClearSystemMsgWrapperAndId(textbox_data *param_1);
-void PrintTextboxBySystemMessageId(textbox_data *param_1,uint32_t param_2,undefined4 param_3,undefined4 param_4,undefined4 param_5);
-void FillAreaMsgWrapperAndId(textbox_data *param_1,int32_t param_2);
-void ClearAreaMsgWrapperAndId(textbox_data *param_1);
-void PrintTextboxByAreaMessageId(textbox_data *param_1,uint32_t param_2,undefined4 param_3,undefined4 param_4,undefined4 param_5);
-void FillChapterMsgWrapperAndId(textbox_data *param_1,int32_t param_2);
-void ClearChapterMsgWrapperAndId(textbox_data *param_1);
-void PrintTextboxByChapterMessageId(textbox_data *param_1,uint32_t param_2,undefined4 param_3,undefined4 param_4,undefined4 param_5);
-void FillQuestMsgWrapperAndId(textbox_data *param_1,int32_t param_2);
-void ClearQuestMsgWrapperAndId(textbox_data *param_1);
-void PrintTextboxByQuestMessageId(textbox_data *param_1,uint32_t param_2,undefined4 param_3,undefined4 param_4,undefined4 param_5);
-void FillBattleMsgWrapperAndId(textbox_data *param_1,int32_t param_2);
-void ClearBattleMsgWrapperAndId(textbox_data *param_1);
-void PrintTextboxByBattleMessageId(textbox_data *param_1,uint32_t param_2,undefined4 param_3,undefined4 param_4,undefined4 param_5);
+void PrintTextboxById(struct textbox_data* param_1, undefined4 script_kind, undefined4 msg_id,
+                      undefined4 param_4, undefined4 param_5, undefined4 param_6);
+void PrintTextboxBySystemMessageId(struct textbox_data* param_1, uint32_t param_2, int param_3,
+                                   int param_4, undefined4 param_5);
+void PrintTextboxByAreaMessageId(struct textbox_data* param_1, uint32_t param_2, int param_3,
+                                 int param_4, undefined4 param_5);
+void PrintTextboxByChapterMessageId(struct textbox_data* param_1, uint32_t param_2, int param_3,
+                                    int param_4, undefined4 param_5);
+void PrintTextboxByQuestMessageId(struct textbox_data* param_1, uint32_t param_2, int param_3,
+                                  int param_4, undefined4 param_5);
+void PrintTextboxByBattleMessageId(struct textbox_data* param_1, uint32_t param_2, int param_3,
+                                   int param_4, undefined4 param_5);
 undefined4 TryCloseTextbox(struct textbox_data* param_1, undefined4 param_2);
 int GetYesNoMenuResult(struct textbox_data* param_1);
 void ret_0200bbc0(void);
