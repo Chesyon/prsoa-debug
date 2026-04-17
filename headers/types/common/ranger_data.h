@@ -100,7 +100,7 @@ struct ranger_data_old {
     struct following_npc follower_1;
     struct following_npc follower_2;
     char debug_string_buffer[32]; // Seems to hold the contents of various debug text.
-    struct team_and_assists_8 team_and_assists;
+    struct battle_result_8 battle_result;
     undefined field48_0x8b65;
     undefined field49_0x8b66;
     undefined field50_0x8b67;
@@ -121,15 +121,11 @@ struct ranger_data_old {
     undefined4 field65_0x8b9c;
     undefined4 field66_0x8ba0;
     undefined field67_0x8ba4[44];
-    // Only the first 8 slots of each group are actually remembered in the save file!
-    // Table 0: Land Pokemon
-    // Table 1: Ocean Pokemon
-    // Table 2: Capture Arena Pokemon
     struct pokemon_data recruited_pokemon_tables_backup[3][10];
     struct following_npc follower_1_backup;
     struct following_npc follower_2_backup;
     char debug_string_buffer_backup[32]; // Seems to hold the contents of various debug text.
-    struct team_and_assists_8 team_and_assists_backup;
+    struct battle_result_8 battle_result_backup;
     undefined field67_0x8f31;
     undefined field68_0x8f32;
     undefined field69_0x8f33;

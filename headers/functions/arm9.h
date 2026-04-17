@@ -1,5 +1,8 @@
 #ifndef HEADERS_FUNCTIONS_ARM9_H_
 #define HEADERS_FUNCTIONS_ARM9_H_
+
+#include "arm9/itcm.h"
+
 void _start(void);
 undefined4 MIi_UncompressBackward(int param_1);
 void ret_02000b98(void);
@@ -426,8 +429,7 @@ void Mtx_TransApply44(int* param_1, int* param_2, int param_3, int param_4, int 
 void Mtx_ScaleApply44(unsigned int* param_1, unsigned int* param_2, int param_3, int param_4,
                       int param_5);
 undefined4* Mtx_RotZ44(undefined4* param_1, int param_2, undefined4 param_3);
-void FixedPoint4x4MatrixMultiply(int* param_1, int* param_2, unsigned int* param_3,
-                                 undefined4 param_4);
+void Mtx_Concat44(int* param_1, int* param_2, unsigned int* param_3, undefined4 param_4);
 void Mtx_OrthoW(int param_1, int param_2, int param_3, int param_4, int param_5, int param_6,
                 unsigned int param_7, int* param_8);
 unsigned int FX_Div(int32_t param_1, int32_t param_2);
