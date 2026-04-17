@@ -265,6 +265,100 @@ overlay1:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
+    - name: BattleBannerGraphicFrameAdvance
+      address:
+        NA: 0x213F338
+      description: |-
+        Seems to handle advancing the frame and state of the graphic that appears at the start of each battle.
+        Note: It skips directly from state 10 to state 12
+        
+        r0: battle_graphic_struct pointer
+    - name: BattleBannerGraphicFrameAdvanceState1
+      address:
+        NA: 0x213F3D4
+      description: |-
+        Seems to handle advancing the frame and state of the graphic that appears at the start of each battle during state 1.
+        
+        r0: battle_graphic_struct pointer
+    - name: BattleBannerGraphicFrameAdvanceState2
+      address:
+        NA: 0x213F41C
+      description: |-
+        Seems to handle advancing the frame and state of the graphic that appears at the start of each battle during state 2.
+        
+        r0: battle_graphic_struct pointer
+    - name: BattleBannerGraphicFrameAdvanceState3
+      address:
+        NA: 0x213F490
+      description: |-
+        Seems to handle advancing the frame and state of the graphic that appears at the start of each battle during state 3.
+        
+        r0: battle_graphic_struct pointer
+    - name: BattleBannerGraphicFrameAdvanceState4
+      address:
+        NA: 0x213F504
+      description: |-
+        Seems to handle advancing the frame and state of the graphic that appears at the start of each battle during state 4.
+        
+        r0: battle_graphic_struct pointer
+    - name: BattleBannerGraphicFrameAdvanceState5
+      address:
+        NA: 0x213F578
+      description: |-
+        Seems to handle advancing the frame and state of the graphic that appears at the start of each battle during state 5.
+        
+        r0: battle_graphic_struct pointer
+    - name: BattleBannerGraphicFrameAdvanceState6
+      address:
+        NA: 0x213F5A0
+      description: |-
+        Seems to handle advancing the frame and state of the graphic that appears at the start of each battle during state 6.
+        
+        r0: battle_graphic_struct pointer
+    - name: BattleBannerGraphicFrameAdvanceState7
+      address:
+        NA: 0x213F608
+      description: |-
+        Seems to handle advancing the frame and state of the graphic that appears at the start of each battle during state 7.
+        
+        r0: battle_graphic_struct pointer
+    - name: BattleBannerGraphicFrameAdvanceState8
+      address:
+        NA: 0x213F688
+      description: |-
+        Seems to handle advancing the frame and state of the graphic that appears at the start of each battle during state 8.
+        
+        r0: battle_graphic_struct pointer
+    - name: BattleBannerGraphicFrameAdvanceState9
+      address:
+        NA: 0x213F6D0
+      description: |-
+        Seems to handle advancing the frame and state of the graphic that appears at the start of each battle during state 9.
+        
+        r0: battle_graphic_struct pointer
+    - name: BattleBannerGraphicFrameAdvanceState10
+      address:
+        NA: 0x213F794
+      description: |-
+        Seems to handle advancing the frame and state of the graphic that appears at the start of each battle during state 10.
+        
+        r0: battle_graphic_struct pointer
+    - name: BattleBannerGraphicFrameAdvanceState12
+      address:
+        NA: 0x213F7E4
+      description: |-
+        Seems to handle advancing the frame and state of the graphic that appears at the start of each battle during state 12.
+        
+        r0: battle_graphic_struct pointer
+    - name: BattleBannerGraphicStateAdvance
+      address:
+        NA: 0x213F960
+      description: |-
+        Seems to handle advancing the state of the graphic that appears at the start of each battle after a certain number of frames.
+        Resets the frame counter.
+        
+        r0: battle_graphic_struct pointer
+        r1: state to advance to
   data:
     - name: OV1_STATIC_INITIALIZER
       address:

@@ -39,4 +39,17 @@ void ret_02136ae8(void);
 void ret_02137b90(void);
 void ret_02137b94(void);
 void ret_0213ae14(void);
+void BattleBannerGraphicFrameAdvance(struct battle_graphic_struct* param_1);
+void BattleBannerGraphicFrameAdvanceState1(struct battle_graphic_struct* param_1);
+void BattleBannerGraphicFrameAdvanceState2(struct battle_graphic_struct* param_1);
+void BattleBannerGraphicFrameAdvanceState3(struct battle_graphic_struct* param_1);
+void BattleBannerGraphicFrameAdvanceState4(struct battle_graphic_struct* param_1);
+void BattleBannerGraphicFrameAdvanceState5(struct battle_graphic_struct* param_1);
+void BattleBannerGraphicFrameAdvanceState6(struct battle_graphic_struct* param_1);
+void BattleBannerGraphicFrameAdvanceState7(struct battle_graphic_struct* param_1);
+void BattleBannerGraphicFrameAdvanceState8(struct battle_graphic_struct* param_1);
+void BattleBannerGraphicFrameAdvanceState9(struct battle_graphic_struct* param_1);
+void BattleBannerGraphicFrameAdvanceState10(struct battle_graphic_struct* param_1);
+void BattleBannerGraphicFrameAdvanceState12(struct battle_graphic_struct* param_1);
+void BattleBannerGraphicStateAdvance(struct battle_graphic_struct* param_1, int param_2);
 #endif

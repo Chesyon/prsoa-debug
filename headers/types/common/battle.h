@@ -92,7 +92,7 @@ struct battle_struct {
     int field84_0xc04;
     int field85_0xc08;
     int field86_0xc0c;
-    undefined4* battle_graphic_struct_ptr;
+    struct battle_graphic_struct* battle_graphic_struct_ptr;
     int field88_0xc14;
     int* unk_struct_size_0x18_ptrs[3];
     int field90_0xc24;
@@ -138,6 +138,52 @@ struct battle_struct {
     // May be larger!
 };
 
+struct battle_graphic_struct {
+    uint16_t frame_counter;
+    undefined field1_0x2;
+    undefined field2_0x3;
+    int32_t graphic_state;
+    int field4_0x8;
+    int field5_0xc;
+    // Not confirmed to be a continuous field
+    undefined fields1_0x10[28];
+    int field34_0x2c;
+    undefined4 field35_0x30;
+    undefined field36_0x34;
+    undefined field37_0x35;
+    undefined field38_0x36;
+    undefined field39_0x37;
+    undefined field40_0x38;
+    undefined field41_0x39;
+    undefined field42_0x3a;
+    undefined field43_0x3b;
+    undefined field44_0x3c;
+    undefined field45_0x3d;
+    uint16_t field46_0x3e;
+    // Not confirmed to be a continuous field
+    undefined fields2_0x40[56];
+    uint16_t field103_0x78;
+    uint16_t field104_0x7a;
+    int field105_0x7c;
+    int field106_0x80;
+    // Not confirmed to be a continuous field
+    undefined fields3_0x84[64];
+    uint32_t field171_0xc4;
+    int field172_0xc8;
+    int field173_0xcc;
+    // Not confirmed to be a continuous field
+    undefined fields4_0xd0[72];
+    undefined4 field246_0x118;
+    undefined4 field247_0x11c;
+    int32_t field248_0x120;
+    int32_t field249_0x124;
+    // Not confirmed to be a continuous field
+    undefined fields5_0x128[40];
+    undefined4 field290_0x150;
+};
+
 ASSERT_SIZE(struct battle_struct, 4840);
+
+ASSERT_SIZE(struct battle_graphic_struct, 340);
 
 #endif
