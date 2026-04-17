@@ -297,7 +297,7 @@ undefined4 SysCallIncrementPokemonRidesRecord(void);
 int32_t SysCallGetGameSavesRecord(void);
 struct script_data * InitScriptDataOuter(struct script_data *param_1);
 undefined4 OpenAndInitScriptFile(struct script_data *param_1,char *param_2);
-undefined4 OpenAndInitChXScript(struct script_data *param_1,struct script_file *param_2,int param_3);
+undefined4 OpenAndInitChXScript(struct script_data *param_1,script_file *param_2,int param_3);
 undefined4 SetScriptSubroutine1(struct script_data* param_1, char* param_2, undefined4 param_3, undefined4 param_4);
 void SetScriptSubroutine2(struct script_data* param_1, char* param_2, undefined4 param_3, undefined4 param_4);
 void ZeroInitScriptData(struct script_data* param_1);
@@ -340,7 +340,7 @@ void ret_020441ac(void);
 void DebugPrintInternal(char* format, va_list ap);
 void DebugPrintInternalVeneer(char* format, va_list ap);
 void SetSysCallPageZero(void);
-void UnpackScriptFile(struct script_file *param_1);
+void UnpackScriptFile(script_file *param_1);
 void SetSysCallPage(int param_1, void* param_2);
 undefined4 SysCallReturnZero000(void);
 undefined4 SysCallPrintStrWithPrefix(undefined4* param_1, undefined4 param_2, undefined4 param_3,

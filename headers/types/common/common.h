@@ -6,6 +6,7 @@
 #include "util.h"
 #include "enums.h"
 #include "battle.h"
+#include "script.h"
 #include "flying_menu.h"
 #include "options_menu.h"
 #include "unfinished.h"

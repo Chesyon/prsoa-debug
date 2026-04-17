@@ -8,12 +8,12 @@
 
 // Not much known, but is closely related to the battle interface.
 struct interface_file_manager {
-    undefined4 file_unk_bitmask_01;
-    undefined4 file_unk_bitmask_02;
-    undefined4 file_unk_bitmask_03;
-    undefined4 file_unk_bitmask_04;
+    int file_unk_bitmask_01;
+    int file_unk_bitmask_02;
+    uint file_unk_bitmask_03;
+    uint file_unk_bitmask_04;
 };
-ASSERT_SIZE(struct interface_file_manager, 16);
+ASSERT_SIZE(struct effect_script_data, 16);
 
 // Likely responsible for animation effects in battle.
 struct effect_script_data {
@@ -237,7 +237,7 @@ struct enemy_script_data {
     int field17_0x1c;
     int field18_0x20;
     int field19_0x24;
-    int field20_0x28;
+    uint field20_0x28;
     int field21_0x2c;
     int field22_0x30;
     int field23_0x34;
