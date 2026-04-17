@@ -30,9 +30,9 @@ struct options_menu {
     undefined field14_0x7b;
     int window_setting;
     int text_speed_setting;
-    undefined4* unk_struct_size_0xc_ptr_1; // When poked, the entire menu freezes. Presumed to
-                                           // handle idle animations?
-    struct msg_wrapper *menu_msg_wrapper_ptr; // When poked, the back button causes a freeze.
+    undefined4* unk_struct_size_0xc_ptr_1;    // When poked, the entire menu freezes. Presumed to
+                                              // handle idle animations?
+    struct msg_wrapper* menu_msg_wrapper_ptr; // When poked, the back button causes a freeze.
 };
 
 ASSERT_SIZE(struct options_menu, 140);

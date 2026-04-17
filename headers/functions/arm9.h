@@ -40,22 +40,28 @@ void EnableAutoAdvanceTextWithDelay(struct textbox_data* param_1, int param_2);
 void DisableAutoAdvanceText(struct textbox_data* param_1);
 void EnableAutoCloseTextWithDelay(struct textbox_data* param_1, int param_2);
 void DisableAutoCloseText(struct textbox_data* param_1);
-void PrintTextboxById(struct textbox_data *param_1,undefined4 script_kind,undefined4 msg_id,undefined4 param_4,undefined4 param_5,undefined4 param_6);
-void FillSystemMsgWrapperAndId(struct textbox_data *param_1,int32_t param_2);
-void ClearSystemMsgWrapperAndId(struct textbox_data *param_1);
-void PrintTextboxBySystemMessageId(struct textbox_data *param_1,uint32_t param_2,undefined4 param_3,undefined4 param_4,undefined4 param_5);
-void FillAreaMsgWrapperAndId(struct textbox_data *param_1,int32_t param_2);
-void ClearAreaMsgWrapperAndId(struct textbox_data *param_1);
-void PrintTextboxByAreaMessageId(struct textbox_data *param_1,uint32_t param_2,undefined4 param_3,undefined4 param_4,undefined4 param_5);
-void FillChapterMsgWrapperAndId(struct textbox_data *param_1,int32_t param_2);
-void ClearChapterMsgWrapperAndId(struct textbox_data *param_1);
-void PrintTextboxByChapterMessageId(struct textbox_data *param_1,uint32_t param_2,undefined4 param_3,undefined4 param_4,undefined4 param_5);
-void FillQuestMsgWrapperAndId(struct textbox_data *param_1,int32_t param_2);
-void ClearQuestMsgWrapperAndId(struct textbox_data *param_1);
-void PrintTextboxByQuestMessageId(struct textbox_data *param_1,uint32_t param_2,undefined4 param_3,undefined4 param_4,undefined4 param_5);
-void FillBattleMsgWrapperAndId(struct textbox_data *param_1,int32_t param_2);
-void ClearBattleMsgWrapperAndId(struct textbox_data *param_1);
-void PrintTextboxByBattleMessageId(struct textbox_data *param_1,uint32_t param_2,undefined4 param_3,undefined4 param_4,undefined4 param_5);
+void PrintTextboxById(struct textbox_data* param_1, undefined4 script_kind, undefined4 msg_id,
+                      undefined4 param_4, undefined4 param_5, undefined4 param_6);
+void FillSystemMsgWrapperAndId(struct textbox_data* param_1, int32_t param_2);
+void ClearSystemMsgWrapperAndId(struct textbox_data* param_1);
+void PrintTextboxBySystemMessageId(struct textbox_data* param_1, uint32_t param_2,
+                                   undefined4 param_3, undefined4 param_4, undefined4 param_5);
+void FillAreaMsgWrapperAndId(struct textbox_data* param_1, int32_t param_2);
+void ClearAreaMsgWrapperAndId(struct textbox_data* param_1);
+void PrintTextboxByAreaMessageId(struct textbox_data* param_1, uint32_t param_2, undefined4 param_3,
+                                 undefined4 param_4, undefined4 param_5);
+void FillChapterMsgWrapperAndId(struct textbox_data* param_1, int32_t param_2);
+void ClearChapterMsgWrapperAndId(struct textbox_data* param_1);
+void PrintTextboxByChapterMessageId(struct textbox_data* param_1, uint32_t param_2,
+                                    undefined4 param_3, undefined4 param_4, undefined4 param_5);
+void FillQuestMsgWrapperAndId(struct textbox_data* param_1, int32_t param_2);
+void ClearQuestMsgWrapperAndId(struct textbox_data* param_1);
+void PrintTextboxByQuestMessageId(struct textbox_data* param_1, uint32_t param_2,
+                                  undefined4 param_3, undefined4 param_4, undefined4 param_5);
+void FillBattleMsgWrapperAndId(struct textbox_data* param_1, int32_t param_2);
+void ClearBattleMsgWrapperAndId(struct textbox_data* param_1);
+void PrintTextboxByBattleMessageId(struct textbox_data* param_1, uint32_t param_2,
+                                   undefined4 param_3, undefined4 param_4, undefined4 param_5);
 undefined4 TryCloseTextbox(struct textbox_data* param_1, undefined4 param_2);
 int GetYesNoMenuResult(struct textbox_data* param_1);
 void ret_0200bbc0(void);
@@ -210,7 +216,7 @@ int32_t GetQuestVariable(struct settings_and_variables* param_1, int32_t param_2
 void SetSettingsVariable(struct settings_and_variables* param_1, int param_2, int32_t param_3);
 int32_t GetSettingsVariable(struct settings_and_variables* param_1, int param_2);
 void ret_0201a40c(void);
-char * RetrieveStringIdFromMsgWrapperTable(struct msg_wrapper **param_1,uint32_t param_2);
+char* RetrieveStringIdFromMsgWrapperTable(struct msg_wrapper** param_1, uint32_t param_2);
 void ret_020222c8(void);
 void ret_020222cc(void);
 void ret_020222d0(void);
@@ -294,15 +300,18 @@ undefined4 SysCallSetTimer1Duration(int32_t* param_1);
 undefined4 SysCallTimerIsActive(void);
 undefined4 SysCallIncrementPokemonRidesRecord(void);
 int32_t SysCallGetGameSavesRecord(void);
-struct script_data * InitScriptDataOuter(struct script_data *param_1);
-undefined4 OpenAndInitScriptFile(struct script_data *param_1,char *param_2);
-undefined4 OpenAndInitChXScript(struct script_data *param_1,struct script_file *param_2,int param_3);
-undefined4 SetScriptSubroutine1(struct script_data* param_1, char* param_2, undefined4 param_3, undefined4 param_4);
-void SetScriptSubroutine2(struct script_data* param_1, char* param_2, undefined4 param_3, undefined4 param_4);
+struct script_data* InitScriptDataOuter(struct script_data* param_1);
+undefined4 OpenAndInitScriptFile(struct script_data* param_1, char* param_2);
+undefined4 OpenAndInitChXScript(struct script_data* param_1, struct script_file* param_2,
+                                int param_3);
+undefined4 SetScriptSubroutine1(struct script_data* param_1, char* param_2, undefined4 param_3,
+                                undefined4 param_4);
+void SetScriptSubroutine2(struct script_data* param_1, char* param_2, undefined4 param_3,
+                          undefined4 param_4);
 void ZeroInitScriptData(struct script_data* param_1);
 void InitScriptData(struct script_data* param_1);
-void MaybeCloseAndDeallocateScriptFile(struct script_data *param_1);
-struct script_manager * InitScriptManagerOuter(struct script_manager *param_1,undefined4 *param_2);
+void MaybeCloseAndDeallocateScriptFile(struct script_data* param_1);
+struct script_manager* InitScriptManagerOuter(struct script_manager* param_1, undefined4* param_2);
 int TryInitSystemScript(struct script_manager* param_1, int param_2);
 int TryInitAreaScript(struct script_manager* param_1, int param_2, undefined4 param_3,
                       undefined4 param_4);
@@ -339,7 +348,7 @@ void ret_020441ac(void);
 void DebugPrintInternal(char* format, va_list ap);
 void DebugPrintInternalVeneer(char* format, va_list ap);
 void SetSysCallPageZero(void);
-void UnpackScriptFile(struct script_file *param_1);
+void UnpackScriptFile(struct script_file* param_1);
 void SetSysCallPage(int param_1, void* param_2);
 undefined4 SysCallReturnZero000(void);
 undefined4 SysCallPrintStrWithPrefix(undefined4* param_1, undefined4 param_2, undefined4 param_3,
