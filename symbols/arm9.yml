@@ -2676,6 +2676,127 @@ arm9:
         SysCall Function that converts an input fixed point angle from degrees to 1/65536ths of a rotation.
         
         r0: script stack pointer, interpreted as params.
+    - name: SysCallGetFixedPointArcTanFromTable
+      address:
+        NA: 0x20468B4
+      description: |-
+        SysCall Function that takes a pair of fixed-point input coordinates, and computes an angle with their ratio.
+        
+        r0: script stack pointer, interpreted as params.
+    - name: SysCallGetFixedPointArcTan2FromTable
+      address:
+        NA: 0x20468C4
+      description: |-
+        SysCall Function that takes a pair of fixed-point input coordinates, and computes an angle with their ratio, accounting for quadrants and zero-based edgecases.
+        
+        r0: script stack pointer, interpreted as params.
+    - name: SysCallFloorFixedPoint
+      address:
+        NA: 0x204666C
+      description: |-
+        Syscall Function that returns the floor of an input fixed-point value.
+        
+        r0: script stack pointer, interpreted as params.
+    - name: SysCallFixedPointDivide
+      address:
+        NA: 0x204668C
+      description: |-
+        SysCall Function that takes the absolute value of an input.
+        
+        r0: script stack pointer, interpreted as params.
+    - name: SysCallIntToFixedPoint
+      address:
+        NA: 0x20466A0
+      description: |-
+        SysCall Function that converts an int to a fixed point value.
+        
+        r0: script stack pointer, interpreted as params.
+    - name: SysCallFixedPointToInt
+      address:
+        NA: 0x20466C4
+      description: |-
+        SysCall Function that converts a fixed point value to an int.
+        
+        r0: script stack pointer, interpreted as params.
+    - name: SysCallGetTaylorPackedSinCos
+      address:
+        NA: 0x20466F0
+      description: |-
+        SysCall Function for GetFixedPointSinCos. Returns the output as a packed 32 bit value.
+        
+        r0: script stack pointer, interpreted as params.
+    - name: SysCallGetTaylorPackedCosSin
+      address:
+        NA: 0x2046708
+      description: |-
+        SysCall Function for GetFixedPointCosSin. Returns the output as a packed 32 bit value.
+        
+        r0: script stack pointer, interpreted as params.
+    - name: SysCallGetLcrngHigh
+      address:
+        NA: 0x2046720
+      description: |-
+        SysCall Function that advances to the next LCRNG state then returns the 16 bit high of LCRNG_STATE.
+        
+        r0: script stack pointer, interpreted as params.
+    - name: SysCallFixedPointRandomScale
+      address:
+        NA: 0x2046758
+      description: |-
+        SysCall Function that advances to the next LCRNG state then scales the input by the result from LCRNG_STATE.
+        Can only scale by a positive number.
+        
+        r0: script stack pointer, interpreted as params.
+    - name: SysCallFixedPointSignedRandomScale
+      address:
+        NA: 0x20467A4
+      description: |-
+        SysCall Function that advances to the next LCRNG state then scales the input by the result from LCRNG_STATE.
+        Can scale by either positive or negative number.
+        
+        r0: script stack pointer, interpreted as params.
+    - name: SysCallSqrt32
+      address:
+        NA: 0x20467F4
+      description: |-
+        SysCall Function for Sqrt32.
+        
+        r0: script stack pointer, interpreted as params.
+    - name: SysCallGetFixedPointReciprocal
+      address:
+        NA: 0x2046804
+      description: |-
+        SysCall Function for GetFixedPointReciprocal
+        
+        r0: script stack pointer, interpreted as params.
+    - name: SysCallInverseSqrt
+      address:
+        NA: 0x2046814
+      description: |-
+        SysCall Function for InverseSqrt.
+        
+        r0: script stack pointer, interpreted as params.
+    - name: SysCallFixedPointDegToRad
+      address:
+        NA: 0x2046824
+      description: |-
+        SysCall Function that converts an input fixed point angle from degrees to radians.
+        
+        r0: script stack pointer, interpreted as params.
+    - name: SysCallFixedPointRadToDeg
+      address:
+        NA: 0x2046840
+      description: |-
+        SysCall Function that converts an input fixed point angle from radians to degrees.
+        
+        r0: script stack pointer, interpreted as params.
+    - name: DegreesToFixedPointRotations
+      address:
+        NA: 0x2046874
+      description: |-
+        SysCall Function that converts an input fixed point angle from degrees to 1/65536ths of a rotation.
+        
+        r0: script stack pointer, interpreted as params.
     - name: SysCallReturnZero047
       address:
         NA: 0x204688C
@@ -2949,6 +3070,137 @@ arm9:
         
         No params.
     - name: MaybeLinearInterpolationInit
+      address:
+        NA: 0x205FD64
+      description: Likely a library function.
+    - name: MaybeLinearInterpolationProgress
+      address:
+        NA: 0x205FD8C
+      description: Likely a library function.
+    - name: MaybeLinearInterpolationUpdate
+      address:
+        NA: 0x205FDC0
+      description: Likely a library function.
+    - name: MaybeCheckIfLinearInterpolationMeetsThreshold
+      address:
+        NA: 0x205FDD8
+      description: Likely a library function.
+    - name: Init2x2IdentityMatrix
+      address:
+        NA: 0x205FDF0
+      description: Likely a library function.
+    - name: PopulateUpperHemisphereOfRotMatrix
+      address:
+        NA: 0x205FE08
+      description: Likely a library function.
+    - name: Mtx_Identity33
+      address:
+        NA: 0x205FE14
+    - name: MatrixRotZ
+      address:
+        NA: 0x205FE38
+      description: Likely a library function.
+    - name: Mtx_Identity
+      address:
+        NA: 0x205FE50
+    - name: Mtx_TransApply
+      address:
+        NA: 0x205FE7C
+    - name: ScaleMatrix
+      address:
+        NA: 0x205FF54
+      description: Likely a library function.
+    - name: Mtx_RotZ
+      address:
+        NA: 0x2060078
+    - name: FixedPoint4x4MatrixMultiply
+      address:
+        NA: 0x206009C
+      description: Likely a library function.
+    - name: Mtx_Ortho
+      address:
+        NA: 0x2060700
+    - name: FixedPointDivide32
+      address:
+        NA: 0x2060908
+      description: Likely a library function.
+    - name: Divide32HighBy32Low
+      address:
+        NA: 0x2060918
+      description: Likely a library function.
+    - name: GetFixedPointReciprocal
+      address:
+        NA: 0x2060944
+      description: Likely a library function.
+    - name: Sqrt32
+      address:
+        NA: 0x2060954
+      description: Likely a library function.
+    - name: InverseSqrt
+      address:
+        NA: 0x2060988
+      description: Likely a library function.
+    - name: Division64Return
+      address:
+        NA: 0x20609F0
+      description: Likely a library function.
+    - name: FixedPointDivision32Return
+      address:
+        NA: 0x2060A14
+      description: Likely a library function.
+    - name: InitFixedPointReciprocal
+      address:
+        NA: 0x2060A4C
+      description: Likely a library function.
+    - name: InitSqrt32High
+      address:
+        NA: 0x2060A7C
+      description: Likely a library function.
+    - name: GetSqrtResultUpper
+      address:
+        NA: 0x2060AC0
+      description: Likely a library function.
+    - name: InitDivision32HighBy32Low
+      address:
+        NA: 0x2060AEC
+      description: Likely a library function.
+    - name: Divide32By32Quotient
+      address:
+        NA: 0x2060B14
+      description: Likely a library function.
+    - name: Divide32by32Remainder
+      address:
+        NA: 0x2060B50
+      description: Likely a library function.
+    - name: TaylorExpandFixedPointSin
+      address:
+        NA: 0x2060B8C
+      description: Likely a library function.
+    - name: TaylorExpandFixedPointCos
+      address:
+        NA: 0x2060C74
+      description: Likely a library function.
+    - name: GetFixedPointSinCos
+      address:
+        NA: 0x2060D40
+      description: Likely a library function.
+    - name: GetFixedPointCosSin
+      address:
+        NA: 0x2060DD8
+      description: Likely a library function.
+    - name: GetFixedPointArcTanFromTable
+      address:
+        NA: 0x2060E6C
+      description: Likely a library function.
+    - name: GetFixedPointArcTan2FromTable
+      address:
+        NA: 0x2060F3C
+      description: Likely a library function.
+    - name: ArcTan2FromTable16
+      address:
+        NA: 0x20610F4
+      description: Likely a library function.
+    - name: ret_0206129c
       address:
         NA: 0x205FD64
       description: Likely a library function.
