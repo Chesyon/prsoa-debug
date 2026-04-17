@@ -64,12 +64,12 @@ struct textbox_subdata {
 ASSERT_SIZE(struct textbox_subdata, 5692);
 
 struct textbox_data {
-    struct group_msg_wrapper_table* group_msg_wrapper_table_ptr;
-    struct msg_wrapper* system_msg_wrapper_ptr;
-    struct msg_wrapper* area_msg_wrapper_ptr;
-    struct msg_wrapper* chapter_msg_wrapper_ptr;
-    struct msg_wrapper* quest_msg_wrapper_ptr;
-    struct msg_wrapper* battle_msg_wrapper_ptr;
+    struct group_msg_wrapper_table *group_msg_wrapper_table_ptr;
+    struct msg_wrapper *system_msg_wrapper_ptr;
+    struct msg_wrapper *area_msg_wrapper_ptr;
+    struct msg_wrapper *chapter_msg_wrapper_ptr;
+    struct msg_wrapper *quest_msg_wrapper_ptr;
+    struct msg_wrapper *battle_msg_wrapper_ptr;
     int system_script_id;
     int area_script_id;
     int chapter_script_id;

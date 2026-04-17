@@ -2229,7 +2229,7 @@ arm9:
         
         r0: script_data pointer
         r1: script_file pointer
-        r2: int32_t
+        r2: int32_t 
     - name: SetScriptSubroutine1
       address:
         NA: 0x2033D58

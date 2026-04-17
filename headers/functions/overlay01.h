@@ -39,8 +39,6 @@ void ret_02136ae8(void);
 void ret_02137b90(void);
 void ret_02137b94(void);
 void ret_0213ae14(void);
-struct interface_file_manager* InitInterfaceFileManagerOuter(struct interface_file_manager* param_1,
-                                                             char* param_2, char* param_3);
-void InitInterfaceFileManagerInner(struct interface_file_manager* param_1, char* param_2,
-                                   char* param_3);
+struct interface_file_manager *InitInterfaceFileManagerOuter(struct interface_file_manager *param_1,char *param_2,char *param_3);
+void InitInterfaceFileManagerInner(struct interface_file_manager *param_1,char *param_2,char *param_3);
 #endif

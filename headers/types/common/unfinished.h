@@ -41,8 +41,8 @@ struct ov_03_unk_struct_0 {
     undefined4 field31_0x80;
     undefined4 field32_0x84;
     undefined4 field33_0x88;
-    struct msg_wrapper* menu_msg_wrapper_ptr;
-    struct msg_wrapper* system_msg_wrapper_ptr;
+    struct msg_wrapper *menu_msg_wrapper_ptr;
+    struct msg_wrapper *system_msg_wrapper_ptr;
     undefined field36_0x94;
     undefined field37_0x95;
     uint16_t field38_0x96;
@@ -81,7 +81,7 @@ ASSERT_SIZE(struct ov_03_unk_struct_0, 256);
 struct ov_03_unk_struct_1 {
     void* field0_0x0;
     undefined4 unk_struct_size_0x1ac;
-    struct megastruct* megastruct_ptr;
+    struct megastruct *megastruct_ptr;
     uint16_t field3_0xc;
     uint16_t field4_0xe;
     uint16_t field5_0x10;
@@ -94,7 +94,7 @@ struct ov_03_unk_struct_1 {
     undefined4 field12_0x24;
     undefined4 field13_0x28;
     int unk_struct_size_0x44;
-    struct msg_wrapper* menu_msg_wrapper_ptr;
+    struct msg_wrapper *menu_msg_wrapper_ptr;
     int field16_0x34;
     int field17_0x38;
 };
@@ -102,8 +102,8 @@ ASSERT_SIZE(struct ov_03_unk_struct_1, 60);
 
 struct ov_03_unk_struct_2 {
     void* field0_0x0;
-    void* unk_struct_size_0x1ac;
-    struct megastruct* megastruct_ptr;
+    void *unk_struct_size_0x1ac;
+    struct megastruct *megastruct_ptr;
     uint16_t field3_0xc;
     uint16_t field4_0xe;
     undefined4 field5_0x10;
@@ -113,9 +113,9 @@ struct ov_03_unk_struct_2 {
     undefined4 field9_0x20;
     undefined4 field10_0x24;
     int field11_0x28;
-    struct msg_wrapper* menu_msg_wrapper_ptr;
-    int* field13_0x30;
-    int* field14_0x34;
+    struct msg_wrapper *menu_msg_wrapper_ptr;
+    int *field13_0x30;
+    int *field14_0x34;
 };
 ASSERT_SIZE(struct ov_03_unk_struct_2, 56);
 
@@ -180,7 +180,7 @@ struct ov_03_unk_struct_3 {
     int field296_0x1d0;
     int field297_0x1d4;
     int field298_0x1d8;
-    struct msg_wrapper* name_entry_msg_wrapper_ptr;
+    struct msg_wrapper *name_entry_msg_wrapper_ptr;
 };
 
 ASSERT_SIZE(struct ov_03_unk_struct_3, 480);
@@ -1064,11 +1064,12 @@ struct ov_25_unk_struct {
 };
 ASSERT_SIZE(struct ov_25_unk_struct, 52);
 
+
 struct ov_27_unk_substruct_0x10 {
-    undefined** unk_fun_ptr_0x0;
+    undefined **unk_fun_ptr_0x0;
     undefined4 field1_0x4;
-    void* unk_fun_ptr_0x8;
-    void* unk_fun_ptr_0xC;
+    void *unk_fun_ptr_0x8;
+    void *unk_fun_ptr_0xC;
     int8_t unk_struct_size_0x28_not_ptr;
     undefined field5_0x11;
     undefined field6_0x12;
@@ -1828,10 +1829,10 @@ struct ov_27_unk_substruct_0x10 {
     undefined field760_0x336;
     undefined field761_0x337;
     int num_available_quests;
-    struct msg_wrapper* quest_info_msg_wrapper_table; // Behaving weirdly. Look into that.
+    struct msg_wrapper *quest_info_msg_wrapper_table; // Behaving weirdly. Look into that.
     struct msg_wrapper quest_info_msg_wrapper;
-    struct msg_wrapper* field765_0x34c;
-    int bg_mode;              // Bits 0-2 from 0x4001000
+    struct msg_wrapper *field765_0x34c;
+    int bg_mode; // Bits 0-2 from 0x4001000
     int window_display_flags; // Bits 13-15 from 0x4001000
     int8_t bg_window_insides; // Byte from 0x4001048
     int8_t obj_window_inside; // Byte from 0x400104A
@@ -1868,6 +1869,7 @@ struct ov_27_unk_struct {
     undefined field883_0x388[4828];
 };
 ASSERT_SIZE(struct ov_27_unk_struct, 5732);
+
 
 struct ov_28_unk_struct {
     void* field0_0x0;

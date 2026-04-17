@@ -5,6 +5,7 @@
 #include "megastruct.h"
 #include "script.h"
 
+
 // Not much known, but is closely related to the battle interface.
 struct interface_file_manager {
     undefined4 file_unk_bitmask_01;
@@ -16,14 +17,14 @@ ASSERT_SIZE(struct interface_file_manager, 16);
 
 // Likely responsible for animation effects in battle.
 struct effect_script_data {
-    void* field0_0x0;
+    void *field0_0x0;
     undefined field1_0x4;
     undefined field2_0x5;
     int8_t field3_0x6;
     undefined field4_0x7;
-    undefined* field5_0x8;
-    undefined4* field6_0xc;
-    undefined4* unk_struct_table_0x10;
+    undefined *field5_0x8;
+    undefined4 *field6_0xc;
+    undefined4 *unk_struct_table_0x10;
     int8_t unk_counter_0x14;
     undefined field9_0x15;
     undefined field10_0x16;
@@ -57,7 +58,7 @@ struct effect_script_data {
     undefined field38_0x35;
     undefined field39_0x36;
     undefined field40_0x37;
-    void* unk_file_table_0x38[12];
+    void *unk_file_table_0x38[12];
     undefined field42_0x68;
     undefined field43_0x69;
     undefined field44_0x6a;
@@ -98,8 +99,8 @@ struct effect_script_data {
     undefined field79_0x8d;
     undefined field80_0x8e;
     undefined field81_0x8f;
-    struct file_wrapper* effect_script_file_wrapper_ptr;
-    struct script_file* effect_script_file_ptr;
+    struct file_wrapper *effect_script_file_wrapper_ptr;
+    struct script_file *effect_script_file_ptr;
     undefined4 unk_table_0x98[2]; // Likely longer
     undefined field85_0xa0;
     undefined field86_0xa1;
@@ -213,10 +214,10 @@ struct effect_script_data {
 };
 ASSERT_SIZE(struct effect_script_data, 272);
 
-// Seems responsible for storing the script used to manage enemy pokemon behavior in battle. Likely
-// does other things!
+
+// Seems responsible for storing the script used to manage enemy pokemon behavior in battle. Likely does other things!
 struct enemy_script_data {
-    void* unk_func_ptr;
+    void *unk_func_ptr;
     undefined field1_0x4;
     undefined field2_0x5;
     undefined field3_0x6;
@@ -232,7 +233,7 @@ struct enemy_script_data {
     undefined field13_0x13;
     undefined2 field14_0x14;
     struct form_id_16 pokemon_species;
-    undefined2* field16_0x18;
+    undefined2 *field16_0x18;
     int field17_0x1c;
     int field18_0x20;
     int field19_0x24;
@@ -247,11 +248,18 @@ struct enemy_script_data {
     int field28_0x48;
     int field29_0x4c;
     int field30_0x50;
-    struct file_wrapper* pokemon_file_wrapper_ptr;
-    struct script_file* pokemon_script_ptr;
+    struct file_wrapper *pokemon_file_wrapper_ptr;
+    struct script_file *pokemon_script_ptr;
     undefined4 field33_0x5c;
 };
 ASSERT_SIZE(struct enemy_script_data, 96);
+
+
+
+
+
+
+
 
 // Seems to be stored on the stack for the duration of the battle.
 struct battle_struct {
@@ -310,11 +318,11 @@ struct battle_struct {
     int field52_0xd4;
     int* field53_0xd8;
     undefined4* mystery_struct_ptrs[8];
-    struct enemy_script_data* enemy_script_table[4];
+    struct enemy_script_data *enemy_script_table[4];
     int field56_0x10c[8];
-    int* field57_0x12c;
-    int* field58_0x130[96];
-    struct effect_script_data* effect_script_table[18];
+    int *field57_0x12c;
+    int *field58_0x130[96];
+    struct effect_script_data *effect_script_table[18];
     int* field60_0x2f8[32]; // Mostly size 0x7DC, but the first few aren't...
     int field61_0x378[3];
     int* partner_something_ptr;
@@ -356,18 +364,18 @@ struct battle_struct {
     undefined field98_0xc3e;
     undefined field99_0xc3f;
     int field100_0xc40;
-    struct file_wrapper* sequence_file_wrapper_ptr;
-    struct script_file* sequence_script_ptr;
+    struct file_wrapper *sequence_file_wrapper_ptr;
+    struct script_file *sequence_script_ptr;
     undefined fields1_0xc4c[516]; // This is probably a struct of some kind.
     int field619_0xe50;
     undefined fields2_0xe54[28];
-    struct file_wrapper* tutorial_file_wrapper_ptr;
-    struct script_file* tutorial_script_ptr;
+    struct file_wrapper *tutorial_file_wrapper_ptr;
+    struct script_file *tutorial_script_ptr;
     undefined fields3_0xc4c[516];
     int field1166_0x107c;
     undefined fields4_0x1080[28];
-    struct file_wrapper* start_file_wrapper_ptr;
-    struct script_file* start_script_ptr;
+    struct file_wrapper *start_file_wrapper_ptr;
+    struct script_file *start_script_ptr;
     undefined field1197_0x10a4[516];
     int field1713_0x12a8;
     undefined field1714_0x12ac[28];
