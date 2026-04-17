@@ -82,9 +82,9 @@ struct ov_03_unk_struct_1 {
     void* field0_0x0;
     undefined4 unk_struct_size_0x1ac;
     struct megastruct *megastruct_ptr;
-    ushort field3_0xc;
-    ushort field4_0xe;
-    ushort field5_0x10;
+    uint16_t field3_0xc;
+    uint16_t field4_0xe;
+    uint16_t field5_0x10;
     undefined field6_0x12;
     undefined field7_0x13;
     undefined4 field8_0x14;
@@ -104,8 +104,8 @@ struct ov_03_unk_struct_2 {
     void* field0_0x0;
     void *unk_struct_size_0x1ac;
     struct megastruct *megastruct_ptr;
-    ushort field3_0xc;
-    ushort field4_0xe;
+    uint16_t field3_0xc;
+    uint16_t field4_0xe;
     undefined4 field5_0x10;
     undefined4 field6_0x14;
     undefined4 field7_0x18;
@@ -1064,31 +1064,6 @@ struct ov_25_unk_struct {
 };
 ASSERT_SIZE(struct ov_25_unk_struct, 52);
 
-struct ov_27_unk_struct {
-    void* field0_0x0;
-    undefined4 field1_0x4;
-    undefined4* field2_0x8;
-    undefined4* field3_0xc;
-    struct ov_27_unk_substruct_0x10 field4_0x10;
-    undefined4 field869_0x374;
-    undefined field870_0x378;
-    undefined field871_0x379;
-    undefined field872_0x37a;
-    undefined field873_0x37b;
-    undefined field874_0x37c;
-    undefined field875_0x37d;
-    undefined field876_0x37e;
-    undefined field877_0x37f;
-    undefined field878_0x380;
-    undefined field879_0x381;
-    undefined field880_0x382;
-    undefined field881_0x383;
-    undefined4 field882_0x384;
-    undefined field883_0x388[4828];
-};
-ASSERT_SIZE(struct ov_27_unk_struct, 5732);
-
-
 
 struct ov_27_unk_substruct_0x10 {
     undefined **unk_fun_ptr_0x0;
@@ -1865,8 +1840,31 @@ struct ov_27_unk_substruct_0x10 {
     undefined field771_0x35b;
     undefined4 unk_struct_0x384_ptr;
 };
-ASSERT_SIZE(struct ov_27_unk_substruct_0x10, 904);
+ASSERT_SIZE(struct ov_27_unk_substruct_0x10, 864);
 
+struct ov_27_unk_struct {
+    void* field0_0x0;
+    undefined4 field1_0x4;
+    undefined4* field2_0x8;
+    undefined4* field3_0xc;
+    struct ov_27_unk_substruct_0x10 field4_0x10;
+    undefined4 field869_0x374;
+    undefined field870_0x378;
+    undefined field871_0x379;
+    undefined field872_0x37a;
+    undefined field873_0x37b;
+    undefined field874_0x37c;
+    undefined field875_0x37d;
+    undefined field876_0x37e;
+    undefined field877_0x37f;
+    undefined field878_0x380;
+    undefined field879_0x381;
+    undefined field880_0x382;
+    undefined field881_0x383;
+    undefined4 field882_0x384;
+    undefined field883_0x388[4828];
+};
+ASSERT_SIZE(struct ov_27_unk_struct, 5732);
 
 
 struct ov_28_unk_struct {
