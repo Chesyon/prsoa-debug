@@ -117,12 +117,36 @@ overlay21:
       length:
         NA: 0xC
       description: Basic information for the CBrowserScene class. This class is a single-inheritance class.
+    - name: C_BROWSER_SCENE_VFTABLE
+      address:
+        NA: 0x2122BDC
+      length:
+        NA: 0x34
+      description: Virtual function table for the CBrowserScene class.
+    - name: C_BROWSER_SCENE_VFTABLE_FUNCS
+      address:
+        NA: 0x2122BE4
+      length:
+        NA: 0x2C
+      description: Function pointers of the CBrowserScene class vftable.
     - name: C_BROWSER_MENU_MANAGER
       address:
         NA: 0x2122E38
       length:
         NA: 0x8
       description: Basic information for the CBrowserMenuManager class. This class is a base class.
+    - name: C_BROWSER_MENU_MANAGER_VFTABLE
+      address:
+        NA: 0x2122E58
+      length:
+        NA: 0x2C
+      description: Virtual function table for the CBrowserMenuManager class.
+    - name: C_BROWSER_MENU_MANAGER_VFTABLE_FUNCS
+      address:
+        NA: 0x2122E60
+      length:
+        NA: 0x24
+      description: Function pointers of the CBrowserMenuManager class vftable.
     - name: C_BROWSER_MENU_ITEM
       address:
         NA: 0x2122E84
@@ -153,6 +177,42 @@ overlay21:
       length:
         NA: 0xC
       description: Basic information for the CBrowserMenuManagerPokemon class. This class is a single-inheritance class.
+    - name: C_BROWSER_MENU_CURSOR_POKEMON_VFTABLE
+      address:
+        NA: 0x2122F3C
+      length:
+        NA: 0x20
+      description: Virtual function table for the CBrowserMenuCursorPokemon class.
+    - name: C_BROWSER_MENU_CURSOR_POKEMON_VFTABLE_FUNCS
+      address:
+        NA: 0x2122F44
+      length:
+        NA: 0x18
+      description: Function pointers of the CBrowserMenuCursorPokemon class vftable.
+    - name: C_BROWSER_MENU_MANAGER_POKEMON_VFTABLE
+      address:
+        NA: 0x2122F5C
+      length:
+        NA: 0x2C
+      description: Virtual function table for the CBrowserMenuManagerPokemon class.
+    - name: C_BROWSER_MENU_MANAGER_POKEMON_VFTABLE_FUNCS
+      address:
+        NA: 0x2122F64
+      length:
+        NA: 0x24
+      description: Function pointers of the CBrowserMenuManagerPokemon class vftable.
+    - name: C_BROWSER_MENU_ITEM_POKEMON_VFTABLE
+      address:
+        NA: 0x2122F88
+      length:
+        NA: 0x30
+      description: Virtual function table for the CBrowserMenuItemPokemon class.
+    - name: C_BROWSER_MENU_ITEM_POKEMON_VFTABLE_FUNCS
+      address:
+        NA: 0x2122F90
+      length:
+        NA: 0x28
+      description: Function pointers of the CBrowserMenuItemPokemon class vftable.
     - name: C_BROWSER_MENU_CURSOR_ICON
       address:
         NA: 0x2122FB8
@@ -171,6 +231,42 @@ overlay21:
       length:
         NA: 0xC
       description: Basic information for the CBrowserMenuManagerIcon class. This class is a single-inheritance class.
+    - name: C_BROWSER_MENU_CURSOR_ICON_VFTABLE
+      address:
+        NA: 0x212302C
+      length:
+        NA: 0x20
+      description: Virtual function table for the CBrowserMenuCursorIcon class.
+    - name: C_BROWSER_MENU_CURSOR_ICON_VFTABLE_FUNCS
+      address:
+        NA: 0x2123034
+      length:
+        NA: 0x18
+      description: Function pointers of the CBrowserMenuCursorIcon class vftable.
+    - name: C_BROWSER_MENU_MANAGER_ICON_VFTABLE
+      address:
+        NA: 0x212304C
+      length:
+        NA: 0x2C
+      description: Virtual function table for the CBrowserMenuManagerIcon class.
+    - name: C_BROWSER_MENU_MANAGER_ICON_VFTABLE_FUNCS
+      address:
+        NA: 0x2123054
+      length:
+        NA: 0x24
+      description: Function pointers of the CBrowserMenuManagerIcon class vftable.
+    - name: C_BROWSER_MENU_ITEM_ICON_VFTABLE
+      address:
+        NA: 0x2123078
+      length:
+        NA: 0x30
+      description: Virtual function table for the CBrowserMenuItemIcon class.
+    - name: C_BROWSER_MENU_ITEM_ICON_VFTABLE_FUNCS
+      address:
+        NA: 0x2123080
+      length:
+        NA: 0x28
+      description: Function pointers of the CBrowserMenuItemIcon class vftable.
     - name: C_BROWSER_MENU_ITEM_TYPE
       address:
         NA: 0x21230A8
@@ -183,3 +279,27 @@ overlay21:
       length:
         NA: 0xC
       description: Basic information for the CBrowserMenuManagerType class. This class is a single-inheritance class.
+    - name: C_BROWSER_MENU_MANAGER_TYPE_VFTABLE
+      address:
+        NA: 0x21230F4
+      length:
+        NA: 0x2C
+      description: Virtual function table for the CBrowserMenuManagerType class.
+    - name: C_BROWSER_MENU_MANAGER_TYPE_VFTABLE_FUNCS
+      address:
+        NA: 0x21230FC
+      length:
+        NA: 0x24
+      description: Function pointers of the CBrowserMenuManagerType class vftable.
+    - name: C_BROWSER_MENU_ITEM_TYPE_VFTABLE
+      address:
+        NA: 0x2123120
+      length:
+        NA: 0x30
+      description: Virtual function table for the CBrowserMenuItemType class.
+    - name: C_BROWSER_MENU_ITEM_TYPE_VFTABLE_FUNCS
+      address:
+        NA: 0x2123128
+      length:
+        NA: 0x28
+      description: Function pointers of the CBrowserMenuItemType class vftable.

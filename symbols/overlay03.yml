@@ -89,8 +89,8 @@ overlay3:
         One of many entry points of overlay_03, tasked with creating an overlay struct.
         
         r0: ov_03_unk_struct_4 pointer
-        r1: undefined4 
-        r2: undefined4 
+        r1: undefined4
+        r2: undefined4
         r3: undefined4
     - name: ret_021242f0
       address:
@@ -228,30 +228,90 @@ overlay3:
       length:
         NA: 0xC
       description: Basic information for the CTitleScene class. This class is a single-inheritance class.
+    - name: C_TITLE_SCENE_VFTABLE
+      address:
+        NA: 0x212A818
+      length:
+        NA: 0x34
+      description: Virtual function table for the CTitleScene class.
+    - name: C_TITLE_SCENE_VFTABLE_FUNCS
+      address:
+        NA: 0x212A820
+      length:
+        NA: 0x2C
+      description: Function pointers of the CTitleScene class vftable.
     - name: C_CONTINUE_SCENE
       address:
         NA: 0x212A92C
       length:
         NA: 0xC
       description: Basic information for the CContinueScene class. This class is a single-inheritance class.
+    - name: C_CONTINUE_SCENE_VFTABLE
+      address:
+        NA: 0x212A94C
+      length:
+        NA: 0x34
+      description: Virtual function table for the CContinueScene class.
+    - name: C_CONTINUE_SCENE_VFTABLE_FUNCS
+      address:
+        NA: 0x212A954
+      length:
+        NA: 0x2C
+      description: Function pointers of the CContinueScene class vftable.
     - name: C_CONF_SCENE
       address:
         NA: 0x212A9E4
       length:
         NA: 0xC
       description: Basic information for the CConfScene class. This class is a single-inheritance class.
+    - name: C_CONF_SCENE_VFTABLE
+      address:
+        NA: 0x212AA00
+      length:
+        NA: 0x34
+      description: Virtual function table for the CConfScene class.
+    - name: C_CONF_SCENE_VFTABLE_FUNCS
+      address:
+        NA: 0x212AA08
+      length:
+        NA: 0x2C
+      description: Function pointers of the CConfScene class vftable.
     - name: C_NAME_INPUT_SCENE
       address:
         NA: 0x212AA98
       length:
         NA: 0xC
       description: Basic information for the CNameInputScene class. This class is a single-inheritance class.
+    - name: C_NAME_INPUT_SCENE_VFTABLE
+      address:
+        NA: 0x212AAB8
+      length:
+        NA: 0x34
+      description: Virtual function table for the CNameInputScene class.
+    - name: C_NAME_INPUT_SCENE_VFTABLE_FUNCS
+      address:
+        NA: 0x212AAC0
+      length:
+        NA: 0x2C
+      description: Function pointers of the CNameInputScene class vftable.
     - name: C_OPENING_DEMO_SCENE
       address:
         NA: 0x212AC0C
       length:
         NA: 0xC
       description: Basic information for the COpeningDemoScene class. This class is a single-inheritance class.
+    - name: C_OPENING_DEMO_SCENE_VFTABLE
+      address:
+        NA: 0x212AC2C
+      length:
+        NA: 0x34
+      description: Virtual function table for the COpeningDemoScene class.
+    - name: C_OPENING_DEMO_SCENE_VFTABLE_FUNCS
+      address:
+        NA: 0x212AC34
+      length:
+        NA: 0x2C
+      description: Function pointers of the COpeningDemoScene class vftable.
     - name: T_FIELD_PARTICLE_FORCE_FIELD_C_SIMPLE_SPRITE_NTF
       address:
         NA: 0x212AD5C
@@ -300,6 +360,78 @@ overlay3:
       length:
         NA: 0xC
       description: "Basic information for the COPDTitleScreen::CStarEmitter class. This class is a single-inheritance class."
+    - name: C_OPD_TITLE_SCREEN_C_SPARK_ANIMATOR_VFTABLE
+      address:
+        NA: 0x212ADD4
+      length:
+        NA: 0x14
+      description: "Virtual function table for the COPDTitleScreen::CSparkAnimator class."
+    - name: C_OPD_TITLE_SCREEN_C_SPARK_ANIMATOR_VFTABLE_FUNCS
+      address:
+        NA: 0x212ADDC
+      length:
+        NA: 0xC
+      description: "Function pointers of the COPDTitleScreen::CSparkAnimator class vftable."
+    - name: C_OPD_TITLE_SCREEN_C_STAR_ANIMATOR_VFTABLE
+      address:
+        NA: 0x212ADE8
+      length:
+        NA: 0x14
+      description: "Virtual function table for the COPDTitleScreen::CStarAnimator class."
+    - name: C_OPD_TITLE_SCREEN_C_STAR_ANIMATOR_VFTABLE_FUNCS
+      address:
+        NA: 0x212ADF0
+      length:
+        NA: 0xC
+      description: "Function pointers of the COPDTitleScreen::CStarAnimator class vftable."
+    - name: T_FIELD_PARTICLE_EMITTER_C_SIMPLE_SPRITE_NTF_VFTABLE
+      address:
+        NA: 0x212ADFC
+      length:
+        NA: 0x1C
+      description: Virtual function table for the TFieldParticleEmitter<CSimpleSpriteNTF> class.
+    - name: T_FIELD_PARTICLE_EMITTER_C_SIMPLE_SPRITE_NTF_VFTABLE_FUNCS
+      address:
+        NA: 0x212AE04
+      length:
+        NA: 0x14
+      description: Function pointers of the TFieldParticleEmitter<CSimpleSpriteNTF> class vftable.
+    - name: C_OPD_TITLE_SCREEN_C_STAR_EMITTER_VFTABLE
+      address:
+        NA: 0x212AE18
+      length:
+        NA: 0x1C
+      description: "Virtual function table for the COPDTitleScreen::CStarEmitter class."
+    - name: C_OPD_TITLE_SCREEN_C_STAR_EMITTER_VFTABLE_FUNCS
+      address:
+        NA: 0x212AE20
+      length:
+        NA: 0x14
+      description: "Function pointers of the COPDTitleScreen::CStarEmitter class vftable."
+    - name: C_OPD_TITLE_SCREEN_C_SPARK_EMITTER_VFTABLE
+      address:
+        NA: 0x212AE34
+      length:
+        NA: 0x1C
+      description: "Virtual function table for the COPDTitleScreen::CSparkEmitter class."
+    - name: C_OPD_TITLE_SCREEN_C_SPARK_EMITTER_VFTABLE_FUNCS
+      address:
+        NA: 0x212AE3C
+      length:
+        NA: 0x14
+      description: "Function pointers of the COPDTitleScreen::CSparkEmitter class vftable."
+    - name: C_OPD_TITLE_SCREEN_VFTABLE
+      address:
+        NA: 0x212AEE0
+      length:
+        NA: 0x28
+      description: Virtual function table for the COPDTitleScreen class.
+    - name: C_OPD_TITLE_SCREEN_VFTABLE_FUNCS
+      address:
+        NA: 0x212AEE8
+      length:
+        NA: 0x20
+      description: Function pointers of the COPDTitleScreen class vftable.
     - name: T_FIELD_PARTICLE_FORCE_FIELD_C_LINE_PARTICLE
       address:
         NA: 0x212B07C
@@ -366,15 +498,147 @@ overlay3:
       length:
         NA: 0xC
       description: "Basic information for the COPDCaptureDiscScreen::CSparkAnimator class. This class is a single-inheritance class."
+    - name: C_OPD_CAPTURE_DISC_SCREEN_C_LINE_PARTICLE_ANIMATOR_VFTABLE
+      address:
+        NA: 0x212B110
+      length:
+        NA: 0x14
+      description: "Virtual function table for the COPDCaptureDiscScreen::CLineParticleAnimator class."
+    - name: C_OPD_CAPTURE_DISC_SCREEN_C_LINE_PARTICLE_ANIMATOR_VFTABLE_FUNCS
+      address:
+        NA: 0x212B118
+      length:
+        NA: 0xC
+      description: "Function pointers of the COPDCaptureDiscScreen::CLineParticleAnimator class vftable."
+    - name: C_SPARK_LINE_VFTABLE
+      address:
+        NA: 0x212B124
+      length:
+        NA: 0x14
+      description: Virtual function table for the CSparkLine class.
+    - name: C_SPARK_LINE_VFTABLE_FUNCS
+      address:
+        NA: 0x212B12C
+      length:
+        NA: 0xC
+      description: Function pointers of the CSparkLine class vftable.
+    - name: C_LINE_PARTICLE_VFTABLE
+      address:
+        NA: 0x212B138
+      length:
+        NA: 0x14
+      description: Virtual function table for the CLineParticle class.
+    - name: C_LINE_PARTICLE_VFTABLE_FUNCS
+      address:
+        NA: 0x212B140
+      length:
+        NA: 0xC
+      description: Function pointers of the CLineParticle class vftable.
+    - name: C_OPD_CAPTURE_DISC_SCREEN_C_SPARK_ANIMATOR_VFTABLE
+      address:
+        NA: 0x212B14C
+      length:
+        NA: 0x14
+      description: "Virtual function table for the COPDCaptureDiscScreen::CSparkAnimator class."
+    - name: C_OPD_CAPTURE_DISC_SCREEN_C_SPARK_ANIMATOR_VFTABLE_FUNCS
+      address:
+        NA: 0x212B154
+      length:
+        NA: 0xC
+      description: "Function pointers of the COPDCaptureDiscScreen::CSparkAnimator class vftable."
+    - name: C_OPD_CAPTURE_DISC_SCREEN_C_SPARK_EMITTER_VFTABLE
+      address:
+        NA: 0x212B178
+      length:
+        NA: 0x1C
+      description: "Virtual function table for the COPDCaptureDiscScreen::CSparkEmitter class."
+    - name: C_OPD_CAPTURE_DISC_SCREEN_C_SPARK_EMITTER_VFTABLE_FUNCS
+      address:
+        NA: 0x212B180
+      length:
+        NA: 0x14
+      description: "Function pointers of the COPDCaptureDiscScreen::CSparkEmitter class vftable."
+    - name: T_FIELD_PARTICLE_EMITTER_C_LINE_PARTICLE_VFTABLE
+      address:
+        NA: 0x212B194
+      length:
+        NA: 0x1C
+      description: Virtual function table for the TFieldParticleEmitter<CLineParticle> class.
+    - name: T_FIELD_PARTICLE_EMITTER_C_LINE_PARTICLE_VFTABLE_FUNCS
+      address:
+        NA: 0x212B19C
+      length:
+        NA: 0x14
+      description: Function pointers of the TFieldParticleEmitter<CLineParticle> class vftable.
+    - name: T_FIELD_PARTICLE_EMITTER_C_SPARK_LINE_VFTABLE
+      address:
+        NA: 0x212B1B0
+      length:
+        NA: 0x1C
+      description: Virtual function table for the TFieldParticleEmitter<CSparkLine> class.
+    - name: T_FIELD_PARTICLE_EMITTER_C_SPARK_LINE_VFTABLE_FUNCS
+      address:
+        NA: 0x212B1B8
+      length:
+        NA: 0x14
+      description: Function pointers of the TFieldParticleEmitter<CSparkLine> class vftable.
+    - name: C_OPD_CAPTURE_DISC_SCREEN_C_LINE_PARTICLE_EMITTER_VFTABLE
+      address:
+        NA: 0x212B1CC
+      length:
+        NA: 0x1C
+      description: "Virtual function table for the COPDCaptureDiscScreen::CLineParticleEmitter class."
+    - name: C_OPD_CAPTURE_DISC_SCREEN_C_LINE_PARTICLE_EMITTER_VFTABLE_FUNCS
+      address:
+        NA: 0x212B1D4
+      length:
+        NA: 0x14
+      description: "Function pointers of the COPDCaptureDiscScreen::CLineParticleEmitter class vftable."
+    - name: C_OPD_CAPTURE_DISC_SCREEN_VFTABLE
+      address:
+        NA: 0x212B210
+      length:
+        NA: 0x28
+      description: Virtual function table for the COPDCaptureDiscScreen class.
+    - name: C_OPD_CAPTURE_DISC_SCREEN_VFTABLE_FUNCS
+      address:
+        NA: 0x212B218
+      length:
+        NA: 0x20
+      description: Function pointers of the COPDCaptureDiscScreen class vftable.
     - name: C_OPD_CAPTURE_LINE
       address:
         NA: 0x212B430
       length:
         NA: 0xC
       description: Basic information for the COPDCaptureLine class. This class is a single-inheritance class.
+    - name: C_OPD_CAPTURE_LINE_VFTABLE
+      address:
+        NA: 0x212B450
+      length:
+        NA: 0x14
+      description: Virtual function table for the COPDCaptureLine class.
+    - name: C_OPD_CAPTURE_LINE_VFTABLE_FUNCS
+      address:
+        NA: 0x212B458
+      length:
+        NA: 0xC
+      description: Function pointers of the COPDCaptureLine class vftable.
     - name: C_OPD_SCREEN_MESH_NTF
       address:
         NA: 0x212B4CC
       length:
         NA: 0xC
       description: Basic information for the COPDScreenMeshNTF class. This class is a single-inheritance class.
+    - name: C_OPD_SCREEN_MESH_NTF_VFTABLE
+      address:
+        NA: 0x212B4D8
+      length:
+        NA: 0x14
+      description: Virtual function table for the COPDScreenMeshNTF class.
+    - name: C_OPD_SCREEN_MESH_NTF_VFTABLE_FUNCS
+      address:
+        NA: 0x212B4E0
+      length:
+        NA: 0xC
+      description: Function pointers of the COPDScreenMeshNTF class vftable.

@@ -31,8 +31,8 @@ overlay1:
         Seems to be called once per frame, and switches to one of the other FrameUpdate functions below based on the current_battle_state.
         
         r0: battle_struct pointer
-        r1: undefined4 
-        r2: uint32_t 
+        r1: undefined4
+        r2: uint32_t
         r3: int32_t pointer
     - name: BattleBannerGraphicFrameUpdate
       address:
@@ -48,8 +48,8 @@ overlay1:
         Is running for the main segment of the battle, with enemy pokemon moving around.
         
         r0: battle_struct pointer
-        r1: undefined4 
-        r2: undefined4 
+        r1: undefined4
+        r2: undefined4
         r3: undefined4
     - name: BattleVerifyFleeFrameUpdate
       address:
@@ -79,8 +79,8 @@ overlay1:
         Seems to handle losing the battle, and ensuring the player game overs after the fight.
         
         r0: battle_struct pointer
-        r1: undefined4 
-        r2: uint32_t 
+        r1: undefined4
+        r2: uint32_t
         r3: int32_t pointer
     - name: EndBattleFrameUpdate
       address:
@@ -96,8 +96,8 @@ overlay1:
         Seems to handle registering newly caught pokemon in the browser at the end of a fight.
         
         r0: battle_struct pointer
-        r1: undefined4 
-        r2: undefined4 
+        r1: undefined4
+        r2: undefined4
         r3: undefined4
     - name: FightVictoryCheerFrameUpdate
       address:
@@ -121,8 +121,8 @@ overlay1:
         Seems to update the lifetime caught fields of the browser in RANGER_DATA, and handle other similar bookkeeping. More research needed.
         
         r0: battle_struct pointer
-        r1: undefined4 
-        r2: undefined4 
+        r1: undefined4
+        r2: undefined4
         r3: undefined4
     - name: ret_02123770
       address:
@@ -138,7 +138,7 @@ overlay1:
         Initializes an enemy_script_data struct from a file of the form "data/script/battle/pokemon/p%03d.fsb".
         
         r0: enemy_script_data pointer
-        r1: presumed to be a form_id_16, but the index of the file. 
+        r1: presumed to be a form_id_16, but the index of the file.
         r2: undefined2 pointer
         r3: int32_t
     - name: ret_021293d4
@@ -313,30 +313,90 @@ overlay1:
       length:
         NA: 0xC
       description: Basic information for the CBattleScene class. This class is a single-inheritance class.
+    - name: C_BATTLE_SCENE_VFTABLE
+      address:
+        NA: 0x214075C
+      length:
+        NA: 0x34
+      description: Virtual function table for the CBattleScene class.
+    - name: C_BATTLE_SCENE_VFTABLE_FUNCS
+      address:
+        NA: 0x2140764
+      length:
+        NA: 0x2C
+      description: Function pointers of the CBattleScene class vftable.
     - name: C_BATTLE_ENEMY_DATA
       address:
         NA: 0x21409C0
       length:
         NA: 0xC
       description: Basic information for the CBattleEnemyData class. This class is a single-inheritance class.
+    - name: C_BATTLE_ENEMY_DATA_VFTABLE
+      address:
+        NA: 0x21409E0
+      length:
+        NA: 0x24
+      description: Virtual function table for the CBattleEnemyData class.
+    - name: C_BATTLE_ENEMY_DATA_VFTABLE_FUNCS
+      address:
+        NA: 0x21409E8
+      length:
+        NA: 0x1C
+      description: Function pointers of the CBattleEnemyData class vftable.
     - name: C_BATTLE_ENEMY
       address:
         NA: 0x2140A2C
       length:
         NA: 0xC
       description: Basic information for the CBattleEnemy class. This class is a single-inheritance class.
+    - name: C_BATTLE_ENEMY_VFTABLE
+      address:
+        NA: 0x2140A48
+      length:
+        NA: 0x1C
+      description: Virtual function table for the CBattleEnemy class.
+    - name: C_BATTLE_ENEMY_VFTABLE_FUNCS
+      address:
+        NA: 0x2140A50
+      length:
+        NA: 0x14
+      description: Function pointers of the CBattleEnemy class vftable.
     - name: C_BATTLE_ATTACK_EFFECT_DATA
       address:
         NA: 0x2140A84
       length:
         NA: 0xC
       description: Basic information for the CBattleAttackEffectData class. This class is a single-inheritance class.
+    - name: C_BATTLE_ATTACK_EFFECT_DATA_VFTABLE
+      address:
+        NA: 0x2140AAC
+      length:
+        NA: 0x24
+      description: Virtual function table for the CBattleAttackEffectData class.
+    - name: C_BATTLE_ATTACK_EFFECT_DATA_VFTABLE_FUNCS
+      address:
+        NA: 0x2140AB4
+      length:
+        NA: 0x1C
+      description: Function pointers of the CBattleAttackEffectData class vftable.
     - name: C_BATTLE_ATTACK_EFFECT
       address:
         NA: 0x2140B0C
       length:
         NA: 0xC
       description: Basic information for the CBattleAttackEffect class. This class is a single-inheritance class.
+    - name: C_BATTLE_ATTACK_EFFECT_VFTABLE
+      address:
+        NA: 0x2140B30
+      length:
+        NA: 0x1C
+      description: Virtual function table for the CBattleAttackEffect class.
+    - name: C_BATTLE_ATTACK_EFFECT_VFTABLE_FUNCS
+      address:
+        NA: 0x2140B38
+      length:
+        NA: 0x14
+      description: Function pointers of the CBattleAttackEffect class vftable.
     - name: SYSCALL_PAGE_01_OV_01
       address:
         NA: 0x2141038
@@ -349,147 +409,447 @@ overlay1:
       length:
         NA: 0xC
       description: Basic information for the CBattleDisk class. This class is a single-inheritance class.
+    - name: C_BATTLE_DISK_VFTABLE
+      address:
+        NA: 0x21411F0
+      length:
+        NA: 0x1C
+      description: Virtual function table for the CBattleDisk class.
+    - name: C_BATTLE_DISK_VFTABLE_FUNCS
+      address:
+        NA: 0x21411F8
+      length:
+        NA: 0x14
+      description: Function pointers of the CBattleDisk class vftable.
     - name: C_DISK_CURSOR
       address:
         NA: 0x2141374
       length:
         NA: 0xC
       description: Basic information for the CDiskCursor class. This class is a single-inheritance class.
+    - name: C_DISK_CURSOR_VFTABLE
+      address:
+        NA: 0x2141390
+      length:
+        NA: 0x1C
+      description: Virtual function table for the CDiskCursor class.
+    - name: C_DISK_CURSOR_VFTABLE_FUNCS
+      address:
+        NA: 0x2141398
+      length:
+        NA: 0x14
+      description: Function pointers of the CDiskCursor class vftable.
     - name: C_LINE_EFFECT
       address:
         NA: 0x21413C8
       length:
         NA: 0xC
       description: Basic information for the CLineEffect class. This class is a single-inheritance class.
+    - name: C_LINE_EFFECT_VFTABLE
+      address:
+        NA: 0x21413E4
+      length:
+        NA: 0x1C
+      description: Virtual function table for the CLineEffect class.
+    - name: C_LINE_EFFECT_VFTABLE_FUNCS
+      address:
+        NA: 0x21413EC
+      length:
+        NA: 0x14
+      description: Function pointers of the CLineEffect class vftable.
     - name: C_BATTLE_ASSIST
       address:
         NA: 0x214141C
       length:
         NA: 0x8
       description: Basic information for the CBattleAssist class. This class is a base class.
+    - name: C_BATTLE_ASSIST_VFTABLE
+      address:
+        NA: 0x2141434
+      length:
+        NA: 0x1C
+      description: Virtual function table for the CBattleAssist class.
+    - name: C_BATTLE_ASSIST_VFTABLE_FUNCS
+      address:
+        NA: 0x214143C
+      length:
+        NA: 0x14
+      description: Function pointers of the CBattleAssist class vftable.
     - name: C_BATTLE_ASSIST_DRAGON
       address:
         NA: 0x2141450
       length:
         NA: 0xC
       description: Basic information for the CBattleAssistDragon class. This class is a single-inheritance class.
+    - name: C_BATTLE_ASSIST_DRAGON_VFTABLE
+      address:
+        NA: 0x2141474
+      length:
+        NA: 0x1C
+      description: Virtual function table for the CBattleAssistDragon class.
+    - name: C_BATTLE_ASSIST_DRAGON_VFTABLE_FUNCS
+      address:
+        NA: 0x214147C
+      length:
+        NA: 0x14
+      description: Function pointers of the CBattleAssistDragon class vftable.
     - name: C_BATTLE_ASSIST_ELECTRIC
       address:
         NA: 0x2141490
       length:
         NA: 0xC
       description: Basic information for the CBattleAssistElectric class. This class is a single-inheritance class.
+    - name: C_BATTLE_ASSIST_ELECTRIC_VFTABLE
+      address:
+        NA: 0x21414B4
+      length:
+        NA: 0x1C
+      description: Virtual function table for the CBattleAssistElectric class.
+    - name: C_BATTLE_ASSIST_ELECTRIC_VFTABLE_FUNCS
+      address:
+        NA: 0x21414BC
+      length:
+        NA: 0x14
+      description: Function pointers of the CBattleAssistElectric class vftable.
     - name: C_BATTLE_ASSIST_ESPER
       address:
         NA: 0x21414D0
       length:
         NA: 0xC
       description: Basic information for the CBattleAssistEsper class. This class is a single-inheritance class.
+    - name: C_BATTLE_ASSIST_ESPER_VFTABLE
+      address:
+        NA: 0x21414F4
+      length:
+        NA: 0x1C
+      description: Virtual function table for the CBattleAssistEsper class.
+    - name: C_BATTLE_ASSIST_ESPER_VFTABLE_FUNCS
+      address:
+        NA: 0x21414FC
+      length:
+        NA: 0x14
+      description: Function pointers of the CBattleAssistEsper class vftable.
     - name: C_BATTLE_ASSIST_EVIL
       address:
         NA: 0x2141510
       length:
         NA: 0xC
       description: Basic information for the CBattleAssistEvil class. This class is a single-inheritance class.
+    - name: C_BATTLE_ASSIST_EVIL_VFTABLE
+      address:
+        NA: 0x2141530
+      length:
+        NA: 0x1C
+      description: Virtual function table for the CBattleAssistEvil class.
+    - name: C_BATTLE_ASSIST_EVIL_VFTABLE_FUNCS
+      address:
+        NA: 0x2141538
+      length:
+        NA: 0x14
+      description: Function pointers of the CBattleAssistEvil class vftable.
     - name: C_BATTLE_ASSIST_FIRE
       address:
         NA: 0x214154C
       length:
         NA: 0xC
       description: Basic information for the CBattleAssistFire class. This class is a single-inheritance class.
+    - name: C_BATTLE_ASSIST_FIRE_VFTABLE
+      address:
+        NA: 0x214156C
+      length:
+        NA: 0x1C
+      description: Virtual function table for the CBattleAssistFire class.
+    - name: C_BATTLE_ASSIST_FIRE_VFTABLE_FUNCS
+      address:
+        NA: 0x2141574
+      length:
+        NA: 0x14
+      description: Function pointers of the CBattleAssistFire class vftable.
     - name: C_BATTLE_ASSIST_FLY
       address:
         NA: 0x2141588
       length:
         NA: 0xC
       description: Basic information for the CBattleAssistFly class. This class is a single-inheritance class.
+    - name: C_BATTLE_ASSIST_FLY_VFTABLE
+      address:
+        NA: 0x21415A8
+      length:
+        NA: 0x1C
+      description: Virtual function table for the CBattleAssistFly class.
+    - name: C_BATTLE_ASSIST_FLY_VFTABLE_FUNCS
+      address:
+        NA: 0x21415B0
+      length:
+        NA: 0x14
+      description: Function pointers of the CBattleAssistFly class vftable.
     - name: C_BATTLE_ASSIST_GHOST
       address:
         NA: 0x21415C4
       length:
         NA: 0xC
       description: Basic information for the CBattleAssistGhost class. This class is a single-inheritance class.
+    - name: C_BATTLE_ASSIST_GHOST_VFTABLE
+      address:
+        NA: 0x21415E8
+      length:
+        NA: 0x1C
+      description: Virtual function table for the CBattleAssistGhost class.
+    - name: C_BATTLE_ASSIST_GHOST_VFTABLE_FUNCS
+      address:
+        NA: 0x21415F0
+      length:
+        NA: 0x14
+      description: Function pointers of the CBattleAssistGhost class vftable.
     - name: C_BATTLE_ASSIST_GRAPPLE
       address:
         NA: 0x2141604
       length:
         NA: 0xC
       description: Basic information for the CBattleAssistGrapple class. This class is a single-inheritance class.
+    - name: C_BATTLE_ASSIST_GRAPPLE_VFTABLE
+      address:
+        NA: 0x2141628
+      length:
+        NA: 0x1C
+      description: Virtual function table for the CBattleAssistGrapple class.
+    - name: C_BATTLE_ASSIST_GRAPPLE_VFTABLE_FUNCS
+      address:
+        NA: 0x2141630
+      length:
+        NA: 0x14
+      description: Function pointers of the CBattleAssistGrapple class vftable.
     - name: C_BATTLE_ASSIST_GRASS
       address:
         NA: 0x2141644
       length:
         NA: 0xC
       description: Basic information for the CBattleAssistGrass class. This class is a single-inheritance class.
+    - name: C_BATTLE_ASSIST_GRASS_VFTABLE
+      address:
+        NA: 0x2141668
+      length:
+        NA: 0x1C
+      description: Virtual function table for the CBattleAssistGrass class.
+    - name: C_BATTLE_ASSIST_GRASS_VFTABLE_FUNCS
+      address:
+        NA: 0x2141670
+      length:
+        NA: 0x14
+      description: Function pointers of the CBattleAssistGrass class vftable.
     - name: C_BATTLE_ASSIST_GROUND
       address:
         NA: 0x2141684
       length:
         NA: 0xC
       description: Basic information for the CBattleAssistGround class. This class is a single-inheritance class.
+    - name: C_BATTLE_ASSIST_GROUND_VFTABLE
+      address:
+        NA: 0x21416A8
+      length:
+        NA: 0x1C
+      description: Virtual function table for the CBattleAssistGround class.
+    - name: C_BATTLE_ASSIST_GROUND_VFTABLE_FUNCS
+      address:
+        NA: 0x21416B0
+      length:
+        NA: 0x14
+      description: Function pointers of the CBattleAssistGround class vftable.
     - name: C_BATTLE_ASSIST_ICE
       address:
         NA: 0x21416C4
       length:
         NA: 0xC
       description: Basic information for the CBattleAssistIce class. This class is a single-inheritance class.
+    - name: C_BATTLE_ASSIST_ICE_VFTABLE
+      address:
+        NA: 0x21416E4
+      length:
+        NA: 0x1C
+      description: Virtual function table for the CBattleAssistIce class.
+    - name: C_BATTLE_ASSIST_ICE_VFTABLE_FUNCS
+      address:
+        NA: 0x21416EC
+      length:
+        NA: 0x14
+      description: Function pointers of the CBattleAssistIce class vftable.
     - name: C_BATTLE_ASSIST_INSECT
       address:
         NA: 0x2141700
       length:
         NA: 0xC
       description: Basic information for the CBattleAssistInsect class. This class is a single-inheritance class.
+    - name: C_BATTLE_ASSIST_INSECT_VFTABLE
+      address:
+        NA: 0x2141724
+      length:
+        NA: 0x1C
+      description: Virtual function table for the CBattleAssistInsect class.
+    - name: C_BATTLE_ASSIST_INSECT_VFTABLE_FUNCS
+      address:
+        NA: 0x214172C
+      length:
+        NA: 0x14
+      description: Function pointers of the CBattleAssistInsect class vftable.
     - name: C_BATTLE_ASSIST_NORMAL
       address:
         NA: 0x2141740
       length:
         NA: 0xC
       description: Basic information for the CBattleAssistNormal class. This class is a single-inheritance class.
+    - name: C_BATTLE_ASSIST_NORMAL_VFTABLE
+      address:
+        NA: 0x2141764
+      length:
+        NA: 0x1C
+      description: Virtual function table for the CBattleAssistNormal class.
+    - name: C_BATTLE_ASSIST_NORMAL_VFTABLE_FUNCS
+      address:
+        NA: 0x214176C
+      length:
+        NA: 0x14
+      description: Function pointers of the CBattleAssistNormal class vftable.
     - name: C_BATTLE_ASSIST_POISON
       address:
         NA: 0x2141780
       length:
         NA: 0xC
       description: Basic information for the CBattleAssistPoison class. This class is a single-inheritance class.
+    - name: C_BATTLE_ASSIST_POISON_VFTABLE
+      address:
+        NA: 0x21417A4
+      length:
+        NA: 0x1C
+      description: Virtual function table for the CBattleAssistPoison class.
+    - name: C_BATTLE_ASSIST_POISON_VFTABLE_FUNCS
+      address:
+        NA: 0x21417AC
+      length:
+        NA: 0x14
+      description: Function pointers of the CBattleAssistPoison class vftable.
     - name: C_BATTLE_ASSIST_RECOVER
       address:
         NA: 0x21417C0
       length:
         NA: 0xC
       description: Basic information for the CBattleAssistRecover class. This class is a single-inheritance class.
+    - name: C_BATTLE_ASSIST_RECOVER_VFTABLE
+      address:
+        NA: 0x21417E4
+      length:
+        NA: 0x1C
+      description: Virtual function table for the CBattleAssistRecover class.
+    - name: C_BATTLE_ASSIST_RECOVER_VFTABLE_FUNCS
+      address:
+        NA: 0x21417EC
+      length:
+        NA: 0x14
+      description: Function pointers of the CBattleAssistRecover class vftable.
     - name: C_BATTLE_ASSIST_ROCK
       address:
         NA: 0x2141800
       length:
         NA: 0xC
       description: Basic information for the CBattleAssistRock class. This class is a single-inheritance class.
+    - name: C_BATTLE_ASSIST_ROCK_VFTABLE
+      address:
+        NA: 0x2141820
+      length:
+        NA: 0x1C
+      description: Virtual function table for the CBattleAssistRock class.
+    - name: C_BATTLE_ASSIST_ROCK_VFTABLE_FUNCS
+      address:
+        NA: 0x2141828
+      length:
+        NA: 0x14
+      description: Function pointers of the CBattleAssistRock class vftable.
     - name: C_BATTLE_ASSIST_STEEL
       address:
         NA: 0x214183C
       length:
         NA: 0xC
       description: Basic information for the CBattleAssistSteel class. This class is a single-inheritance class.
+    - name: C_BATTLE_ASSIST_STEEL_VFTABLE
+      address:
+        NA: 0x2141860
+      length:
+        NA: 0x1C
+      description: Virtual function table for the CBattleAssistSteel class.
+    - name: C_BATTLE_ASSIST_STEEL_VFTABLE_FUNCS
+      address:
+        NA: 0x2141868
+      length:
+        NA: 0x14
+      description: Function pointers of the CBattleAssistSteel class vftable.
     - name: C_BATTLE_ASSIST_WATER
       address:
         NA: 0x214187C
       length:
         NA: 0xC
       description: Basic information for the CBattleAssistWater class. This class is a single-inheritance class.
+    - name: C_BATTLE_ASSIST_WATER_VFTABLE
+      address:
+        NA: 0x21418A0
+      length:
+        NA: 0x1C
+      description: Virtual function table for the CBattleAssistWater class.
+    - name: C_BATTLE_ASSIST_WATER_VFTABLE_FUNCS
+      address:
+        NA: 0x21418A8
+      length:
+        NA: 0x14
+      description: Function pointers of the CBattleAssistWater class vftable.
     - name: C_BATTLE_ENEMY_GAUGE
       address:
         NA: 0x21418BC
       length:
         NA: 0xC
       description: Basic information for the CBattleEnemyGauge class. This class is a single-inheritance class.
+    - name: C_BATTLE_ENEMY_GAUGE_VFTABLE
+      address:
+        NA: 0x21418DC
+      length:
+        NA: 0x1C
+      description: Virtual function table for the CBattleEnemyGauge class.
+    - name: C_BATTLE_ENEMY_GAUGE_VFTABLE_FUNCS
+      address:
+        NA: 0x21418E4
+      length:
+        NA: 0x14
+      description: Function pointers of the CBattleEnemyGauge class vftable.
     - name: C_BATTLE_POWER_SAVE
       address:
         NA: 0x21419DC
       length:
         NA: 0xC
       description: Basic information for the CBattlePowerSave class. This class is a single-inheritance class.
+    - name: C_BATTLE_POWER_SAVE_VFTABLE
+      address:
+        NA: 0x21419FC
+      length:
+        NA: 0x1C
+      description: Virtual function table for the CBattlePowerSave class.
+    - name: C_BATTLE_POWER_SAVE_VFTABLE_FUNCS
+      address:
+        NA: 0x2141A04
+      length:
+        NA: 0x14
+      description: Function pointers of the CBattlePowerSave class vftable.
     - name: C_BATTLE_GAME_OVER
       address:
         NA: 0x2141C44
       length:
         NA: 0xC
       description: Basic information for the CBattleGameOver class. This class is a single-inheritance class.
+    - name: C_BATTLE_GAME_OVER_VFTABLE
+      address:
+        NA: 0x2141C64
+      length:
+        NA: 0x1C
+      description: Virtual function table for the CBattleGameOver class.
+    - name: C_BATTLE_GAME_OVER_VFTABLE_FUNCS
+      address:
+        NA: 0x2141C6C
+      length:
+        NA: 0x14
+      description: Function pointers of the CBattleGameOver class vftable.

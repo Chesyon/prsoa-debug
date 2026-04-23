@@ -48,6 +48,18 @@ overlay28:
       length:
         NA: 0xC
       description: Basic information for the CMapDispScene class. This class is a single-inheritance class.
+    - name: C_MAP_DISP_SCENE_VFTABLE
+      address:
+        NA: 0x211DBFC
+      length:
+        NA: 0x34
+      description: Virtual function table for the CMapDispScene class.
+    - name: C_MAP_DISP_SCENE_VFTABLE_FUNCS
+      address:
+        NA: 0x211DC04
+      length:
+        NA: 0x2C
+      description: Function pointers of the CMapDispScene class vftable.
     - name: I_MAP_DISP_RSC_PATH_BUILDER
       address:
         NA: 0x211DC3C
@@ -60,3 +72,15 @@ overlay28:
       length:
         NA: 0xC
       description: "Basic information for the CMapDispScreen::CPathBuilder class. This class is a single-inheritance class."
+    - name: C_MAP_DISP_SCREEN_C_PATH_BUILDER_VFTABLE
+      address:
+        NA: 0x211DC50
+      length:
+        NA: 0x10
+      description: "Virtual function table for the CMapDispScreen::CPathBuilder class."
+    - name: C_MAP_DISP_SCREEN_C_PATH_BUILDER_VFTABLE_FUNCS
+      address:
+        NA: 0x211DC58
+      length:
+        NA: 0x8
+      description: "Function pointers of the CMapDispScreen::CPathBuilder class vftable."

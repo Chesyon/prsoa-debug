@@ -48,3 +48,15 @@ overlay4:
       length:
         NA: 0xC
       description: Basic information for the CLetterScene class. This class is a single-inheritance class.
+    - name: C_LETTER_SCENE_VFTABLE
+      address:
+        NA: 0x211D7DC
+      length:
+        NA: 0x34
+      description: Virtual function table for the CLetterScene class.
+    - name: C_LETTER_SCENE_VFTABLE_FUNCS
+      address:
+        NA: 0x211D7E4
+      length:
+        NA: 0x2C
+      description: Function pointers of the CLetterScene class vftable.

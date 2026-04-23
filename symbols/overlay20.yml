@@ -47,3 +47,15 @@ overlay20:
       length:
         NA: 0xC
       description: Basic information for the CAutoSaveScene class. This class is a single-inheritance class.
+    - name: C_AUTO_SAVE_SCENE_VFTABLE
+      address:
+        NA: 0x211CFC0
+      length:
+        NA: 0x34
+      description: Virtual function table for the CAutoSaveScene class.
+    - name: C_AUTO_SAVE_SCENE_VFTABLE_FUNCS
+      address:
+        NA: 0x211CFC8
+      length:
+        NA: 0x2C
+      description: Function pointers of the CAutoSaveScene class vftable.

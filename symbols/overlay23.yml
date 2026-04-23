@@ -47,3 +47,15 @@ overlay23:
       length:
         NA: 0xC
       description: Basic information for the CRecordScene class. This class is a single-inheritance class.
+    - name: C_RECORD_SCENE_VFTABLE
+      address:
+        NA: 0x211F1BC
+      length:
+        NA: 0x34
+      description: Virtual function table for the CRecordScene class.
+    - name: C_RECORD_SCENE_VFTABLE_FUNCS
+      address:
+        NA: 0x211F1C4
+      length:
+        NA: 0x2C
+      description: Function pointers of the CRecordScene class vftable.

@@ -82,3 +82,15 @@ overlay10:
       length:
         NA: 0xC
       description: Basic information for the CFieldToMenuScene class. This class is a single-inheritance class.
+    - name: C_FIELD_TO_MENU_SCENE_VFTABLE
+      address:
+        NA: 0x211CA60
+      length:
+        NA: 0x34
+      description: Virtual function table for the CFieldToMenuScene class.
+    - name: C_FIELD_TO_MENU_SCENE_VFTABLE_FUNCS
+      address:
+        NA: 0x211CA68
+      length:
+        NA: 0x2C
+      description: Function pointers of the CFieldToMenuScene class vftable.

@@ -68,10 +68,34 @@ overlay22:
       length:
         NA: 0x8
       description: Basic information for the IEncycPushButtonListener class. This class is a base class.
+    - name: I_ENCYC_PUSH_BUTTON_LISTENER_VFTABLE
+      address:
+        NA: 0x2121708
+      length:
+        NA: 0xC
+      description: Virtual function table for the IEncycPushButtonListener class.
+    - name: I_ENCYC_PUSH_BUTTON_LISTENER_VFTABLE_FUNCS
+      address:
+        NA: 0x2121710
+      length:
+        NA: 0x4
+      description: Function pointers of the IEncycPushButtonListener class vftable.
     - name: C_ENCYCLOPEDIA_SCENE
       address:
         NA: 0x2121748
       description: Basic information for the CEncyclopediaScene class. This class is a virtual/multiple inheritance class.
+    - name: C_ENCYCLOPEDIA_SCENE_VFTABLE
+      address:
+        NA: 0x2121768
+      length:
+        NA: 0x38
+      description: Virtual function table for the CEncyclopediaScene class.
+    - name: C_ENCYCLOPEDIA_SCENE_VFTABLE_FUNCS
+      address:
+        NA: 0x2121770
+      length:
+        NA: 0x30
+      description: Function pointers of the CEncyclopediaScene class vftable.
     - name: C_ENCYC_MENU_SCREEN
       address:
         NA: 0x212180C
@@ -90,17 +114,89 @@ overlay22:
       length:
         NA: 0x8
       description: Basic information for the IEncycRadioButtonListener class. This class is a base class.
+    - name: I_ENCYC_RADIO_BUTTON_LISTENER_VFTABLE
+      address:
+        NA: 0x2121824
+      length:
+        NA: 0xC
+      description: Virtual function table for the IEncycRadioButtonListener class.
+    - name: I_ENCYC_RADIO_BUTTON_LISTENER_VFTABLE_FUNCS
+      address:
+        NA: 0x212182C
+      length:
+        NA: 0x4
+      description: Function pointers of the IEncycRadioButtonListener class vftable.
+    - name: I_ENCYC_LIST_BOX_EVENT_LISTENER_VFTABLE
+      address:
+        NA: 0x2121830
+      length:
+        NA: 0x10
+      description: Virtual function table for the IEncycListBoxEventListener class.
+    - name: I_ENCYC_LIST_BOX_EVENT_LISTENER_VFTABLE_FUNCS
+      address:
+        NA: 0x2121838
+      length:
+        NA: 0x8
+      description: Function pointers of the IEncycListBoxEventListener class vftable.
+    - name: C_ENCYC_MENU_SCREEN_VFTABLE
+      address:
+        NA: 0x21218A8
+      length:
+        NA: 0x30
+      description: Virtual function table for the CEncycMenuScreen class.
+    - name: C_ENCYC_MENU_SCREEN_VFTABLE_FUNCS
+      address:
+        NA: 0x21218B0
+      length:
+        NA: 0x28
+      description: Function pointers of the CEncycMenuScreen class vftable.
     - name: C_ENCYC_ITEM_LIST_SCREEN
       address:
         NA: 0x21218D8
       description: Basic information for the CEncycItemListScreen class. This class is a virtual/multiple inheritance class.
+    - name: C_ENCYC_ITEM_LIST_SCREEN_VFTABLE
+      address:
+        NA: 0x2121908
+      length:
+        NA: 0x3C
+      description: Virtual function table for the CEncycItemListScreen class.
+    - name: C_ENCYC_ITEM_LIST_SCREEN_VFTABLE_FUNCS
+      address:
+        NA: 0x2121910
+      length:
+        NA: 0x34
+      description: Function pointers of the CEncycItemListScreen class vftable.
     - name: C_ENCYC_ITEM_DESCRIPTION_SCREEN
       address:
         NA: 0x2121A6C
       description: Basic information for the CEncycItemDescriptionScreen class. This class is a virtual/multiple inheritance class.
+    - name: C_ENCYC_ITEM_DESCRIPTION_SCREEN_VFTABLE
+      address:
+        NA: 0x2121A8C
+      length:
+        NA: 0x34
+      description: Virtual function table for the CEncycItemDescriptionScreen class.
+    - name: C_ENCYC_ITEM_DESCRIPTION_SCREEN_VFTABLE_FUNCS
+      address:
+        NA: 0x2121A94
+      length:
+        NA: 0x2C
+      description: Function pointers of the CEncycItemDescriptionScreen class vftable.
     - name: C_ENCYC_LIST_BOX
       address:
         NA: 0x2121B54
       length:
         NA: 0x8
       description: Basic information for the CEncycListBox class. This class is a base class.
+    - name: C_ENCYC_LIST_BOX_VFTABLE
+      address:
+        NA: 0x2121B5C
+      length:
+        NA: 0x10
+      description: Virtual function table for the CEncycListBox class.
+    - name: C_ENCYC_LIST_BOX_VFTABLE_FUNCS
+      address:
+        NA: 0x2121B64
+      length:
+        NA: 0x8
+      description: Function pointers of the CEncycListBox class vftable.

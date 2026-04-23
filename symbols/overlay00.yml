@@ -47,9 +47,9 @@ overlay0:
       description: |-
         Seems to run immediately before the actual entry point. Called by SetGameState.
         
-        r0: undefined4 
+        r0: undefined4
         r1: megastruct pointer
-        r2: undefined4 
+        r2: undefined4
         r3: undefined4
     - name: OpenAndInitMapScriptFile
       address:
@@ -73,7 +73,7 @@ overlay0:
         Seems to open and initialize a file of the form: "data/field/map/%s.map.lz", "data/field/map/%s.map.dat.lz", or "data/field/map/%s.map.tex.lz".
         
         r0: unk_struct_size_0x80 pointer
-        r1: undefined4 
+        r1: undefined4
         r2: char pointer. Maybe a file name?
         r3: int32_t
     - name: ret_021266ac
@@ -118,7 +118,7 @@ overlay0:
         Seems to open, init, and process a script file of the form "data/Script/field/poketargetclear/ptc%03d_%02d.fsb" into a struct.
         
         r0: void pointer
-        r1: int32_t 
+        r1: int32_t
         r2: int32_t
     - name: MaybeOpenAndInitTargetObjectTouchScript
       address:
@@ -702,9 +702,9 @@ overlay0:
       description: |-
         Seems to be a debug function that prints partner poke assist record data.
         
-        r0: int32_t 
-        r1: undefined4 
-        r2: undefined4 
+        r0: int32_t
+        r1: undefined4
+        r2: undefined4
         r3: undefined4
     - name: GetCaptureLineLenRecordSimple
       address:
@@ -787,7 +787,7 @@ overlay0:
       address:
         NA: 0x214F99C
       description: |-
-        Retrieves the poke assist record for the current partner from RANGER_DATA. 
+        Retrieves the poke assist record for the current partner from RANGER_DATA.
         
         No params.
     - name: ret_0215061c
@@ -1220,6 +1220,30 @@ overlay0:
       length:
         NA: 0xC
       description: Basic information for the CFieldScene class. This class is a single-inheritance class.
+    - name: I_FIELD_ENEMY_DATA_BUILDER_VFTABLE
+      address:
+        NA: 0x2172F94
+      length:
+        NA: 0xC
+      description: Virtual function table for the IFieldEnemyDataBuilder class.
+    - name: I_FIELD_ENEMY_DATA_BUILDER_VFTABLE_FUNCS
+      address:
+        NA: 0x2172F9C
+      length:
+        NA: 0x4
+      description: Function pointers of the IFieldEnemyDataBuilder class vftable.
+    - name: C_FIELD_SCENE_VFTABLE
+      address:
+        NA: 0x2172FCC
+      length:
+        NA: 0x34
+      description: Virtual function table for the CFieldScene class.
+    - name: C_FIELD_SCENE_VFTABLE_FUNCS
+      address:
+        NA: 0x2172FD4
+      length:
+        NA: 0x2C
+      description: Function pointers of the CFieldScene class vftable.
     - name: C_FIELD_MAP_LAYER_BASE
       address:
         NA: 0x2173124
@@ -1232,110 +1256,350 @@ overlay0:
       length:
         NA: 0xC
       description: Basic information for the CFieldMapLayerCharacterPriority class. This class is a single-inheritance class.
+    - name: C_FIELD_MAP_LAYER_CHARACTER_PRIORITY_VFTABLE
+      address:
+        NA: 0x2173174
+      length:
+        NA: 0x2C
+      description: Virtual function table for the CFieldMapLayerCharacterPriority class.
+    - name: C_FIELD_MAP_LAYER_CHARACTER_PRIORITY_VFTABLE_FUNCS
+      address:
+        NA: 0x217317C
+      length:
+        NA: 0x24
+      description: Function pointers of the CFieldMapLayerCharacterPriority class vftable.
+    - name: C_FIELD_MAP_LAYER_BASE_VFTABLE
+      address:
+        NA: 0x21731A0
+      length:
+        NA: 0x2C
+      description: Virtual function table for the CFieldMapLayerBase class.
+    - name: C_FIELD_MAP_LAYER_BASE_VFTABLE_FUNCS
+      address:
+        NA: 0x21731A8
+      length:
+        NA: 0x24
+      description: Function pointers of the CFieldMapLayerBase class vftable.
     - name: C_FIELD_MAP_LAYER_STATIC
       address:
         NA: 0x21732A8
       length:
         NA: 0xC
       description: Basic information for the CFieldMapLayerStatic class. This class is a single-inheritance class.
+    - name: C_FIELD_MAP_LAYER_STATIC_VFTABLE
+      address:
+        NA: 0x21732CC
+      length:
+        NA: 0x2C
+      description: Virtual function table for the CFieldMapLayerStatic class.
+    - name: C_FIELD_MAP_LAYER_STATIC_VFTABLE_FUNCS
+      address:
+        NA: 0x21732D4
+      length:
+        NA: 0x24
+      description: Function pointers of the CFieldMapLayerStatic class vftable.
     - name: C_FIELD_MAP_LAYER_COLLISION
       address:
         NA: 0x21732F8
       length:
         NA: 0xC
       description: Basic information for the CFieldMapLayerCollision class. This class is a single-inheritance class.
+    - name: C_FIELD_MAP_LAYER_COLLISION_VFTABLE
+      address:
+        NA: 0x2173320
+      length:
+        NA: 0x2C
+      description: Virtual function table for the CFieldMapLayerCollision class.
+    - name: C_FIELD_MAP_LAYER_COLLISION_VFTABLE_FUNCS
+      address:
+        NA: 0x2173328
+      length:
+        NA: 0x24
+      description: Function pointers of the CFieldMapLayerCollision class vftable.
     - name: C_FIELD_MAP_LAYER_NORMAL_VIEW
       address:
         NA: 0x217334C
       length:
         NA: 0xC
       description: Basic information for the CFieldMapLayerNormalView class. This class is a single-inheritance class.
+    - name: C_FIELD_MAP_LAYER_NORMAL_VIEW_VFTABLE
+      address:
+        NA: 0x2173374
+      length:
+        NA: 0x2C
+      description: Virtual function table for the CFieldMapLayerNormalView class.
+    - name: C_FIELD_MAP_LAYER_NORMAL_VIEW_VFTABLE_FUNCS
+      address:
+        NA: 0x217337C
+      length:
+        NA: 0x24
+      description: Function pointers of the CFieldMapLayerNormalView class vftable.
     - name: C_FIELD_MAP_LAYER_CHARA_TRANS
       address:
         NA: 0x21733A0
       length:
         NA: 0xC
       description: Basic information for the CFieldMapLayerCharaTrans class. This class is a single-inheritance class.
+    - name: C_FIELD_MAP_LAYER_CHARA_TRANS_VFTABLE
+      address:
+        NA: 0x21733C8
+      length:
+        NA: 0x2C
+      description: Virtual function table for the CFieldMapLayerCharaTrans class.
+    - name: C_FIELD_MAP_LAYER_CHARA_TRANS_VFTABLE_FUNCS
+      address:
+        NA: 0x21733D0
+      length:
+        NA: 0x24
+      description: Function pointers of the CFieldMapLayerCharaTrans class vftable.
     - name: C_FIELD_MAP_LAYER_NPC
       address:
         NA: 0x21733F4
       length:
         NA: 0xC
       description: Basic information for the CFieldMapLayerNpc class. This class is a single-inheritance class.
+    - name: C_FIELD_MAP_LAYER_NPC_VFTABLE
+      address:
+        NA: 0x2173414
+      length:
+        NA: 0x2C
+      description: Virtual function table for the CFieldMapLayerNpc class.
+    - name: C_FIELD_MAP_LAYER_NPC_VFTABLE_FUNCS
+      address:
+        NA: 0x217341C
+      length:
+        NA: 0x24
+      description: Function pointers of the CFieldMapLayerNpc class vftable.
     - name: C_FIELD_MAP_LAYER_ENEMY
       address:
         NA: 0x2173440
       length:
         NA: 0xC
       description: Basic information for the CFieldMapLayerEnemy class. This class is a single-inheritance class.
+    - name: C_FIELD_MAP_LAYER_ENEMY_VFTABLE
+      address:
+        NA: 0x2173464
+      length:
+        NA: 0x2C
+      description: Virtual function table for the CFieldMapLayerEnemy class.
+    - name: C_FIELD_MAP_LAYER_ENEMY_VFTABLE_FUNCS
+      address:
+        NA: 0x217346C
+      length:
+        NA: 0x24
+      description: Function pointers of the CFieldMapLayerEnemy class vftable.
     - name: C_FIELD_MAP_LAYER_OBJECT
       address:
         NA: 0x2173490
       length:
         NA: 0xC
       description: Basic information for the CFieldMapLayerObject class. This class is a single-inheritance class.
+    - name: C_FIELD_MAP_LAYER_OBJECT_VFTABLE
+      address:
+        NA: 0x21734B4
+      length:
+        NA: 0x2C
+      description: Virtual function table for the CFieldMapLayerObject class.
+    - name: C_FIELD_MAP_LAYER_OBJECT_VFTABLE_FUNCS
+      address:
+        NA: 0x21734BC
+      length:
+        NA: 0x24
+      description: Function pointers of the CFieldMapLayerObject class vftable.
     - name: C_FIELD_MAP_LAYER_EVENT_RECT
       address:
         NA: 0x21734E0
       length:
         NA: 0xC
       description: Basic information for the CFieldMapLayerEventRect class. This class is a single-inheritance class.
+    - name: C_FIELD_MAP_LAYER_EVENT_RECT_VFTABLE
+      address:
+        NA: 0x2173508
+      length:
+        NA: 0x2C
+      description: Virtual function table for the CFieldMapLayerEventRect class.
+    - name: C_FIELD_MAP_LAYER_EVENT_RECT_VFTABLE_FUNCS
+      address:
+        NA: 0x2173510
+      length:
+        NA: 0x24
+      description: Function pointers of the CFieldMapLayerEventRect class vftable.
     - name: C_FIELD_MAP_LAYER_ATTRIBUTE
       address:
         NA: 0x2173534
       length:
         NA: 0xC
       description: Basic information for the CFieldMapLayerAttribute class. This class is a single-inheritance class.
+    - name: C_FIELD_MAP_LAYER_ATTRIBUTE_VFTABLE
+      address:
+        NA: 0x217355C
+      length:
+        NA: 0x2C
+      description: Virtual function table for the CFieldMapLayerAttribute class.
+    - name: C_FIELD_MAP_LAYER_ATTRIBUTE_VFTABLE_FUNCS
+      address:
+        NA: 0x2173564
+      length:
+        NA: 0x24
+      description: Function pointers of the CFieldMapLayerAttribute class vftable.
     - name: C_FIELD_MAP_LAYER_MULTI_SCROLL
       address:
         NA: 0x2173588
       length:
         NA: 0xC
       description: Basic information for the CFieldMapLayerMultiScroll class. This class is a single-inheritance class.
+    - name: C_FIELD_MAP_LAYER_MULTI_SCROLL_VFTABLE
+      address:
+        NA: 0x21735B0
+      length:
+        NA: 0x2C
+      description: Virtual function table for the CFieldMapLayerMultiScroll class.
+    - name: C_FIELD_MAP_LAYER_MULTI_SCROLL_VFTABLE_FUNCS
+      address:
+        NA: 0x21735B8
+      length:
+        NA: 0x24
+      description: Function pointers of the CFieldMapLayerMultiScroll class vftable.
     - name: C_FIELD_MAP_LAYER_UV_SCROLL
       address:
         NA: 0x21735DC
       length:
         NA: 0xC
       description: Basic information for the CFieldMapLayerUVScroll class. This class is a single-inheritance class.
+    - name: C_FIELD_MAP_LAYER_UV_SCROLL_VFTABLE
+      address:
+        NA: 0x2173604
+      length:
+        NA: 0x2C
+      description: Virtual function table for the CFieldMapLayerUVScroll class.
+    - name: C_FIELD_MAP_LAYER_UV_SCROLL_VFTABLE_FUNCS
+      address:
+        NA: 0x217360C
+      length:
+        NA: 0x24
+      description: Function pointers of the CFieldMapLayerUVScroll class vftable.
     - name: C_FIELD_MAP_LAYER_COLOR_ANIME
       address:
         NA: 0x2173630
       length:
         NA: 0xC
       description: Basic information for the CFieldMapLayerColorAnime class. This class is a single-inheritance class.
+    - name: C_FIELD_MAP_LAYER_COLOR_ANIME_VFTABLE
+      address:
+        NA: 0x2173658
+      length:
+        NA: 0x2C
+      description: Virtual function table for the CFieldMapLayerColorAnime class.
+    - name: C_FIELD_MAP_LAYER_COLOR_ANIME_VFTABLE_FUNCS
+      address:
+        NA: 0x2173660
+      length:
+        NA: 0x24
+      description: Function pointers of the CFieldMapLayerColorAnime class vftable.
     - name: C_FIELD_PLAYER
       address:
         NA: 0x2173684
       length:
         NA: 0xC
       description: Basic information for the CFieldPlayer class. This class is a single-inheritance class.
+    - name: C_FIELD_PLAYER_VFTABLE
+      address:
+        NA: 0x21736A0
+      length:
+        NA: 0x48
+      description: Virtual function table for the CFieldPlayer class.
+    - name: C_FIELD_PLAYER_VFTABLE_FUNCS
+      address:
+        NA: 0x21736A8
+      length:
+        NA: 0x40
+      description: Function pointers of the CFieldPlayer class vftable.
     - name: C_FIELD_ENEMY
       address:
         NA: 0x21736E8
       length:
         NA: 0xC
       description: Basic information for the CFieldEnemy class. This class is a single-inheritance class.
+    - name: C_FIELD_ENEMY_VFTABLE
+      address:
+        NA: 0x2173704
+      length:
+        NA: 0x48
+      description: Virtual function table for the CFieldEnemy class.
+    - name: C_FIELD_ENEMY_VFTABLE_FUNCS
+      address:
+        NA: 0x217370C
+      length:
+        NA: 0x40
+      description: Function pointers of the CFieldEnemy class vftable.
     - name: C_FIELD_ENEMY_MANAGE
       address:
         NA: 0x2173788
       description: Basic information for the CFieldEnemyManage class. This class is a virtual/multiple inheritance class.
+    - name: C_FIELD_ENEMY_MANAGE_VFTABLE
+      address:
+        NA: 0x21737A8
+      length:
+        NA: 0x60
+      description: Virtual function table for the CFieldEnemyManage class.
+    - name: C_FIELD_ENEMY_MANAGE_VFTABLE_FUNCS
+      address:
+        NA: 0x21737B0
+      length:
+        NA: 0x58
+      description: Function pointers of the CFieldEnemyManage class vftable.
     - name: C_FIELD_PARTNER
       address:
         NA: 0x217398C
       length:
         NA: 0xC
       description: Basic information for the CFieldPartner class. This class is a single-inheritance class.
+    - name: C_FIELD_PARTNER_VFTABLE
+      address:
+        NA: 0x21739A8
+      length:
+        NA: 0x4C
+      description: Virtual function table for the CFieldPartner class.
+    - name: C_FIELD_PARTNER_VFTABLE_FUNCS
+      address:
+        NA: 0x21739B0
+      length:
+        NA: 0x44
+      description: Function pointers of the CFieldPartner class vftable.
     - name: C_FIELD_EFFECT_MANAGE_EVENT_LISTENER
       address:
         NA: 0x21739FC
       length:
         NA: 0x8
       description: Basic information for the CFieldEffectManageEventListener class. This class is a base class.
+    - name: C_FIELD_EFFECT_MANAGE_EVENT_LISTENER_VFTABLE
+      address:
+        NA: 0x2173A04
+      length:
+        NA: 0xC
+      description: Virtual function table for the CFieldEffectManageEventListener class.
+    - name: C_FIELD_EFFECT_MANAGE_EVENT_LISTENER_VFTABLE_FUNCS
+      address:
+        NA: 0x2173A0C
+      length:
+        NA: 0x4
+      description: Function pointers of the CFieldEffectManageEventListener class vftable.
     - name: C_FIELD_PARTNER_MANAGE
       address:
         NA: 0x2173A28
       description: Basic information for the CFieldPartnerManage class. This class is a virtual/multiple inheritance class.
+    - name: C_FIELD_PARTNER_MANAGE_VFTABLE
+      address:
+        NA: 0x2173A6C
+      length:
+        NA: 0x60
+      description: Virtual function table for the CFieldPartnerManage class.
+    - name: C_FIELD_PARTNER_MANAGE_VFTABLE_FUNCS
+      address:
+        NA: 0x2173A74
+      length:
+        NA: 0x58
+      description: Function pointers of the CFieldPartnerManage class vftable.
     - name: C_FIELD_NPC_ACTOR_SCRIPT
       address:
         NA: 0x2173B98
@@ -1348,12 +1612,48 @@ overlay0:
       length:
         NA: 0xC
       description: Basic information for the CFieldNpc class. This class is a single-inheritance class.
+    - name: C_FIELD_NPC_ACTOR_SCRIPT_VFTABLE
+      address:
+        NA: 0x2173BC8
+      length:
+        NA: 0x18
+      description: Virtual function table for the CFieldNpcActorScript class.
+    - name: C_FIELD_NPC_ACTOR_SCRIPT_VFTABLE_FUNCS
+      address:
+        NA: 0x2173BD0
+      length:
+        NA: 0x10
+      description: Function pointers of the CFieldNpcActorScript class vftable.
+    - name: C_FIELD_NPC_VFTABLE
+      address:
+        NA: 0x2173BE0
+      length:
+        NA: 0x48
+      description: Virtual function table for the CFieldNpc class.
+    - name: C_FIELD_NPC_VFTABLE_FUNCS
+      address:
+        NA: 0x2173BE8
+      length:
+        NA: 0x40
+      description: Function pointers of the CFieldNpc class vftable.
     - name: C_FIELD_NPC_MANAGE
       address:
         NA: 0x2173CC0
       length:
         NA: 0xC
       description: Basic information for the CFieldNpcManage class. This class is a single-inheritance class.
+    - name: C_FIELD_NPC_MANAGE_VFTABLE
+      address:
+        NA: 0x2173CE0
+      length:
+        NA: 0x5C
+      description: Virtual function table for the CFieldNpcManage class.
+    - name: C_FIELD_NPC_MANAGE_VFTABLE_FUNCS
+      address:
+        NA: 0x2173CE8
+      length:
+        NA: 0x54
+      description: Function pointers of the CFieldNpcManage class vftable.
     - name: C_FIELD_TARGET_OBJECT
       address:
         NA: 0x2173D3C
@@ -1366,24 +1666,84 @@ overlay0:
       length:
         NA: 0xC
       description: Basic information for the CFieldTargetObjectActorScript class. This class is a single-inheritance class.
+    - name: C_FIELD_TARGET_OBJECT_ACTOR_SCRIPT_VFTABLE
+      address:
+        NA: 0x2173D6C
+      length:
+        NA: 0x18
+      description: Virtual function table for the CFieldTargetObjectActorScript class.
+    - name: C_FIELD_TARGET_OBJECT_ACTOR_SCRIPT_VFTABLE_FUNCS
+      address:
+        NA: 0x2173D74
+      length:
+        NA: 0x10
+      description: Function pointers of the CFieldTargetObjectActorScript class vftable.
+    - name: C_FIELD_TARGET_OBJECT_VFTABLE
+      address:
+        NA: 0x2173DA4
+      length:
+        NA: 0x48
+      description: Virtual function table for the CFieldTargetObject class.
+    - name: C_FIELD_TARGET_OBJECT_VFTABLE_FUNCS
+      address:
+        NA: 0x2173DAC
+      length:
+        NA: 0x40
+      description: Function pointers of the CFieldTargetObject class vftable.
     - name: C_FIELD_TARGET_OBJECT_MANAGE
       address:
         NA: 0x2173E98
       length:
         NA: 0xC
       description: Basic information for the CFieldTargetObjectManage class. This class is a single-inheritance class.
+    - name: C_FIELD_TARGET_OBJECT_MANAGE_VFTABLE
+      address:
+        NA: 0x2173EC0
+      length:
+        NA: 0x5C
+      description: Virtual function table for the CFieldTargetObjectManage class.
+    - name: C_FIELD_TARGET_OBJECT_MANAGE_VFTABLE_FUNCS
+      address:
+        NA: 0x2173EC8
+      length:
+        NA: 0x54
+      description: Function pointers of the CFieldTargetObjectManage class vftable.
     - name: C_FIELD_EVENT_RECT
       address:
         NA: 0x2173F80
       length:
         NA: 0x8
       description: Basic information for the CFieldEventRect class. This class is a base class.
+    - name: C_FIELD_EVENT_RECT_VFTABLE
+      address:
+        NA: 0x2173F88
+      length:
+        NA: 0xC
+      description: Virtual function table for the CFieldEventRect class.
+    - name: C_FIELD_EVENT_RECT_VFTABLE_FUNCS
+      address:
+        NA: 0x2173F90
+      length:
+        NA: 0x4
+      description: Function pointers of the CFieldEventRect class vftable.
     - name: C_FIELD_PARTNER_NPC
       address:
         NA: 0x2174048
       length:
         NA: 0xC
       description: Basic information for the CFieldPartnerNpc class. This class is a single-inheritance class.
+    - name: C_FIELD_PARTNER_NPC_VFTABLE
+      address:
+        NA: 0x2174068
+      length:
+        NA: 0x4C
+      description: Virtual function table for the CFieldPartnerNpc class.
+    - name: C_FIELD_PARTNER_NPC_VFTABLE_FUNCS
+      address:
+        NA: 0x2174070
+      length:
+        NA: 0x44
+      description: Function pointers of the CFieldPartnerNpc class vftable.
     - name: C_FIELD_POKEMON_TARGET_CLEAR_SCRIPT
       address:
         NA: 0x21740B4
@@ -1396,18 +1756,66 @@ overlay0:
       length:
         NA: 0xC
       description: Basic information for the CFieldPartnerPokemon class. This class is a single-inheritance class.
+    - name: C_FIELD_POKEMON_TARGET_CLEAR_SCRIPT_VFTABLE
+      address:
+        NA: 0x21740E4
+      length:
+        NA: 0x18
+      description: Virtual function table for the CFieldPokemonTargetClearScript class.
+    - name: C_FIELD_POKEMON_TARGET_CLEAR_SCRIPT_VFTABLE_FUNCS
+      address:
+        NA: 0x21740EC
+      length:
+        NA: 0x10
+      description: Function pointers of the CFieldPokemonTargetClearScript class vftable.
+    - name: C_FIELD_PARTNER_POKEMON_VFTABLE
+      address:
+        NA: 0x2174120
+      length:
+        NA: 0x4C
+      description: Virtual function table for the CFieldPartnerPokemon class.
+    - name: C_FIELD_PARTNER_POKEMON_VFTABLE_FUNCS
+      address:
+        NA: 0x2174128
+      length:
+        NA: 0x44
+      description: Function pointers of the CFieldPartnerPokemon class vftable.
     - name: C_FIELD_PLAYER_INPUT_CONTROL_MANAGE
       address:
         NA: 0x2174338
       length:
         NA: 0x8
       description: Basic information for the CFieldPlayerInputControlManage class. This class is a base class.
+    - name: C_FIELD_PLAYER_INPUT_CONTROL_MANAGE_VFTABLE
+      address:
+        NA: 0x2174340
+      length:
+        NA: 0x10
+      description: Virtual function table for the CFieldPlayerInputControlManage class.
+    - name: C_FIELD_PLAYER_INPUT_CONTROL_MANAGE_VFTABLE_FUNCS
+      address:
+        NA: 0x2174348
+      length:
+        NA: 0x8
+      description: Function pointers of the CFieldPlayerInputControlManage class vftable.
     - name: C_FIELD_EFFECT
       address:
         NA: 0x21743EC
       length:
         NA: 0x8
       description: Basic information for the CFieldEffect class. This class is a base class.
+    - name: C_FIELD_EFFECT_VFTABLE
+      address:
+        NA: 0x2174404
+      length:
+        NA: 0x64
+      description: Virtual function table for the CFieldEffect class.
+    - name: C_FIELD_EFFECT_VFTABLE_FUNCS
+      address:
+        NA: 0x217440C
+      length:
+        NA: 0x5C
+      description: Function pointers of the CFieldEffect class vftable.
     - name: I_FIELD_EFFECT_DATA_BUILDER
       address:
         NA: 0x2174468
@@ -1426,6 +1834,30 @@ overlay0:
       length:
         NA: 0xC
       description: "Basic information for the CFieldEffectManage::CResidentResource class. This class is a single-inheritance class."
+    - name: C_FIELD_EFFECT_MANAGE_VFTABLE
+      address:
+        NA: 0x2174488
+      length:
+        NA: 0x14
+      description: Virtual function table for the CFieldEffectManage class.
+    - name: C_FIELD_EFFECT_MANAGE_VFTABLE_FUNCS
+      address:
+        NA: 0x2174490
+      length:
+        NA: 0xC
+      description: Function pointers of the CFieldEffectManage class vftable.
+    - name: C_FIELD_EFFECT_MANAGE_C_RESIDENT_RESOURCE_VFTABLE
+      address:
+        NA: 0x21744FC
+      length:
+        NA: 0x2C
+      description: "Virtual function table for the CFieldEffectManage::CResidentResource class."
+    - name: C_FIELD_EFFECT_MANAGE_C_RESIDENT_RESOURCE_VFTABLE_FUNCS
+      address:
+        NA: 0x2174504
+      length:
+        NA: 0x24
+      description: "Function pointers of the CFieldEffectManage::CResidentResource class vftable."
     - name: C_FIELD_EFFECT_MANPU_SIMPLE
       address:
         NA: 0x21745B8
@@ -1444,6 +1876,30 @@ overlay0:
       length:
         NA: 0xC
       description: Basic information for the CFieldEffectActor class. This class is a single-inheritance class.
+    - name: C_FIELD_EFFECT_MANPU_VFTABLE
+      address:
+        NA: 0x2174620
+      length:
+        NA: 0x70
+      description: Virtual function table for the CFieldEffectManpu class.
+    - name: C_FIELD_EFFECT_MANPU_VFTABLE_FUNCS
+      address:
+        NA: 0x2174628
+      length:
+        NA: 0x68
+      description: Function pointers of the CFieldEffectManpu class vftable.
+    - name: C_FIELD_EFFECT_MANPU_SIMPLE_VFTABLE
+      address:
+        NA: 0x2174690
+      length:
+        NA: 0x70
+      description: Virtual function table for the CFieldEffectManpuSimple class.
+    - name: C_FIELD_EFFECT_MANPU_SIMPLE_VFTABLE_FUNCS
+      address:
+        NA: 0x2174698
+      length:
+        NA: 0x68
+      description: Function pointers of the CFieldEffectManpuSimple class vftable.
     - name: T_FIELD_PARTICLE_EMITTER_C_SOFTWARE_SPRITE
       address:
         NA: 0x2174700
@@ -1492,6 +1948,66 @@ overlay0:
       length:
         NA: 0xC
       description: Basic information for the CFieldEffectWaterGun class. This class is a single-inheritance class.
+    - name: C_FIELD_EFFECT_WATER_GUN_C_ANIMATOR_VFTABLE
+      address:
+        NA: 0x2174754
+      length:
+        NA: 0x14
+      description: "Virtual function table for the CFieldEffectWaterGun::CAnimator class."
+    - name: C_FIELD_EFFECT_WATER_GUN_C_ANIMATOR_VFTABLE_FUNCS
+      address:
+        NA: 0x217475C
+      length:
+        NA: 0xC
+      description: "Function pointers of the CFieldEffectWaterGun::CAnimator class vftable."
+    - name: T_FIELD_PARTICLE_EMITTER_C_SOFTWARE_SPRITE_VFTABLE
+      address:
+        NA: 0x2174798
+      length:
+        NA: 0x1C
+      description: Virtual function table for the TFieldParticleEmitter<CSoftwareSprite> class.
+    - name: T_FIELD_PARTICLE_EMITTER_C_SOFTWARE_SPRITE_VFTABLE_FUNCS
+      address:
+        NA: 0x21747A0
+      length:
+        NA: 0x14
+      description: Function pointers of the TFieldParticleEmitter<CSoftwareSprite> class vftable.
+    - name: C_FIELD_EFFECT_WATER_GUN_C_EMITTER_VFTABLE
+      address:
+        NA: 0x21747B4
+      length:
+        NA: 0x1C
+      description: "Virtual function table for the CFieldEffectWaterGun::CEmitter class."
+    - name: C_FIELD_EFFECT_WATER_GUN_C_EMITTER_VFTABLE_FUNCS
+      address:
+        NA: 0x21747BC
+      length:
+        NA: 0x14
+      description: "Function pointers of the CFieldEffectWaterGun::CEmitter class vftable."
+    - name: C_FIELD_EFFECT_WATER_GUN_FACTORY_VFTABLE
+      address:
+        NA: 0x21747F0
+      length:
+        NA: 0x20
+      description: Virtual function table for the CFieldEffectWaterGunFactory class.
+    - name: C_FIELD_EFFECT_WATER_GUN_FACTORY_VFTABLE_FUNCS
+      address:
+        NA: 0x21747F8
+      length:
+        NA: 0x18
+      description: Function pointers of the CFieldEffectWaterGunFactory class vftable.
+    - name: C_FIELD_EFFECT_WATER_GUN_VFTABLE
+      address:
+        NA: 0x21748E4
+      length:
+        NA: 0x64
+      description: Virtual function table for the CFieldEffectWaterGun class.
+    - name: C_FIELD_EFFECT_WATER_GUN_VFTABLE_FUNCS
+      address:
+        NA: 0x21748EC
+      length:
+        NA: 0x5C
+      description: Function pointers of the CFieldEffectWaterGun class vftable.
     - name: C_FIELD_EFFECT_BULLET_FACTORY
       address:
         NA: 0x2174948
@@ -1504,6 +2020,30 @@ overlay0:
       length:
         NA: 0xC
       description: Basic information for the CFieldEffectBullet class. This class is a single-inheritance class.
+    - name: C_FIELD_EFFECT_BULLET_FACTORY_VFTABLE
+      address:
+        NA: 0x2174994
+      length:
+        NA: 0x20
+      description: Virtual function table for the CFieldEffectBulletFactory class.
+    - name: C_FIELD_EFFECT_BULLET_FACTORY_VFTABLE_FUNCS
+      address:
+        NA: 0x217499C
+      length:
+        NA: 0x18
+      description: Function pointers of the CFieldEffectBulletFactory class vftable.
+    - name: C_FIELD_EFFECT_BULLET_VFTABLE
+      address:
+        NA: 0x21749B4
+      length:
+        NA: 0x64
+      description: Virtual function table for the CFieldEffectBullet class.
+    - name: C_FIELD_EFFECT_BULLET_VFTABLE_FUNCS
+      address:
+        NA: 0x21749BC
+      length:
+        NA: 0x5C
+      description: Function pointers of the CFieldEffectBullet class vftable.
     - name: C_FIELD_EFFECT_SAND_BURIAL_CFP_EMITTER_SAND_BURIAL
       address:
         NA: 0x2174A34
@@ -1528,6 +2068,54 @@ overlay0:
       length:
         NA: 0xC
       description: "Basic information for the CFieldEffectSandBurial::CFPForceFieldSandBurial class. This class is a single-inheritance class."
+    - name: C_FIELD_EFFECT_SAND_BURIAL_CFP_FORCE_FIELD_SAND_BURIAL_VFTABLE
+      address:
+        NA: 0x2174A64
+      length:
+        NA: 0x14
+      description: "Virtual function table for the CFieldEffectSandBurial::CFPForceFieldSandBurial class."
+    - name: C_FIELD_EFFECT_SAND_BURIAL_CFP_FORCE_FIELD_SAND_BURIAL_VFTABLE_FUNCS
+      address:
+        NA: 0x2174A6C
+      length:
+        NA: 0xC
+      description: "Function pointers of the CFieldEffectSandBurial::CFPForceFieldSandBurial class vftable."
+    - name: C_FIELD_EFFECT_SAND_BURIAL_CFP_EMITTER_SAND_BURIAL_VFTABLE
+      address:
+        NA: 0x2174A94
+      length:
+        NA: 0x1C
+      description: "Virtual function table for the CFieldEffectSandBurial::CFPEmitterSandBurial class."
+    - name: C_FIELD_EFFECT_SAND_BURIAL_CFP_EMITTER_SAND_BURIAL_VFTABLE_FUNCS
+      address:
+        NA: 0x2174A9C
+      length:
+        NA: 0x14
+      description: "Function pointers of the CFieldEffectSandBurial::CFPEmitterSandBurial class vftable."
+    - name: C_FIELD_EFFECT_SAND_BURIAL_FACTORY_VFTABLE
+      address:
+        NA: 0x2174AB0
+      length:
+        NA: 0x20
+      description: Virtual function table for the CFieldEffectSandBurialFactory class.
+    - name: C_FIELD_EFFECT_SAND_BURIAL_FACTORY_VFTABLE_FUNCS
+      address:
+        NA: 0x2174AB8
+      length:
+        NA: 0x18
+      description: Function pointers of the CFieldEffectSandBurialFactory class vftable.
+    - name: C_FIELD_EFFECT_SAND_BURIAL_VFTABLE
+      address:
+        NA: 0x2174B58
+      length:
+        NA: 0x64
+      description: Virtual function table for the CFieldEffectSandBurial class.
+    - name: C_FIELD_EFFECT_SAND_BURIAL_VFTABLE_FUNCS
+      address:
+        NA: 0x2174B60
+      length:
+        NA: 0x5C
+      description: Function pointers of the CFieldEffectSandBurial class vftable.
     - name: C_FIELD_EFFECT_CHARGE_FACTORY
       address:
         NA: 0x2174BBC
@@ -1540,6 +2128,30 @@ overlay0:
       length:
         NA: 0xC
       description: Basic information for the CFieldEffectCharge class. This class is a single-inheritance class.
+    - name: C_FIELD_EFFECT_CHARGE_FACTORY_VFTABLE
+      address:
+        NA: 0x2174C08
+      length:
+        NA: 0x20
+      description: Virtual function table for the CFieldEffectChargeFactory class.
+    - name: C_FIELD_EFFECT_CHARGE_FACTORY_VFTABLE_FUNCS
+      address:
+        NA: 0x2174C10
+      length:
+        NA: 0x18
+      description: Function pointers of the CFieldEffectChargeFactory class vftable.
+    - name: C_FIELD_EFFECT_CHARGE_VFTABLE
+      address:
+        NA: 0x2174C28
+      length:
+        NA: 0x64
+      description: Virtual function table for the CFieldEffectCharge class.
+    - name: C_FIELD_EFFECT_CHARGE_VFTABLE_FUNCS
+      address:
+        NA: 0x2174C30
+      length:
+        NA: 0x5C
+      description: Function pointers of the CFieldEffectCharge class vftable.
     - name: C_FIELD_EFFECT_FLASH_FACTORY
       address:
         NA: 0x2174C8C
@@ -1552,6 +2164,30 @@ overlay0:
       length:
         NA: 0xC
       description: Basic information for the CFieldEffectFlash class. This class is a single-inheritance class.
+    - name: C_FIELD_EFFECT_FLASH_FACTORY_VFTABLE
+      address:
+        NA: 0x2174CD4
+      length:
+        NA: 0x20
+      description: Virtual function table for the CFieldEffectFlashFactory class.
+    - name: C_FIELD_EFFECT_FLASH_FACTORY_VFTABLE_FUNCS
+      address:
+        NA: 0x2174CDC
+      length:
+        NA: 0x18
+      description: Function pointers of the CFieldEffectFlashFactory class vftable.
+    - name: C_FIELD_EFFECT_FLASH_VFTABLE
+      address:
+        NA: 0x2174CF4
+      length:
+        NA: 0x64
+      description: Virtual function table for the CFieldEffectFlash class.
+    - name: C_FIELD_EFFECT_FLASH_VFTABLE_FUNCS
+      address:
+        NA: 0x2174CFC
+      length:
+        NA: 0x5C
+      description: Function pointers of the CFieldEffectFlash class vftable.
     - name: C_FIELD_EFFECT_FOGCUT
       address:
         NA: 0x2174D58
@@ -1576,6 +2212,54 @@ overlay0:
       length:
         NA: 0xC
       description: Basic information for the CFieldEffectFogcutFactory class. This class is a single-inheritance class.
+    - name: C_FIELD_EFFECT_FOGCUT_CFP_FORCE_FIELD_FOGCUT_VFTABLE
+      address:
+        NA: 0x2174D88
+      length:
+        NA: 0x14
+      description: "Virtual function table for the CFieldEffectFogcut::CFPForceFieldFogcut class."
+    - name: C_FIELD_EFFECT_FOGCUT_CFP_FORCE_FIELD_FOGCUT_VFTABLE_FUNCS
+      address:
+        NA: 0x2174D90
+      length:
+        NA: 0xC
+      description: "Function pointers of the CFieldEffectFogcut::CFPForceFieldFogcut class vftable."
+    - name: C_FIELD_EFFECT_FOGCUT_CFP_EMITTER_FOGCUT_VFTABLE
+      address:
+        NA: 0x2174DB4
+      length:
+        NA: 0x1C
+      description: "Virtual function table for the CFieldEffectFogcut::CFPEmitterFogcut class."
+    - name: C_FIELD_EFFECT_FOGCUT_CFP_EMITTER_FOGCUT_VFTABLE_FUNCS
+      address:
+        NA: 0x2174DBC
+      length:
+        NA: 0x14
+      description: "Function pointers of the CFieldEffectFogcut::CFPEmitterFogcut class vftable."
+    - name: C_FIELD_EFFECT_FOGCUT_FACTORY_VFTABLE
+      address:
+        NA: 0x2174DEC
+      length:
+        NA: 0x20
+      description: Virtual function table for the CFieldEffectFogcutFactory class.
+    - name: C_FIELD_EFFECT_FOGCUT_FACTORY_VFTABLE_FUNCS
+      address:
+        NA: 0x2174DF4
+      length:
+        NA: 0x18
+      description: Function pointers of the CFieldEffectFogcutFactory class vftable.
+    - name: C_FIELD_EFFECT_FOGCUT_VFTABLE
+      address:
+        NA: 0x2174E64
+      length:
+        NA: 0x64
+      description: Virtual function table for the CFieldEffectFogcut class.
+    - name: C_FIELD_EFFECT_FOGCUT_VFTABLE_FUNCS
+      address:
+        NA: 0x2174E6C
+      length:
+        NA: 0x5C
+      description: Function pointers of the CFieldEffectFogcut class vftable.
     - name: C_FIELD_EFFECT_FLOWER_STORM
       address:
         NA: 0x2174EC8
@@ -1600,6 +2284,54 @@ overlay0:
       length:
         NA: 0xC
       description: "Basic information for the CFieldEffectFlowerStorm::CFPEmitterFlowerStorm class. This class is a single-inheritance class."
+    - name: C_FIELD_EFFECT_FLOWER_STORM_CFP_FORCE_FIELD_FLOWER_STORM_VFTABLE
+      address:
+        NA: 0x2174EF8
+      length:
+        NA: 0x14
+      description: "Virtual function table for the CFieldEffectFlowerStorm::CFPForceFieldFlowerStorm class."
+    - name: C_FIELD_EFFECT_FLOWER_STORM_CFP_FORCE_FIELD_FLOWER_STORM_VFTABLE_FUNCS
+      address:
+        NA: 0x2174F00
+      length:
+        NA: 0xC
+      description: "Function pointers of the CFieldEffectFlowerStorm::CFPForceFieldFlowerStorm class vftable."
+    - name: C_FIELD_EFFECT_FLOWER_STORM_CFP_EMITTER_FLOWER_STORM_VFTABLE
+      address:
+        NA: 0x2174F28
+      length:
+        NA: 0x1C
+      description: "Virtual function table for the CFieldEffectFlowerStorm::CFPEmitterFlowerStorm class."
+    - name: C_FIELD_EFFECT_FLOWER_STORM_CFP_EMITTER_FLOWER_STORM_VFTABLE_FUNCS
+      address:
+        NA: 0x2174F30
+      length:
+        NA: 0x14
+      description: "Function pointers of the CFieldEffectFlowerStorm::CFPEmitterFlowerStorm class vftable."
+    - name: C_FIELD_EFFECT_FLOWER_STORM_FACTORY_VFTABLE
+      address:
+        NA: 0x2174F44
+      length:
+        NA: 0x20
+      description: Virtual function table for the CFieldEffectFlowerStormFactory class.
+    - name: C_FIELD_EFFECT_FLOWER_STORM_FACTORY_VFTABLE_FUNCS
+      address:
+        NA: 0x2174F4C
+      length:
+        NA: 0x18
+      description: Function pointers of the CFieldEffectFlowerStormFactory class vftable.
+    - name: C_FIELD_EFFECT_FLOWER_STORM_VFTABLE
+      address:
+        NA: 0x2174FF4
+      length:
+        NA: 0x5C
+      description: Virtual function table for the CFieldEffectFlowerStorm class.
+    - name: C_FIELD_EFFECT_FLOWER_STORM_VFTABLE_FUNCS
+      address:
+        NA: 0x2174FFC
+      length:
+        NA: 0x54
+      description: Function pointers of the CFieldEffectFlowerStorm class vftable.
     - name: SYSCALL_PAGE_11_OV_00
       address:
         NA: 0x21751F4
@@ -1636,6 +2368,18 @@ overlay0:
       length:
         NA: 0x18
       description: "The 15th page of functions callable by the SysCall script opcode. 6 function pointers long. May have undefined behavior if overlay_00 is not active, as SYSCALL_PAGE_PTRS points to this address regardless of whether the overlay is active."
+    - name: C_FIELD_EFFECT_ACTOR_VFTABLE
+      address:
+        NA: 0x2177A6C
+      length:
+        NA: 0x64
+      description: Virtual function table for the CFieldEffectActor class.
+    - name: C_FIELD_EFFECT_ACTOR_VFTABLE_FUNCS
+      address:
+        NA: 0x2177A74
+      length:
+        NA: 0x5C
+      description: Function pointers of the CFieldEffectActor class vftable.
     - name: C_FIELD_EFFECT_ATTACK_ACTOR_DATA
       address:
         NA: 0x2177AD0
@@ -1654,6 +2398,42 @@ overlay0:
       length:
         NA: 0xC
       description: Basic information for the CFieldEffectNormalActorData class. This class is a single-inheritance class.
+    - name: C_FIELD_EFFECT_ATTACK_ACTOR_DATA_VFTABLE
+      address:
+        NA: 0x2177B54
+      length:
+        NA: 0x2C
+      description: Virtual function table for the CFieldEffectAttackActorData class.
+    - name: C_FIELD_EFFECT_ATTACK_ACTOR_DATA_VFTABLE_FUNCS
+      address:
+        NA: 0x2177B5C
+      length:
+        NA: 0x24
+      description: Function pointers of the CFieldEffectAttackActorData class vftable.
+    - name: C_FIELD_EFFECT_NORMAL_ACTOR_DATA_VFTABLE
+      address:
+        NA: 0x2177B80
+      length:
+        NA: 0x2C
+      description: Virtual function table for the CFieldEffectNormalActorData class.
+    - name: C_FIELD_EFFECT_NORMAL_ACTOR_DATA_VFTABLE_FUNCS
+      address:
+        NA: 0x2177B88
+      length:
+        NA: 0x24
+      description: Function pointers of the CFieldEffectNormalActorData class vftable.
+    - name: C_FIELD_MANPU_EFFECT_ACTOR_DATA_VFTABLE
+      address:
+        NA: 0x2177BAC
+      length:
+        NA: 0x2C
+      description: Virtual function table for the CFieldManpuEffectActorData class.
+    - name: C_FIELD_MANPU_EFFECT_ACTOR_DATA_VFTABLE_FUNCS
+      address:
+        NA: 0x2177BB4
+      length:
+        NA: 0x24
+      description: Function pointers of the CFieldManpuEffectActorData class vftable.
     - name: C_FIELD_EFFECT_FOOT_STEP_SMOKE_C_FIELD_PARTICLE_ONE_SHOT_EMITTER
       address:
         NA: 0x2177D18
@@ -1678,36 +2458,144 @@ overlay0:
       length:
         NA: 0xC
       description: Basic information for the CFieldEffectFootStepSmoke class. This class is a single-inheritance class.
+    - name: C_FIELD_EFFECT_FOOT_STEP_SMOKE_C_FIELD_PARTICLE_ALPHA_ANIMATOR_VFTABLE
+      address:
+        NA: 0x2177D48
+      length:
+        NA: 0x14
+      description: "Virtual function table for the CFieldEffectFootStepSmoke::CFieldParticleAlphaAnimator class."
+    - name: C_FIELD_EFFECT_FOOT_STEP_SMOKE_C_FIELD_PARTICLE_ALPHA_ANIMATOR_VFTABLE_FUNCS
+      address:
+        NA: 0x2177D50
+      length:
+        NA: 0xC
+      description: "Function pointers of the CFieldEffectFootStepSmoke::CFieldParticleAlphaAnimator class vftable."
+    - name: C_FIELD_EFFECT_FOOT_STEP_SMOKE_C_DRAW_OBJECT_PARTICLE_VFTABLE
+      address:
+        NA: 0x2177D5C
+      length:
+        NA: 0x14
+      description: "Virtual function table for the CFieldEffectFootStepSmoke::CDrawObjectParticle class."
+    - name: C_FIELD_EFFECT_FOOT_STEP_SMOKE_C_DRAW_OBJECT_PARTICLE_VFTABLE_FUNCS
+      address:
+        NA: 0x2177D64
+      length:
+        NA: 0xC
+      description: "Function pointers of the CFieldEffectFootStepSmoke::CDrawObjectParticle class vftable."
+    - name: C_FIELD_EFFECT_FOOT_STEP_SMOKE_C_FIELD_PARTICLE_ONE_SHOT_EMITTER_VFTABLE
+      address:
+        NA: 0x2177D70
+      length:
+        NA: 0x1C
+      description: "Virtual function table for the CFieldEffectFootStepSmoke::CFieldParticleOneShotEmitter class."
+    - name: C_FIELD_EFFECT_FOOT_STEP_SMOKE_C_FIELD_PARTICLE_ONE_SHOT_EMITTER_VFTABLE_FUNCS
+      address:
+        NA: 0x2177D78
+      length:
+        NA: 0x14
+      description: "Function pointers of the CFieldEffectFootStepSmoke::CFieldParticleOneShotEmitter class vftable."
+    - name: C_FIELD_EFFECT_FOOT_STEP_SMOKE_VFTABLE
+      address:
+        NA: 0x2177E54
+      length:
+        NA: 0x64
+      description: Virtual function table for the CFieldEffectFootStepSmoke class.
+    - name: C_FIELD_EFFECT_FOOT_STEP_SMOKE_VFTABLE_FUNCS
+      address:
+        NA: 0x2177E5C
+      length:
+        NA: 0x5C
+      description: Function pointers of the CFieldEffectFootStepSmoke class vftable.
     - name: C_FIELD_EFFECT_MANPU_FACTORY
       address:
         NA: 0x2177EB8
       length:
         NA: 0xC
       description: Basic information for the CFieldEffectManpuFactory class. This class is a single-inheritance class.
+    - name: C_FIELD_EFFECT_MANPU_FACTORY_VFTABLE
+      address:
+        NA: 0x2177EE0
+      length:
+        NA: 0x20
+      description: Virtual function table for the CFieldEffectManpuFactory class.
+    - name: C_FIELD_EFFECT_MANPU_FACTORY_VFTABLE_FUNCS
+      address:
+        NA: 0x2177EE8
+      length:
+        NA: 0x18
+      description: Function pointers of the CFieldEffectManpuFactory class vftable.
     - name: C_FIELD_EFFECT_MANPU_BALLOON
       address:
         NA: 0x2177F00
       length:
         NA: 0xC
       description: Basic information for the CFieldEffectManpuBalloon class. This class is a single-inheritance class.
+    - name: C_FIELD_EFFECT_MANPU_BALLOON_VFTABLE
+      address:
+        NA: 0x2177F28
+      length:
+        NA: 0x70
+      description: Virtual function table for the CFieldEffectManpuBalloon class.
+    - name: C_FIELD_EFFECT_MANPU_BALLOON_VFTABLE_FUNCS
+      address:
+        NA: 0x2177F30
+      length:
+        NA: 0x68
+      description: Function pointers of the CFieldEffectManpuBalloon class vftable.
     - name: C_FIELD_EFFECT_MANPU_JUMPING
       address:
         NA: 0x2177F98
       length:
         NA: 0xC
       description: Basic information for the CFieldEffectManpuJumping class. This class is a single-inheritance class.
+    - name: C_FIELD_EFFECT_MANPU_JUMPING_VFTABLE
+      address:
+        NA: 0x2177FC0
+      length:
+        NA: 0x70
+      description: Virtual function table for the CFieldEffectManpuJumping class.
+    - name: C_FIELD_EFFECT_MANPU_JUMPING_VFTABLE_FUNCS
+      address:
+        NA: 0x2177FC8
+      length:
+        NA: 0x68
+      description: Function pointers of the CFieldEffectManpuJumping class vftable.
     - name: C_FIELD_EFFECT_MANPU_ANIME
       address:
         NA: 0x2178030
       length:
         NA: 0xC
       description: Basic information for the CFieldEffectManpuAnime class. This class is a single-inheritance class.
+    - name: C_FIELD_EFFECT_MANPU_ANIME_VFTABLE
+      address:
+        NA: 0x2178058
+      length:
+        NA: 0x74
+      description: Virtual function table for the CFieldEffectManpuAnime class.
+    - name: C_FIELD_EFFECT_MANPU_ANIME_VFTABLE_FUNCS
+      address:
+        NA: 0x2178060
+      length:
+        NA: 0x6C
+      description: Function pointers of the CFieldEffectManpuAnime class vftable.
     - name: C_FIELD_POKE_MOVE
       address:
         NA: 0x21780CC
       length:
         NA: 0x8
       description: Basic information for the CFieldPokeMove class. This class is a base class.
+    - name: C_FIELD_POKE_MOVE_VFTABLE
+      address:
+        NA: 0x21780D4
+      length:
+        NA: 0x10
+      description: Virtual function table for the CFieldPokeMove class.
+    - name: C_FIELD_POKE_MOVE_VFTABLE_FUNCS
+      address:
+        NA: 0x21780DC
+      length:
+        NA: 0x8
+      description: Function pointers of the CFieldPokeMove class vftable.
     - name: C_FIELD_CANNON_UNIT
       address:
         NA: 0x21781BC
@@ -1720,12 +2608,48 @@ overlay0:
       length:
         NA: 0xC
       description: Basic information for the CFieldCannon class. This class is a single-inheritance class.
+    - name: C_FIELD_CANNON_VFTABLE
+      address:
+        NA: 0x21781F8
+      length:
+        NA: 0x48
+      description: Virtual function table for the CFieldCannon class.
+    - name: C_FIELD_CANNON_VFTABLE_FUNCS
+      address:
+        NA: 0x2178200
+      length:
+        NA: 0x40
+      description: Function pointers of the CFieldCannon class vftable.
+    - name: C_FIELD_CANNON_UNIT_VFTABLE
+      address:
+        NA: 0x2178240
+      length:
+        NA: 0x48
+      description: Virtual function table for the CFieldCannonUnit class.
+    - name: C_FIELD_CANNON_UNIT_VFTABLE_FUNCS
+      address:
+        NA: 0x2178248
+      length:
+        NA: 0x40
+      description: Function pointers of the CFieldCannonUnit class vftable.
     - name: C_FIELD_PARTICLE_SMOKE_ANIMATOR
       address:
         NA: 0x2178288
       length:
         NA: 0xC
       description: Basic information for the CFieldParticleSmokeAnimator class. This class is a single-inheritance class.
+    - name: C_FIELD_PARTICLE_SMOKE_ANIMATOR_VFTABLE
+      address:
+        NA: 0x2178294
+      length:
+        NA: 0x14
+      description: Virtual function table for the CFieldParticleSmokeAnimator class.
+    - name: C_FIELD_PARTICLE_SMOKE_ANIMATOR_VFTABLE_FUNCS
+      address:
+        NA: 0x217829C
+      length:
+        NA: 0xC
+      description: Function pointers of the CFieldParticleSmokeAnimator class vftable.
     - name: T_FIELD_PARTICLE_RECT_EMITTER_C_SOFTWARE_SPRITE
       address:
         NA: 0x21782C8
@@ -1762,6 +2686,78 @@ overlay0:
       length:
         NA: 0xC
       description: Basic information for the TFieldEffectParticle<CSoftwareSprite> class. This class is a single-inheritance class.
+    - name: T_FIELD_PARTICLE_RECT_EMITTER_C_SOFTWARE_SPRITE_VFTABLE
+      address:
+        NA: 0x2178340
+      length:
+        NA: 0x1C
+      description: Virtual function table for the TFieldParticleRectEmitter<CSoftwareSprite> class.
+    - name: T_FIELD_PARTICLE_RECT_EMITTER_C_SOFTWARE_SPRITE_VFTABLE_FUNCS
+      address:
+        NA: 0x2178348
+      length:
+        NA: 0x14
+      description: Function pointers of the TFieldParticleRectEmitter<CSoftwareSprite> class vftable.
+    - name: C_FIELD_EFFECT_STEAM_FACTORY_VFTABLE
+      address:
+        NA: 0x217835C
+      length:
+        NA: 0x20
+      description: Virtual function table for the CFieldEffectSteamFactory class.
+    - name: C_FIELD_EFFECT_STEAM_FACTORY_VFTABLE_FUNCS
+      address:
+        NA: 0x2178364
+      length:
+        NA: 0x18
+      description: Function pointers of the CFieldEffectSteamFactory class vftable.
+    - name: T_FIELD_PARTICLE_SMOKE_RECT_EMITTER_C_SOFTWARE_SPRITE_VFTABLE
+      address:
+        NA: 0x217837C
+      length:
+        NA: 0x20
+      description: Virtual function table for the TFieldParticleSmokeRectEmitter<CSoftwareSprite> class.
+    - name: T_FIELD_PARTICLE_SMOKE_RECT_EMITTER_C_SOFTWARE_SPRITE_VFTABLE_FUNCS
+      address:
+        NA: 0x2178384
+      length:
+        NA: 0x18
+      description: Function pointers of the TFieldParticleSmokeRectEmitter<CSoftwareSprite> class vftable.
+    - name: C_FIELD_EFFECT_STEAM_VFTABLE
+      address:
+        NA: 0x2178454
+      length:
+        NA: 0x70
+      description: Virtual function table for the CFieldEffectSteam class.
+    - name: C_FIELD_EFFECT_STEAM_VFTABLE_FUNCS
+      address:
+        NA: 0x217845C
+      length:
+        NA: 0x68
+      description: Function pointers of the CFieldEffectSteam class vftable.
+    - name: T_FIELD_EFFECT_SMOKE_C_SOFTWARE_SPRITE_VFTABLE
+      address:
+        NA: 0x21784C4
+      length:
+        NA: 0x70
+      description: Virtual function table for the TFieldEffectSmoke<CSoftwareSprite> class.
+    - name: T_FIELD_EFFECT_SMOKE_C_SOFTWARE_SPRITE_VFTABLE_FUNCS
+      address:
+        NA: 0x21784CC
+      length:
+        NA: 0x68
+      description: Function pointers of the TFieldEffectSmoke<CSoftwareSprite> class vftable.
+    - name: T_FIELD_EFFECT_PARTICLE_C_SOFTWARE_SPRITE_VFTABLE
+      address:
+        NA: 0x2178534
+      length:
+        NA: 0x70
+      description: Virtual function table for the TFieldEffectParticle<CSoftwareSprite> class.
+    - name: T_FIELD_EFFECT_PARTICLE_C_SOFTWARE_SPRITE_VFTABLE_FUNCS
+      address:
+        NA: 0x217853C
+      length:
+        NA: 0x68
+      description: Function pointers of the TFieldEffectParticle<CSoftwareSprite> class vftable.
     - name: C_FIELD_EFFECT_SCATTER_LEAVES_FACTORY
       address:
         NA: 0x21785A4
@@ -1786,6 +2782,54 @@ overlay0:
       length:
         NA: 0xC
       description: Basic information for the CFieldParticleLeavesEmitter class. This class is a single-inheritance class.
+    - name: C_FIELD_PARTICLE_LEAVES_ANIMATOR_VFTABLE
+      address:
+        NA: 0x21785E4
+      length:
+        NA: 0x14
+      description: Virtual function table for the CFieldParticleLeavesAnimator class.
+    - name: C_FIELD_PARTICLE_LEAVES_ANIMATOR_VFTABLE_FUNCS
+      address:
+        NA: 0x21785EC
+      length:
+        NA: 0xC
+      description: Function pointers of the CFieldParticleLeavesAnimator class vftable.
+    - name: C_FIELD_PARTICLE_LEAVES_EMITTER_VFTABLE
+      address:
+        NA: 0x2178614
+      length:
+        NA: 0x1C
+      description: Virtual function table for the CFieldParticleLeavesEmitter class.
+    - name: C_FIELD_PARTICLE_LEAVES_EMITTER_VFTABLE_FUNCS
+      address:
+        NA: 0x217861C
+      length:
+        NA: 0x14
+      description: Function pointers of the CFieldParticleLeavesEmitter class vftable.
+    - name: C_FIELD_EFFECT_SCATTER_LEAVES_FACTORY_VFTABLE
+      address:
+        NA: 0x2178670
+      length:
+        NA: 0x20
+      description: Virtual function table for the CFieldEffectScatterLeavesFactory class.
+    - name: C_FIELD_EFFECT_SCATTER_LEAVES_FACTORY_VFTABLE_FUNCS
+      address:
+        NA: 0x2178678
+      length:
+        NA: 0x18
+      description: Function pointers of the CFieldEffectScatterLeavesFactory class vftable.
+    - name: C_FIELD_EFFECT_SCATTER_LEAVES_VFTABLE
+      address:
+        NA: 0x21786B4
+      length:
+        NA: 0x70
+      description: Virtual function table for the CFieldEffectScatterLeaves class.
+    - name: C_FIELD_EFFECT_SCATTER_LEAVES_VFTABLE_FUNCS
+      address:
+        NA: 0x21786BC
+      length:
+        NA: 0x68
+      description: Function pointers of the CFieldEffectScatterLeaves class vftable.
     - name: C_FIELD_EFFECT_SPREAD_SMOKE_FACTORY
       address:
         NA: 0x2178724
@@ -1798,6 +2842,30 @@ overlay0:
       length:
         NA: 0xC
       description: Basic information for the CFieldEffectSpreadSmoke class. This class is a single-inheritance class.
+    - name: C_FIELD_EFFECT_SPREAD_SMOKE_FACTORY_VFTABLE
+      address:
+        NA: 0x2178758
+      length:
+        NA: 0x20
+      description: Virtual function table for the CFieldEffectSpreadSmokeFactory class.
+    - name: C_FIELD_EFFECT_SPREAD_SMOKE_FACTORY_VFTABLE_FUNCS
+      address:
+        NA: 0x2178760
+      length:
+        NA: 0x18
+      description: Function pointers of the CFieldEffectSpreadSmokeFactory class vftable.
+    - name: C_FIELD_EFFECT_SPREAD_SMOKE_VFTABLE
+      address:
+        NA: 0x217879C
+      length:
+        NA: 0x70
+      description: Virtual function table for the CFieldEffectSpreadSmoke class.
+    - name: C_FIELD_EFFECT_SPREAD_SMOKE_VFTABLE_FUNCS
+      address:
+        NA: 0x21787A4
+      length:
+        NA: 0x68
+      description: Function pointers of the CFieldEffectSpreadSmoke class vftable.
     - name: C_FIELD_EFFECT_WAVE_BULLET_C_WAVE_PARTICLE_ANIMATOR
       address:
         NA: 0x217880C
@@ -1822,6 +2890,54 @@ overlay0:
       length:
         NA: 0xC
       description: Basic information for the CFieldEffectWaveBulletFactory class. This class is a single-inheritance class.
+    - name: C_FIELD_EFFECT_WAVE_BULLET_C_WAVE_PARTICLE_ANIMATOR_VFTABLE
+      address:
+        NA: 0x217883C
+      length:
+        NA: 0x14
+      description: "Virtual function table for the CFieldEffectWaveBullet::CWaveParticleAnimator class."
+    - name: C_FIELD_EFFECT_WAVE_BULLET_C_WAVE_PARTICLE_ANIMATOR_VFTABLE_FUNCS
+      address:
+        NA: 0x2178844
+      length:
+        NA: 0xC
+      description: "Function pointers of the CFieldEffectWaveBullet::CWaveParticleAnimator class vftable."
+    - name: C_FIELD_EFFECT_WAVE_BULLET_C_WAVE_PARTICLE_EMITTER_VFTABLE
+      address:
+        NA: 0x217886C
+      length:
+        NA: 0x1C
+      description: "Virtual function table for the CFieldEffectWaveBullet::CWaveParticleEmitter class."
+    - name: C_FIELD_EFFECT_WAVE_BULLET_C_WAVE_PARTICLE_EMITTER_VFTABLE_FUNCS
+      address:
+        NA: 0x2178874
+      length:
+        NA: 0x14
+      description: "Function pointers of the CFieldEffectWaveBullet::CWaveParticleEmitter class vftable."
+    - name: C_FIELD_EFFECT_WAVE_BULLET_FACTORY_VFTABLE
+      address:
+        NA: 0x21788A8
+      length:
+        NA: 0x20
+      description: Virtual function table for the CFieldEffectWaveBulletFactory class.
+    - name: C_FIELD_EFFECT_WAVE_BULLET_FACTORY_VFTABLE_FUNCS
+      address:
+        NA: 0x21788B0
+      length:
+        NA: 0x18
+      description: Function pointers of the CFieldEffectWaveBulletFactory class vftable.
+    - name: C_FIELD_EFFECT_WAVE_BULLET_VFTABLE
+      address:
+        NA: 0x2178930
+      length:
+        NA: 0x64
+      description: Virtual function table for the CFieldEffectWaveBullet class.
+    - name: C_FIELD_EFFECT_WAVE_BULLET_VFTABLE_FUNCS
+      address:
+        NA: 0x2178938
+      length:
+        NA: 0x5C
+      description: Function pointers of the CFieldEffectWaveBullet class vftable.
     - name: C_FIELD_EFFECT_CELL_ANIME
       address:
         NA: 0x21789B0
@@ -1840,6 +2956,42 @@ overlay0:
       length:
         NA: 0xC
       description: Basic information for the CFieldEffectAttackCellAnimeFactory class. This class is a single-inheritance class.
+    - name: C_FIELD_EFFECT_ATTACK_CELL_ANIME_FACTORY_VFTABLE
+      address:
+        NA: 0x21789EC
+      length:
+        NA: 0x20
+      description: Virtual function table for the CFieldEffectAttackCellAnimeFactory class.
+    - name: C_FIELD_EFFECT_ATTACK_CELL_ANIME_FACTORY_VFTABLE_FUNCS
+      address:
+        NA: 0x21789F4
+      length:
+        NA: 0x18
+      description: Function pointers of the CFieldEffectAttackCellAnimeFactory class vftable.
+    - name: C_FIELD_EFFECT_NORMAL_CELL_ANIME_FACTORY_VFTABLE
+      address:
+        NA: 0x2178A0C
+      length:
+        NA: 0x20
+      description: Virtual function table for the CFieldEffectNormalCellAnimeFactory class.
+    - name: C_FIELD_EFFECT_NORMAL_CELL_ANIME_FACTORY_VFTABLE_FUNCS
+      address:
+        NA: 0x2178A14
+      length:
+        NA: 0x18
+      description: Function pointers of the CFieldEffectNormalCellAnimeFactory class vftable.
+    - name: C_FIELD_EFFECT_CELL_ANIME_VFTABLE
+      address:
+        NA: 0x2178A7C
+      length:
+        NA: 0x64
+      description: Virtual function table for the CFieldEffectCellAnime class.
+    - name: C_FIELD_EFFECT_CELL_ANIME_VFTABLE_FUNCS
+      address:
+        NA: 0x2178A84
+      length:
+        NA: 0x5C
+      description: Function pointers of the CFieldEffectCellAnime class vftable.
     - name: C_FIELD_EFFECT_PARABOLA_BULLET
       address:
         NA: 0x2178AE0
@@ -1852,6 +3004,30 @@ overlay0:
       length:
         NA: 0xC
       description: Basic information for the CFieldEffectParabolaBulletFactory class. This class is a single-inheritance class.
+    - name: C_FIELD_EFFECT_PARABOLA_BULLET_FACTORY_VFTABLE
+      address:
+        NA: 0x2178B18
+      length:
+        NA: 0x20
+      description: Virtual function table for the CFieldEffectParabolaBulletFactory class.
+    - name: C_FIELD_EFFECT_PARABOLA_BULLET_FACTORY_VFTABLE_FUNCS
+      address:
+        NA: 0x2178B20
+      length:
+        NA: 0x18
+      description: Function pointers of the CFieldEffectParabolaBulletFactory class vftable.
+    - name: C_FIELD_EFFECT_PARABOLA_BULLET_VFTABLE
+      address:
+        NA: 0x2178B5C
+      length:
+        NA: 0x64
+      description: Virtual function table for the CFieldEffectParabolaBullet class.
+    - name: C_FIELD_EFFECT_PARABOLA_BULLET_VFTABLE_FUNCS
+      address:
+        NA: 0x2178B64
+      length:
+        NA: 0x5C
+      description: Function pointers of the CFieldEffectParabolaBullet class vftable.
     - name: C_FIELD_EFFECT_POISON_GAS
       address:
         NA: 0x2178BC0
@@ -1864,6 +3040,30 @@ overlay0:
       length:
         NA: 0xC
       description: Basic information for the CFieldEffectPoisonGasFactory class. This class is a single-inheritance class.
+    - name: C_FIELD_EFFECT_POISON_GAS_FACTORY_VFTABLE
+      address:
+        NA: 0x2178C10
+      length:
+        NA: 0x20
+      description: Virtual function table for the CFieldEffectPoisonGasFactory class.
+    - name: C_FIELD_EFFECT_POISON_GAS_FACTORY_VFTABLE_FUNCS
+      address:
+        NA: 0x2178C18
+      length:
+        NA: 0x18
+      description: Function pointers of the CFieldEffectPoisonGasFactory class vftable.
+    - name: C_FIELD_EFFECT_POISON_GAS_VFTABLE
+      address:
+        NA: 0x2178C30
+      length:
+        NA: 0x64
+      description: Virtual function table for the CFieldEffectPoisonGas class.
+    - name: C_FIELD_EFFECT_POISON_GAS_VFTABLE_FUNCS
+      address:
+        NA: 0x2178C38
+      length:
+        NA: 0x5C
+      description: Function pointers of the CFieldEffectPoisonGas class vftable.
     - name: C_FIELD_EFFECT_SPRAY_C_WAVE_PARTICLE_EMITTER
       address:
         NA: 0x2178C94
@@ -1888,6 +3088,54 @@ overlay0:
       length:
         NA: 0xC
       description: Basic information for the CFieldEffectSprayFactory class. This class is a single-inheritance class.
+    - name: C_FIELD_EFFECT_SPRAY_C_WAVE_PARTICLE_ANIMATOR_VFTABLE
+      address:
+        NA: 0x2178CD8
+      length:
+        NA: 0x14
+      description: "Virtual function table for the CFieldEffectSpray::CWaveParticleAnimator class."
+    - name: C_FIELD_EFFECT_SPRAY_C_WAVE_PARTICLE_ANIMATOR_VFTABLE_FUNCS
+      address:
+        NA: 0x2178CE0
+      length:
+        NA: 0xC
+      description: "Function pointers of the CFieldEffectSpray::CWaveParticleAnimator class vftable."
+    - name: C_FIELD_EFFECT_SPRAY_C_WAVE_PARTICLE_EMITTER_VFTABLE
+      address:
+        NA: 0x2178D08
+      length:
+        NA: 0x1C
+      description: "Virtual function table for the CFieldEffectSpray::CWaveParticleEmitter class."
+    - name: C_FIELD_EFFECT_SPRAY_C_WAVE_PARTICLE_EMITTER_VFTABLE_FUNCS
+      address:
+        NA: 0x2178D10
+      length:
+        NA: 0x14
+      description: "Function pointers of the CFieldEffectSpray::CWaveParticleEmitter class vftable."
+    - name: C_FIELD_EFFECT_SPRAY_FACTORY_VFTABLE
+      address:
+        NA: 0x2178D24
+      length:
+        NA: 0x20
+      description: Virtual function table for the CFieldEffectSprayFactory class.
+    - name: C_FIELD_EFFECT_SPRAY_FACTORY_VFTABLE_FUNCS
+      address:
+        NA: 0x2178D2C
+      length:
+        NA: 0x18
+      description: Function pointers of the CFieldEffectSprayFactory class vftable.
+    - name: C_FIELD_EFFECT_SPRAY_VFTABLE
+      address:
+        NA: 0x2178DA0
+      length:
+        NA: 0x64
+      description: Virtual function table for the CFieldEffectSpray class.
+    - name: C_FIELD_EFFECT_SPRAY_VFTABLE_FUNCS
+      address:
+        NA: 0x2178DA8
+      length:
+        NA: 0x5C
+      description: Function pointers of the CFieldEffectSpray class vftable.
     - name: C_FIELD_EFFECT_FIRE_FACTORY
       address:
         NA: 0x2178E20
@@ -1912,6 +3160,54 @@ overlay0:
       length:
         NA: 0xC
       description: "Basic information for the CFieldEffectFire::CParticleEmitter class. This class is a single-inheritance class."
+    - name: C_FIELD_EFFECT_FIRE_C_PARTICLE_ANIMATOR_VFTABLE
+      address:
+        NA: 0x2178E64
+      length:
+        NA: 0x14
+      description: "Virtual function table for the CFieldEffectFire::CParticleAnimator class."
+    - name: C_FIELD_EFFECT_FIRE_C_PARTICLE_ANIMATOR_VFTABLE_FUNCS
+      address:
+        NA: 0x2178E6C
+      length:
+        NA: 0xC
+      description: "Function pointers of the CFieldEffectFire::CParticleAnimator class vftable."
+    - name: C_FIELD_EFFECT_FIRE_C_PARTICLE_EMITTER_VFTABLE
+      address:
+        NA: 0x2178E94
+      length:
+        NA: 0x1C
+      description: "Virtual function table for the CFieldEffectFire::CParticleEmitter class."
+    - name: C_FIELD_EFFECT_FIRE_C_PARTICLE_EMITTER_VFTABLE_FUNCS
+      address:
+        NA: 0x2178E9C
+      length:
+        NA: 0x14
+      description: "Function pointers of the CFieldEffectFire::CParticleEmitter class vftable."
+    - name: C_FIELD_EFFECT_FIRE_FACTORY_VFTABLE
+      address:
+        NA: 0x2178EB0
+      length:
+        NA: 0x20
+      description: Virtual function table for the CFieldEffectFireFactory class.
+    - name: C_FIELD_EFFECT_FIRE_FACTORY_VFTABLE_FUNCS
+      address:
+        NA: 0x2178EB8
+      length:
+        NA: 0x18
+      description: Function pointers of the CFieldEffectFireFactory class vftable.
+    - name: C_FIELD_EFFECT_FIRE_VFTABLE
+      address:
+        NA: 0x2178F20
+      length:
+        NA: 0x70
+      description: Virtual function table for the CFieldEffectFire class.
+    - name: C_FIELD_EFFECT_FIRE_VFTABLE_FUNCS
+      address:
+        NA: 0x2178F28
+      length:
+        NA: 0x68
+      description: Function pointers of the CFieldEffectFire class vftable.
     - name: C_FIELD_EFFECT_SPARK_FACTORY
       address:
         NA: 0x2178F90
@@ -1924,6 +3220,30 @@ overlay0:
       length:
         NA: 0xC
       description: Basic information for the CFieldEffectSpark class. This class is a single-inheritance class.
+    - name: C_FIELD_EFFECT_SPARK_FACTORY_VFTABLE
+      address:
+        NA: 0x2178FD8
+      length:
+        NA: 0x20
+      description: Virtual function table for the CFieldEffectSparkFactory class.
+    - name: C_FIELD_EFFECT_SPARK_FACTORY_VFTABLE_FUNCS
+      address:
+        NA: 0x2178FE0
+      length:
+        NA: 0x18
+      description: Function pointers of the CFieldEffectSparkFactory class vftable.
+    - name: C_FIELD_EFFECT_SPARK_VFTABLE
+      address:
+        NA: 0x2178FF8
+      length:
+        NA: 0x64
+      description: Virtual function table for the CFieldEffectSpark class.
+    - name: C_FIELD_EFFECT_SPARK_VFTABLE_FUNCS
+      address:
+        NA: 0x2179000
+      length:
+        NA: 0x5C
+      description: Function pointers of the CFieldEffectSpark class vftable.
     - name: C_FIELD_EFFECT_JUMON_FACTORY
       address:
         NA: 0x217905C
@@ -1936,6 +3256,30 @@ overlay0:
       length:
         NA: 0xC
       description: Basic information for the CFieldEffectJumon class. This class is a single-inheritance class.
+    - name: C_FIELD_EFFECT_JUMON_FACTORY_VFTABLE
+      address:
+        NA: 0x21790A4
+      length:
+        NA: 0x20
+      description: Virtual function table for the CFieldEffectJumonFactory class.
+    - name: C_FIELD_EFFECT_JUMON_FACTORY_VFTABLE_FUNCS
+      address:
+        NA: 0x21790AC
+      length:
+        NA: 0x18
+      description: Function pointers of the CFieldEffectJumonFactory class vftable.
+    - name: C_FIELD_EFFECT_JUMON_VFTABLE
+      address:
+        NA: 0x21790C4
+      length:
+        NA: 0x64
+      description: Virtual function table for the CFieldEffectJumon class.
+    - name: C_FIELD_EFFECT_JUMON_VFTABLE_FUNCS
+      address:
+        NA: 0x21790CC
+      length:
+        NA: 0x5C
+      description: Function pointers of the CFieldEffectJumon class vftable.
     - name: C_FIELD_EFFECT_EXPLOSION
       address:
         NA: 0x21791B8
@@ -1948,6 +3292,30 @@ overlay0:
       length:
         NA: 0xC
       description: Basic information for the CFieldEffectExplosionFactory class. This class is a single-inheritance class.
+    - name: C_FIELD_EFFECT_EXPLOSION_FACTORY_VFTABLE
+      address:
+        NA: 0x2179208
+      length:
+        NA: 0x20
+      description: Virtual function table for the CFieldEffectExplosionFactory class.
+    - name: C_FIELD_EFFECT_EXPLOSION_FACTORY_VFTABLE_FUNCS
+      address:
+        NA: 0x2179210
+      length:
+        NA: 0x18
+      description: Function pointers of the CFieldEffectExplosionFactory class vftable.
+    - name: C_FIELD_EFFECT_EXPLOSION_VFTABLE
+      address:
+        NA: 0x2179228
+      length:
+        NA: 0x64
+      description: Virtual function table for the CFieldEffectExplosion class.
+    - name: C_FIELD_EFFECT_EXPLOSION_VFTABLE_FUNCS
+      address:
+        NA: 0x2179230
+      length:
+        NA: 0x5C
+      description: Function pointers of the CFieldEffectExplosion class vftable.
     - name: C_FIELD_EFFECT_SLIME
       address:
         NA: 0x2179294
@@ -1960,6 +3328,30 @@ overlay0:
       length:
         NA: 0xC
       description: Basic information for the CFieldEffectSlimeFactory class. This class is a single-inheritance class.
+    - name: C_FIELD_EFFECT_SLIME_FACTORY_VFTABLE
+      address:
+        NA: 0x21792DC
+      length:
+        NA: 0x20
+      description: Virtual function table for the CFieldEffectSlimeFactory class.
+    - name: C_FIELD_EFFECT_SLIME_FACTORY_VFTABLE_FUNCS
+      address:
+        NA: 0x21792E4
+      length:
+        NA: 0x18
+      description: Function pointers of the CFieldEffectSlimeFactory class vftable.
+    - name: C_FIELD_EFFECT_SLIME_VFTABLE
+      address:
+        NA: 0x21792FC
+      length:
+        NA: 0x64
+      description: Virtual function table for the CFieldEffectSlime class.
+    - name: C_FIELD_EFFECT_SLIME_VFTABLE_FUNCS
+      address:
+        NA: 0x2179304
+      length:
+        NA: 0x5C
+      description: Function pointers of the CFieldEffectSlime class vftable.
     - name: C_FIELD_EFFECT_MANPU_ANGER_C_ANIMATOR
       address:
         NA: 0x2179390
@@ -1978,24 +3370,96 @@ overlay0:
       length:
         NA: 0xC
       description: Basic information for the CFieldEffectManpuAnger class. This class is a single-inheritance class.
+    - name: C_FIELD_EFFECT_MANPU_ANGER_C_ANIMATOR_VFTABLE
+      address:
+        NA: 0x21793B4
+      length:
+        NA: 0x14
+      description: "Virtual function table for the CFieldEffectManpuAnger::CAnimator class."
+    - name: C_FIELD_EFFECT_MANPU_ANGER_C_ANIMATOR_VFTABLE_FUNCS
+      address:
+        NA: 0x21793BC
+      length:
+        NA: 0xC
+      description: "Function pointers of the CFieldEffectManpuAnger::CAnimator class vftable."
+    - name: C_FIELD_EFFECT_MANPU_ANGER_C_EMITTER_VFTABLE
+      address:
+        NA: 0x21793E4
+      length:
+        NA: 0x1C
+      description: "Virtual function table for the CFieldEffectManpuAnger::CEmitter class."
+    - name: C_FIELD_EFFECT_MANPU_ANGER_C_EMITTER_VFTABLE_FUNCS
+      address:
+        NA: 0x21793EC
+      length:
+        NA: 0x14
+      description: "Function pointers of the CFieldEffectManpuAnger::CEmitter class vftable."
+    - name: C_FIELD_EFFECT_MANPU_ANGER_VFTABLE
+      address:
+        NA: 0x217944C
+      length:
+        NA: 0x70
+      description: Virtual function table for the CFieldEffectManpuAnger class.
+    - name: C_FIELD_EFFECT_MANPU_ANGER_VFTABLE_FUNCS
+      address:
+        NA: 0x2179454
+      length:
+        NA: 0x68
+      description: Function pointers of the CFieldEffectManpuAnger class vftable.
     - name: C_FIELD_EFFECT_MANPU_ASE
       address:
         NA: 0x21794BC
       length:
         NA: 0xC
       description: Basic information for the CFieldEffectManpuAse class. This class is a single-inheritance class.
+    - name: C_FIELD_EFFECT_MANPU_ASE_VFTABLE
+      address:
+        NA: 0x21794E0
+      length:
+        NA: 0x70
+      description: Virtual function table for the CFieldEffectManpuAse class.
+    - name: C_FIELD_EFFECT_MANPU_ASE_VFTABLE_FUNCS
+      address:
+        NA: 0x21794E8
+      length:
+        NA: 0x68
+      description: Function pointers of the CFieldEffectManpuAse class vftable.
     - name: C_FIELD_EFFECT_MANPU_DOKARIMO
       address:
         NA: 0x2179550
       length:
         NA: 0xC
       description: Basic information for the CFieldEffectManpuDokarimo class. This class is a single-inheritance class.
+    - name: C_FIELD_EFFECT_MANPU_DOKARIMO_VFTABLE
+      address:
+        NA: 0x2179578
+      length:
+        NA: 0x74
+      description: Virtual function table for the CFieldEffectManpuDokarimo class.
+    - name: C_FIELD_EFFECT_MANPU_DOKARIMO_VFTABLE_FUNCS
+      address:
+        NA: 0x2179580
+      length:
+        NA: 0x6C
+      description: Function pointers of the CFieldEffectManpuDokarimo class vftable.
     - name: C_FIELD_EFFECT_DAMAGE_INDICATION
       address:
         NA: 0x21795EC
       length:
         NA: 0xC
       description: Basic information for the CFieldEffectDamageIndication class. This class is a single-inheritance class.
+    - name: C_FIELD_EFFECT_DAMAGE_INDICATION_VFTABLE
+      address:
+        NA: 0x2179618
+      length:
+        NA: 0x64
+      description: Virtual function table for the CFieldEffectDamageIndication class.
+    - name: C_FIELD_EFFECT_DAMAGE_INDICATION_VFTABLE_FUNCS
+      address:
+        NA: 0x2179620
+      length:
+        NA: 0x5C
+      description: Function pointers of the CFieldEffectDamageIndication class vftable.
     - name: C_FIELD_EFFECT_BUSH
       address:
         NA: 0x217967C
@@ -2008,6 +3472,30 @@ overlay0:
       length:
         NA: 0xC
       description: Basic information for the CFieldEffectBushFactory class. This class is a single-inheritance class.
+    - name: C_FIELD_EFFECT_BUSH_FACTORY_VFTABLE
+      address:
+        NA: 0x21796C4
+      length:
+        NA: 0x20
+      description: Virtual function table for the CFieldEffectBushFactory class.
+    - name: C_FIELD_EFFECT_BUSH_FACTORY_VFTABLE_FUNCS
+      address:
+        NA: 0x21796CC
+      length:
+        NA: 0x18
+      description: Function pointers of the CFieldEffectBushFactory class vftable.
+    - name: C_FIELD_EFFECT_BUSH_VFTABLE
+      address:
+        NA: 0x21796E4
+      length:
+        NA: 0x64
+      description: Virtual function table for the CFieldEffectBush class.
+    - name: C_FIELD_EFFECT_BUSH_VFTABLE_FUNCS
+      address:
+        NA: 0x21796EC
+      length:
+        NA: 0x5C
+      description: Function pointers of the CFieldEffectBush class vftable.
     - name: C_FIELD_EFFECT_WATER_SPLASH
       address:
         NA: 0x2179748
@@ -2026,6 +3514,42 @@ overlay0:
       length:
         NA: 0xC
       description: "Basic information for the CFieldEffectWaterSplash::CEffectDrawObject class. This class is a single-inheritance class."
+    - name: C_FIELD_EFFECT_WATER_SPLASH_C_EFFECT_DRAW_OBJECT_VFTABLE
+      address:
+        NA: 0x217976C
+      length:
+        NA: 0x14
+      description: "Virtual function table for the CFieldEffectWaterSplash::CEffectDrawObject class."
+    - name: C_FIELD_EFFECT_WATER_SPLASH_C_EFFECT_DRAW_OBJECT_VFTABLE_FUNCS
+      address:
+        NA: 0x2179774
+      length:
+        NA: 0xC
+      description: "Function pointers of the CFieldEffectWaterSplash::CEffectDrawObject class vftable."
+    - name: C_FIELD_EFFECT_WATER_SPLASH_FACTORY_VFTABLE
+      address:
+        NA: 0x217979C
+      length:
+        NA: 0x20
+      description: Virtual function table for the CFieldEffectWaterSplashFactory class.
+    - name: C_FIELD_EFFECT_WATER_SPLASH_FACTORY_VFTABLE_FUNCS
+      address:
+        NA: 0x21797A4
+      length:
+        NA: 0x18
+      description: Function pointers of the CFieldEffectWaterSplashFactory class vftable.
+    - name: C_FIELD_EFFECT_WATER_SPLASH_VFTABLE
+      address:
+        NA: 0x2179810
+      length:
+        NA: 0x5C
+      description: Virtual function table for the CFieldEffectWaterSplash class.
+    - name: C_FIELD_EFFECT_WATER_SPLASH_VFTABLE_FUNCS
+      address:
+        NA: 0x2179818
+      length:
+        NA: 0x54
+      description: Function pointers of the CFieldEffectWaterSplash class vftable.
     - name: C_FIELD_EFFECT_MANPU_GOKIGEN
       address:
         NA: 0x2179874
@@ -2044,6 +3568,42 @@ overlay0:
       length:
         NA: 0xC
       description: "Basic information for the CFieldEffectManpuGokigen::CAnimator class. This class is a single-inheritance class."
+    - name: C_FIELD_EFFECT_MANPU_GOKIGEN_C_ANIMATOR_VFTABLE
+      address:
+        NA: 0x2179898
+      length:
+        NA: 0x14
+      description: "Virtual function table for the CFieldEffectManpuGokigen::CAnimator class."
+    - name: C_FIELD_EFFECT_MANPU_GOKIGEN_C_ANIMATOR_VFTABLE_FUNCS
+      address:
+        NA: 0x21798A0
+      length:
+        NA: 0xC
+      description: "Function pointers of the CFieldEffectManpuGokigen::CAnimator class vftable."
+    - name: C_FIELD_EFFECT_MANPU_GOKIGEN_C_EMITTER_VFTABLE
+      address:
+        NA: 0x21798C8
+      length:
+        NA: 0x1C
+      description: "Virtual function table for the CFieldEffectManpuGokigen::CEmitter class."
+    - name: C_FIELD_EFFECT_MANPU_GOKIGEN_C_EMITTER_VFTABLE_FUNCS
+      address:
+        NA: 0x21798D0
+      length:
+        NA: 0x14
+      description: "Function pointers of the CFieldEffectManpuGokigen::CEmitter class vftable."
+    - name: C_FIELD_EFFECT_MANPU_GOKIGEN_VFTABLE
+      address:
+        NA: 0x2179934
+      length:
+        NA: 0x70
+      description: Virtual function table for the CFieldEffectManpuGokigen class.
+    - name: C_FIELD_EFFECT_MANPU_GOKIGEN_VFTABLE_FUNCS
+      address:
+        NA: 0x217993C
+      length:
+        NA: 0x68
+      description: Function pointers of the CFieldEffectManpuGokigen class vftable.
     - name: C_FIELD_EFFECT_BLOOM
       address:
         NA: 0x21799A4
@@ -2056,6 +3616,30 @@ overlay0:
       length:
         NA: 0xC
       description: Basic information for the CFieldEffectBloomFactory class. This class is a single-inheritance class.
+    - name: C_FIELD_EFFECT_BLOOM_FACTORY_VFTABLE
+      address:
+        NA: 0x21799EC
+      length:
+        NA: 0x20
+      description: Virtual function table for the CFieldEffectBloomFactory class.
+    - name: C_FIELD_EFFECT_BLOOM_FACTORY_VFTABLE_FUNCS
+      address:
+        NA: 0x21799F4
+      length:
+        NA: 0x18
+      description: Function pointers of the CFieldEffectBloomFactory class vftable.
+    - name: C_FIELD_EFFECT_BLOOM_VFTABLE
+      address:
+        NA: 0x2179A0C
+      length:
+        NA: 0x64
+      description: Virtual function table for the CFieldEffectBloom class.
+    - name: C_FIELD_EFFECT_BLOOM_VFTABLE_FUNCS
+      address:
+        NA: 0x2179A14
+      length:
+        NA: 0x5C
+      description: Function pointers of the CFieldEffectBloom class vftable.
     - name: C_FIELD_EFFECT_DARK_CLOUD_C_ANIMATOR
       address:
         NA: 0x2179ABC
@@ -2092,6 +3676,78 @@ overlay0:
       length:
         NA: 0xC
       description: Basic information for the CFieldEffectDarkCloudFactory class. This class is a single-inheritance class.
+    - name: C_FIELD_EFFECT_DARK_CLOUD_C_ANIMATOR_VFTABLE
+      address:
+        NA: 0x2179B04
+      length:
+        NA: 0x14
+      description: "Virtual function table for the CFieldEffectDarkCloud::CAnimator class."
+    - name: C_FIELD_EFFECT_DARK_CLOUD_C_ANIMATOR_VFTABLE_FUNCS
+      address:
+        NA: 0x2179B0C
+      length:
+        NA: 0xC
+      description: "Function pointers of the CFieldEffectDarkCloud::CAnimator class vftable."
+    - name: C_FIELD_EFFECT_DARK_CLOUD_C_REMAINS_ANIMATOR_VFTABLE
+      address:
+        NA: 0x2179B18
+      length:
+        NA: 0x14
+      description: "Virtual function table for the CFieldEffectDarkCloud::CRemainsAnimator class."
+    - name: C_FIELD_EFFECT_DARK_CLOUD_C_REMAINS_ANIMATOR_VFTABLE_FUNCS
+      address:
+        NA: 0x2179B20
+      length:
+        NA: 0xC
+      description: "Function pointers of the CFieldEffectDarkCloud::CRemainsAnimator class vftable."
+    - name: C_FIELD_EFFECT_DARK_CLOUD_C_REMAINS_EMITTER_VFTABLE
+      address:
+        NA: 0x2179B64
+      length:
+        NA: 0x20
+      description: "Virtual function table for the CFieldEffectDarkCloud::CRemainsEmitter class."
+    - name: C_FIELD_EFFECT_DARK_CLOUD_C_REMAINS_EMITTER_VFTABLE_FUNCS
+      address:
+        NA: 0x2179B6C
+      length:
+        NA: 0x18
+      description: "Function pointers of the CFieldEffectDarkCloud::CRemainsEmitter class vftable."
+    - name: C_FIELD_EFFECT_DARK_CLOUD_C_EMITTER_VFTABLE
+      address:
+        NA: 0x2179B84
+      length:
+        NA: 0x20
+      description: "Virtual function table for the CFieldEffectDarkCloud::CEmitter class."
+    - name: C_FIELD_EFFECT_DARK_CLOUD_C_EMITTER_VFTABLE_FUNCS
+      address:
+        NA: 0x2179B8C
+      length:
+        NA: 0x18
+      description: "Function pointers of the CFieldEffectDarkCloud::CEmitter class vftable."
+    - name: C_FIELD_EFFECT_DARK_CLOUD_FACTORY_VFTABLE
+      address:
+        NA: 0x2179BA4
+      length:
+        NA: 0x20
+      description: Virtual function table for the CFieldEffectDarkCloudFactory class.
+    - name: C_FIELD_EFFECT_DARK_CLOUD_FACTORY_VFTABLE_FUNCS
+      address:
+        NA: 0x2179BAC
+      length:
+        NA: 0x18
+      description: Function pointers of the CFieldEffectDarkCloudFactory class vftable.
+    - name: C_FIELD_EFFECT_DARK_CLOUD_VFTABLE
+      address:
+        NA: 0x2179C64
+      length:
+        NA: 0x74
+      description: Virtual function table for the CFieldEffectDarkCloud class.
+    - name: C_FIELD_EFFECT_DARK_CLOUD_VFTABLE_FUNCS
+      address:
+        NA: 0x2179C6C
+      length:
+        NA: 0x6C
+      description: Function pointers of the CFieldEffectDarkCloud class vftable.
     - name: C_FIELD_EFFECT_FIREWORKS_FACTORY
       address:
         NA: 0x2179CD8
@@ -2110,6 +3766,42 @@ overlay0:
       length:
         NA: 0xC
       description: Basic information for the CMeshSprite class. This class is a single-inheritance class.
+    - name: C_MESH_SPRITE_VFTABLE
+      address:
+        NA: 0x2179D0C
+      length:
+        NA: 0x14
+      description: Virtual function table for the CMeshSprite class.
+    - name: C_MESH_SPRITE_VFTABLE_FUNCS
+      address:
+        NA: 0x2179D14
+      length:
+        NA: 0xC
+      description: Function pointers of the CMeshSprite class vftable.
+    - name: C_FIELD_EFFECT_FIREWORKS_FACTORY_VFTABLE
+      address:
+        NA: 0x2179D58
+      length:
+        NA: 0x20
+      description: Virtual function table for the CFieldEffectFireworksFactory class.
+    - name: C_FIELD_EFFECT_FIREWORKS_FACTORY_VFTABLE_FUNCS
+      address:
+        NA: 0x2179D60
+      length:
+        NA: 0x18
+      description: Function pointers of the CFieldEffectFireworksFactory class vftable.
+    - name: C_FIELD_EFFECT_FIREWORKS_VFTABLE
+      address:
+        NA: 0x2179D78
+      length:
+        NA: 0x64
+      description: Virtual function table for the CFieldEffectFireworks class.
+    - name: C_FIELD_EFFECT_FIREWORKS_VFTABLE_FUNCS
+      address:
+        NA: 0x2179D80
+      length:
+        NA: 0x5C
+      description: Function pointers of the CFieldEffectFireworks class vftable.
     - name: C_FIELD_EFFECT_DARK_SHADOW
       address:
         NA: 0x2179DDC
@@ -2122,6 +3814,30 @@ overlay0:
       length:
         NA: 0xC
       description: Basic information for the CFieldEffectDarkShadowFactory class. This class is a single-inheritance class.
+    - name: C_FIELD_EFFECT_DARK_SHADOW_FACTORY_VFTABLE
+      address:
+        NA: 0x2179E10
+      length:
+        NA: 0x20
+      description: Virtual function table for the CFieldEffectDarkShadowFactory class.
+    - name: C_FIELD_EFFECT_DARK_SHADOW_FACTORY_VFTABLE_FUNCS
+      address:
+        NA: 0x2179E18
+      length:
+        NA: 0x18
+      description: Function pointers of the CFieldEffectDarkShadowFactory class vftable.
+    - name: C_FIELD_EFFECT_DARK_SHADOW_VFTABLE
+      address:
+        NA: 0x2179E50
+      length:
+        NA: 0x64
+      description: Virtual function table for the CFieldEffectDarkShadow class.
+    - name: C_FIELD_EFFECT_DARK_SHADOW_VFTABLE_FUNCS
+      address:
+        NA: 0x2179E58
+      length:
+        NA: 0x5C
+      description: Function pointers of the CFieldEffectDarkShadow class vftable.
     - name: T_FIELD_PARTICLE_FORCE_FIELD_C_SIMPLE_SPRITE_NTF
       address:
         NA: 0x2179EB4
@@ -2194,6 +3910,138 @@ overlay0:
       length:
         NA: 0xC
       description: "Basic information for the CFieldEffectDarknessClear::CEmitter class. This class is a single-inheritance class."
+    - name: C_FIELD_EFFECT_DARKNESS_CLEAR_C_FORCE_FIELD_VFTABLE
+      address:
+        NA: 0x2179F3C
+      length:
+        NA: 0x14
+      description: "Virtual function table for the CFieldEffectDarknessClear::CForceField class."
+    - name: C_FIELD_EFFECT_DARKNESS_CLEAR_C_FORCE_FIELD_VFTABLE_FUNCS
+      address:
+        NA: 0x2179F44
+      length:
+        NA: 0xC
+      description: "Function pointers of the CFieldEffectDarknessClear::CForceField class vftable."
+    - name: C_FIELD_EFFECT_DARKNESS_CLEAR2_C_FORCE_FIELD_VFTABLE
+      address:
+        NA: 0x2179F50
+      length:
+        NA: 0x14
+      description: "Virtual function table for the CFieldEffectDarknessClear2::CForceField class."
+    - name: C_FIELD_EFFECT_DARKNESS_CLEAR2_C_FORCE_FIELD_VFTABLE_FUNCS
+      address:
+        NA: 0x2179F58
+      length:
+        NA: 0xC
+      description: "Function pointers of the CFieldEffectDarknessClear2::CForceField class vftable."
+    - name: T_FIELD_PARTICLE_EMITTER_C_SIMPLE_SPRITE_NTF_VFTABLE
+      address:
+        NA: 0x2179F64
+      length:
+        NA: 0x1C
+      description: Virtual function table for the TFieldParticleEmitter<CSimpleSpriteNTF> class.
+    - name: T_FIELD_PARTICLE_EMITTER_C_SIMPLE_SPRITE_NTF_VFTABLE_FUNCS
+      address:
+        NA: 0x2179F6C
+      length:
+        NA: 0x14
+      description: Function pointers of the TFieldParticleEmitter<CSimpleSpriteNTF> class vftable.
+    - name: T_FIELD_PARTICLE_RECT_EMITTER_C_SIMPLE_SPRITE_NTF_VFTABLE
+      address:
+        NA: 0x2179F9C
+      length:
+        NA: 0x1C
+      description: Virtual function table for the TFieldParticleRectEmitter<CSimpleSpriteNTF> class.
+    - name: T_FIELD_PARTICLE_RECT_EMITTER_C_SIMPLE_SPRITE_NTF_VFTABLE_FUNCS
+      address:
+        NA: 0x2179FA4
+      length:
+        NA: 0x14
+      description: Function pointers of the TFieldParticleRectEmitter<CSimpleSpriteNTF> class vftable.
+    - name: C_FIELD_EFFECT_DARKNESS_CLEAR_C_EMITTER_VFTABLE
+      address:
+        NA: 0x2179FD8
+      length:
+        NA: 0x20
+      description: "Virtual function table for the CFieldEffectDarknessClear::CEmitter class."
+    - name: C_FIELD_EFFECT_DARKNESS_CLEAR_C_EMITTER_VFTABLE_FUNCS
+      address:
+        NA: 0x2179FE0
+      length:
+        NA: 0x18
+      description: "Function pointers of the CFieldEffectDarknessClear::CEmitter class vftable."
+    - name: T_FIELD_PARTICLE_SMOKE_RECT_EMITTER_C_SIMPLE_SPRITE_NTF_VFTABLE
+      address:
+        NA: 0x2179FF8
+      length:
+        NA: 0x20
+      description: Virtual function table for the TFieldParticleSmokeRectEmitter<CSimpleSpriteNTF> class.
+    - name: T_FIELD_PARTICLE_SMOKE_RECT_EMITTER_C_SIMPLE_SPRITE_NTF_VFTABLE_FUNCS
+      address:
+        NA: 0x217A000
+      length:
+        NA: 0x18
+      description: Function pointers of the TFieldParticleSmokeRectEmitter<CSimpleSpriteNTF> class vftable.
+    - name: C_FIELD_EFFECT_DARKNESS_CLEAR_FACTORY_VFTABLE
+      address:
+        NA: 0x217A018
+      length:
+        NA: 0x20
+      description: Virtual function table for the CFieldEffectDarknessClearFactory class.
+    - name: C_FIELD_EFFECT_DARKNESS_CLEAR_FACTORY_VFTABLE_FUNCS
+      address:
+        NA: 0x217A020
+      length:
+        NA: 0x18
+      description: Function pointers of the CFieldEffectDarknessClearFactory class vftable.
+    - name: C_FIELD_EFFECT_DARKNESS_CLEAR2_C_EMITTER_VFTABLE
+      address:
+        NA: 0x217A038
+      length:
+        NA: 0x20
+      description: "Virtual function table for the CFieldEffectDarknessClear2::CEmitter class."
+    - name: C_FIELD_EFFECT_DARKNESS_CLEAR2_C_EMITTER_VFTABLE_FUNCS
+      address:
+        NA: 0x217A040
+      length:
+        NA: 0x18
+      description: "Function pointers of the CFieldEffectDarknessClear2::CEmitter class vftable."
+    - name: C_FIELD_EFFECT_DARKNESS_CLEAR_VFTABLE
+      address:
+        NA: 0x217A214
+      length:
+        NA: 0x70
+      description: Virtual function table for the CFieldEffectDarknessClear class.
+    - name: C_FIELD_EFFECT_DARKNESS_CLEAR_VFTABLE_FUNCS
+      address:
+        NA: 0x217A21C
+      length:
+        NA: 0x68
+      description: Function pointers of the CFieldEffectDarknessClear class vftable.
+    - name: T_FIELD_EFFECT_PARTICLE_C_SIMPLE_SPRITE_NTF_VFTABLE
+      address:
+        NA: 0x217A284
+      length:
+        NA: 0x70
+      description: Virtual function table for the TFieldEffectParticle<CSimpleSpriteNTF> class.
+    - name: T_FIELD_EFFECT_PARTICLE_C_SIMPLE_SPRITE_NTF_VFTABLE_FUNCS
+      address:
+        NA: 0x217A28C
+      length:
+        NA: 0x68
+      description: Function pointers of the TFieldEffectParticle<CSimpleSpriteNTF> class vftable.
+    - name: C_FIELD_EFFECT_DARKNESS_CLEAR2_VFTABLE
+      address:
+        NA: 0x217A2F4
+      length:
+        NA: 0x70
+      description: Virtual function table for the CFieldEffectDarknessClear2 class.
+    - name: C_FIELD_EFFECT_DARKNESS_CLEAR2_VFTABLE_FUNCS
+      address:
+        NA: 0x217A2FC
+      length:
+        NA: 0x68
+      description: Function pointers of the CFieldEffectDarknessClear2 class vftable.
     - name: C_FIELD_EFFECT_AIR_BUBBLES_C_BUBBLE_EMITTER
       address:
         NA: 0x217A4B0
@@ -2212,6 +4060,42 @@ overlay0:
       length:
         NA: 0xC
       description: Basic information for the CFieldEffectAirBubbles class. This class is a single-inheritance class.
+    - name: C_FIELD_EFFECT_AIR_BUBBLES_C_BUBBLE_FORCE_FIELD_VFTABLE
+      address:
+        NA: 0x217A4D4
+      length:
+        NA: 0x14
+      description: "Virtual function table for the CFieldEffectAirBubbles::CBubbleForceField class."
+    - name: C_FIELD_EFFECT_AIR_BUBBLES_C_BUBBLE_FORCE_FIELD_VFTABLE_FUNCS
+      address:
+        NA: 0x217A4DC
+      length:
+        NA: 0xC
+      description: "Function pointers of the CFieldEffectAirBubbles::CBubbleForceField class vftable."
+    - name: C_FIELD_EFFECT_AIR_BUBBLES_C_BUBBLE_EMITTER_VFTABLE
+      address:
+        NA: 0x217A504
+      length:
+        NA: 0x1C
+      description: "Virtual function table for the CFieldEffectAirBubbles::CBubbleEmitter class."
+    - name: C_FIELD_EFFECT_AIR_BUBBLES_C_BUBBLE_EMITTER_VFTABLE_FUNCS
+      address:
+        NA: 0x217A50C
+      length:
+        NA: 0x14
+      description: "Function pointers of the CFieldEffectAirBubbles::CBubbleEmitter class vftable."
+    - name: C_FIELD_EFFECT_AIR_BUBBLES_VFTABLE
+      address:
+        NA: 0x217A57C
+      length:
+        NA: 0x70
+      description: Virtual function table for the CFieldEffectAirBubbles class.
+    - name: C_FIELD_EFFECT_AIR_BUBBLES_VFTABLE_FUNCS
+      address:
+        NA: 0x217A584
+      length:
+        NA: 0x68
+      description: Function pointers of the CFieldEffectAirBubbles class vftable.
     - name: C_FIELD_EFFECT_LASER_FACTORY
       address:
         NA: 0x217A5EC
@@ -2224,6 +4108,30 @@ overlay0:
       length:
         NA: 0xC
       description: Basic information for the CFieldEffectLaser class. This class is a single-inheritance class.
+    - name: C_FIELD_EFFECT_LASER_FACTORY_VFTABLE
+      address:
+        NA: 0x217A634
+      length:
+        NA: 0x20
+      description: Virtual function table for the CFieldEffectLaserFactory class.
+    - name: C_FIELD_EFFECT_LASER_FACTORY_VFTABLE_FUNCS
+      address:
+        NA: 0x217A63C
+      length:
+        NA: 0x18
+      description: Function pointers of the CFieldEffectLaserFactory class vftable.
+    - name: C_FIELD_EFFECT_LASER_VFTABLE
+      address:
+        NA: 0x217A654
+      length:
+        NA: 0x64
+      description: Virtual function table for the CFieldEffectLaser class.
+    - name: C_FIELD_EFFECT_LASER_VFTABLE_FUNCS
+      address:
+        NA: 0x217A65C
+      length:
+        NA: 0x5C
+      description: Function pointers of the CFieldEffectLaser class vftable.
     - name: C_FIELD_EFFECT_RISING_PHOTON_FACTORY
       address:
         NA: 0x217A6C4
@@ -2236,6 +4144,30 @@ overlay0:
       length:
         NA: 0xC
       description: Basic information for the CFieldEffectRisingPhoton class. This class is a single-inheritance class.
+    - name: C_FIELD_EFFECT_RISING_PHOTON_FACTORY_VFTABLE
+      address:
+        NA: 0x217A6F8
+      length:
+        NA: 0x20
+      description: Virtual function table for the CFieldEffectRisingPhotonFactory class.
+    - name: C_FIELD_EFFECT_RISING_PHOTON_FACTORY_VFTABLE_FUNCS
+      address:
+        NA: 0x217A700
+      length:
+        NA: 0x18
+      description: Function pointers of the CFieldEffectRisingPhotonFactory class vftable.
+    - name: C_FIELD_EFFECT_RISING_PHOTON_VFTABLE
+      address:
+        NA: 0x217A73C
+      length:
+        NA: 0x64
+      description: Virtual function table for the CFieldEffectRisingPhoton class.
+    - name: C_FIELD_EFFECT_RISING_PHOTON_VFTABLE_FUNCS
+      address:
+        NA: 0x217A744
+      length:
+        NA: 0x5C
+      description: Function pointers of the CFieldEffectRisingPhoton class vftable.
     - name: T_FIELD_EFFECT_SMOKE_C_SIMPLE_SPRITE_NTF
       address:
         NA: 0x217A814
@@ -2266,6 +4198,66 @@ overlay0:
       length:
         NA: 0xC
       description: Basic information for the CFieldEffectVolcanicSteamFactory class. This class is a single-inheritance class.
+    - name: C_FIELD_EFFECT_VOLCANIC_STEAM_C_ANIMATOR_VFTABLE
+      address:
+        NA: 0x217A850
+      length:
+        NA: 0x14
+      description: "Virtual function table for the CFieldEffectVolcanicSteam::CAnimator class."
+    - name: C_FIELD_EFFECT_VOLCANIC_STEAM_C_ANIMATOR_VFTABLE_FUNCS
+      address:
+        NA: 0x217A858
+      length:
+        NA: 0xC
+      description: "Function pointers of the CFieldEffectVolcanicSteam::CAnimator class vftable."
+    - name: C_FIELD_EFFECT_VOLCANIC_STEAM_C_ANIMATOR_C_EFFECT_DRAW_OBJECT_VFTABLE
+      address:
+        NA: 0x217A864
+      length:
+        NA: 0x14
+      description: "Virtual function table for the CFieldEffectVolcanicSteam::CAnimator::CEffectDrawObject class."
+    - name: C_FIELD_EFFECT_VOLCANIC_STEAM_C_ANIMATOR_C_EFFECT_DRAW_OBJECT_VFTABLE_FUNCS
+      address:
+        NA: 0x217A86C
+      length:
+        NA: 0xC
+      description: "Function pointers of the CFieldEffectVolcanicSteam::CAnimator::CEffectDrawObject class vftable."
+    - name: C_FIELD_EFFECT_VOLCANIC_STEAM_FACTORY_VFTABLE
+      address:
+        NA: 0x217A894
+      length:
+        NA: 0x20
+      description: Virtual function table for the CFieldEffectVolcanicSteamFactory class.
+    - name: C_FIELD_EFFECT_VOLCANIC_STEAM_FACTORY_VFTABLE_FUNCS
+      address:
+        NA: 0x217A89C
+      length:
+        NA: 0x18
+      description: Function pointers of the CFieldEffectVolcanicSteamFactory class vftable.
+    - name: T_FIELD_EFFECT_SMOKE_C_SIMPLE_SPRITE_NTF_VFTABLE
+      address:
+        NA: 0x217A964
+      length:
+        NA: 0x70
+      description: Virtual function table for the TFieldEffectSmoke<CSimpleSpriteNTF> class.
+    - name: T_FIELD_EFFECT_SMOKE_C_SIMPLE_SPRITE_NTF_VFTABLE_FUNCS
+      address:
+        NA: 0x217A96C
+      length:
+        NA: 0x68
+      description: Function pointers of the TFieldEffectSmoke<CSimpleSpriteNTF> class vftable.
+    - name: C_FIELD_EFFECT_VOLCANIC_STEAM_VFTABLE
+      address:
+        NA: 0x217A9D4
+      length:
+        NA: 0x70
+      description: Virtual function table for the CFieldEffectVolcanicSteam class.
+    - name: C_FIELD_EFFECT_VOLCANIC_STEAM_VFTABLE_FUNCS
+      address:
+        NA: 0x217A9DC
+      length:
+        NA: 0x68
+      description: Function pointers of the CFieldEffectVolcanicSteam class vftable.
     - name: C_FIELD_EFFECT_FUWANTE_WIND_C_EMITTER
       address:
         NA: 0x217AA90
@@ -2290,12 +4282,72 @@ overlay0:
       length:
         NA: 0xC
       description: "Basic information for the CFieldEffectFuwanteWind::CAnimator class. This class is a single-inheritance class."
+    - name: C_FIELD_EFFECT_FUWANTE_WIND_C_ANIMATOR_VFTABLE
+      address:
+        NA: 0x217AAC0
+      length:
+        NA: 0x14
+      description: "Virtual function table for the CFieldEffectFuwanteWind::CAnimator class."
+    - name: C_FIELD_EFFECT_FUWANTE_WIND_C_ANIMATOR_VFTABLE_FUNCS
+      address:
+        NA: 0x217AAC8
+      length:
+        NA: 0xC
+      description: "Function pointers of the CFieldEffectFuwanteWind::CAnimator class vftable."
+    - name: C_FIELD_EFFECT_FUWANTE_WIND_FACTORY_VFTABLE
+      address:
+        NA: 0x217AAF0
+      length:
+        NA: 0x20
+      description: Virtual function table for the CFieldEffectFuwanteWindFactory class.
+    - name: C_FIELD_EFFECT_FUWANTE_WIND_FACTORY_VFTABLE_FUNCS
+      address:
+        NA: 0x217AAF8
+      length:
+        NA: 0x18
+      description: Function pointers of the CFieldEffectFuwanteWindFactory class vftable.
+    - name: C_FIELD_EFFECT_FUWANTE_WIND_C_EMITTER_VFTABLE
+      address:
+        NA: 0x217AB10
+      length:
+        NA: 0x20
+      description: "Virtual function table for the CFieldEffectFuwanteWind::CEmitter class."
+    - name: C_FIELD_EFFECT_FUWANTE_WIND_C_EMITTER_VFTABLE_FUNCS
+      address:
+        NA: 0x217AB18
+      length:
+        NA: 0x18
+      description: "Function pointers of the CFieldEffectFuwanteWind::CEmitter class vftable."
+    - name: C_FIELD_EFFECT_FUWANTE_WIND_VFTABLE
+      address:
+        NA: 0x217ABA4
+      length:
+        NA: 0x70
+      description: Virtual function table for the CFieldEffectFuwanteWind class.
+    - name: C_FIELD_EFFECT_FUWANTE_WIND_VFTABLE_FUNCS
+      address:
+        NA: 0x217ABAC
+      length:
+        NA: 0x68
+      description: Function pointers of the CFieldEffectFuwanteWind class vftable.
     - name: C_FIELD_EFFECT_MANPU_DARKRIE
       address:
         NA: 0x217AC14
       length:
         NA: 0xC
       description: Basic information for the CFieldEffectManpuDarkrie class. This class is a single-inheritance class.
+    - name: C_FIELD_EFFECT_MANPU_DARKRIE_VFTABLE
+      address:
+        NA: 0x217AC3C
+      length:
+        NA: 0x70
+      description: Virtual function table for the CFieldEffectManpuDarkrie class.
+    - name: C_FIELD_EFFECT_MANPU_DARKRIE_VFTABLE_FUNCS
+      address:
+        NA: 0x217AC44
+      length:
+        NA: 0x68
+      description: Function pointers of the CFieldEffectManpuDarkrie class vftable.
     - name: C_FIELD_EFFECT_GLITTER
       address:
         NA: 0x217ACAC
@@ -2308,6 +4360,30 @@ overlay0:
       length:
         NA: 0xC
       description: Basic information for the CFieldEffectGlitterFactory class. This class is a single-inheritance class.
+    - name: C_FIELD_EFFECT_GLITTER_FACTORY_VFTABLE
+      address:
+        NA: 0x217ACFC
+      length:
+        NA: 0x20
+      description: Virtual function table for the CFieldEffectGlitterFactory class.
+    - name: C_FIELD_EFFECT_GLITTER_FACTORY_VFTABLE_FUNCS
+      address:
+        NA: 0x217AD04
+      length:
+        NA: 0x18
+      description: Function pointers of the CFieldEffectGlitterFactory class vftable.
+    - name: C_FIELD_EFFECT_GLITTER_VFTABLE
+      address:
+        NA: 0x217AD1C
+      length:
+        NA: 0x64
+      description: Virtual function table for the CFieldEffectGlitter class.
+    - name: C_FIELD_EFFECT_GLITTER_VFTABLE_FUNCS
+      address:
+        NA: 0x217AD24
+      length:
+        NA: 0x5C
+      description: Function pointers of the CFieldEffectGlitter class vftable.
     - name: C_FIELD_EFFECT_BLACK_STONE_AURA
       address:
         NA: 0x217ADD8
@@ -2320,6 +4396,30 @@ overlay0:
       length:
         NA: 0xC
       description: Basic information for the CFieldEffectBlackStoneAuraFactory class. This class is a single-inheritance class.
+    - name: C_FIELD_EFFECT_BLACK_STONE_AURA_FACTORY_VFTABLE
+      address:
+        NA: 0x217AE10
+      length:
+        NA: 0x20
+      description: Virtual function table for the CFieldEffectBlackStoneAuraFactory class.
+    - name: C_FIELD_EFFECT_BLACK_STONE_AURA_FACTORY_VFTABLE_FUNCS
+      address:
+        NA: 0x217AE18
+      length:
+        NA: 0x18
+      description: Function pointers of the CFieldEffectBlackStoneAuraFactory class vftable.
+    - name: C_FIELD_EFFECT_BLACK_STONE_AURA_VFTABLE
+      address:
+        NA: 0x217AE54
+      length:
+        NA: 0x64
+      description: Virtual function table for the CFieldEffectBlackStoneAura class.
+    - name: C_FIELD_EFFECT_BLACK_STONE_AURA_VFTABLE_FUNCS
+      address:
+        NA: 0x217AE5C
+      length:
+        NA: 0x5C
+      description: Function pointers of the CFieldEffectBlackStoneAura class vftable.
     - name: C_FIELD_EFFECT_SPACE_CREVICE_C_EFFECT_DRAW_OBJECT
       address:
         NA: 0x217AF04
@@ -2344,3 +4444,51 @@ overlay0:
       length:
         NA: 0xC
       description: Basic information for the CFEFRasterTransform class. This class is a single-inheritance class.
+    - name: C_FIELD_EFFECT_SPACE_CREVICE_C_EFFECT_DRAW_OBJECT_VFTABLE
+      address:
+        NA: 0x217AF34
+      length:
+        NA: 0x14
+      description: "Virtual function table for the CFieldEffectSpaceCrevice::CEffectDrawObject class."
+    - name: C_FIELD_EFFECT_SPACE_CREVICE_C_EFFECT_DRAW_OBJECT_VFTABLE_FUNCS
+      address:
+        NA: 0x217AF3C
+      length:
+        NA: 0xC
+      description: "Function pointers of the CFieldEffectSpaceCrevice::CEffectDrawObject class vftable."
+    - name: C_FEF_RASTER_TRANSFORM_VFTABLE
+      address:
+        NA: 0x217AF48
+      length:
+        NA: 0x14
+      description: Virtual function table for the CFEFRasterTransform class.
+    - name: C_FEF_RASTER_TRANSFORM_VFTABLE_FUNCS
+      address:
+        NA: 0x217AF50
+      length:
+        NA: 0xC
+      description: Function pointers of the CFEFRasterTransform class vftable.
+    - name: C_FIELD_EFFECT_SPACE_CREVICE_FACTORY_VFTABLE
+      address:
+        NA: 0x217AF90
+      length:
+        NA: 0x20
+      description: Virtual function table for the CFieldEffectSpaceCreviceFactory class.
+    - name: C_FIELD_EFFECT_SPACE_CREVICE_FACTORY_VFTABLE_FUNCS
+      address:
+        NA: 0x217AF98
+      length:
+        NA: 0x18
+      description: Function pointers of the CFieldEffectSpaceCreviceFactory class vftable.
+    - name: C_FIELD_EFFECT_SPACE_CREVICE_VFTABLE
+      address:
+        NA: 0x217B004
+      length:
+        NA: 0x64
+      description: Virtual function table for the CFieldEffectSpaceCrevice class.
+    - name: C_FIELD_EFFECT_SPACE_CREVICE_VFTABLE_FUNCS
+      address:
+        NA: 0x217B00C
+      length:
+        NA: 0x5C
+      description: Function pointers of the CFieldEffectSpaceCrevice class vftable.

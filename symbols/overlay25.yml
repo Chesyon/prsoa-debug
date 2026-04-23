@@ -47,3 +47,15 @@ overlay25:
       length:
         NA: 0xC
       description: Basic information for the CStaffrollScene class. This class is a single-inheritance class.
+    - name: C_STAFFROLL_SCENE_VFTABLE
+      address:
+        NA: 0x211FC68
+      length:
+        NA: 0x34
+      description: Virtual function table for the CStaffrollScene class.
+    - name: C_STAFFROLL_SCENE_VFTABLE_FUNCS
+      address:
+        NA: 0x211FC70
+      length:
+        NA: 0x2C
+      description: Function pointers of the CStaffrollScene class vftable.

@@ -48,3 +48,15 @@ overlay9:
       length:
         NA: 0xC
       description: Basic information for the CFlyingScene class. This class is a single-inheritance class.
+    - name: C_FLYING_SCENE_VFTABLE
+      address:
+        NA: 0x211DB1C
+      length:
+        NA: 0x34
+      description: Virtual function table for the CFlyingScene class.
+    - name: C_FLYING_SCENE_VFTABLE_FUNCS
+      address:
+        NA: 0x211DB24
+      length:
+        NA: 0x2C
+      description: Function pointers of the CFlyingScene class vftable.

@@ -43,3 +43,15 @@ overlay29:
       length:
         NA: 0xC
       description: Basic information for the CCardAccessErrorScene class. This class is a single-inheritance class.
+    - name: C_CARD_ACCESS_ERROR_SCENE_VFTABLE
+      address:
+        NA: 0x211CD04
+      length:
+        NA: 0x34
+      description: Virtual function table for the CCardAccessErrorScene class.
+    - name: C_CARD_ACCESS_ERROR_SCENE_VFTABLE_FUNCS
+      address:
+        NA: 0x211CD0C
+      length:
+        NA: 0x2C
+      description: Function pointers of the CCardAccessErrorScene class vftable.

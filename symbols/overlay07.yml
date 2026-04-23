@@ -77,3 +77,15 @@ overlay7:
       length:
         NA: 0xC
       description: Basic information for the CReleaseScene class. This class is a single-inheritance class.
+    - name: C_RELEASE_SCENE_VFTABLE
+      address:
+        NA: 0x211F65C
+      length:
+        NA: 0x34
+      description: Virtual function table for the CReleaseScene class.
+    - name: C_RELEASE_SCENE_VFTABLE_FUNCS
+      address:
+        NA: 0x211F664
+      length:
+        NA: 0x2C
+      description: Function pointers of the CReleaseScene class vftable.

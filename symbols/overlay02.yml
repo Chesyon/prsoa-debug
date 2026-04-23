@@ -96,3 +96,15 @@ overlay2:
       length:
         NA: 0xC
       description: Basic information for the CBattleToFieldScene class. This class is a single-inheritance class.
+    - name: C_BATTLE_TO_FIELD_SCENE_VFTABLE
+      address:
+        NA: 0x211D184
+      length:
+        NA: 0x34
+      description: Virtual function table for the CBattleToFieldScene class.
+    - name: C_BATTLE_TO_FIELD_SCENE_VFTABLE_FUNCS
+      address:
+        NA: 0x211D18C
+      length:
+        NA: 0x2C
+      description: Function pointers of the CBattleToFieldScene class vftable.

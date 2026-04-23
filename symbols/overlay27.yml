@@ -112,6 +112,18 @@ overlay27:
       length:
         NA: 0xC
       description: Basic information for the CQuestListScene class. This class is a single-inheritance class.
+    - name: C_QUEST_LIST_SCENE_VFTABLE
+      address:
+        NA: 0x2121160
+      length:
+        NA: 0x34
+      description: Virtual function table for the CQuestListScene class.
+    - name: C_QUEST_LIST_SCENE_VFTABLE_FUNCS
+      address:
+        NA: 0x2121168
+      length:
+        NA: 0x2C
+      description: Function pointers of the CQuestListScene class vftable.
     - name: C_QUEST_LIST_SCREEN_BASE
       address:
         NA: 0x2121194
@@ -130,19 +142,91 @@ overlay27:
       length:
         NA: 0x8
       description: Basic information for the IQLPushButtonListener class. This class is a base class.
+    - name: I_QL_PUSH_BUTTON_LISTENER_VFTABLE
+      address:
+        NA: 0x21211AC
+      length:
+        NA: 0x10
+      description: Virtual function table for the IQLPushButtonListener class.
+    - name: I_QL_PUSH_BUTTON_LISTENER_VFTABLE_FUNCS
+      address:
+        NA: 0x21211B4
+      length:
+        NA: 0x8
+      description: Function pointers of the IQLPushButtonListener class vftable.
+    - name: I_QL_LIST_BOX_EVENT_LISTENER_VFTABLE
+      address:
+        NA: 0x21211D0
+      length:
+        NA: 0x14
+      description: Virtual function table for the IQLListBoxEventListener class.
+    - name: I_QL_LIST_BOX_EVENT_LISTENER_VFTABLE_FUNCS
+      address:
+        NA: 0x21211D8
+      length:
+        NA: 0xC
+      description: Function pointers of the IQLListBoxEventListener class vftable.
     - name: C_QUEST_LIST_SCREEN
       address:
         NA: 0x2121230
       description: Basic information for the CQuestListScreen class. This class is a virtual/multiple inheritance class.
+    - name: C_QUEST_LIST_SCREEN_BASE_VFTABLE
+      address:
+        NA: 0x2121258
+      length:
+        NA: 0x30
+      description: Virtual function table for the CQuestListScreenBase class.
+    - name: C_QUEST_LIST_SCREEN_BASE_VFTABLE_FUNCS
+      address:
+        NA: 0x2121260
+      length:
+        NA: 0x28
+      description: Function pointers of the CQuestListScreenBase class vftable.
+    - name: C_QUEST_LIST_SCREEN_VFTABLE
+      address:
+        NA: 0x2121288
+      length:
+        NA: 0x44
+      description: Virtual function table for the CQuestListScreen class.
+    - name: C_QUEST_LIST_SCREEN_VFTABLE_FUNCS
+      address:
+        NA: 0x2121290
+      length:
+        NA: 0x3C
+      description: Function pointers of the CQuestListScreen class vftable.
     - name: C_QL_LIST_BOX
       address:
         NA: 0x2121384
       length:
         NA: 0x8
       description: Basic information for the CQLListBox class. This class is a base class.
+    - name: C_QL_LIST_BOX_VFTABLE
+      address:
+        NA: 0x212139C
+      length:
+        NA: 0x10
+      description: Virtual function table for the CQLListBox class.
+    - name: C_QL_LIST_BOX_VFTABLE_FUNCS
+      address:
+        NA: 0x21213A4
+      length:
+        NA: 0x8
+      description: Function pointers of the CQLListBox class vftable.
     - name: C_QUEST_LIST_MAP_SCREEN
       address:
         NA: 0x2121624
       length:
         NA: 0xC
       description: Basic information for the CQuestListMapScreen class. This class is a single-inheritance class.
+    - name: C_QUEST_LIST_MAP_SCREEN_VFTABLE
+      address:
+        NA: 0x2121648
+      length:
+        NA: 0x30
+      description: Virtual function table for the CQuestListMapScreen class.
+    - name: C_QUEST_LIST_MAP_SCREEN_VFTABLE_FUNCS
+      address:
+        NA: 0x2121650
+      length:
+        NA: 0x28
+      description: Function pointers of the CQuestListMapScreen class vftable.

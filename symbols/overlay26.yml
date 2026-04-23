@@ -47,3 +47,15 @@ overlay26:
       length:
         NA: 0xC
       description: Basic information for the CSuitePictureScene class. This class is a single-inheritance class.
+    - name: C_SUITE_PICTURE_SCENE_VFTABLE
+      address:
+        NA: 0x211DAC0
+      length:
+        NA: 0x34
+      description: Virtual function table for the CSuitePictureScene class.
+    - name: C_SUITE_PICTURE_SCENE_VFTABLE_FUNCS
+      address:
+        NA: 0x211DAC8
+      length:
+        NA: 0x2C
+      description: Function pointers of the CSuitePictureScene class vftable.

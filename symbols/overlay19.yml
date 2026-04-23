@@ -40,3 +40,15 @@ overlay19:
       length:
         NA: 0xC
       description: Basic information for the CSexSelectScene class. This class is a single-inheritance class.
+    - name: C_SEX_SELECT_SCENE_VFTABLE
+      address:
+        NA: 0x211E3E0
+      length:
+        NA: 0x34
+      description: Virtual function table for the CSexSelectScene class.
+    - name: C_SEX_SELECT_SCENE_VFTABLE_FUNCS
+      address:
+        NA: 0x211E3E8
+      length:
+        NA: 0x2C
+      description: Function pointers of the CSexSelectScene class vftable.

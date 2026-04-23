@@ -169,7 +169,7 @@ overlay11:
       address:
         NA: 0x213E010
       description: |-
-        Veneer to Socket(); in arm9. 
+        Veneer to Socket(); in arm9.
         
         No params.
     - name: CloseVeneer
@@ -486,15 +486,51 @@ overlay11:
       length:
         NA: 0xC
       description: Basic information for the CRangerNetScene class. This class is a single-inheritance class.
+    - name: C_RANGER_NET_SCENE_VFTABLE
+      address:
+        NA: 0x21660E0
+      length:
+        NA: 0x34
+      description: Virtual function table for the CRangerNetScene class.
+    - name: C_RANGER_NET_SCENE_VFTABLE_FUNCS
+      address:
+        NA: 0x21660E8
+      length:
+        NA: 0x2C
+      description: Function pointers of the CRangerNetScene class vftable.
     - name: C_RANGER_NET_AGB_SCENE
       address:
         NA: 0x216619C
       length:
         NA: 0xC
       description: Basic information for the CRangerNetAGBScene class. This class is a single-inheritance class.
+    - name: C_RANGER_NET_AGB_SCENE_VFTABLE
+      address:
+        NA: 0x21661C0
+      length:
+        NA: 0x34
+      description: Virtual function table for the CRangerNetAGBScene class.
+    - name: C_RANGER_NET_AGB_SCENE_VFTABLE_FUNCS
+      address:
+        NA: 0x21661C8
+      length:
+        NA: 0x2C
+      description: Function pointers of the CRangerNetAGBScene class vftable.
     - name: C_COMPANY_LOGO_SCENE
       address:
         NA: 0x216667C
       length:
         NA: 0xC
       description: Basic information for the CCompanyLogoScene class. This class is a single-inheritance class.
+    - name: C_COMPANY_LOGO_SCENE_VFTABLE
+      address:
+        NA: 0x216669C
+      length:
+        NA: 0x34
+      description: Virtual function table for the CCompanyLogoScene class.
+    - name: C_COMPANY_LOGO_SCENE_VFTABLE_FUNCS
+      address:
+        NA: 0x21666A4
+      length:
+        NA: 0x2C
+      description: Function pointers of the CCompanyLogoScene class vftable.

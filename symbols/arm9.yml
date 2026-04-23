@@ -93,7 +93,7 @@ arm9:
       address:
         NA: 0x2001C04
       description: |-
-        Seems to initialize what we believe to be the struct that stores player inputs. 
+        Seems to initialize what we believe to be the struct that stores player inputs.
         
         r0: controller_inputs pointer
     - name: InitTouchScreenWrapper
@@ -138,11 +138,11 @@ arm9:
         Initializes a file_archive_wrapper struct.
         
         r0: file_archive_wrapper pointer
-        r1: undefined4 
+        r1: undefined4
         r2: char pointer
-        r3: int32_t 
-        stack[0]: undefined4 
-        stack[1]: int32_t 
+        r3: int32_t
+        stack[0]: undefined4
+        stack[1]: int32_t
         stack[2]: int32_t
     - name: InitFileWrapper
       address:
@@ -152,9 +152,9 @@ arm9:
         
         r0: file_wrapper pointer
         r1: file name
-        r2: int32_t 
-        r3: int32_t  
-        stack[0]: int32_t 
+        r2: int32_t
+        r3: int32_t
+        stack[0]: int32_t
         stack[1]: int32_t
     - name: ConvertFilePathToId
       address:
@@ -256,7 +256,7 @@ arm9:
         Closes a textbox.
         
         r0: textbox_data pointer
-        r1: int32_t 
+        r1: int32_t
         r2: int32_t
     - name: IsPlayerPressingTextbox
       address:
@@ -326,8 +326,8 @@ arm9:
         r0: textbox_data pointer
         r1: script kind to pull message id from
         r2: message id
-        r3: undefined4 
-        stack[0]: undefined4 
+        r3: undefined4
+        stack[0]: undefined4
         stack[1]: undefined4
     - name: FillSystemMsgWrapperAndId
       address:
@@ -352,8 +352,8 @@ arm9:
         
         r0: textbox_data pointer
         r1: message id
-        r2: int32_t 
-        r3: int32_t 
+        r2: int32_t
+        r3: int32_t
         stack[0]: undefined4
     - name: FillAreaMsgWrapperAndId
       address:
@@ -378,8 +378,8 @@ arm9:
         
         r0: textbox_data pointer
         r1: message id
-        r2: int32_t 
-        r3: int32_t 
+        r2: int32_t
+        r3: int32_t
         stack[0]: undefined4
     - name: FillChapterMsgWrapperAndId
       address:
@@ -404,8 +404,8 @@ arm9:
         
         r0: textbox_data pointer
         r1: message id
-        r2: int32_t 
-        r3: int32_t 
+        r2: int32_t
+        r3: int32_t
         stack[0]: undefined4
     - name: FillQuestMsgWrapperAndId
       address:
@@ -430,8 +430,8 @@ arm9:
         
         r0: textbox_data pointer
         r1: message id
-        r2: int32_t 
-        r3: int32_t 
+        r2: int32_t
+        r3: int32_t
         stack[0]: undefined4
     - name: FillBattleMsgWrapperAndId
       address:
@@ -456,8 +456,8 @@ arm9:
         
         r0: textbox_data pointer
         r1: message id
-        r2: int32_t 
-        r3: int32_t 
+        r2: int32_t
+        r3: int32_t
         stack[0]: undefined4
     - name: TryCloseTextbox
       address:
@@ -471,7 +471,7 @@ arm9:
       address:
         NA: 0x200B6D4
       description: |-
-        Returns the result from the most recent yes_no_menu. 
+        Returns the result from the most recent yes_no_menu.
         
         r0: textbox_data pointer
     - name: ret_0200bbc0
@@ -520,7 +520,7 @@ arm9:
       address:
         NA: 0x200E330
       description: |-
-        Seems to initialize a screen_fade struct. 
+        Seems to initialize a screen_fade struct.
         Is currently only confirmed to handle Iris Transitions.
         
         r0: screen_fade pointer
@@ -542,7 +542,7 @@ arm9:
         Seems to be responsible for initializing the stripes table for an Iris Transition.
         
         r0: screen_fade pointer
-        r1: int32_t 
+        r1: int32_t
         r2: int32_t
     - name: ScreenApplyIrisTransitionRadius
       address:
@@ -551,7 +551,7 @@ arm9:
         Called repeatedly to adjust the radius of the Iris during an Iris Transition.
         
         r0: screen_fade pointer
-        r1: int32_t 
+        r1: int32_t
         r2: int32_t
     - name: MaybeGetIrisCurrentWidth
       address:
@@ -641,7 +641,7 @@ arm9:
       address:
         NA: 0x201094C
       description: |-
-        Assigns field 0x0 of the battle_combatants struct to the pointer to some other struct. 
+        Assigns field 0x0 of the battle_combatants struct to the pointer to some other struct.
         
         r0: battle_combatants pointer
         r1: int32_t pointer
@@ -689,7 +689,7 @@ arm9:
       address:
         NA: 0x2010988
       description: |-
-        Stores an index determining how much the partner assist gauge fills in the battle_combatants struct. 
+        Stores an index determining how much the partner assist gauge fills in the battle_combatants struct.
         
         r0: battle_combatants pointer
         r1: int32_t
@@ -700,7 +700,7 @@ arm9:
         Adds a recruited pokemon to the battle_combatants struct.
         
         r0: battle_combatants pointer
-        r1: form_id 
+        r1: form_id
         r2: party_slot_status
     - name: BattleTryAddNewEnemyForm
       address:
@@ -709,7 +709,7 @@ arm9:
         Attempts to add an enemy form to the battle_combatants struct.
         
         r0: battle_combatants pointer
-        r1: enemy form_id 
+        r1: enemy form_id
         r2: unknown uint32_t
     - name: BattleSetArenaGraphicId
       address:
@@ -762,7 +762,7 @@ arm9:
       address:
         NA: 0x2010AC4
       description: |-
-        Stores whether or not the player can view the party for poke-assists during the battle in the battle_combatants struct. 
+        Stores whether or not the player can view the party for poke-assists during the battle in the battle_combatants struct.
         
         r0: battle_combatants pointer
         r1: 1 to allow viewing the party, 0 to disable.
@@ -770,7 +770,7 @@ arm9:
       address:
         NA: 0x2010AD8
       description: |-
-        Stores whether or not the player can flee during the battle in the battle_combatants struct. 
+        Stores whether or not the player can flee during the battle in the battle_combatants struct.
         
         r0: battle_combatants pointer
         r1: 1 to allow fleeing, 0 otherwise.
@@ -778,7 +778,7 @@ arm9:
       address:
         NA: 0x2010AEC
       description: |-
-        Stores whether or not a boss fight HP bar should show up during the battle in the battle_combatants struct. 
+        Stores whether or not a boss fight HP bar should show up during the battle in the battle_combatants struct.
         May have other effects pertaining to boss fight mechanics.
         
         r0: battle_combatants pointer
@@ -1026,7 +1026,7 @@ arm9:
       address:
         NA: 0x201128C
       description: |-
-        Seems to Initialize RANGER_NET_MISSION_COMPLETION_BITS to zero. 
+        Seems to Initialize RANGER_NET_MISSION_COMPLETION_BITS to zero.
         
         r0: pointer to RANGER_NET_MISSION_COMPLETION_BITS
     - name: SetRangerNetMissionCompletionBit
@@ -1043,7 +1043,7 @@ arm9:
       description: |-
         Checks if a bit in RANGER_NET_MISSION_COMPLETION_BITS is enabled.
         
-        r0: undefined4 
+        r0: undefined4
         r1: bit index
     - name: ZeroQuestBody
       address:
@@ -1239,7 +1239,7 @@ arm9:
       description: |-
         Retrieves a pokemon_data pointer from a specified slot of the current party.
         
-        r0: ranger_data ptr 
+        r0: ranger_data ptr
         r1: slot index
         return: pokemon_data pointer
     - name: GetPartySize
@@ -1276,7 +1276,7 @@ arm9:
         Enables the least significant bit of a trigger nibble. In-game, this is true if the trigger could exist on the map.
         
         r0: ranger_data ptr
-        r1: nibble_index 
+        r1: nibble_index
         r2: room_id
     - name: UnlockPokemonSpawnNibble
       address:
@@ -1285,7 +1285,7 @@ arm9:
         Checks if a pokemon nibble is 3 or more. In-game, this allows the pokemon to spawn.
         
         r0: ranger_data ptr
-        r1: nibble_index 
+        r1: nibble_index
         r2: room_id
     - name: EnablePokemonSpawnNibble
       address:
@@ -1294,7 +1294,7 @@ arm9:
         Enables the least significant bit of a pokemon nibble. In-game, this is true if the pokemon could exist on the map.
         
         r0: ranger_data ptr
-        r1: nibble_index 
+        r1: nibble_index
         r2: room_id
     - name: IsNpcSpawnNibbleUnlocked
       address:
@@ -1312,7 +1312,7 @@ arm9:
         Sets an NPC nibble to 3. In-game, this allows the NPC to spawn.
         
         r0: ranger_data ptr
-        r1: nibble_index 
+        r1: nibble_index
         r2: room_id
     - name: EnableNpcSpawnNibble
       address:
@@ -1343,7 +1343,7 @@ arm9:
       address:
         NA: 0x2016138
       description: |-
-        Counts the number of valid pokemon in the specified party. 
+        Counts the number of valid pokemon in the specified party.
         If an invalid party index (less than zero or greater than 2) is input, the current party will be chosen.
         
         r0: ranger_data_old pointer
@@ -1418,7 +1418,7 @@ arm9:
       address:
         NA: 0x2016C14
       description: |-
-        Seems to retrieve the current level of a styler_upgrade slot.  
+        Seems to retrieve the current level of a styler_upgrade slot.
         
         r0: ranger_data pointer
         r1: styler upgrade index
@@ -1525,7 +1525,7 @@ arm9:
         Seems to set the partner_poke_assists record, but only if larger? More research is needed.
         
         r0: ranger_data pointer
-        r1: partner index 
+        r1: partner index
         r2: value to assign
     - name: IncrementPartnerPokeAssistsBySpecies
       address:
@@ -1651,8 +1651,8 @@ arm9:
         Writes hour, minute, and second values to the current play_time struct.
         
         r0: ranger_data_old pointer
-        r1: hours 
-        r2: minutes 
+        r1: hours
+        r2: minutes
         r3: seconds
     - name: InitGroupMsgWrapperTable
       address:
@@ -1710,7 +1710,7 @@ arm9:
         NA: 0x2018790
       description: |-
         Fills in the msg_wrapper for npc names in a group_msg_wrapper_table struct.
-        While referred to internally as "npc_names", The message file this comes from actually 
+        While referred to internally as "npc_names", The message file this comes from actually
         seems to hold strings for ownership, such as "The wild []", "Kincaid's []", etc.
         
         r0: group_msg_wrapper_table pointer
@@ -1739,7 +1739,7 @@ arm9:
       address:
         NA: 0x2018B10
       description: |-
-        Retrieves a Pokemon name string from group_msg_wrapper_table by index.  
+        Retrieves a Pokemon name string from group_msg_wrapper_table by index.
         
         r0: group_msg_wrapper_table pointer
         r1: string index
@@ -1939,7 +1939,7 @@ arm9:
       address:
         NA: 0x202C86C
       description: |-
-        SysCall Function for PrintTextbox. 
+        SysCall Function for PrintTextbox.
         Parameter 4 is always zero.
         
         r0: script stack pointer, interpreted as params.
@@ -2090,7 +2090,7 @@ arm9:
       address:
         NA: 0x202F23C
       description: |-
-        Seems to assign a specified bgm id to a static battle_combatants structure in memory. 
+        Seems to assign a specified bgm id to a static battle_combatants structure in memory.
         Is a SysCall Function.
         
         r0: script stack pointer, interpreted as params.
@@ -2397,7 +2397,7 @@ arm9:
       address:
         NA: 0x2031474
       description: |-
-        SysCall Function that calls TryAcceptQuest, ZeroQuestVariables, then a few audio/visual/text functions. 
+        SysCall Function that calls TryAcceptQuest, ZeroQuestVariables, then a few audio/visual/text functions.
         
         r0: script stack pointer, interpreted as params.
     - name: SysCallTryClearQuest
@@ -2699,7 +2699,7 @@ arm9:
       address:
         NA: 0x2033B50
       description: |-
-        SysCall Function that increments the pokemon_rides_record field of RANGER_DATA->ranger_records. 
+        SysCall Function that increments the pokemon_rides_record field of RANGER_DATA->ranger_records.
         
         No params.
     - name: SysCallGetGameSavesRecord
@@ -2737,11 +2737,11 @@ arm9:
       address:
         NA: 0x2033D58
       description: |-
-        Assigns a script subroutine to slot 1 of a script_data struct. 
+        Assigns a script subroutine to slot 1 of a script_data struct.
         
         r0: script_data pointer
         r1: script name pointer
-        r2: undefined4 
+        r2: undefined4
         r3: undefined4
     - name: SetScriptSubroutine2
       address:
@@ -2751,13 +2751,13 @@ arm9:
         
         r0: script_data pointer
         r1: script name pointer
-        r2: undefined4 
+        r2: undefined4
         r3: undefined4
     - name: ZeroInitScriptData
       address:
         NA: 0x2033E50
       description: |-
-        Seems to zero initialize a script_data struct. 
+        Seems to zero initialize a script_data struct.
         
         r0: script_data pointer
     - name: InitScriptData
@@ -2778,7 +2778,7 @@ arm9:
       address:
         NA: 0x2033F04
       description: |-
-        Seems to initialize a script_manager struct from the ground up. 
+        Seems to initialize a script_manager struct from the ground up.
         
         r0: script_manager pointer
         r1: undefined4 pointer
@@ -2786,7 +2786,7 @@ arm9:
       address:
         NA: 0x2033F90
       description: |-
-        Seems to initialize a system script by index to the system script_data slot. 
+        Seems to initialize a system script by index to the system script_data slot.
         
         r0: script_manager pointer
         r1: system script index
@@ -2797,8 +2797,8 @@ arm9:
         Seems to initialize an area script by index to the area script_data slot.
         
         r0: script_manager pointer
-        r1: area script index 
-        r2: undefined4 
+        r1: area script index
+        r2: undefined4
         r3: undefined4
     - name: TryInitChapterScript
       address:
@@ -2808,7 +2808,7 @@ arm9:
         
         r0: script_manager pointer
         r1: chapter script index
-        r2: undefined4 
+        r2: undefined4
         r3: undefined4
     - name: TryInitQuestScript
       address:
@@ -2876,7 +2876,7 @@ arm9:
       address:
         NA: 0x203437C
       description: |-
-        Seem to retrieve some data related to the current mount. 
+        Seem to retrieve some data related to the current mount.
         
         r0: script_manager pointer
     - name: ZeroInitAllScriptData
@@ -3111,8 +3111,8 @@ arm9:
         SysCall Function that seems to print "s_[STRING]". It may be a debug print, more analysis needed.
         
         r0: script stack pointer, interpreted as params.
-        r1: undefined4 
-        r2: undefined4 
+        r1: undefined4
+        r2: undefined4
         r3: undefined4
     - name: SysCallDebugPrintf
       address:
@@ -3123,8 +3123,8 @@ arm9:
         SysCall Function that seems to debug print a string. More analysis needed.
         
         r0: script stack pointer, interpreted as params.
-        r1: undefined4 
-        r2: undefined4 
+        r1: undefined4
+        r2: undefined4
         r3: undefined4
     - name: SysCallFixedPointMultiply
       address:
@@ -4221,11 +4221,11 @@ arm9:
       address:
         NA: 0x2064F28
       description: |-
-        Seems to be copying a file name? 
+        Seems to be copying a file name?
         
         r0: destination
         r1: source
-        r2: maybe num bytes? 
+        r2: maybe num bytes?
         r3: undefined4
     - name: OS_VsPrintf
       address:
@@ -6784,12 +6784,36 @@ arm9:
       length:
         NA: 0x8
       description: Basic information for the CTouchPanel class. This class is a base class.
+    - name: C_TOUCH_PANEL_VFTABLE
+      address:
+        NA: 0x208A3D4
+      length:
+        NA: 0x14
+      description: Virtual function table for the CTouchPanel class.
+    - name: C_TOUCH_PANEL_VFTABLE_FUNCS
+      address:
+        NA: 0x208A3DC
+      length:
+        NA: 0xC
+      description: Function pointers of the CTouchPanel class vftable.
     - name: C_TP_EMULATOR
       address:
         NA: 0x208A3E8
       length:
         NA: 0xC
       description: Basic information for the CTPEmulator class. This class is a single-inheritance class.
+    - name: C_TP_EMULATOR_VFTABLE
+      address:
+        NA: 0x208A404
+      length:
+        NA: 0x14
+      description: Virtual function table for the CTPEmulator class.
+    - name: C_TP_EMULATOR_VFTABLE_FUNCS
+      address:
+        NA: 0x208A40C
+      length:
+        NA: 0xC
+      description: Function pointers of the CTPEmulator class vftable.
     - name: C_BINARY_FILE
       address:
         NA: 0x208A4BC
@@ -6802,102 +6826,318 @@ arm9:
       length:
         NA: 0xC
       description: Basic information for the CBinaryFileMes class. This class is a single-inheritance class.
+    - name: C_BINARY_FILE_MES_VFTABLE
+      address:
+        NA: 0x208A500
+      length:
+        NA: 0x10
+      description: Virtual function table for the CBinaryFileMes class.
+    - name: C_BINARY_FILE_MES_VFTABLE_FUNCS
+      address:
+        NA: 0x208A508
+      length:
+        NA: 0xC
+      description: Function pointers of the CBinaryFileMes class vftable.
+    - name: C_BINARY_FILE_VFTABLE
+      address:
+        NA: 0x208A510
+      length:
+        NA: 0x10
+      description: Virtual function table for the CBinaryFile class.
+    - name: C_BINARY_FILE_VFTABLE_FUNCS
+      address:
+        NA: 0x208A518
+      length:
+        NA: 0xC
+      description: Function pointers of the CBinaryFile class vftable.
     - name: C_NCER_FILE
       address:
         NA: 0x208A57C
       length:
         NA: 0xC
       description: Basic information for the CNCERFile class. This class is a single-inheritance class.
+    - name: C_NCER_FILE_VFTABLE
+      address:
+        NA: 0x208A588
+      length:
+        NA: 0x10
+      description: Virtual function table for the CNCERFile class.
+    - name: C_NCER_FILE_VFTABLE_FUNCS
+      address:
+        NA: 0x208A590
+      length:
+        NA: 0xC
+      description: Function pointers of the CNCERFile class vftable.
     - name: C_NCGR_FILE
       address:
         NA: 0x208A5A4
       length:
         NA: 0xC
       description: Basic information for the CNCGRFile class. This class is a single-inheritance class.
+    - name: C_NCGR_FILE_VFTABLE
+      address:
+        NA: 0x208A5B0
+      length:
+        NA: 0x10
+      description: Virtual function table for the CNCGRFile class.
+    - name: C_NCGR_FILE_VFTABLE_FUNCS
+      address:
+        NA: 0x208A5B8
+      length:
+        NA: 0xC
+      description: Function pointers of the CNCGRFile class vftable.
     - name: C_NCLR_FILE
       address:
         NA: 0x208A5CC
       length:
         NA: 0xC
       description: Basic information for the CNCLRFile class. This class is a single-inheritance class.
+    - name: C_NCLR_FILE_VFTABLE
+      address:
+        NA: 0x208A5D8
+      length:
+        NA: 0x10
+      description: Virtual function table for the CNCLRFile class.
+    - name: C_NCLR_FILE_VFTABLE_FUNCS
+      address:
+        NA: 0x208A5E0
+      length:
+        NA: 0xC
+      description: Function pointers of the CNCLRFile class vftable.
     - name: C_NSCR_FILE
       address:
         NA: 0x208A5F4
       length:
         NA: 0xC
       description: Basic information for the CNSCRFile class. This class is a single-inheritance class.
+    - name: C_NSCR_FILE_VFTABLE
+      address:
+        NA: 0x208A600
+      length:
+        NA: 0x10
+      description: Virtual function table for the CNSCRFile class.
+    - name: C_NSCR_FILE_VFTABLE_FUNCS
+      address:
+        NA: 0x208A608
+      length:
+        NA: 0xC
+      description: Function pointers of the CNSCRFile class vftable.
     - name: C_NANR_FILE
       address:
         NA: 0x208A61C
       length:
         NA: 0xC
       description: Basic information for the CNANRFile class. This class is a single-inheritance class.
+    - name: C_NANR_FILE_VFTABLE
+      address:
+        NA: 0x208A628
+      length:
+        NA: 0x10
+      description: Virtual function table for the CNANRFile class.
+    - name: C_NANR_FILE_VFTABLE_FUNCS
+      address:
+        NA: 0x208A630
+      length:
+        NA: 0xC
+      description: Function pointers of the CNANRFile class vftable.
     - name: C_BGNCGR_FILE
       address:
         NA: 0x208A638
       length:
         NA: 0xC
       description: Basic information for the CBGNCGRFile class. This class is a single-inheritance class.
+    - name: C_BGNCGR_FILE_VFTABLE
+      address:
+        NA: 0x208A654
+      length:
+        NA: 0x10
+      description: Virtual function table for the CBGNCGRFile class.
+    - name: C_BGNCGR_FILE_VFTABLE_FUNCS
+      address:
+        NA: 0x208A65C
+      length:
+        NA: 0xC
+      description: Function pointers of the CBGNCGRFile class vftable.
     - name: C_PRIMITIVE
       address:
         NA: 0x208A664
       length:
         NA: 0x8
       description: Basic information for the CPrimitive class. This class is a base class.
+    - name: C_PRIMITIVE_VFTABLE
+      address:
+        NA: 0x208A67C
+      length:
+        NA: 0x14
+      description: Virtual function table for the CPrimitive class.
+    - name: C_PRIMITIVE_VFTABLE_FUNCS
+      address:
+        NA: 0x208A684
+      length:
+        NA: 0xC
+      description: Function pointers of the CPrimitive class vftable.
     - name: C_PRIMITIVE_LINE
       address:
         NA: 0x208A690
       length:
         NA: 0xC
       description: Basic information for the CPrimitiveLINE class. This class is a single-inheritance class.
+    - name: C_PRIMITIVE_LINE_VFTABLE
+      address:
+        NA: 0x208A6B0
+      length:
+        NA: 0x14
+      description: Virtual function table for the CPrimitiveLINE class.
+    - name: C_PRIMITIVE_LINE_VFTABLE_FUNCS
+      address:
+        NA: 0x208A6B8
+      length:
+        NA: 0xC
+      description: Function pointers of the CPrimitiveLINE class vftable.
     - name: C_PRIMITIVE_RECT
       address:
         NA: 0x208A6C4
       length:
         NA: 0xC
       description: Basic information for the CPrimitiveRECT class. This class is a single-inheritance class.
+    - name: C_PRIMITIVE_RECT_VFTABLE
+      address:
+        NA: 0x208A6E4
+      length:
+        NA: 0x14
+      description: Virtual function table for the CPrimitiveRECT class.
+    - name: C_PRIMITIVE_RECT_VFTABLE_FUNCS
+      address:
+        NA: 0x208A6EC
+      length:
+        NA: 0xC
+      description: Function pointers of the CPrimitiveRECT class vftable.
     - name: C_PRIMITIVE_QUAD
       address:
         NA: 0x208A6F8
       length:
         NA: 0xC
       description: Basic information for the CPrimitiveQUAD class. This class is a single-inheritance class.
+    - name: C_PRIMITIVE_QUAD_VFTABLE
+      address:
+        NA: 0x208A718
+      length:
+        NA: 0x14
+      description: Virtual function table for the CPrimitiveQUAD class.
+    - name: C_PRIMITIVE_QUAD_VFTABLE_FUNCS
+      address:
+        NA: 0x208A720
+      length:
+        NA: 0xC
+      description: Function pointers of the CPrimitiveQUAD class vftable.
     - name: C_PRIMITIVE_SPHERE
       address:
         NA: 0x208A72C
       length:
         NA: 0xC
       description: Basic information for the CPrimitiveSPHERE class. This class is a single-inheritance class.
+    - name: C_PRIMITIVE_SPHERE_VFTABLE
+      address:
+        NA: 0x208A74C
+      length:
+        NA: 0x14
+      description: Virtual function table for the CPrimitiveSPHERE class.
+    - name: C_PRIMITIVE_SPHERE_VFTABLE_FUNCS
+      address:
+        NA: 0x208A754
+      length:
+        NA: 0xC
+      description: Function pointers of the CPrimitiveSPHERE class vftable.
     - name: C_PRIMITIVE_TRIANGLE
       address:
         NA: 0x208A760
       length:
         NA: 0xC
       description: Basic information for the CPrimitiveTRIANGLE class. This class is a single-inheritance class.
+    - name: C_PRIMITIVE_TRIANGLE_VFTABLE
+      address:
+        NA: 0x208A76C
+      length:
+        NA: 0x14
+      description: Virtual function table for the CPrimitiveTRIANGLE class.
+    - name: C_PRIMITIVE_TRIANGLE_VFTABLE_FUNCS
+      address:
+        NA: 0x208A774
+      length:
+        NA: 0xC
+      description: Function pointers of the CPrimitiveTRIANGLE class vftable.
     - name: C_SOFTWARE_SPRITE
       address:
         NA: 0x208A798
       length:
         NA: 0xC
       description: Basic information for the CSoftwareSprite class. This class is a single-inheritance class.
+    - name: C_SOFTWARE_SPRITE_VFTABLE
+      address:
+        NA: 0x208A7E8
+      length:
+        NA: 0x14
+      description: Virtual function table for the CSoftwareSprite class.
+    - name: C_SOFTWARE_SPRITE_VFTABLE_FUNCS
+      address:
+        NA: 0x208A7F0
+      length:
+        NA: 0xC
+      description: Function pointers of the CSoftwareSprite class vftable.
     - name: C_SCENE
       address:
         NA: 0x208A804
       length:
         NA: 0x8
       description: Basic information for the CScene class. This class is a base class.
+    - name: C_SCENE_VFTABLE
+      address:
+        NA: 0x208A80C
+      length:
+        NA: 0x34
+      description: Virtual function table for the CScene class.
+    - name: C_SCENE_VFTABLE_FUNCS
+      address:
+        NA: 0x208A814
+      length:
+        NA: 0x2C
+      description: Function pointers of the CScene class vftable.
     - name: C_POWER_MANAGE
       address:
         NA: 0x208AB40
       length:
         NA: 0x8
       description: Basic information for the CPowerManage class. This class is a base class.
+    - name: C_POWER_MANAGE_VFTABLE
+      address:
+        NA: 0x208AB58
+      length:
+        NA: 0x10
+      description: Virtual function table for the CPowerManage class.
+    - name: C_POWER_MANAGE_VFTABLE_FUNCS
+      address:
+        NA: 0x208AB60
+      length:
+        NA: 0x8
+      description: Function pointers of the CPowerManage class vftable.
     - name: STR_BATTLE_RESULT_PARAMETER
       address:
         NA: 0x208AB9C
       length:
         NA: 0x8
       description: Basic information for the strBattleResultParameter class. This class is a base class.
+    - name: C_BATTLE_RESULT_PARAMETER_VFTABLE
+      address:
+        NA: 0x208ABA4
+      length:
+        NA: 0x10
+      description: Virtual function table for the CBattleResultParameter class.
+    - name: C_BATTLE_RESULT_PARAMETER_VFTABLE_FUNCS
+      address:
+        NA: 0x208ABAC
+      length:
+        NA: 0x8
+      description: Function pointers of the CBattleResultParameter class vftable.
     - name: C_BATTLE_RESULT_PARAMETER
       address:
         NA: 0x208ABB4
@@ -6908,18 +7148,54 @@ arm9:
       length:
         NA: 0x8
       description: Basic information for the CActor class. This class is a base class.
+    - name: C_ACTOR_VFTABLE
+      address:
+        NA: 0x208B480
+      length:
+        NA: 0x1C
+      description: Virtual function table for the CActor class.
+    - name: C_ACTOR_VFTABLE_FUNCS
+      address:
+        NA: 0x208B488
+      length:
+        NA: 0x14
+      description: Function pointers of the CActor class vftable.
     - name: C_ACTOR_DATA
       address:
         NA: 0x208B49C
       length:
         NA: 0x8
       description: Basic information for the CActorData class. This class is a base class.
+    - name: C_ACTOR_DATA_VFTABLE
+      address:
+        NA: 0x208B4B4
+      length:
+        NA: 0x24
+      description: Virtual function table for the CActorData class.
+    - name: C_ACTOR_DATA_VFTABLE_FUNCS
+      address:
+        NA: 0x208B4BC
+      length:
+        NA: 0x1C
+      description: Function pointers of the CActorData class vftable.
     - name: C_PLAYER_HP_GAUGE
       address:
         NA: 0x208B83C
       length:
         NA: 0xC
       description: Basic information for the CPlayerHPGauge class. This class is a single-inheritance class.
+    - name: C_PLAYER_HP_GAUGE_VFTABLE
+      address:
+        NA: 0x208B85C
+      length:
+        NA: 0x1C
+      description: Virtual function table for the CPlayerHPGauge class.
+    - name: C_PLAYER_HP_GAUGE_VFTABLE_FUNCS
+      address:
+        NA: 0x208B864
+      length:
+        NA: 0x14
+      description: Function pointers of the CPlayerHPGauge class vftable.
     - name: C_BACKUP_BASE
       address:
         NA: 0x208C16C
@@ -6932,6 +7208,18 @@ arm9:
       length:
         NA: 0xC
       description: Basic information for the CBackup class. This class is a single-inheritance class.
+    - name: C_BACKUP_VFTABLE
+      address:
+        NA: 0x208C19C
+      length:
+        NA: 0x24
+      description: Virtual function table for the CBackup class.
+    - name: C_BACKUP_VFTABLE_FUNCS
+      address:
+        NA: 0x208C1A4
+      length:
+        NA: 0x1C
+      description: Function pointers of the CBackup class vftable.
     - name: C_EFFECT_RESOURCE
       address:
         NA: 0x208C460
@@ -6944,11 +7232,47 @@ arm9:
       length:
         NA: 0xC
       description: Basic information for the CEffectActorData class. This class is a single-inheritance class.
+    - name: C_EFFECT_ACTOR_DATA_VFTABLE
+      address:
+        NA: 0x208C49C
+      length:
+        NA: 0x2C
+      description: Virtual function table for the CEffectActorData class.
+    - name: C_EFFECT_ACTOR_DATA_VFTABLE_FUNCS
+      address:
+        NA: 0x208C4A4
+      length:
+        NA: 0x24
+      description: Function pointers of the CEffectActorData class vftable.
+    - name: C_BACKUP_BASE_VFTABLE
+      address:
+        NA: 0x208CC64
+      length:
+        NA: 0x24
+      description: Virtual function table for the CBackupBase class.
+    - name: C_BACKUP_BASE_VFTABLE_FUNCS
+      address:
+        NA: 0x208CC6C
+      length:
+        NA: 0x1C
+      description: Function pointers of the CBackupBase class vftable.
     - name: C_BACKUP_SYNC
       address:
         NA: 0x208CC88
       length:
         NA: 0xC
+    - name: C_BACKUP_SYNC_VFTABLE
+      address:
+        NA: 0x208CCA4
+      length:
+        NA: 0x24
+      description: Virtual function table for the CBackupSync class.
+    - name: C_BACKUP_SYNC_VFTABLE_FUNCS
+      address:
+        NA: 0x208CCAC
+      length:
+        NA: 0x1C
+      description: Function pointers of the CBackupSync class vftable.
     - name: SYSCALL_PAGE_2
       address:
         NA: 0x208CE10
@@ -6961,6 +7285,18 @@ arm9:
       length:
         NA: 0x8
       description: Basic information for the CFieldScreenEffectObjectBase class. This class is a base class.
+    - name: C_FIELD_SCREEN_EFFECT_OBJECT_BASE_VFTABLE
+      address:
+        NA: 0x208D608
+      length:
+        NA: 0x24
+      description: Virtual function table for the CFieldScreenEffectObjectBase class.
+    - name: C_FIELD_SCREEN_EFFECT_OBJECT_BASE_VFTABLE_FUNCS
+      address:
+        NA: 0x208D610
+      length:
+        NA: 0x1C
+      description: Function pointers of the CFieldScreenEffectObjectBase class vftable.
     - name: C_PRIMITIVE_QUAD_NTF
       address:
         NA: 0x208D62C
@@ -6973,36 +7309,120 @@ arm9:
       length:
         NA: 0xC
       description: Basic information for the CPrimitiveRectNTF class. This class is a single-inheritance class.
+    - name: C_PRIMITIVE_RECT_NTF_VFTABLE
+      address:
+        NA: 0x208D658
+      length:
+        NA: 0x14
+      description: Virtual function table for the CPrimitiveRectNTF class.
+    - name: C_PRIMITIVE_RECT_NTF_VFTABLE_FUNCS
+      address:
+        NA: 0x208D660
+      length:
+        NA: 0xC
+      description: Function pointers of the CPrimitiveRectNTF class vftable.
+    - name: C_PRIMITIVE_QUAD_NTF_VFTABLE
+      address:
+        NA: 0x208D680
+      length:
+        NA: 0x14
+      description: Virtual function table for the CPrimitiveQuadNTF class.
+    - name: C_PRIMITIVE_QUAD_NTF_VFTABLE_FUNCS
+      address:
+        NA: 0x208D688
+      length:
+        NA: 0xC
+      description: Function pointers of the CPrimitiveQuadNTF class vftable.
     - name: C_FIELD_SEF_KOMOREBI
       address:
         NA: 0x208D7A0
       length:
         NA: 0xC
       description: Basic information for the CFieldSEFKomorebi class. This class is a single-inheritance class.
+    - name: C_FIELD_SEF_KOMOREBI_VFTABLE
+      address:
+        NA: 0x208D7C0
+      length:
+        NA: 0x24
+      description: Virtual function table for the CFieldSEFKomorebi class.
+    - name: C_FIELD_SEF_KOMOREBI_VFTABLE_FUNCS
+      address:
+        NA: 0x208D7C8
+      length:
+        NA: 0x1C
+      description: Function pointers of the CFieldSEFKomorebi class vftable.
     - name: C_FIELD_SEF_FOG
       address:
         NA: 0x208D824
       length:
         NA: 0xC
       description: Basic information for the CFieldSEFFog class. This class is a single-inheritance class.
+    - name: C_FIELD_SEF_FOG_VFTABLE
+      address:
+        NA: 0x208D840
+      length:
+        NA: 0x24
+      description: Virtual function table for the CFieldSEFFog class.
+    - name: C_FIELD_SEF_FOG_VFTABLE_FUNCS
+      address:
+        NA: 0x208D848
+      length:
+        NA: 0x1C
+      description: Function pointers of the CFieldSEFFog class vftable.
     - name: C_FIELD_SEF_SAND_STORM
       address:
         NA: 0x208D8CC
       length:
         NA: 0xC
       description: Basic information for the CFieldSEFSandStorm class. This class is a single-inheritance class.
+    - name: C_FIELD_SEF_SAND_STORM_VFTABLE
+      address:
+        NA: 0x208D8F0
+      length:
+        NA: 0x24
+      description: Virtual function table for the CFieldSEFSandStorm class.
+    - name: C_FIELD_SEF_SAND_STORM_VFTABLE_FUNCS
+      address:
+        NA: 0x208D8F8
+      length:
+        NA: 0x1C
+      description: Function pointers of the CFieldSEFSandStorm class vftable.
     - name: C_FIELD_SEF_DOKARIMO
       address:
         NA: 0x208D954
       length:
         NA: 0xC
       description: Basic information for the CFieldSEFDokarimo class. This class is a single-inheritance class.
+    - name: C_FIELD_SEF_DOKARIMO_VFTABLE
+      address:
+        NA: 0x208D974
+      length:
+        NA: 0x24
+      description: Virtual function table for the CFieldSEFDokarimo class.
+    - name: C_FIELD_SEF_DOKARIMO_VFTABLE_FUNCS
+      address:
+        NA: 0x208D97C
+      length:
+        NA: 0x1C
+      description: Function pointers of the CFieldSEFDokarimo class vftable.
     - name: C_FIELD_SEF_THE_WATER
       address:
         NA: 0x208D9E0
       length:
         NA: 0xC
       description: Basic information for the CFieldSEFTheWater class. This class is a single-inheritance class.
+    - name: C_FIELD_SEF_THE_WATER_VFTABLE
+      address:
+        NA: 0x208DA00
+      length:
+        NA: 0x24
+      description: Virtual function table for the CFieldSEFTheWater class.
+    - name: C_FIELD_SEF_THE_WATER_VFTABLE_FUNCS
+      address:
+        NA: 0x208DA08
+      length:
+        NA: 0x1C
+      description: Function pointers of the CFieldSEFTheWater class vftable.
     - name: C_FIELD_SEF_HINOKO
       address:
         NA: 0x208DA24
@@ -7015,30 +7435,102 @@ arm9:
       length:
         NA: 0xC
       description: Basic information for the CFieldScreenEffectActorData class. This class is a single-inheritance class.
+    - name: C_FIELD_SEF_HINOKO_VFTABLE
+      address:
+        NA: 0x208DA70
+      length:
+        NA: 0x24
+      description: Virtual function table for the CFieldSEFHinoko class.
+    - name: C_FIELD_SEF_HINOKO_VFTABLE_FUNCS
+      address:
+        NA: 0x208DA78
+      length:
+        NA: 0x1C
+      description: Function pointers of the CFieldSEFHinoko class vftable.
+    - name: C_FIELD_SCREEN_EFFECT_ACTOR_DATA_VFTABLE
+      address:
+        NA: 0x208DA94
+      length:
+        NA: 0x2C
+      description: Virtual function table for the CFieldScreenEffectActorData class.
+    - name: C_FIELD_SCREEN_EFFECT_ACTOR_DATA_VFTABLE_FUNCS
+      address:
+        NA: 0x208DA9C
+      length:
+        NA: 0x24
+      description: Function pointers of the CFieldScreenEffectActorData class vftable.
     - name: C_FIELD_SEF_RAIN
       address:
         NA: 0x208DB00
       length:
         NA: 0xC
       description: Basic information for the CFieldSEFRain class. This class is a single-inheritance class.
+    - name: C_FIELD_SEF_RAIN_VFTABLE
+      address:
+        NA: 0x208DB1C
+      length:
+        NA: 0x24
+      description: Virtual function table for the CFieldSEFRain class.
+    - name: C_FIELD_SEF_RAIN_VFTABLE_FUNCS
+      address:
+        NA: 0x208DB24
+      length:
+        NA: 0x1C
+      description: Function pointers of the CFieldSEFRain class vftable.
     - name: C_FIELD_SEF_WARNING
       address:
         NA: 0x208DB40
       length:
         NA: 0xC
       description: Basic information for the CFieldSEFWarning class. This class is a single-inheritance class.
+    - name: C_FIELD_SEF_WARNING_VFTABLE
+      address:
+        NA: 0x208DB60
+      length:
+        NA: 0x24
+      description: Virtual function table for the CFieldSEFWarning class.
+    - name: C_FIELD_SEF_WARNING_VFTABLE_FUNCS
+      address:
+        NA: 0x208DB68
+      length:
+        NA: 0x1C
+      description: Function pointers of the CFieldSEFWarning class vftable.
     - name: C_FIELD_SEF_SNOW
       address:
         NA: 0x208DB90
       length:
         NA: 0xC
       description: Basic information for the CFieldSEFSnow class. This class is a single-inheritance class.
+    - name: C_FIELD_SEF_SNOW_VFTABLE
+      address:
+        NA: 0x208DBAC
+      length:
+        NA: 0x24
+      description: Virtual function table for the CFieldSEFSnow class.
+    - name: C_FIELD_SEF_SNOW_VFTABLE_FUNCS
+      address:
+        NA: 0x208DBB4
+      length:
+        NA: 0x1C
+      description: Function pointers of the CFieldSEFSnow class vftable.
     - name: C_FIELD_SEF_DARKNESS
       address:
         NA: 0x208DBD0
       length:
         NA: 0xC
       description: Basic information for the CFieldSEFDarkness class. This class is a single-inheritance class.
+    - name: C_FIELD_SEF_DARKNESS_VFTABLE
+      address:
+        NA: 0x208DBF0
+      length:
+        NA: 0x24
+      description: Virtual function table for the CFieldSEFDarkness class.
+    - name: C_FIELD_SEF_DARKNESS_VFTABLE_FUNCS
+      address:
+        NA: 0x208DBF8
+      length:
+        NA: 0x1C
+      description: Function pointers of the CFieldSEFDarkness class vftable.
     - name: C_FIELD_ACTOR_SCRIPT
       address:
         NA: 0x208DC5C
@@ -7051,18 +7543,66 @@ arm9:
       length:
         NA: 0x8
       description: Basic information for the CFieldActor class. This class is a base class.
+    - name: C_FIELD_ACTOR_SCRIPT_VFTABLE
+      address:
+        NA: 0x208DC90
+      length:
+        NA: 0x18
+      description: Virtual function table for the CFieldActorScript class.
+    - name: C_FIELD_ACTOR_SCRIPT_VFTABLE_FUNCS
+      address:
+        NA: 0x208DC98
+      length:
+        NA: 0x10
+      description: Function pointers of the CFieldActorScript class vftable.
+    - name: C_FIELD_ACTOR_VFTABLE
+      address:
+        NA: 0x208DCA8
+      length:
+        NA: 0x48
+      description: Virtual function table for the CFieldActor class.
+    - name: C_FIELD_ACTOR_VFTABLE_FUNCS
+      address:
+        NA: 0x208DCB0
+      length:
+        NA: 0x40
+      description: Function pointers of the CFieldActor class vftable.
     - name: C_FIELD_DRAW_ACTOR
       address:
         NA: 0x208DD5C
       length:
         NA: 0xC
       description: Basic information for the CFieldDrawActor class. This class is a single-inheritance class.
+    - name: C_FIELD_DRAW_ACTOR_VFTABLE
+      address:
+        NA: 0x208DD7C
+      length:
+        NA: 0x1C
+      description: Virtual function table for the CFieldDrawActor class.
+    - name: C_FIELD_DRAW_ACTOR_VFTABLE_FUNCS
+      address:
+        NA: 0x208DD84
+      length:
+        NA: 0x14
+      description: Function pointers of the CFieldDrawActor class vftable.
     - name: C_FIELD_ACTOR_MANAGE
       address:
         NA: 0x208DD9C
       length:
         NA: 0x8
       description: Basic information for the CFieldActorManage class. This class is a base class.
+    - name: C_FIELD_ACTOR_MANAGE_VFTABLE
+      address:
+        NA: 0x208DDB8
+      length:
+        NA: 0x5C
+      description: Virtual function table for the CFieldActorManage class.
+    - name: C_FIELD_ACTOR_MANAGE_VFTABLE_FUNCS
+      address:
+        NA: 0x208DDC0
+      length:
+        NA: 0x54
+      description: Function pointers of the CFieldActorManage class vftable.
     - name: C_DRAW_OBJECT
       address:
         NA: 0x208DE14
@@ -7075,6 +7615,30 @@ arm9:
       length:
         NA: 0xC
       description: Basic information for the CFieldDrawObject class. This class is a single-inheritance class.
+    - name: C_FIELD_DRAW_OBJECT_VFTABLE
+      address:
+        NA: 0x208DE4C
+      length:
+        NA: 0x14
+      description: Virtual function table for the CFieldDrawObject class.
+    - name: C_FIELD_DRAW_OBJECT_VFTABLE_FUNCS
+      address:
+        NA: 0x208DE54
+      length:
+        NA: 0xC
+      description: Function pointers of the CFieldDrawObject class vftable.
+    - name: C_DRAW_OBJECT_VFTABLE
+      address:
+        NA: 0x208DE60
+      length:
+        NA: 0x14
+      description: Virtual function table for the CDrawObject class.
+    - name: C_DRAW_OBJECT_VFTABLE_FUNCS
+      address:
+        NA: 0x208DE68
+      length:
+        NA: 0xC
+      description: Function pointers of the CDrawObject class vftable.
     - name: C_ACTOR_DATA_PARTNER
       address:
         NA: 0x208DE74
@@ -7087,12 +7651,48 @@ arm9:
       length:
         NA: 0xC
       description: Basic information for the CFieldDrawActorData class. This class is a single-inheritance class.
+    - name: C_FIELD_DRAW_ACTOR_DATA_VFTABLE
+      address:
+        NA: 0x208DEB8
+      length:
+        NA: 0x2C
+      description: Virtual function table for the CFieldDrawActorData class.
+    - name: C_FIELD_DRAW_ACTOR_DATA_VFTABLE_FUNCS
+      address:
+        NA: 0x208DEC0
+      length:
+        NA: 0x24
+      description: Function pointers of the CFieldDrawActorData class vftable.
+    - name: C_ACTOR_DATA_PARTNER_VFTABLE
+      address:
+        NA: 0x208DEE4
+      length:
+        NA: 0x2C
+      description: Virtual function table for the CActorDataPartner class.
+    - name: C_ACTOR_DATA_PARTNER_VFTABLE_FUNCS
+      address:
+        NA: 0x208DEEC
+      length:
+        NA: 0x24
+      description: Function pointers of the CActorDataPartner class vftable.
     - name: C_ACTOR_DATA_PLAYER
       address:
         NA: 0x208DF8C
       length:
         NA: 0xC
       description: Basic information for the CActorDataPlayer class. This class is a single-inheritance class.
+    - name: C_ACTOR_DATA_PLAYER_VFTABLE
+      address:
+        NA: 0x208DFAC
+      length:
+        NA: 0x2C
+      description: Virtual function table for the CActorDataPlayer class.
+    - name: C_ACTOR_DATA_PLAYER_VFTABLE_FUNCS
+      address:
+        NA: 0x208DFB4
+      length:
+        NA: 0x24
+      description: Function pointers of the CActorDataPlayer class vftable.
     - name: C_SIMPLE_PRIMITIVE_QUAD_NTF
       address:
         NA: 0x208E040
@@ -7105,24 +7705,84 @@ arm9:
       length:
         NA: 0xC
       description: Basic information for the CSimpleSpriteNTF class. This class is a single-inheritance class.
+    - name: C_SIMPLE_SPRITE_NTF_VFTABLE
+      address:
+        NA: 0x208E06C
+      length:
+        NA: 0x14
+      description: Virtual function table for the CSimpleSpriteNTF class.
+    - name: C_SIMPLE_SPRITE_NTF_VFTABLE_FUNCS
+      address:
+        NA: 0x208E074
+      length:
+        NA: 0xC
+      description: Function pointers of the CSimpleSpriteNTF class vftable.
+    - name: C_SIMPLE_PRIMITIVE_QUAD_NTF_VFTABLE
+      address:
+        NA: 0x208E080
+      length:
+        NA: 0x14
+      description: Virtual function table for the CSimplePrimitiveQuadNTF class.
+    - name: C_SIMPLE_PRIMITIVE_QUAD_NTF_VFTABLE_FUNCS
+      address:
+        NA: 0x208E088
+      length:
+        NA: 0xC
+      description: Function pointers of the CSimplePrimitiveQuadNTF class vftable.
     - name: C_DOWNLOAD_MISSION_START_SCENE
       address:
         NA: 0x208E110
       length:
         NA: 0xC
       description: Basic information for the CDownloadMissionStartScene class. This class is a single-inheritance class.
+    - name: C_DOWNLOAD_MISSION_START_SCENE_VFTABLE
+      address:
+        NA: 0x208E14C
+      length:
+        NA: 0x34
+      description: Virtual function table for the CDownloadMissionStartScene class.
+    - name: C_DOWNLOAD_MISSION_START_SCENE_VFTABLE_FUNCS
+      address:
+        NA: 0x208E154
+      length:
+        NA: 0x2C
+      description: Function pointers of the CDownloadMissionStartScene class vftable.
     - name: C_DOWNLOAD_MISSION_END_SCENE
       address:
         NA: 0x208E180
       length:
         NA: 0xC
       description: Basic information for the CDownloadMissionEndScene class. This class is a single-inheritance class.
+    - name: C_DOWNLOAD_MISSION_END_SCENE_VFTABLE
+      address:
+        NA: 0x208E1A8
+      length:
+        NA: 0x34
+      description: Virtual function table for the CDownloadMissionEndScene class.
+    - name: C_DOWNLOAD_MISSION_END_SCENE_VFTABLE_FUNCS
+      address:
+        NA: 0x208E1B0
+      length:
+        NA: 0x2C
+      description: Function pointers of the CDownloadMissionEndScene class vftable.
     - name: C_DOWNLOAD_MISSION_RESTART_SCENE
       address:
         NA: 0x208E1DC
       length:
         NA: 0xC
       description: Basic information for the CDownloadMissionRestartScene class. This class is a single-inheritance class.
+    - name: C_DOWNLOAD_MISSION_RESTART_SCENE_VFTABLE
+      address:
+        NA: 0x208E208
+      length:
+        NA: 0x34
+      description: Virtual function table for the CDownloadMissionRestartScene class.
+    - name: C_DOWNLOAD_MISSION_RESTART_SCENE_VFTABLE_FUNCS
+      address:
+        NA: 0x208E210
+      length:
+        NA: 0x2C
+      description: Function pointers of the CDownloadMissionRestartScene class vftable.
     - name: SYSCALL_PAGE_0
       address:
         NA: 0x208E334
@@ -7153,6 +7813,30 @@ arm9:
       length:
         NA: 0xC
       description: "Basic information for the std::tr1::detail::shared_ptr_deleter class. This class is a single-inheritance class."
+    - name: STD_TR1_DETAIL_SHARED_PTR_DELETER_COMMON_VFTABLE
+      address:
+        NA: 0x208F00C
+      length:
+        NA: 0x18
+      description: "Virtual function table for the std::tr1::detail::shared_ptr_deleter_common class."
+    - name: STD_TR1_DETAIL_SHARED_PTR_DELETER_COMMON_VFTABLE_FUNCS
+      address:
+        NA: 0x208F014
+      length:
+        NA: 0x10
+      description: "Function pointers of the std::tr1::detail::shared_ptr_deleter_common class vftable."
+    - name: STD_TR1_DETAIL_SHARED_PTR_DELETER_VFTABLE
+      address:
+        NA: 0x208F024
+      length:
+        NA: 0x18
+      description: "Virtual function table for the std::tr1::detail::shared_ptr_deleter<char, std::detail::default_delete<char [0]> > class."
+    - name: STD_TR1_DETAIL_SHARED_PTR_DELETER_VFTABLE_FUNCS
+      address:
+        NA: 0x208F02C
+      length:
+        NA: 0x10
+      description: "Function pointers of the std::tr1::detail::shared_ptr_deleter<char, std::detail::default_delete<char [0]> > class vftable."
     - name: STD_LOGIC_ERROR
       address:
         NA: 0x208F0D4
@@ -7165,12 +7849,48 @@ arm9:
       length:
         NA: 0xC
       description: "Basic information for the std::length_error class. This class is a single-inheritance class."
+    - name: STD_LENGTH_ERROR_VFTABLE
+      address:
+        NA: 0x208F110
+      length:
+        NA: 0x14
+      description: "Virtual function table for the std::length_error class."
+    - name: STD_LENGTH_ERROR_VFTABLE_FUNCS
+      address:
+        NA: 0x208F118
+      length:
+        NA: 0xC
+      description: "Function pointers of the std::length_error class vftable."
+    - name: STD_LOGIC_ERROR_VFTABLE
+      address:
+        NA: 0x208F124
+      length:
+        NA: 0x14
+      description: "Virtual function table for the std::logic_error class."
+    - name: STD_LOGIC_ERROR_VFTABLE_FUNCS
+      address:
+        NA: 0x208F12C
+      length:
+        NA: 0xC
+      description: "Function pointers of the std::logic_error class vftable."
     - name: STD_BAD_EXCEPTION
       address:
         NA: 0x208F184
       length:
         NA: 0xC
       description: "Basic information for the std::bad_exception class. This class is a single-inheritance class."
+    - name: STD_BAD_EXCEPTION_VFTABLE
+      address:
+        NA: 0x208F1B4
+      length:
+        NA: 0x14
+      description: "Virtual function table for the std::bad_exception class."
+    - name: STD_BAD_EXCEPTION_VFTABLE_FUNCS
+      address:
+        NA: 0x208F1BC
+      length:
+        NA: 0xC
+      description: "Function pointers of the std::bad_exception class vftable."
     - name: STD_TYPE_INFO
       address:
         NA: 0x208F208
@@ -7195,6 +7915,42 @@ arm9:
       length:
         NA: 0xC
       description: Basic information for the __cxxabiv1__class_type_info class. This class is a single-inheritance class.
+    - name: CXXABIV1_VMI_CLASS_TYPE_INFO_VFTABLE
+      address:
+        NA: 0x208F244
+      length:
+        NA: 0x10
+      description: "Virtual function table for the __cxxabiv1::__vmi_class_type_info class."
+    - name: CXXABIV1_VMI_CLASS_TYPE_INFO_VFTABLE_FUNCS
+      address:
+        NA: 0x208F24C
+      length:
+        NA: 0x8
+      description: "Function pointers of the __cxxabiv1::__vmi_class_type_info class vftable."
+    - name: CXXABIV1_SI_CLASS_TYPE_INFO_VFTABLE
+      address:
+        NA: 0x208F254
+      length:
+        NA: 0x10
+      description: "Virtual function table for the __cxxabiv1::__si_class_type_info class."
+    - name: CXXABIV1_SI_CLASS_TYPE_INFO_VFTABLE_FUNCS
+      address:
+        NA: 0x208F25C
+      length:
+        NA: 0x8
+      description: "Function pointers of the __cxxabiv1::__si_class_type_info class vftable."
+    - name: CXXABIV1_CLASS_TYPE_INFO_VFTABLE
+      address:
+        NA: 0x208F264
+      length:
+        NA: 0x10
+      description: "Virtual function table for the __cxxabiv1::__class_type_info class."
+    - name: CXXABIV1_CLASS_TYPE_INFO_VFTABLE_FUNCS
+      address:
+        NA: 0x208F26C
+      length:
+        NA: 0x8
+      description: "Function pointers of the __cxxabiv1::__class_type_info class vftable."
     - name: MEGASTRUCT_PTR_ARM9
       address:
         NA: 0x208F304
