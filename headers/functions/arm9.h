@@ -584,7 +584,7 @@ undefined4 Socl_EnableSsl(int param_1,undefined4 param_2);
 undefined4 Socli_ExecEnableSslCommand(undefined4 param_1,undefined4 param_2,undefined4 param_3,undefined4 param_4);
 undefined4 Socli_EnableSslCallBack(int param_1,int param_2);
 void reset_network_vars(undefined4 param_1,undefined4 param_2,undefined4 param_3,int param_4);
-void OS_YieldThread(void); // OS_YieldThread__
+void OS_YieldThread2(void); // OS_YieldThread__
 void ret_02049d08(void);
 void Cps_Startup(undefined4 *param_1);
 int Cps_CalmDown(void);
