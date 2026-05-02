@@ -11807,7 +11807,7 @@ arm9:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: MSL_C_printf_longlong2str
+    - name: MSL_C_printf_long_long2str
       address:
         NA: 0x207A570
       description: |-
@@ -12040,7 +12040,7 @@ arm9:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: MSL_C_wprintf_longlong2str
+    - name: MSL_C_wprintf_long_long2str
       address:
         NA: 0x207D23C
       description: |-
