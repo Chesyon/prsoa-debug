@@ -11618,14 +11618,14 @@ arm9:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: MSL_C_abort_exit__exit
+    - name: MSL_C_abort_exit_exit
       address:
         NA: 0x2079338
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: MSL_C_ansi_files__flush_all
+    - name: MSL_C_ansi_files_flush_all
       address:
         NA: 0x2079460
       description: |-
@@ -11647,14 +11647,14 @@ arm9:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
-    - name: MSL_C_buffer_io__prep_buffer
+    - name: MSL_C_buffer_io_prep_buffer
       address:
         NA: 0x20794D8
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: MSL_C_buffer_io__flush_buffer
+    - name: MSL_C_buffer_io_flush_buffer
       address:
         NA: 0x2079508
       description: |-
@@ -11668,7 +11668,7 @@ arm9:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: MSL_C_direct_io__fwrite
+    - name: MSL_C_direct_io_fwrite
       address:
         NA: 0x20796B0
       description: |-
@@ -11772,7 +11772,7 @@ arm9:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: MSL_C_mem__memrchr
+    - name: MSL_C_mem_memrchr
       address:
         NA: 0x2079C78
       description: |-
@@ -11786,7 +11786,7 @@ arm9:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: MSL_C_mem_funcs__fill_mem
+    - name: MSL_C_mem_funcs_fill_mem
       address:
         NA: 0x2079CE4
       description: |-
@@ -11893,7 +11893,7 @@ arm9:
         r1: format
         r2: ap
         return: number of characters printed, excluding the null-terminator
-    - name: MSL_C_scanf__StringRead
+    - name: MSL_C_scanf_StringRead
       address:
         NA: 0x207BFFC
       description: |-
@@ -11984,7 +11984,7 @@ arm9:
         r0: haystack
         r1: needle
         return: pointer into haystack where needle starts, or null pointer if no match
-    - name: MSL_C_strtoul__strtoul
+    - name: MSL_C_strtoul_strtoul
       address:
         NA: 0x207C504
       description: |-
@@ -12068,14 +12068,14 @@ arm9:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: MSL_C_wprintf__wpformatter
+    - name: MSL_C_wprintf_wpformatter
       address:
         NA: 0x207E044
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: MSL_C_wprintf__wStringWrite
+    - name: MSL_C_wprintf_wStringWrite
       address:
         NA: 0x207E934
       description: |-
@@ -12145,84 +12145,84 @@ arm9:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: MSL_C_ansi_fp__must_round
+    - name: MSL_C_ansi_fp_must_round
       address:
         NA: 0x207EDCC
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: MSL_C_ansi_fp__dorounddecup
+    - name: MSL_C_ansi_fp_dorounddecup
       address:
         NA: 0x207EE38
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: MSL_C_ansi_fp__rounddec
+    - name: MSL_C_ansi_fp_rounddec
       address:
         NA: 0x207EE88
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: MSL_C_ansi_fp__ull2dec
+    - name: MSL_C_ansi_fp_ull2dec
       address:
         NA: 0x207EEC8
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: MSL_C_ansi_fp__timesdec
+    - name: MSL_C_ansi_fp_timesdec
       address:
         NA: 0x207EF94
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: MSL_C_ansi_fp__str2dec
+    - name: MSL_C_ansi_fp_str2dec
       address:
         NA: 0x207F118
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: MSL_C_ansi_fp__two_exp
+    - name: MSL_C_ansi_fp_two_exp
       address:
         NA: 0x207F1B4
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: MSL_C_ansi_fp__num2dec_internal
+    - name: MSL_C_ansi_fp_num2dec_internal
       address:
         NA: 0x207F538
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: MSL_C_ansi_fp__num2dec
+    - name: MSL_C_ansi_fp_num2dec
       address:
         NA: 0x207F6B8
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: MSL_C_math_api__msl_generic_count_bits64
+    - name: MSL_C_math_api_msl_generic_count_bits64
       address:
         NA: 0x207F760
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: MSL_C_math_api__signbitd
+    - name: MSL_C_math_api_signbitd
       address:
         NA: 0x207F7F4
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: MSL_C_math_api__fpclassifyd
+    - name: MSL_C_math_api_fpclassifyd
       address:
         NA: 0x207F808
       description: |-
@@ -12661,28 +12661,28 @@ arm9:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NRun_semihosting__read_console
+    - name: NRun_semihosting_read_console
       address:
         NA: 0x2081C3C
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NRun_semihosting__write_console
+    - name: NRun_semihosting_write_console
       address:
         NA: 0x2081C8C
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NRun_CompressedNumbers__DecodeSignedNumber
+    - name: NRun_CompressedNumbers_DecodeSignedNumber
       address:
         NA: 0x2081CC8
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NRun_CompressedNumbers__DecodeUnsignedNumber
+    - name: NRun_CompressedNumbers_DecodeUnsignedNumber
       address:
         NA: 0x2081D54
       description: |-
@@ -12780,14 +12780,14 @@ arm9:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NRun_ExceptionHandler__ThrowHandler
+    - name: NRun_ExceptionHandler_ThrowHandler
       address:
         NA: 0x20830BC
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NRun_ExceptionHandler__end_catch
+    - name: NRun_ExceptionHandler_end_catch
       address:
         NA: 0x20831A8
       description: |-
@@ -12815,35 +12815,35 @@ arm9:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NRun__cxa_vec_new
+    - name: NRun_cxa_vec_new
       address:
         NA: 0x20832BC
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NRun__cxa_vec_ctor
+    - name: NRun_cxa_vec_ctor
       address:
         NA: 0x2083374
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NRun__cxa_vec_dtor
+    - name: NRun_cxa_vec_dtor
       address:
         NA: 0x2083424
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NRun__cxa_vec_cleanup
+    - name: NRun_cxa_vec_cleanup
       address:
         NA: 0x20834B4
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NRun__cxa_vec_delete
+    - name: NRun_cxa_vec_delete
       address:
         NA: 0x2083510
       description: |-
@@ -12885,14 +12885,14 @@ arm9:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NRun_MWException__register_global_object
+    - name: NRun_MWException_register_global_object
       address:
         NA: 0x2083664
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NRun_MWException__throw_catch_compare
+    - name: NRun_MWException_throw_catch_compare
       address:
         NA: 0x2083684
       description: |-
@@ -12906,7 +12906,7 @@ arm9:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NRun_ExceptionHandlerTScp__SetupFrameInfo
+    - name: NRun_ExceptionHandlerTScp_SetupFrameInfo
       address:
         NA: 0x2083890
       description: |-
@@ -12920,28 +12920,28 @@ arm9:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NRun_ExceptionHandlerTScp__SkipUnwindInfo
+    - name: NRun_ExceptionHandlerTScp_SkipUnwindInfo
       address:
         NA: 0x2083950
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NRun_ExceptionHandlerTScp__TransferControl
+    - name: NRun_ExceptionHandlerTScp_TransferControl
       address:
         NA: 0x2083980
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NRun_ExceptionHandlerTScp__throw
+    - name: NRun_ExceptionHandlerTScp_throw
       address:
         NA: 0x20839B0
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NRun_ExceptionHandlerTScp__rethrow
+    - name: NRun_ExceptionHandlerTScp_rethrow
       address:
         NA: 0x20839F8
       description: |-
