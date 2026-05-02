@@ -3047,14 +3047,14 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_MOVlInit
+    - name: Dwci_MovlInit
       address:
         NA: 0x2147130
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_MOVlEnd
+    - name: Dwci_MovlEnd
       address:
         NA: 0x214721C
       description: |-
@@ -3071,21 +3071,21 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_MOVlIsEnd
+    - name: Dwci_MovlIsEnd
       address:
         NA: 0x2147278
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_MOVlChangeCallback
+    - name: Dwci_MovlChangeCallback
       address:
         NA: 0x2147294
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_MOVStartDownloadandBootChild
+    - name: Dwci_MovStartDownloadandBootChild
       address:
         NA:
           - 0x21472AC
@@ -3094,7 +3094,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_MOVlGetChild
+    - name: Dwci_MovlGetChild
       address:
         NA: 0x21472B8
       description: |-
@@ -12624,42 +12624,42 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_SNDlInit
+    - name: Dwci_SndlInit
       address:
         NA: 0x215610C
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_SNDlEnd
+    - name: Dwci_SndlEnd
       address:
         NA: 0x215619C
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_SNDlPlay
+    - name: Dwci_SndlPlay
       address:
         NA: 0x21561C8
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_SNDlSetVolume
+    - name: Dwci_SndlSetVolume
       address:
         NA: 0x21561EC
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_SNDlSetPitch
+    - name: Dwci_SndlSetPitch
       address:
         NA: 0x215620C
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_SNDlStop
+    - name: Dwci_SndlStop
       address:
         NA: 0x2156230
       description: |-
@@ -12992,210 +12992,210 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_MOV_MBP_MemInit
+    - name: Dwci_Mov_Mbp_MemInit
       address:
         NA: 0x2157FE4
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_MOV_MBP_Start
+    - name: Dwci_Mov_Mbp_Start
       address:
         NA: 0x2158144
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_MOV_MBP_RegistFile
+    - name: Dwci_Mov_Mbp_RegistFile
       address:
         NA: 0x215818C
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_MOV_MBP_AcceptChild
+    - name: Dwci_Mov_Mbp_AcceptChild
       address:
         NA: 0x2158260
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_MOV_MBP_KickChild
+    - name: Dwci_Mov_Mbp_KickChild
       address:
         NA: 0x2158300
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_MOV_MBP_StartDownload
+    - name: Dwci_Mov_Mbp_StartDownload
       address:
         NA: 0x21583D8
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_MOV_MBP_StartDownloadAll
+    - name: Dwci_Mov_Mbp_StartDownloadAll
       address:
         NA: 0x21584B0
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_MOV_MBP_IsBootableAll
+    - name: Dwci_Mov_Mbp_IsBootableAll
       address:
         NA: 0x2158590
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_MOV_MBP_StartRebootAll
+    - name: Dwci_Mov_Mbp_StartRebootAll
       address:
         NA: 0x21585F8
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_MOV_MBP_Cancel
+    - name: Dwci_Mov_Mbp_Cancel
       address:
         NA: 0x21586F0
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_MOV_MBP_ChangeState
+    - name: Dwci_Mov_Mbp_ChangeState
       address:
         NA: 0x2158A58
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_MOV_MBP_GetState
+    - name: Dwci_Mov_Mbp_GetState
       address:
         NA: 0x2158A6C
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_MOV_MBP_GetChildBmp
+    - name: Dwci_Mov_Mbp_GetChildBmp
       address:
         NA: 0x2158A80
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_MOV_MBP_GetChildState
+    - name: Dwci_Mov_Mbp_GetChildState
       address:
         NA: 0x2158AD8
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_MOV_MBP_GetChildInfo
+    - name: Dwci_Mov_Mbp_GetChildInfo
       address:
         NA: 0x2158BA0
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_MOV_MBP_GetPlayerNo
+    - name: Dwci_Mov_Mbp_GetPlayerNo
       address:
         NA: 0x2158BD4
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_MOV_WH_MemInit
+    - name: Dwci_Mov_WH_MemInit
       address:
         NA: 0x2158C7C
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_MOV_WH_ChangeSysState
+    - name: Dwci_Mov_WH_ChangeSysState
       address:
         NA: 0x2158CB8
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_MOV_WH_SetError
+    - name: Dwci_Mov_WH_SetError
       address:
         NA: 0x2158D34
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_MOV_WH_StateInSetParentParam
+    - name: Dwci_Mov_WH_StateInSetParentParam
       address:
         NA: 0x2158D54
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_MOV_WH_StateOutSetParentParam
+    - name: Dwci_Mov_WH_StateOutSetParentParam
       address:
         NA: 0x2158D98
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_MOV_WH_StateInSetParentWEPKey
+    - name: Dwci_Mov_WH_StateInSetParentWEPKey
       address:
         NA: 0x2158E04
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_MOV_WH_StateOutSetParentWEPKey
+    - name: Dwci_Mov_WH_StateOutSetParentWEPKey
       address:
         NA: 0x2158E68
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_MOV_WH_StateInStartParent
+    - name: Dwci_Mov_WH_StateInStartParent
       address:
         NA: 0x2158EA0
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_MOV_WH_StateOutStartParent
+    - name: Dwci_Mov_WH_StateOutStartParent
       address:
         NA: 0x2158F04
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_MOV_WH_StateInStartParentMP
+    - name: Dwci_Mov_WH_StateInStartParentMP
       address:
         NA: 0x2159074
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_MOV_WH_StateOutStartParentMP
+    - name: Dwci_Mov_WH_StateOutStartParentMP
       address:
         NA: 0x215910C
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_MOV_WH_StateInStartParentKeyShare
+    - name: Dwci_Mov_WH_StateInStartParentKeyShare
       address:
         NA: 0x2159238
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_MOV_WH_StateInEndParentKeyShare
+    - name: Dwci_Mov_WH_StateInEndParentKeyShare
       address:
         NA: 0x2159274
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_MOV_WH_StateInEndChildMP
+    - name: Dwci_Mov_WH_StateInEndChildMP
 #      namespace: FID_Conflict
       address:
         NA:
@@ -13205,28 +13205,28 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_MOV_WH_StateOutEndParentMP
+    - name: Dwci_Mov_WH_StateOutEndParentMP
       address:
         NA: 0x21592D4
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_MOV_WH_StateInEndParent
+    - name: Dwci_Mov_WH_StateInEndParent
       address:
         NA: 0x2159328
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_MOV_WH_StateInEndChildKeyShare
+    - name: Dwci_Mov_WH_StateInEndChildKeyShare
       address:
         NA: 0x2159374
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_MOV_WH_StateInEndChildMP
+    - name: Dwci_Mov_WH_StateInEndChildMP
 #      namespace: FID_Conflict
       address:
         NA:
@@ -13236,77 +13236,77 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_MOV_WH_StateOutEndChildMP
+    - name: Dwci_Mov_WH_StateOutEndChildMP
       address:
         NA: 0x21593F4
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_MOV_WH_StateInEndChild
+    - name: Dwci_Mov_WH_StateInEndChild
       address:
         NA: 0x2159428
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_MOV_WH_StateInReset
+    - name: Dwci_Mov_WH_StateInReset
       address:
         NA: 0x2159484
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_MOV_WH_StateOutReset
+    - name: Dwci_Mov_WH_StateOutReset
       address:
         NA: 0x21594B4
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_MOV_WH_StateOutEnd
+    - name: Dwci_Mov_WH_StateOutEnd
       address:
         NA: 0x21594E8
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_MOV_WH_SetGgid
+    - name: Dwci_Mov_WH_SetGgid
       address:
         NA: 0x2159510
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_MOV_WH_GetBitmap
+    - name: Dwci_Mov_WH_GetBitmap
       address:
         NA: 0x2159524
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_MOV_WH_GetSystemState
+    - name: Dwci_Mov_WH_GetSystemState
       address:
         NA: 0x2159538
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_MOV_WH_StartMeasureChannel
+    - name: Dwci_Mov_WH_StartMeasureChannel
       address:
         NA: 0x215954C
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_MOV_WH_StateInMeasureChannel
+    - name: Dwci_Mov_WH_StateInMeasureChannel
       address:
         NA: 0x2159624
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_MOV_WH_StateOutMeasureChannel
+    - name: Dwci_Mov_WH_StateOutMeasureChannel
       address:
         NA: 0x21596C0
       description: |-
@@ -13320,7 +13320,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_MOV_WH_GetMeasureChannel
+    - name: Dwci_Mov_WH_GetMeasureChannel
       address:
         NA: 0x21597B8
       description: |-
@@ -13334,98 +13334,98 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_MOV_WH_Initialize
+    - name: Dwci_Mov_WH_Initialize
       address:
         NA: 0x2159918
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_MOV_WH_StateInInitialize
+    - name: Dwci_Mov_WH_StateInInitialize
       address:
         NA: 0x21599B0
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_MOV_WH_StateOutInitialize
+    - name: Dwci_Mov_WH_StateOutInitialize
       address:
         NA: 0x21599FC
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_MOV_WH_ParentConnect
+    - name: Dwci_Mov_WH_ParentConnect
       address:
         NA: 0x2159A4C
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_MOV_WH_GetSharedDataAdr
+    - name: Dwci_Mov_WH_GetSharedDataAdr
       address:
         NA: 0x2159BD8
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_MOV_WH_StepDS
+    - name: Dwci_Mov_WH_StepDS
       address:
         NA: 0x2159C00
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_MOV_WH_Reset
+    - name: Dwci_Mov_WH_Reset
       address:
         NA: 0x2159CA8
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_MOV_WH_Finalize
+    - name: Dwci_Mov_WH_Finalize
       address:
         NA: 0x2159CC4
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_MOV_WH_End
+    - name: Dwci_Mov_WH_End
       address:
         NA: 0x2159DCC
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_MOVInit
+    - name: Dwci_MovInit
       address:
         NA: 0x2159E1C
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_MOVFinalize
+    - name: Dwci_MovFinalize
       address:
         NA: 0x2159F0C
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: _Dwci_MOVPrepare
+    - name: _Dwci_MovPrepare
       address:
         NA: 0x2159FE8
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_MOVStartAdmitChild
+    - name: Dwci_MovStartAdmitChild
       address:
         NA: 0x215A068
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_MOVStartDownloadandBootChild
+    - name: Dwci_MovStartDownloadandBootChild
       address:
         NA:
           - 0x21472AC
@@ -13434,63 +13434,63 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_MOVFramework
+    - name: Dwci_MovFramework
       address:
         NA: 0x215A0E4
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_MOVGetStatus
+    - name: Dwci_MovGetStatus
       address:
         NA: 0x215A468
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: _Dwci_MOVSearchChannel
+    - name: _Dwci_MovSearchChannel
       address:
         NA: 0x215A4BC
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: _Dwci_MOVStartWaitChild
+    - name: _Dwci_MovStartWaitChild
       address:
         NA: 0x215A564
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: _Dwci_MOV_WaitandDownloadandBoot_Child
+    - name: _Dwci_Mov_WaitandDownloadandBoot_Child
       address:
         NA: 0x215A588
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: _Dwci_MOV_ReadyMovUserID
+    - name: _Dwci_Mov_ReadyMovUserID
       address:
         NA: 0x215A740
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: _Dwci_MOV_MovUserID
+    - name: _Dwci_Mov_MovUserID
       address:
         NA: 0x215A76C
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: _Dwci_MOV_EraseFlashData
+    - name: _Dwci_Mov_EraseFlashData
       address:
         NA: 0x215A948
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: _Dwci_MOVEnd
+    - name: _Dwci_MovEnd
       address:
         NA: 0x215A960
       description: |-
