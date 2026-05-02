@@ -1168,7 +1168,7 @@ bool Dwci_Ndi_PrepareHttpCallback(undefined4 param_1,int param_2);
 void Dwci_Ndi_UnprepareHttpCallback(undefined4 param_1,int param_2);
 void Dwci_Ndi_KickThread(undefined4 param_1);
 void Dwci_Ndi_GetMacAddress(undefined4 param_1);
-void STD_CompareNStringVeneer(void);
+void Std_CompareNStringVeneer(void);
 void Dwci_Ndi_Memclr(int8_t *param_1,unsigned int param_2);
 void Dwci_Ndi_Memcpy(undefined4 *param_1,undefined4 *param_2,unsigned int param_3);
 int Nhttpi_StrToInt(int param_1,int param_2);

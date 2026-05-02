@@ -1424,14 +1424,14 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: WCM_GetLinkLevelVeneer
+    - name: Wcm_GetLinkLevelVeneer
       address:
         NA: 0x213B598
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: DWC_UpdateConnection
+    - name: Dwc_UpdateConnection
       address:
         NA: 0x213B6D0
       description: |-
@@ -1889,7 +1889,7 @@ overlay11:
         
         r0: file descriptor
         return: 0 on success, or a negative value representing an error
-    - name: AOSS_Htonl
+    - name: Aoss_Htonl
       address:
         NA: 0x213E02C
       description: |-
@@ -1931,7 +1931,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: AOSSi_Status
+    - name: Aossi_Status
       address:
         NA: 0x213E710
       description: |-
@@ -12521,14 +12521,14 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNS_SndMainVeneer
+    - name: Nns_SndMainVeneer
       address:
         NA: 0x2156250
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: DWCi_STEPlBegin
+    - name: Dwci_STEPlBegin
       address:
         NA: 0x215625C
       description: |-
@@ -14706,7 +14706,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: DWCi_Ndi_memclr
+    - name: Dwci_Ndi_memclr
       address:
         NA: 0x2162838
       description: |-
