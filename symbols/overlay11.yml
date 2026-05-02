@@ -1594,7 +1594,16 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Aoss_set_ApInfo
+    - name: checkAP
+      address:
+        NA:
+          - 0x213A810
+          - 0x213CCF0
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        No params.
+    - name: AOSS_set_APInfo
       address:
         NA: 0x213CD6C
       description: |-
@@ -6735,24 +6744,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: ProcError
-#      namespace: FID_Conflict
-      address:
-        NA:
-          - 0x214AD90
-          - 0x214C594
-          - 0x214D0B8
-          - 0x214DD80
-          - 0x2150ECC
-          - 0x215131C
-          - 0x21519B8
-          - 0x2151E9C
-          - 0x2154728
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        No params.
-    - name: ProcWait
+    - name: procWait
       address:
         NA:
           - 0x21479E8
@@ -7312,24 +7304,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: ProcError
-#      namespace: FID_Conflict
-      address:
-        NA:
-          - 0x214AD90
-          - 0x214C594
-          - 0x214D0B8
-          - 0x214DD80
-          - 0x2150ECC
-          - 0x215131C
-          - 0x21519B8
-          - 0x2151E9C
-          - 0x2154728
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        No params.
-    - name: Dwci_SceneSetEdit32
+    - name: DWCi_SceneSetEdit32
       address:
         NA: 0x214C5E8
       description: |-
@@ -7639,24 +7614,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: ProcError
-#      namespace: FID_Conflict
-      address:
-        NA:
-          - 0x214AD90
-          - 0x214C594
-          - 0x214D0B8
-          - 0x214DD80
-          - 0x2150ECC
-          - 0x215131C
-          - 0x21519B8
-          - 0x2151E9C
-          - 0x2154728
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        No params.
-    - name: ProcError1
+    - name: procError1
       address:
         NA:
           - 0x214D0E4
@@ -7991,24 +7949,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: ProcError
-#      namespace: FID_Conflict
-      address:
-        NA:
-          - 0x214AD90
-          - 0x214C594
-          - 0x214D0B8
-          - 0x214DD80
-          - 0x2150ECC
-          - 0x215131C
-          - 0x21519B8
-          - 0x2151E9C
-          - 0x2154728
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        No params.
-    - name: ProcError1
+    - name: procError1
       address:
         NA:
           - 0x214D0E4
@@ -8733,7 +8674,14 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: InitGraphics
+    - name: procError
+      address:
+        NA: 0x2150870
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        No params.
+    - name: initGraphics
       address:
         NA:
           - 0x2147AD8
@@ -9214,24 +9162,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: ProcError
-#      namespace: FID_Conflict
-      address:
-        NA:
-          - 0x214AD90
-          - 0x214C594
-          - 0x214D0B8
-          - 0x214DD80
-          - 0x2150ECC
-          - 0x215131C
-          - 0x21519B8
-          - 0x2151E9C
-          - 0x2154728
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        No params.
-    - name: Dwci_IsFold
+    - name: DWCi_IsFold
       address:
         NA:
           - 0x214A4A4
@@ -9518,24 +9449,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: ProcError
-#      namespace: FID_Conflict
-      address:
-        NA:
-          - 0x214AD90
-          - 0x214C594
-          - 0x214D0B8
-          - 0x214DD80
-          - 0x2150ECC
-          - 0x215131C
-          - 0x21519B8
-          - 0x2151E9C
-          - 0x2154728
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        No params.
-    - name: Dwci_SceneSetRakuComplete
+    - name: DWCi_SceneSetRakuComplete
       address:
         NA: 0x2151368
       description: |-
@@ -9978,24 +9892,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: ProcError
-#      namespace: FID_Conflict
-      address:
-        NA:
-          - 0x214AD90
-          - 0x214C594
-          - 0x214D0B8
-          - 0x214DD80
-          - 0x2150ECC
-          - 0x215131C
-          - 0x21519B8
-          - 0x2151E9C
-          - 0x2154728
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        No params.
-    - name: Dwci_SceneSetSearch
+    - name: DWCi_SceneSetSearch
       address:
         NA: 0x2151A04
       description: |-
@@ -10264,24 +10161,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: ProcError
-#      namespace: FID_Conflict
-      address:
-        NA:
-          - 0x214AD90
-          - 0x214C594
-          - 0x214D0B8
-          - 0x214DD80
-          - 0x2150ECC
-          - 0x215131C
-          - 0x21519B8
-          - 0x2151E9C
-          - 0x2154728
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        No params.
-    - name: Dwci_SceneSetSelectAp
+    - name: DWCi_SceneSetSelectAp
       address:
         NA: 0x2151EE8
       description: |-
@@ -12200,24 +12080,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: ProcError
-#      namespace: FID_Conflict
-      address:
-        NA:
-          - 0x214AD90
-          - 0x214C594
-          - 0x214D0B8
-          - 0x214DD80
-          - 0x2150ECC
-          - 0x215131C
-          - 0x21519B8
-          - 0x2151E9C
-          - 0x2154728
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        No params.
-    - name: ProcBoth
+    - name: procBoth
       address:
         NA: 0x2154774
       description: |-
@@ -13186,12 +13049,9 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_Mov_WH_StateInEndChildMP
-#      namespace: FID_Conflict
+    - name: DWCi_MOV_WH_StateInEndParentMP
       address:
-        NA:
-          - 0x21592A4
-          - 0x21593C4
+        NA: 0x21592A4
       description: |-
         [MANUAL DESCRIPTION]
         
@@ -13217,12 +13077,9 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_Mov_WH_StateInEndChildMP
-#      namespace: FID_Conflict
+    - name: DWCi_MOV_WH_StateInEndChildMP
       address:
-        NA:
-          - 0x21592A4
-          - 0x21593C4
+        NA: 0x21593C4
       description: |-
         [MANUAL DESCRIPTION]
         
