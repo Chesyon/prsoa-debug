@@ -871,7 +871,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwc_Auth_GetCalInfoFromNVRAM
+    - name: Dwc_Auth_GetCalInfoFromNVram
       address:
         NA: 0x21361B4
       description: |-
@@ -1172,70 +1172,70 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_BACKUPlInit
+    - name: Dwci_BackuplInit
       address:
         NA: 0x2139AF4
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_BACKUPlRead
+    - name: Dwci_BackuplRead
       address:
         NA: 0x2139B38
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_BACKUPlWritePage
+    - name: Dwci_BackuplWritePage
       address:
         NA: 0x2139B64
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_BACKUPlWriteAll
+    - name: Dwci_BackuplWriteAll
       address:
         NA: 0x2139BEC
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_BACKUPlSetWiFi
+    - name: Dwci_BackuplSetWiFi
       address:
         NA: 0x2139C80
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_BACKUPlConvMaskCidr
+    - name: Dwci_BackuplConvMaskCidr
       address:
         NA: 0x2139C98
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_BACKUPlConvMaskAddr
+    - name: Dwci_BackuplConvMaskAddr
       address:
         NA: 0x2139CDC
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwc_BACKUPlCheckSsid
+    - name: Dwc_BackuplCheckSsid
       address:
         NA: 0x2139D0C
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwc_BACKUPlCheckIp
+    - name: Dwc_BackuplCheckIp
       address:
         NA: 0x2139D34
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwc_BACKUPlCheckAddress
+    - name: Dwc_BackuplCheckAddress
       address:
         NA: 0x2139DB0
       description: |-
@@ -1249,14 +1249,14 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Callback_NVRAM
+    - name: Callback_NVram
       address:
         NA: 0x213A40C
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_BACKUPlConvWifiInfo
+    - name: Dwci_BackuplConvWifiInfo
       address:
         NA: 0x213A43C
       description: |-
@@ -1300,28 +1300,28 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_AUTH_GetNewWiFiInfo
+    - name: Dwci_Auth_GetNewWiFiInfo
       address:
         NA: 0x213AB40
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_AUTH_MakeWiFiID
+    - name: Dwci_Auth_MakeWiFiID
       address:
         NA: 0x213AD1C
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_AUTH_UpDateWiFiID
+    - name: Dwci_Auth_UpDateWiFiID
       address:
         NA: 0x213AD60
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_AUTH_RemakeWiFiID
+    - name: Dwci_Auth_RemakeWiFiID
       address:
         NA: 0x213ADB0
       description: |-
@@ -1433,28 +1433,28 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwc_SVLGetTokenAsync
+    - name: Dwc_SvlgetTokenAsync
       address:
         NA: 0x213B71C
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwc_SVLProcess
+    - name: Dwc_Svlprocess
       address:
         NA: 0x213B790
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwc_NASLoginAsync
+    - name: Dwc_NasloginAsync
       address:
         NA: 0x213B7B4
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwc_NASLoginProcess
+    - name: Dwc_NasloginProcess
       address:
         NA: 0x213B878
       description: |-
@@ -1489,7 +1489,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_SVLTokenWaitThread
+    - name: Dwci_SvltokenWaitThread
       address:
         NA: 0x213BADC
       description: |-
@@ -1545,14 +1545,14 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Aoss_MALLOC
+    - name: Aoss_Malloc
       address:
         NA: 0x213BEF8
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Aoss_FREE
+    - name: Aoss_Free
       address:
         NA: 0x213BF08
       description: |-
@@ -1603,7 +1603,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Aoss_set_APInfo
+    - name: Aoss_set_ApInfo
       address:
         NA: 0x213CD6C
       description: |-
@@ -2093,14 +2093,14 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_ANIMElInitEx
+    - name: Dwci_AnimelInitEx
       address:
         NA: 0x2142568
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_ANIMElEnd
+    - name: Dwci_AnimelEnd
       address:
         NA: 0x2142638
       description: |-
@@ -2114,56 +2114,56 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_BTNlInit
+    - name: Dwci_BtnlInit
       address:
         NA: 0x2142740
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_BTNlEnd
+    - name: Dwci_BtnlEnd
       address:
         NA: 0x2142838
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_BTNlGet
+    - name: Dwci_BtnlGet
       address:
         NA: 0x2142868
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_BTNlSet
+    - name: Dwci_BtnlSet
       address:
         NA: 0x214287C
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_BTNlSetForce
+    - name: Dwci_BtnlSetForce
       address:
         NA: 0x214289C
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_BTNlIsEnd
+    - name: Dwci_BtnlIsEnd
       address:
         NA: 0x21428B0
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_BTNlEnable
+    - name: Dwci_BtnlEnable
       address:
         NA: 0x21428DC
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_BTNlDisable
+    - name: Dwci_BtnlDisable
       address:
         NA: 0x21428F4
       description: |-
@@ -2239,21 +2239,21 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_COMMENTlInit
+    - name: Dwci_CommentlInit
       address:
         NA: 0x2142DB4
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_COMMENTlDispEx
+    - name: Dwci_CommentlDispEx
       address:
         NA: 0x2142DC8
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_COMMENTlDelete
+    - name: Dwci_CommentlDelete
       address:
         NA: 0x2142E9C
       description: |-
@@ -2267,77 +2267,77 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_CMNlLoadResource
+    - name: Dwci_CmnlLoadResource
       address:
         NA: 0x2142F34
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_CMNlStep
+    - name: Dwci_CmnlStep
       address:
         NA: 0x2142F74
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_CMNlButton
+    - name: Dwci_CmnlButton
       address:
         NA: 0x2142FC4
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_CMNlMsgDraw
+    - name: Dwci_CmnlMsgDraw
       address:
         NA: 0x2142FFC
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_CMNlMsgNameDraw
+    - name: Dwci_CmnlMsgNameDraw
       address:
         NA: 0x2143070
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_CMNlFontFlag
+    - name: Dwci_CmnlFontFlag
       address:
         NA: 0x214312C
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_FOCUSlInit
+    - name: Dwci_FocuslInit
       address:
         NA: 0x2143144
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_FOCUSlEnd
+    - name: Dwci_FocuslEnd
       address:
         NA: 0x2143164
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_FOCUSlDisp
+    - name: Dwci_FocuslDisp
       address:
         NA: 0x214317C
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_FOCUSlDisp4
+    - name: Dwci_FocuslDisp4
       address:
         NA: 0x2143238
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_FOCUSlDelete
+    - name: Dwci_FocuslDelete
       address:
         NA: 0x2143328
       description: |-
@@ -2382,14 +2382,14 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_ICONlInit
+    - name: Dwci_IconlInit
       address:
         NA: 0x21434C0
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_ICONlEnd
+    - name: Dwci_IconlEnd
       address:
         NA: 0x2143578
       description: |-
@@ -3012,35 +3012,35 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_MSGlInit
+    - name: Dwci_MsglInit
       address:
         NA: 0x2147018
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_MSGlRead
+    - name: Dwci_MsglRead
       address:
         NA: 0x2147068
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_MSGlRelease
+    - name: Dwci_MsglRelease
       address:
         NA: 0x21470C0
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_MSGlGet
+    - name: Dwci_MsglGet
       address:
         NA: 0x21470EC
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_MSGlGetEx
+    - name: Dwci_MsglGetEx
       address:
         NA: 0x2147104
       description: |-
@@ -12240,28 +12240,28 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_SCREENlInit
+    - name: Dwci_ScreenlInit
       address:
         NA: 0x2154838
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_SCREENlEnd
+    - name: Dwci_ScreenlEnd
       address:
         NA: 0x2154898
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_SCREENlRenew
+    - name: Dwci_ScreenlRenew
       address:
         NA: 0x21548C4
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_SCREENlCopy
+    - name: Dwci_ScreenlCopy
       address:
         NA: 0x21548DC
       description: |-
@@ -12278,7 +12278,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_SCREENlCopyPalette
+    - name: Dwci_ScreenlCopyPalette
       address:
         NA: 0x2154988
       description: |-
@@ -12292,7 +12292,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_SCREENlSetPalette
+    - name: Dwci_ScreenlSetPalette
       address:
         NA: 0x21549F0
       description: |-
@@ -12433,21 +12433,21 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_SEARCHlInit
+    - name: Dwci_SearchlInit
       address:
         NA: 0x2155110
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_SEARCHlEnd
+    - name: Dwci_SearchlEnd
       address:
         NA: 0x2155144
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_SEARCHlBegin
+    - name: Dwci_SearchlBegin
       address:
         NA: 0x2155178
       description: |-
@@ -12463,14 +12463,14 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_SEARCHlStop
+    - name: Dwci_SearchlStop
       address:
         NA: 0x2155278
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_SEARCHlGetApInfo
+    - name: Dwci_SearchlGetApInfo
       address:
         NA: 0x2155314
       description: |-
@@ -12491,112 +12491,112 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_SETTIGNlInit
+    - name: Dwci_SettignlInit
       address:
         NA: 0x21555A8
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_SETTIGNlGet
+    - name: Dwci_SettignlGet
       address:
         NA: 0x2155600
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_SETTINGlSetDnsAuto
+    - name: Dwci_SettinglSetDnsAuto
       address:
         NA: 0x2155628
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_SETTINGlSetSsid
+    - name: Dwci_SettinglSetSsid
       address:
         NA: 0x215563C
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_SETTINGlSetWep
+    - name: Dwci_SettinglSetWep
       address:
         NA: 0x215566C
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_SETTINGlGetSsid
+    - name: Dwci_SettinglGetSsid
       address:
         NA: 0x215589C
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_SETTINGlGetGateway
+    - name: Dwci_SettinglGetGateway
       address:
         NA: 0x2155940
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_SETTINGlGetDnsP
+    - name: Dwci_SettinglGetDnsP
       address:
         NA: 0x2155984
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_SETTINGlGetDnsS
+    - name: Dwci_SettinglGetDnsS
       address:
         NA: 0x21559C8
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_SETTINGlGetSetType
+    - name: Dwci_SettinglGetSetType
       address:
         NA: 0x2155A0C
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_SETTINGlSetSetting
+    - name: Dwci_SettinglSetSetting
       address:
         NA: 0x2155A24
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_SETTINGlSet
+    - name: Dwci_SettinglSet
       address:
         NA: 0x2155B04
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_SETTINGlSetRaku
+    - name: Dwci_SettinglSetRaku
       address:
         NA: 0x2155BE0
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_SETTINGlSetAoss
+    - name: Dwci_SettinglSetAoss
       address:
         NA: 0x2155CF4
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_SETTINGlErasePage
+    - name: Dwci_SettinglErasePage
       address:
         NA: 0x2155E14
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_SETTINGlEraseAll
+    - name: Dwci_SettinglEraseAll
       address:
         NA: 0x2155E50
       description: |-
@@ -12610,7 +12610,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_SETTINGlConvAddress
+    - name: Dwci_SettinglConvAddress
       address:
         NA: 0x2156068
       description: |-
@@ -12666,7 +12666,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_STEPlBegin
+    - name: Dwci_SteplBegin
       address:
         NA: 0x215625C
       description: |-
@@ -12708,21 +12708,21 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_STEPlEnd
+    - name: Dwci_SteplEnd
       address:
         NA: 0x21567B0
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_STEPlChange
+    - name: Dwci_SteplChange
       address:
         NA: 0x21567F0
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_STEPlGet
+    - name: Dwci_SteplGet
       address:
         NA: 0x21568B8
       description: |-
@@ -12783,14 +12783,14 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_STEPlIsEnd
+    - name: Dwci_SteplIsEnd
       address:
         NA: 0x2156CD8
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_STEPlChangeScr
+    - name: Dwci_SteplChangeScr
       address:
         NA: 0x2156D04
       description: |-
@@ -12804,7 +12804,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_USBAPlBegin
+    - name: Dwci_UsbaplBegin
       address:
         NA: 0x2156D98
       description: |-
@@ -12820,14 +12820,14 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_USBAPlEnd
+    - name: Dwci_UsbaplEnd
       address:
         NA: 0x2156F50
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_USBAPlSetCallback
+    - name: Dwci_UsbaplSetCallback
       address:
         NA: 0x2157034
       description: |-
@@ -12862,28 +12862,28 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_WINlInitEx
+    - name: Dwci_WinlInitEx
       address:
         NA: 0x215747C
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_WINlEnd
+    - name: Dwci_WinlEnd
       address:
         NA: 0x21577A8
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_WINlGet
+    - name: Dwci_WinlGet
       address:
         NA: 0x21577EC
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_WINlIsInit
+    - name: Dwci_WinlIsInit
       address:
         NA: 0x2157800
       description: |-
@@ -13532,14 +13532,14 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_ARClInit
+    - name: Dwci_ArclInit
       address:
         NA: 0x215AC74
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_ARClEnd
+    - name: Dwci_ArclEnd
       address:
         NA: 0x215AE24
       description: |-
@@ -13560,14 +13560,14 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_ARClReadEx
+    - name: Dwci_ArclReadEx
       address:
         NA: 0x215AF6C
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_ARClRelease
+    - name: Dwci_ArclRelease
       address:
         NA: 0x215B060
       description: |-
@@ -13581,154 +13581,154 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_CELLlInit
+    - name: Dwci_CelllInit
       address:
         NA: 0x215B0EC
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_CELLlEnd
+    - name: Dwci_CelllEnd
       address:
         NA: 0x215B1C0
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_CELLlForm
+    - name: Dwci_CelllForm
       address:
         NA: 0x215B214
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_CELLlDelete
+    - name: Dwci_CelllDelete
       address:
         NA: 0x215B370
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_CELLlSetEffect
+    - name: Dwci_CelllSetEffect
       address:
         NA: 0x215B404
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_CELLlSetPalette
+    - name: Dwci_CelllSetPalette
       address:
         NA: 0x215B4A8
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_CELLlSetPosition
+    - name: Dwci_CelllSetPosition
       address:
         NA: 0x215B528
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_CELLlSetPriority
+    - name: Dwci_CelllSetPriority
       address:
         NA: 0x215B618
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_CELLlGetPosition
+    - name: Dwci_CelllGetPosition
       address:
         NA: 0x215B678
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_CEINlRead
+    - name: Dwci_CeinlRead
       address:
         NA: 0x215B6A8
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_CEINlRelease
+    - name: Dwci_CeinlRelease
       address:
         NA: 0x215B6D8
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_CEINlSet
+    - name: Dwci_CeinlSet
       address:
         NA: 0x215B700
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_CEINlSetExObj
+    - name: Dwci_CeinlSetExObj
       address:
         NA: 0x215B794
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_CEINlSetExCell
+    - name: Dwci_CeinlSetExCell
       address:
         NA: 0x215B7C0
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_QUElForm
+    - name: Dwci_QuelForm
       address:
         NA: 0x215B808
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_QUElFormEx
+    - name: Dwci_QuelFormEx
       address:
         NA: 0x215B83C
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_QUElDelete
+    - name: Dwci_QuelDelete
       address:
         NA: 0x215B87C
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_QUElPushBack
+    - name: Dwci_QuelPushBack
       address:
         NA: 0x215B898
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_QUElPopBack
+    - name: Dwci_QuelPopBack
       address:
         NA: 0x215B8F0
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_EFFlInit
+    - name: Dwci_EfflInit
       address:
         NA: 0x215B948
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_EFFlCheck
+    - name: Dwci_EfflCheck
       address:
         NA: 0x215B9A4
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_EFFlFade
+    - name: Dwci_EfflFade
       address:
         NA: 0x215B9C8
       description: |-
@@ -13742,7 +13742,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_EFFlWait
+    - name: Dwci_EfflWait
       address:
         NA: 0x215BBC8
       description: |-
@@ -13756,35 +13756,35 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_FNTlInit
+    - name: Dwci_FntlInit
       address:
         NA: 0x215BC58
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_FNTlEnd
+    - name: Dwci_FntlEnd
       address:
         NA: 0x215BD5C
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_FNTlFormEx
+    - name: Dwci_FntlFormEx
       address:
         NA: 0x215BDA8
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_FNTlDelete
+    - name: Dwci_FntlDelete
       address:
         NA: 0x215BE84
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_FNTlFormBgEx
+    - name: Dwci_FntlFormBgEx
       address:
         NA: 0x215BEB0
       description: |-
@@ -13801,63 +13801,63 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_FNTlDeleteBg
+    - name: Dwci_FntlDeleteBg
       address:
         NA: 0x215C0B0
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_FNTlDeleteBgLcd
+    - name: Dwci_FntlDeleteBgLcd
       address:
         NA: 0x215C114
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_FNTlDraw
+    - name: Dwci_FntlDraw
       address:
         NA: 0x215C138
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_FNTlDrawCharEx
+    - name: Dwci_FntlDrawCharEx
       address:
         NA: 0x215C1E8
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_FNTlDrawStringEx
+    - name: Dwci_FntlDrawStringEx
       address:
         NA: 0x215C224
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_FNTlDrawRect
+    - name: Dwci_FntlDrawRect
       address:
         NA: 0x215C2D0
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_FNTlClear
+    - name: Dwci_FntlClear
       address:
         NA: 0x215C390
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_FNTlDisp
+    - name: Dwci_FntlDisp
       address:
         NA: 0x215C3A4
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_FNTlRenewBg
+    - name: Dwci_FntlRenewBg
       address:
         NA: 0x215C43C
       description: |-
@@ -13906,56 +13906,56 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_HEAPlInit
+    - name: Dwci_HeaplInit
       address:
         NA: 0x215C7EC
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_HEAPlEnd
+    - name: Dwci_HeaplEnd
       address:
         NA: 0x215C82C
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_HEAPlAlloc
+    - name: Dwci_HeaplAlloc
       address:
         NA: 0x215C850
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_HEAPlAllocEx
+    - name: Dwci_HeaplAllocEx
       address:
         NA: 0x215C89C
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_HEAPlFree_
+    - name: Dwci_HeaplFree_
       address:
         NA: 0x215C8C0
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_IPTlInit
+    - name: Dwci_IptlInit
       address:
         NA: 0x215C940
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_IPTlEnd
+    - name: Dwci_IptlEnd
       address:
         NA: 0x215C9BC
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_IPTlRead
+    - name: Dwci_IptlRead
       address:
         NA: 0x215C9F4
       description: |-
@@ -13976,56 +13976,56 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_IPTlCheckFold
+    - name: Dwci_IptlCheckFold
       address:
         NA: 0x215CF54
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_ITRlIntr
+    - name: Dwci_ItrlIntr
       address:
         NA: 0x215CFD0
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_ITRlEnd
+    - name: Dwci_ItrlEnd
       address:
         NA: 0x215D044
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_LSTlForm
+    - name: Dwci_LstlForm
       address:
         NA: 0x215D0A8
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_LSTlDelete
+    - name: Dwci_LstlDelete
       address:
         NA: 0x215D0D4
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_LSTlErase
+    - name: Dwci_LstlErase
       address:
         NA: 0x215D0F0
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_LSTlInsert
+    - name: Dwci_LstlInsert
       address:
         NA: 0x215D128
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_OBJlInit
+    - name: Dwci_ObjlInit
       address:
         NA: 0x215D178
       description: |-
@@ -14039,56 +14039,56 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_OBJlEnd
+    - name: Dwci_ObjlEnd
       address:
         NA: 0x215D25C
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_OBJlFormGx
+    - name: Dwci_ObjlFormGx
       address:
         NA: 0x215D288
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_OBJlDelete
+    - name: Dwci_ObjlDelete
       address:
         NA: 0x215D2A8
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_OBJlGetOam
+    - name: Dwci_ObjlGetOam
       address:
         NA: 0x215D2F4
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_OVRlInit
+    - name: Dwci_OvrlInit
       address:
         NA: 0x215D30C
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_OVRlAlloc
+    - name: Dwci_OvrlAlloc
       address:
         NA: 0x215D3CC
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_OVRlFree
+    - name: Dwci_OvrlFree
       address:
         NA: 0x215D544
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_STRlNLen
+    - name: Dwci_StrlNLen
       address:
         NA: 0x215D584
       description: |-
@@ -14116,28 +14116,28 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_TSKlInit
+    - name: Dwci_TsklInit
       address:
         NA: 0x215D81C
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_TSKlEnd
+    - name: Dwci_TsklEnd
       address:
         NA: 0x215D930
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_TSKlAct
+    - name: Dwci_TsklAct
       address:
         NA: 0x215D978
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_TSKlForm
+    - name: Dwci_TsklForm
       address:
         NA: 0x215DA28
       description: |-
@@ -14151,7 +14151,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_TSKlDelete
+    - name: Dwci_TsklDelete
       address:
         NA: 0x215DAD0
       description: |-
@@ -14165,7 +14165,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_TSKlOperate
+    - name: Dwci_TsklOperate
       address:
         NA: 0x215DB40
       description: |-
