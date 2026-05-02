@@ -16,7 +16,7 @@ overlay4:
     
     The scene class is named "Letter" internally.
   functions:
-    - name: Overlay4EntryPoint
+    - name: CLetterSceneConstructor
       address:
         NA: 0x211C9E0
       description: |-
@@ -25,6 +25,7 @@ overlay4:
         r0: ov_04_unk_struct pointer
         r1: megastruct pointer
     - name: ret_0211d560
+      namespace: c_letter_scene
       address:
         NA: 0x211D560
       description: |-
