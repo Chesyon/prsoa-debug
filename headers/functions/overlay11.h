@@ -182,7 +182,7 @@ undefined4 DWC_BM_Init(int8_t *param_1);
 undefined4 checkAp(int param_1,undefined4 param_2,undefined4 param_3,undefined4 param_4);
 undefined4 init(int16_t *param_1);
 void initPage(int param_1,int param_2);
-ulong long DWCi_Util_WiFiId_scrambleUid(unsigned int param_1,unsigned int param_2,unsigned int param_3,unsigned int param_4);
+unsigned long long DWCi_Util_WiFiId_scrambleUid(unsigned int param_1,unsigned int param_2,unsigned int param_3,unsigned int param_4);
 undefined4 DWCi_AUTH_GetNewWiFiInfo(undefined4 *param_1);
 bool DWCi_AUTH_MakeWiFiID(undefined4 param_1,undefined4 param_2,undefined4 param_3,undefined4 param_4);
 bool DWCi_AUTH_UpDateWiFiID(undefined4 *param_1,undefined4 param_2);
