@@ -107,7 +107,7 @@ arm9:
         Seems to initialize what we believe to be the struct that stores player inputs. 
         
         r0: controller_inputs pointer
-    - name: MaybeMemAllocVeneer
+    - name: OperatorNewVeneer
       address:
         NA:
           - 0x2001D28
@@ -146,16 +146,6 @@ arm9:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
-    - name: MaybeMemAllocVeneer
-      address:
-        NA:
-          - 0x2001D28
-          - 0x200203C
-          - 0x20101A8
-      description: |-
-        Seems to allocate memory, returning a pointer to the newly allocated memory.
-        
-        r0: num bytes to allocate
     - name: Heap_FreeSecondaryVeneer
       address:
         NA: 0x2002048
@@ -770,16 +760,6 @@ arm9:
         Retrieves a megastruct pointer.
         
         return: megastruct pointer
-    - name: MaybeMemAllocVeneer
-      address:
-        NA:
-          - 0x2001D28
-          - 0x200203C
-          - 0x20101A8
-      description: |-
-        Seems to allocate memory, returning a pointer to the newly allocated memory.
-        
-        r0: num bytes to allocate
     - name: SetTextboxWindowAndSpeedSettings
       address:
         NA: 0x201024C
