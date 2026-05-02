@@ -2249,7 +2249,6 @@ int CloseVeneer(int __fd);
 void OS_Sleep(void);
 void Nns_SndMain(void);
 void Std_GetStringLength(void);
-void Std_GetStringLength(void);
 void Std_CompareNString(void);
 #endif
 

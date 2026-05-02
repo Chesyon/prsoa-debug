@@ -12970,9 +12970,6 @@ arm9:
     - name: Std_GetStringLength
       address:
         NA: 0x20788B8
-    - name: Std_GetStringLength
-      address:
-        NA: 0x20788B8
     - name: Std_CompareNString
       address:
         NA: 0x2078930  
