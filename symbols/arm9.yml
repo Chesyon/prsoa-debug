@@ -8042,9 +8042,7 @@ arm9:
         No params.
     - name: ForceStopStrm
       address:
-        NA:
-          - 0x205C864
-          - 0x205ED00
+        NA: 0x205C864
       description: |-
         [MANUAL DESCRIPTION]
         
@@ -8437,11 +8435,9 @@ arm9:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: DisposeCallback
+    - name: DisposeCallback_Arc
       address:
-        NA:
-          - 0x205DF44
-          - 0x205EFE4
+        NA: 0x205DF44
       description: |-
         [MANUAL DESCRIPTION]
         
@@ -8635,11 +8631,9 @@ arm9:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: ForceStopStrm
+    - name: ForceStopStrm_Arc
       address:
-        NA:
-          - 0x205C864
-          - 0x205ED00
+        NA: 0x205ED00
       description: |-
         [MANUAL DESCRIPTION]
         
@@ -8702,9 +8696,7 @@ arm9:
         No params.
     - name: DisposeCallback
       address:
-        NA:
-          - 0x205DF44
-          - 0x205EFE4
+        NA: 0x205EFE4
       description: |-
         [MANUAL DESCRIPTION]
         
