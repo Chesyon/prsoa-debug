@@ -2171,7 +2171,6 @@ overlay11:
         NA:
           - 0x214290C
           - 0x2144700
-          - 0x214610C
           - 0x2154B88
           - 0x21550D4
           - 0x2157B18
@@ -2551,7 +2550,6 @@ overlay11:
         NA:
           - 0x214290C
           - 0x2144700
-          - 0x214610C
           - 0x2154B88
           - 0x21550D4
           - 0x2157B18
@@ -2805,15 +2803,9 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Disp
+    - name: DispVeneer
       address:
-        NA:
-          - 0x214290C
-          - 0x2144700
-          - 0x214610C
-          - 0x2154B88
-          - 0x21550D4
-          - 0x2157B18
+        NA: 0x214610C
       description: |-
         [MANUAL DESCRIPTION]
         
@@ -2952,28 +2944,28 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_SetParam_
+    - name: Dwci_SetParam
       address:
         NA: 0x2146F08
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_GetParam_
+    - name: Dwci_GetParam
       address:
         NA: 0x2146F1C
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_SetParam2_
+    - name: Dwci_SetParam2
       address:
         NA: 0x2146F44
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_GetParam2_
+    - name: Dwci_GetParam2
       address:
         NA: 0x2146F58
       description: |-
@@ -12180,7 +12172,6 @@ overlay11:
         NA:
           - 0x214290C
           - 0x2144700
-          - 0x214610C
           - 0x2154B88
           - 0x21550D4
           - 0x2157B18
@@ -12266,7 +12257,6 @@ overlay11:
         NA:
           - 0x214290C
           - 0x2144700
-          - 0x214610C
           - 0x2154B88
           - 0x21550D4
           - 0x2157B18
@@ -12325,7 +12315,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: renewInfo
+    - name: RenewInfo
       address:
         NA: 0x21553D4
       description: |-
@@ -12767,7 +12757,6 @@ overlay11:
         NA:
           - 0x214290C
           - 0x2144700
-          - 0x214610C
           - 0x2154B88
           - 0x21550D4
           - 0x2157B18
@@ -13769,7 +13758,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_HeaplFree_
+    - name: Dwci_HeaplFree
       address:
         NA: 0x215C8C0
       description: |-
@@ -13797,14 +13786,14 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: readKey
+    - name: ReadKey
       address:
         NA: 0x215CA04
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: readTouch
+    - name: ReadTouch
       address:
         NA: 0x215CB08
       description: |-
@@ -14545,7 +14534,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: req_Callback
+    - name: Req_Callback
       address:
         NA: 0x21617E4
       description: |-
