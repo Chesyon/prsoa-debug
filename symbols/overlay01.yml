@@ -16,7 +16,7 @@ overlay1:
     
     The scene class is named "Battle" internally.
   functions:
-    - name: Overlay1EntryPoint
+    - name: CBattleSceneConstructor
       address:
         NA: 0x211C9E0
       description: |-
@@ -25,6 +25,7 @@ overlay1:
         r0: battle_struct pointer
         r1: megastruct pointer
     - name: BattleStateManager
+      namespace: c_battle_scene
       address:
         NA: 0x211F11C
       description: |-
@@ -144,7 +145,24 @@ overlay1:
     - name: ret_021293d4
       address:
         NA: 0x21293D4
-      description: Does nothing but return. Likely a debug hook for a nearby function.
+      description: |-
+        Does nothing but return. Likely a debug hook for a nearby function.
+        
+        No params.
+    - name: GetMysteryStruct0xdcPtrSafe
+      address:
+        NA: 0x212A1B0
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        No params.
+    - name: SysCallFillBattleMsgWrapperAndId
+      address:
+        NA: 0x212A2CC
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        No params.
     - name: SysCallPrintTextboxByBattleMessageId1
       address:
         NA: 0x212B170
@@ -173,7 +191,29 @@ overlay1:
         SysCall Function for CloseTextbox, that lives in overlay_01.
         
         No params.
+    - name: SysCallGetSinFromTableOv1
+      address:
+        NA: 0x212B4C0
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        No params.
+    - name: SysCallGetCosFromTableOv1
+      address:
+        NA: 0x212B4E4
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        No params.
+    - name: SysCallGetArcTan2
+      address:
+        NA: 0x212B510
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        No params.
     - name: ret_0212c028
+      namespace: c_battle_disk
       address:
         NA: 0x212C028
       description: |-
@@ -197,6 +237,7 @@ overlay1:
         r0: battle_effect_table_wrapper pointer
         r1: undefined4
     - name: ret_0212e524
+      namespace: c_disk_cursor
       address:
         NA: 0x212E524
       description: |-
@@ -204,6 +245,7 @@ overlay1:
         
         No params.
     - name: ret_0212e888
+      namespace: c_line_effect
       address:
         NA: 0x212E888
       description: |-
@@ -211,6 +253,7 @@ overlay1:
         
         No params.
     - name: ret_0212ee20
+      namespace: c_battle_assist
       address:
         NA: 0x212EE20
       description: |-
@@ -234,6 +277,7 @@ overlay1:
         r1: file name
         r2: undefined4
     - name: ret_02130b70
+      namespace: c_battle_assist_evil
       address:
         NA: 0x2130B70
       description: |-
@@ -241,6 +285,7 @@ overlay1:
         
         No params.
     - name: ret_02131b44
+      namespace: c_battle_assist_grapple
       address:
         NA: 0x2131B44
       description: |-
@@ -248,6 +293,7 @@ overlay1:
         
         No params.
     - name: ret_02133c04
+      namespace: c_battle_assist_normal
       address:
         NA: 0x2133C04
       description: |-
@@ -255,6 +301,7 @@ overlay1:
         
         No params.
     - name: ret_02134350
+      namespace: c_battle_assist_recover
       address:
         NA: 0x2134350
       description: |-
@@ -262,6 +309,7 @@ overlay1:
         
         No params.
     - name: ret_02136244
+      namespace: c_battle_enemy_gauge
       address:
         NA: 0x2136244
       description: |-
@@ -283,6 +331,7 @@ overlay1:
         
         No params.
     - name: ret_02137b90
+      namespace: c_battle_power_save
       address:
         NA: 0x2137B90
       description: |-
@@ -297,6 +346,7 @@ overlay1:
         
         No params.
     - name: ret_0213ae14
+      namespace: c_battle_game_over
       address:
         NA: 0x213AE14
       description: |-
