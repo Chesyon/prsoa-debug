@@ -67,7 +67,7 @@ undefined4 SysCallMaybeCallsScriptFunctionByName(undefined4 *param_1,int param_2
 undefined4 SysCallInitCombatType2(undefined4 *param_1,int param_2);
 undefined4 TryMountPokemon(struct pokemon_data *param_1);
 unsigned int SysCallRetrievePokemonByUniqueId(int *param_1);
-struct enum room_id_16 SysCallGetFlyDestinationRoom(void);
+struct room_id_16 SysCallGetFlyDestinationRoom(void);
 int16_t SysCallGetFlyXCoord(void);
 int16_t SysCallGetFlyYCoord(void);
 void ret_0214b6f0(void);
