@@ -44,9 +44,36 @@ itcm:
     - name: MIi_DmaSetParams_wait
       address:
         NA: 0x1FF84C0
+    - name: MIi_DmaSetParams_src32
+      address:
+        NA: 0x1FF8530
+    - name: MIi_DmaSetParams_wait_src32
+      address:
+        NA: 0x1FF8554
     - name: MI_SendGXCommand
       address:
         NA: 0x1FF85B8
+    - name: OSi_DoResetSystem
+      address:
+        NA: 0x1FF81E4
+    - name: OSi_DoBoot
+      address:
+        NA: 0x1FF8218
+    - name: OSi_CpuClear32
+      address:
+        NA: 0x1FF82E4
+    - name: OSi_ReloadRomData
+      address:
+        NA: 0x1FF8300
+    - name: OSi_ReadCardRom32
+      address:
+        NA: 0x1FF83A8
+    - name: MIi_DmaSetParams
+      address:
+        NA: 0x1FF8480
+    - name: MIi_DmaSetParams_wait
+      address:
+        NA: 0x1FF84C0
     - name: MIi_DmaSetParams_wait_src32
       address:
         NA: 0x1FF8554
