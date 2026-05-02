@@ -40,7 +40,7 @@ struct file_wrapper * InitFileWrapperWithLangSuffix(struct file_wrapper *param_1
 void ret_0200372c(void);
 void ret_0200396c(void);
 void ret_02003984(void);
-void SetFunctionPtrToReturn(void *param_1);
+void StoreCSceneVfTable(void *param_1);
 void ret_02007ca8(void);
 void ret_02007cc0(void);
 void ret_02008ed8(void);

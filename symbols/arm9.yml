@@ -300,13 +300,13 @@ arm9:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
-    - name: SetFunctionPtrToReturn
+    - name: StoreCSceneVfTable
       address:
         NA: 0x2007C98
       description: |-
-        [MANUAL DESCRIPTION]
+        Seems to write a pointer to C_SCENE_VFTABLE_FUNCS.
         
-        No params.
+        r0: destination pointer
     - name: ret_02007ca8
 #      namespace: c_scene
       address:
