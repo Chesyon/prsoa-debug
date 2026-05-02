@@ -1291,7 +1291,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_Util_WiFiId_scrambleUid
+    - name: Dwci_Util_WiFiId_ScrambleUid
       address:
         NA: 0x213A9BC
       description: |-
@@ -1564,28 +1564,28 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Aoss_release
+    - name: Aoss_Release
       address:
         NA: 0x213CA38
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Aoss_data_init
+    - name: Aoss_Data_Init
       address:
         NA: 0x213CA64
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Aoss_seq_data_copy
+    - name: Aoss_Seq_Data_Copy
       address:
         NA: 0x213CAD4
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Aoss_check_str
+    - name: Aoss_Check_Str
       address:
         NA: 0x213CCCC
       description: |-
@@ -1599,7 +1599,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Aoss_set_ApInfo
+    - name: Aoss_Set_ApInfo
       address:
         NA: 0x213CD6C
       description: |-
@@ -1676,7 +1676,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Aoss_get_bin
+    - name: Aoss_Get_Bin
       address:
         NA: 0x213D344
       description: |-
@@ -1802,14 +1802,14 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Update_crc
+    - name: Update_Crc
       address:
         NA: 0x213DD40
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Make_crc_table
+    - name: Make_Crc_Table
       address:
         NA: 0x213DD78
       description: |-
@@ -1963,7 +1963,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Aeskw_xor64
+    - name: Aeskw_Xor64
       address:
         NA: 0x2140CD8
       description: |-
@@ -2040,14 +2040,14 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: MD5_memcpy
+    - name: MD5_Memcpy
       address:
         NA: 0x2142274
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: MD5_memset
+    - name: MD5_Memset
       address:
         NA: 0x214228C
       description: |-
@@ -13353,14 +13353,14 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Parent_data_receive_progress
+    - name: Parent_Data_Receive_Progress
       address:
         NA: 0x215AB78
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Parent_get_child_data_kind
+    - name: Parent_Get_Child_Data_Kind
       address:
         NA: 0x215AC5C
       description: |-
@@ -14035,7 +14035,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Nhttpi_getHdrFromList
+    - name: Nhttpi_GetHdrFromList
       address:
         NA: 0x215DE20
       description: |-
@@ -14077,35 +14077,35 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Nhttpi_setReqQueue
+    - name: Nhttpi_SetReqQueue
       address:
         NA: 0x215DFEC
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Nhttpi_findReqQueue
+    - name: Nhttpi_FindReqQueue
       address:
         NA: 0x215E0A0
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Nhttpi_freeReqQueue
+    - name: Nhttpi_FreeReqQueue
       address:
         NA: 0x215E0F8
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Nhttpi_allFreeReqQueue
+    - name: Nhttpi_AllFreeReqQueue
       address:
         NA: 0x215E198
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Nhttpi_initLockReqList
+    - name: Nhttpi_InitLockReqList
       address:
         NA: 0x215E1DC
       description: |-
@@ -14119,21 +14119,21 @@ overlay11:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
-    - name: Nhttpi_createCommThread
+    - name: Nhttpi_CreateCommThread
       address:
         NA: 0x215E220
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Nhttpi_destroyCommThread
+    - name: Nhttpi_DestroyCommThread
       address:
         NA: 0x215E298
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Nhttpi_kickCommThread
+    - name: Nhttpi_KickCommThread
       address:
         NA: 0x215E2DC
       description: |-
@@ -14154,35 +14154,35 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Nhttpi_findNextLineHdrRecvBuf
+    - name: Nhttpi_FindNextLineHdrRecvBuf
       address:
         NA: 0x215E3D0
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Nhttpi_skipSpaceHdrRecvBuf
+    - name: Nhttpi_SkipSpaceHdrRecvBuf
       address:
         NA: 0x215E4A0
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Nhttpi_compareTokenN_HdrRecvBuf
+    - name: Nhttpi_CompareTokenN_HdrRecvBuf
       address:
         NA: 0x215E510
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Nhttpi_loadFromHdrRecvBuf
+    - name: Nhttpi_LoadFromHdrRecvBuf
       address:
         NA: 0x215E5E0
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Nhttpi_isRecvBufFull
+    - name: Nhttpi_IsRecvBufFull
       address:
         NA: 0x215E6CC
       description: |-
@@ -14224,7 +14224,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Nhttpi_destroyRequestObject
+    - name: Nhttpi_DestroyRequestObject
       address:
         NA: 0x215ED58
       description: |-
@@ -14238,14 +14238,14 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Nhttpi_cancelAllRequests
+    - name: Nhttpi_CancelAllRequests
       address:
         NA: 0x215EE5C
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Nhttpi_resolveHostname
+    - name: Nhttpi_ResolveHostname
       address:
         NA: 0x215EEB0
       description: |-
@@ -14259,7 +14259,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Nhttpi_getHeaderValue
+    - name: Nhttpi_GetHeaderValue
       address:
         NA: 0x215EFC0
       description: |-
@@ -14329,21 +14329,21 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Nhttpi_strnicmp
+    - name: Nhttpi_Strnicmp
       address:
         NA: 0x215F428
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Nhttpi_memclr
+    - name: Nhttpi_Memclr
       address:
         NA: 0x215F49C
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Nhttpi_memcpy
+    - name: Nhttpi_Memcpy
       address:
         NA: 0x215F4B0
       description: |-
@@ -14394,28 +14394,28 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Nhttpi_getUrlEncodedSize
+    - name: Nhttpi_GetUrlEncodedSize
       address:
         NA: 0x2160AC0
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Nhttpi_encodeUrlChar
+    - name: Nhttpi_EncodeUrlChar
       address:
         NA: 0x2160B28
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Nhttpi_strToHex
+    - name: Nhttpi_StrToHex
       address:
         NA: 0x2160BB8
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Nhttpi_strToInt
+    - name: Nhttpi_StrToInt
       address:
         NA:
           - 0x2160CA0
@@ -14424,7 +14424,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Nhttpi_intToStr
+    - name: Nhttpi_IntToStr
       address:
         NA:
           - 0x2160D38
@@ -14433,28 +14433,28 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Nhttpi_compareToken
+    - name: Nhttpi_CompareToken
       address:
         NA: 0x2160DF4
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Nhttpi_strtonum
+    - name: Nhttpi_Strtonum
       address:
         NA: 0x2160E78
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Nhttpi_memfind
+    - name: Nhttpi_Memfind
       address:
         NA: 0x2160EE8
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_Ndi_freeAttr
+    - name: Dwci_Ndi_FreeAttr
       address:
         NA: 0x2160F6C
       description: |-
@@ -14489,14 +14489,14 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_Ndi_getEncodeLenBase64
+    - name: Dwci_Ndi_GetEncodeLenBase64
       address:
         NA: 0x216119C
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_Ndi_encodeBase64
+    - name: Dwci_Ndi_EncodeBase64
       address:
         NA: 0x21611B8
       description: |-
@@ -14531,21 +14531,21 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_Ndi_getDSdesc
+    - name: Dwci_Ndi_GetDSdesc
       address:
         NA: 0x2161738
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_Ndi_getUserAgent
+    - name: Dwci_Ndi_GetUserAgent
       address:
         NA: 0x21617C4
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: req_callback
+    - name: req_Callback
       address:
         NA: 0x21617E4
       description: |-
@@ -14603,21 +14603,21 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_Ndi_response_count
+    - name: Dwci_Ndi_Response_Count
       address:
         NA: 0x21623C8
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_Ndi_response_contents
+    - name: Dwci_Ndi_Response_Contents
       address:
         NA: 0x216241C
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_Ndi_initLockGlobal
+    - name: Dwci_Ndi_InitLockGlobal
       address:
         NA: 0x21626C8
       description: |-
@@ -14631,7 +14631,7 @@ overlay11:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
-    - name: Dwci_Ndi_initHttpCallback
+    - name: Dwci_Ndi_InitHttpCallback
       address:
         NA: 0x216270C
       description: |-
@@ -14645,49 +14645,49 @@ overlay11:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
-    - name: Dwci_Ndi_prepareHttpCallback
+    - name: Dwci_Ndi_PrepareHttpCallback
       address:
         NA: 0x2162738
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_Ndi_unprepareHttpCallback
+    - name: Dwci_Ndi_UnprepareHttpCallback
       address:
         NA: 0x2162780
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_Ndi_kickThread
+    - name: Dwci_Ndi_KickThread
       address:
         NA: 0x21627AC
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_Ndi_getMacAddress
+    - name: Dwci_Ndi_GetMacAddress
       address:
         NA: 0x21627C0
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_Ndi_memclr
+    - name: Dwci_Ndi_Memclr
       address:
         NA: 0x2162838
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_Ndi_memcpy
+    - name: Dwci_Ndi_Memcpy
       address:
         NA: 0x216284C
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Nhttpi_strToInt
+    - name: Nhttpi_StrToInt
       address:
         NA:
           - 0x2160CA0
@@ -14696,7 +14696,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Nhttpi_intToStr
+    - name: Nhttpi_IntToStr
       address:
         NA:
           - 0x2160D38
@@ -14705,7 +14705,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_Ndi_hexToStrFigure
+    - name: Dwci_Ndi_HexToStrFigure
       address:
         NA: 0x216295C
       description: |-
