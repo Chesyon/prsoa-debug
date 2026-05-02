@@ -622,7 +622,6 @@ void ProcWin(void);
 void ProcWin1(void);
 void ArrangeAddress(void);
 bool IsCorrect(void);
-void ProcError(void);
 void ProcError1(void);
 void InitGraphics(undefined4 param_1,undefined4 param_2,undefined4 param_3,undefined4 param_4);
 void DrawMessage(void);
