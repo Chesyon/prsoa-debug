@@ -11577,7 +11577,8 @@ arm9:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Msl_C_Abort_Exit_Exit
+    - name: Msl_C_Abort_Exit_Exit2
+    - aliases: Msl_C_Abort_Exit___Exit
       address:
         NA: 0x2079338
       description: |-
@@ -11627,7 +11628,7 @@ arm9:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Msl_C_Direct_Io_Fwrite
+    - name: Msl_C_Direct_Io_Fwrite2
       address:
         NA: 0x20796B0
       description: |-
@@ -12928,39 +12929,6 @@ arm9:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Wcm_GetLinkLevel
-      address:
-        NA: 0x2056194
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        No params.
-    - name: CloseVeneer
-      address:
-        NA: 0x2049710
-      description: |-
-        Likely a linker-generated veneer for close.
-        
-        See https://developer.arm.com/documentation/dui0474/k/image-structure-and-generation/linker-generated-veneers/what-is-a-veneer-
-        
-        r0: file descriptor
-        return: 0 on success, or a negative value representing an error
-    - name: OS_Sleep
-      address:
-        NA: 0x2065928
-    - name: Nns_SndMain
-      address:
-        NA: 0x205B9F0
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        No params.
-    - name: Std_GetStringLength
-      address:
-        NA: 0x20788B8
-    - name: Std_CompareNString
-      address:
-        NA: 0x2078930  
   data:
     - name: SECURE
       address:

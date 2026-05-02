@@ -1424,7 +1424,15 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwc_UpdateConnection
+    - name: WCM_GetLinkLevel
+      address:
+        NA:
+          - 0x213B598
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        No params.
+    - name: DWC_UpdateConnection
       address:
         NA: 0x213B6D0
       description: |-
@@ -1872,7 +1880,18 @@ overlay11:
         Veneer to Socket(); in arm9. 
         
         No params.
-    - name: Aoss_Htonl
+    - name: CloseVeneer
+      address:
+        NA:
+          - 0x213E024
+      description: |-
+        Likely a linker-generated veneer for close.
+        
+        See https://developer.arm.com/documentation/dui0474/k/image-structure-and-generation/linker-generated-veneers/what-is-a-veneer-
+        
+        r0: file descriptor
+        return: 0 on success, or a negative value representing an error
+    - name: AOSS_Htonl
       address:
         NA: 0x213E02C
       description: |-
@@ -1907,7 +1926,15 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Aossi_Status
+    - name: OS_Sleep
+      address:
+        NA:
+          - 0x213E708
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        No params.
+    - name: AOSSi_Status
       address:
         NA: 0x213E710
       description: |-
@@ -12497,7 +12524,15 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_SteplBegin
+    - name: NNS_SndMain
+      address:
+        NA:
+          - 0x2156250
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        No params.
+    - name: DWCi_STEPlBegin
       address:
         NA: 0x215625C
       description: |-
@@ -14662,7 +14697,24 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_Ndi_Memclr
+    - name: Std_GetStringLength
+      address:
+        NA:
+          - 0x215F490
+          - 0x2162820
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        No params.
+    - name: STD_CompareNString
+      address:
+        NA:
+          - 0x216282C
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        No params.
+    - name: DWCi_Ndi_memclr
       address:
         NA: 0x2162838
       description: |-

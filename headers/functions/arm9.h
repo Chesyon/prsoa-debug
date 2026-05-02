@@ -2075,7 +2075,7 @@ void string_put_string(unsigned int *param_1,int param_2,unsigned int param_3);
 int OS_VsNPrintfEx(undefined1 *param_1,int param_2,int8_t *param_3,unsigned int *param_4);
 void Msl_C_Abort_Exit_Abort(void);
 void Msl_C_Abort_Exit_Exit(undefined4 param_1);
-void Msl_C_Abort_Exit_Exit(void);
+void Msl_C_Abort_Exit_Exit2(void); // Msl_C_Abort_Exit___Exit
 undefined4 Msl_C_Ansi_Files_Flush_All(void);
 // If declaring these builtins causes issues, you can disable them
 #ifndef PRSOA_NO_BUILTIN
@@ -2084,7 +2084,7 @@ void ret_020794d4(void);
 void Msl_C_Buffer_Io_Prep_Buffer(int param_1);
 int Msl_C_Buffer_Io_Flush_Buffer(undefined4 *param_1,undefined4 *param_2,undefined4 param_3,undefined4 param_4);
 undefined4 Msl_C_Direct_Io_Fwrite(undefined4 param_1,undefined4 param_2,undefined4 param_3,undefined *param_4);
-undefined4 Msl_C_Direct_Io_Fwrite(void *param_1,int param_2,int param_3,int param_4);
+undefined4 Msl_C_Direct_Io_Fwrite2(void *param_1,int param_2,int param_3,int param_4); // MSL_C_direct_io___fwrite
 undefined4 Msl_C_File_Io_Fflush(int param_1);
 void Msl_C_Mbstring_Mbtowc(void);
 int mbtowc(wchar_t *__pwc,char *__s,struct size_t __n);
@@ -2243,12 +2243,6 @@ void NRun_ExceptionHandlerTScp_TransferControl(undefined4 param_1,undefined4 par
 void NRun_ExceptionHandlerTScp_Throw(int param_1,undefined4 param_2,undefined4 param_3,undefined4 param_4);
 void NRun_ExceptionHandlerTScp_Rethrow(void);
 void NRun_N_Eabi_Init_ExitProcess(void);
-void Wcm_GetLinkLevel(void);
-int CloseVeneer(int __fd);
-void OS_Sleep(void);
-void Nns_SndMain(void);
-void Std_GetStringLength(void);
-void Std_CompareNString(void);
 #endif
 
 #endif
