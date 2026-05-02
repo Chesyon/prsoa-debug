@@ -38,7 +38,7 @@ overlay11:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
-    - name: CRangerNetAGBSceneConstructor
+    - name: CRangerNetAgbSeneConstructor
       address:
         NA: 0x211DEF8
       description: |-
@@ -654,7 +654,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: GetIPAddress
+    - name: GetIpAdress
       address:
         NA: 0x2134A80
       description: |-
@@ -689,7 +689,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: MakeSOCConfig
+    - name: MakeSocCnfig
       address:
         NA: 0x2134BEC
       description: |-
@@ -745,35 +745,35 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: decodeSsid
+    - name: DecodeSsid
       address:
         NA: 0x2134EBC
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: makeShopWepKey
+    - name: MakeShopWepKey
       address:
         NA: 0x2134FC0
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: makeUsbWepKey
+    - name: MakeUsbWepKey
       address:
         NA: 0x213500C
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: codetovalue
+    - name: Codetovalue
       address:
         NA: 0x21351B8
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: db64
+    - name: Db64
       address:
         NA: 0x2135228
       description: |-
@@ -1242,7 +1242,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: verify
+    - name: Verify
       address:
         NA: 0x213A354
       description: |-
@@ -1270,7 +1270,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: checkAp
+    - name: CheckAp
       address:
         NA:
           - 0x213A810
@@ -1279,14 +1279,14 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: init
+    - name: Init
       address:
         NA: 0x213A910
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: initPage
+    - name: InitPage
       address:
         NA: 0x213A990
       description: |-
@@ -1328,7 +1328,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwc_Auth_CheckWiFiIDNeedCreate
+    - name: Dwc_Auth_CheckWiFiIdNedCreate
       address:
         NA: 0x213AF50
       description: |-
@@ -1566,14 +1566,14 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: aoss_release
+    - name: Aoss_release
       address:
         NA: 0x213CA38
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: aoss_data_init
+    - name: Aoss_data_init
       address:
         NA: 0x213CA64
       description: |-
@@ -1587,18 +1587,9 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: aoss_check_str
+    - name: Aoss_check_str
       address:
         NA: 0x213CCCC
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        No params.
-    - name: checkAP
-      address:
-        NA:
-          - 0x213A810
-          - 0x213CCF0
       description: |-
         [MANUAL DESCRIPTION]
         
@@ -1680,21 +1671,21 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: aoss_get_bin
+    - name: Aoss_get_bin
       address:
         NA: 0x213D344
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: GetWEPData
+    - name: GetWepDta
       address:
         NA: 0x213D368
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: GetWPAData
+    - name: GetWpaDta
       address:
         NA: 0x213D4BC
       description: |-
@@ -1799,21 +1790,21 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: crc
+    - name: Crc
       address:
         NA: 0x213DD18
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: update_crc
+    - name: Update_crc
       address:
         NA: 0x213DD40
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: make_crc_table
+    - name: Make_crc_table
       address:
         NA: 0x213DD78
       description: |-
@@ -1967,7 +1958,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: aeskw_xor64
+    - name: Aeskw_xor64
       address:
         NA: 0x2140CD8
       description: |-
@@ -2107,7 +2098,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: taskAnime
+    - name: TaskAnime
       address:
         NA: 0x2142674
       description: |-
@@ -2170,7 +2161,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: disp
+    - name: Disp
       address:
         NA:
           - 0x214290C
@@ -2183,14 +2174,14 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: taskStart
+    - name: TaskStart
       address:
         NA: 0x21429A0
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: taskStart1
+    - name: TaskStart1
       address:
         NA:
           - 0x2142A0C
@@ -2200,7 +2191,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: taskMain
+    - name: TaskMain
       address:
         NA:
           - 0x2142A5C
@@ -2210,7 +2201,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: taskEnd
+    - name: TaskEnd
       address:
         NA:
           - 0x2142BE8
@@ -2220,7 +2211,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: taskEnd1
+    - name: TaskEnd1
       address:
         NA:
           - 0x2142C4C
@@ -2232,7 +2223,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: taskRelease
+    - name: TaskRelease
       address:
         NA: 0x2142CC4
       description: |-
@@ -2372,7 +2363,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: taskLoad
+    - name: TaskLoad
       address:
         NA:
           - 0x2143480
@@ -2396,7 +2387,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: taskRenew
+    - name: TaskRenew
       address:
         NA: 0x21435BC
       description: |-
@@ -2445,7 +2436,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: taskStart0
+    - name: TaskStart0
       address:
         NA:
           - 0x2143A54
@@ -2454,7 +2445,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: taskStart1
+    - name: TaskStart1
       address:
         NA:
           - 0x2142A0C
@@ -2464,7 +2455,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: taskStart2
+    - name: TaskStart2
       address:
         NA:
           - 0x2143B7C
@@ -2473,7 +2464,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: taskStart3
+    - name: TaskStart3
       address:
         NA:
           - 0x2143C10
@@ -2482,7 +2473,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: taskStart4
+    - name: TaskStart4
       address:
         NA:
           - 0x2143CA4
@@ -2491,7 +2482,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: touchTriger
+    - name: TouchTriger
       address:
         NA:
           - 0x2143D48
@@ -2500,7 +2491,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: touchRelease
+    - name: TouchRelease
       address:
         NA:
           - 0x2143F30
@@ -2509,21 +2500,21 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: pushCaps
+    - name: PushCaps
       address:
         NA: 0x2144218
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: pushShift
+    - name: PushShift
       address:
         NA: 0x2144248
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: touch
+    - name: Touch
       address:
         NA:
           - 0x2144278
@@ -2532,7 +2523,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: exchangeBack
+    - name: ExchangeBack
       address:
         NA:
           - 0x214447C
@@ -2541,7 +2532,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: key
+    - name: Key
       address:
         NA:
           - 0x21444D0
@@ -2550,7 +2541,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: disp
+    - name: Disp
       address:
         NA:
           - 0x214290C
@@ -2563,14 +2554,14 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: changePage
+    - name: ChangePage
       address:
         NA: 0x214497C
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: changeColor
+    - name: ChangeColor
       address:
         NA:
           - 0x2144A00
@@ -2579,7 +2570,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: dispFocus
+    - name: DispFocus
       address:
         NA:
           - 0x2144AC8
@@ -2591,7 +2582,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: moveFocus
+    - name: MoveFocus
       address:
         NA:
           - 0x2144BA4
@@ -2606,7 +2597,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: taskEnd0
+    - name: TaskEnd0
       address:
         NA:
           - 0x2144FDC
@@ -2616,7 +2607,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: taskEnd1
+    - name: TaskEnd1
       address:
         NA:
           - 0x2142C4C
@@ -2628,7 +2619,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: taskEnd2
+    - name: TaskEnd2
       address:
         NA:
           - 0x21450D4
@@ -2639,7 +2630,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: taskEnd3
+    - name: TaskEnd3
       address:
         NA:
           - 0x2145148
@@ -2650,7 +2641,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: taskEnd4
+    - name: TaskEnd4
       address:
         NA:
           - 0x21451BC
@@ -2660,7 +2651,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: taskEnd5
+    - name: TaskEnd5
       address:
         NA:
           - 0x2145230
@@ -2718,7 +2709,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: taskStart0
+    - name: TaskStart0
       address:
         NA:
           - 0x2143A54
@@ -2727,7 +2718,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: taskStart1
+    - name: TaskStart1
       address:
         NA:
           - 0x2142A0C
@@ -2737,7 +2728,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: taskStart2
+    - name: TaskStart2
       address:
         NA:
           - 0x2143B7C
@@ -2746,7 +2737,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: taskStart3
+    - name: TaskStart3
       address:
         NA:
           - 0x2143C10
@@ -2755,7 +2746,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: taskStart4
+    - name: TaskStart4
       address:
         NA:
           - 0x2143CA4
@@ -2764,7 +2755,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: touchTriger
+    - name: TouchTriger
       address:
         NA:
           - 0x2143D48
@@ -2773,7 +2764,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: touchRelease
+    - name: TouchRelease
       address:
         NA:
           - 0x2143F30
@@ -2782,7 +2773,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: touch
+    - name: Touch
       address:
         NA:
           - 0x2144278
@@ -2791,7 +2782,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: exchangeBack
+    - name: ExchangeBack
       address:
         NA:
           - 0x214447C
@@ -2800,7 +2791,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: key
+    - name: Key
       address:
         NA:
           - 0x21444D0
@@ -2809,7 +2800,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: disp
+    - name: Disp
       address:
         NA:
           - 0x214290C
@@ -2822,7 +2813,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: changeColor
+    - name: ChangeColor
       address:
         NA:
           - 0x2144A00
@@ -2831,7 +2822,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: dispFocus
+    - name: DispFocus
       address:
         NA:
           - 0x2144AC8
@@ -2843,7 +2834,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: moveFocus
+    - name: MoveFocus
       address:
         NA:
           - 0x2144BA4
@@ -2858,7 +2849,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: taskEnd0
+    - name: TaskEnd0
       address:
         NA:
           - 0x2144FDC
@@ -2868,7 +2859,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: taskEnd1
+    - name: TaskEnd1
       address:
         NA:
           - 0x2142C4C
@@ -2880,7 +2871,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: taskEnd2
+    - name: TaskEnd2
       address:
         NA:
           - 0x21450D4
@@ -2891,7 +2882,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: taskEnd3
+    - name: TaskEnd3
       address:
         NA:
           - 0x2145148
@@ -2902,7 +2893,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: taskEnd4
+    - name: TaskEnd4
       address:
         NA:
           - 0x21451BC
@@ -2912,7 +2903,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: taskEnd5
+    - name: TaskEnd5
       address:
         NA:
           - 0x2145230
@@ -2928,28 +2919,28 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: checkParam
+    - name: CheckParam
       address:
         NA: 0x2146ACC
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: initGame
+    - name: InitGame
       address:
         NA: 0x2146B68
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: initGraph
+    - name: InitGraph
       address:
         NA: 0x2146C30
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: procEnd
+    - name: ProcEnd
       address:
         NA: 0x2146EA8
       description: |-
@@ -3005,7 +2996,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: kDwci_Language
+    - name: KDwci_Language
       address:
         NA: 0x2146FD8
       description: |-
@@ -3061,7 +3052,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: taskEnd
+    - name: TaskEnd
       address:
         NA:
           - 0x2142BE8
@@ -3101,7 +3092,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: taskFramework
+    - name: TaskFramework
       address:
         NA: 0x21472D0
       description: |-
@@ -3115,7 +3106,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: endScene
+    - name: EndScene
       address:
         NA:
           - 0x2147758
@@ -3145,14 +3136,14 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: procFade
+    - name: ProcFade
       address:
         NA: 0x21479AC
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: procWait
+    - name: ProcWait
       address:
         NA:
           - 0x21479E8
@@ -3168,7 +3159,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: initGraphics
+    - name: InitGraphics
       address:
         NA:
           - 0x2147AD8
@@ -3209,7 +3200,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: procInit
+    - name: ProcInit
       address:
         NA:
           - 0x2147BC4
@@ -3250,7 +3241,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: procInit1
+    - name: ProcInit1
       address:
         NA:
           - 0x2147C18
@@ -3286,7 +3277,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: input
+    - name: Input
       address:
         NA:
           - 0x2147C90
@@ -3324,7 +3315,7 @@ overlay11:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
-    - name: button
+    - name: Button
       address:
         NA:
           - 0x2147DC0
@@ -3352,7 +3343,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: endScene1
+    - name: EndScene1
       address:
         NA:
           - 0x2147E30
@@ -3391,7 +3382,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: endScene2
+    - name: EndScene2
       address:
         NA:
           - 0x2147E7C
@@ -3423,7 +3414,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: moveFocus
+    - name: MoveFocus
       address:
         NA:
           - 0x2144BA4
@@ -3438,7 +3429,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: dispPushButton
+    - name: DispPushButton
       address:
         NA:
           - 0x2147F94
@@ -3455,7 +3446,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: initGraphics
+    - name: InitGraphics
       address:
         NA:
           - 0x2147AD8
@@ -3496,7 +3487,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: procInit
+    - name: ProcInit
       address:
         NA:
           - 0x2147BC4
@@ -3537,7 +3528,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: procInit1
+    - name: ProcInit1
       address:
         NA:
           - 0x2147C18
@@ -3573,7 +3564,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: input
+    - name: Input
       address:
         NA:
           - 0x2147C90
@@ -3611,7 +3602,7 @@ overlay11:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
-    - name: button
+    - name: Button
       address:
         NA:
           - 0x2147DC0
@@ -3639,7 +3630,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: endScene1
+    - name: EndScene1
       address:
         NA:
           - 0x2147E30
@@ -3678,7 +3669,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: endScene2
+    - name: EndScene2
       address:
         NA:
           - 0x2147E7C
@@ -3710,14 +3701,14 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: procConfirm
+    - name: ProcConfirm
       address:
         NA: 0x2148348
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: initGraphics
+    - name: InitGraphics
       address:
         NA:
           - 0x2147AD8
@@ -3758,7 +3749,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: procInit
+    - name: ProcInit
       address:
         NA:
           - 0x2147BC4
@@ -3799,7 +3790,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: procInit1
+    - name: ProcInit1
       address:
         NA:
           - 0x2147C18
@@ -3835,7 +3826,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: input
+    - name: Input
       address:
         NA:
           - 0x2147C90
@@ -3873,7 +3864,7 @@ overlay11:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
-    - name: button
+    - name: Button
       address:
         NA:
           - 0x2147DC0
@@ -3901,7 +3892,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: endScene1
+    - name: EndScene1
       address:
         NA:
           - 0x2147E30
@@ -3940,7 +3931,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: endScene2
+    - name: EndScene2
       address:
         NA:
           - 0x2147E7C
@@ -3979,7 +3970,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: initGraphics
+    - name: InitGraphics
       address:
         NA:
           - 0x2147AD8
@@ -4020,14 +4011,14 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: drawInfo
+    - name: DrawInfo
       address:
         NA: 0x2148698
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: procInit
+    - name: ProcInit
       address:
         NA:
           - 0x2147BC4
@@ -4068,7 +4059,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: procInit1
+    - name: ProcInit1
       address:
         NA:
           - 0x2147C18
@@ -4104,7 +4095,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: input
+    - name: Input
       address:
         NA:
           - 0x2147C90
@@ -4142,7 +4133,7 @@ overlay11:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
-    - name: button
+    - name: Button
       address:
         NA:
           - 0x2147DC0
@@ -4170,7 +4161,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: endScene1
+    - name: EndScene1
       address:
         NA:
           - 0x2147E30
@@ -4209,7 +4200,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: endScene2
+    - name: EndScene2
       address:
         NA:
           - 0x2147E7C
@@ -4248,7 +4239,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: initGraphics
+    - name: InitGraphics
       address:
         NA:
           - 0x2147AD8
@@ -4289,7 +4280,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: procInit
+    - name: ProcInit
       address:
         NA:
           - 0x2147BC4
@@ -4330,7 +4321,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: procInit1
+    - name: ProcInit1
       address:
         NA:
           - 0x2147C18
@@ -4366,7 +4357,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: input
+    - name: Input
       address:
         NA:
           - 0x2147C90
@@ -4404,7 +4395,7 @@ overlay11:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
-    - name: button
+    - name: Button
       address:
         NA:
           - 0x2147DC0
@@ -4432,7 +4423,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: endScene1
+    - name: EndScene1
       address:
         NA:
           - 0x2147E30
@@ -4471,7 +4462,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: endScene2
+    - name: EndScene2
       address:
         NA:
           - 0x2147E7C
@@ -4503,7 +4494,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: moveFocus
+    - name: MoveFocus
       address:
         NA:
           - 0x2144BA4
@@ -4518,7 +4509,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: dispPush
+    - name: DispPush
       address:
         NA:
           - 0x2149150
@@ -4535,7 +4526,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: initGraphics
+    - name: InitGraphics
       address:
         NA:
           - 0x2147AD8
@@ -4576,7 +4567,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: procInit
+    - name: ProcInit
       address:
         NA:
           - 0x2147BC4
@@ -4617,7 +4608,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: procInit1
+    - name: ProcInit1
       address:
         NA:
           - 0x2147C18
@@ -4667,7 +4658,7 @@ overlay11:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
-    - name: endScene
+    - name: EndScene
       address:
         NA:
           - 0x2147758
@@ -4690,7 +4681,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: endScene1
+    - name: EndScene1
       address:
         NA:
           - 0x2147E30
@@ -4729,7 +4720,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: cbMov
+    - name: CbMov
       address:
         NA:
           - 0x214936C
@@ -4738,7 +4729,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: initGraphics
+    - name: InitGraphics
       address:
         NA:
           - 0x2147AD8
@@ -4779,7 +4770,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: procInit
+    - name: ProcInit
       address:
         NA:
           - 0x2147BC4
@@ -4820,7 +4811,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: procInit1
+    - name: ProcInit1
       address:
         NA:
           - 0x2147C18
@@ -4856,7 +4847,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: input
+    - name: Input
       address:
         NA:
           - 0x2147C90
@@ -4894,7 +4885,7 @@ overlay11:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
-    - name: button
+    - name: Button
       address:
         NA:
           - 0x2147DC0
@@ -4922,7 +4913,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: endScene1
+    - name: EndScene1
       address:
         NA:
           - 0x2147E30
@@ -4961,7 +4952,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: endScene2
+    - name: EndScene2
       address:
         NA:
           - 0x2147E7C
@@ -5000,7 +4991,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: initGraphics
+    - name: InitGraphics
       address:
         NA:
           - 0x2147AD8
@@ -5041,7 +5032,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: procInit
+    - name: ProcInit
       address:
         NA:
           - 0x2147BC4
@@ -5082,7 +5073,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: procInit1
+    - name: ProcInit1
       address:
         NA:
           - 0x2147C18
@@ -5118,7 +5109,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: input
+    - name: Input
       address:
         NA:
           - 0x2147C90
@@ -5156,7 +5147,7 @@ overlay11:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
-    - name: button
+    - name: Button
       address:
         NA:
           - 0x2147DC0
@@ -5191,7 +5182,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: initGraphics
+    - name: InitGraphics
       address:
         NA:
           - 0x2147AD8
@@ -5232,7 +5223,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: procInit
+    - name: ProcInit
       address:
         NA:
           - 0x2147BC4
@@ -5273,7 +5264,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: procInit1
+    - name: ProcInit1
       address:
         NA:
           - 0x2147C18
@@ -5309,7 +5300,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: input
+    - name: Input
       address:
         NA:
           - 0x2147C90
@@ -5347,7 +5338,7 @@ overlay11:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
-    - name: button
+    - name: Button
       address:
         NA:
           - 0x2147DC0
@@ -5375,7 +5366,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: endScene1
+    - name: EndScene1
       address:
         NA:
           - 0x2147E30
@@ -5414,7 +5405,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: endScene2
+    - name: EndScene2
       address:
         NA:
           - 0x2147E7C
@@ -5453,7 +5444,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: initGraphics
+    - name: InitGraphics
       address:
         NA:
           - 0x2147AD8
@@ -5494,7 +5485,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: procInit
+    - name: ProcInit
       address:
         NA:
           - 0x2147BC4
@@ -5535,7 +5526,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: procInit1
+    - name: ProcInit1
       address:
         NA:
           - 0x2147C18
@@ -5578,7 +5569,7 @@ overlay11:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
-    - name: endScene
+    - name: EndScene
       address:
         NA:
           - 0x2147758
@@ -5601,7 +5592,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: endScene1
+    - name: EndScene1
       address:
         NA:
           - 0x2147E30
@@ -5647,7 +5638,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: initGraphics
+    - name: InitGraphics
       address:
         NA:
           - 0x2147AD8
@@ -5688,7 +5679,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: procInit
+    - name: ProcInit
       address:
         NA:
           - 0x2147BC4
@@ -5729,7 +5720,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: procInit1
+    - name: ProcInit1
       address:
         NA:
           - 0x2147C18
@@ -5765,7 +5756,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: procInit2
+    - name: ProcInit2
       address:
         NA:
           - 0x2149EC4
@@ -5775,7 +5766,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: input
+    - name: Input
       address:
         NA:
           - 0x2147C90
@@ -5813,7 +5804,7 @@ overlay11:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
-    - name: button
+    - name: Button
       address:
         NA:
           - 0x2147DC0
@@ -5841,7 +5832,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: endScene1
+    - name: EndScene1
       address:
         NA:
           - 0x2147E30
@@ -5880,7 +5871,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: endScene2
+    - name: EndScene2
       address:
         NA:
           - 0x2147E7C
@@ -5919,7 +5910,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: initGraphics
+    - name: InitGraphics
       address:
         NA:
           - 0x2147AD8
@@ -5960,7 +5951,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: procInit
+    - name: ProcInit
       address:
         NA:
           - 0x2147BC4
@@ -6001,7 +5992,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: procScene
+    - name: ProcScene
       address:
         NA:
           - 0x214A298
@@ -6025,7 +6016,7 @@ overlay11:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
-    - name: endScene
+    - name: EndScene
       address:
         NA:
           - 0x2147758
@@ -6048,7 +6039,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: endScene1
+    - name: EndScene1
       address:
         NA:
           - 0x2147E30
@@ -6087,7 +6078,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: endScene2
+    - name: EndScene2
       address:
         NA:
           - 0x2147E7C
@@ -6139,7 +6130,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: initGraphics
+    - name: InitGraphics
       address:
         NA:
           - 0x2147AD8
@@ -6180,7 +6171,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: procInit
+    - name: ProcInit
       address:
         NA:
           - 0x2147BC4
@@ -6221,7 +6212,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: procInit1
+    - name: ProcInit1
       address:
         NA:
           - 0x2147C18
@@ -6257,7 +6248,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: input
+    - name: Input
       address:
         NA:
           - 0x2147C90
@@ -6295,7 +6286,7 @@ overlay11:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
-    - name: button
+    - name: Button
       address:
         NA:
           - 0x2147DC0
@@ -6323,7 +6314,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: endScene
+    - name: EndScene
       address:
         NA:
           - 0x2147758
@@ -6346,7 +6337,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: endScene1
+    - name: EndScene1
       address:
         NA:
           - 0x2147E30
@@ -6385,7 +6376,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: endScene2
+    - name: EndScene2
       address:
         NA:
           - 0x2147E7C
@@ -6417,7 +6408,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: cbMov
+    - name: CbMov
       address:
         NA:
           - 0x214936C
@@ -6446,7 +6437,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: initGraphics
+    - name: InitGraphics
       address:
         NA:
           - 0x2147AD8
@@ -6487,7 +6478,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: procInit
+    - name: ProcInit
       address:
         NA:
           - 0x2147BC4
@@ -6528,7 +6519,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: procInit1
+    - name: ProcInit1
       address:
         NA:
           - 0x2147C18
@@ -6564,7 +6555,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: procInit2
+    - name: ProcInit2
       address:
         NA:
           - 0x2149EC4
@@ -6574,7 +6565,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: procScene
+    - name: ProcScene
       address:
         NA:
           - 0x214A298
@@ -6584,7 +6575,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: input
+    - name: Input
       address:
         NA:
           - 0x2147C90
@@ -6622,7 +6613,7 @@ overlay11:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
-    - name: button
+    - name: Button
       address:
         NA:
           - 0x2147DC0
@@ -6650,7 +6641,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: endScene
+    - name: EndScene
       address:
         NA:
           - 0x2147758
@@ -6673,7 +6664,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: endScene1
+    - name: EndScene1
       address:
         NA:
           - 0x2147E30
@@ -6712,7 +6703,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: endScene2
+    - name: EndScene2
       address:
         NA:
           - 0x2147E7C
@@ -6744,7 +6735,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: procError
+    - name: ProcError
 #      namespace: FID_Conflict
       address:
         NA:
@@ -6761,7 +6752,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: procWait
+    - name: ProcWait
       address:
         NA:
           - 0x21479E8
@@ -6770,7 +6761,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: procCancel
+    - name: ProcCancel
       address:
         NA: 0x214AE28
       description: |-
@@ -6784,7 +6775,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: initGraphics
+    - name: InitGraphics
       address:
         NA:
           - 0x2147AD8
@@ -6825,7 +6816,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: procInit
+    - name: ProcInit
       address:
         NA:
           - 0x2147BC4
@@ -6873,7 +6864,7 @@ overlay11:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
-    - name: endScene
+    - name: EndScene
       address:
         NA:
           - 0x2147758
@@ -6896,7 +6887,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: endScene1
+    - name: EndScene1
       address:
         NA:
           - 0x2147E30
@@ -6942,7 +6933,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: initGraphics
+    - name: InitGraphics
       address:
         NA:
           - 0x2147AD8
@@ -6983,21 +6974,21 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: initScrollBar
+    - name: InitScrollBar
       address:
         NA: 0x214B278
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: getCharName
+    - name: GetCharName
       address:
         NA: 0x214B320
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: procInit
+    - name: ProcInit
       address:
         NA:
           - 0x2147BC4
@@ -7038,7 +7029,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: procInit1
+    - name: ProcInit1
       address:
         NA:
           - 0x2147C18
@@ -7074,7 +7065,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: input
+    - name: Input
       address:
         NA:
           - 0x2147C90
@@ -7105,7 +7096,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: draw
+    - name: Draw
       address:
         NA:
           - 0x214B7B4
@@ -7114,7 +7105,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: button
+    - name: Button
       address:
         NA:
           - 0x2147DC0
@@ -7142,7 +7133,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: endScene1
+    - name: EndScene1
       address:
         NA:
           - 0x2147E30
@@ -7181,7 +7172,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: endScene2
+    - name: EndScene2
       address:
         NA:
           - 0x2147E7C
@@ -7213,28 +7204,28 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: drawApInfo
+    - name: DrawApInfo
       address:
         NA: 0x214BDBC
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: drawAp
+    - name: DrawAp
       address:
         NA: 0x214BE64
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: drapApObj
+    - name: DrapApObj
       address:
         NA: 0x214BFDC
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: setOffset
+    - name: SetOffset
       address:
         NA:
           - 0x214C068
@@ -7243,7 +7234,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: taskUp
+    - name: TaskUp
       address:
         NA:
           - 0x214C124
@@ -7252,7 +7243,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: taskDown
+    - name: TaskDown
       address:
         NA:
           - 0x214C1E0
@@ -7261,7 +7252,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: taskVBlank
+    - name: TaskVBlank
       address:
         NA:
           - 0x214C278
@@ -7270,7 +7261,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: dispFocus
+    - name: DispFocus
       address:
         NA:
           - 0x2144AC8
@@ -7282,7 +7273,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: moveFocus
+    - name: MoveFocus
       address:
         NA:
           - 0x2144BA4
@@ -7297,21 +7288,21 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: scrollUp
+    - name: ScrollUp
       address:
         NA: 0x214C46C
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: scrollDown
+    - name: ScrollDown
       address:
         NA: 0x214C4E0
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: dispPushButton
+    - name: DispPushButton
       address:
         NA:
           - 0x2147F94
@@ -7321,7 +7312,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: procError
+    - name: ProcError
 #      namespace: FID_Conflict
       address:
         NA:
@@ -7345,7 +7336,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: initGraphics
+    - name: InitGraphics
       address:
         NA:
           - 0x2147AD8
@@ -7386,7 +7377,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: procInit
+    - name: ProcInit
       address:
         NA:
           - 0x2147BC4
@@ -7427,7 +7418,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: procInit1
+    - name: ProcInit1
       address:
         NA:
           - 0x2147C18
@@ -7463,7 +7454,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: input
+    - name: Input
       address:
         NA:
           - 0x2147C90
@@ -7501,7 +7492,7 @@ overlay11:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
-    - name: endScene
+    - name: EndScene
       address:
         NA:
           - 0x2147758
@@ -7524,7 +7515,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: endScene1
+    - name: EndScene1
       address:
         NA:
           - 0x2147E30
@@ -7563,7 +7554,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: endScene2
+    - name: EndScene2
       address:
         NA:
           - 0x2147E7C
@@ -7595,7 +7586,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: endScene3
+    - name: EndScene3
       address:
         NA:
           - 0x214CBC0
@@ -7604,14 +7595,14 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: drawSsid
+    - name: DrawSsid
       address:
         NA: 0x214CCC4
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: dispCaret
+    - name: DispCaret
       address:
         NA:
           - 0x214CDB8
@@ -7620,7 +7611,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: procWin
+    - name: ProcWin
       address:
         NA:
           - 0x214CE20
@@ -7629,7 +7620,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: procWin1
+    - name: ProcWin1
       address:
         NA:
           - 0x214CE7C
@@ -7638,7 +7629,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: isCorrect
+    - name: IsCorrect
       address:
         NA:
           - 0x214CF2C
@@ -7648,7 +7639,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: procError
+    - name: ProcError
 #      namespace: FID_Conflict
       address:
         NA:
@@ -7665,7 +7656,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: procError1
+    - name: ProcError1
       address:
         NA:
           - 0x214D0E4
@@ -7681,7 +7672,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: initGraphics
+    - name: InitGraphics
       address:
         NA:
           - 0x2147AD8
@@ -7722,7 +7713,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: procInit
+    - name: ProcInit
       address:
         NA:
           - 0x2147BC4
@@ -7763,7 +7754,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: procInit1
+    - name: ProcInit1
       address:
         NA:
           - 0x2147C18
@@ -7799,7 +7790,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: input
+    - name: Input
       address:
         NA:
           - 0x2147C90
@@ -7830,7 +7821,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: isOver
+    - name: IsOver
       address:
         NA: 0x214D778
       description: |-
@@ -7844,7 +7835,7 @@ overlay11:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
-    - name: endScene
+    - name: EndScene
       address:
         NA:
           - 0x2147758
@@ -7867,7 +7858,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: endScene1
+    - name: EndScene1
       address:
         NA:
           - 0x2147E30
@@ -7906,7 +7897,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: endScene2
+    - name: EndScene2
       address:
         NA:
           - 0x2147E7C
@@ -7938,7 +7929,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: endScene3
+    - name: EndScene3
       address:
         NA:
           - 0x214CBC0
@@ -7947,7 +7938,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: drawAddress
+    - name: DrawAddress
       address:
         NA:
           - 0x214D98C
@@ -7956,7 +7947,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: dispCaret
+    - name: DispCaret
       address:
         NA:
           - 0x214CDB8
@@ -7965,7 +7956,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: procWin
+    - name: ProcWin
       address:
         NA:
           - 0x214CE20
@@ -7974,7 +7965,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: procWin1
+    - name: ProcWin1
       address:
         NA:
           - 0x214CE7C
@@ -7983,14 +7974,14 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: arrangeAddress
+    - name: ArrangeAddress
       address:
         NA: 0x214DBB4
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: isCorrect
+    - name: IsCorrect
       address:
         NA:
           - 0x214CF2C
@@ -8000,7 +7991,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: procError
+    - name: ProcError
 #      namespace: FID_Conflict
       address:
         NA:
@@ -8017,7 +8008,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: procError1
+    - name: ProcError1
       address:
         NA:
           - 0x214D0E4
@@ -8026,7 +8017,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: initGraphics
+    - name: InitGraphics
       address:
         NA:
           - 0x2147AD8
@@ -8067,14 +8058,14 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: drawMessage
+    - name: DrawMessage
       address:
         NA: 0x214DE8C
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: procInit
+    - name: ProcInit
       address:
         NA:
           - 0x2147BC4
@@ -8115,7 +8106,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: procInit1
+    - name: ProcInit1
       address:
         NA:
           - 0x2147C18
@@ -8151,7 +8142,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: input
+    - name: Input
       address:
         NA:
           - 0x2147C90
@@ -8189,7 +8180,7 @@ overlay11:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
-    - name: button
+    - name: Button
       address:
         NA:
           - 0x2147DC0
@@ -8217,7 +8208,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: endScene1
+    - name: EndScene1
       address:
         NA:
           - 0x2147E30
@@ -8256,7 +8247,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: endScene2
+    - name: EndScene2
       address:
         NA:
           - 0x2147E7C
@@ -8295,7 +8286,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: initGraphics
+    - name: InitGraphics
       address:
         NA:
           - 0x2147AD8
@@ -8336,14 +8327,14 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: calcParam
+    - name: CalcParam
       address:
         NA: 0x214E824
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: procInit
+    - name: ProcInit
       address:
         NA:
           - 0x2147BC4
@@ -8384,7 +8375,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: procInit1
+    - name: ProcInit1
       address:
         NA:
           - 0x2147C18
@@ -8420,7 +8411,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: input
+    - name: Input
       address:
         NA:
           - 0x2147C90
@@ -8451,35 +8442,35 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: inputWinButton
+    - name: InputWinButton
       address:
         NA: 0x214EB78
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: pushWinButton
+    - name: PushWinButton
       address:
         NA: 0x214EBFC
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: pushIpAuto
+    - name: PushIpAuto
       address:
         NA: 0x214ED7C
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: pushDnsAuto
+    - name: PushDnsAuto
       address:
         NA: 0x214EDE8
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: draw
+    - name: Draw
       address:
         NA:
           - 0x214B7B4
@@ -8488,7 +8479,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: endScene1
+    - name: EndScene1
       address:
         NA:
           - 0x2147E30
@@ -8527,7 +8518,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: endScene2
+    - name: EndScene2
       address:
         NA:
           - 0x2147E7C
@@ -8559,49 +8550,49 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: drawWindow
+    - name: DrawWindow
       address:
         NA: 0x214F3DC
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: drawColumnChar
+    - name: DrawColumnChar
       address:
         NA: 0x214F49C
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: drawColumnObj
+    - name: DrawColumnObj
       address:
         NA: 0x214F638
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: isEnablePush
+    - name: IsEnablePush
       address:
         NA: 0x214F78C
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: dispObj
+    - name: DispObj
       address:
         NA: 0x214F820
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: drawString
+    - name: DrawString
       address:
         NA: 0x214F924
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: drawAddress
+    - name: DrawAddress
       address:
         NA:
           - 0x214D98C
@@ -8610,7 +8601,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: setOffset
+    - name: SetOffset
       address:
         NA:
           - 0x214C068
@@ -8619,28 +8610,28 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: isPush
+    - name: IsPush
       address:
         NA: 0x214FD10
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: calcColumnIdx
+    - name: CalcColumnIdx
       address:
         NA: 0x214FF84
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: calcIdxColumn
+    - name: CalcIdxColumn
       address:
         NA: 0x214FFC8
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: taskUp
+    - name: TaskUp
       address:
         NA:
           - 0x214C124
@@ -8649,7 +8640,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: taskDown
+    - name: TaskDown
       address:
         NA:
           - 0x214C1E0
@@ -8658,7 +8649,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: taskVBlank
+    - name: TaskVBlank
       address:
         NA:
           - 0x214C278
@@ -8667,7 +8658,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: dispFocus
+    - name: DispFocus
       address:
         NA:
           - 0x2144AC8
@@ -8679,21 +8670,21 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: applyForcus
+    - name: ApplyForcus
       address:
         NA: 0x21502B4
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: applyForcus1
+    - name: ApplyForcus1
       address:
         NA: 0x2150364
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: moveFocus
+    - name: MoveFocus
       address:
         NA:
           - 0x2144BA4
@@ -8708,7 +8699,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: dispPushButton
+    - name: DispPushButton
       address:
         NA:
           - 0x2147F94
@@ -8718,21 +8709,21 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: taskPushCount
+    - name: TaskPushCount
       address:
         NA: 0x21506B8
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: pushButtonYesNo
+    - name: PushButtonYesNo
       address:
         NA: 0x215070C
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: isCorrect
+    - name: IsCorrect
       address:
         NA:
           - 0x214CF2C
@@ -8742,7 +8733,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: initGraphics
+    - name: InitGraphics
       address:
         NA:
           - 0x2147AD8
@@ -8783,7 +8774,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: procInit
+    - name: ProcInit
       address:
         NA:
           - 0x2147BC4
@@ -8824,7 +8815,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: procInit1
+    - name: ProcInit1
       address:
         NA:
           - 0x2147C18
@@ -8874,7 +8865,7 @@ overlay11:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
-    - name: endScene
+    - name: EndScene
       address:
         NA:
           - 0x2147758
@@ -8897,7 +8888,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: endScene1
+    - name: EndScene1
       address:
         NA:
           - 0x2147E30
@@ -8958,7 +8949,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: initGraphics
+    - name: InitGraphics
       address:
         NA:
           - 0x2147AD8
@@ -8999,7 +8990,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: procInit
+    - name: ProcInit
       address:
         NA:
           - 0x2147BC4
@@ -9040,7 +9031,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: procInit1
+    - name: ProcInit1
       address:
         NA:
           - 0x2147C18
@@ -9076,7 +9067,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: input
+    - name: Input
       address:
         NA:
           - 0x2147C90
@@ -9114,7 +9105,7 @@ overlay11:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
-    - name: button
+    - name: Button
       address:
         NA:
           - 0x2147DC0
@@ -9142,7 +9133,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: endScene1
+    - name: EndScene1
       address:
         NA:
           - 0x2147E30
@@ -9181,7 +9172,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: endScene2
+    - name: EndScene2
       address:
         NA:
           - 0x2147E7C
@@ -9213,7 +9204,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: checkRaku
+    - name: CheckRaku
       address:
         NA:
           - 0x2150E48
@@ -9223,7 +9214,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: procError
+    - name: ProcError
 #      namespace: FID_Conflict
       address:
         NA:
@@ -9262,7 +9253,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: initGraphics
+    - name: InitGraphics
       address:
         NA:
           - 0x2147AD8
@@ -9303,7 +9294,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: procInit
+    - name: ProcInit
       address:
         NA:
           - 0x2147BC4
@@ -9344,7 +9335,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: procInit1
+    - name: ProcInit1
       address:
         NA:
           - 0x2147C18
@@ -9380,7 +9371,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: input
+    - name: Input
       address:
         NA:
           - 0x2147C90
@@ -9418,7 +9409,7 @@ overlay11:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
-    - name: button
+    - name: Button
       address:
         NA:
           - 0x2147DC0
@@ -9446,7 +9437,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: endScene1
+    - name: EndScene1
       address:
         NA:
           - 0x2147E30
@@ -9485,7 +9476,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: endScene2
+    - name: EndScene2
       address:
         NA:
           - 0x2147E7C
@@ -9517,7 +9508,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: checkRaku
+    - name: CheckRaku
       address:
         NA:
           - 0x2150E48
@@ -9527,7 +9518,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: procError
+    - name: ProcError
 #      namespace: FID_Conflict
       address:
         NA:
@@ -9551,7 +9542,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: initGraphics
+    - name: InitGraphics
       address:
         NA:
           - 0x2147AD8
@@ -9592,7 +9583,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: procInit
+    - name: ProcInit
       address:
         NA:
           - 0x2147BC4
@@ -9640,7 +9631,7 @@ overlay11:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
-    - name: endScene
+    - name: EndScene
       address:
         NA:
           - 0x2147758
@@ -9663,7 +9654,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: endScene1
+    - name: EndScene1
       address:
         NA:
           - 0x2147E30
@@ -9722,7 +9713,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: initGraphics
+    - name: InitGraphics
       address:
         NA:
           - 0x2147AD8
@@ -9763,7 +9754,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: procInit
+    - name: ProcInit
       address:
         NA:
           - 0x2147BC4
@@ -9804,7 +9795,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: procInit1
+    - name: ProcInit1
       address:
         NA:
           - 0x2147C18
@@ -9840,7 +9831,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: input
+    - name: Input
       address:
         NA:
           - 0x2147C90
@@ -9878,7 +9869,7 @@ overlay11:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
-    - name: button
+    - name: Button
       address:
         NA:
           - 0x2147DC0
@@ -9906,7 +9897,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: endScene1
+    - name: EndScene1
       address:
         NA:
           - 0x2147E30
@@ -9945,7 +9936,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: endScene2
+    - name: EndScene2
       address:
         NA:
           - 0x2147E7C
@@ -9977,7 +9968,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: checkRaku
+    - name: CheckRaku
       address:
         NA:
           - 0x2150E48
@@ -9987,7 +9978,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: procError
+    - name: ProcError
 #      namespace: FID_Conflict
       address:
         NA:
@@ -10011,7 +10002,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: initGraphics
+    - name: InitGraphics
       address:
         NA:
           - 0x2147AD8
@@ -10052,7 +10043,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: procInit
+    - name: ProcInit
       address:
         NA:
           - 0x2147BC4
@@ -10093,7 +10084,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: procInit1
+    - name: ProcInit1
       address:
         NA:
           - 0x2147C18
@@ -10129,14 +10120,14 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: isEnd
+    - name: IsEnd
       address:
         NA: 0x2151BE4
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: input
+    - name: Input
       address:
         NA:
           - 0x2147C90
@@ -10174,7 +10165,7 @@ overlay11:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
-    - name: button
+    - name: Button
       address:
         NA:
           - 0x2147DC0
@@ -10202,7 +10193,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: endScene1
+    - name: EndScene1
       address:
         NA:
           - 0x2147E30
@@ -10241,7 +10232,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: endScene2
+    - name: EndScene2
       address:
         NA:
           - 0x2147E7C
@@ -10273,7 +10264,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: procError
+    - name: ProcError
 #      namespace: FID_Conflict
       address:
         NA:
@@ -10297,7 +10288,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: initGraphics
+    - name: InitGraphics
       address:
         NA:
           - 0x2147AD8
@@ -10338,14 +10329,14 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: initObj
+    - name: InitObj
       address:
         NA: 0x2152058
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: procInit
+    - name: ProcInit
       address:
         NA:
           - 0x2147BC4
@@ -10386,7 +10377,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: procInit1
+    - name: ProcInit1
       address:
         NA:
           - 0x2147C18
@@ -10422,7 +10413,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: procInit2
+    - name: ProcInit2
       address:
         NA:
           - 0x2149EC4
@@ -10432,7 +10423,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: input
+    - name: Input
       address:
         NA:
           - 0x2147C90
@@ -10470,7 +10461,7 @@ overlay11:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
-    - name: button
+    - name: Button
       address:
         NA:
           - 0x2147DC0
@@ -10498,7 +10489,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: endScene
+    - name: EndScene
       address:
         NA:
           - 0x2147758
@@ -10521,7 +10512,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: endScene1
+    - name: EndScene1
       address:
         NA:
           - 0x2147E30
@@ -10560,7 +10551,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: endScene2
+    - name: EndScene2
       address:
         NA:
           - 0x2147E7C
@@ -10592,7 +10583,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: dispFocus
+    - name: DispFocus
       address:
         NA:
           - 0x2144AC8
@@ -10604,7 +10595,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: moveFocus
+    - name: MoveFocus
       address:
         NA:
           - 0x2144BA4
@@ -10619,21 +10610,21 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: dispPushClear
+    - name: DispPushClear
       address:
         NA: 0x2152938
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: procErase
+    - name: ProcErase
       address:
         NA: 0x21529C8
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: dispPush
+    - name: DispPush
       address:
         NA:
           - 0x2149150
@@ -10650,7 +10641,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: initGraphics
+    - name: InitGraphics
       address:
         NA:
           - 0x2147AD8
@@ -10691,7 +10682,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: procInit
+    - name: ProcInit
       address:
         NA:
           - 0x2147BC4
@@ -10732,7 +10723,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: procInit1
+    - name: ProcInit1
       address:
         NA:
           - 0x2147C18
@@ -10768,7 +10759,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: input
+    - name: Input
       address:
         NA:
           - 0x2147C90
@@ -10806,7 +10797,7 @@ overlay11:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
-    - name: button
+    - name: Button
       address:
         NA:
           - 0x2147DC0
@@ -10834,7 +10825,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: endScene1
+    - name: EndScene1
       address:
         NA:
           - 0x2147E30
@@ -10873,7 +10864,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: endScene2
+    - name: EndScene2
       address:
         NA:
           - 0x2147E7C
@@ -10905,7 +10896,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: moveFocus
+    - name: MoveFocus
       address:
         NA:
           - 0x2144BA4
@@ -10920,7 +10911,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: dispPush
+    - name: DispPush
       address:
         NA:
           - 0x2149150
@@ -10937,7 +10928,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: initGraphics
+    - name: InitGraphics
       address:
         NA:
           - 0x2147AD8
@@ -10978,14 +10969,14 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: initAc
+    - name: InitAc
       address:
         NA: 0x2153514
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: procInit
+    - name: ProcInit
       address:
         NA:
           - 0x2147BC4
@@ -11026,7 +11017,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: procInit1
+    - name: ProcInit1
       address:
         NA:
           - 0x2147C18
@@ -11083,7 +11074,7 @@ overlay11:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
-    - name: endScene
+    - name: EndScene
       address:
         NA:
           - 0x2147758
@@ -11106,7 +11097,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: endScene2
+    - name: EndScene2
       address:
         NA:
           - 0x2147E7C
@@ -11138,7 +11129,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: taskAc
+    - name: TaskAc
       address:
         NA: 0x215374C
       description: |-
@@ -11152,7 +11143,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: initGraphics
+    - name: InitGraphics
       address:
         NA:
           - 0x2147AD8
@@ -11193,7 +11184,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: procInit
+    - name: ProcInit
       address:
         NA:
           - 0x2147BC4
@@ -11241,7 +11232,7 @@ overlay11:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
-    - name: endScene
+    - name: EndScene
       address:
         NA:
           - 0x2147758
@@ -11264,7 +11255,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: endScene1
+    - name: EndScene1
       address:
         NA:
           - 0x2147E30
@@ -11303,7 +11294,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: wait
+    - name: Wait
       address:
         NA: 0x21539E0
       description: |-
@@ -11317,7 +11308,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: initGraphics
+    - name: InitGraphics
       address:
         NA:
           - 0x2147AD8
@@ -11358,7 +11349,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: procInit
+    - name: ProcInit
       address:
         NA:
           - 0x2147BC4
@@ -11399,7 +11390,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: procInit1
+    - name: ProcInit1
       address:
         NA:
           - 0x2147C18
@@ -11435,7 +11426,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: procScene
+    - name: ProcScene
       address:
         NA:
           - 0x214A298
@@ -11459,7 +11450,7 @@ overlay11:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
-    - name: endScene
+    - name: EndScene
       address:
         NA:
           - 0x2147758
@@ -11482,7 +11473,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: endScene1
+    - name: EndScene1
       address:
         NA:
           - 0x2147E30
@@ -11528,7 +11519,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: initGraphics
+    - name: InitGraphics
       address:
         NA:
           - 0x2147AD8
@@ -11569,7 +11560,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: procInit
+    - name: ProcInit
       address:
         NA:
           - 0x2147BC4
@@ -11617,7 +11608,7 @@ overlay11:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
-    - name: endScene
+    - name: EndScene
       address:
         NA:
           - 0x2147758
@@ -11640,7 +11631,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: endScene1
+    - name: EndScene1
       address:
         NA:
           - 0x2147E30
@@ -11679,7 +11670,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: initGraphics
+    - name: InitGraphics
       address:
         NA:
           - 0x2147AD8
@@ -11720,7 +11711,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: procInit
+    - name: ProcInit
       address:
         NA:
           - 0x2147BC4
@@ -11761,7 +11752,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: procInit1
+    - name: ProcInit1
       address:
         NA:
           - 0x2147C18
@@ -11797,7 +11788,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: input
+    - name: Input
       address:
         NA:
           - 0x2147C90
@@ -11835,7 +11826,7 @@ overlay11:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
-    - name: button
+    - name: Button
       address:
         NA:
           - 0x2147DC0
@@ -11863,7 +11854,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: endScene1
+    - name: EndScene1
       address:
         NA:
           - 0x2147E30
@@ -11902,7 +11893,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: endScene2
+    - name: EndScene2
       address:
         NA:
           - 0x2147E7C
@@ -11954,7 +11945,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: initGraphics
+    - name: InitGraphics
       address:
         NA:
           - 0x2147AD8
@@ -11995,7 +11986,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: procInit
+    - name: ProcInit
       address:
         NA:
           - 0x2147BC4
@@ -12036,7 +12027,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: procInit1
+    - name: ProcInit1
       address:
         NA:
           - 0x2147C18
@@ -12072,7 +12063,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: input
+    - name: Input
       address:
         NA:
           - 0x2147C90
@@ -12110,7 +12101,7 @@ overlay11:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
-    - name: button
+    - name: Button
       address:
         NA:
           - 0x2147DC0
@@ -12138,7 +12129,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: endScene1
+    - name: EndScene1
       address:
         NA:
           - 0x2147E30
@@ -12177,7 +12168,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: endScene2
+    - name: EndScene2
       address:
         NA:
           - 0x2147E7C
@@ -12209,7 +12200,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: procError
+    - name: ProcError
 #      namespace: FID_Conflict
       address:
         NA:
@@ -12226,14 +12217,14 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: procBoth
+    - name: ProcBoth
       address:
         NA: 0x2154774
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: procBoth1
+    - name: ProcBoth1
       address:
         NA: 0x21547D0
       description: |-
@@ -12268,7 +12259,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: taskLoad
+    - name: TaskLoad
       address:
         NA:
           - 0x2143480
@@ -12285,7 +12276,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: taskCopyPltt
+    - name: TaskCopyPltt
       address:
         NA: 0x21549C4
       description: |-
@@ -12299,7 +12290,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: taskSetPltt
+    - name: TaskSetPltt
       address:
         NA: 0x2154A1C
       description: |-
@@ -12334,7 +12325,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: disp
+    - name: Disp
       address:
         NA:
           - 0x214290C
@@ -12361,7 +12352,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: taskMain
+    - name: TaskMain
       address:
         NA:
           - 0x2142A5C
@@ -12371,56 +12362,56 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: moveBar
+    - name: MoveBar
       address:
         NA: 0x2154D48
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: playSound
+    - name: PlaySound
       address:
         NA: 0x2154E18
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: stepBar
+    - name: StepBar
       address:
         NA: 0x2154E90
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: setBar
+    - name: SetBar
       address:
         NA: 0x2154EBC
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: isTrigger
+    - name: IsTrigger
       address:
         NA: 0x2154F24
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: isTouch
+    - name: IsTouch
       address:
         NA: 0x2154FB0
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: calcRect
+    - name: CalcRect
       address:
         NA: 0x2154FFC
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: disp
+    - name: Disp
       address:
         NA:
           - 0x214290C
@@ -12454,7 +12445,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: startScan
+    - name: StartScan
       address:
         NA:
           - 0x2155244
@@ -12477,7 +12468,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: callback
+    - name: Callback
       address:
         NA: 0x2155370
       description: |-
@@ -12603,7 +12594,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: write
+    - name: Write
       address:
         NA: 0x2155F00
       description: |-
@@ -12617,7 +12608,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: ascii2hex
+    - name: Ascii2hex
       address:
         NA: 0x21560F0
       description: |-
@@ -12673,35 +12664,35 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: taskBegin0
+    - name: TaskBegin0
       address:
         NA: 0x2156358
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: taskBegin1
+    - name: TaskBegin1
       address:
         NA: 0x215643C
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: taskBegin2
+    - name: TaskBegin2
       address:
         NA: 0x2156520
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: taskBegin3
+    - name: TaskBegin3
       address:
         NA: 0x2156604
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: taskBegin4
+    - name: TaskBegin4
       address:
         NA: 0x21566E8
       description: |-
@@ -12729,7 +12720,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: taskEnd0
+    - name: TaskEnd0
       address:
         NA:
           - 0x2144FDC
@@ -12739,7 +12730,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: taskEnd1
+    - name: TaskEnd1
       address:
         NA:
           - 0x2142C4C
@@ -12751,7 +12742,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: taskEnd2
+    - name: TaskEnd2
       address:
         NA:
           - 0x21450D4
@@ -12762,7 +12753,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: taskEnd3
+    - name: TaskEnd3
       address:
         NA:
           - 0x2145148
@@ -12773,7 +12764,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: taskEnd4
+    - name: TaskEnd4
       address:
         NA:
           - 0x21451BC
@@ -12797,7 +12788,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: taskChange
+    - name: TaskChange
       address:
         NA: 0x2156D4C
       description: |-
@@ -12811,7 +12802,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: startScan
+    - name: StartScan
       address:
         NA:
           - 0x2155244
@@ -12834,28 +12825,28 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: cbWm
+    - name: CbWm
       address:
         NA: 0x215704C
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: scanFirst
+    - name: ScanFirst
       address:
         NA: 0x21570DC
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: scanWait
+    - name: ScanWait
       address:
         NA: 0x2157234
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: taskFirst
+    - name: TaskFirst
       address:
         NA: 0x2157340
       description: |-
@@ -12890,21 +12881,21 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: taskV
+    - name: TaskV
       address:
         NA: 0x215781C
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: taskMove
+    - name: TaskMove
       address:
         NA: 0x215787C
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: taskMain
+    - name: TaskMain
       address:
         NA:
           - 0x2142A5C
@@ -12914,14 +12905,14 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: taskMain1
+    - name: TaskMain1
       address:
         NA: 0x2157AAC
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: disp
+    - name: Disp
       address:
         NA:
           - 0x214290C
@@ -12934,21 +12925,21 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: dispCell
+    - name: DispCell
       address:
         NA: 0x2157CC0
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: pushButton
+    - name: PushButton
       address:
         NA: 0x2157D4C
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: taskEnd
+    - name: TaskEnd
       address:
         NA:
           - 0x2142BE8
@@ -12958,7 +12949,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: taskEnd1
+    - name: TaskEnd1
       address:
         NA:
           - 0x2142C4C
@@ -12970,7 +12961,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: taskEnd2
+    - name: TaskEnd2
       address:
         NA:
           - 0x21450D4
@@ -12981,7 +12972,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: taskEnd3
+    - name: TaskEnd3
       address:
         NA:
           - 0x2145148
@@ -13139,14 +13130,14 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_Mov_WH_StateInSetParentWEPKey
+    - name: Dwci_Mov_WH_StateInSetParentWepKy
       address:
         NA: 0x2158E04
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_Mov_WH_StateOutSetParentWEPKey
+    - name: Dwci_Mov_WH_StateOutSetParentWepKy
       address:
         NA: 0x2158E68
       description: |-
@@ -13546,14 +13537,14 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: userProc
+    - name: UserProc
       address:
         NA: 0x215AEB0
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: cbRead
+    - name: CbRead
       address:
         NA: 0x215AF14
       description: |-
@@ -13574,7 +13565,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: cmpBack
+    - name: CmpBack
       address:
         NA: 0x215B094
       description: |-
@@ -13735,7 +13726,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: taskFade
+    - name: TaskFade
       address:
         NA: 0x215BAA0
       description: |-
@@ -13749,7 +13740,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: taskWait
+    - name: TaskWait
       address:
         NA: 0x215BC20
       description: |-
@@ -13791,7 +13782,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: taskLoad
+    - name: TaskLoad
       address:
         NA:
           - 0x2143480
@@ -14032,7 +14023,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: taskTransfer
+    - name: TaskTransfer
       address:
         NA: 0x215D214
       description: |-
@@ -14102,7 +14093,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: clearVram
+    - name: ClearVram
       address:
         NA: 0x215D75C
       description: |-
@@ -14144,7 +14135,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: formTask
+    - name: FormTask
       address:
         NA: 0x215DA3C
       description: |-
@@ -14158,7 +14149,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: deleteTcb
+    - name: DeleteTcb
       address:
         NA: 0x215DAFC
       description: |-
@@ -14193,7 +14184,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: addHdrList
+    - name: AddHdrList
       address:
         NA: 0x215DD08
       description: |-
@@ -14207,14 +14198,14 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: incAscii
+    - name: IncAscii
       address:
         NA: 0x215DE64
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: checkTagPost
+    - name: CheckTagPost
       address:
         NA: 0x215DE98
       description: |-
@@ -14235,7 +14226,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Nhttp_SetCAChain
+    - name: Nhttp_SetCaCain
       address:
         NA: 0x215DFD0
       description: |-
@@ -14305,14 +14296,14 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: setupGetcharFromHdrRecvBuf
+    - name: SetupGetcharFromHdrRecvBuf
       address:
         NA: 0x215E2F8
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: getcharFromHdrRecvBuf
+    - name: GetcharFromHdrRecvBuf
       address:
         NA: 0x215E354
       description: |-
@@ -14382,7 +14373,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: deleteStrList
+    - name: DeleteStrList
       address:
         NA: 0x215ED04
       description: |-
@@ -14445,7 +14436,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Nhttpi_SetSSLseed
+    - name: Nhttpi_SetSsLeed
       address:
         NA: 0x215F200
       description: |-
@@ -14524,35 +14515,35 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: saveBuf
+    - name: SaveBuf
       address:
         NA: 0x215F568
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: skipLineBuf
+    - name: SkipLineBuf
       address:
         NA: 0x215F61C
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: freeSslConnection
+    - name: FreeSslConnection
       address:
         NA: 0x215F6A8
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: putSocketToCloseQue
+    - name: PutSocketToCloseQue
       address:
         NA: 0x215F6E4
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: clearCloseQue
+    - name: ClearCloseQue
       address:
         NA: 0x215F784
       description: |-
@@ -14626,7 +14617,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: setAttr
+    - name: SetAttr
       address:
         NA: 0x2160FB0
       description: |-
@@ -14640,14 +14631,14 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: getNchar
+    - name: GetNchar
       address:
         NA: 0x21610F0
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: decodeChar
+    - name: DecodeChar
       address:
         NA: 0x2161138
       description: |-
@@ -14668,7 +14659,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: strAlloc
+    - name: StrAlloc
       address:
         NA: 0x21613E0
       description: |-
@@ -14682,7 +14673,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: nhttpCleanupCallback
+    - name: NhttpCleanupCallback
       address:
         NA: 0x21615D4
       description: |-
@@ -14717,14 +14708,14 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: freeHttp
+    - name: FreeHttp
       address:
         NA: 0x2161B14
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: setupHttp
+    - name: SetupHttp
       address:
         NA: 0x2161B40
       description: |-
@@ -14899,7 +14890,7 @@ overlay11:
         NA: 0x216619C
       length:
         NA: 0xC
-      description: Basic information for the CRangerNetAGBScene class. This class is a single-inheritance class.
+      description: Basic information for the CRangerNetAgbSene class. This class is a single-inheritance class.
     - name: C_COMPANY_LOGO_SCENE
       address:
         NA: 0x216667C
