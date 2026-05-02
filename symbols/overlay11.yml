@@ -38,7 +38,7 @@ overlay11:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
-    - name: CRangerNetAgbSeneConstructor
+    - name: CRangerNetAgbSceneConstructor
       address:
         NA: 0x211DEF8
       description: |-
@@ -654,7 +654,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: GetIpAdress
+    - name: GetIpAddress
       address:
         NA: 0x2134A80
       description: |-
@@ -689,7 +689,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: MakeSocCnfig
+    - name: MakeSocConfig
       address:
         NA: 0x2134BEC
       description: |-
@@ -1328,7 +1328,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwc_Auth_CheckWiFiIdNedCreate
+    - name: Dwc_Auth_CheckWiFiIdNeedCreate
       address:
         NA: 0x213AF50
       description: |-
@@ -1678,14 +1678,14 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: GetWepDta
+    - name: GetWepData
       address:
         NA: 0x213D368
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: GetWpaDta
+    - name: GetWpaData
       address:
         NA: 0x213D4BC
       description: |-
@@ -13130,14 +13130,14 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_Mov_WH_StateInSetParentWepKy
+    - name: Dwci_Mov_WH_StateInSetParentWepKey
       address:
         NA: 0x2158E04
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_Mov_WH_StateOutSetParentWepKy
+    - name: Dwci_Mov_WH_StateOutSetParentWepKey
       address:
         NA: 0x2158E68
       description: |-
@@ -14226,7 +14226,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Nhttp_SetCaCain
+    - name: Nhttp_SetCaChain
       address:
         NA: 0x215DFD0
       description: |-
@@ -14436,7 +14436,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Nhttpi_SetSsLeed
+    - name: Nhttpi_SetSsLseed
       address:
         NA: 0x215F200
       description: |-
