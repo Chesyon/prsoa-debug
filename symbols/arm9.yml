@@ -4417,7 +4417,7 @@ arm9:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: OS_YieldThread_
+    - name: OS_YieldThread
       address:
         NA: 0x2049CE0
       description: |-
@@ -6971,7 +6971,7 @@ arm9:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NSysG2d_NanloadGetUnpackedAnimBankImpl_
+    - name: NSysG2d_NanloadGetUnpackedAnimBankImpl
       address:
         NA: 0x2057F28
       description: |-
@@ -6999,14 +6999,14 @@ arm9:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NSysG2d_NobloadGetPtrOamArrayHead_
+    - name: NSysG2d_NobloadGetPtrOamArrayHead
       address:
         NA: 0x20580D8
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NSysG2d_NobloadUnPackExtendedData_
+    - name: NSysG2d_NobloadUnPackExtendedData
       address:
         NA: 0x20580F8
       description: |-
