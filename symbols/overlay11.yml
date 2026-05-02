@@ -1970,28 +1970,28 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: rijndaelKeySetupEnc
+    - name: RijndaelKeySetupEnc
       address:
         NA: 0x2140D20
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: rijndaelKeySetupDec
+    - name: RijndaelKeySetupDec
       address:
         NA: 0x2140FD8
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: rijndaelEncrypt
+    - name: RijndaelEncrypt
       address:
         NA: 0x2141168
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: rijndaelDecrypt
+    - name: RijndaelDecrypt
       address:
         NA: 0x2141524
       description: |-
@@ -13064,7 +13064,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_MOV_WH_StateInEndChildMP
+    - name: Dwci_Mov_WH_StateInEndChildMP
       address:
         NA: 0x21593C4
       description: |-
@@ -14566,7 +14566,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: runHttp
+    - name: RunHttp
       address:
         NA: 0x2161E6C
       description: |-
