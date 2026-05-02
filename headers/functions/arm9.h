@@ -339,7 +339,6 @@ int8_t SysCallGetRangerCurrentHp(void);
 undefined4 SysCallMaybeDoIrisTransition(unsigned int *param_1);
 undefined4 SysCallReturnZero2112(void);
 void SysCallSetPlayerSpawnData(void *param_1,int param_2);
-undefined4 SysCallCopyStringToRangerDebugBuffer(char **param_1);
 undefined4 SysCallMaybeStartMissionWithFanfare(undefined4 *param_1);
 undefined4 SysCallMaybeEndMissionWithFanfare(undefined4 *param_1);
 undefined4 SysCallMaybeEndMissionOnlyFanfare(void);

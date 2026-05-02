@@ -2610,15 +2610,6 @@ arm9:
         
         r0: script stack pointer, interpreted as params.
         r1: int32_t
-    - name: SysCallCopyStringToRangerDebugBuffer
-      address:
-        NA:
-          - 0x202F174
-          - 0x2030BB8
-      description: |-
-        Copies a text string to the debug buffer in RANGER_DATA. Both instances are separate SysCalls, but the functions are byte-for-byte identical.
-        
-        r0: script stack pointer, interpreted as params.
     - name: SysCallMaybeStartMissionWithFanfare
       address:
         NA: 0x2030F8C
