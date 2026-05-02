@@ -1424,10 +1424,9 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: WCM_GetLinkLevel
+    - name: WCM_GetLinkLevelVeneer
       address:
-        NA:
-          - 0x213B598
+        NA: 0x213B598
       description: |-
         [MANUAL DESCRIPTION]
         
@@ -1882,8 +1881,7 @@ overlay11:
         No params.
     - name: CloseVeneer
       address:
-        NA:
-          - 0x213E024
+        NA: 0x213E024
       description: |-
         Likely a linker-generated veneer for close.
         
@@ -1926,10 +1924,9 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: OS_Sleep
+    - name: OS_SleepVeneer
       address:
-        NA:
-          - 0x213E708
+        NA: 0x213E708
       description: |-
         [MANUAL DESCRIPTION]
         
@@ -12524,10 +12521,9 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNS_SndMain
+    - name: NNS_SndMainVeneer
       address:
-        NA:
-          - 0x2156250
+        NA: 0x2156250
       description: |-
         [MANUAL DESCRIPTION]
         
@@ -14360,6 +14356,11 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
+    - name: Std_GetStringLengthVeneer
+      address:
+        NA:
+          - 0x215F490
+          - 0x2162820
     - name: Nhttpi_Memclr
       address:
         NA: 0x215F49C
@@ -14697,16 +14698,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Std_GetStringLength
-      address:
-        NA:
-          - 0x215F490
-          - 0x2162820
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        No params.
-    - name: STD_CompareNString
+    - name: Std_CompareNStringVeneer
       address:
         NA:
           - 0x216282C
