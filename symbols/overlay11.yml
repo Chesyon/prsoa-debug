@@ -1592,14 +1592,14 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: checkAP
+    - name: CheckAP
       address:
         NA: 0x213CCF0
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: AOSS_set_ApInfo
+    - name: Aoss_set_ApInfo
       address:
         NA: 0x213CD6C
       description: |-
@@ -7610,7 +7610,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: procError1
+    - name: ProcError1
       address:
         NA:
           - 0x214D0E4
@@ -8661,14 +8661,14 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: procError
+    - name: ProcError
       address:
         NA: 0x2150870
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: initGraphics
+    - name: InitGraphics
       address:
         NA:
           - 0x2147AD8
@@ -12067,7 +12067,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: procBoth
+    - name: ProcBoth
       address:
         NA: 0x2154774
       description: |-
