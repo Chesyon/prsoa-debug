@@ -3721,14 +3721,14 @@ arm9:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Socli_StartupSOCL
+    - name: Socli_StartupSocl
       address:
         NA: 0x2047114
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Socli_StartupCPS
+    - name: Socli_StartupCps
       address:
         NA: 0x2047154
       description: |-
@@ -3938,14 +3938,14 @@ arm9:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Socli_CopyCPSBuffer
+    - name: Socli_CopyCpsBuffer
       address:
         NA: 0x2047E64
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Socli_ReadCPSBuffer
+    - name: Socli_ReadCpsBuffer
       address:
         NA: 0x2047F6C
       description: |-
@@ -3973,7 +3973,7 @@ arm9:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Socli_ConsumeCPSBuffer
+    - name: Socli_ConsumeCpsBuffer
       address:
         NA: 0x20481D8
       description: |-
@@ -6000,7 +6000,7 @@ arm9:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: WcmWmcbStartDCF
+    - name: WcmWmcbStartDcf
       address:
         NA: 0x20553AC
       description: |-
@@ -6119,14 +6119,14 @@ arm9:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Wcm_SetRecvDCFCallback
+    - name: Wcm_SetRecvDcfCallback
       address:
         NA: 0x2055F0C
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Wcm_SendDCFData
+    - name: Wcm_SendDcfData
       address:
         NA: 0x2055F2C
       description: |-
@@ -6140,14 +6140,14 @@ arm9:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: WcmCpsifTryLockMutexInIRQ
+    - name: WcmCpsifTryLockMutexInIrq
       address:
         NA: 0x20560E0
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: WcmCpsifUnlockMutexInIRQ
+    - name: WcmCpsifUnlockMutexInIrq
       address:
         NA: 0x2056130
       description: |-
@@ -6985,7 +6985,7 @@ arm9:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Nns_G2dUnpackNAN
+    - name: Nns_G2dUnpackNan
       address:
         NA: 0x2057F70
       description: |-
@@ -7027,7 +7027,7 @@ arm9:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Nns_G2dUnpackNCE
+    - name: Nns_G2dUnpackNce
       address:
         NA: 0x205816C
       description: |-
@@ -7041,7 +7041,7 @@ arm9:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Nns_G2dUnpackNCG
+    - name: Nns_G2dUnpackNcg
       address:
         NA: 0x2058244
       description: |-
@@ -7055,7 +7055,7 @@ arm9:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Nns_G2dUnpackBgNCG
+    - name: Nns_G2dUnpackBgNcg
       address:
         NA: 0x2058290
       description: |-
@@ -7069,7 +7069,7 @@ arm9:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Nns_G2dUnpackNCL
+    - name: Nns_G2dUnpackNcl
       address:
         NA: 0x20582DC
       description: |-
@@ -7209,14 +7209,14 @@ arm9:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Nnsi_G2dSrtcSetSRTRotZ
+    - name: Nnsi_G2dSrtcSetSrtRotZ
       address:
         NA: 0x2058AF8
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Nnsi_G2dSrtcSetSRTScale
+    - name: Nnsi_G2dSrtcSetSrtScale
       address:
         NA: 0x2058B18
       description: |-
@@ -7454,7 +7454,7 @@ arm9:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Nns_G2dFontInitUTF16
+    - name: Nns_G2dFontInitUtf16
       address:
         NA: 0x2059B70
       description: |-
@@ -7510,7 +7510,7 @@ arm9:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NSysG2d_CharCanvasOBJSizeToShape
+    - name: NSysG2d_CharCanvasObjSizeToShape
       address:
         NA: 0x2059F2C
       description: |-
@@ -7594,7 +7594,7 @@ arm9:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Nns_G2dCharCanvasInitForOBJ1D
+    - name: Nns_G2dCharCanvasInitForObj1D
       address:
         NA: 0x205AC40
       description: |-
@@ -7615,14 +7615,14 @@ arm9:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Nnsi_G2dCalcRequiredOBJ
+    - name: Nnsi_G2dCalcRequiredObj
       address:
         NA: 0x205ADD4
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Nns_G2dArrangeOBJ1D
+    - name: Nns_G2dArrangeObj1D
       address:
         NA: 0x205AE30
       description: |-
@@ -7664,7 +7664,7 @@ arm9:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Nnsi_G2dUnpackNFT
+    - name: Nnsi_G2dUnpackNft
       address:
         NA: 0x205B69C
       description: |-
@@ -7678,21 +7678,21 @@ arm9:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Nnsi_G2dSplitCharUTF16
+    - name: Nnsi_G2dSplitCharUtf16
       address:
         NA: 0x205B7D8
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Nnsi_G2dSplitCharUTF8
+    - name: Nnsi_G2dSplitCharUtf8
       address:
         NA: 0x205B7EC
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Nnsi_G2dSplitCharShiftJIS
+    - name: Nnsi_G2dSplitCharShiftJis
       address:
         NA: 0x205B868
       description: |-
@@ -12237,14 +12237,14 @@ arm9:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Msl_Cpp_Vector_ZnSt13_Vec_DeleterImSaImEE13sub_Push_BackERKmN10Metrowerks8int2typeILi1EEE
+    - name: Msl_Cpp_Vector_ZnSt13_Vec_DeleterImSaImEE13sub_Push_BackErkmN10Metrowerks8int2typeILi1Eee
       address:
         NA: 0x207FA98
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Msl_Cpp_Vector_ZnSt13_Vec_DeleterImSaImEED2Ev
+    - name: Msl_Cpp_Vector_ZnSt13_Vec_DeleterImSaImEed2Ev
       address:
         NA: 0x207FAC8
       description: |-
@@ -12265,7 +12265,7 @@ arm9:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Msl_Cpp_Vector_ZnSt20_Vec_Deleter_HelperImRSaImEED1Ev
+    - name: Msl_Cpp_Vector_ZnSt20_Vec_Deleter_HelperImRSaImEed1Ev
       address:
         NA: 0x207FD3C
       description: |-
@@ -12279,14 +12279,14 @@ arm9:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Msl_Cpp_Vector_ZnSt13_Vec_DeleterImRSaImEE8allocateEmN10Metrowerks8int2typeILi1EEE
+    - name: Msl_Cpp_Vector_ZnSt13_Vec_DeleterImRSaImEE8allocateEmN10Metrowerks8int2typeILi1Eee
       address:
         NA: 0x207FDE8
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Msl_Cpp_Vector_ZnSt13_Vec_DeleterImRSaImEED2Ev
+    - name: Msl_Cpp_Vector_ZnSt13_Vec_DeleterImRSaImEed2Ev
       address:
         NA: 0x207FE18
       description: |-
