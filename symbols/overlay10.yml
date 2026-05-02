@@ -11,7 +11,10 @@ overlay10:
     EU: 0xC0
     NA: 0xC0
     JP: 0xC0
-  description: Unknown. Might be related to resuming overworld activity.
+  description: |-
+    Unclear, but based on the name, likely handles opening the menu in the overworld, and/or vice-versa.
+    
+    The scene class is named "Field To Menu" internally.
   functions:
     - name: ret_0211c9e0
       address:
@@ -73,3 +76,9 @@ overlay10:
         NA: 0x4
         JP: 0x4
       description: Static initializer for overlay 10.
+    - name: C_FIELD_TO_MENU_SCENE
+      address:
+        NA: 0x211CA40
+      length:
+        NA: 0xC
+      description: Basic information for the CFieldToMenuScene class. This class is a single-inheritance class.

@@ -2,5 +2,10 @@
 #define HEADERS_DATA_OVERLAY05_H_
 
 extern undefined4 OV5_STATIC_INITIALIZER;
+extern struct __si_class_type_info C_STYLER_SCENE;
+extern struct __class_type_info C_STYLER_SCREEN;
+extern struct __si_class_type_info C_STYLER_UPPER_SCREEN;
+extern struct __si_class_type_info C_STYLER_STATUS_SCREEN;
+extern struct __si_class_type_info C_STYLER_PARTS_SCREEN;
 
 #endif

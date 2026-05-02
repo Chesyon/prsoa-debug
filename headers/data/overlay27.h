@@ -2,5 +2,12 @@
 #define HEADERS_DATA_OVERLAY27_H_
 
 extern undefined4 OV27_STATIC_INITIALIZER;
+extern struct __si_class_type_info C_QUEST_LIST_SCENE;
+extern struct __class_type_info C_QUEST_LIST_SCREEN_BASE;
+extern struct __class_type_info I_QL_LIST_BOX_EVENT_LISTENER;
+extern struct __class_type_info I_QL_PUSH_BUTTON_LISTENER;
+extern undefined C_QUEST_LIST_SCREEN;
+extern struct __class_type_info C_QL_LIST_BOX;
+extern struct __si_class_type_info C_QUEST_LIST_MAP_SCREEN;
 
 #endif

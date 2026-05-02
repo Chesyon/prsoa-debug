@@ -11,7 +11,10 @@ overlay25:
     EU: 0x33A0
     NA: 0x3340
     JP: 0x3340
-  description: Seems to play the credits when called.
+  description: |-
+    Responsible for displaying the game credits.
+    
+    The scene class is named "Staffroll" internally.
   functions:
     - name: Overlay25EntryPoint
       address:
@@ -38,3 +41,9 @@ overlay25:
         NA: 0x4
         JP: 0x4
       description: Static initializer for overlay 25.
+    - name: C_STAFFROLL_SCENE
+      address:
+        NA: 0x211FC48
+      length:
+        NA: 0xC
+      description: Basic information for the CStaffrollScene class. This class is a single-inheritance class.

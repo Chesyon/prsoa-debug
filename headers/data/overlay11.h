@@ -2,5 +2,8 @@
 #define HEADERS_DATA_OVERLAY11_H_
 
 extern undefined4 OV11_STATIC_INITIALIZER;
+extern struct __si_class_type_info C_RANGER_NET_SCENE;
+extern struct __si_class_type_info C_RANGER_NET_AGB_SCENE;
+extern struct __si_class_type_info C_COMPANY_LOGO_SCENE;
 
 #endif

@@ -11,7 +11,10 @@ overlay1:
     EU: 0x25940
     NA: 0x25820
     JP: 0x25D40
-  description: Controls in-game battles.
+  description: |-
+    Controls in-game battles.
+    
+    The scene class is named "Battle" internally.
   functions:
     - name: Overlay1EntryPoint
       address:
@@ -329,9 +332,189 @@ overlay1:
         NA: 0x4
         JP: 0x4
       description: Static initializer for overlay 1.
+    - name: C_BATTLE_SCENE
+      address:
+        NA: 0x2140740
+      length:
+        NA: 0xC
+      description: Basic information for the CBattleScene class. This class is a single-inheritance class.
+    - name: C_BATTLE_ENEMY_DATA
+      address:
+        NA: 0x21409C0
+      length:
+        NA: 0xC
+      description: Basic information for the CBattleEnemyData class. This class is a single-inheritance class.
+    - name: C_BATTLE_ENEMY
+      address:
+        NA: 0x2140A2C
+      length:
+        NA: 0xC
+      description: Basic information for the CBattleEnemy class. This class is a single-inheritance class.
+    - name: C_BATTLE_ATTACK_EFFECT_DATA
+      address:
+        NA: 0x2140A84
+      length:
+        NA: 0xC
+      description: Basic information for the CBattleAttackEffectData class. This class is a single-inheritance class.
+    - name: C_BATTLE_ATTACK_EFFECT
+      address:
+        NA: 0x2140B0C
+      length:
+        NA: 0xC
+      description: Basic information for the CBattleAttackEffect class. This class is a single-inheritance class.
     - name: SYSCALL_PAGE_01_OV_01
       address:
         NA: 0x2141038
       length:
         NA: 0x18
       description: "The 1st page of functions callable by the SysCall script opcode. 95 function pointers long. May have undefined behavior if overlay_01 is not active, as SYSCALL_PAGE_PTRS points to this address regardless of whether the overlay is active."
+    - name: C_BATTLE_DISK
+      address:
+        NA: 0x21411D4
+      length:
+        NA: 0xC
+      description: Basic information for the CBattleDisk class. This class is a single-inheritance class.
+    - name: C_DISK_CURSOR
+      address:
+        NA: 0x2141374
+      length:
+        NA: 0xC
+      description: Basic information for the CDiskCursor class. This class is a single-inheritance class.
+    - name: C_LINE_EFFECT
+      address:
+        NA: 0x21413C8
+      length:
+        NA: 0xC
+      description: Basic information for the CLineEffect class. This class is a single-inheritance class.
+    - name: C_BATTLE_ASSIST
+      address:
+        NA: 0x214141C
+      length:
+        NA: 0x8
+      description: Basic information for the CBattleAssist class. This class is a base class.
+    - name: C_BATTLE_ASSIST_DRAGON
+      address:
+        NA: 0x2141450
+      length:
+        NA: 0xC
+      description: Basic information for the CBattleAssistDragon class. This class is a single-inheritance class.
+    - name: C_BATTLE_ASSIST_ELECTRIC
+      address:
+        NA: 0x2141490
+      length:
+        NA: 0xC
+      description: Basic information for the CBattleAssistElectric class. This class is a single-inheritance class.
+    - name: C_BATTLE_ASSIST_ESPER
+      address:
+        NA: 0x21414D0
+      length:
+        NA: 0xC
+      description: Basic information for the CBattleAssistEsper class. This class is a single-inheritance class.
+    - name: C_BATTLE_ASSIST_EVIL
+      address:
+        NA: 0x2141510
+      length:
+        NA: 0xC
+      description: Basic information for the CBattleAssistEvil class. This class is a single-inheritance class.
+    - name: C_BATTLE_ASSIST_FIRE
+      address:
+        NA: 0x214154C
+      length:
+        NA: 0xC
+      description: Basic information for the CBattleAssistFire class. This class is a single-inheritance class.
+    - name: C_BATTLE_ASSIST_FLY
+      address:
+        NA: 0x2141588
+      length:
+        NA: 0xC
+      description: Basic information for the CBattleAssistFly class. This class is a single-inheritance class.
+    - name: C_BATTLE_ASSIST_GHOST
+      address:
+        NA: 0x21415C4
+      length:
+        NA: 0xC
+      description: Basic information for the CBattleAssistGhost class. This class is a single-inheritance class.
+    - name: C_BATTLE_ASSIST_GRAPPLE
+      address:
+        NA: 0x2141604
+      length:
+        NA: 0xC
+      description: Basic information for the CBattleAssistGrapple class. This class is a single-inheritance class.
+    - name: C_BATTLE_ASSIST_GRASS
+      address:
+        NA: 0x2141644
+      length:
+        NA: 0xC
+      description: Basic information for the CBattleAssistGrass class. This class is a single-inheritance class.
+    - name: C_BATTLE_ASSIST_GROUND
+      address:
+        NA: 0x2141684
+      length:
+        NA: 0xC
+      description: Basic information for the CBattleAssistGround class. This class is a single-inheritance class.
+    - name: C_BATTLE_ASSIST_ICE
+      address:
+        NA: 0x21416C4
+      length:
+        NA: 0xC
+      description: Basic information for the CBattleAssistIce class. This class is a single-inheritance class.
+    - name: C_BATTLE_ASSIST_INSECT
+      address:
+        NA: 0x2141700
+      length:
+        NA: 0xC
+      description: Basic information for the CBattleAssistInsect class. This class is a single-inheritance class.
+    - name: C_BATTLE_ASSIST_NORMAL
+      address:
+        NA: 0x2141740
+      length:
+        NA: 0xC
+      description: Basic information for the CBattleAssistNormal class. This class is a single-inheritance class.
+    - name: C_BATTLE_ASSIST_POISON
+      address:
+        NA: 0x2141780
+      length:
+        NA: 0xC
+      description: Basic information for the CBattleAssistPoison class. This class is a single-inheritance class.
+    - name: C_BATTLE_ASSIST_RECOVER
+      address:
+        NA: 0x21417C0
+      length:
+        NA: 0xC
+      description: Basic information for the CBattleAssistRecover class. This class is a single-inheritance class.
+    - name: C_BATTLE_ASSIST_ROCK
+      address:
+        NA: 0x2141800
+      length:
+        NA: 0xC
+      description: Basic information for the CBattleAssistRock class. This class is a single-inheritance class.
+    - name: C_BATTLE_ASSIST_STEEL
+      address:
+        NA: 0x214183C
+      length:
+        NA: 0xC
+      description: Basic information for the CBattleAssistSteel class. This class is a single-inheritance class.
+    - name: C_BATTLE_ASSIST_WATER
+      address:
+        NA: 0x214187C
+      length:
+        NA: 0xC
+      description: Basic information for the CBattleAssistWater class. This class is a single-inheritance class.
+    - name: C_BATTLE_ENEMY_GAUGE
+      address:
+        NA: 0x21418BC
+      length:
+        NA: 0xC
+      description: Basic information for the CBattleEnemyGauge class. This class is a single-inheritance class.
+    - name: C_BATTLE_POWER_SAVE
+      address:
+        NA: 0x21419DC
+      length:
+        NA: 0xC
+      description: Basic information for the CBattlePowerSave class. This class is a single-inheritance class.
+    - name: C_BATTLE_GAME_OVER
+      address:
+        NA: 0x2141C44
+      length:
+        NA: 0xC
+      description: Basic information for the CBattleGameOver class. This class is a single-inheritance class.

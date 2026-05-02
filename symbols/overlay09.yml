@@ -11,7 +11,10 @@ overlay9:
     EU: 0x15A0
     NA: 0x15A0
     JP: 0x15A0
-  description: Seems to be loaded when flying on Staraptor.
+  description: |-
+    Used when flying on Staraptor.
+    
+    The scene class is named "Flying" internally.
   functions:
     - name: Overlay9EntryPoint
       address:
@@ -39,3 +42,9 @@ overlay9:
         NA: 0x4
         JP: 0x4
       description: Static initializer for overlay 9.
+    - name: C_FLYING_SCENE
+      address:
+        NA: 0x211DB00
+      length:
+        NA: 0xC
+      description: Basic information for the CFlyingScene class. This class is a single-inheritance class.

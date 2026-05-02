@@ -2,5 +2,8 @@
 #define HEADERS_DATA_OVERLAY28_H_
 
 extern undefined4 OV28_STATIC_INITIALIZER;
+extern struct __si_class_type_info C_MAP_DISP_SCENE;
+extern struct __class_type_info I_MAP_DISP_RSC_PATH_BUILDER;
+extern struct __si_class_type_info C_MAP_DISP_SCREEN_C_PATH_BUILDER;
 
 #endif

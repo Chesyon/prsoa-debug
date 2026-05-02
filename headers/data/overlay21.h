@@ -2,5 +2,17 @@
 #define HEADERS_DATA_OVERLAY21_H_
 
 extern undefined4 OV21_STATIC_INITIALIZER;
+extern struct __si_class_type_info C_BROWSER_SCENE;
+extern struct __class_type_info C_BROWSER_MENU_MANAGER;
+extern struct __class_type_info C_BROWSER_MENU_ITEM;
+extern struct __class_type_info C_BROWSER_MENU_CURSOR;
+extern struct __si_class_type_info C_BROWSER_MENU_CURSOR_POKEMON;
+extern struct __si_class_type_info C_BROWSER_MENU_ITEM_POKEMON;
+extern struct __si_class_type_info C_BROWSER_MENU_MANAGER_POKEMON;
+extern struct __si_class_type_info C_BROWSER_MENU_CURSOR_ICON;
+extern struct __si_class_type_info C_BROWSER_MENU_ITEM_ICON;
+extern struct __si_class_type_info C_BROWSER_MENU_MANAGER_ICON;
+extern struct __si_class_type_info C_BROWSER_MENU_ITEM_TYPE;
+extern struct __si_class_type_info C_BROWSER_MENU_MANAGER_TYPE;
 
 #endif

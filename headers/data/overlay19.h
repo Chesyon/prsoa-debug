@@ -2,5 +2,6 @@
 #define HEADERS_DATA_OVERLAY19_H_
 
 extern undefined4 OV19_STATIC_INITIALIZER;
+extern struct __si_class_type_info C_SEX_SELECT_SCENE;
 
 #endif

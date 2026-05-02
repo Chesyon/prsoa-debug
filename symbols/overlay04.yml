@@ -11,7 +11,10 @@ overlay4:
     EU: 0xF60
     NA: 0xF60
     JP: 0xF80
-  description: Seems to be responsible for plot narration?
+  description: |-
+    Seems to be responsible for plot narration, or at the very least letters.
+    
+    The scene class is named "Letter" internally.
   functions:
     - name: Overlay4EntryPoint
       address:
@@ -39,3 +42,9 @@ overlay4:
         NA: 0x4
         JP: 0x4
       description: Static initializer for overlay 4.
+    - name: C_LETTER_SCENE
+      address:
+        NA: 0x211D7C0
+      length:
+        NA: 0xC
+      description: Basic information for the CLetterScene class. This class is a single-inheritance class.

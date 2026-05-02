@@ -13025,18 +13025,423 @@ arm9:
     - name: S_VOLUME_TABLE
       address:
         NA: 0x2089B24
+    - name: C_TOUCH_PANEL
+      address:
+        NA: 0x208A3BC
+      length:
+        NA: 0x8
+      description: Basic information for the CTouchPanel class. This class is a base class.
+    - name: C_TP_EMULATOR
+      address:
+        NA: 0x208A3E8
+      length:
+        NA: 0xC
+      description: Basic information for the CTPEmulator class. This class is a single-inheritance class.
+    - name: C_BINARY_FILE
+      address:
+        NA: 0x208A4BC
+      length:
+        NA: 0x8
+      description: Basic information for the CBinaryFile class. This class is a base class.
+    - name: C_BINARY_FILE_MES
+      address:
+        NA: 0x208A4E4
+      length:
+        NA: 0xC
+      description: Basic information for the CBinaryFileMes class. This class is a single-inheritance class.
+    - name: C_NCER_FILE
+      address:
+        NA: 0x208A57C
+      length:
+        NA: 0xC
+      description: Basic information for the CNCERFile class. This class is a single-inheritance class.
+    - name: C_NCGR_FILE
+      address:
+        NA: 0x208A5A4
+      length:
+        NA: 0xC
+      description: Basic information for the CNCGRFile class. This class is a single-inheritance class.
+    - name: C_NCLR_FILE
+      address:
+        NA: 0x208A5CC
+      length:
+        NA: 0xC
+      description: Basic information for the CNCLRFile class. This class is a single-inheritance class.
+    - name: C_NSCR_FILE
+      address:
+        NA: 0x208A5F4
+      length:
+        NA: 0xC
+      description: Basic information for the CNSCRFile class. This class is a single-inheritance class.
+    - name: C_NANR_FILE
+      address:
+        NA: 0x208A61C
+      length:
+        NA: 0xC
+      description: Basic information for the CNANRFile class. This class is a single-inheritance class.
+    - name: C_BGNCGR_FILE
+      address:
+        NA: 0x208A638
+      length:
+        NA: 0xC
+      description: Basic information for the CBGNCGRFile class. This class is a single-inheritance class.
+    - name: C_PRIMITIVE
+      address:
+        NA: 0x208A664
+      length:
+        NA: 0x8
+      description: Basic information for the CPrimitive class. This class is a base class.
+    - name: C_PRIMITIVE_LINE
+      address:
+        NA: 0x208A690
+      length:
+        NA: 0xC
+      description: Basic information for the CPrimitiveLINE class. This class is a single-inheritance class.
+    - name: C_PRIMITIVE_RECT
+      address:
+        NA: 0x208A6C4
+      length:
+        NA: 0xC
+      description: Basic information for the CPrimitiveRECT class. This class is a single-inheritance class.
+    - name: C_PRIMITIVE_QUAD
+      address:
+        NA: 0x208A6F8
+      length:
+        NA: 0xC
+      description: Basic information for the CPrimitiveQUAD class. This class is a single-inheritance class.
+    - name: C_PRIMITIVE_SPHERE
+      address:
+        NA: 0x208A72C
+      length:
+        NA: 0xC
+      description: Basic information for the CPrimitiveSPHERE class. This class is a single-inheritance class.
+    - name: C_PRIMITIVE_TRIANGLE
+      address:
+        NA: 0x208A760
+      length:
+        NA: 0xC
+      description: Basic information for the CPrimitiveTRIANGLE class. This class is a single-inheritance class.
+    - name: C_SOFTWARE_SPRITE
+      address:
+        NA: 0x208A798
+      length:
+        NA: 0xC
+      description: Basic information for the CSoftwareSprite class. This class is a single-inheritance class.
+    - name: C_SCENE
+      address:
+        NA: 0x208A804
+      length:
+        NA: 0x8
+      description: Basic information for the CScene class. This class is a base class.
+    - name: C_POWER_MANAGE
+      address:
+        NA: 0x208AB40
+      length:
+        NA: 0x8
+      description: Basic information for the CPowerManage class. This class is a base class.
+    - name: STR_BATTLE_RESULT_PARAMETER
+      address:
+        NA: 0x208AB9C
+      length:
+        NA: 0x8
+      description: Basic information for the strBattleResultParameter class. This class is a base class.
+    - name: C_BATTLE_RESULT_PARAMETER
+      address:
+        NA: 0x208ABB4
+      description: Basic information for the CBattleResultParameter class. This class is a virtual/multiple inheritance class.
+    - name: C_ACTOR
+      address:
+        NA: 0x208B478
+      length:
+        NA: 0x8
+      description: Basic information for the CActor class. This class is a base class.
+    - name: C_ACTOR_DATA
+      address:
+        NA: 0x208B49C
+      length:
+        NA: 0x8
+      description: Basic information for the CActorData class. This class is a base class.
+    - name: C_PLAYER_HP_GAUGE
+      address:
+        NA: 0x208B83C
+      length:
+        NA: 0xC
+      description: Basic information for the CPlayerHPGauge class. This class is a single-inheritance class.
+    - name: C_BACKUP_BASE
+      address:
+        NA: 0x208C16C
+      length:
+        NA: 0x8
+      description: Basic information for the CBackupBase class. This class is a base class.
+    - name: C_BACKUP
+      address:
+        NA: 0x208C180
+      length:
+        NA: 0xC
+      description: Basic information for the CBackup class. This class is a single-inheritance class.
+    - name: C_EFFECT_RESOURCE
+      address:
+        NA: 0x208C460
+      length:
+        NA: 0x8
+      description: Basic information for the CEffectResource class. This class is a base class.
+    - name: C_EFFECT_ACTOR_DATA
+      address:
+        NA: 0x208C468
+      length:
+        NA: 0xC
+      description: Basic information for the CEffectActorData class. This class is a single-inheritance class.
+    - name: C_BACKUP_SYNC
+      address:
+        NA: 0x208CC88
+      length:
+        NA: 0xC
     - name: SYSCALL_PAGE_2
       address:
         NA: 0x208CE10
       length:
         NA: 0x5E8
       description: The 2nd page of functions callable by the SysCall script opcode. 378 function pointers long.
+    - name: C_FIELD_SCREEN_EFFECT_OBJECT_BASE
+      address:
+        NA: 0x208D5E0
+      length:
+        NA: 0x8
+      description: Basic information for the CFieldScreenEffectObjectBase class. This class is a base class.
+    - name: C_PRIMITIVE_QUAD_NTF
+      address:
+        NA: 0x208D62C
+      length:
+        NA: 0xC
+      description: Basic information for the CPrimitiveQuadNTF class. This class is a single-inheritance class.
+    - name: C_PRIMITIVE_RECT_NTF
+      address:
+        NA: 0x208D638
+      length:
+        NA: 0xC
+      description: Basic information for the CPrimitiveRectNTF class. This class is a single-inheritance class.
+    - name: C_FIELD_SEF_KOMOREBI
+      address:
+        NA: 0x208D7A0
+      length:
+        NA: 0xC
+      description: Basic information for the CFieldSEFKomorebi class. This class is a single-inheritance class.
+    - name: C_FIELD_SEF_FOG
+      address:
+        NA: 0x208D824
+      length:
+        NA: 0xC
+      description: Basic information for the CFieldSEFFog class. This class is a single-inheritance class.
+    - name: C_FIELD_SEF_SAND_STORM
+      address:
+        NA: 0x208D8CC
+      length:
+        NA: 0xC
+      description: Basic information for the CFieldSEFSandStorm class. This class is a single-inheritance class.
+    - name: C_FIELD_SEF_DOKARIMO
+      address:
+        NA: 0x208D954
+      length:
+        NA: 0xC
+      description: Basic information for the CFieldSEFDokarimo class. This class is a single-inheritance class.
+    - name: C_FIELD_SEF_THE_WATER
+      address:
+        NA: 0x208D9E0
+      length:
+        NA: 0xC
+      description: Basic information for the CFieldSEFTheWater class. This class is a single-inheritance class.
+    - name: C_FIELD_SEF_HINOKO
+      address:
+        NA: 0x208DA24
+      length:
+        NA: 0xC
+      description: Basic information for the CFieldSEFHinoko class. This class is a single-inheritance class.
+    - name: C_FIELD_SCREEN_EFFECT_ACTOR_DATA
+      address:
+        NA: 0x208DA30
+      length:
+        NA: 0xC
+      description: Basic information for the CFieldScreenEffectActorData class. This class is a single-inheritance class.
+    - name: C_FIELD_SEF_RAIN
+      address:
+        NA: 0x208DB00
+      length:
+        NA: 0xC
+      description: Basic information for the CFieldSEFRain class. This class is a single-inheritance class.
+    - name: C_FIELD_SEF_WARNING
+      address:
+        NA: 0x208DB40
+      length:
+        NA: 0xC
+      description: Basic information for the CFieldSEFWarning class. This class is a single-inheritance class.
+    - name: C_FIELD_SEF_SNOW
+      address:
+        NA: 0x208DB90
+      length:
+        NA: 0xC
+      description: Basic information for the CFieldSEFSnow class. This class is a single-inheritance class.
+    - name: C_FIELD_SEF_DARKNESS
+      address:
+        NA: 0x208DBD0
+      length:
+        NA: 0xC
+      description: Basic information for the CFieldSEFDarkness class. This class is a single-inheritance class.
+    - name: C_FIELD_ACTOR_SCRIPT
+      address:
+        NA: 0x208DC5C
+      length:
+        NA: 0x8
+      description: Basic information for the CFieldActorScript class. This class is a base class.
+    - name: C_FIELD_ACTOR
+      address:
+        NA: 0x208DC64
+      length:
+        NA: 0x8
+      description: Basic information for the CFieldActor class. This class is a base class.
+    - name: C_FIELD_DRAW_ACTOR
+      address:
+        NA: 0x208DD5C
+      length:
+        NA: 0xC
+      description: Basic information for the CFieldDrawActor class. This class is a single-inheritance class.
+    - name: C_FIELD_ACTOR_MANAGE
+      address:
+        NA: 0x208DD9C
+      length:
+        NA: 0x8
+      description: Basic information for the CFieldActorManage class. This class is a base class.
+    - name: C_DRAW_OBJECT
+      address:
+        NA: 0x208DE14
+      length:
+        NA: 0x8
+      description: Basic information for the CDrawObject class. This class is a base class.
+    - name: C_FIELD_DRAW_OBJECT
+      address:
+        NA: 0x208DE1C
+      length:
+        NA: 0xC
+      description: Basic information for the CFieldDrawObject class. This class is a single-inheritance class.
+    - name: C_ACTOR_DATA_PARTNER
+      address:
+        NA: 0x208DE74
+      length:
+        NA: 0xC
+      description: Basic information for the CActorDataPartner class. This class is a single-inheritance class.
+    - name: C_FIELD_DRAW_ACTOR_DATA
+      address:
+        NA: 0x208DE80
+      length:
+        NA: 0xC
+      description: Basic information for the CFieldDrawActorData class. This class is a single-inheritance class.
+    - name: C_ACTOR_DATA_PLAYER
+      address:
+        NA: 0x208DF8C
+      length:
+        NA: 0xC
+      description: Basic information for the CActorDataPlayer class. This class is a single-inheritance class.
+    - name: C_SIMPLE_PRIMITIVE_QUAD_NTF
+      address:
+        NA: 0x208E040
+      length:
+        NA: 0xC
+      description: Basic information for the CSimplePrimitiveQuadNTF class. This class is a single-inheritance class.
+    - name: C_SIMPLE_SPRITE_NTF
+      address:
+        NA: 0x208E04C
+      length:
+        NA: 0xC
+      description: Basic information for the CSimpleSpriteNTF class. This class is a single-inheritance class.
+    - name: C_DOWNLOAD_MISSION_START_SCENE
+      address:
+        NA: 0x208E110
+      length:
+        NA: 0xC
+      description: Basic information for the CDownloadMissionStartScene class. This class is a single-inheritance class.
+    - name: C_DOWNLOAD_MISSION_END_SCENE
+      address:
+        NA: 0x208E180
+      length:
+        NA: 0xC
+      description: Basic information for the CDownloadMissionEndScene class. This class is a single-inheritance class.
+    - name: C_DOWNLOAD_MISSION_RESTART_SCENE
+      address:
+        NA: 0x208E1DC
+      length:
+        NA: 0xC
+      description: Basic information for the CDownloadMissionRestartScene class. This class is a single-inheritance class.
     - name: SYSCALL_PAGE_0
       address:
         NA: 0x208E334
       length:
         NA: 0x200
       description: The 0th page of functions callable by the SysCall script opcode. 128 function pointers long.
+    - name: STD_EXCEPTION
+      address:
+        NA: 0x208EFD8
+      length:
+        NA: 0x8
+      description: "Basic information for the std::exception class. This class is a base class."
+    - name: STD_TR1_DETAIL_SHARED_PTR_DELETER_COMMON
+      address:
+        NA: 0x208EFE0
+      length:
+        NA: 0x8
+      description: "Basic information for the std::tr1::detail::shared_ptr_deleter_common class. This class is a base class."
+    - name: STD_DETAIL_DEFAULT_DELETE
+      address:
+        NA: 0x208EFE8
+      length:
+        NA: 0x8
+      description: "Basic information for the std::detail::default_delete class. This class is a base class."
+    - name: STD_TR1_DETAIL_SHARED_PTR_DELETER
+      address:
+        NA: 0x208EFF0
+      length:
+        NA: 0xC
+      description: "Basic information for the std::tr1::detail::shared_ptr_deleter class. This class is a single-inheritance class."
+    - name: STD_LOGIC_ERROR
+      address:
+        NA: 0x208F0D4
+      length:
+        NA: 0xC
+      description: "Basic information for the std::logic_error class. This class is a single-inheritance class."
+    - name: STD_LENGTH_ERROR
+      address:
+        NA: 0x208F0E0
+      length:
+        NA: 0xC
+      description: "Basic information for the std::length_error class. This class is a single-inheritance class."
+    - name: STD_BAD_EXCEPTION
+      address:
+        NA: 0x208F184
+      length:
+        NA: 0xC
+      description: "Basic information for the std::bad_exception class. This class is a single-inheritance class."
+    - name: STD_TYPE_INFO
+      address:
+        NA: 0x208F208
+      length:
+        NA: 0x8
+      description: "Basic information for the std::type_info class. This class is a base class."
+    - name: CXXABIV1_VMI_CLASS_TYPE_INFO
+      address:
+        NA: 0x208F210
+      length:
+        NA: 0xC
+      description: Basic information for the __cxxabiv1__vmi_class_type_info class. This class is a single-inheritance class.
+    - name: CXXABIV1_SI_CLASS_TYPE_INFO
+      address:
+        NA: 0x208F21C
+      length:
+        NA: 0xC
+      description: Basic information for the __cxxabiv1__si_class_type_info class. This class is a single-inheritance class.
+    - name: CXXABIV1_CLASS_TYPE_INFO
+      address:
+        NA: 0x208F228
+      length:
+        NA: 0xC
+      description: Basic information for the __cxxabiv1__class_type_info class. This class is a single-inheritance class.
     - name: MEGASTRUCT_PTR_ARM9
       address:
         NA: 0x208F304

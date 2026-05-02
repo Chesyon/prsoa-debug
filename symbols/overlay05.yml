@@ -11,7 +11,10 @@ overlay5:
     EU: 0x43A0
     NA: 0x43A0
     JP: 0x43E0
-  description: Seems to be active when viewing the styler status menu.
+  description: |-
+    Shows the Styler status. Implements the "Styler" menu option.
+    
+    The scene class is named "Styler" internally."
   functions:
     - name: Overlay5EntryPoint
       address:
@@ -102,3 +105,33 @@ overlay5:
         NA: 0x4
         JP: 0x4
       description: Static initializer for overlay 5.
+    - name: C_STYLER_SCENE
+      address:
+        NA: 0x2120400
+      length:
+        NA: 0xC
+      description: Basic information for the CStylerScene class. This class is a single-inheritance class.
+    - name: C_STYLER_SCREEN
+      address:
+        NA: 0x2120488
+      length:
+        NA: 0x8
+      description: Basic information for the CStylerScreen class. This class is a base class.
+    - name: C_STYLER_UPPER_SCREEN
+      address:
+        NA: 0x2120490
+      length:
+        NA: 0xC
+      description: Basic information for the CStylerUpperScreen class. This class is a single-inheritance class.
+    - name: C_STYLER_STATUS_SCREEN
+      address:
+        NA: 0x21205BC
+      length:
+        NA: 0xC
+      description: Basic information for the CStylerStatusScreen class. This class is a single-inheritance class.
+    - name: C_STYLER_PARTS_SCREEN
+      address:
+        NA: 0x212087C
+      length:
+        NA: 0xC
+      description: Basic information for the CStylerPartsScreen class. This class is a single-inheritance class.

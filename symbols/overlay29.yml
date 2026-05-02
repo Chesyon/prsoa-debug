@@ -8,7 +8,11 @@ overlay29:
   length:
     EU: 0x360
     NA: 0x360
-  description: "Might be related to cart removal. When run, says data cannot be read from cart. Missing from the JP release."
+  description: |-
+    Responsible for displaying an error message when something goes wrong while accessing the game cart; it's currently unclear what exactly causes this to run.
+    
+    The scene class is named "Card Access Error" internally.
+    This overlay is entirely missing from the JP release, for some reason. It's possible the code here is instead somewhere else (like arm9), but more research is needed.
   functions:
     - name: ret_0211c9e8
       namespace: c_card_access_error_scene
@@ -31,7 +35,7 @@ overlay29:
       address:
         NA: 0x211CB54
       description: |-
-        Seems to be responsible for printing an error message related to cart ejection.
+        Seems to be responsible for printing an error message related to the cartridge.
         
         No params.
   data:
@@ -43,3 +47,9 @@ overlay29:
         EU: 0x4
         NA: 0x4
       description: Static initializer for overlay 29.
+    - name: C_CARD_ACCESS_ERROR_SCENE
+      address:
+        NA: 0x211CCE0
+      length:
+        NA: 0xC
+      description: Basic information for the CCardAccessErrorScene class. This class is a single-inheritance class.

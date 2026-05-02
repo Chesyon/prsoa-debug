@@ -11,7 +11,10 @@ overlay3:
     EU: 0xF000
     NA: 0xEB20
     JP: 0xED40
-  description: Controls the title screen and player name entry screen.
+  description: |-
+    Controls the title screen and player name entry screen.
+    
+    There are five scene classes in this overlay, internally named "Title", "Continue", "Conf", "Input", and "Opening Demo". Each entry point likely corresponds to one of these.
   functions:
     - name: Overlay3EntryPoint0
       address:
@@ -219,3 +222,159 @@ overlay3:
         NA: 0x4
         JP: 0x4
       description: Static initializer for overlay 3.
+    - name: C_TITLE_SCENE
+      address:
+        NA: 0x212A794
+      length:
+        NA: 0xC
+      description: Basic information for the CTitleScene class. This class is a single-inheritance class.
+    - name: C_CONTINUE_SCENE
+      address:
+        NA: 0x212A92C
+      length:
+        NA: 0xC
+      description: Basic information for the CContinueScene class. This class is a single-inheritance class.
+    - name: C_CONF_SCENE
+      address:
+        NA: 0x212A9E4
+      length:
+        NA: 0xC
+      description: Basic information for the CConfScene class. This class is a single-inheritance class.
+    - name: C_NAME_INPUT_SCENE
+      address:
+        NA: 0x212AA98
+      length:
+        NA: 0xC
+      description: Basic information for the CNameInputScene class. This class is a single-inheritance class.
+    - name: C_OPENING_DEMO_SCENE
+      address:
+        NA: 0x212AC0C
+      length:
+        NA: 0xC
+      description: Basic information for the COpeningDemoScene class. This class is a single-inheritance class.
+    - name: T_FIELD_PARTICLE_FORCE_FIELD_C_SIMPLE_SPRITE_NTF
+      address:
+        NA: 0x212AD5C
+      length:
+        NA: 0x8
+      description: Basic information for the TFieldParticleForceField<CSimpleSpriteNTF> class. This class is a base class.
+    - name: C_OPD_SCREEN
+      address:
+        NA: 0x212AD64
+      length:
+        NA: 0x8
+      description: Basic information for the COPDScreen class. This class is a base class.
+    - name: T_FIELD_PARTICLE_EMITTER_C_SIMPLE_SPRITE_NTF
+      address:
+        NA: 0x212AD6C
+      length:
+        NA: 0x8
+      description: Basic information for the TFieldParticleEmitter<CSimpleSpriteNTF> class. This class is a base class.
+    - name: C_OPD_TITLE_SCREEN
+      address:
+        NA: 0x212AD74
+      length:
+        NA: 0xC
+      description: Basic information for the COPDTitleScreen class. This class is a single-inheritance class.
+    - name: C_OPD_TITLE_SCREEN_C_SPARK_EMITTER
+      address:
+        NA: 0x212AD80
+      length:
+        NA: 0xC
+      description: "Basic information for the COPDTitleScreen::CSparkEmitter class. This class is a single-inheritance class."
+    - name: C_OPD_TITLE_SCREEN_C_STAR_ANIMATOR
+      address:
+        NA: 0x212AD8C
+      length:
+        NA: 0xC
+      description: "Basic information for the COPDTitleScreen::CStarAnimator class. This class is a single-inheritance class."
+    - name: C_OPD_TITLE_SCREEN_C_SPARK_ANIMATOR
+      address:
+        NA: 0x212AD98
+      length:
+        NA: 0xC
+      description: "Basic information for the COPDTitleScreen::CSparkAnimator class. This class is a single-inheritance class."
+    - name: C_OPD_TITLE_SCREEN_C_STAR_EMITTER
+      address:
+        NA: 0x212ADA4
+      length:
+        NA: 0xC
+      description: "Basic information for the COPDTitleScreen::CStarEmitter class. This class is a single-inheritance class."
+    - name: T_FIELD_PARTICLE_FORCE_FIELD_C_LINE_PARTICLE
+      address:
+        NA: 0x212B07C
+      length:
+        NA: 0x8
+      description: Basic information for the TFieldParticleForceField<CLineParticle> class. This class is a base class.
+    - name: T_FIELD_PARTICLE_FORCE_FIELD_C_SPARK_LINE
+      address:
+        NA: 0x212B084
+      length:
+        NA: 0x8
+      description: Basic information for the TFieldParticleForceField<CSparkLine> class. This class is a base class.
+    - name: T_FIELD_PARTICLE_EMITTER_C_LINE_PARTICLE
+      address:
+        NA: 0x212B08C
+      length:
+        NA: 0x8
+      description: Basic information for the TFieldParticleEmitter<CLineParticle> class. This class is a base class.
+    - name: T_FIELD_PARTICLE_EMITTER_C_SPARK_LINE
+      address:
+        NA: 0x212B094
+      length:
+        NA: 0x8
+      description: Basic information for the TFieldParticleEmitter<CSparkLine> class. This class is a base class.
+    - name: C_OPD_CAPTURE_DISC_SCREEN_C_LINE_PARTICLE_EMITTER
+      address:
+        NA: 0x212B09C
+      length:
+        NA: 0xC
+      description: "Basic information for the COPDCaptureDiscScreen::CLineParticleEmitter class. This class is a single-inheritance class."
+    - name: C_SPARK_LINE
+      address:
+        NA: 0x212B0A8
+      length:
+        NA: 0xC
+      description: Basic information for the CSparkLine class. This class is a single-inheritance class.
+    - name: C_OPD_CAPTURE_DISC_SCREEN
+      address:
+        NA: 0x212B0B4
+      length:
+        NA: 0xC
+      description: Basic information for the COPDCaptureDiscScreen class. This class is a single-inheritance class.
+    - name: C_LINE_PARTICLE
+      address:
+        NA: 0x212B0C0
+      length:
+        NA: 0xC
+      description: Basic information for the CLineParticle class. This class is a single-inheritance class.
+    - name: C_OPD_CAPTURE_DISC_SCREEN_C_SPARK_EMITTER
+      address:
+        NA: 0x212B0CC
+      length:
+        NA: 0xC
+      description: "Basic information for the COPDCaptureDiscScreen::CSparkEmitter class. This class is a single-inheritance class."
+    - name: C_OPD_CAPTURE_DISC_SCREEN_C_LINE_PARTICLE_ANIMATOR
+      address:
+        NA: 0x212B0D8
+      length:
+        NA: 0xC
+      description: "Basic information for the COPDCaptureDiscScreen::CLineParticleAnimator class. This class is a single-inheritance class."
+    - name: C_OPD_CAPTURE_DISC_SCREEN_C_SPARK_ANIMATOR
+      address:
+        NA: 0x212B0E4
+      length:
+        NA: 0xC
+      description: "Basic information for the COPDCaptureDiscScreen::CSparkAnimator class. This class is a single-inheritance class."
+    - name: C_OPD_CAPTURE_LINE
+      address:
+        NA: 0x212B430
+      length:
+        NA: 0xC
+      description: Basic information for the COPDCaptureLine class. This class is a single-inheritance class.
+    - name: C_OPD_SCREEN_MESH_NTF
+      address:
+        NA: 0x212B4CC
+      length:
+        NA: 0xC
+      description: Basic information for the COPDScreenMeshNTF class. This class is a single-inheritance class.

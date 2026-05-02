@@ -11,7 +11,10 @@ overlay27:
     EU: 0x4CC0
     NA: 0x4CA0
     JP: 0x4CC0
-  description: Seems to be loaded in the Quests menu option.
+  description: |-
+    Handles the quest list. Implements the "Quests" menu option.
+    
+    The scene class is named "Quest List" internally.
   functions:
     - name: Overlay27EntryPoint
       address:
@@ -103,3 +106,43 @@ overlay27:
         NA: 0x4
         JP: 0x4
       description: Static initializer for overlay 27.
+    - name: C_QUEST_LIST_SCENE
+      address:
+        NA: 0x2121140
+      length:
+        NA: 0xC
+      description: Basic information for the CQuestListScene class. This class is a single-inheritance class.
+    - name: C_QUEST_LIST_SCREEN_BASE
+      address:
+        NA: 0x2121194
+      length:
+        NA: 0x8
+      description: Basic information for the CQuestListScreenBase class. This class is a base class.
+    - name: I_QL_LIST_BOX_EVENT_LISTENER
+      address:
+        NA: 0x212119C
+      length:
+        NA: 0x8
+      description: Basic information for the IQLListBoxEventListener class. This class is a base class.
+    - name: I_QL_PUSH_BUTTON_LISTENER
+      address:
+        NA: 0x21211A4
+      length:
+        NA: 0x8
+      description: Basic information for the IQLPushButtonListener class. This class is a base class.
+    - name: C_QUEST_LIST_SCREEN
+      address:
+        NA: 0x2121230
+      description: Basic information for the CQuestListScreen class. This class is a virtual/multiple inheritance class.
+    - name: C_QL_LIST_BOX
+      address:
+        NA: 0x2121384
+      length:
+        NA: 0x8
+      description: Basic information for the CQLListBox class. This class is a base class.
+    - name: C_QUEST_LIST_MAP_SCREEN
+      address:
+        NA: 0x2121624
+      length:
+        NA: 0xC
+      description: Basic information for the CQuestListMapScreen class. This class is a single-inheritance class.

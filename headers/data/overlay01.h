@@ -2,5 +2,36 @@
 #define HEADERS_DATA_OVERLAY01_H_
 
 extern undefined4 OV1_STATIC_INITIALIZER;
+extern struct __si_class_type_info C_BATTLE_SCENE;
+extern struct __si_class_type_info C_BATTLE_ENEMY_DATA;
+extern struct __si_class_type_info C_BATTLE_ENEMY;
+extern struct __si_class_type_info C_BATTLE_ATTACK_EFFECT_DATA;
+extern struct __si_class_type_info C_BATTLE_ATTACK_EFFECT;
 extern void* SYSCALL_PAGE_01_OV_01[95];
+extern struct __si_class_type_info C_BATTLE_DISK;
+extern struct __si_class_type_info C_DISK_CURSOR;
+extern struct __si_class_type_info C_LINE_EFFECT;
+extern struct __class_type_info C_BATTLE_ASSIST;
+extern struct __si_class_type_info C_BATTLE_ASSIST_DRAGON;
+extern struct __si_class_type_info C_BATTLE_ASSIST_ELECTRIC;
+extern struct __si_class_type_info C_BATTLE_ASSIST_ESPER;
+extern struct __si_class_type_info C_BATTLE_ASSIST_EVIL;
+extern struct __si_class_type_info C_BATTLE_ASSIST_FIRE;
+extern struct __si_class_type_info C_BATTLE_ASSIST_FLY;
+extern struct __si_class_type_info C_BATTLE_ASSIST_GHOST;
+extern struct __si_class_type_info C_BATTLE_ASSIST_GRAPPLE;
+extern struct __si_class_type_info C_BATTLE_ASSIST_GRASS;
+extern struct __si_class_type_info C_BATTLE_ASSIST_GROUND;
+extern struct __si_class_type_info C_BATTLE_ASSIST_ICE;
+extern struct __si_class_type_info C_BATTLE_ASSIST_INSECT;
+extern struct __si_class_type_info C_BATTLE_ASSIST_NORMAL;
+extern struct __si_class_type_info C_BATTLE_ASSIST_POISON;
+extern struct __si_class_type_info C_BATTLE_ASSIST_RECOVER;
+extern struct __si_class_type_info C_BATTLE_ASSIST_ROCK;
+extern struct __si_class_type_info C_BATTLE_ASSIST_STEEL;
+extern struct __si_class_type_info C_BATTLE_ASSIST_WATER;
+extern struct __si_class_type_info C_BATTLE_ENEMY_GAUGE;
+extern struct __si_class_type_info C_BATTLE_POWER_SAVE;
+extern struct __si_class_type_info C_BATTLE_GAME_OVER;
+
 #endif

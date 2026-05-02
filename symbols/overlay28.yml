@@ -11,7 +11,10 @@ overlay28:
     EU: 0x1320
     NA: 0x1320
     JP: 0x1320
-  description: Seems to be loaded in the Map menu option.
+  description: |-
+    Displays the map of Almia. Implements the "Map" menu option.
+    
+    The scene class is named "Map Disp" internally.
   functions:
     - name: Overlay28EntryPoint
       address:
@@ -39,3 +42,21 @@ overlay28:
         NA: 0x4
         JP: 0x4
       description: Static initializer for overlay 28.
+    - name: C_MAP_DISP_SCENE
+      address:
+        NA: 0x211DBE0
+      length:
+        NA: 0xC
+      description: Basic information for the CMapDispScene class. This class is a single-inheritance class.
+    - name: I_MAP_DISP_RSC_PATH_BUILDER
+      address:
+        NA: 0x211DC3C
+      length:
+        NA: 0x8
+      description: Basic information for the IMapDispRscPathBuilder class. This class is a base class.
+    - name: C_MAP_DISP_SCREEN_C_PATH_BUILDER
+      address:
+        NA: 0x211DC44
+      length:
+        NA: 0xC
+      description: "Basic information for the CMapDispScreen::CPathBuilder class. This class is a single-inheritance class."

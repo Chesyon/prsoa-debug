@@ -9,6 +9,7 @@
 #include "battle_extras.h"
 #include "browser.h"
 #include "clock.h"
+#include "classes.h"
 #include "display.h"
 #include "file.h"
 #include "flying_menu.h"

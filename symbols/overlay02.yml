@@ -11,7 +11,10 @@ overlay2:
     EU: 0x800
     NA: 0x800
     JP: 0x800
-  description: Unknown.
+  description: |-
+    Likely handles transition out of battle back into field.
+    
+    The scene class is named "Battle To Field" internally.
   functions:
     - name: PostprocessBattleResults
       address:
@@ -87,3 +90,9 @@ overlay2:
         NA: 0x4
         JP: 0x4
       description: Static initializer for overlay 2.
+    - name: C_BATTLE_TO_FIELD_SCENE
+      address:
+        NA: 0x211D160
+      length:
+        NA: 0xC
+      description: Basic information for the CBattleToFieldScene class. This class is a single-inheritance class.

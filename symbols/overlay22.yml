@@ -11,7 +11,10 @@ overlay22:
     EU: 0x5320
     NA: 0x51E0
     JP: 0x5240
-  description: Seems to be loaded in the Glossary menu option.
+  description: |-
+    Displays the glossary. Implements the "Glossary" menu option.
+    
+    The scene class is named "Encylopedia" internally.
   functions:
     - name: Overlay22EntryPoint
       address:
@@ -59,3 +62,45 @@ overlay22:
         NA: 0x4
         JP: 0x4
       description: Static initializer for overlay 22.
+    - name: I_ENCYC_PUSH_BUTTON_LISTENER
+      address:
+        NA: 0x2121700
+      length:
+        NA: 0x8
+      description: Basic information for the IEncycPushButtonListener class. This class is a base class.
+    - name: C_ENCYCLOPEDIA_SCENE
+      address:
+        NA: 0x2121748
+      description: Basic information for the CEncyclopediaScene class. This class is a virtual/multiple inheritance class.
+    - name: C_ENCYC_MENU_SCREEN
+      address:
+        NA: 0x212180C
+      length:
+        NA: 0x8
+      description: Basic information for the CEncycMenuScreen class. This class is a base class.
+    - name: I_ENCYC_LIST_BOX_EVENT_LISTENER
+      address:
+        NA: 0x2121814
+      length:
+        NA: 0x8
+      description: Basic information for the IEncycListBoxEventListener class. This class is a base class.
+    - name: I_ENCYC_RADIO_BUTTON_LISTENER
+      address:
+        NA: 0x212181C
+      length:
+        NA: 0x8
+      description: Basic information for the IEncycRadioButtonListener class. This class is a base class.
+    - name: C_ENCYC_ITEM_LIST_SCREEN
+      address:
+        NA: 0x21218D8
+      description: Basic information for the CEncycItemListScreen class. This class is a virtual/multiple inheritance class.
+    - name: C_ENCYC_ITEM_DESCRIPTION_SCREEN
+      address:
+        NA: 0x2121A6C
+      description: Basic information for the CEncycItemDescriptionScreen class. This class is a virtual/multiple inheritance class.
+    - name: C_ENCYC_LIST_BOX
+      address:
+        NA: 0x2121B54
+      length:
+        NA: 0x8
+      description: Basic information for the CEncycListBox class. This class is a base class.

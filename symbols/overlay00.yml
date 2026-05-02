@@ -11,7 +11,10 @@ overlay0:
     EU: 0x5E6E0
     NA: 0x5E6E0
     JP: 0x5E740
-  description: "Likely controls the \"ground\" mode for overworlds and cutscenes."
+  description: |-
+    The main field mode overlay, responsible for overworlds and cutscenes.
+    
+    The scene class is named "Field" internally.
   functions:
     - name: Overlay0EntryPoint
       address:
@@ -1205,6 +1208,398 @@ overlay0:
         NA: 0x4
         JP: 0x4
       description: Static initializer for overlay 0.
+    - name: I_FIELD_ENEMY_DATA_BUILDER
+      address:
+        NA: 0x2172F80
+      length:
+        NA: 0x8
+      description: Basic information for the IFieldEnemyDataBuilder class. This class is a base class.
+    - name: C_FIELD_SCENE
+      address:
+        NA: 0x2172F88
+      length:
+        NA: 0xC
+      description: Basic information for the CFieldScene class. This class is a single-inheritance class.
+    - name: C_FIELD_MAP_LAYER_BASE
+      address:
+        NA: 0x2173124
+      length:
+        NA: 0x8
+      description: Basic information for the CFieldMapLayerBase class. This class is a base class.
+    - name: C_FIELD_MAP_LAYER_CHARACTER_PRIORITY
+      address:
+        NA: 0x217312C
+      length:
+        NA: 0xC
+      description: Basic information for the CFieldMapLayerCharacterPriority class. This class is a single-inheritance class.
+    - name: C_FIELD_MAP_LAYER_STATIC
+      address:
+        NA: 0x21732A8
+      length:
+        NA: 0xC
+      description: Basic information for the CFieldMapLayerStatic class. This class is a single-inheritance class.
+    - name: C_FIELD_MAP_LAYER_COLLISION
+      address:
+        NA: 0x21732F8
+      length:
+        NA: 0xC
+      description: Basic information for the CFieldMapLayerCollision class. This class is a single-inheritance class.
+    - name: C_FIELD_MAP_LAYER_NORMAL_VIEW
+      address:
+        NA: 0x217334C
+      length:
+        NA: 0xC
+      description: Basic information for the CFieldMapLayerNormalView class. This class is a single-inheritance class.
+    - name: C_FIELD_MAP_LAYER_CHARA_TRANS
+      address:
+        NA: 0x21733A0
+      length:
+        NA: 0xC
+      description: Basic information for the CFieldMapLayerCharaTrans class. This class is a single-inheritance class.
+    - name: C_FIELD_MAP_LAYER_NPC
+      address:
+        NA: 0x21733F4
+      length:
+        NA: 0xC
+      description: Basic information for the CFieldMapLayerNpc class. This class is a single-inheritance class.
+    - name: C_FIELD_MAP_LAYER_ENEMY
+      address:
+        NA: 0x2173440
+      length:
+        NA: 0xC
+      description: Basic information for the CFieldMapLayerEnemy class. This class is a single-inheritance class.
+    - name: C_FIELD_MAP_LAYER_OBJECT
+      address:
+        NA: 0x2173490
+      length:
+        NA: 0xC
+      description: Basic information for the CFieldMapLayerObject class. This class is a single-inheritance class.
+    - name: C_FIELD_MAP_LAYER_EVENT_RECT
+      address:
+        NA: 0x21734E0
+      length:
+        NA: 0xC
+      description: Basic information for the CFieldMapLayerEventRect class. This class is a single-inheritance class.
+    - name: C_FIELD_MAP_LAYER_ATTRIBUTE
+      address:
+        NA: 0x2173534
+      length:
+        NA: 0xC
+      description: Basic information for the CFieldMapLayerAttribute class. This class is a single-inheritance class.
+    - name: C_FIELD_MAP_LAYER_MULTI_SCROLL
+      address:
+        NA: 0x2173588
+      length:
+        NA: 0xC
+      description: Basic information for the CFieldMapLayerMultiScroll class. This class is a single-inheritance class.
+    - name: C_FIELD_MAP_LAYER_UV_SCROLL
+      address:
+        NA: 0x21735DC
+      length:
+        NA: 0xC
+      description: Basic information for the CFieldMapLayerUVScroll class. This class is a single-inheritance class.
+    - name: C_FIELD_MAP_LAYER_COLOR_ANIME
+      address:
+        NA: 0x2173630
+      length:
+        NA: 0xC
+      description: Basic information for the CFieldMapLayerColorAnime class. This class is a single-inheritance class.
+    - name: C_FIELD_PLAYER
+      address:
+        NA: 0x2173684
+      length:
+        NA: 0xC
+      description: Basic information for the CFieldPlayer class. This class is a single-inheritance class.
+    - name: C_FIELD_ENEMY
+      address:
+        NA: 0x21736E8
+      length:
+        NA: 0xC
+      description: Basic information for the CFieldEnemy class. This class is a single-inheritance class.
+    - name: C_FIELD_ENEMY_MANAGE
+      address:
+        NA: 0x2173788
+      description: Basic information for the CFieldEnemyManage class. This class is a virtual/multiple inheritance class.
+    - name: C_FIELD_PARTNER
+      address:
+        NA: 0x217398C
+      length:
+        NA: 0xC
+      description: Basic information for the CFieldPartner class. This class is a single-inheritance class.
+    - name: C_FIELD_EFFECT_MANAGE_EVENT_LISTENER
+      address:
+        NA: 0x21739FC
+      length:
+        NA: 0x8
+      description: Basic information for the CFieldEffectManageEventListener class. This class is a base class.
+    - name: C_FIELD_PARTNER_MANAGE
+      address:
+        NA: 0x2173A28
+      description: Basic information for the CFieldPartnerManage class. This class is a virtual/multiple inheritance class.
+    - name: C_FIELD_NPC_ACTOR_SCRIPT
+      address:
+        NA: 0x2173B98
+      length:
+        NA: 0xC
+      description: Basic information for the CFieldNpcActorScript class. This class is a single-inheritance class.
+    - name: C_FIELD_NPC
+      address:
+        NA: 0x2173BA4
+      length:
+        NA: 0xC
+      description: Basic information for the CFieldNpc class. This class is a single-inheritance class.
+    - name: C_FIELD_NPC_MANAGE
+      address:
+        NA: 0x2173CC0
+      length:
+        NA: 0xC
+      description: Basic information for the CFieldNpcManage class. This class is a single-inheritance class.
+    - name: C_FIELD_TARGET_OBJECT
+      address:
+        NA: 0x2173D3C
+      length:
+        NA: 0xC
+      description: Basic information for the CFieldTargetObject class. This class is a single-inheritance class.
+    - name: C_FIELD_TARGET_OBJECT_ACTOR_SCRIPT
+      address:
+        NA: 0x2173D48
+      length:
+        NA: 0xC
+      description: Basic information for the CFieldTargetObjectActorScript class. This class is a single-inheritance class.
+    - name: C_FIELD_TARGET_OBJECT_MANAGE
+      address:
+        NA: 0x2173E98
+      length:
+        NA: 0xC
+      description: Basic information for the CFieldTargetObjectManage class. This class is a single-inheritance class.
+    - name: C_FIELD_EVENT_RECT
+      address:
+        NA: 0x2173F80
+      length:
+        NA: 0x8
+      description: Basic information for the CFieldEventRect class. This class is a base class.
+    - name: C_FIELD_PARTNER_NPC
+      address:
+        NA: 0x2174048
+      length:
+        NA: 0xC
+      description: Basic information for the CFieldPartnerNpc class. This class is a single-inheritance class.
+    - name: C_FIELD_POKEMON_TARGET_CLEAR_SCRIPT
+      address:
+        NA: 0x21740B4
+      length:
+        NA: 0xC
+      description: Basic information for the CFieldPokemonTargetClearScript class. This class is a single-inheritance class.
+    - name: C_FIELD_PARTNER_POKEMON
+      address:
+        NA: 0x21740C0
+      length:
+        NA: 0xC
+      description: Basic information for the CFieldPartnerPokemon class. This class is a single-inheritance class.
+    - name: C_FIELD_PLAYER_INPUT_CONTROL_MANAGE
+      address:
+        NA: 0x2174338
+      length:
+        NA: 0x8
+      description: Basic information for the CFieldPlayerInputControlManage class. This class is a base class.
+    - name: C_FIELD_EFFECT
+      address:
+        NA: 0x21743EC
+      length:
+        NA: 0x8
+      description: Basic information for the CFieldEffect class. This class is a base class.
+    - name: I_FIELD_EFFECT_DATA_BUILDER
+      address:
+        NA: 0x2174468
+      length:
+        NA: 0x8
+      description: Basic information for the IFieldEffectDataBuilder class. This class is a base class.
+    - name: C_FIELD_EFFECT_MANAGE
+      address:
+        NA: 0x2174470
+      length:
+        NA: 0xC
+      description: Basic information for the CFieldEffectManage class. This class is a single-inheritance class.
+    - name: C_FIELD_EFFECT_MANAGE_C_RESIDENT_RESOURCE
+      address:
+        NA: 0x217447C
+      length:
+        NA: 0xC
+      description: "Basic information for the CFieldEffectManage::CResidentResource class. This class is a single-inheritance class."
+    - name: C_FIELD_EFFECT_MANPU_SIMPLE
+      address:
+        NA: 0x21745B8
+      length:
+        NA: 0xC
+      description: Basic information for the CFieldEffectManpuSimple class. This class is a single-inheritance class.
+    - name: C_FIELD_EFFECT_MANPU
+      address:
+        NA: 0x21745C4
+      length:
+        NA: 0xC
+      description: Basic information for the CFieldEffectManpu class. This class is a single-inheritance class.
+    - name: C_FIELD_EFFECT_ACTOR
+      address:
+        NA: 0x21745D0
+      length:
+        NA: 0xC
+      description: Basic information for the CFieldEffectActor class. This class is a single-inheritance class.
+    - name: T_FIELD_PARTICLE_EMITTER_C_SOFTWARE_SPRITE
+      address:
+        NA: 0x2174700
+      length:
+        NA: 0x8
+      description: Basic information for the TFieldParticleEmitter<CSoftwareSprite> class. This class is a base class.
+    - name: C_FIELD_EFFECT_FACTORY
+      address:
+        NA: 0x2174708
+      length:
+        NA: 0x8
+      description: Basic information for the CFieldEffectFactory class. This class is a base class.
+    - name: T_FIELD_PARTICLE_FORCE_FIELD_C_SOFTWARE_SPRITE
+      address:
+        NA: 0x2174710
+      length:
+        NA: 0x8
+      description: Basic information for the TFieldParticleForceField<CSoftwareSprite> class. This class is a base class.
+    - name: C_FIELD_EFFECT_WATER_GUN_FACTORY
+      address:
+        NA: 0x2174718
+      length:
+        NA: 0xC
+      description: Basic information for the CFieldEffectWaterGunFactory class. This class is a single-inheritance class.
+    - name: C_FIELD_EFFECT_WATER_GUN_C_EMITTER
+      address:
+        NA: 0x2174724
+      length:
+        NA: 0xC
+      description: "Basic information for the CFieldEffectWaterGun::CEmitter class. This class is a single-inheritance class."
+    - name: T_FIELD_PARTICLE_POINT_EMITTER_C_SOFTWARE_SPRITE
+      address:
+        NA: 0x2174730
+      length:
+        NA: 0xC
+      description: Basic information for the TFieldParticlePointEmitter<CSoftwareSprite> class. This class is a single-inheritance class.
+    - name: C_FIELD_EFFECT_WATER_GUN_C_ANIMATOR
+      address:
+        NA: 0x217473C
+      length:
+        NA: 0xC
+      description: "Basic information for the CFieldEffectWaterGun::CAnimator class. This class is a single-inheritance class."
+    - name: C_FIELD_EFFECT_WATER_GUN
+      address:
+        NA: 0x2174748
+      length:
+        NA: 0xC
+      description: Basic information for the CFieldEffectWaterGun class. This class is a single-inheritance class.
+    - name: C_FIELD_EFFECT_BULLET_FACTORY
+      address:
+        NA: 0x2174948
+      length:
+        NA: 0xC
+      description: Basic information for the CFieldEffectBulletFactory class. This class is a single-inheritance class.
+    - name: C_FIELD_EFFECT_BULLET
+      address:
+        NA: 0x2174954
+      length:
+        NA: 0xC
+      description: Basic information for the CFieldEffectBullet class. This class is a single-inheritance class.
+    - name: C_FIELD_EFFECT_SAND_BURIAL_CFP_EMITTER_SAND_BURIAL
+      address:
+        NA: 0x2174A34
+      length:
+        NA: 0xC
+      description: "Basic information for the CFieldEffectSandBurial::CFPEmitterSandBurial class. This class is a single-inheritance class."
+    - name: C_FIELD_EFFECT_SAND_BURIAL
+      address:
+        NA: 0x2174A40
+      length:
+        NA: 0xC
+      description: Basic information for the CFieldEffectSandBurial class. This class is a single-inheritance class.
+    - name: C_FIELD_EFFECT_SAND_BURIAL_FACTORY
+      address:
+        NA: 0x2174A4C
+      length:
+        NA: 0xC
+      description: Basic information for the CFieldEffectSandBurialFactory class. This class is a single-inheritance class.
+    - name: C_FIELD_EFFECT_SAND_BURIAL_CFP_FORCE_FIELD_SAND_BURIAL
+      address:
+        NA: 0x2174A58
+      length:
+        NA: 0xC
+      description: "Basic information for the CFieldEffectSandBurial::CFPForceFieldSandBurial class. This class is a single-inheritance class."
+    - name: C_FIELD_EFFECT_CHARGE_FACTORY
+      address:
+        NA: 0x2174BBC
+      length:
+        NA: 0xC
+      description: Basic information for the CFieldEffectChargeFactory class. This class is a single-inheritance class.
+    - name: C_FIELD_EFFECT_CHARGE
+      address:
+        NA: 0x2174BC8
+      length:
+        NA: 0xC
+      description: Basic information for the CFieldEffectCharge class. This class is a single-inheritance class.
+    - name: C_FIELD_EFFECT_FLASH_FACTORY
+      address:
+        NA: 0x2174C8C
+      length:
+        NA: 0xC
+      description: Basic information for the CFieldEffectFlashFactory class. This class is a single-inheritance class.
+    - name: C_FIELD_EFFECT_FLASH
+      address:
+        NA: 0x2174C98
+      length:
+        NA: 0xC
+      description: Basic information for the CFieldEffectFlash class. This class is a single-inheritance class.
+    - name: C_FIELD_EFFECT_FOGCUT
+      address:
+        NA: 0x2174D58
+      length:
+        NA: 0xC
+      description: Basic information for the CFieldEffectFogcut class. This class is a single-inheritance class.
+    - name: C_FIELD_EFFECT_FOGCUT_CFP_FORCE_FIELD_FOGCUT
+      address:
+        NA: 0x2174D64
+      length:
+        NA: 0xC
+      description: "Basic information for the CFieldEffectFogcut::CFPForceFieldFogcut class. This class is a single-inheritance class."
+    - name: C_FIELD_EFFECT_FOGCUT_CFP_EMITTER_FOGCUT
+      address:
+        NA: 0x2174D70
+      length:
+        NA: 0xC
+      description: "Basic information for the CFieldEffectFogcut::CFPEmitterFogcut class. This class is a single-inheritance class."
+    - name: C_FIELD_EFFECT_FOGCUT_FACTORY
+      address:
+        NA: 0x2174D7C
+      length:
+        NA: 0xC
+      description: Basic information for the CFieldEffectFogcutFactory class. This class is a single-inheritance class.
+    - name: C_FIELD_EFFECT_FLOWER_STORM
+      address:
+        NA: 0x2174EC8
+      length:
+        NA: 0xC
+      description: Basic information for the CFieldEffectFlowerStorm class. This class is a single-inheritance class.
+    - name: C_FIELD_EFFECT_FLOWER_STORM_CFP_FORCE_FIELD_FLOWER_STORM
+      address:
+        NA: 0x2174ED4
+      length:
+        NA: 0xC
+      description: "Basic information for the CFieldEffectFlowerStorm::CFPForceFieldFlowerStorm class. This class is a single-inheritance class."
+    - name: C_FIELD_EFFECT_FLOWER_STORM_FACTORY
+      address:
+        NA: 0x2174EE0
+      length:
+        NA: 0xC
+      description: Basic information for the CFieldEffectFlowerStormFactory class. This class is a single-inheritance class.
+    - name: C_FIELD_EFFECT_FLOWER_STORM_CFP_EMITTER_FLOWER_STORM
+      address:
+        NA: 0x2174EEC
+      length:
+        NA: 0xC
+      description: "Basic information for the CFieldEffectFlowerStorm::CFPEmitterFlowerStorm class. This class is a single-inheritance class."
     - name: SYSCALL_PAGE_11_OV_00
       address:
         NA: 0x21751F4
@@ -1241,3 +1636,711 @@ overlay0:
       length:
         NA: 0x18
       description: "The 15th page of functions callable by the SysCall script opcode. 6 function pointers long. May have undefined behavior if overlay_00 is not active, as SYSCALL_PAGE_PTRS points to this address regardless of whether the overlay is active."
+    - name: C_FIELD_EFFECT_ATTACK_ACTOR_DATA
+      address:
+        NA: 0x2177AD0
+      length:
+        NA: 0xC
+      description: Basic information for the CFieldEffectAttackActorData class. This class is a single-inheritance class.
+    - name: C_FIELD_MANPU_EFFECT_ACTOR_DATA
+      address:
+        NA: 0x2177ADC
+      length:
+        NA: 0xC
+      description: Basic information for the CFieldManpuEffectActorData class. This class is a single-inheritance class.
+    - name: C_FIELD_EFFECT_NORMAL_ACTOR_DATA
+      address:
+        NA: 0x2177AE8
+      length:
+        NA: 0xC
+      description: Basic information for the CFieldEffectNormalActorData class. This class is a single-inheritance class.
+    - name: C_FIELD_EFFECT_FOOT_STEP_SMOKE_C_FIELD_PARTICLE_ONE_SHOT_EMITTER
+      address:
+        NA: 0x2177D18
+      length:
+        NA: 0xC
+      description: "Basic information for the CFieldEffectFootStepSmoke::CFieldParticleOneShotEmitter class. This class is a single-inheritance class."
+    - name: C_FIELD_EFFECT_FOOT_STEP_SMOKE_C_FIELD_PARTICLE_ALPHA_ANIMATOR
+      address:
+        NA: 0x2177D24
+      length:
+        NA: 0xC
+      description: "Basic information for the CFieldEffectFootStepSmoke::CFieldParticleAlphaAnimator class. This class is a single-inheritance class."
+    - name: C_FIELD_EFFECT_FOOT_STEP_SMOKE_C_DRAW_OBJECT_PARTICLE
+      address:
+        NA: 0x2177D30
+      length:
+        NA: 0xC
+      description: "Basic information for the CFieldEffectFootStepSmoke::CDrawObjectParticle class. This class is a single-inheritance class."
+    - name: C_FIELD_EFFECT_FOOT_STEP_SMOKE
+      address:
+        NA: 0x2177D3C
+      length:
+        NA: 0xC
+      description: Basic information for the CFieldEffectFootStepSmoke class. This class is a single-inheritance class.
+    - name: C_FIELD_EFFECT_MANPU_FACTORY
+      address:
+        NA: 0x2177EB8
+      length:
+        NA: 0xC
+      description: Basic information for the CFieldEffectManpuFactory class. This class is a single-inheritance class.
+    - name: C_FIELD_EFFECT_MANPU_BALLOON
+      address:
+        NA: 0x2177F00
+      length:
+        NA: 0xC
+      description: Basic information for the CFieldEffectManpuBalloon class. This class is a single-inheritance class.
+    - name: C_FIELD_EFFECT_MANPU_JUMPING
+      address:
+        NA: 0x2177F98
+      length:
+        NA: 0xC
+      description: Basic information for the CFieldEffectManpuJumping class. This class is a single-inheritance class.
+    - name: C_FIELD_EFFECT_MANPU_ANIME
+      address:
+        NA: 0x2178030
+      length:
+        NA: 0xC
+      description: Basic information for the CFieldEffectManpuAnime class. This class is a single-inheritance class.
+    - name: C_FIELD_POKE_MOVE
+      address:
+        NA: 0x21780CC
+      length:
+        NA: 0x8
+      description: Basic information for the CFieldPokeMove class. This class is a base class.
+    - name: C_FIELD_CANNON_UNIT
+      address:
+        NA: 0x21781BC
+      length:
+        NA: 0xC
+      description: Basic information for the CFieldCannonUnit class. This class is a single-inheritance class.
+    - name: C_FIELD_CANNON
+      address:
+        NA: 0x21781C8
+      length:
+        NA: 0xC
+      description: Basic information for the CFieldCannon class. This class is a single-inheritance class.
+    - name: C_FIELD_PARTICLE_SMOKE_ANIMATOR
+      address:
+        NA: 0x2178288
+      length:
+        NA: 0xC
+      description: Basic information for the CFieldParticleSmokeAnimator class. This class is a single-inheritance class.
+    - name: T_FIELD_PARTICLE_RECT_EMITTER_C_SOFTWARE_SPRITE
+      address:
+        NA: 0x21782C8
+      length:
+        NA: 0xC
+      description: Basic information for the TFieldParticleRectEmitter<CSoftwareSprite> class. This class is a single-inheritance class.
+    - name: T_FIELD_PARTICLE_SMOKE_RECT_EMITTER_C_SOFTWARE_SPRITE
+      address:
+        NA: 0x21782D4
+      length:
+        NA: 0xC
+      description: Basic information for the TFieldParticleSmokeRectEmitter<CSoftwareSprite> class. This class is a single-inheritance class.
+    - name: C_FIELD_EFFECT_STEAM_FACTORY
+      address:
+        NA: 0x21782E0
+      length:
+        NA: 0xC
+      description: Basic information for the CFieldEffectSteamFactory class. This class is a single-inheritance class.
+    - name: C_FIELD_EFFECT_STEAM
+      address:
+        NA: 0x21782EC
+      length:
+        NA: 0xC
+      description: Basic information for the CFieldEffectSteam class. This class is a single-inheritance class.
+    - name: T_FIELD_EFFECT_SMOKE_C_SOFTWARE_SPRITE
+      address:
+        NA: 0x21782F8
+      length:
+        NA: 0xC
+      description: Basic information for the TFieldEffectSmoke<CSoftwareSprite> class. This class is a single-inheritance class.
+    - name: T_FIELD_EFFECT_PARTICLE_C_SOFTWARE_SPRITE
+      address:
+        NA: 0x2178304
+      length:
+        NA: 0xC
+      description: Basic information for the TFieldEffectParticle<CSoftwareSprite> class. This class is a single-inheritance class.
+    - name: C_FIELD_EFFECT_SCATTER_LEAVES_FACTORY
+      address:
+        NA: 0x21785A4
+      length:
+        NA: 0xC
+      description: Basic information for the CFieldEffectScatterLeavesFactory class. This class is a single-inheritance class.
+    - name: C_FIELD_EFFECT_SCATTER_LEAVES
+      address:
+        NA: 0x21785B0
+      length:
+        NA: 0xC
+      description: Basic information for the CFieldEffectScatterLeaves class. This class is a single-inheritance class.
+    - name: C_FIELD_PARTICLE_LEAVES_ANIMATOR
+      address:
+        NA: 0x21785BC
+      length:
+        NA: 0xC
+      description: Basic information for the CFieldParticleLeavesAnimator class. This class is a single-inheritance class.
+    - name: C_FIELD_PARTICLE_LEAVES_EMITTER
+      address:
+        NA: 0x21785C8
+      length:
+        NA: 0xC
+      description: Basic information for the CFieldParticleLeavesEmitter class. This class is a single-inheritance class.
+    - name: C_FIELD_EFFECT_SPREAD_SMOKE_FACTORY
+      address:
+        NA: 0x2178724
+      length:
+        NA: 0xC
+      description: Basic information for the CFieldEffectSpreadSmokeFactory class. This class is a single-inheritance class.
+    - name: C_FIELD_EFFECT_SPREAD_SMOKE
+      address:
+        NA: 0x2178730
+      length:
+        NA: 0xC
+      description: Basic information for the CFieldEffectSpreadSmoke class. This class is a single-inheritance class.
+    - name: C_FIELD_EFFECT_WAVE_BULLET_C_WAVE_PARTICLE_ANIMATOR
+      address:
+        NA: 0x217880C
+      length:
+        NA: 0xC
+      description: "Basic information for the CFieldEffectWaveBullet::CWaveParticleAnimator class. This class is a single-inheritance class."
+    - name: C_FIELD_EFFECT_WAVE_BULLET_C_WAVE_PARTICLE_EMITTER
+      address:
+        NA: 0x2178818
+      length:
+        NA: 0xC
+      description: "Basic information for the CFieldEffectWaveBullet::CWaveParticleEmitter class. This class is a single-inheritance class."
+    - name: C_FIELD_EFFECT_WAVE_BULLET
+      address:
+        NA: 0x2178824
+      length:
+        NA: 0xC
+      description: Basic information for the CFieldEffectWaveBullet class. This class is a single-inheritance class.
+    - name: C_FIELD_EFFECT_WAVE_BULLET_FACTORY
+      address:
+        NA: 0x2178830
+      length:
+        NA: 0xC
+      description: Basic information for the CFieldEffectWaveBulletFactory class. This class is a single-inheritance class.
+    - name: C_FIELD_EFFECT_CELL_ANIME
+      address:
+        NA: 0x21789B0
+      length:
+        NA: 0xC
+      description: Basic information for the CFieldEffectCellAnime class. This class is a single-inheritance class.
+    - name: C_FIELD_EFFECT_NORMAL_CELL_ANIME_FACTORY
+      address:
+        NA: 0x21789BC
+      length:
+        NA: 0xC
+      description: Basic information for the CFieldEffectNormalCellAnimeFactory class. This class is a single-inheritance class.
+    - name: C_FIELD_EFFECT_ATTACK_CELL_ANIME_FACTORY
+      address:
+        NA: 0x21789C8
+      length:
+        NA: 0xC
+      description: Basic information for the CFieldEffectAttackCellAnimeFactory class. This class is a single-inheritance class.
+    - name: C_FIELD_EFFECT_PARABOLA_BULLET
+      address:
+        NA: 0x2178AE0
+      length:
+        NA: 0xC
+      description: Basic information for the CFieldEffectParabolaBullet class. This class is a single-inheritance class.
+    - name: C_FIELD_EFFECT_PARABOLA_BULLET_FACTORY
+      address:
+        NA: 0x2178AEC
+      length:
+        NA: 0xC
+      description: Basic information for the CFieldEffectParabolaBulletFactory class. This class is a single-inheritance class.
+    - name: C_FIELD_EFFECT_POISON_GAS
+      address:
+        NA: 0x2178BC0
+      length:
+        NA: 0xC
+      description: Basic information for the CFieldEffectPoisonGas class. This class is a single-inheritance class.
+    - name: C_FIELD_EFFECT_POISON_GAS_FACTORY
+      address:
+        NA: 0x2178BCC
+      length:
+        NA: 0xC
+      description: Basic information for the CFieldEffectPoisonGasFactory class. This class is a single-inheritance class.
+    - name: C_FIELD_EFFECT_SPRAY_C_WAVE_PARTICLE_EMITTER
+      address:
+        NA: 0x2178C94
+      length:
+        NA: 0xC
+      description: "Basic information for the CFieldEffectSpray::CWaveParticleEmitter class. This class is a single-inheritance class."
+    - name: C_FIELD_EFFECT_SPRAY
+      address:
+        NA: 0x2178CA0
+      length:
+        NA: 0xC
+      description: Basic information for the CFieldEffectSpray class. This class is a single-inheritance class.
+    - name: C_FIELD_EFFECT_SPRAY_C_WAVE_PARTICLE_ANIMATOR
+      address:
+        NA: 0x2178CAC
+      length:
+        NA: 0xC
+      description: "Basic information for the CFieldEffectSpray::CWaveParticleAnimator class. This class is a single-inheritance class."
+    - name: C_FIELD_EFFECT_SPRAY_FACTORY
+      address:
+        NA: 0x2178CB8
+      length:
+        NA: 0xC
+      description: Basic information for the CFieldEffectSprayFactory class. This class is a single-inheritance class.
+    - name: C_FIELD_EFFECT_FIRE_FACTORY
+      address:
+        NA: 0x2178E20
+      length:
+        NA: 0xC
+      description: Basic information for the CFieldEffectFireFactory class. This class is a single-inheritance class.
+    - name: C_FIELD_EFFECT_FIRE_C_PARTICLE_ANIMATOR
+      address:
+        NA: 0x2178E2C
+      length:
+        NA: 0xC
+      description: "Basic information for the CFieldEffectFire::CParticleAnimator class. This class is a single-inheritance class."
+    - name: C_FIELD_EFFECT_FIRE
+      address:
+        NA: 0x2178E38
+      length:
+        NA: 0xC
+      description: Basic information for the CFieldEffectFire class. This class is a single-inheritance class.
+    - name: C_FIELD_EFFECT_FIRE_C_PARTICLE_EMITTER
+      address:
+        NA: 0x2178E44
+      length:
+        NA: 0xC
+      description: "Basic information for the CFieldEffectFire::CParticleEmitter class. This class is a single-inheritance class."
+    - name: C_FIELD_EFFECT_SPARK_FACTORY
+      address:
+        NA: 0x2178F90
+      length:
+        NA: 0xC
+      description: Basic information for the CFieldEffectSparkFactory class. This class is a single-inheritance class.
+    - name: C_FIELD_EFFECT_SPARK
+      address:
+        NA: 0x2178F9C
+      length:
+        NA: 0xC
+      description: Basic information for the CFieldEffectSpark class. This class is a single-inheritance class.
+    - name: C_FIELD_EFFECT_JUMON_FACTORY
+      address:
+        NA: 0x217905C
+      length:
+        NA: 0xC
+      description: Basic information for the CFieldEffectJumonFactory class. This class is a single-inheritance class.
+    - name: C_FIELD_EFFECT_JUMON
+      address:
+        NA: 0x2179068
+      length:
+        NA: 0xC
+      description: Basic information for the CFieldEffectJumon class. This class is a single-inheritance class.
+    - name: C_FIELD_EFFECT_EXPLOSION
+      address:
+        NA: 0x21791B8
+      length:
+        NA: 0xC
+      description: Basic information for the CFieldEffectExplosion class. This class is a single-inheritance class.
+    - name: C_FIELD_EFFECT_EXPLOSION_FACTORY
+      address:
+        NA: 0x21791C4
+      length:
+        NA: 0xC
+      description: Basic information for the CFieldEffectExplosionFactory class. This class is a single-inheritance class.
+    - name: C_FIELD_EFFECT_SLIME
+      address:
+        NA: 0x2179294
+      length:
+        NA: 0xC
+      description: Basic information for the CFieldEffectSlime class. This class is a single-inheritance class.
+    - name: C_FIELD_EFFECT_SLIME_FACTORY
+      address:
+        NA: 0x21792A0
+      length:
+        NA: 0xC
+      description: Basic information for the CFieldEffectSlimeFactory class. This class is a single-inheritance class.
+    - name: C_FIELD_EFFECT_MANPU_ANGER_C_ANIMATOR
+      address:
+        NA: 0x2179390
+      length:
+        NA: 0xC
+      description: "Basic information for the CFieldEffectManpuAnger::CAnimator class. This class is a single-inheritance class."
+    - name: C_FIELD_EFFECT_MANPU_ANGER_C_EMITTER
+      address:
+        NA: 0x217939C
+      length:
+        NA: 0xC
+      description: "Basic information for the CFieldEffectManpuAnger::CEmitter class. This class is a single-inheritance class."
+    - name: C_FIELD_EFFECT_MANPU_ANGER
+      address:
+        NA: 0x21793A8
+      length:
+        NA: 0xC
+      description: Basic information for the CFieldEffectManpuAnger class. This class is a single-inheritance class.
+    - name: C_FIELD_EFFECT_MANPU_ASE
+      address:
+        NA: 0x21794BC
+      length:
+        NA: 0xC
+      description: Basic information for the CFieldEffectManpuAse class. This class is a single-inheritance class.
+    - name: C_FIELD_EFFECT_MANPU_DOKARIMO
+      address:
+        NA: 0x2179550
+      length:
+        NA: 0xC
+      description: Basic information for the CFieldEffectManpuDokarimo class. This class is a single-inheritance class.
+    - name: C_FIELD_EFFECT_DAMAGE_INDICATION
+      address:
+        NA: 0x21795EC
+      length:
+        NA: 0xC
+      description: Basic information for the CFieldEffectDamageIndication class. This class is a single-inheritance class.
+    - name: C_FIELD_EFFECT_BUSH
+      address:
+        NA: 0x217967C
+      length:
+        NA: 0xC
+      description: Basic information for the CFieldEffectBush class. This class is a single-inheritance class.
+    - name: C_FIELD_EFFECT_BUSH_FACTORY
+      address:
+        NA: 0x2179688
+      length:
+        NA: 0xC
+      description: Basic information for the CFieldEffectBushFactory class. This class is a single-inheritance class.
+    - name: C_FIELD_EFFECT_WATER_SPLASH
+      address:
+        NA: 0x2179748
+      length:
+        NA: 0xC
+      description: Basic information for the CFieldEffectWaterSplash class. This class is a single-inheritance class.
+    - name: C_FIELD_EFFECT_WATER_SPLASH_FACTORY
+      address:
+        NA: 0x2179754
+      length:
+        NA: 0xC
+      description: Basic information for the CFieldEffectWaterSplashFactory class. This class is a single-inheritance class.
+    - name: C_FIELD_EFFECT_WATER_SPLASH_C_EFFECT_DRAW_OBJECT
+      address:
+        NA: 0x2179760
+      length:
+        NA: 0xC
+      description: "Basic information for the CFieldEffectWaterSplash::CEffectDrawObject class. This class is a single-inheritance class."
+    - name: C_FIELD_EFFECT_MANPU_GOKIGEN
+      address:
+        NA: 0x2179874
+      length:
+        NA: 0xC
+      description: Basic information for the CFieldEffectManpuGokigen class. This class is a single-inheritance class.
+    - name: C_FIELD_EFFECT_MANPU_GOKIGEN_C_EMITTER
+      address:
+        NA: 0x2179880
+      length:
+        NA: 0xC
+      description: "Basic information for the CFieldEffectManpuGokigen::CEmitter class. This class is a single-inheritance class."
+    - name: C_FIELD_EFFECT_MANPU_GOKIGEN_C_ANIMATOR
+      address:
+        NA: 0x217988C
+      length:
+        NA: 0xC
+      description: "Basic information for the CFieldEffectManpuGokigen::CAnimator class. This class is a single-inheritance class."
+    - name: C_FIELD_EFFECT_BLOOM
+      address:
+        NA: 0x21799A4
+      length:
+        NA: 0xC
+      description: Basic information for the CFieldEffectBloom class. This class is a single-inheritance class.
+    - name: C_FIELD_EFFECT_BLOOM_FACTORY
+      address:
+        NA: 0x21799B0
+      length:
+        NA: 0xC
+      description: Basic information for the CFieldEffectBloomFactory class. This class is a single-inheritance class.
+    - name: C_FIELD_EFFECT_DARK_CLOUD_C_ANIMATOR
+      address:
+        NA: 0x2179ABC
+      length:
+        NA: 0xC
+      description: "Basic information for the CFieldEffectDarkCloud::CAnimator class. This class is a single-inheritance class."
+    - name: C_FIELD_EFFECT_DARK_CLOUD_C_EMITTER
+      address:
+        NA: 0x2179AC8
+      length:
+        NA: 0xC
+      description: "Basic information for the CFieldEffectDarkCloud::CEmitter class. This class is a single-inheritance class."
+    - name: C_FIELD_EFFECT_DARK_CLOUD_C_REMAINS_ANIMATOR
+      address:
+        NA: 0x2179AD4
+      length:
+        NA: 0xC
+      description: "Basic information for the CFieldEffectDarkCloud::CRemainsAnimator class. This class is a single-inheritance class."
+    - name: C_FIELD_EFFECT_DARK_CLOUD
+      address:
+        NA: 0x2179AE0
+      length:
+        NA: 0xC
+      description: Basic information for the CFieldEffectDarkCloud class. This class is a single-inheritance class.
+    - name: C_FIELD_EFFECT_DARK_CLOUD_C_REMAINS_EMITTER
+      address:
+        NA: 0x2179AEC
+      length:
+        NA: 0xC
+      description: "Basic information for the CFieldEffectDarkCloud::CRemainsEmitter class. This class is a single-inheritance class."
+    - name: C_FIELD_EFFECT_DARK_CLOUD_FACTORY
+      address:
+        NA: 0x2179AF8
+      length:
+        NA: 0xC
+      description: Basic information for the CFieldEffectDarkCloudFactory class. This class is a single-inheritance class.
+    - name: C_FIELD_EFFECT_FIREWORKS_FACTORY
+      address:
+        NA: 0x2179CD8
+      length:
+        NA: 0xC
+      description: Basic information for the CFieldEffectFireworksFactory class. This class is a single-inheritance class.
+    - name: C_FIELD_EFFECT_FIREWORKS
+      address:
+        NA: 0x2179CE4
+      length:
+        NA: 0xC
+      description: Basic information for the CFieldEffectFireworks class. This class is a single-inheritance class.
+    - name: C_MESH_SPRITE
+      address:
+        NA: 0x2179CF0
+      length:
+        NA: 0xC
+      description: Basic information for the CMeshSprite class. This class is a single-inheritance class.
+    - name: C_FIELD_EFFECT_DARK_SHADOW
+      address:
+        NA: 0x2179DDC
+      length:
+        NA: 0xC
+      description: Basic information for the CFieldEffectDarkShadow class. This class is a single-inheritance class.
+    - name: C_FIELD_EFFECT_DARK_SHADOW_FACTORY
+      address:
+        NA: 0x2179DE8
+      length:
+        NA: 0xC
+      description: Basic information for the CFieldEffectDarkShadowFactory class. This class is a single-inheritance class.
+    - name: T_FIELD_PARTICLE_FORCE_FIELD_C_SIMPLE_SPRITE_NTF
+      address:
+        NA: 0x2179EB4
+      length:
+        NA: 0x8
+      description: Basic information for the TFieldParticleForceField<CSimpleSpriteNTF> class. This class is a base class.
+    - name: T_FIELD_PARTICLE_EMITTER_C_SIMPLE_SPRITE_NTF
+      address:
+        NA: 0x2179EBC
+      length:
+        NA: 0x8
+      description: Basic information for the TFieldParticleEmitter<CSimpleSpriteNTF> class. This class is a base class.
+    - name: T_FIELD_PARTICLE_SMOKE_RECT_EMITTER_C_SIMPLE_SPRITE_NTF
+      address:
+        NA: 0x2179EC4
+      length:
+        NA: 0xC
+      description: Basic information for the TFieldParticleSmokeRectEmitter<CSimpleSpriteNTF> class. This class is a single-inheritance class.
+    - name: T_FIELD_PARTICLE_RECT_EMITTER_C_SIMPLE_SPRITE_NTF
+      address:
+        NA: 0x2179ED0
+      length:
+        NA: 0xC
+      description: Basic information for the TFieldParticleRectEmitter<CSimpleSpriteNTF> class. This class is a single-inheritance class.
+    - name: C_FIELD_EFFECT_DARKNESS_CLEAR_C_FORCE_FIELD
+      address:
+        NA: 0x2179EDC
+      length:
+        NA: 0xC
+      description: "Basic information for the CFieldEffectDarknessClear::CForceField class. This class is a single-inheritance class."
+    - name: C_FIELD_EFFECT_DARKNESS_CLEAR_FACTORY
+      address:
+        NA: 0x2179EE8
+      length:
+        NA: 0xC
+      description: Basic information for the CFieldEffectDarknessClearFactory class. This class is a single-inheritance class.
+    - name: C_FIELD_EFFECT_DARKNESS_CLEAR2_C_FORCE_FIELD
+      address:
+        NA: 0x2179EF4
+      length:
+        NA: 0xC
+      description: "Basic information for the CFieldEffectDarknessClear2::CForceField class. This class is a single-inheritance class."
+    - name: C_FIELD_EFFECT_DARKNESS_CLEAR2
+      address:
+        NA: 0x2179F00
+      length:
+        NA: 0xC
+      description: Basic information for the CFieldEffectDarknessClear2 class. This class is a single-inheritance class.
+    - name: C_FIELD_EFFECT_DARKNESS_CLEAR
+      address:
+        NA: 0x2179F0C
+      length:
+        NA: 0xC
+      description: Basic information for the CFieldEffectDarknessClear class. This class is a single-inheritance class.
+    - name: T_FIELD_EFFECT_PARTICLE_C_SIMPLE_SPRITE_NTF
+      address:
+        NA: 0x2179F18
+      length:
+        NA: 0xC
+      description: Basic information for the TFieldEffectParticle<CSimpleSpriteNTF> class. This class is a single-inheritance class.
+    - name: C_FIELD_EFFECT_DARKNESS_CLEAR2_C_EMITTER
+      address:
+        NA: 0x2179F24
+      length:
+        NA: 0xC
+      description: "Basic information for the CFieldEffectDarknessClear2::CEmitter class. This class is a single-inheritance class."
+    - name: C_FIELD_EFFECT_DARKNESS_CLEAR_C_EMITTER
+      address:
+        NA: 0x2179F30
+      length:
+        NA: 0xC
+      description: "Basic information for the CFieldEffectDarknessClear::CEmitter class. This class is a single-inheritance class."
+    - name: C_FIELD_EFFECT_AIR_BUBBLES_C_BUBBLE_EMITTER
+      address:
+        NA: 0x217A4B0
+      length:
+        NA: 0xC
+      description: "Basic information for the CFieldEffectAirBubbles::CBubbleEmitter class. This class is a single-inheritance class."
+    - name: C_FIELD_EFFECT_AIR_BUBBLES_C_BUBBLE_FORCE_FIELD
+      address:
+        NA: 0x217A4BC
+      length:
+        NA: 0xC
+      description: "Basic information for the CFieldEffectAirBubbles::CBubbleForceField class. This class is a single-inheritance class."
+    - name: C_FIELD_EFFECT_AIR_BUBBLES
+      address:
+        NA: 0x217A4C8
+      length:
+        NA: 0xC
+      description: Basic information for the CFieldEffectAirBubbles class. This class is a single-inheritance class.
+    - name: C_FIELD_EFFECT_LASER_FACTORY
+      address:
+        NA: 0x217A5EC
+      length:
+        NA: 0xC
+      description: Basic information for the CFieldEffectLaserFactory class. This class is a single-inheritance class.
+    - name: C_FIELD_EFFECT_LASER
+      address:
+        NA: 0x217A5F8
+      length:
+        NA: 0xC
+      description: Basic information for the CFieldEffectLaser class. This class is a single-inheritance class.
+    - name: C_FIELD_EFFECT_RISING_PHOTON_FACTORY
+      address:
+        NA: 0x217A6C4
+      length:
+        NA: 0xC
+      description: Basic information for the CFieldEffectRisingPhotonFactory class. This class is a single-inheritance class.
+    - name: C_FIELD_EFFECT_RISING_PHOTON
+      address:
+        NA: 0x217A6D0
+      length:
+        NA: 0xC
+      description: Basic information for the CFieldEffectRisingPhoton class. This class is a single-inheritance class.
+    - name: T_FIELD_EFFECT_SMOKE_C_SIMPLE_SPRITE_NTF
+      address:
+        NA: 0x217A814
+      length:
+        NA: 0xC
+      description: Basic information for the TFieldEffectSmoke<CSimpleSpriteNTF> class. This class is a single-inheritance class.
+    - name: C_FIELD_EFFECT_VOLCANIC_STEAM_C_ANIMATOR_C_EFFECT_DRAW_OBJECT
+      address:
+        NA: 0x217A820
+      length:
+        NA: 0xC
+      description: "Basic information for the CFieldEffectVolcanicSteam::CAnimator::CEffectDrawObject class. This class is a single-inheritance class."
+    - name: C_FIELD_EFFECT_VOLCANIC_STEAM_C_ANIMATOR
+      address:
+        NA: 0x217A82C
+      length:
+        NA: 0xC
+      description: "Basic information for the CFieldEffectVolcanicSteam::CAnimator class. This class is a single-inheritance class."
+    - name: C_FIELD_EFFECT_VOLCANIC_STEAM
+      address:
+        NA: 0x217A838
+      length:
+        NA: 0xC
+      description: Basic information for the CFieldEffectVolcanicSteam class. This class is a single-inheritance class.
+    - name: C_FIELD_EFFECT_VOLCANIC_STEAM_FACTORY
+      address:
+        NA: 0x217A844
+      length:
+        NA: 0xC
+      description: Basic information for the CFieldEffectVolcanicSteamFactory class. This class is a single-inheritance class.
+    - name: C_FIELD_EFFECT_FUWANTE_WIND_C_EMITTER
+      address:
+        NA: 0x217AA90
+      length:
+        NA: 0xC
+      description: "Basic information for the CFieldEffectFuwanteWind::CEmitter class. This class is a single-inheritance class."
+    - name: C_FIELD_EFFECT_FUWANTE_WIND_FACTORY
+      address:
+        NA: 0x217AA9C
+      length:
+        NA: 0xC
+      description: Basic information for the CFieldEffectFuwanteWindFactory class. This class is a single-inheritance class.
+    - name: C_FIELD_EFFECT_FUWANTE_WIND
+      address:
+        NA: 0x217AAA8
+      length:
+        NA: 0xC
+      description: Basic information for the CFieldEffectFuwanteWind class. This class is a single-inheritance class.
+    - name: C_FIELD_EFFECT_FUWANTE_WIND_C_ANIMATOR
+      address:
+        NA: 0x217AAB4
+      length:
+        NA: 0xC
+      description: "Basic information for the CFieldEffectFuwanteWind::CAnimator class. This class is a single-inheritance class."
+    - name: C_FIELD_EFFECT_MANPU_DARKRIE
+      address:
+        NA: 0x217AC14
+      length:
+        NA: 0xC
+      description: Basic information for the CFieldEffectManpuDarkrie class. This class is a single-inheritance class.
+    - name: C_FIELD_EFFECT_GLITTER
+      address:
+        NA: 0x217ACAC
+      length:
+        NA: 0xC
+      description: Basic information for the CFieldEffectGlitter class. This class is a single-inheritance class.
+    - name: C_FIELD_EFFECT_GLITTER_FACTORY
+      address:
+        NA: 0x217ACB8
+      length:
+        NA: 0xC
+      description: Basic information for the CFieldEffectGlitterFactory class. This class is a single-inheritance class.
+    - name: C_FIELD_EFFECT_BLACK_STONE_AURA
+      address:
+        NA: 0x217ADD8
+      length:
+        NA: 0xC
+      description: Basic information for the CFieldEffectBlackStoneAura class. This class is a single-inheritance class.
+    - name: C_FIELD_EFFECT_BLACK_STONE_AURA_FACTORY
+      address:
+        NA: 0x217ADE4
+      length:
+        NA: 0xC
+      description: Basic information for the CFieldEffectBlackStoneAuraFactory class. This class is a single-inheritance class.
+    - name: C_FIELD_EFFECT_SPACE_CREVICE_C_EFFECT_DRAW_OBJECT
+      address:
+        NA: 0x217AF04
+      length:
+        NA: 0xC
+      description: "Basic information for the CFieldEffectSpaceCrevice::CEffectDrawObject class. This class is a single-inheritance class."
+    - name: C_FIELD_EFFECT_SPACE_CREVICE_FACTORY
+      address:
+        NA: 0x217AF10
+      length:
+        NA: 0xC
+      description: Basic information for the CFieldEffectSpaceCreviceFactory class. This class is a single-inheritance class.
+    - name: C_FIELD_EFFECT_SPACE_CREVICE
+      address:
+        NA: 0x217AF1C
+      length:
+        NA: 0xC
+      description: Basic information for the CFieldEffectSpaceCrevice class. This class is a single-inheritance class.
+    - name: C_FEF_RASTER_TRANSFORM
+      address:
+        NA: 0x217AF28
+      length:
+        NA: 0xC
+      description: Basic information for the CFEFRasterTransform class. This class is a single-inheritance class.

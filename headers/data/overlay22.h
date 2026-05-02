@@ -2,5 +2,13 @@
 #define HEADERS_DATA_OVERLAY22_H_
 
 extern undefined4 OV22_STATIC_INITIALIZER;
+extern struct __class_type_info I_ENCYC_PUSH_BUTTON_LISTENER;
+extern undefined C_ENCYCLOPEDIA_SCENE;
+extern struct __class_type_info C_ENCYC_MENU_SCREEN;
+extern struct __class_type_info I_ENCYC_LIST_BOX_EVENT_LISTENER;
+extern struct __class_type_info I_ENCYC_RADIO_BUTTON_LISTENER;
+extern undefined C_ENCYC_ITEM_LIST_SCREEN;
+extern undefined C_ENCYC_ITEM_DESCRIPTION_SCREEN;
+extern struct __class_type_info C_ENCYC_LIST_BOX;
 
 #endif

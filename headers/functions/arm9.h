@@ -2054,9 +2054,6 @@ undefined4 Ctrdg_IsEnabled(void);
 void Ctrdg_Enable(int param_1);
 void Ctrdg_CheckEnabled(void);
 void Ctrdg_Init(void);
-// If declaring these builtins causes issues, you can disable them
-#ifndef PRSOA_NO_BUILTIN
-// If declaring these builtins causes issues, you can disable them
 void Ctrdgi_InitModuleInfo(void);
 void Ctrdgi_CallbackForInitModuleInfo(undefined4 param_1,unsigned int param_2);
 void Ctrdgi_PulledOutCallback(undefined4 param_1,unsigned int param_2);
@@ -2084,7 +2081,9 @@ void MSL_C_abort_exit_abort(void);
 void MSL_C_abort_exit_exit(undefined4 param_1);
 void MSL_C_abort_exit___exit(void);
 undefined4 MSL_C_ansi_files___flush_all(void);
-int abs(int __x);
+// If declaring these builtins causes issues, you can disable them
+#ifndef PRSOA_NO_BUILTIN
+int32_t abs(int32_t x);
 void ret_020794d4(void);
 void MSL_C_buffer_io___prep_buffer(int param_1);
 int MSL_C_buffer_io___flush_buffer(undefined4 *param_1,undefined4 *param_2,undefined4 param_3,undefined4 param_4);

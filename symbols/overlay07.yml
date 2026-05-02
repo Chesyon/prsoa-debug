@@ -11,7 +11,10 @@ overlay7:
     EU: 0x2E80
     NA: 0x2E80
     JP: 0x2E80
-  description: Seems to be active during the release menu option.
+  description: |-
+    Used for releasing Pokemon. Implements the "Release" menu option.
+    
+    The scene class is named "Release" internally.
   functions:
     - name: Overlay7EntryPoint
       address:
@@ -68,3 +71,9 @@ overlay7:
         NA: 0x4
         JP: 0x4
       description: Static initializer for overlay 7.
+    - name: C_RELEASE_SCENE
+      address:
+        NA: 0x211F640
+      length:
+        NA: 0xC
+      description: Basic information for the CReleaseScene class. This class is a single-inheritance class.
