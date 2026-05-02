@@ -318,7 +318,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_ConvConnectAPType
+    - name: Dwci_ConvConnectApType
       address:
         NA: 0x2132C3C
       description: |-
@@ -710,7 +710,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: CheckSetDNS
+    - name: CheckSetDns
       address:
         NA: 0x2134D54
       description: |-
@@ -14186,7 +14186,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NHTTPi_CleanupThreadProc
+    - name: Nhttpi_CleanupThreadProc
       address:
         NA: 0x215DCCC
       description: |-
@@ -14200,7 +14200,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NHTTPi_getHdrFromList
+    - name: Nhttpi_getHdrFromList
       address:
         NA: 0x215DE20
       description: |-
@@ -14242,35 +14242,35 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NHTTPi_setReqQueue
+    - name: Nhttpi_setReqQueue
       address:
         NA: 0x215DFEC
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NHTTPi_findReqQueue
+    - name: Nhttpi_findReqQueue
       address:
         NA: 0x215E0A0
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NHTTPi_freeReqQueue
+    - name: Nhttpi_freeReqQueue
       address:
         NA: 0x215E0F8
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NHTTPi_allFreeReqQueue
+    - name: Nhttpi_allFreeReqQueue
       address:
         NA: 0x215E198
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NHTTPi_initLockReqList
+    - name: Nhttpi_initLockReqList
       address:
         NA: 0x215E1DC
       description: |-
@@ -14284,21 +14284,21 @@ overlay11:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
-    - name: NHTTPi_createCommThread
+    - name: Nhttpi_createCommThread
       address:
         NA: 0x215E220
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NHTTPi_destroyCommThread
+    - name: Nhttpi_destroyCommThread
       address:
         NA: 0x215E298
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NHTTPi_kickCommThread
+    - name: Nhttpi_kickCommThread
       address:
         NA: 0x215E2DC
       description: |-
@@ -14319,49 +14319,49 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NHTTPi_findNextLineHdrRecvBuf
+    - name: Nhttpi_findNextLineHdrRecvBuf
       address:
         NA: 0x215E3D0
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NHTTPi_skipSpaceHdrRecvBuf
+    - name: Nhttpi_skipSpaceHdrRecvBuf
       address:
         NA: 0x215E4A0
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NHTTPi_compareTokenN_HdrRecvBuf
+    - name: Nhttpi_compareTokenN_HdrRecvBuf
       address:
         NA: 0x215E510
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NHTTPi_loadFromHdrRecvBuf
+    - name: Nhttpi_loadFromHdrRecvBuf
       address:
         NA: 0x215E5E0
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NHTTPi_isRecvBufFull
+    - name: Nhttpi_isRecvBufFull
       address:
         NA: 0x215E6CC
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NHTTPi_RecvBuf
+    - name: Nhttpi_RecvBuf
       address:
         NA: 0x215E6E0
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NHTTPi_RecvBufN
+    - name: Nhttpi_RecvBufN
       address:
         NA: 0x215E708
       description: |-
@@ -14389,7 +14389,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NHTTPi_destroyRequestObject
+    - name: Nhttpi_destroyRequestObject
       address:
         NA: 0x215ED58
       description: |-
@@ -14403,14 +14403,14 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NHTTPi_cancelAllRequests
+    - name: Nhttpi_cancelAllRequests
       address:
         NA: 0x215EE5C
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NHTTPi_resolveHostname
+    - name: Nhttpi_resolveHostname
       address:
         NA: 0x215EEB0
       description: |-
@@ -14424,7 +14424,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NHTTPi_getHeaderValue
+    - name: Nhttpi_getHeaderValue
       address:
         NA: 0x215EFC0
       description: |-
@@ -14445,70 +14445,70 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NHTTPi_SetSSLseed
+    - name: Nhttpi_SetSSLseed
       address:
         NA: 0x215F200
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NHTTPi_SocOpen
+    - name: Nhttpi_SocOpen
       address:
         NA: 0x215F220
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NHTTPi_SocCloseWait
+    - name: Nhttpi_SocCloseWait
       address:
         NA: 0x215F2B0
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NHTTPi_SocConnect
+    - name: Nhttpi_SocConnect
       address:
         NA: 0x215F2EC
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NHTTPi_SocRecv
+    - name: Nhttpi_SocRecv
       address:
         NA: 0x215F368
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NHTTPi_SocSend
+    - name: Nhttpi_SocSend
       address:
         NA: 0x215F3B4
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NHTTPi_SocCancel
+    - name: Nhttpi_SocCancel
       address:
         NA: 0x215F400
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NHTTPi_strnicmp
+    - name: Nhttpi_strnicmp
       address:
         NA: 0x215F428
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NHTTPi_memclr
+    - name: Nhttpi_memclr
       address:
         NA: 0x215F49C
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NHTTPi_memcpy
+    - name: Nhttpi_memcpy
       address:
         NA: 0x215F4B0
       description: |-
@@ -14559,28 +14559,28 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NHTTPi_getUrlEncodedSize
+    - name: Nhttpi_getUrlEncodedSize
       address:
         NA: 0x2160AC0
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NHTTPi_encodeUrlChar
+    - name: Nhttpi_encodeUrlChar
       address:
         NA: 0x2160B28
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NHTTPi_strToHex
+    - name: Nhttpi_strToHex
       address:
         NA: 0x2160BB8
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NHTTPi_strToInt
+    - name: Nhttpi_strToInt
       address:
         NA:
           - 0x2160CA0
@@ -14589,7 +14589,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NHTTPi_intToStr
+    - name: Nhttpi_intToStr
       address:
         NA:
           - 0x2160D38
@@ -14598,21 +14598,21 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NHTTPi_compareToken
+    - name: Nhttpi_compareToken
       address:
         NA: 0x2160DF4
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NHTTPi_strtonum
+    - name: Nhttpi_strtonum
       address:
         NA: 0x2160E78
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NHTTPi_memfind
+    - name: Nhttpi_memfind
       address:
         NA: 0x2160EE8
       description: |-
@@ -14852,7 +14852,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NHTTPi_strToInt
+    - name: Nhttpi_strToInt
       address:
         NA:
           - 0x2160CA0
@@ -14861,7 +14861,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NHTTPi_intToStr
+    - name: Nhttpi_intToStr
       address:
         NA:
           - 0x2160D38
