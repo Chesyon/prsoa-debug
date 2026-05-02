@@ -1272,9 +1272,7 @@ overlay11:
         No params.
     - name: CheckAp
       address:
-        NA:
-          - 0x213A810
-          - 0x213CCF0
+        NA: 0x213A810
       description: |-
         [MANUAL DESCRIPTION]
         
@@ -1596,14 +1594,12 @@ overlay11:
         No params.
     - name: checkAP
       address:
-        NA:
-          - 0x213A810
-          - 0x213CCF0
+        NA: 0x213CCF0
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: AOSS_set_APInfo
+    - name: AOSS_set_ApInfo
       address:
         NA: 0x213CD6C
       description: |-
@@ -6744,7 +6740,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: procWait
+    - name: ProcWait
       address:
         NA:
           - 0x21479E8
@@ -7304,7 +7300,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: DWCi_SceneSetEdit32
+    - name: Dwci_SceneSetEdit32
       address:
         NA: 0x214C5E8
       description: |-
@@ -7945,15 +7941,6 @@ overlay11:
           - 0x214CF2C
           - 0x214DC2C
           - 0x21507D0
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        No params.
-    - name: procError1
-      address:
-        NA:
-          - 0x214D0E4
-          - 0x214DDAC
       description: |-
         [MANUAL DESCRIPTION]
         
@@ -9162,7 +9149,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: DWCi_IsFold
+    - name: Dwci_IsFold
       address:
         NA:
           - 0x214A4A4
@@ -9449,7 +9436,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: DWCi_SceneSetRakuComplete
+    - name: Dwci_SceneSetRakuComplete
       address:
         NA: 0x2151368
       description: |-
@@ -9892,7 +9879,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: DWCi_SceneSetSearch
+    - name: Dwci_SceneSetSearch
       address:
         NA: 0x2151A04
       description: |-
@@ -10161,7 +10148,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: DWCi_SceneSetSelectAp
+    - name: Dwci_SceneSetSelectAp
       address:
         NA: 0x2151EE8
       description: |-
@@ -13049,7 +13036,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: DWCi_MOV_WH_StateInEndParentMP
+    - name: Dwci_MOV_WH_StateInEndParentMP
       address:
         NA: 0x21592A4
       description: |-
@@ -13077,7 +13064,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: DWCi_MOV_WH_StateInEndChildMP
+    - name: Dwci_MOV_WH_StateInEndChildMP
       address:
         NA: 0x21593C4
       description: |-
