@@ -686,7 +686,6 @@ void Button(void);
 void EndScene1(void);
 void EndScene2(void);
 void CheckRaku(void);
-void ProcError(void);
 bool Dwci_IsFold(void);
 void Dwci_SceneSetRakuButton1(void);
 void InitGraphics(undefined4 param_1,undefined4 param_2,undefined4 param_3,undefined4 param_4);
