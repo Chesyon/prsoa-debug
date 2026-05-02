@@ -25,12 +25,27 @@ overlay9:
         r0: ov_09_unk_struct pointer
         r1: megastruct pointer
     - name: ret_0211cc2c
+#      namespace: c_flying_scene
       address:
         NA: 0x211CC2C
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
+    - name: GetSelectedFlyLocation
+      address:
+        NA: 0x211D89C
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        No params.
+    - name: SetFlyDestinationData
+      address:
+        NA: 0x211D8F8
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        No params.  
   data:
     - name: OV9_STATIC_INITIALIZER
       address:
