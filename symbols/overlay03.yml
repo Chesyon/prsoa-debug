@@ -25,6 +25,7 @@ overlay3:
         r0: ov_03_unk_struct_0 pointer
         r1: megastruct pointer
     - name: ret_02120118
+#      namespace: c_title_scene
       address:
         NA: 0x2120118
       description: |-
@@ -47,6 +48,7 @@ overlay3:
         r0: ov_03_unk_struct_1 pointer
         r1: megastruct pointer
     - name: ret_02121430
+#      namespace: c_continue_scene
       address:
         NA: 0x2121430
       description: |-
@@ -62,6 +64,7 @@ overlay3:
         r0: ov_03_unk_struct_2 pointer
         r1: megastruct pointer
     - name: ret_02121d0c
+#      namespace: c_conf_scene
       address:
         NA: 0x2121D0C
       description: |-
@@ -76,6 +79,7 @@ overlay3:
         
         r0: ov_03_unk_struct_3 pointer
     - name: ret_02122d40
+#      namespace: c_name_input_scene
       address:
         NA: 0x2122D40
       description: |-
@@ -93,6 +97,7 @@ overlay3:
         r2: undefined4 
         r3: undefined4
     - name: ret_021242f0
+#      namespace: c_opening_demo_scene
       address:
         NA: 0x21242F0
       description: |-
@@ -100,6 +105,7 @@ overlay3:
         
         No params.
     - name: ret_021242f4
+#      namespace: c_opening_demo_scene
       address:
         NA: 0x21242F4
       description: |-
@@ -107,6 +113,7 @@ overlay3:
         
         No params.
     - name: ret_021255a8
+#      namespace: c_opd_title_screen_c_spark_emitter
       address:
         NA: 0x21255A8
       description: |-
@@ -114,6 +121,7 @@ overlay3:
         
         No params.
     - name: ret_021255ac
+#      namespace: c_opd_title_screen_c_spark_animator
       address:
         NA: 0x21255AC
       description: |-
@@ -121,6 +129,7 @@ overlay3:
         
         No params.
     - name: ret_021255b0
+#      namespace: c_opd_title_screen_c_star_emitter
       address:
         NA: 0x21255B0
       description: |-
@@ -128,6 +137,7 @@ overlay3:
         
         No params.
     - name: ret_021255b4
+#      namespace: c_opd_title_screen_c_star_animator
       address:
         NA: 0x21255B4
       description: |-
@@ -135,6 +145,7 @@ overlay3:
         
         No params.
     - name: ret_02125d0c
+#      namespace: c_opd_title_screen
       address:
         NA: 0x2125D0C
       description: |-
@@ -142,6 +153,7 @@ overlay3:
         
         No params.
     - name: ret_02126e94
+#      namespace: t_field_particle_emitter_c_simple_sprite_ntf
       address:
         NA: 0x2126E94
       description: |-
@@ -149,6 +161,7 @@ overlay3:
         
         No params.
     - name: ret_02126e98
+#      namespace: t_field_particle_emitter_c_simple_sprite_ntf
       address:
         NA: 0x2126E98
       description: |-
@@ -156,6 +169,7 @@ overlay3:
         
         No params.
     - name: ret_02127340
+#      namespace: c_opd_capture_disc_screen_c_line_particle_emitter
       address:
         NA: 0x2127340
       description: |-
@@ -163,6 +177,7 @@ overlay3:
         
         No params.
     - name: ret_02127344
+#      namespace: c_opd_capture_disc_screen_c_line_particle_animator
       address:
         NA: 0x2127344
       description: |-
@@ -170,6 +185,7 @@ overlay3:
         
         No params.
     - name: ret_02127348
+#      namespace: c_opd_capture_disc_screen_c_spark_emitter
       address:
         NA: 0x2127348
       description: |-
@@ -177,6 +193,7 @@ overlay3:
         
         No params.
     - name: ret_0212734c
+#      namespace: c_opd_capture_disc_screen_c_spark_animator
       address:
         NA: 0x212734C
       description: |-
@@ -184,6 +201,7 @@ overlay3:
         
         No params.
     - name: ret_02129070
+#      namespace: t_field_particle_emitter_c_line_particle
       address:
         NA: 0x2129070
       description: |-
@@ -191,6 +209,7 @@ overlay3:
         
         No params.
     - name: ret_02129124
+#      namespace: t_field_particle_emitter_c_line_particle
       address:
         NA: 0x2129124
       description: |-
@@ -198,6 +217,7 @@ overlay3:
         
         No params.
     - name: ret_02129128
+#      namespace: t_field_particle_emitter_c_spark_line
       address:
         NA: 0x2129128
       description: |-
@@ -205,6 +225,7 @@ overlay3:
         
         No params.
     - name: ret_0212912c
+#      namespace: t_field_particle_emitter_c_spark_line
       address:
         NA: 0x212912C
       description: |-

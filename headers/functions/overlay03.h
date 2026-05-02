@@ -8,8 +8,7 @@ void ret_02120744(void);
 struct ov_03_unk_struct_1* Overlay3EntryPoint1(struct ov_03_unk_struct_1* param_1,
                                                struct megastruct* param_2);
 void ret_02121430(void);
-struct ov_03_unk_struct_2* Overlay3EntryPoint2(struct ov_03_unk_struct_2* param_1,
-                                               struct megastruct* param_2);
+struct ov_03_unk_struct_2 * Overlay3EntryPoint2(struct ov_03_unk_struct_2 *param_1,struct megastruct *param_2);
 void ret_02121d0c(void);
 struct ov_03_unk_struct_3* Overlay3EntryPoint3(struct ov_03_unk_struct_3* param_1);
 void ret_02122d40(void);
