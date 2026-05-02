@@ -339,7 +339,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_AC_CheckNintendoSSID
+    - name: Dwci_AC_CheckNintendoSsid
       address:
         NA: 0x2132E90
       description: |-
@@ -388,7 +388,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_AC_CallBackWCM
+    - name: Dwci_AC_CallBackWcm
       address:
         NA: 0x21332A0
       description: |-
@@ -745,7 +745,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: decodeSSID
+    - name: decodeSsid
       address:
         NA: 0x2134EBC
       description: |-
@@ -1771,7 +1771,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: SendPacketUDP
+    - name: SendPacketUdp
       address:
         NA: 0x213DADC
       description: |-
@@ -13411,7 +13411,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: _Dwci_MovPrepare
+    - name: Dwci_MovPrepare
       address:
         NA: 0x2159FE8
       description: |-
@@ -13448,49 +13448,49 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: _Dwci_MovSearchChannel
+    - name: Dwci_MovSearchChannel
       address:
         NA: 0x215A4BC
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: _Dwci_MovStartWaitChild
+    - name: Dwci_MovStartWaitChild
       address:
         NA: 0x215A564
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: _Dwci_Mov_WaitandDownloadandBoot_Child
+    - name: Dwci_Mov_WaitandDownloadandBoot_Child
       address:
         NA: 0x215A588
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: _Dwci_Mov_ReadyMovUserID
+    - name: Dwci_Mov_ReadyMovUserID
       address:
         NA: 0x215A740
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: _Dwci_Mov_MovUserID
+    - name: Dwci_Mov_MovUserID
       address:
         NA: 0x215A76C
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: _Dwci_Mov_EraseFlashData
+    - name: Dwci_Mov_EraseFlashData
       address:
         NA: 0x215A948
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: _Dwci_MovEnd
+    - name: Dwci_MovEnd
       address:
         NA: 0x215A960
       description: |-
@@ -14654,14 +14654,14 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_Ndi_getEncodeLenBASE64
+    - name: Dwci_Ndi_getEncodeLenBase64
       address:
         NA: 0x216119C
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_Ndi_encodeBASE64
+    - name: Dwci_Ndi_encodeBase64
       address:
         NA: 0x21611B8
       description: |-

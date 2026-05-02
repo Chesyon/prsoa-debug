@@ -4352,14 +4352,14 @@ arm9:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: AllocFunc_SOCL
+    - name: AllocFunc_Socl
       address:
         NA: 0x20497C0
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: FreeFunc_SOCL
+    - name: FreeFunc_Socl
       address:
         NA: 0x20497EC
       description: |-
@@ -4758,7 +4758,7 @@ arm9:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: dt_syn_LISTEN
+    - name: dt_syn_Listen
       address:
         NA: 0x204BB74
       description: |-
@@ -5921,7 +5921,7 @@ arm9:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: WCMi_GetSystemWork
+    - name: Wcmi_GetSystemWork
       address:
         NA: 0x2054434
       description: |-
@@ -5977,7 +5977,7 @@ arm9:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: WCMi_ResetKeepAliveAlarm
+    - name: Wcmi_ResetKeepAliveAlarm
       address:
         NA: 0x20548DC
       description: |-
@@ -6054,7 +6054,7 @@ arm9:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: WCMi_EntryApList
+    - name: Wcmi_EntryApList
       address:
         NA: 0x2055A84
       description: |-
@@ -6096,21 +6096,21 @@ arm9:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: WCMi_InitCpsif
+    - name: Wcmi_InitCpsif
       address:
         NA: 0x2055D84
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: WCMi_CpsifRecvCallback
+    - name: Wcmi_CpsifRecvCallback
       address:
         NA: 0x2055DC4
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: WCMi_CpsifSendNullPacket
+    - name: Wcmi_CpsifSendNullPacket
       address:
         NA: 0x2055DF8
       description: |-
@@ -6180,7 +6180,7 @@ arm9:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: WCMi_GetRssiAverage
+    - name: Wcmi_GetRssiAverage
       address:
         NA: 0x20561D8
       description: |-
@@ -6194,7 +6194,7 @@ arm9:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: WCMi_ShelterRssi
+    - name: Wcmi_ShelterRssi
       address:
         NA: 0x205628C
       description: |-
@@ -6641,7 +6641,7 @@ arm9:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NSysGfd_VramTransferManDoTransfer2dBGExtPlttMain
+    - name: NSysGfd_VramTransferManDoTransfer2dBgExtPlttMain
       address:
         NA: 0x20572F4
       description: |-
@@ -6731,7 +6731,7 @@ arm9:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NSysGfd_VramTransferManDoTransfer2dBGPlttSub
+    - name: NSysGfd_VramTransferManDoTransfer2dBgPlttSub
       address:
         NA: 0x20573BC
       description: |-
@@ -6745,7 +6745,7 @@ arm9:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NSysGfd_VramTransferManDoTransfer2dBGExtPlttSub
+    - name: NSysGfd_VramTransferManDoTransfer2dBgExtPlttSub
       address:
         NA: 0x20573F4
       description: |-
@@ -6983,7 +6983,7 @@ arm9:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NSysG2d_NANloadGetUnpackedAnimBankImpl_
+    - name: NSysG2d_NanloadGetUnpackedAnimBankImpl_
       address:
         NA: 0x2057F28
       description: |-
@@ -7011,14 +7011,14 @@ arm9:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NSysG2d_NOBloadGetPtrOamArrayHead_
+    - name: NSysG2d_NobloadGetPtrOamArrayHead_
       address:
         NA: 0x20580D8
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NSysG2d_NOBloadUnPackExtendedData_
+    - name: NSysG2d_NobloadUnPackExtendedData_
       address:
         NA: 0x20580F8
       description: |-
@@ -7060,14 +7060,14 @@ arm9:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Nns_G2dGetUnpackedBGCharacterData
+    - name: Nns_G2dGetUnpackedBgCharacterData
       address:
         NA: 0x2058254
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Nns_G2dUnpackBGNCG
+    - name: Nns_G2dUnpackBgNCG
       address:
         NA: 0x2058290
       description: |-
@@ -7298,35 +7298,35 @@ arm9:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NSysG2d_ScreenChangeBGModeByTableMain
+    - name: NSysG2d_ScreenChangeBgModeByTableMain
       address:
         NA: 0x2058D50
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NSysG2d_ScreenChangeBGModeByTableSub
+    - name: NSysG2d_ScreenChangeBgModeByTableSub
       address:
         NA: 0x2058D94
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NSysG2d_ScreenLoadBGPlttToExtendedPltt
+    - name: NSysG2d_ScreenLoadBgPlttToExtendedPltt
       address:
         NA: 0x2058DBC
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NSysG2d_ScreenLoadBGPlttToNormalPltt
+    - name: NSysG2d_ScreenLoadBgPlttToNormalPltt
       address:
         NA: 0x2058EEC
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NSysG2d_ScreenGetBGExtPlttSlot
+    - name: NSysG2d_ScreenGetBgExtPlttSlot
       address:
         NA: 0x2058FFC
       description: |-
@@ -7354,56 +7354,56 @@ arm9:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NSysG2d_ScreenSetBGControlText
+    - name: NSysG2d_ScreenSetBgControlText
       address:
         NA: 0x20591B4
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NSysG2d_ScreenSetBGControlAffine
+    - name: NSysG2d_ScreenSetBgControlAffine
       address:
         NA: 0x20591F4
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NSysG2d_ScreenSetBGControl256x16Pltt
+    - name: NSysG2d_ScreenSetBgControl256x16Pltt
       address:
         NA: 0x2059234
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NSysG2d_ScreenLoadBGPaletteSelect
+    - name: NSysG2d_ScreenLoadBgPaletteSelect
       address:
         NA: 0x2059274
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NSysG2d_ScreenLoadBGPalette
+    - name: NSysG2d_ScreenLoadBgPalette
       address:
         NA: 0x20592AC
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NSysG2d_ScreenLoadBGCharacter
+    - name: NSysG2d_ScreenLoadBgCharacter
       address:
         NA: 0x2059320
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NSysG2d_ScreenLoadBGScreen
+    - name: NSysG2d_ScreenLoadBgScreen
       address:
         NA: 0x20593E4
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NSysG2d_ScreenSetBGControlAuto
+    - name: NSysG2d_ScreenSetBgControlAuto
       address:
         NA: 0x20594B0
       description: |-
@@ -7431,21 +7431,21 @@ arm9:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Nns_G2dBGLoadElementsEx
+    - name: Nns_G2dBgLoadElementsEx
       address:
         NA: 0x205983C
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Nns_G2dBGSetupEx
+    - name: Nns_G2dBgSetupEx
       address:
         NA: 0x2059898
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Nns_G2dBGLoadScreenRect
+    - name: Nns_G2dBgLoadScreenRect
       address:
         NA: 0x2059914
       description: |-
@@ -7718,7 +7718,7 @@ arm9:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Nnsi_G2dBGGetCharSize
+    - name: Nnsi_G2dBgGetCharSize
       address:
         NA: 0x205B8D0
       description: |-
@@ -12856,28 +12856,28 @@ arm9:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NRun_MWException_terminate
+    - name: NRun_MwException_terminate
       address:
         NA: 0x2083634
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NRun_MWException_unexpected
+    - name: NRun_MwException_unexpected
       address:
         NA: 0x208364C
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NRun_MWException___register_global_object
+    - name: NRun_MwException___register_global_object
       address:
         NA: 0x2083664
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NRun_MWException___throw_catch_compare
+    - name: NRun_MwException___throw_catch_compare
       address:
         NA: 0x2083684
       description: |-
