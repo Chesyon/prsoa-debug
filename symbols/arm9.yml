@@ -13361,49 +13361,49 @@ arm9:
       length:
         NA: 0x200
       description: The 0th page of functions callable by the SysCall script opcode. 128 function pointers long.
-    - name: Std_EXCEPTION
+    - name: STD_EXCEPTION
       address:
         NA: 0x208EFD8
       length:
         NA: 0x8
       description: "Basic information for the std::exception class. This class is a base class."
-    - name: Std_TR1_DETAIL_SHARED_PTR_DELETER_COMMON
+    - name: STD_TR1_DETAIL_SHARED_PTR_DELETER_COMMON
       address:
         NA: 0x208EFE0
       length:
         NA: 0x8
       description: "Basic information for the std::tr1::detail::shared_ptr_deleter_common class. This class is a base class."
-    - name: Std_DETAIL_DEFAULT_DELETE
+    - name: STD_DETAIL_DEFAULT_DELETE
       address:
         NA: 0x208EFE8
       length:
         NA: 0x8
       description: "Basic information for the std::detail::default_delete class. This class is a base class."
-    - name: Std_TR1_DETAIL_SHARED_PTR_DELETER
+    - name: STD_TR1_DETAIL_SHARED_PTR_DELETER
       address:
         NA: 0x208EFF0
       length:
         NA: 0xC
       description: "Basic information for the std::tr1::detail::shared_ptr_deleter class. This class is a single-inheritance class."
-    - name: Std_LOGIC_ERROR
+    - name: STD_LOGIC_ERROR
       address:
         NA: 0x208F0D4
       length:
         NA: 0xC
       description: "Basic information for the std::logic_error class. This class is a single-inheritance class."
-    - name: Std_LENGTH_ERROR
+    - name: STD_LENGTH_ERROR
       address:
         NA: 0x208F0E0
       length:
         NA: 0xC
       description: "Basic information for the std::length_error class. This class is a single-inheritance class."
-    - name: Std_BAD_EXCEPTION
+    - name: STD_BAD_EXCEPTION
       address:
         NA: 0x208F184
       length:
         NA: 0xC
       description: "Basic information for the std::bad_exception class. This class is a single-inheritance class."
-    - name: Std_TYPE_INFO
+    - name: STD_TYPE_INFO
       address:
         NA: 0x208F208
       length:
