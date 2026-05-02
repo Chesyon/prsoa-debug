@@ -25,7 +25,7 @@ overlay1:
         r0: battle_struct pointer
         r1: megastruct pointer
     - name: BattleStateManager
-      namespace: c_battle_scene
+#      namespace: c_battle_scene
       address:
         NA: 0x211F11C
       description: |-
@@ -213,7 +213,7 @@ overlay1:
         
         No params.
     - name: ret_0212c028
-      namespace: c_battle_disk
+#      namespace: c_battle_disk
       address:
         NA: 0x212C028
       description: |-
@@ -237,7 +237,7 @@ overlay1:
         r0: battle_effect_table_wrapper pointer
         r1: undefined4
     - name: ret_0212e524
-      namespace: c_disk_cursor
+#      namespace: c_disk_cursor
       address:
         NA: 0x212E524
       description: |-
@@ -245,7 +245,7 @@ overlay1:
         
         No params.
     - name: ret_0212e888
-      namespace: c_line_effect
+#      namespace: c_line_effect
       address:
         NA: 0x212E888
       description: |-
@@ -253,7 +253,7 @@ overlay1:
         
         No params.
     - name: ret_0212ee20
-      namespace: c_battle_assist
+#      namespace: c_battle_assist
       address:
         NA: 0x212EE20
       description: |-
@@ -277,7 +277,7 @@ overlay1:
         r1: file name
         r2: undefined4
     - name: ret_02130b70
-      namespace: c_battle_assist_evil
+#      namespace: c_battle_assist_evil
       address:
         NA: 0x2130B70
       description: |-
@@ -285,7 +285,7 @@ overlay1:
         
         No params.
     - name: ret_02131b44
-      namespace: c_battle_assist_grapple
+#      namespace: c_battle_assist_grapple
       address:
         NA: 0x2131B44
       description: |-
@@ -293,7 +293,7 @@ overlay1:
         
         No params.
     - name: ret_02133c04
-      namespace: c_battle_assist_normal
+#      namespace: c_battle_assist_normal
       address:
         NA: 0x2133C04
       description: |-
@@ -301,7 +301,7 @@ overlay1:
         
         No params.
     - name: ret_02134350
-      namespace: c_battle_assist_recover
+#      namespace: c_battle_assist_recover
       address:
         NA: 0x2134350
       description: |-
@@ -309,7 +309,7 @@ overlay1:
         
         No params.
     - name: ret_02136244
-      namespace: c_battle_enemy_gauge
+#      namespace: c_battle_enemy_gauge
       address:
         NA: 0x2136244
       description: |-
@@ -331,7 +331,7 @@ overlay1:
         
         No params.
     - name: ret_02137b90
-      namespace: c_battle_power_save
+#      namespace: c_battle_power_save
       address:
         NA: 0x2137B90
       description: |-
@@ -346,7 +346,7 @@ overlay1:
         
         No params.
     - name: ret_0213ae14
-      namespace: c_battle_game_over
+#      namespace: c_battle_game_over
       address:
         NA: 0x213AE14
       description: |-
