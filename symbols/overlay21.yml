@@ -24,6 +24,7 @@ overlay21:
         
         No params.
     - name: ret_02120bcc
+#      namespace: c_browser_menu_item_pokemon
       address:
         NA: 0x2120BCC
       description: |-
@@ -31,6 +32,7 @@ overlay21:
         
         No params.
     - name: ret_02121384
+#      namespace: c_browser_menu_item_pokemon
       address:
         NA: 0x2121384
       description: |-
@@ -38,6 +40,7 @@ overlay21:
         
         No params.
     - name: ret_021215a4
+#      namespace: c_browser_menu_cursor_pokemon
       address:
         NA: 0x21215A4
       description: |-
@@ -45,6 +48,7 @@ overlay21:
         
         No params.
     - name: ret_0212172c
+#      namespace: c_browser_menu_item_pokemon
       address:
         NA: 0x212172C
       description: |-
@@ -52,6 +56,7 @@ overlay21:
         
         No params.
     - name: ret_021218bc
+#      namespace: c_browser_menu_item_icon
       address:
         NA: 0x21218BC
       description: |-
@@ -59,6 +64,7 @@ overlay21:
         
         No params.
     - name: ret_02121a30
+#      namespace: c_browser_menu_item_icon
       address:
         NA: 0x2121A30
       description: |-
@@ -66,6 +72,7 @@ overlay21:
         
         No params.
     - name: ret_02121c20
+#      namespace: c_browser_menu_cursor_icon
       address:
         NA: 0x2121C20
       description: |-
@@ -73,6 +80,7 @@ overlay21:
         
         No params.
     - name: ret_02121e90
+#      namespace: c_browser_menu_item_type
       address:
         NA: 0x2121E90
       description: |-
@@ -80,6 +88,7 @@ overlay21:
         
         No params.
     - name: ret_02121f18
+#      namespace: c_browser_menu_item_type
       address:
         NA: 0x2121F18
       description: |-
@@ -87,6 +96,7 @@ overlay21:
         
         No params.
     - name: ret_02121fb8
+#      namespace: c_browser_menu_item_type
       address:
         NA: 0x2121FB8
       description: |-

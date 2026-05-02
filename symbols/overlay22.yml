@@ -24,6 +24,7 @@ overlay22:
         
         r0: ov_22_unk_struct pointer
     - name: ret_0211cd7c
+#      namespace: c_encyclopedia_scene
       address:
         NA: 0x211CD7C
       description: |-
@@ -31,6 +32,7 @@ overlay22:
         
         No params.
     - name: ret_0211d2d0
+#      namespace: c_encyc_menu_screen
       address:
         NA: 0x211D2D0
       description: |-
@@ -38,6 +40,7 @@ overlay22:
         
         No params.
     - name: ret_0211e158
+#      namespace: c_encyc_menu_screen
       address:
         NA: 0x211E158
       description: |-
@@ -45,6 +48,7 @@ overlay22:
         
         No params.
     - name: ret_0211f10c
+#      namespace: c_encyc_item_description_screen
       address:
         NA: 0x211F10C
       description: |-

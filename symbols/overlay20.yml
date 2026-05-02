@@ -24,6 +24,7 @@ overlay20:
         
         r0: ov_20_unk_struct pointer
     - name: ret_0211cd30
+#      namespace: c_auto_save_scene
       address:
         NA: 0x211CD30
       description: |-

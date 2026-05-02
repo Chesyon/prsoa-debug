@@ -24,6 +24,7 @@ overlay24:
         
         r0: ov_24_unk_struct pointer
     - name: ret_0211d008
+#      namespace: c_retry_scene
       address:
         NA: 0x211D008
       description: |-
@@ -31,6 +32,7 @@ overlay24:
         
         No params.
     - name: ret_0211d00c
+#      namespace: c_retry_scene
       address:
         NA: 0x211D00C
       description: |-
