@@ -3172,7 +3172,7 @@ arm9:
         Initializes the audio_engine struct. More research needed.
         
         r0: audio_engine pointer
-    - name: NNS_SndMainVeneer
+    - name: Nns_SndMainVeneer
       address:
         NA: 0x203459C
       description: |-
@@ -3698,385 +3698,385 @@ arm9:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
-    - name: CRYPTO_RC4FastInit
+    - name: Crypto_RC4FastInit
       address:
         NA: 0x2046D5C
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: CRYPTO_RC4Init
+    - name: Crypto_RC4Init
       address:
         NA: 0x2046DF4
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: CRYPTO_RC4FastEncrypt
+    - name: Crypto_RC4FastEncrypt
       address:
         NA: 0x2046E84
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: CRYPTO_RC4Encrypt
+    - name: Crypto_RC4Encrypt
       address:
         NA: 0x2047060
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: SOCL_Startup
+    - name: Socl_Startup
       address:
         NA: 0x20470D8
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: SOCLi_StartupSOCL
+    - name: Socli_StartupSOCL
       address:
         NA: 0x2047114
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: SOCLi_StartupCPS
+    - name: Socli_StartupCPS
       address:
         NA: 0x2047154
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: SOCLi_SetMyIP
+    - name: Socli_SetMyIP
       address:
         NA: 0x20472B0
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: SOCL_LinkIsOn
+    - name: Socl_LinkIsOn
       address:
         NA: 0x2047334
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: SOCLi_StartupCommandPacketQueue
+    - name: Socli_StartupCommandPacketQueue
       address:
         NA: 0x204734C
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: SOCLi_CleanupCommandPacketQueue
+    - name: Socli_CleanupCommandPacketQueue
       address:
         NA: 0x20473E0
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: SOCLi_AllocCommandPacket
+    - name: Socli_AllocCommandPacket
       address:
         NA: 0x2047428
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: SOCLi_CreateCommandPacket
+    - name: Socli_CreateCommandPacket
       address:
         NA: 0x2047450
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: SOCLi_FreeCommandPacket
+    - name: Socli_FreeCommandPacket
       address:
         NA: 0x2047490
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: SOCLi_GetCtrlPipe
+    - name: Socli_GetCtrlPipe
       address:
         NA: 0x20474B0
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: SOCLi_SendCommandPacket
+    - name: Socli_SendCommandPacket
       address:
         NA: 0x20474C4
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: SOCLi_SendCommandPacketToCtrlPipe
+    - name: Socli_SendCommandPacketToCtrlPipe
       address:
         NA: 0x2047510
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: SOCLi_ExecCommandPacket
+    - name: Socli_ExecCommandPacket
       address:
         NA: 0x2047528
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: SOCLi_ExecCommandPacketInRecvPipe
+    - name: Socli_ExecCommandPacketInRecvPipe
       address:
         NA: 0x2047598
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: SOCLi_ExecCommandPacketInSendPipe
+    - name: Socli_ExecCommandPacketInSendPipe
       address:
         NA: 0x20475A8
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: SOCLi_ExecCommandPacketInCtrlPipe
+    - name: Socli_ExecCommandPacketInCtrlPipe
       address:
         NA: 0x20475B8
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: SOCLi_CommandPacketHandler
+    - name: Socli_CommandPacketHandler
       address:
         NA: 0x20475D0
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: SOCL_CreateSocket
+    - name: Socl_CreateSocket
       address:
         NA: 0x2047680
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: SOCLi_StartupSocket
+    - name: Socli_StartupSocket
       address:
         NA: 0x2047730
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: SOCLi_GetSizeSocket
+    - name: Socli_GetSizeSocket
       address:
         NA: 0x2047798
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: SOCLi_GetSizeCommandPipe
+    - name: Socli_GetSizeCommandPipe
       address:
         NA: 0x2047818
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: SOCLi_InitSocket
+    - name: Socli_InitSocket
       address:
         NA: 0x2047840
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: SOCLi_InitSocketBuffer
+    - name: Socli_InitSocketBuffer
       address:
         NA: 0x204793C
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: SOCLi_InitCommandPipe
+    - name: Socli_InitCommandPipe
       address:
         NA: 0x2047964
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: SOCL_Bind
+    - name: Socl_Bind
       address:
         NA: 0x20479D8
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: SOCL_Connect
+    - name: Socl_Connect
       address:
         NA: 0x2047A48
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: SOCLi_ExecBindCommand
+    - name: Socli_ExecBindCommand
       address:
         NA: 0x2047B30
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: SOCLi_BindCallBack
+    - name: Socli_BindCallBack
       address:
         NA: 0x2047B88
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: SOCL_ReadFrom
+    - name: Socl_ReadFrom
       address:
         NA: 0x2047C0C
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: SOCLi_ReadAndConsumeBuffer
+    - name: Socli_ReadAndConsumeBuffer
       address:
         NA: 0x2047D54
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: SOCLi_ReadBuffer
+    - name: Socli_ReadBuffer
       address:
         NA: 0x2047DF0
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: SOCLi_CopyCPSBuffer
+    - name: Socli_CopyCPSBuffer
       address:
         NA: 0x2047E64
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: SOCLi_ReadCPSBuffer
+    - name: Socli_ReadCPSBuffer
       address:
         NA: 0x2047F6C
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: SOCLi_ExecReadCommand
+    - name: Socli_ExecReadCommand
       address:
         NA: 0x2047FE0
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: SOCLi_ReadCallBack
+    - name: Socli_ReadCallBack
       address:
         NA: 0x204802C
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: SOCLi_ConsumeBuffer
+    - name: Socli_ConsumeBuffer
       address:
         NA: 0x204817C
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: SOCLi_ConsumeCPSBuffer
+    - name: Socli_ConsumeCPSBuffer
       address:
         NA: 0x20481D8
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: SOCLi_ReadUdpBuffer
+    - name: Socli_ReadUdpBuffer
       address:
         NA: 0x2048214
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: SOCLi_UdpRecvCallback
+    - name: Socli_UdpRecvCallback
       address:
         NA: 0x2048358
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: SOCL_WriteTo
+    - name: Socl_WriteTo
       address:
         NA: 0x204846C
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: SOCLi_WriteBuffer
+    - name: Socli_WriteBuffer
       address:
         NA: 0x2048580
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: SOCLi_AllocWriteBuffer
+    - name: Socli_AllocWriteBuffer
       address:
         NA: 0x2048684
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: SOCLi_GetWriteBufferFreeSize
+    - name: Socli_GetWriteBufferFreeSize
       address:
         NA: 0x2048708
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: SOCLi_ExecWriteCommand
+    - name: Socli_ExecWriteCommand
       address:
         NA: 0x204872C
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: SOCLi_WriteCallBack
+    - name: Socli_WriteCallBack
       address:
         NA: 0x20488A0
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: SOCLi_GetOptimumSendBufLen
+    - name: Socli_GetOptimumSendBufLen
       address:
         NA: 0x20489D0
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: SOCLi_MemCpy
+    - name: Socli_MemCpy
       address:
         NA: 0x2048A74
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: SOCL_Shutdown
+    - name: Socl_Shutdown
       address:
         NA: 0x2048B0C
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: SOCLi_ShutdownCallBack
+    - name: Socli_ShutdownCallBack
       address:
         NA: 0x2048BB8
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: SOCL_IsClosed
+    - name: Socl_IsClosed
       address:
         NA: 0x2048BE8
       description: |-
@@ -4091,154 +4091,154 @@ arm9:
         
         r0: file descriptor
         return: 0 on success, or a negative value representing an error
-    - name: SOCLi_CloseCallBack
+    - name: Socli_CloseCallBack
       address:
         NA: 0x2048CEC
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: SOCLi_CleanupSocket
+    - name: Socli_CleanupSocket
       address:
         NA: 0x2048D84
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: SOCLi_FreeCommandPipe
+    - name: Socli_FreeCommandPipe
       address:
         NA: 0x2048E84
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: SOCLi_TrashSocket
+    - name: Socli_TrashSocket
       address:
         NA: 0x2048F24
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: SOCL_Cleanup
+    - name: Socl_Cleanup
       address:
         NA: 0x2048F60
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: SOCL_CloseAll
+    - name: Socl_CloseAll
       address:
         NA: 0x2049004
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: SOCL_CalmDown
+    - name: Socl_CalmDown
       address:
         NA: 0x20490AC
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: SOCL_Resolve
+    - name: Socl_Resolve
       address:
         NA: 0x2049128
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: SOCL_InetAtoH
+    - name: Socl_InetAtoH
       address:
         NA: 0x20491D8
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: SOCL_SetResolver
+    - name: Socl_SetResolver
       address:
         NA: 0x2049224
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: SOCL_GetHostID
+    - name: Socl_GetHostID
       address:
         NA: 0x2049258
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: SOCL_GetStatus
+    - name: Socl_GetStatus
       address:
         NA: 0x20492C0
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: SOCLi_GetReadBufferOccpiedSize
+    - name: Socli_GetReadBufferOccpiedSize
       address:
         NA: 0x2049390
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: SOCLi_RoundUp4
+    - name: Socli_RoundUp4
       address:
         NA: 0x20493D8
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: SOCLi_SocketRegister
+    - name: Socli_SocketRegister
       address:
         NA: 0x20493E4
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: SOCLi_SocketRegisterList
+    - name: Socli_SocketRegisterList
       address:
         NA: 0x20493FC
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: SOCLi_SocketRegisterTrash
+    - name: Socli_SocketRegisterTrash
       address:
         NA: 0x204940C
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: SOCLi_SocketUnregister
+    - name: Socli_SocketUnregister
       address:
         NA: 0x2049424
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: SOCLi_SocketGetNextPtr
+    - name: Socli_SocketGetNextPtr
       address:
         NA: 0x2049458
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: SOCLi_SocketUnregisterTrash
+    - name: Socli_SocketUnregisterTrash
       address:
         NA: 0x2049484
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: SOCL_SocketIsInvalid
+    - name: Socl_SocketIsInvalid
       address:
         NA: 0x204949C
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: SOCL_SocketIsInTrash
+    - name: Socl_SocketIsInTrash
       address:
         NA: 0x20494D0
       description: |-
@@ -4321,7 +4321,7 @@ arm9:
         stack[0]: target address
         stack[1]: length of target address
         return: number of bytes sent, or a negative value representing an error
-    - name: SOC_Shutdown
+    - name: Soc_Shutdown
       address:
         NA: 0x2049704
       description: |-
@@ -4338,14 +4338,14 @@ arm9:
         
         r0: file descriptor
         return: 0 on success, or a negative value representing an error
-    - name: SOC_GetHostID
+    - name: Soc_GetHostID
       address:
         NA: 0x204971C
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: SOC_SetResolver
+    - name: Soc_SetResolver
       address:
         NA: 0x2049754
       description: |-
@@ -4366,56 +4366,56 @@ arm9:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: SOC_Startup
+    - name: Soc_Startup
       address:
         NA: 0x2049818
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: SOC_Cleanup
+    - name: Soc_Cleanup
       address:
         NA: 0x204998C
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: SOC_InetAtoN
+    - name: Soc_InetAtoN
       address:
         NA: 0x2049998
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: SOC_U32to4U8
+    - name: Soc_U32to4U8
       address:
         NA: 0x20499E8
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: SOC_Poll
+    - name: Soc_Poll
       address:
         NA: 0x2049A08
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: SOCL_EnableSsl
+    - name: Socl_EnableSsl
       address:
         NA: 0x2049ABC
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: SOCLi_ExecEnableSslCommand
+    - name: Socli_ExecEnableSslCommand
       address:
         NA: 0x2049B3C
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: SOCLi_EnableSslCallBack
+    - name: Socli_EnableSslCallBack
       address:
         NA: 0x2049B78
       description: |-
@@ -4443,35 +4443,35 @@ arm9:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
-    - name: CPS_Startup
+    - name: Cps_Startup
       address:
         NA: 0x2049D14
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: CPS_CalmDown
+    - name: Cps_CalmDown
       address:
         NA: 0x2049F50
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: CPS_SetScavengerCallback
+    - name: Cps_SetScavengerCallback
       address:
         NA: 0x2049FA0
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: CPS_Cleanup
+    - name: Cps_Cleanup
       address:
         NA: 0x2049FB0
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: CPS_SetThreadPriority
+    - name: Cps_SetThreadPriority
       address:
         NA: 0x2049FF8
       description: |-
@@ -4562,7 +4562,7 @@ arm9:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: CPSi_RecvCallbackFunc
+    - name: Cpsi_RecvCallbackFunc
       address:
         NA: 0x204A52C
       description: |-
@@ -4842,7 +4842,7 @@ arm9:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: CPS_SocGetEport
+    - name: Cps_SocGetEport
       address:
         NA: 0x204CB04
       description: |-
@@ -4856,91 +4856,91 @@ arm9:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: CPS_SocRegister
+    - name: Cps_SocRegister
       address:
         NA: 0x204CBF0
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: CPS_SocUnRegister
+    - name: Cps_SocUnRegister
       address:
         NA: 0x204CC04
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: CPS_SocDatagramMode
+    - name: Cps_SocDatagramMode
       address:
         NA: 0x204CC1C
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: CPS_SocBind
+    - name: Cps_SocBind
       address:
         NA: 0x204CC48
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: CPS_SocUse
+    - name: Cps_SocUse
       address:
         NA: 0x204CCA8
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: CPS_SocRelease
+    - name: Cps_SocRelease
       address:
         NA: 0x204CCDC
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: CPS_SocDup
+    - name: Cps_SocDup
       address:
         NA: 0x204CCFC
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: CPS_SetUdpCallback
+    - name: Cps_SetUdpCallback
       address:
         NA: 0x204CD14
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: CPSi_TcpConnectRaw
+    - name: Cpsi_TcpConnectRaw
       address:
         NA: 0x204CD30
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: CPS_TcpConnect
+    - name: Cps_TcpConnect
       address:
         NA: 0x204CDE4
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: CPSi_TcpShutdownRaw
+    - name: Cpsi_TcpShutdownRaw
       address:
         NA: 0x204CE24
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: CPS_TcpShutdown
+    - name: Cps_TcpShutdown
       address:
         NA: 0x204CE74
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: CPS_TcpClose
+    - name: Cps_TcpClose
       address:
         NA: 0x204CEB0
       description: |-
@@ -4954,28 +4954,28 @@ arm9:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: CPSi_TcpReadRaw
+    - name: Cpsi_TcpReadRaw
       address:
         NA: 0x204CF8C
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: CPS_SocRead
+    - name: Cps_SocRead
       address:
         NA: 0x204D008
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: CPSi_SocConsumeRaw
+    - name: Cpsi_SocConsumeRaw
       address:
         NA: 0x204D06C
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: CPS_SocConsume
+    - name: Cps_SocConsume
       address:
         NA: 0x204D0FC
       description: |-
@@ -4996,35 +4996,35 @@ arm9:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: CPSi_TcpWrite2Raw
+    - name: Cpsi_TcpWrite2Raw
       address:
         NA: 0x204D234
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: CPSi_SocWrite2
+    - name: Cpsi_SocWrite2
       address:
         NA: 0x204D43C
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: CPS_SocWrite
+    - name: Cps_SocWrite
       address:
         NA: 0x204D510
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: CPS_SocGetLength
+    - name: Cps_SocGetLength
       address:
         NA: 0x204D5A8
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: CPS_SocFlush
+    - name: Cps_SocFlush
       address:
         NA: 0x204D618
       description: |-
@@ -5136,7 +5136,7 @@ arm9:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: CPS_Resolve
+    - name: Cps_Resolve
       address:
         NA: 0x204E710
       description: |-
@@ -5178,7 +5178,7 @@ arm9:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: CPS_SetSslHandshakePriority
+    - name: Cps_SetSslHandshakePriority
       address:
         NA: 0x204EB08
       description: |-
@@ -5199,7 +5199,7 @@ arm9:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: CPS_SetRootCa
+    - name: Cps_SetRootCa
       address:
         NA: 0x204EB88
       description: |-
@@ -5437,7 +5437,7 @@ arm9:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: CPS_SslAddRandomSeed
+    - name: Cps_SslAddRandomSeed
       address:
         NA: 0x2050C50
       description: |-
@@ -5479,21 +5479,21 @@ arm9:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: CPSi_SslConnect
+    - name: Cpsi_SslConnect
       address:
         NA: 0x2051368
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: CPSi_SslRead
+    - name: Cpsi_SslRead
       address:
         NA: 0x20513BC
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: CPSi_SslConsume
+    - name: Cpsi_SslConsume
       address:
         NA: 0x2051494
       description: |-
@@ -5507,49 +5507,49 @@ arm9:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: CPSi_SslGetLength
+    - name: Cpsi_SslGetLength
       address:
         NA: 0x2051628
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: CPSi_SslWrite2
+    - name: Cpsi_SslWrite2
       address:
         NA: 0x20516A4
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: CPSi_SslShutdown
+    - name: Cpsi_SslShutdown
       address:
         NA: 0x20517D8
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: CPSi_SslClose
+    - name: Cpsi_SslClose
       address:
         NA: 0x2051858
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: CPS_SetSsl
+    - name: Cps_SetSsl
       address:
         NA: 0x2051890
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: CPSi_SslPeriodical
+    - name: Cpsi_SslPeriodical
       address:
         NA: 0x20518C0
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: CPSi_SslCleanup
+    - name: Cpsi_SslCleanup
       address:
         NA: 0x20519A0
       description: |-
@@ -5574,28 +5574,28 @@ arm9:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: CPSi_md5_block
+    - name: Cpsi_md5_block
       address:
         NA: 0x20519EC
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: CPSi_md5_init
+    - name: Cpsi_md5_init
       address:
         NA: 0x2051E08
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: CPSi_md5_calc
+    - name: Cpsi_md5_calc
       address:
         NA: 0x2051E50
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: CPSi_md5_result
+    - name: Cpsi_md5_result
       address:
         NA: 0x2051F08
       description: |-
@@ -5627,49 +5627,49 @@ arm9:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: CPSi_sha1_block
+    - name: Cpsi_sha1_block
       address:
         NA: 0x2052040
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: CPSi_sha1_init
+    - name: Cpsi_sha1_init
       address:
         NA: 0x20526C8
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: CPSi_sha1_calc
+    - name: Cpsi_sha1_calc
       address:
         NA: 0x205271C
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: CPSi_sha1_result
+    - name: Cpsi_sha1_result
       address:
         NA: 0x20527D4
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: CPSi_sha1_result_prng
+    - name: Cpsi_sha1_result_prng
       address:
         NA: 0x205283C
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: CPSi_rc4_init
+    - name: Cpsi_rc4_init
       address:
         NA: 0x205286C
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: CPSi_rc4_crypt
+    - name: Cpsi_rc4_crypt
       address:
         NA: 0x20528E0
       description: |-
@@ -5683,77 +5683,77 @@ arm9:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: CPSi_big_sign
+    - name: Cpsi_big_sign
       address:
         NA: 0x2052974
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: CPSi_big_add
+    - name: Cpsi_big_add
       address:
         NA: 0x20529A4
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: CPSi_big_add_small
+    - name: Cpsi_big_add_small
       address:
         NA: 0x2052A40
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: CPSi_big_negate
+    - name: Cpsi_big_negate
       address:
         NA: 0x2052AA4
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: CPSi_big_sub
+    - name: Cpsi_big_sub
       address:
         NA: 0x2052AE4
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: CPSi_big_sub_small
+    - name: Cpsi_big_sub_small
       address:
         NA: 0x2052B8C
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: CPSi_big_compare
+    - name: Cpsi_big_compare
       address:
         NA: 0x2052BF4
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: CPSi_big_add_part
+    - name: Cpsi_big_add_part
       address:
         NA: 0x2052C2C
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: CPSi_big_mult
+    - name: Cpsi_big_mult
       address:
         NA: 0x2052C60
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: CPSi_big_mult_small
+    - name: Cpsi_big_mult_small
       address:
         NA: 0x2052D0C
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: CPSi_big_sqr
+    - name: Cpsi_big_sqr
       address:
         NA: 0x2052D84
       description: |-
@@ -5788,133 +5788,133 @@ arm9:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: CPSi_big_div
+    - name: Cpsi_big_div
       address:
         NA: 0x2052F04
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: CPSi_big_power
+    - name: Cpsi_big_power
       address:
         NA: 0x20530E4
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: CPSi_big_modinv
+    - name: Cpsi_big_modinv
       address:
         NA: 0x2053278
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: CPSi_big_montmult
+    - name: Cpsi_big_montmult
       address:
         NA: 0x20533C4
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: CPSi_big_montpower
+    - name: Cpsi_big_montpower
       address:
         NA: 0x20534EC
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: CPSi_big_from_char
+    - name: Cpsi_big_from_char
       address:
         NA: 0x20536F8
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: CPSi_char_from_big
+    - name: Cpsi_char_from_big
       address:
         NA: 0x2053754
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: WCM_Init
+    - name: Wcm_Init
       address:
         NA: 0x2053798
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: WCM_Finish
+    - name: Wcm_Finish
       address:
         NA: 0x20538B0
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: WCM_StartupAsync
+    - name: Wcm_StartupAsync
       address:
         NA: 0x2053908
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: WCM_CleanupAsync
+    - name: Wcm_CleanupAsync
       address:
         NA: 0x2053B0C
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: WCM_SearchAsync
+    - name: Wcm_SearchAsync
       address:
         NA: 0x2053BFC
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: WCM_BeginSearchAsync
+    - name: Wcm_BeginSearchAsync
       address:
         NA: 0x2053C1C
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: WCM_EndSearchAsync
+    - name: Wcm_EndSearchAsync
       address:
         NA: 0x2053D94
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: WCM_ConnectAsync
+    - name: Wcm_ConnectAsync
       address:
         NA: 0x2053E38
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: WCM_DisconnectAsync
+    - name: Wcm_DisconnectAsync
       address:
         NA: 0x205403C
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: WCM_TerminateAsync
+    - name: Wcm_TerminateAsync
       address:
         NA: 0x2054158
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: WCM_GetPhase
+    - name: Wcm_GetPhase
       address:
         NA: 0x2054368
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: WCM_UpdateOption
+    - name: Wcm_UpdateOption
       address:
         NA: 0x2054398
       description: |-
@@ -6026,28 +6026,28 @@ arm9:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: WCM_ClearApList
+    - name: Wcm_ClearApList
       address:
         NA: 0x2055904
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: WCM_CountApList
+    - name: Wcm_CountApList
       address:
         NA: 0x2055958
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: WCM_LockApList
+    - name: Wcm_LockApList
       address:
         NA: 0x20559B0
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: WCM_PointApList
+    - name: Wcm_PointApList
       address:
         NA: 0x2055A2C
       description: |-
@@ -6117,28 +6117,28 @@ arm9:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: WCM_GetApMacAddress
+    - name: Wcm_GetApMacAddress
       address:
         NA: 0x2055E68
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: WCM_GetApEssid
+    - name: Wcm_GetApEssid
       address:
         NA: 0x2055EAC
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: WCM_SetRecvDCFCallback
+    - name: Wcm_SetRecvDCFCallback
       address:
         NA: 0x2055F0C
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: WCM_SendDCFData
+    - name: Wcm_SendDCFData
       address:
         NA: 0x2055F2C
       description: |-
@@ -6166,14 +6166,14 @@ arm9:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: WCM_CompareBssID
+    - name: Wcm_CompareBssID
       address:
         NA: 0x2056168
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: WCM_GetLinkLevel
+    - name: Wcm_GetLinkLevel
       address:
         NA: 0x2056194
       description: |-
@@ -6201,7 +6201,7 @@ arm9:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNS_FndInitList
+    - name: Nns_FndInitList
       address:
         NA: 0x20562EC
       description: |-
@@ -6215,42 +6215,42 @@ arm9:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNS_FndAppendListObject
+    - name: Nns_FndAppendListObject
       address:
         NA: 0x2056330
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNS_FndPrependListObject
+    - name: Nns_FndPrependListObject
       address:
         NA: 0x2056384
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNS_FndInsertListObject
+    - name: Nns_FndInsertListObject
       address:
         NA: 0x20563D4
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNS_FndRemoveListObject
+    - name: Nns_FndRemoveListObject
       address:
         NA: 0x2056438
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNS_FndGetNextListObject
+    - name: Nns_FndGetNextListObject
       address:
         NA: 0x2056498
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNS_FndGetPrevListObject
+    - name: Nns_FndGetPrevListObject
       address:
         NA: 0x20564B0
       description: |-
@@ -6271,14 +6271,14 @@ arm9:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNS_i_FndInitHeapHead
+    - name: Nns_i_FndInitHeapHead
       address:
         NA: 0x2056554
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNSi_FndFinalizeHeap
+    - name: Nnsi_FndFinalizeHeap
       address:
         NA:
           - 0x20565D0
@@ -6350,14 +6350,14 @@ arm9:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNS_FndCreateExpHeapEx
+    - name: Nns_FndCreateExpHeapEx
       address:
         NA: 0x2056AE0
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNSi_FndFinalizeHeap
+    - name: Nnsi_FndFinalizeHeap
       address:
         NA:
           - 0x20565D0
@@ -6366,28 +6366,28 @@ arm9:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNS_FndAllocFromExpHeapEx
+    - name: Nns_FndAllocFromExpHeapEx
       address:
         NA: 0x2056B24
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNS_FndFreeToExpHeap
+    - name: Nns_FndFreeToExpHeap
       address:
         NA: 0x2056B54
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNS_FndGetTotalFreeSizeForExpHeap
+    - name: Nns_FndGetTotalFreeSizeForExpHeap
       address:
         NA: 0x2056B90
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNS_FndGetAllocatableSizeForExpHeapEx
+    - name: Nns_FndGetAllocatableSizeForExpHeapEx
       address:
         NA: 0x2056BB8
       description: |-
@@ -6401,70 +6401,70 @@ arm9:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNS_FrmHeap_AllocFromHead
+    - name: Nns_FrmHeap_AllocFromHead
       address:
         NA: 0x2056C84
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNS_FrmHeap_AllocFromTail
+    - name: Nns_FrmHeap_AllocFromTail
       address:
         NA: 0x2056CE0
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNS_FrmHeap_FreeHead
+    - name: Nns_FrmHeap_FreeHead
       address:
         NA: 0x2056D38
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNS_FrmHeap_FreeTail
+    - name: Nns_FrmHeap_FreeTail
       address:
         NA: 0x2056D4C
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNS_FndCreateFrmHeapEx
+    - name: Nns_FndCreateFrmHeapEx
       address:
         NA: 0x2056D78
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNS_FndDestroyFrmHeap
+    - name: Nns_FndDestroyFrmHeap
       address:
         NA: 0x2056DB0
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNS_FndAllocFromFrmHeapEx
+    - name: Nns_FndAllocFromFrmHeapEx
       address:
         NA: 0x2056DBC
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNS_FndFreeToFrmHeap
+    - name: Nns_FndFreeToFrmHeap
       address:
         NA: 0x2056DF0
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNS_FndRecordStateForFrmHeap
+    - name: Nns_FndRecordStateForFrmHeap
       address:
         NA: 0x2056E1C
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNS_FndFreeByStateToFrmHeap
+    - name: Nns_FndFreeByStateToFrmHeap
       address:
         NA: 0x2056E6C
       description: |-
@@ -6478,35 +6478,35 @@ arm9:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNS_FndMountArchive
+    - name: Nns_FndMountArchive
       address:
         NA: 0x2056F00
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNS_FndUnmountArchive
+    - name: Nns_FndUnmountArchive
       address:
         NA: 0x2057048
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNS_FndGetArchiveFileByName
+    - name: Nns_FndGetArchiveFileByName
       address:
         NA: 0x2057070
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNS_FndGetArchiveFileByIndex
+    - name: Nns_FndGetArchiveFileByIndex
       address:
         NA: 0x20570C0
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNS_FndOpenArchiveFileByIndex
+    - name: Nns_FndOpenArchiveFileByIndex
       address:
         NA: 0x20570EC
       description: |-
@@ -6780,56 +6780,56 @@ arm9:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNSi_GfdPushVramTransferTaskQueue
+    - name: Nnsi_GfdPushVramTransferTaskQueue
       address:
         NA: 0x2057480
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNSi_GfdGetFrontVramTransferTaskQueue
+    - name: Nnsi_GfdGetFrontVramTransferTaskQueue
       address:
         NA: 0x20574BC
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNSi_GfdGetEndVramTransferTaskQueue
+    - name: Nnsi_GfdGetEndVramTransferTaskQueue
       address:
         NA: 0x20574CC
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNSi_GfdPopVramTransferTaskQueue
+    - name: Nnsi_GfdPopVramTransferTaskQueue
       address:
         NA: 0x20574DC
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNS_GfdInitVramTransferManager
+    - name: Nns_GfdInitVramTransferManager
       address:
         NA: 0x2057518
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNS_GfdDoVramTransfer
+    - name: Nns_GfdDoVramTransfer
       address:
         NA: 0x205753C
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNS_GfdRegisterNewVramTransferTask
+    - name: Nns_GfdRegisterNewVramTransferTask
       address:
         NA: 0x205759C
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNS_GfdGetVramTransferTaskTotalSize
+    - name: Nns_GfdGetVramTransferTaskTotalSize
       address:
         NA: 0x2057604
       description: |-
@@ -6843,140 +6843,140 @@ arm9:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNSi_GfdDumpLnkVramManFreeListInfo
+    - name: Nnsi_GfdDumpLnkVramManFreeListInfo
       address:
         NA: 0x2057628
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNSi_GfdDumpLnkVramManFreeListInfoEx
+    - name: Nnsi_GfdDumpLnkVramManFreeListInfoEx
       address:
         NA: 0x2057648
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNSi_GfdInitLnkVramMan
+    - name: Nnsi_GfdInitLnkVramMan
       address:
         NA: 0x2057678
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNSi_GfdInitLnkVramBlockPool
+    - name: Nnsi_GfdInitLnkVramBlockPool
       address:
         NA: 0x2057684
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNSi_GfdAddNewFreeBlock
+    - name: Nnsi_GfdAddNewFreeBlock
       address:
         NA: 0x20576D0
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNSi_GfdAllocLnkVram
+    - name: Nnsi_GfdAllocLnkVram
       address:
         NA: 0x205772C
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNSi_GfdAllocLnkVramAligned
+    - name: Nnsi_GfdAllocLnkVramAligned
       address:
         NA: 0x2057740
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNSi_GfdFreeLnkVram
+    - name: Nnsi_GfdFreeLnkVram
       address:
         NA: 0x2057880
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNS_GfdDumpLnkTexVramManager
+    - name: Nns_GfdDumpLnkTexVramManager
       address:
         NA: 0x20579D0
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNS_GfdGetLnkTexVramManagerWorkSize
+    - name: Nns_GfdGetLnkTexVramManagerWorkSize
       address:
         NA: 0x2057A04
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNS_GfdInitLnkTexVramManager
+    - name: Nns_GfdInitLnkTexVramManager
       address:
         NA: 0x2057A0C
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNS_GfdAllocLnkTexVram
+    - name: Nns_GfdAllocLnkTexVram
       address:
         NA: 0x2057A64
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNS_GfdFreeLnkTexVram
+    - name: Nns_GfdFreeLnkTexVram
       address:
         NA: 0x2057AF4
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNS_GfdResetLnkTexVramState
+    - name: Nns_GfdResetLnkTexVramState
       address:
         NA: 0x2057B68
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNS_GfdDumpLnkPlttVramManager
+    - name: Nns_GfdDumpLnkPlttVramManager
       address:
         NA: 0x2057D50
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNS_GfdGetLnkPlttVramManagerWorkSize
+    - name: Nns_GfdGetLnkPlttVramManagerWorkSize
       address:
         NA: 0x2057D6C
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNS_GfdInitLnkPlttVramManager
+    - name: Nns_GfdInitLnkPlttVramManager
       address:
         NA: 0x2057D74
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNS_GfdAllocLnkPlttVram
+    - name: Nns_GfdAllocLnkPlttVram
       address:
         NA: 0x2057DC8
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNS_GfdFreeLnkPlttVram
+    - name: Nns_GfdFreeLnkPlttVram
       address:
         NA: 0x2057E94
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNS_GfdResetLnkPlttVramState
+    - name: Nns_GfdResetLnkPlttVramState
       address:
         NA: 0x2057ED8
       description: |-
@@ -6990,21 +6990,21 @@ arm9:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNS_G2dGetUnpackedAnimBank
+    - name: Nns_G2dGetUnpackedAnimBank
       address:
         NA: 0x2057F64
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNS_G2dUnpackNAN
+    - name: Nns_G2dUnpackNAN
       address:
         NA: 0x2057F70
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNS_G2dGetAnimSequenceByIdx
+    - name: Nns_G2dGetAnimSequenceByIdx
       address:
         NA: 0x20580C0
       description: |-
@@ -7025,84 +7025,84 @@ arm9:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNS_G2dGetUnpackedCellBank
+    - name: Nns_G2dGetUnpackedCellBank
       address:
         NA: 0x2058108
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNS_G2dGetCellDataByIdx
+    - name: Nns_G2dGetCellDataByIdx
       address:
         NA: 0x2058144
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNS_G2dUnpackNCE
+    - name: Nns_G2dUnpackNCE
       address:
         NA: 0x205816C
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNS_G2dGetUnpackedCharacterData
+    - name: Nns_G2dGetUnpackedCharacterData
       address:
         NA: 0x2058208
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNS_G2dUnpackNCG
+    - name: Nns_G2dUnpackNCG
       address:
         NA: 0x2058244
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNS_G2dGetUnpackedBGCharacterData
+    - name: Nns_G2dGetUnpackedBGCharacterData
       address:
         NA: 0x2058254
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNS_G2dUnpackBGNCG
+    - name: Nns_G2dUnpackBGNCG
       address:
         NA: 0x2058290
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNS_G2dGetUnpackedPaletteData
+    - name: Nns_G2dGetUnpackedPaletteData
       address:
         NA: 0x20582A0
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNS_G2dUnpackNCL
+    - name: Nns_G2dUnpackNCL
       address:
         NA: 0x20582DC
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNS_G2dGetUnpackedScreenData
+    - name: Nns_G2dGetUnpackedScreenData
       address:
         NA: 0x20582EC
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNS_G2dFindBinaryBlock
+    - name: Nns_G2dFindBinaryBlock
       address:
         NA: 0x2058320
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNSi_G2dUnpackUserExCellAttrBank
+    - name: Nnsi_G2dUnpackUserExCellAttrBank
       address:
         NA: 0x2058368
       description: |-
@@ -7116,133 +7116,133 @@ arm9:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNS_G2dGetAnimCtrlCurrentElement
+    - name: Nns_G2dGetAnimCtrlCurrentElement
       address:
         NA: 0x20584C4
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNS_G2dTickAnimCtrl
+    - name: Nns_G2dTickAnimCtrl
       address:
         NA: 0x20584D0
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNS_G2dInitAnimCtrl
+    - name: Nns_G2dInitAnimCtrl
       address:
         NA: 0x2058684
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNS_G2dInitAnimCallBackFunctor
+    - name: Nns_G2dInitAnimCallBackFunctor
       address:
         NA: 0x20586C4
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNS_G2dResetAnimCtrlState
+    - name: Nns_G2dResetAnimCtrlState
       address:
         NA: 0x20586DC
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNS_G2dBindAnimCtrl
+    - name: Nns_G2dBindAnimCtrl
       address:
         NA: 0x205873C
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNS_G2dInitImageProxy
+    - name: Nns_G2dInitImageProxy
       address:
         NA: 0x205874C
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNS_G2dSetImageLocation
+    - name: Nns_G2dSetImageLocation
       address:
         NA: 0x2058768
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNS_G2dGetImageLocation
+    - name: Nns_G2dGetImageLocation
       address:
         NA: 0x2058770
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNS_G2dInitImagePaletteProxy
+    - name: Nns_G2dInitImagePaletteProxy
       address:
         NA: 0x2058778
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNS_G2dSetImagePaletteLocation
+    - name: Nns_G2dSetImagePaletteLocation
       address:
         NA: 0x2058798
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNS_G2dGetImagePaletteLocation
+    - name: Nns_G2dGetImagePaletteLocation
       address:
         NA: 0x20587A4
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNS_G2dLoadImage2DMapping
+    - name: Nns_G2dLoadImage2DMapping
       address:
         NA: 0x20587B0
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNS_G2dLoadPalette
+    - name: Nns_G2dLoadPalette
       address:
         NA: 0x20589DC
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNSi_G2dSrtcSetTrans
+    - name: Nnsi_G2dSrtcSetTrans
       address:
         NA: 0x2058AD4
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNSi_G2dSrtcSetSRTRotZ
+    - name: Nnsi_G2dSrtcSetSRTRotZ
       address:
         NA: 0x2058AF8
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNSi_G2dSrtcSetSRTScale
+    - name: Nnsi_G2dSrtcSetSRTScale
       address:
         NA: 0x2058B18
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNSi_G2dSrtcInitControl
+    - name: Nnsi_G2dSrtcInitControl
       address:
         NA: 0x2058B38
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNSi_G2dSrtcSetInitialValue
+    - name: Nnsi_G2dSrtcSetInitialValue
       address:
         NA: 0x2058B48
       description: |-
@@ -7256,35 +7256,35 @@ arm9:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNS_G2dInitCellAnimation
+    - name: Nns_G2dInitCellAnimation
       address:
         NA: 0x2058C60
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNS_G2dSetCellAnimationSequence
+    - name: Nns_G2dSetCellAnimationSequence
       address:
         NA: 0x2058C9C
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNS_G2dTickCellAnimation
+    - name: Nns_G2dTickCellAnimation
       address:
         NA: 0x2058CB4
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNSi_G2dGetCellTransferState
+    - name: Nnsi_G2dGetCellTransferState
       address:
         NA: 0x2058CD4
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNS_G2dSetCellTransferStateRequested
+    - name: Nns_G2dSetCellTransferStateRequested
       address:
         NA: 0x2058CEC
       description: |-
@@ -7431,21 +7431,21 @@ arm9:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNS_G2dBGLoadElementsEx
+    - name: Nns_G2dBGLoadElementsEx
       address:
         NA: 0x205983C
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNS_G2dBGSetupEx
+    - name: Nns_G2dBGSetupEx
       address:
         NA: 0x2059898
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNS_G2dBGLoadScreenRect
+    - name: Nns_G2dBGLoadScreenRect
       address:
         NA: 0x2059914
       description: |-
@@ -7459,56 +7459,56 @@ arm9:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNS_G2dFontInitAuto
+    - name: Nns_G2dFontInitAuto
       address:
         NA: 0x2059B40
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNS_G2dFontInitUTF16
+    - name: Nns_G2dFontInitUTF16
       address:
         NA: 0x2059B70
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNS_G2dFontFindGlyphIndex
+    - name: Nns_G2dFontFindGlyphIndex
       address:
         NA: 0x2059B94
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNS_G2dFontGetCharWidthsFromIndex
+    - name: Nns_G2dFontGetCharWidthsFromIndex
       address:
         NA: 0x2059BDC
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNSi_G2dFontGetStringWidth
+    - name: Nnsi_G2dFontGetStringWidth
       address:
         NA: 0x2059C28
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNSi_G2dFontGetTextHeight
+    - name: Nnsi_G2dFontGetTextHeight
       address:
         NA: 0x2059CD4
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNSi_G2dFontGetTextWidth
+    - name: Nnsi_G2dFontGetTextWidth
       address:
         NA: 0x2059D48
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNSi_G2dFontGetTextRect
+    - name: Nnsi_G2dFontGetTextRect
       address:
         NA: 0x2059DA0
       description: |-
@@ -7592,133 +7592,133 @@ arm9:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNS_G2dCharCanvasDrawChar
+    - name: Nns_G2dCharCanvasDrawChar
       address:
         NA: 0x205AAF0
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNS_G2dCharCanvasInitForBG
+    - name: Nns_G2dCharCanvasInitForBG
       address:
         NA: 0x205AC14
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNS_G2dCharCanvasInitForOBJ1D
+    - name: Nns_G2dCharCanvasInitForOBJ1D
       address:
         NA: 0x205AC40
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNS_G2dMapScrToCharText
+    - name: Nns_G2dMapScrToCharText
       address:
         NA: 0x205ACC8
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNS_G2dMapScrToChar256x16Pltt
+    - name: Nns_G2dMapScrToChar256x16Pltt
       address:
         NA: 0x205AD78
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNSi_G2dCalcRequiredOBJ
+    - name: Nnsi_G2dCalcRequiredOBJ
       address:
         NA: 0x205ADD4
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNS_G2dArrangeOBJ1D
+    - name: Nns_G2dArrangeOBJ1D
       address:
         NA: 0x205AE30
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNSi_G2dTextCanvasDrawString
+    - name: Nnsi_G2dTextCanvasDrawString
       address:
         NA: 0x205B128
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNSi_G2dTextCanvasDrawTextAlign
+    - name: Nnsi_G2dTextCanvasDrawTextAlign
       address:
         NA: 0x205B1DC
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNSi_G2dTextCanvasDrawText
+    - name: Nnsi_G2dTextCanvasDrawText
       address:
         NA: 0x205B344
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNSi_G2dTextCanvasDrawTextRect
+    - name: Nnsi_G2dTextCanvasDrawTextRect
       address:
         NA: 0x205B468
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNSi_G2dGetUnpackedFont
+    - name: Nnsi_G2dGetUnpackedFont
       address:
         NA: 0x205B548
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNSi_G2dUnpackNFT
+    - name: Nnsi_G2dUnpackNFT
       address:
         NA: 0x205B69C
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNSi_G2dBitReaderRead
+    - name: Nnsi_G2dBitReaderRead
       address:
         NA: 0x205B778
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNSi_G2dSplitCharUTF16
+    - name: Nnsi_G2dSplitCharUTF16
       address:
         NA: 0x205B7D8
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNSi_G2dSplitCharUTF8
+    - name: Nnsi_G2dSplitCharUTF8
       address:
         NA: 0x205B7EC
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNSi_G2dSplitCharShiftJIS
+    - name: Nnsi_G2dSplitCharShiftJIS
       address:
         NA: 0x205B868
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNSi_G2dSplitChar1Byte
+    - name: Nnsi_G2dSplitChar1Byte
       address:
         NA: 0x205B8BC
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNSi_G2dBGGetCharSize
+    - name: Nnsi_G2dBGGetCharSize
       address:
         NA: 0x205B8D0
       description: |-
@@ -7732,196 +7732,196 @@ arm9:
         Seems to call Snd_Init, as well as a few more audio-related functions.
         
         No params.
-    - name: NNS_SndMain
+    - name: Nns_SndMain
       address:
         NA: 0x205B9F0
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNS_SndMainBeginSleep
+    - name: Nns_SndMainBeginSleep
       address:
         NA: 0x205BA20
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNS_SndMainEndSleep
+    - name: Nns_SndMainEndSleep
       address:
         NA: 0x205BA58
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNS_SndLockChannel
+    - name: Nns_SndLockChannel
       address:
         NA: 0x205BA64
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNS_SndUnlockChannel
+    - name: Nns_SndUnlockChannel
       address:
         NA: 0x205BAAC
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNS_SndUnlockCapture
+    - name: Nns_SndUnlockCapture
       address:
         NA: 0x205BADC
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNS_SndAllocAlarm
+    - name: Nns_SndAllocAlarm
       address:
         NA: 0x205BAF8
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNS_SndFreeAlarm
+    - name: Nns_SndFreeAlarm
       address:
         NA: 0x205BB40
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNSi_SndInitResourceMgr
+    - name: Nnsi_SndInitResourceMgr
       address:
         NA: 0x205BB60
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNS_SndPlayerSetPlayableSeqCount
+    - name: Nns_SndPlayerSetPlayableSeqCount
       address:
         NA: 0x205BB7C
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNS_SndPlayerSetAllocatableChannel
+    - name: Nns_SndPlayerSetAllocatableChannel
       address:
         NA: 0x205BB9C
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNS_SndPlayerCreateHeap
+    - name: Nns_SndPlayerCreateHeap
       address:
         NA: 0x205BBB4
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNS_SndPlayerStopSeq
+    - name: Nns_SndPlayerStopSeq
       address:
         NA: 0x205BC48
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNS_SndPlayerStopSeqBySeqArcIdx
+    - name: Nns_SndPlayerStopSeqBySeqArcIdx
       address:
         NA: 0x205BC58
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNS_SndHandleInit
+    - name: Nns_SndHandleInit
       address:
         NA: 0x205BCBC
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNS_SndHandleReleaseSeq
+    - name: Nns_SndHandleReleaseSeq
       address:
         NA: 0x205BCC8
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNS_SndPlayerCountPlayingSeqBySeqArcIdx
+    - name: Nns_SndPlayerCountPlayingSeqBySeqArcIdx
       address:
         NA: 0x205BCE8
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNS_SndPlayerSetVolume
+    - name: Nns_SndPlayerSetVolume
       address:
         NA: 0x205BD48
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNS_SndPlayerSetInitialVolume
+    - name: Nns_SndPlayerSetInitialVolume
       address:
         NA: 0x205BD5C
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNS_SndPlayerMoveVolume
+    - name: Nns_SndPlayerMoveVolume
       address:
         NA: 0x205BD70
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNS_SndPlayerSetChannelPriority
+    - name: Nns_SndPlayerSetChannelPriority
       address:
         NA: 0x205BD9C
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNS_SndPlayerSetTrackPitch
+    - name: Nns_SndPlayerSetTrackPitch
       address:
         NA: 0x205BDBC
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNS_SndPlayerSetTempoRatio
+    - name: Nns_SndPlayerSetTempoRatio
       address:
         NA: 0x205BDDC
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNS_SndPlayerSetSeqNo
+    - name: Nns_SndPlayerSetSeqNo
       address:
         NA: 0x205BDFC
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNS_SndPlayerSetSeqArcNo
+    - name: Nns_SndPlayerSetSeqArcNo
       address:
         NA: 0x205BE20
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNSi_SndPlayerInit
+    - name: Nnsi_SndPlayerInit
       address:
         NA: 0x205BE4C
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNSi_SndPlayerMain
+    - name: Nnsi_SndPlayerMain
       address:
         NA: 0x205BF00
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNSi_SndPlayerAllocSeqPlayer
+    - name: Nnsi_SndPlayerAllocSeqPlayer
       address:
         NA: 0x205C064
       description: |-
@@ -7938,21 +7938,21 @@ arm9:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNSi_SndPlayerStartSeq
+    - name: Nnsi_SndPlayerStartSeq
       address:
         NA: 0x205C108
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNSi_SndPlayerStopSeq
+    - name: Nnsi_SndPlayerStopSeq
       address:
         NA: 0x205C158
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNSi_SndPlayerAllocHeap
+    - name: Nnsi_SndPlayerAllocHeap
       address:
         NA: 0x205C1A4
       description: |-
@@ -8018,56 +8018,56 @@ arm9:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNS_SndStrmInit
+    - name: Nns_SndStrmInit
       address:
         NA: 0x205C4B8
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNS_SndStrmAllocChannel
+    - name: Nns_SndStrmAllocChannel
       address:
         NA: 0x205C530
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNS_SndStrmFreeChannel
+    - name: Nns_SndStrmFreeChannel
       address:
         NA: 0x205C590
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNS_SndStrmSetup
+    - name: Nns_SndStrmSetup
       address:
         NA: 0x205C5B8
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNS_SndStrmStart
+    - name: Nns_SndStrmStart
       address:
         NA: 0x205C758
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNS_SndStrmStop
+    - name: Nns_SndStrmStop
       address:
         NA: 0x205C7AC
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNS_SndStrmSetVolume
+    - name: Nns_SndStrmSetVolume
       address:
         NA: 0x205C7C8
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNS_SndStrmSetChannelPan
+    - name: Nns_SndStrmSetChannelPan
       address:
         NA: 0x205C834
       description: |-
@@ -8090,7 +8090,7 @@ arm9:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNS_AlarmCallback
+    - name: Nns_AlarmCallback
       address:
         NA: 0x205C908
       description: |-
@@ -8120,35 +8120,35 @@ arm9:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNSi_SndCaptureInit
+    - name: Nnsi_SndCaptureInit
       address:
         NA: 0x205CA84
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNSi_SndCaptureMain
+    - name: Nnsi_SndCaptureMain
       address:
         NA: 0x205CA9C
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNSi_SndCaptureStop
+    - name: Nnsi_SndCaptureStop
       address:
         NA: 0x205CB24
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNSi_SndCaptureBeginSleep
+    - name: Nnsi_SndCaptureBeginSleep
       address:
         NA: 0x205CC14
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNSi_SndCaptureEndSleep
+    - name: Nnsi_SndCaptureEndSleep
       address:
         NA: 0x205CC74
       description: |-
@@ -8165,196 +8165,196 @@ arm9:
         r1: char pointer
         r2: void pointer
         r3: int32_t
-    - name: NNS_SndArcSetup
+    - name: Nns_SndArcSetup
       address:
         NA: 0x205CD74
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNS_SndArcInitOnMemory
+    - name: Nns_SndArcInitOnMemory
       address:
         NA: 0x205CF4C
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNS_SndArcSetCurrent
+    - name: Nns_SndArcSetCurrent
       address:
         NA: 0x205D00C
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNS_SndArcGetCurrent
+    - name: Nns_SndArcGetCurrent
       address:
         NA: 0x205D024
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNS_SndArcGetSeqInfo
+    - name: Nns_SndArcGetSeqInfo
       address:
         NA: 0x205D034
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNS_SndArcGetSeqArcInfo
+    - name: Nns_SndArcGetSeqArcInfo
       address:
         NA: 0x205D098
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNS_SndArcGetBankInfo
+    - name: Nns_SndArcGetBankInfo
       address:
         NA: 0x205D0FC
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNS_SndArcGetWaveArcInfo
+    - name: Nns_SndArcGetWaveArcInfo
       address:
         NA: 0x205D160
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNS_SndArcGetStrmInfo
+    - name: Nns_SndArcGetStrmInfo
       address:
         NA: 0x205D1C4
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNS_SndArcGetPlayerInfo
+    - name: Nns_SndArcGetPlayerInfo
       address:
         NA: 0x205D228
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNS_SndArcGetStrmPlayerInfo
+    - name: Nns_SndArcGetStrmPlayerInfo
       address:
         NA: 0x205D28C
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNS_SndArcGetGroupInfo
+    - name: Nns_SndArcGetGroupInfo
       address:
         NA: 0x205D2F0
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNS_SndArcGetFileOffset
+    - name: Nns_SndArcGetFileOffset
       address:
         NA: 0x205D354
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNS_SndArcGetFileSize
+    - name: Nns_SndArcGetFileSize
       address:
         NA: 0x205D37C
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNS_SndArcReadFile
+    - name: Nns_SndArcReadFile
       address:
         NA: 0x205D3A4
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNS_SndArcGetFileID
+    - name: Nns_SndArcGetFileID
       address:
         NA: 0x205D41C
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNS_SndArcGetFileAddress
+    - name: Nns_SndArcGetFileAddress
       address:
         NA: 0x205D43C
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNS_SndArcSetFileAddress
+    - name: Nns_SndArcSetFileAddress
       address:
         NA: 0x205D464
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNS_InfoDisposeCallback
+    - name: Nns_InfoDisposeCallback
       address:
         NA: 0x205D480
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNS_FatDisposeCallback
+    - name: Nns_FatDisposeCallback
       address:
         NA: 0x205D48C
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNS_SymbolDisposeCallback
+    - name: Nns_SymbolDisposeCallback
       address:
         NA: 0x205D498
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNS_SndHeapCreate
+    - name: Nns_SndHeapCreate
       address:
         NA: 0x205D4A4
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNS_SndHeapDestroy
+    - name: Nns_SndHeapDestroy
       address:
         NA: 0x205D514
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNS_SndHeapClear
+    - name: Nns_SndHeapClear
       address:
         NA: 0x205D52C
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNS_SndHeapAlloc
+    - name: Nns_SndHeapAlloc
       address:
         NA: 0x205D5E8
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNS_SndHeapSaveState
+    - name: Nns_SndHeapSaveState
       address:
         NA: 0x205D650
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNS_SndHeapLoadState
+    - name: Nns_SndHeapLoadState
       address:
         NA: 0x205D69C
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNS_SndHeapGetSize
+    - name: Nns_SndHeapGetSize
       address:
         NA: 0x205D770
       description: |-
@@ -8389,49 +8389,49 @@ arm9:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNS_SndArcLoadGroup
+    - name: Nns_SndArcLoadGroup
       address:
         NA: 0x205D820
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNSi_SndArcLoadGroup
+    - name: Nnsi_SndArcLoadGroup
       address:
         NA: 0x205D838
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNSi_SndArcLoadSeq
+    - name: Nnsi_SndArcLoadSeq
       address:
         NA: 0x205D93C
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNSi_SndArcLoadSeqArc
+    - name: Nnsi_SndArcLoadSeqArc
       address:
         NA: 0x205D9C0
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNSi_SndArcLoadBank
+    - name: Nnsi_SndArcLoadBank
       address:
         NA: 0x205DA20
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNSi_SndArcLoadWaveArc
+    - name: Nnsi_SndArcLoadWaveArc
       address:
         NA: 0x205DB60
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNSi_SndArcLoadFile
+    - name: Nnsi_SndArcLoadFile
       address:
         NA: 0x205DBEC
       description: |-
@@ -8531,21 +8531,21 @@ arm9:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNS_SndArcPlayerSetup
+    - name: Nns_SndArcPlayerSetup
       address:
         NA: 0x205E214
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNS_SndArcPlayerStartSeq
+    - name: Nns_SndArcPlayerStartSeq
       address:
         NA: 0x205E2B0
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNS_SndArcPlayerStartSeqArc
+    - name: Nns_SndArcPlayerStartSeqArc
       address:
         NA: 0x205E2F8
       description: |-
@@ -8566,77 +8566,77 @@ arm9:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNS_SndArcStrmInit
+    - name: Nns_SndArcStrmInit
       address:
         NA: 0x205E538
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNS_SndArcStrmSetupPlayer
+    - name: Nns_SndArcStrmSetupPlayer
       address:
         NA: 0x205E63C
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNS_SndArcStrmPrepareEx
+    - name: Nns_SndArcStrmPrepareEx
       address:
         NA: 0x205E704
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNS_SndArcStrmStartPrepared
+    - name: Nns_SndArcStrmStartPrepared
       address:
         NA: 0x205E77C
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNS_SndArcStrmStartEx
+    - name: Nns_SndArcStrmStartEx
       address:
         NA: 0x205E79C
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNS_SndArcStrmStop
+    - name: Nns_SndArcStrmStop
       address:
         NA: 0x205E7D8
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNS_SndArcStrmSetChannelPan
+    - name: Nns_SndArcStrmSetChannelPan
       address:
         NA: 0x205E7F4
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNS_SndStrmHandleInit
+    - name: Nns_SndStrmHandleInit
       address:
         NA: 0x205E810
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNS_SndStrmHandleRelease
+    - name: Nns_SndStrmHandleRelease
       address:
         NA: 0x205E81C
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNS_SndArcStrmGetCurrentPlayingPos
+    - name: Nns_SndArcStrmGetCurrentPlayingPos
       address:
         NA: 0x205E834
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNSi_SndArcStrmMain
+    - name: Nnsi_SndArcStrmMain
       address:
         NA: 0x205E870
       description: |-
@@ -8785,7 +8785,7 @@ arm9:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNS_CloseFileStream
+    - name: Nns_CloseFileStream
       address:
         NA: 0x205FC18
       description: |-
@@ -8799,7 +8799,7 @@ arm9:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNS_CancelFileStream
+    - name: Nns_CancelFileStream
       address:
         NA: 0x205FC60
       description: |-
@@ -8841,14 +8841,14 @@ arm9:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNSi_SndSeqArcGetSeqInfo
+    - name: Nnsi_SndSeqArcGetSeqInfo
       address:
         NA: 0x205FD0C
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: NNSi_SndFaderInit
+    - name: Nnsi_SndFaderInit
       address:
         NA: 0x205FD4C
       description: |-
@@ -11575,28 +11575,28 @@ arm9:
     - name: OS_VsNPrintfEx
       address:
         NA: 0x2078A4C
-    - name: MSL_C_abort_exit_abort
+    - name: Msl_C_abort_exit_abort
       address:
         NA: 0x20792C8
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: MSL_C_abort_exit_exit
+    - name: Msl_C_abort_exit_exit
       address:
         NA: 0x20792EC
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: MSL_C_abort_exit___exit
+    - name: Msl_C_abort_exit___exit
       address:
         NA: 0x2079338
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: MSL_C_ansi_files___flush_all
+    - name: Msl_C_ansi_files___flush_all
       address:
         NA: 0x2079460
       description: |-
@@ -11618,42 +11618,42 @@ arm9:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
-    - name: MSL_C_buffer_io___prep_buffer
+    - name: Msl_C_buffer_io___prep_buffer
       address:
         NA: 0x20794D8
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: MSL_C_buffer_io___flush_buffer
+    - name: Msl_C_buffer_io___flush_buffer
       address:
         NA: 0x2079508
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: MSL_C_direct_io_fwrite
+    - name: Msl_C_direct_io_fwrite
       address:
         NA: 0x2079590
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: MSL_C_direct_io___fwrite
+    - name: Msl_C_direct_io___fwrite
       address:
         NA: 0x20796B0
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: MSL_C_file_io_fflush
+    - name: Msl_C_file_io_fflush
       address:
         NA: 0x2079960
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: MSL_C_mbstring_mbtowc
+    - name: Msl_C_mbstring_mbtowc
       address:
         NA: 0x2079A48
       description: |-
@@ -11690,7 +11690,7 @@ arm9:
         r0: pointer
         r1: value
         return: true on success, false on failure
-    - name: MSL_C_mbstring_mbstowcs
+    - name: Msl_C_mbstring_mbstowcs
       address:
         NA: 0x2079ACC
       description: |-
@@ -11729,77 +11729,77 @@ arm9:
         r1: src
         r2: n
         return: dest
-    - name: MSL_C_mem_memset
+    - name: Msl_C_mem_memset
       address:
         NA: 0x2079C38
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: MSL_C_mem_memchr
+    - name: Msl_C_mem_memchr
       address:
         NA: 0x2079C4C
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: MSL_C_mem___memrchr
+    - name: Msl_C_mem___memrchr
       address:
         NA: 0x2079C78
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: MSL_C_mem_memcmp
+    - name: Msl_C_mem_memcmp
       address:
         NA: 0x2079CA4
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: MSL_C_mem_funcs___fill_mem
+    - name: Msl_C_mem_funcs___fill_mem
       address:
         NA: 0x2079CE4
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: MSL_C_printf_parse_format
+    - name: Msl_C_printf_parse_format
       address:
         NA: 0x2079D94
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: MSL_C_printf_long2str
+    - name: Msl_C_printf_long2str
       address:
         NA: 0x207A324
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: MSL_C_printf_longlong2str
+    - name: Msl_C_printf_longlong2str
       address:
         NA: 0x207A570
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: MSL_C_printf_double2hex
+    - name: Msl_C_printf_double2hex
       address:
         NA: 0x207A86C
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: MSL_C_printf_round_decimal
+    - name: Msl_C_printf_round_decimal
       address:
         NA: 0x207AD48
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: MSL_C_printf_float2str
+    - name: Msl_C_printf_float2str
       address:
         NA: 0x207AE6C
       description: |-
@@ -11819,7 +11819,7 @@ arm9:
         r2: format
         r3: ap
         return: number of characters printed, excluding the null-terminator
-    - name: MSL_C_printf___FileWrite
+    - name: Msl_C_printf___FileWrite
       address:
         NA: 0x207BDF4
       description: |-
@@ -11836,7 +11836,7 @@ arm9:
         r1: buffer of data to append
         r2: number of bytes in the data buffer
         return: true
-    - name: MSL_C_printf_printf
+    - name: Msl_C_printf_printf
       address:
         NA: 0x207BE64
       description: |-
@@ -11864,14 +11864,14 @@ arm9:
         r1: format
         r2: ap
         return: number of characters printed, excluding the null-terminator
-    - name: MSL_C_scanf___StringRead
+    - name: Msl_C_scanf___StringRead
       address:
         NA: 0x207BFFC
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: MSL_C_signal_raise
+    - name: Msl_C_signal_raise
       address:
         NA: 0x207C080
       description: |-
@@ -11955,245 +11955,245 @@ arm9:
         r0: haystack
         r1: needle
         return: pointer into haystack where needle starts, or null pointer if no match
-    - name: MSL_C_strtoul___strtoul
+    - name: Msl_C_strtoul___strtoul
       address:
         NA: 0x207C504
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: MSL_C_strtoul_strtol
+    - name: Msl_C_strtoul_strtol
       address:
         NA: 0x207C8EC
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: MSL_C_strtoul_atol
+    - name: Msl_C_strtoul_atol
       address:
         NA: 0x207C9B4
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: MSL_C_wchar_io_fwide
+    - name: Msl_C_wchar_io_fwide
       address:
         NA: 0x207C9C8
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: MSL_C_wmem_wmemcpy
+    - name: Msl_C_wmem_wmemcpy
       address:
         NA: 0x207CA3C
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: MSL_C_wmem_wmemchr
+    - name: Msl_C_wmem_wmemchr
       address:
         NA: 0x207CA4C
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: MSL_C_wprintf_parse_format
+    - name: Msl_C_wprintf_parse_format
       address:
         NA: 0x207CA74
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: MSL_C_wprintf_long2str
+    - name: Msl_C_wprintf_long2str
       address:
         NA: 0x207CFEC
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: MSL_C_wprintf_longlong2str
+    - name: Msl_C_wprintf_longlong2str
       address:
         NA: 0x207D23C
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: MSL_C_wprintf_double2hex
+    - name: Msl_C_wprintf_double2hex
       address:
         NA: 0x207D53C
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: MSL_C_wprintf_round_decimal
+    - name: Msl_C_wprintf_round_decimal
       address:
         NA: 0x207D8D4
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: MSL_C_wprintf_float2str
+    - name: Msl_C_wprintf_float2str
       address:
         NA: 0x207D9F8
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: MSL_C_wprintf___wpformatter
+    - name: Msl_C_wprintf___wpformatter
       address:
         NA: 0x207E044
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: MSL_C_wprintf___wStringWrite
+    - name: Msl_C_wprintf___wStringWrite
       address:
         NA: 0x207E934
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: MSL_C_wprintf_swprintf
+    - name: Msl_C_wprintf_swprintf
       address:
         NA: 0x207E974
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: MSL_C_wprintf_vswprintf
+    - name: Msl_C_wprintf_vswprintf
       address:
         NA: 0x207E99C
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: MSL_C_wstring_wcslen
+    - name: Msl_C_wstring_wcslen
       address:
         NA: 0x207EA0C
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: MSL_C_wstring_wcscpy
+    - name: Msl_C_wstring_wcscpy
       address:
         NA: 0x207EA28
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: MSL_C_wstring_wcschr
+    - name: Msl_C_wstring_wcschr
       address:
         NA: 0x207EA48
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: MSL_C_s_copysign
+    - name: Msl_C_s_copysign
       address:
         NA: 0x207EA7C
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: MSL_C_s_fabs
+    - name: Msl_C_s_fabs
       address:
         NA: 0x207EAA4
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: MSL_C_s_frexp
+    - name: Msl_C_s_frexp
       address:
         NA: 0x207EAC4
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: MSL_C_s_ldexp
+    - name: Msl_C_s_ldexp
       address:
         NA: 0x207EB80
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: MSL_C_ansi_fp___must_round
+    - name: Msl_C_ansi_fp___must_round
       address:
         NA: 0x207EDCC
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: MSL_C_ansi_fp___dorounddecup
+    - name: Msl_C_ansi_fp___dorounddecup
       address:
         NA: 0x207EE38
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: MSL_C_ansi_fp___rounddec
+    - name: Msl_C_ansi_fp___rounddec
       address:
         NA: 0x207EE88
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: MSL_C_ansi_fp___ull2dec
+    - name: Msl_C_ansi_fp___ull2dec
       address:
         NA: 0x207EEC8
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: MSL_C_ansi_fp___timesdec
+    - name: Msl_C_ansi_fp___timesdec
       address:
         NA: 0x207EF94
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: MSL_C_ansi_fp___str2dec
+    - name: Msl_C_ansi_fp___str2dec
       address:
         NA: 0x207F118
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: MSL_C_ansi_fp___two_exp
+    - name: Msl_C_ansi_fp___two_exp
       address:
         NA: 0x207F1B4
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: MSL_C_ansi_fp___num2dec_internal
+    - name: Msl_C_ansi_fp___num2dec_internal
       address:
         NA: 0x207F538
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: MSL_C_ansi_fp___num2dec
+    - name: Msl_C_ansi_fp___num2dec
       address:
         NA: 0x207F6B8
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: MSL_C_math_api___msl_generic_count_bits64
+    - name: Msl_C_math_api___msl_generic_count_bits64
       address:
         NA: 0x207F760
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: MSL_C_math_api___signbitd
+    - name: Msl_C_math_api___signbitd
       address:
         NA: 0x207F7F4
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: MSL_C_math_api___fpclassifyd
+    - name: Msl_C_math_api___fpclassifyd
       address:
         NA: 0x207F808
       description: |-
@@ -12235,70 +12235,70 @@ arm9:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: MSL_CPP_msl_smart_pointers_shared_ptr_deleter_common_release
+    - name: Msl_Cpp_msl_smart_pointers_shared_ptr_deleter_common_release
       address:
         NA: 0x207FA3C
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: MSL_CPP_msl_smart_pointers_shared_ptr_deleter_common_release_weak
+    - name: Msl_Cpp_msl_smart_pointers_shared_ptr_deleter_common_release_weak
       address:
         NA: 0x207FA6C
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: MSL_CPP_vector__ZNSt13__vec_deleterImSaImEE13sub_push_backERKmN10Metrowerks8int2typeILi1EEE
+    - name: Msl_Cpp_vector__ZnSt13__vec_deleterImSaImEE13sub_push_backERKmN10Metrowerks8int2typeILi1EEE
       address:
         NA: 0x207FA98
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: MSL_CPP_vector__ZNSt13__vec_deleterImSaImEED2Ev
+    - name: Msl_Cpp_vector__ZnSt13__vec_deleterImSaImEED2Ev
       address:
         NA: 0x207FAC8
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: MSL_CPP_vector__ZNSt13__vec_deleterImSaImEE7grow_byEm
+    - name: Msl_Cpp_vector__ZnSt13__vec_deleterImSaImEE7grow_byEm
       address:
         NA: 0x207FB0C
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: MSL_CPP_vector__ZNSt13__vec_deleterImSaImEE14append_reallocEmRKm
+    - name: Msl_Cpp_vector__ZnSt13__vec_deleterImSaImEE14append_reallocEmRKm
       address:
         NA: 0x207FBD8
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: MSL_CPP_vector__ZNSt20__vec_deleter_helperImRSaImEED1Ev
+    - name: Msl_Cpp_vector__ZnSt20__vec_deleter_helperImRSaImEED1Ev
       address:
         NA: 0x207FD3C
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: MSL_CPP_vector__ZNSt15__vector_commonILb1EE18throw_length_errorEv
+    - name: Msl_Cpp_vector__ZnSt15__vector_commonILb1EE18throw_length_errorEv
       address:
         NA: 0x207FD58
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: MSL_CPP_vector__ZNSt13__vec_deleterImRSaImEE8allocateEmN10Metrowerks8int2typeILi1EEE
+    - name: Msl_Cpp_vector__ZnSt13__vec_deleterImRSaImEE8allocateEmN10Metrowerks8int2typeILi1EEE
       address:
         NA: 0x207FDE8
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: MSL_CPP_vector__ZNSt13__vec_deleterImRSaImEED2Ev
+    - name: Msl_Cpp_vector__ZnSt13__vec_deleterImRSaImEED2Ev
       address:
         NA: 0x207FE18
       description: |-
@@ -12461,7 +12461,7 @@ arm9:
         
         r0: int
         return: (float)int
-    - name: FP__f_lltof
+    - name: __f_lltof
       address:
         NA: 0x2081118
       description: |-
@@ -12479,7 +12479,7 @@ arm9:
         r0: a
         r1: b
         return: a * b
-    - name: FP__frsb
+    - name: __frsb
       address:
         NA: 0x2081364
       description: |-
@@ -12512,7 +12512,7 @@ arm9:
         r2: divisor (low bits)
         r3: divisor (high bits)
         return: dividend % divisor
-    - name: FP__ull_mod
+    - name: __ull_mod
       address:
         NA: 0x20815F4
       description: |-
@@ -12940,7 +12940,7 @@ arm9:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: WCM_GetLinkLevel
+    - name: Wcm_GetLinkLevel
       address:
         NA: 0x2056194
       description: |-
@@ -12960,20 +12960,20 @@ arm9:
     - name: OS_Sleep
       address:
         NA: 0x2065928
-    - name: NNS_SndMain
+    - name: Nns_SndMain
       address:
         NA: 0x205B9F0
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: STD_GetStringLength
+    - name: Std_GetStringLength
       address:
         NA: 0x20788B8
     - name: Std_GetStringLength
       address:
         NA: 0x20788B8
-    - name: STD_CompareNString
+    - name: Std_CompareNString
       address:
         NA: 0x2078930  
   data:
@@ -13361,49 +13361,49 @@ arm9:
       length:
         NA: 0x200
       description: The 0th page of functions callable by the SysCall script opcode. 128 function pointers long.
-    - name: STD_EXCEPTION
+    - name: Std_EXCEPTION
       address:
         NA: 0x208EFD8
       length:
         NA: 0x8
       description: "Basic information for the std::exception class. This class is a base class."
-    - name: STD_TR1_DETAIL_SHARED_PTR_DELETER_COMMON
+    - name: Std_TR1_DETAIL_SHARED_PTR_DELETER_COMMON
       address:
         NA: 0x208EFE0
       length:
         NA: 0x8
       description: "Basic information for the std::tr1::detail::shared_ptr_deleter_common class. This class is a base class."
-    - name: STD_DETAIL_DEFAULT_DELETE
+    - name: Std_DETAIL_DEFAULT_DELETE
       address:
         NA: 0x208EFE8
       length:
         NA: 0x8
       description: "Basic information for the std::detail::default_delete class. This class is a base class."
-    - name: STD_TR1_DETAIL_SHARED_PTR_DELETER
+    - name: Std_TR1_DETAIL_SHARED_PTR_DELETER
       address:
         NA: 0x208EFF0
       length:
         NA: 0xC
       description: "Basic information for the std::tr1::detail::shared_ptr_deleter class. This class is a single-inheritance class."
-    - name: STD_LOGIC_ERROR
+    - name: Std_LOGIC_ERROR
       address:
         NA: 0x208F0D4
       length:
         NA: 0xC
       description: "Basic information for the std::logic_error class. This class is a single-inheritance class."
-    - name: STD_LENGTH_ERROR
+    - name: Std_LENGTH_ERROR
       address:
         NA: 0x208F0E0
       length:
         NA: 0xC
       description: "Basic information for the std::length_error class. This class is a single-inheritance class."
-    - name: STD_BAD_EXCEPTION
+    - name: Std_BAD_EXCEPTION
       address:
         NA: 0x208F184
       length:
         NA: 0xC
       description: "Basic information for the std::bad_exception class. This class is a single-inheritance class."
-    - name: STD_TYPE_INFO
+    - name: Std_TYPE_INFO
       address:
         NA: 0x208F208
       length:
