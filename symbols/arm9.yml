@@ -11578,7 +11578,6 @@ arm9:
         
         No params.
     - name: Msl_C_Abort_Exit_Exit2
-    - aliases: Msl_C_Abort_Exit___Exit
       address:
         NA: 0x2079338
       description: |-
