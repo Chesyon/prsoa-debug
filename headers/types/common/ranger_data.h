@@ -39,8 +39,8 @@ struct ranger_data {
     bool battle_exports_is_alloc : 1; // Seems to flicker on area transition
     bool display_timer_on_screen : 1; // When enabled, a timer appears on-screen.
     undefined4 unk_bitfield_fields : 30;
-    bool map_and_fly_bitfield : 37; // Seems to handle world map unlocks as a bitfield. Something
-    bool unk_bitfield : 27;
+    bool map_and_fly_bitfield[5] : 37; // Seems to handle world map unlocks as a bitfield. Something
+    bool unk_bitfield[3] : 27;
     // This block of fields seems to be related to wandering enemies. More research needed.
     undefined2 field8_0x7f6c;
     undefined2 field9_0x7f6e[63];
