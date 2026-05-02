@@ -149,13 +149,6 @@ overlay1:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
-    - name: GetMysteryStruct0xdcPtrSafe
-      address:
-        NA: 0x212A1B0
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        No params.
     - name: SysCallFillBattleMsgWrapperAndId
       address:
         NA: 0x212A2CC
