@@ -1,8 +1,8 @@
 #ifndef HEADERS_FUNCTIONS_OVERLAY02_H_
 #define HEADERS_FUNCTIONS_OVERLAY02_H_
 
-void PostprocessBattleResults(struct ov_00_unk_struct* param_1);
-uint32_t ChooseReturnOverlayId(struct ov_00_unk_struct* param_1);
+void PostprocessBattleResults(struct c_field_scene *param_1);
+undefined4 ChooseReturnOverlayId(struct c_field_scene *param_1);
 void ret_0211d124(void);
 void ret_0211d128(void);
 void ret_0211d12c(void);
