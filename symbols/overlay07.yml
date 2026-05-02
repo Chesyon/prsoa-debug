@@ -24,11 +24,33 @@ overlay7:
         
         r0: ov_07_unk_struct pointer
         r1: megastruct pointer
+    - name: InitGraphicsOv7
+#      namespace: c_release_scene
+      address:
+        NA: 0x211CADC
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        No params.
     - name: ret_0211cfb0
       address:
         NA: 0x211CFB0
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
+        
+        No params.
+    - name: StateCaseFunctionOv7Type1
+      address:
+        NA: 0x211D054
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        No params.
+    - name: StateCaseFunctionOv7Type2
+      address:
+        NA: 0x211D38C
+      description: |-
+        [MANUAL DESCRIPTION]
         
         No params.
     - name: IsOverPartyPokemonLimit
@@ -60,6 +82,14 @@ overlay7:
         Unclear why this is different from IsOverPartyPokemonLimit.
         
         r0: ov_07_unk_struct_size_0x280 pointer
+
+    - name: ret_0211cfb0
+      address:
+        NA: 0x211CFB0
+      description: |-
+        Does nothing but return. Likely a debug hook for a nearby function.
+        
+        No params.  
   data:
     - name: OV7_STATIC_INITIALIZER
       address:
