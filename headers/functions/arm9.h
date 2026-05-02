@@ -2193,7 +2193,7 @@ unsigned int _fmul(unsigned int param_1,unsigned int param_2);
 undefined FP__frsb();
 unsigned int _fsub(unsigned int param_1,unsigned int param_2);
 unsigned long long _ll_mod(unsigned int param_1,unsigned int param_2,unsigned int param_3,unsigned int param_4);
-unsigned long long FP_ull_mod(unsigned int param_1,unsigned int param_2,unsigned int param_3,unsigned int param_4);
+unsigned long long FP__ull_mod(unsigned int param_1,unsigned int param_2,unsigned int param_3,unsigned int param_4);
 long long _ll_sdiv(unsigned int param_1,unsigned int param_2,unsigned int param_3,unsigned int param_4);
 unsigned long long _ll_udiv(unsigned int param_1,unsigned int param_2,unsigned int param_3,unsigned int param_4);
 unsigned long long _ull_mod(unsigned int param_1,unsigned int param_2,unsigned int param_3,unsigned int param_4);
