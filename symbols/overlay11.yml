@@ -13036,7 +13036,7 @@ overlay11:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Dwci_MOV_WH_StateInEndParentMP
+    - name: Dwci_Mov_WH_StateInEndParentMP
       address:
         NA: 0x21592A4
       description: |-

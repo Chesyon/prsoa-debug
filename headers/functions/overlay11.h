@@ -931,7 +931,7 @@ undefined4 Dwci_Mov_WH_StateInStartParentMP(void);
 void Dwci_Mov_WH_StateOutStartParentMP(int param_1,undefined4 param_2,undefined4 param_3,undefined4 param_4);
 undefined4 Dwci_Mov_WH_StateInStartParentKeyShare(void);
 undefined4 Dwci_Mov_WH_StateInEndParentKeyShare(void);
-undefined4 Dwci_Mov_WH_StateInEndChildMP(void);
+undefined4 Dwci_Mov_WH_StateInEndParentMP(void);
 void Dwci_Mov_WH_StateOutEndParentMP(int param_1);
 undefined4 Dwci_Mov_WH_StateInEndParent(void);
 undefined4 Dwci_Mov_WH_StateInEndChildKeyShare(void);
