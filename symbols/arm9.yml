@@ -4417,13 +4417,9 @@ arm9:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: OS_YieldThread
+    - name: OS_YieldThread2
       address:
         NA: 0x2049CE0
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        No params.
     - name: ret_02049d08
       address:
         NA: 0x2049D08
@@ -5544,20 +5540,16 @@ arm9:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: char_from_long
+    - name: char_from_long_1
       address:
-        NA:
-          - 0x20519BC
-          - 0x2051FB4
+        NA: 0x20519BC
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: long_from_char
+    - name: long_from_char_1
       address:
-        NA:
-          - 0x20519D4
-          - 0x2051FF8
+        NA: 0x20519D4
       description: |-
         [MANUAL DESCRIPTION]
         
@@ -5597,20 +5589,16 @@ arm9:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: char_from_long
+    - name: char_from_long_2
       address:
-        NA:
-          - 0x20519BC
-          - 0x2051FB4
+        NA: 0x2051FB4
       description: |-
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: long_from_char
+    - name: long_from_char_2
       address:
-        NA:
-          - 0x20519D4
-          - 0x2051FF8
+        NA: 0x2051FF8
       description: |-
         [MANUAL DESCRIPTION]
         
@@ -6268,9 +6256,7 @@ arm9:
         No params.
     - name: Nnsi_FndFinalizeHeap
       address:
-        NA:
-          - 0x20565D0
-          - 0x2056B18
+        NA: 0x20565D0
       description: |-
         [MANUAL DESCRIPTION]
         
@@ -6345,11 +6331,9 @@ arm9:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: Nnsi_FndFinalizeHeap
+    - name: Nnsi_FndFinalizeHeapVeneer
       address:
-        NA:
-          - 0x20565D0
-          - 0x2056B18
+        NA: 0x2056B18
       description: |-
         [MANUAL DESCRIPTION]
         
@@ -7918,10 +7902,7 @@ arm9:
         No params.
     - name: ShutdownPlayer
       address:
-        NA:
-          - 0x205C0FC
-          - 0x205C384
-          - 0x205ED98
+        NA: 0x205C0FC
       description: |-
         [MANUAL DESCRIPTION]
         
@@ -7982,12 +7963,9 @@ arm9:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: ShutdownPlayer
+    - name: ShutdownPlayer_Seq
       address:
-        NA:
-          - 0x205C0FC
-          - 0x205C384
-          - 0x205ED98
+        NA: 0x205C384
       description: |-
         [MANUAL DESCRIPTION]
         
@@ -8085,11 +8063,9 @@ arm9:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: StrmCallback
+    - name: StrmCallback_Prepare
       address:
-        NA:
-          - 0x205C918
-          - 0x205F080
+        NA: 0x205C918
       description: |-
         [MANUAL DESCRIPTION]
         
@@ -8668,12 +8644,9 @@ arm9:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: ShutdownPlayer
+    - name: ShutdownPlayer_SeqVeneer
       address:
-        NA:
-          - 0x205C0FC
-          - 0x205C384
-          - 0x205ED98
+        NA: 0x205ED98
       description: |-
         [MANUAL DESCRIPTION]
         
@@ -8736,11 +8709,9 @@ arm9:
         [MANUAL DESCRIPTION]
         
         No params.
-    - name: StrmCallback
+    - name: StrmCallback_Alarm
       address:
-        NA:
-          - 0x205C918
-          - 0x205F080
+        NA: 0x205F080
       description: |-
         [MANUAL DESCRIPTION]
         
@@ -11233,9 +11204,7 @@ arm9:
         NA: 0x2074850
     - name: MB_RegisterFile
       address:
-        NA:
-          - 0x20748C8
-          - 0x20776B0
+        NA: 0x20748C8
     - name: MBi_MakeDownloadFileInfo
       address:
         NA: 0x2074B58
@@ -11386,11 +11355,9 @@ arm9:
     - name: MBi_ReadFromCache
       address:
         NA: 0x2077618
-    - name: MB_RegisterFile
+    - name: MBi_TaskThread
       address:
-        NA:
-          - 0x20748C8
-          - 0x20776B0
+        NA: 0x20776B0
     - name: MBi_InitTaskThread
       address:
         NA: 0x20777C8
@@ -11538,16 +11505,12 @@ arm9:
     - name: Std_ConcatenateString
       address:
         NA: 0x20788E0
+    - name: Std_CompareStringVeneer
+      address:
+        NA: 0x2078904
     - name: Std_CompareString
       address:
-        NA:
-          - 0x2078904
-          - 0x2078910
-    - name: Std_CompareString
-      address:
-        NA:
-          - 0x2078904
-          - 0x2078910
+        NA: 0x2078910
     - name: Std_CompareNString
       address:
         NA: 0x2078930
