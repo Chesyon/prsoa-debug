@@ -11,7 +11,7 @@ struct ranger_net_data {
 
 struct ranger_net_header {
     char dsprs_string[8];
-    uint save_file_offset; // number of bytes into the save file this block should live
+    uint32_t save_file_offset; // number of bytes into the save file this block should live
     int unk_field_0xc; // Always -1?
     undefined field3_0x10;
     undefined field4_0x11;
@@ -30,7 +30,7 @@ struct ranger_net_header {
     undefined field17_0x1e;
     undefined field18_0x1f;
 };
-ASSERT_SIZE(struct ranger_net_header, 0x3020);
+ASSERT_SIZE(struct ranger_net_header, 0x20);
 
 struct ranger_net_body {
     int8_t rc4_compressed_script[12288];
