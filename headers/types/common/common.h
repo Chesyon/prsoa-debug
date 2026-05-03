@@ -39,6 +39,9 @@
 // Requires ranger_data.h
 #include "save.h"
 
+// Requires save.h (for now...)
+#include "ranger_net.h"
+
 // Requires megastruct.h
 #include "battle.h"
 #include "options_menu.h"

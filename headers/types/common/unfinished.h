@@ -1874,10 +1874,50 @@ struct ov_08_unk_struct {
 };
 ASSERT_SIZE(struct ov_08_unk_struct, 12);
 
+struct ov_09_unk_struct_0x58 {
+    undefined2 field0_0x0;
+    undefined field1_0x2;
+    undefined field2_0x3;
+    undefined4 field3_0x4;
+    int field4_0x8;
+    undefined field5_0xc;
+    undefined field6_0xd;
+    undefined field7_0xe;
+    undefined field8_0xf;
+    undefined4 field9_0x10;
+    struct unk_map_struct_size_0x68 *unk_map_struct_size_0x68_ptr;
+    void *unk_struct_size_0x7c_ptr;
+    undefined4 field12_0x1c;
+    void *unk_struct_size_0x4_ptr;
+    void *unk_struct_size_0x44_ptr_2;
+    undefined4 field15_0x28;
+    undefined4 field16_0x2c;
+    void *unk_struct_size_0x44_ptr_1;
+    void *unk_pointer_0x34;
+    undefined field19_0x38;
+    undefined field20_0x39;
+    undefined field21_0x3a;
+    undefined field22_0x3b;
+    undefined field23_0x3c;
+    undefined field24_0x3d;
+    undefined field25_0x3e;
+    undefined field26_0x3f;
+    void *unk_struct_offset_0x40;
+    undefined4 field28_0x44;
+    ushort field29_0x48;
+    undefined2 field30_0x4a;
+    undefined field31_0x4c;
+    undefined field32_0x4d;
+    undefined field33_0x4e;
+    undefined field34_0x4f;
+    undefined4 field35_0x50;
+    struct megastruct *megastruct_ptr;
+};
+
 struct ov_09_unk_struct {
     void* field0_0x0;
     struct megastruct* megastruct_ptr;
-    undefined4 field2_0x8;
+    undefined4 field2_0x8; // likely a pointer to ov_09_unk_struct_0x58
 };
 ASSERT_SIZE(struct ov_09_unk_struct, 12);
 
@@ -7392,6 +7432,52 @@ struct unk_struct_size_0xac {
     undefined field129_0xa2;
     undefined field130_0xa3;
     undefined4 unk_struct_size_0x4_ptr;
+    struct megastruct *megastruct_ptr;
+};
+
+
+struct unk_map_struct_size_0x68 { // Common to all overlays that use the world map for something
+    undefined2 field0_0x0;
+    undefined field1_0x2;
+    undefined field2_0x3;
+    undefined4 field3_0x4;
+    undefined4 field4_0x8;
+    undefined4 field5_0xc;
+    undefined4 unk_struct_0x44_ptr_1;
+    undefined4 unk_struct_size_0x44_ptr_2;
+    undefined4 unk_struct_size_0x44_ptr_3;
+    void *unk_struct_size_0x1bc_ptr;
+    undefined4 unk_struct_size_0x64_ptr;
+    int field11_0x24;
+    void *unk_ptr_table_0x28[5];
+    undefined field13_0x3c;
+    undefined field14_0x3d;
+    undefined field15_0x3e;
+    undefined field16_0x3f;
+    undefined field17_0x40;
+    undefined field18_0x41;
+    undefined field19_0x42;
+    undefined field20_0x43;
+    undefined field21_0x44;
+    undefined field22_0x45;
+    undefined field23_0x46;
+    undefined field24_0x47;
+    undefined field25_0x48;
+    undefined field26_0x49;
+    undefined field27_0x4a;
+    undefined field28_0x4b;
+    undefined field29_0x4c;
+    undefined field30_0x4d;
+    undefined field31_0x4e;
+    undefined field32_0x4f;
+    undefined4 field33_0x50;
+    undefined2 field34_0x54;
+    undefined2 field35_0x56;
+    undefined2 field36_0x58;
+    undefined field37_0x5a;
+    undefined field38_0x5b;
+    undefined4 field39_0x5c;
+    undefined4 field40_0x60;
     struct megastruct *megastruct_ptr;
 };
 
