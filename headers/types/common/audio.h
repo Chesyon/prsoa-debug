@@ -108,7 +108,7 @@ struct nns_snd_arc {
     struct nns_snd_arc_symbol *symbol;
     struct nns_snd_arc_info *info;
 };
-ASSERT_SIZE(struct nns_snd_arc_symbol, 144);
+ASSERT_SIZE(struct nns_snd_arc, 144);
 
 struct audio_engine {
     void *unk_heap_1_ptr; // Size 0x64000

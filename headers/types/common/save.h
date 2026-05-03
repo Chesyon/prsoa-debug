@@ -8,7 +8,7 @@ struct c_backup {
     undefined4 card_available;
     undefined4 field4_0x10;
 };
-ASSERT_SIZE(struct c_backup, 16);
+ASSERT_SIZE(struct c_backup, 20);
 
 struct c_backup_sync {
     struct c_backup c_backup;
@@ -37,38 +37,38 @@ ASSERT_SIZE(struct c_backup_sync, 40);
 
 struct save_pokemon_field {
     struct pokemon_data *pointer;
-    uint size; // Always 0x18
+    unsigned int size; // Always 0x18
 };
 ASSERT_SIZE(struct save_pokemon_field, 8);
 
 struct save_follower_field {
     struct following_npc *pointer;
-    uint size; // Always 0x38
+    unsigned int size; // Always 0x38
 };
 ASSERT_SIZE(struct save_follower_field, 8);
 
 struct save_ranger_data_field {
     struct ranger_data *pointer;
-    uint size; // Always 0x8804
+    unsigned int size; // Always 0x8804
 };
 ASSERT_SIZE(struct save_ranger_data_field, 8);
 
 struct save_mission_quest_header_field {
     struct mission_quest_header *pointer; // points to the header!!!
-    uint size; // Always size 0x54
+    unsigned int size; // Always size 0x54
 };
 ASSERT_SIZE(struct save_mission_quest_header_field, 8);
 
 struct save_settings_variables_field {
     struct settings_and_variables *pointer;
-    uint size; // Always size 0xFC
+    unsigned int size; // Always size 0xFC
 };
 ASSERT_SIZE(struct save_settings_variables_field, 8);
 
 // For unknown save field types.
 struct save_field {
     void *field_ptr;
-    uint field_size;
+    unsigned int field_size;
 };
 ASSERT_SIZE(struct save_field, 8);
 

@@ -14,15 +14,16 @@ struct controller_inputs {
 };
 ASSERT_SIZE(struct controller_inputs, 44);
 
+#pragma pack(push, 1) // This is usually stored as a 10 byte struct.
 struct ts_calibrations {
     undefined2 field0_0x0;
     int16_t x0;
     int16_t y0;
     int16_t xDotSize;
     int16_t yDotSize;
-    undefined2 field_1_0xa;
 };
-ASSERT_SIZE(struct ts_calibrations, 12);
+#pragma pack(pop) // Restore alignment
+ASSERT_SIZE(struct ts_calibrations, 10);
 
 struct touch_screen {
     undefined *field0_0x0;

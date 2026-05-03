@@ -141,8 +141,6 @@ struct textbox_data {
     int default_text_speed;
     int text_size;        // 0 = normal, 1 = double-size, 2+ unknown
     char* current_string; // Increments to the last printed character!
-    int text_size;
-    char *current_string;
     int field27_0x80;
     void *field28_0x84;
     struct controller_inputs *controller_inputs_ptr;

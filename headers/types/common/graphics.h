@@ -2,7 +2,7 @@
 #define HEADERS_TYPES_GRAPHICS_H_
 
 struct nns_g2d_image_palette_proxy {
-    uint fmt; // enum GXTexFmt
+    uint32_t fmt; // enum GXTexFmt
     bool b_extended_plt;
     uint32_t nns_g2d_vram_location[3]; // NNSG2dVRamLocation, size assumed
 };

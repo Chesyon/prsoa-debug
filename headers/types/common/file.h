@@ -51,7 +51,7 @@ struct fs_file {
     undefined4 prop_start[4]; // Is probably a union
     undefined4 arg_start[8];  // Is probably a union
 };
-ASSERT_SIZE(struct fs_file_id, 72);
+ASSERT_SIZE(struct fs_file, 72);
 
 struct file_archive_wrapper {
     struct fs_archive arc;
