@@ -36,16 +36,18 @@ overlay9:
       address:
         NA: 0x211D89C
       description: |-
-        [MANUAL DESCRIPTION]
+        Seems to retrieve... something from the fly_destination table?  
         
-        No params.
+        r0: ov_09_unk_struct_0x58 ptr
+        r1: index
     - name: SetFlyDestinationData
       address:
         NA: 0x211D8F8
       description: |-
-        [MANUAL DESCRIPTION]
+        Sets the fly_destination_data fields of RANGER_DATA for a given slot of the fly_destination table.
         
-        No params.  
+        r0: ov_09_unk_struct_0x58 ptr
+        r1: index
   data:
     - name: OV9_STATIC_INITIALIZER
       address:

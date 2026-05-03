@@ -384,14 +384,14 @@ overlay0:
       address:
         NA: 0x21485C8
       description: |-
-        [MANUAL DESCRIPTION]
+        Stores the pointer to SYSCALL_PAGE_10_OV_00 in slot 10 of SYSCALL_PAGE_PTRS.
         
         No params.
     - name: SysCallReturnZero1000
       address:
         NA: 0x21485E0
       description: |-
-        [MANUAL DESCRIPTION]
+        Syscall Function that always returns zero.
         
         No params.
     - name: ret_02149118
@@ -412,14 +412,14 @@ overlay0:
       address:
         NA: 0x2149120
       description: |-
-        [MANUAL DESCRIPTION]
+        Stores the pointer to SYSCALL_PAGE_11_OV_00 in slot 11 of SYSCALL_PAGE_PTRS.
         
         No params.
     - name: SysCallReturnZero1100
       address:
         NA: 0x2149138
       description: |-
-        [MANUAL DESCRIPTION]
+        Syscall Function that always returns zero.
         
         No params.
     - name: ret_02149984
@@ -440,14 +440,14 @@ overlay0:
       address:
         NA: 0x214998C
       description: |-
-        [MANUAL DESCRIPTION]
+        Stores the pointer to SYSCALL_PAGE_12_OV_00 in slot 12 of SYSCALL_PAGE_PTRS.
         
         No params.
     - name: SysCallReturnZero1200
       address:
         NA: 0x21499A4
       description: |-
-        [MANUAL DESCRIPTION]
+        Syscall Function that always returns zero.
         
         No params.
     - name: ret_02149a74
@@ -468,14 +468,14 @@ overlay0:
       address:
         NA: 0x2149A7C
       description: |-
-        [MANUAL DESCRIPTION]
+        Stores the pointer to SYSCALL_PAGE_13_OV_00 in slot 13 of SYSCALL_PAGE_PTRS.
         
         No params.
     - name: SysCallReturnZero1300
       address:
         NA: 0x2149A94
       description: |-
-        [MANUAL DESCRIPTION]
+        Syscall Function that always returns zero.
         
         No params.
     - name: ret_02149e58
@@ -496,30 +496,32 @@ overlay0:
       address:
         NA: 0x2149E60
       description: |-
-        [MANUAL DESCRIPTION]
+        Stores the pointer to SYSCALL_PAGE_14_OV_00 in slot 14 of SYSCALL_PAGE_PTRS.
         
         No params.
     - name: SysCallReturnZero1400
       address:
         NA: 0x2149E78
       description: |-
-        [MANUAL DESCRIPTION]
+        Syscall Function that always returns zero.
         
         No params.
     - name: SysCallMaybeCallsScriptFunctionByName
       address:
         NA: 0x2149E80
       description: |-
-        [MANUAL DESCRIPTION]
+        Syscall function that seems to call a function by name from another loaded script. 
         
-        No params.
+        r0: script stack ptr
+        r1: unknown
     - name: SysCallInitCombatType2
       address:
         NA: 0x2149ED0
       description: |-
-        [MANUAL DESCRIPTION]
+        Syscall function that seems to initialize a battle differently than SysCallInitCombatType1. 
         
-        No params.
+        r0: script stack ptr
+        r1: unknown
     - name: TryMountPokemon
       address:
         NA: 0x214A138
@@ -527,32 +529,33 @@ overlay0:
         Seems to handle mounting a specified pokemon. Seems to take a pokemon_data pointer.
         
         r0: pokemon_data pointer
-    - name: SysCallRetrievePokemonByUniqueId
+    - name: SysCallRetrievePokemonByFormId
       address:
         NA: 0x214A5D4
       description: |-
-        [MANUAL DESCRIPTION]
+        Syscall function for RetrievePokemonByFormId.
         
-        No params.
+        r0: script stack ptr
+        r1: unknown
     - name: SysCallGetFlyDestinationRoom
       address:
         NA: 0x214ABE4
       description: |-
-        [MANUAL DESCRIPTION]
+        Syscall Function that retrieves the destination room_id for flying on Staraptor. 
         
         No params.
     - name: SysCallGetFlyXCoord
       address:
         NA: 0x214AC00
       description: |-
-        [MANUAL DESCRIPTION]
+        Syscall Function that retrieves the destination x coordinate for flying on Staraptor.
         
         No params.
     - name: SysCallGetFlyYCoord
       address:
         NA: 0x214AC1C
       description: |-
-        [MANUAL DESCRIPTION]
+        Syscall Function that retrieves the destination y coordinate for flying on Staraptor.
         
         No params.
     - name: ret_0214b6f0
@@ -573,14 +576,14 @@ overlay0:
       address:
         NA: 0x214B6F8
       description: |-
-        [MANUAL DESCRIPTION]
+        Stores the pointer to SYSCALL_PAGE_16_OV_00 in slot 16 of SYSCALL_PAGE_PTRS.
         
         No params.
     - name: SysCallReturnZero1600
       address:
         NA: 0x214B710
       description: |-
-        [MANUAL DESCRIPTION]
+        Syscall Function that always returns zero.
         
         No params.
     - name: ret_0214b93c
@@ -601,42 +604,42 @@ overlay0:
       address:
         NA: 0x214B944
       description: |-
-        [MANUAL DESCRIPTION]
+        Stores the pointer to SYSCALL_PAGE_15_OV_00 in slot 15 of SYSCALL_PAGE_PTRS.
         
         No params.
     - name: SysCallReturnZero1500
       address:
         NA: 0x214B95C
       description: |-
-        [MANUAL DESCRIPTION]
+        Syscall Function that always returns zero.
         
         No params.
     - name: SysCallReturnZero1501
       address:
         NA: 0x214B964
       description: |-
-        [MANUAL DESCRIPTION]
+        Syscall Function that always returns zero.
         
         No params.
     - name: SysCallReturnZero1502
       address:
         NA: 0x214B96C
       description: |-
-        [MANUAL DESCRIPTION]
+        Syscall Function that always returns zero.
         
         No params.
     - name: SysCallReturnZero1503
       address:
         NA: 0x214B974
       description: |-
-        [MANUAL DESCRIPTION]
+        Syscall Function that always returns zero.
         
         No params.
     - name: SysCallReturnZero1504
       address:
         NA: 0x214B97C
       description: |-
-        [MANUAL DESCRIPTION]
+        Syscall Function that always returns zero.
         
         No params.
     - name: GetStylerLevel

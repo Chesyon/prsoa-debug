@@ -153,9 +153,9 @@ overlay1:
       address:
         NA: 0x212A2CC
       description: |-
-        [MANUAL DESCRIPTION]
+        Syscall Function for FillBattleMsgWrapperAndId.
         
-        No params.
+        r0: script stack pointer, interpreted as params.
     - name: SysCallPrintTextboxByBattleMessageId1
       address:
         NA: 0x212B170
@@ -188,23 +188,23 @@ overlay1:
       address:
         NA: 0x212B4C0
       description: |-
-        [MANUAL DESCRIPTION]
+        Syscall Function that retrieves a Sin entry from SINE_COSINE_TABLE by index.
         
-        No params.
+        r0: script stack pointer, interpreted as params.
     - name: SysCallGetCosFromTableOv1
       address:
         NA: 0x212B4E4
       description: |-
-        [MANUAL DESCRIPTION]
+        Syscall Function that retrieves a Cos entry from SINE_COSINE_TABLE by index.
         
-        No params.
+        r0: script stack pointer, interpreted as params.
     - name: SysCallGetArcTan2
       address:
         NA: 0x212B510
       description: |-
-        [MANUAL DESCRIPTION]
+        Syscall function that calls FX_Atan2Idx. Seems to use some kind of relative position system.
         
-        No params.
+        r0: script stack pointer, interpreted as params.
     - name: ret_0212c028
 #      namespace: c_battle_disk
       address:

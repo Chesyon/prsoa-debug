@@ -97,9 +97,11 @@ arm9:
       address:
         NA: 0x2001568
       description: |-
-        [MANUAL DESCRIPTION]
+        Called when changing the game state. Always tries to load an overlay, and usually ends up callin g
+        the entrypoint function for that overlay afterwards.
         
-        No params.
+        r0: New game state
+        r1: megastruct ptr
     - name: InitControllerInputs
       address:
         NA: 0x2001C04

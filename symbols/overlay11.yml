@@ -10357,10 +10357,6 @@ overlay11:
     - name: Dwci_Ndi_HexToStrFigure
       address:
         NA: 0x216295C
-      description: |-
-        [MANUAL DESCRIPTION]
-        
-        No params.  
   data:
     - name: OV11_STATIC_INITIALIZER
       address:

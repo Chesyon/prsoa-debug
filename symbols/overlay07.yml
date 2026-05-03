@@ -29,7 +29,7 @@ overlay7:
       address:
         NA: 0x211CADC
       description: |-
-        [MANUAL DESCRIPTION]
+        Seems to handle initializing everything graphics-related for the overlay.
         
         No params.
     - name: ret_0211cfb0
@@ -43,16 +43,16 @@ overlay7:
       address:
         NA: 0x211D054
       description: |-
-        [MANUAL DESCRIPTION]
+        Seems to be a state case function, likely run every frame, to manage menus and such in the overlay.
         
-        No params.
+        r0: ov_07_unk_struct_size_0x280 ptr
     - name: StateCaseFunctionOv7Type2
       address:
         NA: 0x211D38C
       description: |-
-        [MANUAL DESCRIPTION]
+        Seems to be a state case function, likely run every frame, to manage menus and such in the overlay.
         
-        No params.
+        r0: ov_07_unk_struct_size_0x280 ptr
     - name: IsOverPartyPokemonLimit
       address:
         NA: 0x211EFE4

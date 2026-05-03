@@ -75,9 +75,9 @@ overlay27:
       address:
         NA: 0x211FA5C
       description: |-
-        [MANUAL DESCRIPTION]
+        Seems to reset a msg_wrapper struct such that it can be filled again?
         
-        No params.
+        r0: msg_wrapper ptr.
     - name: FillQuestInfoMessageWrapper
       address:
         NA: 0x211FA84
