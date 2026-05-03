@@ -41,14 +41,14 @@ struct c_field_scene {
     enum room_id new_room_id;
     undefined4 new_coord_x;
     undefined4 new_coord_y;
-    uint new_face_angle;
+    unsigned int  new_face_angle;
     int field30_0x78;
     int *field31_0x7c;
     int *field32_0x80;
     int field33_0x84;
     int field34_0x88;
-    uint field35_0x8c;
-    uint field36_0x90;
+    unsigned int  field35_0x8c;
+    unsigned int  field36_0x90;
     int field37_0x94;
     char field38_0x98;
     undefined field39_0x99;
@@ -68,7 +68,7 @@ struct c_field_scene {
     undefined field53_0xa7;
     undefined field54_0xa8;
     undefined field55_0xa9;
-    short field56_0xaa;
+    int16_t field56_0xaa;
     undefined4 message_id;
     undefined4 textbox_kind?;
     undefined field59_0xb4;

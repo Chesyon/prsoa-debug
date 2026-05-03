@@ -157,9 +157,9 @@ struct unk_save_struct_0x74 {
     undefined field9_0x49;
     undefined field10_0x4a;
     undefined field11_0x4b;
-    ushort field12_0x4c;
+    uint16_t field12_0x4c;
     undefined2 field13_0x4e;
-    ushort field14_0x50;
+    uint16_t field14_0x50;
     undefined2 field15_0x52;
     int field16_0x54;
     struct file_wrapper *unk_file_wrapper_ptr;
@@ -167,7 +167,7 @@ struct unk_save_struct_0x74 {
     int field19_0x60;
     byte field20_0x64;
     undefined field21_0x65;
-    ushort field22_0x66;
+    uint16_t field22_0x66;
     void *field23_0x68;
     int field24_0x6c;
     int field25_0x70;
