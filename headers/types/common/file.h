@@ -49,7 +49,7 @@ struct fs_file {
     int32_t error;
     struct os_thread_queue queue;
     undefined4 prop_start[4]; // Is probably a union
-    undefined4 arg_start[8];  // Is probably a union
+    undefined4 arg_start[6];  // Is probably a union
 };
 ASSERT_SIZE(struct fs_file, 72);
 
