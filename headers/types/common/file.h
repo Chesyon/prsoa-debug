@@ -24,6 +24,7 @@ struct fs_archive {
     int proc;
     uint32_t proc_flag;
 };
+ASSERT_SIZE(struct fs_archive, 92);
 
 struct fs_dir_pos {
     struct fs_archive* arc;
@@ -31,11 +32,13 @@ struct fs_dir_pos {
     uint16_t index;
     uint32_t pos;
 };
+ASSERT_SIZE(struct fs_dir_pos, 12);
 
 struct fs_file_id {
     struct fs_archive* arc;
     uint32_t file_id;
 };
+ASSERT_SIZE(struct fs_file_id, 8);
 
 struct fs_file {
     struct fs_file* prev;
@@ -48,7 +51,7 @@ struct fs_file {
     undefined4 prop_start[4]; // Is probably a union
     undefined4 arg_start[8];  // Is probably a union
 };
-// 0x48
+ASSERT_SIZE(struct fs_file_id, 72);
 
 struct file_archive_wrapper {
     struct fs_archive arc;
@@ -57,6 +60,7 @@ struct file_archive_wrapper {
     struct fs_archive* unk_archive_0x64;
     struct file_wrapper* file_wrapper_ptr;
 };
+ASSERT_SIZE(struct file_archive_wrapper, 108);
 
 struct file_wrapper {
     undefined4 unk_fun_ptr_0x0;
@@ -66,5 +70,6 @@ struct file_wrapper {
     bool file_is_open; // Whether or not the file is open.
     char unk_buffer[96];
 };
+ASSERT_SIZE(struct file_wrapper, 184);
 
 #endif

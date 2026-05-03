@@ -14,6 +14,8 @@
 #include "file.h"
 #include "flying_menu.h"
 #include "glossary.h"
+#include "graphics.h"
+#include "inputs.h"
 #include "pokemon_and_followers.h"
 #include "settings_and_variables.h"
 #include "styler.h"
