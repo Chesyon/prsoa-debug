@@ -165,7 +165,7 @@ struct unk_save_struct_0x74 {
     struct file_wrapper *unk_file_wrapper_ptr;
     int field18_0x5c;
     int field19_0x60;
-    byte field20_0x64;
+    int8_t field20_0x64;
     undefined field21_0x65;
     uint16_t field22_0x66;
     void *field23_0x68;

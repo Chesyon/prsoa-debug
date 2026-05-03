@@ -70,7 +70,7 @@ struct c_field_scene {
     undefined field55_0xa9;
     int16_t field56_0xaa;
     undefined4 message_id;
-    undefined4 textbox_kind?;
+    undefined4 textbox_kind;
     undefined field59_0xb4;
     undefined field60_0xb5;
     undefined field61_0xb6;
@@ -109,8 +109,8 @@ struct c_field_scene {
     undefined4 field94_0xec;
     int field95_0xf0;
     struct unk_struct_size_0x98 *field96_0xf4;
-    byte field97_0xf8;
-    byte field98_0xf9;
+    int8_t field97_0xf8;
+    int8_t field98_0xf9;
     char field99_0xfa;
     undefined field100_0xfb;
     undefined1 field101_0xfc;
@@ -228,7 +228,7 @@ struct c_letter_scene {
 ASSERT_SIZE(struct c_letter_scene, 48);
 
 struct ov_11_unk_struct_0x3ec {
-    struct ov_11_unk_struct_0x1e24 *0x1e24_ptr;
+    struct ov_11_unk_struct_0x1e24 * struct_0x1e24_ptr;
     undefined field1_0x4[256];
     undefined field258_0x105[256];
     undefined field515_0x206[256];
@@ -807,7 +807,7 @@ struct ov_11_unk_struct_0x198 {
     undefined field375_0x191;
     undefined field376_0x192;
     undefined field377_0x193;
-    struct ov_11_unk_struct_0x730 *0x730_ptr;
+    struct ov_11_unk_struct_0x730 *struct_0x730_ptr;
 };
 ASSERT_SIZE(struct ov_11_unk_struct_size_0x198, 0x198);
 
@@ -1045,7 +1045,7 @@ struct ov_11_unk_struct_0x4e4 {
     undefined field1232_0x4d5;
     undefined field1233_0x4d6;
     undefined field1234_0x4d7;
-    struct ov_11_unk_struct_0x18 *0x18_ptr;
+    struct ov_11_unk_struct_0x18 *struct_0x18_ptr;
     struct megastruct *megastruct_ptr;
     struct ov_11_unk_struct_0x730 *parent?;
 };
@@ -1725,10 +1725,10 @@ struct ov_11_unk_struct_0x730 {
     undefined *unk_0x708; // heap-alloc
     undefined4 field1186_0x70c;
     int unk_0x710;
-    struct ov_11_unk_struct_0x4e4 *0x4e4_ptr;
-    struct ov_11_unk_struct_0x18 *0x18_ptr;
-    struct ov_11_unk_struct_0x198 *0x198_ptr;
-    struct ov_11_unk_struct_0x3ec *0x3ec_ptr;
+    struct ov_11_unk_struct_0x4e4 *struct_0x4e4_ptr;
+    struct ov_11_unk_struct_0x18 *struct_0x18_ptr;
+    struct ov_11_unk_struct_0x198 *struct_0x198_ptr;
+    struct ov_11_unk_struct_0x3ec *struct_0x3ec_ptr;
     undefined *unk_0x724; // heap-alloc
     struct unk_save_struct_0x74 *unk_save_0x74_ptr;
     struct megastruct *megastruct_ptr;
@@ -3593,8 +3593,8 @@ struct ov_27_unk_substruct_0x10 {
     struct msg_wrapper* field765_0x34c;
     int bg_mode;              // Bits 0-2 from 0x4001000
     int window_display_flags; // Bits 13-15 from 0x4001000
-    int8_t bg_window_insides; // Byte from 0x4001048
-    int8_t obj_window_inside; // Byte from 0x400104A
+    int8_t bg_window_insides; // int8_t from 0x4001048
+    int8_t obj_window_inside; // int8_t from 0x400104A
     undefined field770_0x35a;
     undefined field771_0x35b;
     undefined4 unk_struct_0x384_ptr;
