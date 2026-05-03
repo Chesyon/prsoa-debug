@@ -322,4 +322,74 @@ struct ctrdg_lock_by_proc {
 };
 ASSERT_SIZE(struct ctrdg_lock_by_proc, 8);
 
+struct cardi_common {
+    struct cardi_command_arg *cmd;
+    int command;
+    int32_t card_owner;
+    int32_t lock_ref;
+    struct os_thread_queue lock_queue[1];
+    int lock_target; // enum CARDTargetMode
+    uint32_t src;
+    uint32_t dst;
+    uint32_t len;
+    uint32_t dma;
+    int req_type; // enum CARDRequest
+    int req_retry;
+    int req_mode;
+    void *callback; // MIDmaCallback
+    void *callback_arg;
+    void *task_func_ptr?;
+    struct thread thread[1];
+    struct thread *cur_th;
+    uint32_t priority;
+    struct os_thread_queue busy_q[1];
+    uint32_t flag;
+    uint32_t flush_threshold_ic;
+    uint32_t flush_threshold_dc;
+    uint8_t backup_cache_page_buf[256];
+};
+ASSERT_SIZE(struct cardi_common, 0x220);
+
+struct cardi_spec {
+    uint32_t total_size;
+    uint32_t sect_size;
+    uint32_t subsect_size;
+    uint32_t page_size;
+    uint32_t addr_width;
+    uint32_t program_page;
+    uint32_t write_page;
+    uint32_t write_page_total;
+    uint32_t erase_chip;
+    uint32_t erase_chip_total;
+    uint32_t erase_sector;
+    uint32_t erase_sector_total;
+    uint32_t erase_subsector;
+    uint32_t erase_subsector_total;
+    uint32_t erase_page;
+    uint8_t initial_status;
+    uint8_t padding1[3];
+    uint32_t caps;
+    uint8_t padding2[4];
+};
+ASSERT_SIZE(struct cardi_spec, 0x48);
+
+struct cardi_command_arg {
+    int result; // enum CARDResult
+    int type; // enum CARDBackupType
+    uint32_t id;
+    uint32_t src;
+    uint32_t dst;
+    uint32_t len;
+    struct cardi_spec spec;
+};
+ASSERT_SIZE(struct cardi_command_arg, 0x60);
+
+struct pm_sleep_callback_info {
+    void *pm_sleep_callback;
+    void *arg;
+    struct pm_sleep_callback_info *next;
+};
+ASSERT_SIZE(struct pm_sleep_callback_info, 12);
+
+
 #endif

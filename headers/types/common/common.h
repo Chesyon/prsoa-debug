@@ -18,8 +18,8 @@
 #include "inputs.h"
 #include "pokemon_and_followers.h"
 #include "settings_and_variables.h"
-#include "socket.h"
 #include "styler.h"
+#include "wifi.h"
 // Requires some of the above dependencies
 #include "audio.h"
 #include "field_data.h"
