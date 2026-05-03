@@ -1563,9 +1563,7 @@ overlay11:
         NA: 0x2147294
     - name: Dwci_MovStartDownloadandBootChild
       address:
-        NA:
-          - 0x21472AC
-          - 0x215A0B0
+        NA: 0x21472AC
     - name: Dwci_MovlGetChild
       address:
         NA: 0x21472B8
@@ -4446,15 +4444,6 @@ overlay11:
         NA:
           - 0x214936C
           - 0x214A840
-    - name: Dwci_IsFold
-      address:
-        NA:
-          - 0x214A4A4
-          - 0x214A89C
-          - 0x2150B00
-          - 0x2150F18
-          - 0x2151570
-          - 0x215423C
     - name: Dwci_SceneSetAossButton
       address:
         NA: 0x214A8BC
@@ -6398,15 +6387,6 @@ overlay11:
           - 0x2153E0C
           - 0x2154120
           - 0x21544DC
-    - name: Dwci_IsFold
-      address:
-        NA:
-          - 0x214A4A4
-          - 0x214A89C
-          - 0x2150B00
-          - 0x2150F18
-          - 0x2151570
-          - 0x215423C
     - name: Dwci_SceneSetRakuButton1
       address:
         NA:
@@ -6645,15 +6625,6 @@ overlay11:
           - 0x2150E48
           - 0x2151244
           - 0x2151934
-    - name: Dwci_IsFold
-      address:
-        NA:
-          - 0x214A4A4
-          - 0x214A89C
-          - 0x2150B00
-          - 0x2150F18
-          - 0x2151570
-          - 0x215423C
     - name: Dwci_SceneSetRakuButton1
       address:
         NA:
@@ -7030,15 +7001,6 @@ overlay11:
           - 0x2153E0C
           - 0x2154120
           - 0x21544DC
-    - name: Dwci_IsFold
-      address:
-        NA:
-          - 0x214A4A4
-          - 0x214A89C
-          - 0x2150B00
-          - 0x2150F18
-          - 0x2151570
-          - 0x215423C
     - name: Dwci_SceneSetRakuReady
       address:
         NA: 0x2151590
@@ -8916,15 +8878,6 @@ overlay11:
           - 0x21536B8
           - 0x2154184
           - 0x2154548
-    - name: Dwci_IsFold
-      address:
-        NA:
-          - 0x214A4A4
-          - 0x214A89C
-          - 0x2150B00
-          - 0x2150F18
-          - 0x2151570
-          - 0x215423C
     - name: Dwci_SceneSetUsbReady1
       address:
         NA: 0x215425C
@@ -9704,11 +9657,9 @@ overlay11:
     - name: Dwci_MovStartAdmitChild
       address:
         NA: 0x215A068
-    - name: Dwci_MovStartDownloadandBootChild
+    - name: Dwci_MovStartDownloadandBootChildVeneer
       address:
-        NA:
-          - 0x21472AC
-          - 0x215A0B0
+        NA: 0x215A0B0
     - name: Dwci_MovFramework
       address:
         NA: 0x215A0E4
@@ -10185,9 +10136,7 @@ overlay11:
         NA: 0x215F4B0
     - name: Nhttp_GetProgress
       address:
-        NA:
-          - 0x215F4C8
-          - 0x21623BC
+        NA: 0x215F4C8
     - name: SaveBuf
       address:
         NA: 0x215F568
@@ -10214,14 +10163,10 @@ overlay11:
         NA: 0x2160BB8
     - name: Nhttpi_StrToInt
       address:
-        NA:
-          - 0x2160CA0
-          - 0x2162864
+        NA: 0x2160CA0
     - name: Nhttpi_IntToStr
       address:
-        NA:
-          - 0x2160D38
-          - 0x2162870
+        NA: 0x2160D38
     - name: Nhttpi_CompareToken
       address:
         NA: 0x2160DF4
@@ -10291,11 +10236,9 @@ overlay11:
     - name: Dwci_NdGetFileAsync
       address:
         NA: 0x2162200
-    - name: Nhttp_GetProgress
+    - name: Nhttp_GetProgressVeneer
       address:
-        NA:
-          - 0x215F4C8
-          - 0x21623BC
+        NA: 0x21623BC
     - name: Dwci_Ndi_Response_Count
       address:
         NA: 0x21623C8
@@ -10336,24 +10279,19 @@ overlay11:
         NA: 0x21627C0
     - name: Std_CompareNStringVeneer
       address:
-        NA:
-          - 0x216282C
+        NA: 0x216282C
     - name: Dwci_Ndi_Memclr
       address:
         NA: 0x2162838
     - name: Dwci_Ndi_Memcpy
       address:
         NA: 0x216284C
-    - name: Nhttpi_StrToInt
+    - name: Nhttpi_StrToIntVeneer
       address:
-        NA:
-          - 0x2160CA0
-          - 0x2162864
-    - name: Nhttpi_IntToStr
+        NA: 0x2162864
+    - name: Nhttpi_IntToStrVeneer
       address:
-        NA:
-          - 0x2160D38
-          - 0x2162870
+        NA: 0x2162870
     - name: Dwci_Ndi_HexToStrFigure
       address:
         NA: 0x216295C
