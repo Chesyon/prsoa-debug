@@ -1904,7 +1904,7 @@ struct ov_09_unk_struct_0x58 {
     undefined field26_0x3f;
     void *unk_struct_offset_0x40;
     undefined4 field28_0x44;
-    ushort field29_0x48;
+    uint16_t field29_0x48;
     undefined2 field30_0x4a;
     undefined field31_0x4c;
     undefined field32_0x4d;
