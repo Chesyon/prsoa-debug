@@ -247,7 +247,7 @@ struct ov_11_unk_struct_0x18 {
     struct megastruct *megastruct_ptr;
     undefined4 unk_0x14;
 };
-ASSERT_SIZE(struct ov_11_unk_struct_size_0x18, 0x18);
+ASSERT_SIZE(struct ov_11_unk_struct_0x18, 0x18);
 
 struct ov_11_unk_struct_0x4e4 {
     undefined field0_0x0;
@@ -465,7 +465,7 @@ struct ov_11_unk_struct_0x4e4 {
     struct megastruct *megastruct_ptr;
     struct ov_11_unk_struct_0x730 *maybe_parent;
 };
-ASSERT_SIZE(struct ov_11_unk_struct_size_0x4e4, 0x4e4);
+ASSERT_SIZE(struct ov_11_unk_struct_0x4e4, 0x4e4);
 
 struct ov_11_unk_struct_0x1e24 {
     undefined field0_0x0[256];
@@ -755,7 +755,7 @@ struct ov_11_unk_struct_0x1e24 {
     undefined field7708_0x1e22;
     undefined field7709_0x1e23;
 };
-ASSERT_SIZE(struct ov_11_unk_struct_size_0x1e24, 0x1e24);
+ASSERT_SIZE(struct ov_11_unk_struct_0x1e24, 0x1e24);
 
 struct ov_11_unk_struct_0x198 {
     undefined field0_0x0;
@@ -1138,7 +1138,7 @@ struct ov_11_unk_struct_0x198 {
     undefined field377_0x193;
     struct ov_11_unk_struct_0x730 *struct_0x730_ptr;
 };
-ASSERT_SIZE(struct ov_11_unk_struct_size_0x198, 0x198);
+ASSERT_SIZE(struct ov_11_unk_struct_0x198, 0x198);
 
 struct ov_11_unk_struct_0x3ec {
     struct ov_11_unk_struct_0x1e24 * struct_0x1e24_ptr;
@@ -1339,7 +1339,7 @@ struct ov_11_unk_struct_0x3ec {
     undefined2 *unk_0x3e4;
     struct megastruct *megastruct_ptr;
 };
-ASSERT_SIZE(struct ov_11_unk_struct_size_0x3ec, 0x3ec);
+ASSERT_SIZE(struct ov_11_unk_struct_0x3ec, 0x3ec);
 
 struct ov_11_unk_struct_0x730 {
     uint16_t unk_0x0;
@@ -1733,7 +1733,7 @@ struct ov_11_unk_struct_0x730 {
     struct unk_save_struct_0x74 *unk_save_0x74_ptr;
     struct megastruct *megastruct_ptr;
 };
-ASSERT_SIZE(struct ov_11_unk_struct_size_0x730, 0x730);
+ASSERT_SIZE(struct ov_11_unk_struct_0x730, 0x730);
 
 // formerly ov_11_unk_struct_0
 struct c_ranger_net_scene {
