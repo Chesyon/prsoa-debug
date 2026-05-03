@@ -426,7 +426,7 @@ struct display_engine_a {
     undefined4 disp_cnt;
     undefined2 disp_stat;
     undefined2 v_count;
-    struct engine_2d 2d_engine_a;
+    struct engine_2d engine_2d_a;
     undefined field4_0x58;
     undefined field5_0x59;
     undefined field6_0x5a;
@@ -614,7 +614,7 @@ struct engine_3d {
     undefined field131_0x2fe;
     undefined field132_0x2ff;
     undefined1 pos_test_results[16];
-    undefined1 vec_test-results[6];
+    undefined1 vec_test_results[6];
     undefined field135_0x316;
     undefined field136_0x317;
     undefined field137_0x318;
