@@ -442,7 +442,7 @@ void ret_020439c8(void);
 void ret_02044144(void);
 void ret_02044148(void);
 void ret_020441ac(void);
-void DebugPrintInternal(char *param_1,__gnuc_va_list param_2,undefined4 param_3,undefined4 param_4);
+void DebugPrintInternal(char *param_1,va_list param_2,undefined4 param_3,undefined4 param_4);
 void DebugPrintInternalVeneer(void);
 void SetSysCallPageZero(void);
 void UnpackScriptFile(struct script_file *param_1);
@@ -2110,7 +2110,7 @@ undefined4 Msl_C_Printf_FileWrite(undefined4 param_1,undefined4 param_2,int para
 undefined4 TryAppendToSlice(int *param_1,void *param_2,size_t param_3);
 undefined4 Msl_C_Printf_Printf(undefined4 param_1,undefined4 param_2,undefined4 param_3,undefined4 param_4);
 void __vsprintf_internal(int param_1,unsigned int param_2);
-int vsprintf(char *__s,char *__format,__gnuc_va_list __arg);
+int vsprintf(char *__s,char *__format,va_list __arg);
 unsigned int Msl_C_Scanf_StringRead(int *param_1,unsigned int param_2,int param_3);
 undefined4 Msl_C_Signal_Raise(int param_1);
 size_t strlen(char *__s);
