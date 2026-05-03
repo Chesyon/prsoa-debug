@@ -393,7 +393,7 @@ struct pm_sleep_callback_info {
 };
 ASSERT_SIZE(struct pm_sleep_callback_info, 12);
 
-struct 2d_engine {
+struct engine_2d {
     undefined2 bg0_control;
     undefined2 bg1_control;
     undefined2 bg2_control;
@@ -426,7 +426,7 @@ struct display_engine_a {
     undefined4 disp_cnt;
     undefined2 disp_stat;
     undefined2 v_count;
-    struct 2d_engine 2d_engine_a;
+    struct engine_2d 2d_engine_a;
     undefined field4_0x58;
     undefined field5_0x59;
     undefined field6_0x5a;
@@ -440,7 +440,7 @@ struct display_engine_a {
     undefined field14_0x63;
     undefined4 disp_cap_cnt;
     undefined4 disp_mmem_fifo;
-    undefined2 2d_a_master_bright;
+    undefined2 master_bright_a_2d;
     undefined field18_0x6e;
     undefined field19_0x6f;
 };
@@ -452,7 +452,7 @@ struct display_engine_b {
     undefined field2_0x5;
     undefined field3_0x6;
     undefined field4_0x7;
-    struct 2d_engine 2d_engine_b;
+    struct engine_2d engine_b_2d;
     undefined field6_0x58;
     undefined field7_0x59;
     undefined field8_0x5a;
@@ -473,13 +473,13 @@ struct display_engine_b {
     undefined field23_0x69;
     undefined field24_0x6a;
     undefined field25_0x6b;
-    undefined2 2d_b_master_bright;
+    undefined2 master_bright_2d_b;
     undefined field27_0x6e;
     undefined field28_0x6f;
 };
 
 
-struct 3d_engine {
+struct engine_3d {
     undefined1 rd_line_count_reg;
     undefined field1_0x1;
     undefined field2_0x2;
