@@ -18,6 +18,7 @@
 #include "inputs.h"
 #include "pokemon_and_followers.h"
 #include "settings_and_variables.h"
+#include "socket.h"
 #include "styler.h"
 // Requires some of the above dependencies
 #include "audio.h"
