@@ -441,7 +441,7 @@ struct ov_11_unk_struct_0x4e4 {
     undefined field1234_0x4d7;
     struct ov_11_unk_struct_0x18 *struct_0x18_ptr;
     struct megastruct *megastruct_ptr;
-    struct ov_11_unk_struct_0x730 *parent?;
+    struct ov_11_unk_struct_0x730 *maybe_parent;
 };
 ASSERT_SIZE(struct ov_11_unk_struct_size_0x4e4, 0x4e4);
 
