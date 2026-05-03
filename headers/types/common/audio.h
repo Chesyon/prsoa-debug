@@ -82,6 +82,8 @@ struct nns_snd_arc_fat {
     uint32_t count;
     struct nns_snd_arc_file_info files[0];
 };
+// No ASSERT_SIZE, this expands as files are added!
+
 
 struct nns_snd_arc_symbol {
     struct snd_bin_block_file_header block_header;

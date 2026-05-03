@@ -112,10 +112,6 @@ struct textbox_subdata {
 ASSERT_SIZE(struct textbox_subdata, 5692);
 
 struct textbox_data {
-    struct group_msg_wrapper_table* group_msg_wrapper_table_ptr;
-    struct msg_wrapper* system_msg_wrapper_ptr;
-    struct msg_wrapper* chapter_msg_wrapper_ptr;
-    struct msg_wrapper* quest_msg_wrapper_ptr;
     struct group_msg_wrapper_table *group_msg_wrapper_table_ptr;
     struct msg_wrapper *system_msg_wrapper_ptr;
     struct msg_wrapper *area_msg_wrapper_ptr;
@@ -166,6 +162,9 @@ struct textbox_data {
     undefined4 field43_0x100;
     undefined4 field44_0x104;
     undefined4 field45_0x108;
+    void *field46_0x10c;
+    void *field47_0x110;
+    struct nns_g2d_font *nns_g2d_font_ptr_2;
     undefined4 field49_0x118;
     undefined4 field50_0x11c;
     void *field51_0x120;
