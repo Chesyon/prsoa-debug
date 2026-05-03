@@ -2131,9 +2131,10 @@ arm9:
       address:
         NA: 0x2027FE8
       description: |-
-        [MANUAL DESCRIPTION]
+        Seems to initialize an unk_save_struct_0x74 struct. More research needed.
         
-        No params.
+        r0: unk_save_struct_0x74 ptr
+        r1: unknown
     - name: ret_02029778
 #      namespace: c_effect_actor_data
       address:
@@ -3181,37 +3182,37 @@ arm9:
       address:
         NA: 0x20345A8
       description: |-
-        [MANUAL DESCRIPTION]
+        Clears unk_heap_2 of a specified audio_engine struct.
         
-        No params.
+        r0: audio_engine_ptr
     - name: AudioEngineClearUnkHeap1
       address:
         NA: 0x20345B8
       description: |-
-        [MANUAL DESCRIPTION]
+        Clears unk_heap_1 of a specified audio_engine struct.
         
-        No params.
+        r0: audio_engine_ptr
     - name: MaybeLoadNextSequencedTrack
       address:
         NA: 0x2034954
       description: |-
-        [MANUAL DESCRIPTION]
+        Seems to possibly load the next sequenced in-game audio track?
         
-        No params.
+        r0: audio_engine_ptr
     - name: AudioEngineMaybeCheckHeapSizes
       address:
         NA: 0x2034EEC
       description: |-
-        [MANUAL DESCRIPTION]
+        Checks the sizes of all 3 heaps, then seems to do utterly nothing with that information? Maybe the return is wrong.
         
-        No params.
+        r0: audio_engine_ptr
     - name: SetSeqTrack3Volume
       address:
         NA: 0x2034F20
       description: |-
-        [MANUAL DESCRIPTION]
+        Seems to set the volume of specifically sequenced track 3 of the audio engine. 
         
-        No params.
+        r0: audio_engine_ptr
     - name: IsFormIdPartnerPokemon
       address:
         NA: 0x2034F9C
