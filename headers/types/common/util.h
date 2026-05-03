@@ -285,6 +285,8 @@ struct sockaddr_in {
 };
 ASSERT_SIZE(struct sockaddr_in, 8);
 
+
+
 typedef void (*os_irq_function)(void);
 
 typedef void (*lock_ctrl_funcp)(void);
@@ -338,7 +340,7 @@ struct cardi_common {
     int req_mode;
     void *callback; // MIDmaCallback
     void *callback_arg;
-    void *task_func_ptr?;
+    void *task_func_ptr;
     struct thread thread[1];
     struct thread *cur_th;
     uint32_t priority;

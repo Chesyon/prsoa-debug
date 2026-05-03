@@ -2,17 +2,9 @@
 #define HEADERS_TYPES_COMMON_WIFI_H_
 
 // Someone who know what tf these are/mean can put these where they belong.
-typedef unsigned int16_t sa_family_t;
+typedef uint16_t sa_family_t;
 typedef unsigned int __socklen_t;
 typedef __socklen_t socklen_t;
-
-struct sockaddr_in {
-    uint8_t len;
-    uint8_t family;
-    uint16_t port;
-    uint8_t ip[4];
-};
-ASSERT_SIZE(struct sockaddr_in, 8);
 
 struct sockaddr {
     sa_family_t sa_family; // actually a "sa_family_t", whatever that means.
@@ -46,7 +38,7 @@ struct unk_wifi_struct_0x18 {
     undefined1 field13_0x16;
     undefined1 field14_0x17;
 };
-ASSERT_SIZE(unk_wifi_struct_0x18, 0x18);
+ASSERT_SIZE(struct unk_wifi_struct_0x18, 0x18);
 
 struct unk_wifi_struct_0x13b0 {
     undefined field0_0x0;
@@ -5087,5 +5079,5 @@ struct unk_wifi_struct_0x13b0 {
     undefined field5035_0x13ae;
     undefined field5036_0x13af;
 };
-ASSERT_SIZE(unk_wifi_struct_0x13b0, 0x13b0);
+ASSERT_SIZE(struct unk_wifi_struct_0x13b0, 0x13b0);
 #endif
