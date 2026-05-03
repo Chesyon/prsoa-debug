@@ -1,21 +1,26 @@
 #ifndef HEADERS_FUNCTIONS_OVERLAY00_H_
 #define HEADERS_FUNCTIONS_OVERLAY00_H_
-struct c_field_scene * CFieldSceneConstructor(struct c_field_scene *this,struct megastruct *param_2);
-struct c_field_scene * CFieldSceneBaseDestructor(struct c_field_scene *param_1);
-struct c_field_scene * CFieldSceneDeletingDestructor(struct c_field_scene *param_1);
+struct c_field_scene* CFieldSceneConstructor(struct c_field_scene* this,
+                                             struct megastruct* param_2);
+struct c_field_scene* CFieldSceneBaseDestructor(struct c_field_scene* param_1);
+struct c_field_scene* CFieldSceneDeletingDestructor(struct c_field_scene* param_1);
 void ret_0211e958(void);
-void AddEnemyFormToEncounterType2(struct c_field_scene *param_1,unsigned int param_2,int param_3,unsigned int param_4);
-void Overlay00PreEntryPoint(undefined4 param_1,struct megastruct *param_2,undefined4 param_3,undefined4 param_4);
-void OpenAndInitMapScriptFile(struct unk_struct_size_0x80 *param_1,int param_2);
+void AddEnemyFormToEncounterType2(struct c_field_scene* param_1, unsigned int param_2, int param_3,
+                                  unsigned int param_4);
+void Overlay00PreEntryPoint(undefined4 param_1, struct megastruct* param_2, undefined4 param_3,
+                            undefined4 param_4);
+void OpenAndInitMapScriptFile(struct unk_struct_size_0x80* param_1, int param_2);
 void ret_02125334(void);
-undefined4 MaybeOpenAndInitMapDatAndTexFiles(struct unk_struct_size_0x80 *param_1,undefined4 param_2,char *param_3,int param_4);
+undefined4 MaybeOpenAndInitMapDatAndTexFiles(struct unk_struct_size_0x80* param_1,
+                                             undefined4 param_2, char* param_3, int param_4);
 void ret_021266ac(void);
 void ret_021266b0(void);
 void ret_021266c4(void);
 void ret_021266c8(void);
 void ret_0213524c(void);
-undefined4 MaybeOpenAndInitTargetClearScript(void *param_1,int param_2,int param_3);
-void MaybeOpenAndInitTargetObjectTouchScript(undefined2 *param_1,char *param_2,undefined2 param_3);
+undefined4 MaybeOpenAndInitTargetClearScript(void* param_1, int param_2, int param_3);
+void MaybeOpenAndInitTargetObjectTouchScript(undefined2* param_1, char* param_2,
+                                             undefined2 param_3);
 void ret_0214234c(void);
 void ret_02142398(void);
 void ret_021427ec(void);
@@ -63,10 +68,10 @@ void ret_02149e58(void);
 void ret_02149e5c(void);
 void SetSysCallPage14(void);
 undefined4 SysCallReturnZero1400(void);
-undefined4 SysCallMaybeCallsScriptFunctionByName(undefined4 *param_1,int param_2);
-undefined4 SysCallInitCombatType2(undefined4 *param_1,int param_2);
-undefined4 TryMountPokemon(struct pokemon_data *param_1);
-unsigned int SysCallRetrievePokemonByFormId(int *param_1);
+undefined4 SysCallMaybeCallsScriptFunctionByName(undefined4* param_1, int param_2);
+undefined4 SysCallInitCombatType2(undefined4* param_1, int param_2);
+undefined4 TryMountPokemon(struct pokemon_data* param_1);
+unsigned int SysCallRetrievePokemonByFormId(int* param_1);
 struct room_id_16 SysCallGetFlyDestinationRoom(void);
 int16_t SysCallGetFlyXCoord(void);
 int16_t SysCallGetFlyYCoord(void);
@@ -121,7 +126,8 @@ int8_t GetActiveQuestId(void);
 int8_t GetActiveMissionId(void);
 undefined* DebugGrabFileNameAndMsgId(void);
 void DebugPrintAllScriptVars(void);
-undefined *DebugPrintPartnerPokemonPokeAssists(int param_1,undefined4 param_2,undefined4 param_3,undefined4 param_4);
+undefined* DebugPrintPartnerPokemonPokeAssists(int param_1, undefined4 param_2, undefined4 param_3,
+                                               undefined4 param_4);
 int64_t GetCaptureLineLenRecordSimple(void);
 void SetCaptureLineLenRecordSimple(int param_1);
 int32_t GetNumLoopsRecordSimple(void);
@@ -167,7 +173,7 @@ void ret_0215f854(void);
 void ret_0215f858(void);
 void ret_021603a8(void);
 void ret_021603ac(void);
-int MaybeOpenAndInitEffectScriptFile(int param_1,int param_2);
+int MaybeOpenAndInitEffectScriptFile(int param_1, int param_2);
 void ret_02163cf4(void);
 void ret_02163cf8(void);
 void ret_02165868(void);

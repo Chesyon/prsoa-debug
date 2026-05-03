@@ -6,13 +6,13 @@ struct ranger_net_data {
     undefined2 mission_completion_bits;
     undefined field1_0x2;
     undefined field2_0x3;
-    struct unk_save_struct_0x74 *unk_save_struct_0x74;
+    struct unk_save_struct_0x74* unk_save_struct_0x74;
 };
 
 struct ranger_net_header {
     char dsprs_string[8];
     uint32_t save_file_offset; // number of bytes into the save file this block should live
-    int unk_field_0xc; // Always -1?
+    int unk_field_0xc;         // Always -1?
     undefined field3_0x10;
     undefined field4_0x11;
     undefined field5_0x12;
@@ -44,7 +44,7 @@ struct ranger_net_bin {
 ASSERT_SIZE(struct ranger_net_bin, 0x3020);
 
 struct ranger_net_0x3004 {
-    struct unk_save_struct_0x74 *save_struct_0x74_ptr;
+    struct unk_save_struct_0x74* save_struct_0x74_ptr;
     struct ranger_net_body ranger_net_body;
 };
 ASSERT_SIZE(struct ranger_net_0x3004, 0x3004);

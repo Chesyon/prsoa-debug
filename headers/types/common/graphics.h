@@ -10,7 +10,7 @@ struct nns_g2d_image_palette_proxy {
 
 struct nns_gfd_vram_transfer_task {
     int type;
-    void *source_ptr;
+    void* source_ptr;
     uint32_t dst_addr;
     uint32_t sz_byte;
 };

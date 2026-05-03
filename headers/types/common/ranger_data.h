@@ -40,7 +40,8 @@ struct ranger_data {
     bool display_timer_on_screen : 1; // When enabled, a timer appears on-screen.
     undefined4 unk_bitfield_fields : 30;
     // If you can figure out how to declare these as bools, be my guest, I give up. - Lappy
-    uint64_t map_and_fly_bitfield : 37; // Seems to handle world map unlocks as a bitfield. Something
+    uint64_t
+        map_and_fly_bitfield : 37; // Seems to handle world map unlocks as a bitfield. Something
     uint64_t unk_bitfield : 27;
     // This block of fields seems to be related to wandering enemies. More research needed.
     undefined2 field8_0x7f6c;

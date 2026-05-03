@@ -22,8 +22,8 @@ struct DWCInetControl {
 ASSERT_SIZE(struct DWCInetControl, 12);
 
 struct unk_wifi_struct_0x18 {
-    void *unk_func_ptr;
-    void *field1_0x4;
+    void* unk_func_ptr;
+    void* field1_0x4;
     undefined1 field2_0x8;
     undefined1 wfc_init_case;
     undefined field4_0xa;

@@ -285,8 +285,6 @@ struct sockaddr_in {
 };
 ASSERT_SIZE(struct sockaddr_in, 8);
 
-
-
 typedef void (*os_irq_function)(void);
 
 typedef void (*lock_ctrl_funcp)(void);
@@ -325,7 +323,7 @@ struct ctrdg_lock_by_proc {
 ASSERT_SIZE(struct ctrdg_lock_by_proc, 8);
 
 struct cardi_common {
-    struct cardi_command_arg *cmd;
+    struct cardi_command_arg* cmd;
     int command;
     int32_t card_owner;
     int32_t lock_ref;
@@ -338,11 +336,11 @@ struct cardi_common {
     int req_type; // enum CARDRequest
     int req_retry;
     int req_mode;
-    void *callback; // MIDmaCallback
-    void *callback_arg;
-    void *task_func_ptr;
+    void* callback; // MIDmaCallback
+    void* callback_arg;
+    void* task_func_ptr;
     struct thread thread[1];
-    struct thread *cur_th;
+    struct thread* cur_th;
     uint32_t priority;
     struct os_thread_queue busy_q[1];
     uint32_t flag;
@@ -377,7 +375,7 @@ ASSERT_SIZE(struct cardi_spec, 0x48);
 
 struct cardi_command_arg {
     int result; // enum CARDResult
-    int type; // enum CARDBackupType
+    int type;   // enum CARDBackupType
     uint32_t id;
     uint32_t src;
     uint32_t dst;
@@ -387,9 +385,9 @@ struct cardi_command_arg {
 ASSERT_SIZE(struct cardi_command_arg, 0x60);
 
 struct pm_sleep_callback_info {
-    void *pm_sleep_callback;
-    void *arg;
-    struct pm_sleep_callback_info *next;
+    void* pm_sleep_callback;
+    void* arg;
+    struct pm_sleep_callback_info* next;
 };
 ASSERT_SIZE(struct pm_sleep_callback_info, 12);
 
@@ -445,7 +443,6 @@ struct display_engine_a {
     undefined field19_0x6f;
 };
 
-
 struct display_engine_b {
     undefined4 disp_cnt;
     undefined field1_0x4;
@@ -477,7 +474,6 @@ struct display_engine_b {
     undefined field27_0x6e;
     undefined field28_0x6f;
 };
-
 
 struct engine_3d {
     undefined1 rd_line_count_reg;
@@ -628,7 +624,5 @@ struct engine_3d {
     undefined1 clipmtx_results[64];
     undefined1 vecmtx_results[36];
 };
-
-
 
 #endif

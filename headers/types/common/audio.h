@@ -1,12 +1,11 @@
 #ifndef HEADERS_TYPES_AUDIO_H_
 #define HEADERS_TYPES_AUDIO_H_
 
-
 struct nnsi_gfd_lnk_vram_block {
     uint32_t addr;
     uint32_t sz_bytes;
-    struct nnsi_gfd_lnk_vram_block *blk_prev_ptr;
-    struct nnsi_gfd_lnk_vram_block *blk_next_ptr;
+    struct nnsi_gfd_lnk_vram_block* blk_prev_ptr;
+    struct nnsi_gfd_lnk_vram_block* blk_next_ptr;
 };
 ASSERT_SIZE(struct nnsi_gfd_lnk_vram_block, 16);
 
@@ -36,12 +35,12 @@ struct nns_snd_arc_info {
 ASSERT_SIZE(struct nns_snd_arc_info, 40);
 
 struct nns_snd_strm_handle {
-    void *player; // NNSSndStrmPlayer
+    void* player; // NNSSndStrmPlayer
 };
 ASSERT_SIZE(struct nns_snd_strm_handle, 4);
 
 struct nns_snd_seq_handle {
-    void *player;
+    void* player;
 };
 ASSERT_SIZE(struct nns_snd_seq_handle, 4);
 
@@ -71,11 +70,10 @@ ASSERT_SIZE(struct nns_snd_arc_header, 48);
 struct nns_snd_arc_file_info {
     uint32_t offset;
     uint32_t size;
-    void *mem;
+    void* mem;
     uint32_t reserved;
 };
 ASSERT_SIZE(struct nns_snd_arc_file_info, 16);
-
 
 struct nns_snd_arc_fat {
     struct snd_binary_block_file_header block_header;
@@ -83,7 +81,6 @@ struct nns_snd_arc_fat {
     struct nns_snd_arc_file_info files[0];
 };
 // No ASSERT_SIZE, this expands as files are added!
-
 
 struct nns_snd_arc_symbol {
     struct snd_bin_block_file_header block_header;
@@ -98,26 +95,25 @@ struct nns_snd_arc_symbol {
 };
 ASSERT_SIZE(struct nns_snd_arc_symbol, 40);
 
-
 struct nns_snd_arc {
     struct nns_snd_arc_header header;
     bool file_open;
     struct fs_file file;
     struct fs_file_id file_id;
-    struct nns_snd_arc_fat *fat;
-    struct nns_snd_arc_symbol *symbol;
-    struct nns_snd_arc_info *info;
+    struct nns_snd_arc_fat* fat;
+    struct nns_snd_arc_symbol* symbol;
+    struct nns_snd_arc_info* info;
 };
 ASSERT_SIZE(struct nns_snd_arc, 144);
 
 struct audio_engine {
-    void *unk_heap_1_ptr; // Size 0x64000
-    void *unk_heap_2_ptr; // Size 0x30000
-    void *strm_buffer_heap_ptr; // Size 0xc000
+    void* unk_heap_1_ptr;       // Size 0x64000
+    void* unk_heap_2_ptr;       // Size 0x30000
+    void* strm_buffer_heap_ptr; // Size 0xc000
     struct nns_snd_arc snd_archive;
-    void *unk_heap_1_handle_ptr;
-    void *unk_heap_2_handle_ptr;
-    void *strm_buffer_heap_handle_ptr;
+    void* unk_heap_1_handle_ptr;
+    void* unk_heap_2_handle_ptr;
+    void* strm_buffer_heap_handle_ptr;
     struct nns_snd_strm_handle snd_strm_handle_table[2];
     struct nns_snd_seq_handle snd_seq_handle_table[5];
     uint32_t current_arc_group_num;
@@ -171,7 +167,7 @@ struct audio_engine {
     undefined field62_0x121;
     undefined field63_0x122;
     undefined field64_0x123;
-    void *unk_struct_off_0x124;
+    void* unk_struct_off_0x124;
     undefined field66_0x128;
     undefined field67_0x129;
     undefined field68_0x12a;

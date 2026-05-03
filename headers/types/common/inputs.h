@@ -95,7 +95,7 @@ struct tp_state {
 ASSERT_SIZE(struct tp_state, 100);
 
 struct touch_screen {
-    undefined *field0_0x0;
+    undefined* field0_0x0;
     undefined field1_0x4;
     undefined field2_0x5;
     undefined field3_0x6;

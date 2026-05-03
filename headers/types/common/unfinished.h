@@ -2,53 +2,53 @@
 #define HEADERS_TYPES_COMMON_UNFINISHED_H_
 
 struct ov_00_unk_struct_size_0x1c {
-    void *field0_0x0;
-    void *field1_0x4;
-    void *field2_0x8;
-    void *field3_0xc;
-    void *field4_0x10;
-    void *field5_0x14;
-    void *field6_0x18;
+    void* field0_0x0;
+    void* field1_0x4;
+    void* field2_0x8;
+    void* field3_0xc;
+    void* field4_0x10;
+    void* field5_0x14;
+    void* field6_0x18;
 };
 // formerly ov_00_unk_struct
 struct c_field_scene {
-    void *vftable_ptr;
-    struct megastruct *megastruct_ptr;
+    void* vftable_ptr;
+    struct megastruct* megastruct_ptr;
     int field2_0x8;
-    void *field3_0xc;
-    struct unk_struct_size_0x80 *unk_struct_size_0x80_ptr;
-    void *unk_struct_size_0x80_ptr_2;
-    void *unk_struct_size_0x18_ptr;
-    struct unk_struct_size_0x98 *unk_struct_size_0x98_ptr;
-    void *unk_struct_size_0x10_ptr;
-    void *unk_struct_size_0x14_ptr;
-    void *unk_strut_size_0x880_ptr;
-    void *unk_struct_size_0x8_ptr_2;
-    void *field12_0x30;
-    struct unk_struct_size_0x64 *unk_struct_size_0x64_ptr;
-    void *unk_pointer_0x38;
+    void* field3_0xc;
+    struct unk_struct_size_0x80* unk_struct_size_0x80_ptr;
+    void* unk_struct_size_0x80_ptr_2;
+    void* unk_struct_size_0x18_ptr;
+    struct unk_struct_size_0x98* unk_struct_size_0x98_ptr;
+    void* unk_struct_size_0x10_ptr;
+    void* unk_struct_size_0x14_ptr;
+    void* unk_strut_size_0x880_ptr;
+    void* unk_struct_size_0x8_ptr_2;
+    void* field12_0x30;
+    struct unk_struct_size_0x64* unk_struct_size_0x64_ptr;
+    void* unk_pointer_0x38;
     undefined4 field15_0x3c;
-    void *unk_struct_size_0x8_ptr_3;
-    void *unk_struct_size_0x8_ptr;
-    void *unk_struct_size_0x918_ptr;
+    void* unk_struct_size_0x8_ptr_3;
+    void* unk_struct_size_0x8_ptr;
+    void* unk_struct_size_0x918_ptr;
     int field19_0x4c;
-    void *unk_struct_size_0x10_ptr_1;
-    void *unk_struct_size_0x6c_ptr;
-    void *unk_struct_size_0x10_ptr_2;
-    void *unk_struct_size_0x2c_ptr;
-    void *unk_struct_size_0x2c;
-    void *unk_struct_size_0x40_ptr;
+    void* unk_struct_size_0x10_ptr_1;
+    void* unk_struct_size_0x6c_ptr;
+    void* unk_struct_size_0x10_ptr_2;
+    void* unk_struct_size_0x2c_ptr;
+    void* unk_struct_size_0x2c;
+    void* unk_struct_size_0x40_ptr;
     enum room_id new_room_id;
     undefined4 new_coord_x;
     undefined4 new_coord_y;
-    unsigned int  new_face_angle;
+    unsigned int new_face_angle;
     int field30_0x78;
-    int *field31_0x7c;
-    int *field32_0x80;
+    int* field31_0x7c;
+    int* field32_0x80;
     int field33_0x84;
     int field34_0x88;
-    unsigned int  field35_0x8c;
-    unsigned int  field36_0x90;
+    unsigned int field35_0x8c;
+    unsigned int field36_0x90;
     int field37_0x94;
     char field38_0x98;
     undefined field39_0x99;
@@ -101,14 +101,14 @@ struct c_field_scene {
     undefined field86_0xd5;
     undefined field87_0xd6;
     undefined field88_0xd7;
-    struct unk_struct_size_0x5e4 *unk_struct_size_0x5e4_ptr;
-    void *unk_struct_size_0xc4_ptr;
-    struct ov_00_unk_struct_size_0x1c *unk_struct_size_0x1c_ptr;
-    void *unk_struct_size_0x4_ptr;
-    void *unk_struct_size_0x14_ptr_2;
+    struct unk_struct_size_0x5e4* unk_struct_size_0x5e4_ptr;
+    void* unk_struct_size_0xc4_ptr;
+    struct ov_00_unk_struct_size_0x1c* unk_struct_size_0x1c_ptr;
+    void* unk_struct_size_0x4_ptr;
+    void* unk_struct_size_0x14_ptr_2;
     undefined4 field94_0xec;
     int field95_0xf0;
-    struct unk_struct_size_0x98 *field96_0xf4;
+    struct unk_struct_size_0x98* field96_0xf4;
     int8_t field97_0xf8;
     int8_t field98_0xf9;
     char field99_0xfa;
@@ -197,8 +197,8 @@ struct c_field_scene {
 };
 // formerly ov_04_unk_struct
 struct c_letter_scene {
-    void *vftable_ptr;
-    struct megastruct *megastruct_ptr;
+    void* vftable_ptr;
+    struct megastruct* megastruct_ptr;
     int field2_0x8;
     undefined field3_0xc;
     undefined field4_0xd;
@@ -244,7 +244,7 @@ struct ov_11_unk_struct_0x18 {
     undefined field13_0xd;
     undefined field14_0xe;
     undefined field15_0xf;
-    struct megastruct *megastruct_ptr;
+    struct megastruct* megastruct_ptr;
     undefined4 unk_0x14;
 };
 ASSERT_SIZE(struct ov_11_unk_struct_0x18, 0x18);
@@ -328,9 +328,9 @@ struct ov_11_unk_struct_0x4e4 {
     undefined field1232_0x4d5;
     undefined field1233_0x4d6;
     undefined field1234_0x4d7;
-    struct ov_11_unk_struct_0x18 *struct_0x18_ptr;
-    struct megastruct *megastruct_ptr;
-    struct ov_11_unk_struct_0x730 *maybe_parent;
+    struct ov_11_unk_struct_0x18* struct_0x18_ptr;
+    struct megastruct* megastruct_ptr;
+    struct ov_11_unk_struct_0x730* maybe_parent;
 };
 ASSERT_SIZE(struct ov_11_unk_struct_0x4e4, 0x4e4);
 
@@ -416,8 +416,8 @@ struct ov_11_unk_struct_0x198 {
     undefined field70_0x46;
     undefined field71_0x47;
     undefined4 unk_0x48;
-    undefined *unk_0x4c; // 0x1400 heap-alloc bytes
-    undefined *unk_0x50; // 0xf000 heap-alloc bytes
+    undefined* unk_0x4c; // 0x1400 heap-alloc bytes
+    undefined* unk_0x50; // 0xf000 heap-alloc bytes
     undefined field75_0x54;
     undefined field76_0x55;
     undefined field77_0x56;
@@ -426,9 +426,9 @@ struct ov_11_unk_struct_0x198 {
     undefined field80_0x59;
     undefined field81_0x5a;
     undefined field82_0x5b;
-    undefined *unk_0x5c; // (supposedly) 0x2700 heap-alloc bytes
-    undefined *unk_0x60; // 0x30 heap-alloc bytes
-    undefined *unk_0x64; // 0x30 heap-alloc bytes
+    undefined* unk_0x5c; // (supposedly) 0x2700 heap-alloc bytes
+    undefined* unk_0x60; // 0x30 heap-alloc bytes
+    undefined* unk_0x64; // 0x30 heap-alloc bytes
     undefined field86_0x68;
     undefined field87_0x69;
     undefined field88_0x6a;
@@ -721,14 +721,14 @@ struct ov_11_unk_struct_0x198 {
     undefined field375_0x191;
     undefined field376_0x192;
     undefined field377_0x193;
-    struct ov_11_unk_struct_0x730 *struct_0x730_ptr;
+    struct ov_11_unk_struct_0x730* struct_0x730_ptr;
 };
 ASSERT_SIZE(struct ov_11_unk_struct_0x198, 0x198);
 
 struct ov_11_unk_struct_0x3ec {
-    struct ov_11_unk_struct_0x1e24 * struct_0x1e24_ptr;
+    struct ov_11_unk_struct_0x1e24* struct_0x1e24_ptr;
     undefined field1_0x4[944];
-    struct ov_11_unk_struct_0x730 *parent;
+    struct ov_11_unk_struct_0x730* parent;
     undefined field946_0x3b8;
     undefined field947_0x3b9;
     undefined field948_0x3ba;
@@ -743,11 +743,11 @@ struct ov_11_unk_struct_0x3ec {
     undefined field957_0x3d5;
     undefined field958_0x3d6;
     undefined field959_0x3d7;
-    struct ov_11_unk_struct_0x730 *parent_again;
-    undefined2 *unk_0x3dc;
-    undefined2 *unk_0x3e0;
-    undefined2 *unk_0x3e4;
-    struct megastruct *megastruct_ptr;
+    struct ov_11_unk_struct_0x730* parent_again;
+    undefined2* unk_0x3dc;
+    undefined2* unk_0x3e0;
+    undefined2* unk_0x3e4;
+    struct megastruct* megastruct_ptr;
 };
 ASSERT_SIZE(struct ov_11_unk_struct_0x3ec, 0x3ec);
 
@@ -756,13 +756,13 @@ struct ov_11_unk_struct_0x730 {
     undefined2 unk_0x2;
     undefined2 unk_0x4;
     undefined2 unk_0x6;
-    undefined *unk_0x8; // heap-alloc
-    undefined *unk_0xc; // heap-alloc
-    undefined *unk_0x10; // heap-alloc
-    undefined *unk_0x14; // heap-alloc
+    undefined* unk_0x8;  // heap-alloc
+    undefined* unk_0xc;  // heap-alloc
+    undefined* unk_0x10; // heap-alloc
+    undefined* unk_0x14; // heap-alloc
     undefined4 unk_0x18;
-    undefined *unk_0x1c; // heap-alloc
-    undefined *unk_0x20; // heap-alloc
+    undefined* unk_0x1c; // heap-alloc
+    undefined* unk_0x20; // heap-alloc
     undefined field16_0x24;
     undefined field17_0x25;
     undefined field18_0x26;
@@ -789,17 +789,17 @@ struct ov_11_unk_struct_0x730 {
     undefined field39_0x3f;
     int unk_0x40;
     undefined4 maybe_field_data_ptr;
-    undefined *unk_0x48[22]; // heap-alloc
+    undefined* unk_0x48[22]; // heap-alloc
     int field43_0xa0;
     int field44_0xa4;
-    undefined *unk_0xa8; // heap-alloc
-    undefined *unk_0xac; // heap-alloc
-    undefined *unk_0xb0; // heap-alloc
-    undefined *unk_0xb4; // heap-alloc
+    undefined* unk_0xa8; // heap-alloc
+    undefined* unk_0xac; // heap-alloc
+    undefined* unk_0xb0; // heap-alloc
+    undefined* unk_0xb4; // heap-alloc
     undefined4 field49_0xb8;
     undefined4 field50_0xbc;
     undefined4 field51_0xc0;
-    undefined *unk_0xc4[3]; // heap-alloc
+    undefined* unk_0xc4[3]; // heap-alloc
     int field53_0xd0;
     undefined field54_0xd4;
     undefined field55_0xd5;
@@ -839,7 +839,7 @@ struct ov_11_unk_struct_0x730 {
     undefined field89_0x11d;
     undefined field90_0x11e;
     undefined field91_0x11f;
-    undefined1 *field92_0x120;
+    undefined1* field92_0x120;
     undefined field93_0x124;
     undefined field94_0x125;
     undefined field95_0x126;
@@ -932,7 +932,7 @@ struct ov_11_unk_struct_0x730 {
     undefined field791_0x52b;
     int field792_0x52c;
     undefined4 field793_0x530;
-    undefined *unk_0x534[8]; // heap-alloc
+    undefined* unk_0x534[8]; // heap-alloc
     undefined field181_0x554;
     undefined field182_0x555;
     undefined field183_0x556;
@@ -981,7 +981,7 @@ struct ov_11_unk_struct_0x730 {
     undefined field856_0x581;
     undefined field857_0x582;
     undefined field858_0x583;
-    undefined *unk_0x584[3]; // heap-alloc
+    undefined* unk_0x584[3]; // heap-alloc
     undefined field864_0x590;
     undefined field865_0x591;
     undefined field866_0x592;
@@ -1080,7 +1080,7 @@ struct ov_11_unk_struct_0x730 {
     undefined4 field959_0x604;
     int field960_0x608;
     int unk_0x60c[5];
-    undefined *unk_0x620; // heap-alloc
+    undefined* unk_0x620; // heap-alloc
     undefined field963_0x624;
     undefined field964_0x625;
     undefined field965_0x626;
@@ -1127,35 +1127,35 @@ struct ov_11_unk_struct_0x730 {
     undefined field1006_0x64f;
     int unk_0x650;
     undefined field1008_0x654[172];
-    undefined *unk_0x700; // heap-alloc
+    undefined* unk_0x700; // heap-alloc
     undefined field1181_0x704;
     undefined field1182_0x705;
     undefined field1183_0x706;
     undefined field1184_0x707;
-    undefined *unk_0x708; // heap-alloc
+    undefined* unk_0x708; // heap-alloc
     undefined4 field1186_0x70c;
     int unk_0x710;
-    struct ov_11_unk_struct_0x4e4 *struct_0x4e4_ptr;
-    struct ov_11_unk_struct_0x18 *struct_0x18_ptr;
-    struct ov_11_unk_struct_0x198 *struct_0x198_ptr;
-    struct ov_11_unk_struct_0x3ec *struct_0x3ec_ptr;
-    undefined *unk_0x724; // heap-alloc
-    struct unk_save_struct_0x74 *unk_save_0x74_ptr;
-    struct megastruct *megastruct_ptr;
+    struct ov_11_unk_struct_0x4e4* struct_0x4e4_ptr;
+    struct ov_11_unk_struct_0x18* struct_0x18_ptr;
+    struct ov_11_unk_struct_0x198* struct_0x198_ptr;
+    struct ov_11_unk_struct_0x3ec* struct_0x3ec_ptr;
+    undefined* unk_0x724; // heap-alloc
+    struct unk_save_struct_0x74* unk_save_0x74_ptr;
+    struct megastruct* megastruct_ptr;
 };
 ASSERT_SIZE(struct ov_11_unk_struct_0x730, 0x730);
 
 // formerly ov_11_unk_struct_0
 struct c_ranger_net_scene {
-    void *vftable_ptr;
-    struct megastruct *megastruct_ptr;
-    struct ov_11_unk_struct_0x730 *unk_struct_size_0x730;
+    void* vftable_ptr;
+    struct megastruct* megastruct_ptr;
+    struct ov_11_unk_struct_0x730* unk_struct_size_0x730;
 };
 ASSERT_SIZE(struct c_ranger_net_scene, 12);
 
 // formerly ov_11_unk_struct_1
 struct c_ranger_net_agb_scene {
-    void *vftable_ptr;
+    void* vftable_ptr;
     undefined field1_0x4;
     undefined field2_0x5;
     undefined field3_0x6;
@@ -1885,15 +1885,15 @@ struct ov_09_unk_struct_0x58 {
     undefined field7_0xe;
     undefined field8_0xf;
     undefined4 field9_0x10;
-    struct unk_map_struct_size_0x68 *unk_map_struct_size_0x68_ptr;
-    void *unk_struct_size_0x7c_ptr;
+    struct unk_map_struct_size_0x68* unk_map_struct_size_0x68_ptr;
+    void* unk_struct_size_0x7c_ptr;
     undefined4 field12_0x1c;
-    void *unk_struct_size_0x4_ptr;
-    void *unk_struct_size_0x44_ptr_2;
+    void* unk_struct_size_0x4_ptr;
+    void* unk_struct_size_0x44_ptr_2;
     undefined4 field15_0x28;
     undefined4 field16_0x2c;
-    void *unk_struct_size_0x44_ptr_1;
-    void *unk_pointer_0x34;
+    void* unk_struct_size_0x44_ptr_1;
+    void* unk_pointer_0x34;
     undefined field19_0x38;
     undefined field20_0x39;
     undefined field21_0x3a;
@@ -1902,7 +1902,7 @@ struct ov_09_unk_struct_0x58 {
     undefined field24_0x3d;
     undefined field25_0x3e;
     undefined field26_0x3f;
-    void *unk_struct_offset_0x40;
+    void* unk_struct_offset_0x40;
     undefined4 field28_0x44;
     uint16_t field29_0x48;
     undefined2 field30_0x4a;
@@ -1911,7 +1911,7 @@ struct ov_09_unk_struct_0x58 {
     undefined field33_0x4e;
     undefined field34_0x4f;
     undefined4 field35_0x50;
-    struct megastruct *megastruct_ptr;
+    struct megastruct* megastruct_ptr;
 };
 
 struct ov_09_unk_struct {
@@ -3355,8 +3355,7 @@ struct ov_28_unk_struct {
 };
 ASSERT_SIZE(struct ov_28_unk_struct, 12);
 
-struct unk_struct_0x28 {
-};
+struct unk_struct_0x28 {};
 
 struct unk_struct_0x4c {
     int field0_0x0;
@@ -3369,7 +3368,7 @@ struct unk_struct_0x4c {
     int field7_0x14;
     int field8_0x18;
     int field9_0x1c;
-    void *unk_struct_size_0x600;
+    void* unk_struct_size_0x600;
     undefined field11_0x24;
     undefined field12_0x25;
     undefined field13_0x26;
@@ -3434,8 +3433,8 @@ struct unk_struct_off_0x146c {
 };
 
 struct unk_struct_size_0x40 {
-    struct group_msg_wrapper_table *group_msg_wrapper_table_ptr;
-    struct nns_g2d_font *font_substruct_ptr;
+    struct group_msg_wrapper_table* group_msg_wrapper_table_ptr;
+    struct nns_g2d_font* font_substruct_ptr;
     undefined4 field2_0x8;
     undefined4 field3_0xc;
     undefined field4_0x10;
@@ -3489,8 +3488,8 @@ struct unk_struct_size_0x40 {
 };
 
 struct unk_struct_size_0x44 {
-    struct group_msg_wrapper_table *group_msg_wrapper_table_ptr;
-    struct nns_g2d_font *unk_font_substruct_ptr;
+    struct group_msg_wrapper_table* group_msg_wrapper_table_ptr;
+    struct nns_g2d_font* unk_font_substruct_ptr;
     undefined4 field2_0x8;
     undefined4 field3_0xc;
     undefined4 field4_0x10;
@@ -3564,7 +3563,7 @@ struct unk_struct_size_0x6c_weird {
     undefined field16_0x15;
     undefined field17_0x16;
     undefined field18_0x17;
-    struct unk_struct_size_0xac *field19_0x18;
+    struct unk_struct_size_0xac* field19_0x18;
     undefined field20_0x1c;
     undefined field21_0x1d;
     undefined field22_0x1e;
@@ -3598,7 +3597,7 @@ struct unk_struct_size_0x6c_weird {
     undefined field50_0x49;
     undefined field51_0x4a;
     undefined field52_0x4b;
-    undefined4 *field53_0x4c;
+    undefined4* field53_0x4c;
     undefined field54_0x50;
     undefined field55_0x51;
     undefined field56_0x52;
@@ -3611,7 +3610,7 @@ struct unk_struct_size_0x6c_weird {
     undefined field63_0x62;
     undefined field64_0x63;
     undefined4 field65_0x64;
-    struct megastruct *megastruct_ptr;
+    struct megastruct* megastruct_ptr;
 };
 
 struct unk_struct_size_0x78 {
@@ -3630,12 +3629,12 @@ struct unk_struct_size_0x78 {
     undefined field12_0x5d;
     undefined field13_0x5e;
     undefined field14_0x5f;
-    struct file_wrapper *unk_BGS0_file_wrapper_ptr;
-    struct file_wrapper *unk_BGS1_file_wrapper_ptr;
+    struct file_wrapper* unk_BGS0_file_wrapper_ptr;
+    struct file_wrapper* unk_BGS1_file_wrapper_ptr;
     undefined4 field17_0x68;
     undefined4 field18_0x6c;
     undefined4 field19_0x70;
-    struct msg_wrapper *menu_msg_wrapper;
+    struct msg_wrapper* menu_msg_wrapper;
 };
 
 // I don't think we know the real size? 0xdc is probably an offset.
@@ -4024,7 +4023,7 @@ struct mystery_struct_0xdc {
     undefined field381_0x181;
     undefined field382_0x182;
     undefined field383_0x183;
-    undefined4 *unk_struct_ptr_0x184;
+    undefined4* unk_struct_ptr_0x184;
     undefined field385_0x188;
     undefined field386_0x189;
     undefined field387_0x18a;
@@ -5727,7 +5726,7 @@ struct unk_struct_size_0x80 {
     undefined field70_0x49;
     undefined field71_0x4a;
     undefined field72_0x4b;
-    struct file_wrapper *map_script_file_wrapper;
+    struct file_wrapper* map_script_file_wrapper;
     undefined4 field74_0x50;
     undefined1 field75_0x54;
     undefined field76_0x55;
@@ -5765,12 +5764,12 @@ struct unk_struct_size_0x80 {
     undefined field108_0x75;
     undefined field109_0x76;
     undefined field110_0x77;
-    struct script_file *map_script_file;
+    struct script_file* map_script_file;
     undefined4 field112_0x7c;
 };
 
 struct unk_struct_size_0x64 {
-    struct megastruct *megastruct_ptr;
+    struct megastruct* megastruct_ptr;
     undefined4 field1_0x4;
     undefined1 field2_0x8;
     undefined field3_0x9;
@@ -5849,7 +5848,7 @@ struct unk_struct_size_0x64 {
 };
 
 struct unk_struct_size_0x5e4 {
-    undefined *field0_0x0;
+    undefined* field0_0x0;
     undefined field1_0x4;
     undefined field2_0x5;
     undefined field3_0x6;
@@ -6234,8 +6233,8 @@ struct unk_struct_size_0x5e4 {
     undefined field382_0x181;
     undefined field383_0x182;
     undefined field384_0x183;
-    struct megastruct *megastruct_ptr;
-    struct audio_engine *unk_struct_size_0x1ac_ptr; // pointer copied from megastruct!
+    struct megastruct* megastruct_ptr;
+    struct audio_engine* unk_struct_size_0x1ac_ptr; // pointer copied from megastruct!
     undefined4 field387_0x18c;
     undefined field388_0x190;
     undefined field389_0x191;
@@ -7165,18 +7164,18 @@ struct unk_struct_size_0x5e4 {
     undefined field1313_0x5c5;
     undefined field1314_0x5c6;
     undefined field1315_0x5c7;
-    void *unk_struct_size_0x18_ptr_table[7];
+    void* unk_struct_size_0x18_ptr_table[7];
 };
 
 struct unk_struct_size_0x98 {
-    void *field0_0x0;
+    void* field0_0x0;
     int field1_0x4;
-    void *unk_struct_ptr_table_0x8; // See 0x202e330 for interesting debug prints.
+    void* unk_struct_ptr_table_0x8; // See 0x202e330 for interesting debug prints.
     undefined1 field3_0xc;
     undefined field4_0xd;
     undefined field5_0xe;
     undefined field6_0xf;
-    void *field7_0x10;
+    void* field7_0x10;
     undefined field8_0x14;
     undefined field9_0x15;
     undefined field10_0x16;
@@ -7295,7 +7294,7 @@ struct unk_struct_size_0x98 {
     undefined field123_0x8d;
     undefined field124_0x8e;
     undefined field125_0x8f;
-    struct c_field_scene *field126_0x90;
+    struct c_field_scene* field126_0x90;
     int field127_0x94;
 };
 
@@ -7351,7 +7350,7 @@ struct unk_struct_size_0xac {
     undefined4 field48_0x30;
     undefined4 field49_0x34;
     undefined4 field50_0x38;
-    void *unk_struct_size_0x64_ptr_table[3];
+    void* unk_struct_size_0x64_ptr_table[3];
     undefined4 field52_0x48;
     undefined4 field53_0x4c;
     undefined4 field54_0x50;
@@ -7432,9 +7431,8 @@ struct unk_struct_size_0xac {
     undefined field129_0xa2;
     undefined field130_0xa3;
     undefined4 unk_struct_size_0x4_ptr;
-    struct megastruct *megastruct_ptr;
+    struct megastruct* megastruct_ptr;
 };
-
 
 struct unk_map_struct_size_0x68 { // Common to all overlays that use the world map for something
     undefined2 field0_0x0;
@@ -7446,10 +7444,10 @@ struct unk_map_struct_size_0x68 { // Common to all overlays that use the world m
     undefined4 unk_struct_0x44_ptr_1;
     undefined4 unk_struct_size_0x44_ptr_2;
     undefined4 unk_struct_size_0x44_ptr_3;
-    void *unk_struct_size_0x1bc_ptr;
+    void* unk_struct_size_0x1bc_ptr;
     undefined4 unk_struct_size_0x64_ptr;
     int field11_0x24;
-    void *unk_ptr_table_0x28[5];
+    void* unk_ptr_table_0x28[5];
     undefined field13_0x3c;
     undefined field14_0x3d;
     undefined field15_0x3e;
@@ -7478,7 +7476,7 @@ struct unk_map_struct_size_0x68 { // Common to all overlays that use the world m
     undefined field38_0x5b;
     undefined4 field39_0x5c;
     undefined4 field40_0x60;
-    struct megastruct *megastruct_ptr;
+    struct megastruct* megastruct_ptr;
 };
 
 #endif

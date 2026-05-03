@@ -2,7 +2,7 @@
 #define HEADERS_TYPES_COMMON_SAVE_H_
 
 struct c_backup {
-    void **c_backup_vftable_ptr;
+    void** c_backup_vftable_ptr;
     undefined4 card_lock_id;
     undefined4 lock_id;
     undefined4 card_available;
@@ -36,46 +36,46 @@ struct c_backup_sync {
 ASSERT_SIZE(struct c_backup_sync, 40);
 
 struct save_pokemon_field {
-    struct pokemon_data *pointer;
+    struct pokemon_data* pointer;
     unsigned int size; // Always 0x18
 };
 ASSERT_SIZE(struct save_pokemon_field, 8);
 
 struct save_follower_field {
-    struct following_npc *pointer;
+    struct following_npc* pointer;
     unsigned int size; // Always 0x38
 };
 ASSERT_SIZE(struct save_follower_field, 8);
 
 struct save_ranger_data_field {
-    struct ranger_data *pointer;
+    struct ranger_data* pointer;
     unsigned int size; // Always 0x8804
 };
 ASSERT_SIZE(struct save_ranger_data_field, 8);
 
 struct save_mission_quest_header_field {
-    struct mission_quest_header *pointer; // points to the header!!!
-    unsigned int size; // Always size 0x54
+    struct mission_quest_header* pointer; // points to the header!!!
+    unsigned int size;                    // Always size 0x54
 };
 ASSERT_SIZE(struct save_mission_quest_header_field, 8);
 
 struct save_settings_variables_field {
-    struct settings_and_variables *pointer;
+    struct settings_and_variables* pointer;
     unsigned int size; // Always size 0xFC
 };
 ASSERT_SIZE(struct save_settings_variables_field, 8);
 
 // For unknown save field types.
 struct save_field {
-    void *field_ptr;
+    void* field_ptr;
     unsigned int field_size;
 };
 ASSERT_SIZE(struct save_field, 8);
 
 struct save_block_fields {
     struct save_ranger_data_field ranger_data;
-    struct save_pokemon_field land_pokemon[8]; // Excludes slots 9 and 10
-    struct save_pokemon_field ocean_pokemon[8]; // Excludes slots 9 and 10
+    struct save_pokemon_field land_pokemon[8];         // Excludes slots 9 and 10
+    struct save_pokemon_field ocean_pokemon[8];        // Excludes slots 9 and 10
     struct save_pokemon_field capture_zone_pokemon[8]; // Excludes slots 9 and 10
     struct save_follower_field following_npcs[2];
     struct save_mission_quest_header_field mission_quest_header;
@@ -145,7 +145,7 @@ struct save_file {
 ASSERT_SIZE(struct save_file, 188036);
 
 struct unk_save_struct_0x74 {
-    struct c_backup *field0_0x0;
+    struct c_backup* field0_0x0;
     struct c_backup c_backup;
     struct c_backup_sync c_backup_sync;
     int field3_0x40;
@@ -162,13 +162,13 @@ struct unk_save_struct_0x74 {
     uint16_t field14_0x50;
     undefined2 field15_0x52;
     int field16_0x54;
-    struct file_wrapper *unk_file_wrapper_ptr;
+    struct file_wrapper* unk_file_wrapper_ptr;
     int field18_0x5c;
     int field19_0x60;
     int8_t field20_0x64;
     undefined field21_0x65;
     uint16_t field22_0x66;
-    void *field23_0x68;
+    void* field23_0x68;
     int field24_0x6c;
     int field25_0x70;
 };
