@@ -71,7 +71,7 @@ overlay10:
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
         
-        No params.  
+        No params.
   data:
     - name: OV10_STATIC_INITIALIZER
       address:

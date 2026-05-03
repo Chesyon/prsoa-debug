@@ -49,7 +49,7 @@ arm9:
     - name: NitroMain
       address:
         NA: 0x2000C6C
-      description: Entrypoint into NitroSDK, the DS devkit library.
+      description: "Entrypoint into NitroSDK, the DS devkit library."
     - name: ret_0200120c
       address:
         NA: 0x200120C
