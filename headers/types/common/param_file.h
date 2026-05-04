@@ -13,7 +13,7 @@ struct param_file_data {
     struct file_wrapper* file_wrapper_ptr;
     struct param_file_header* param_file_header_ptr;
     undefined4 unk_megastruct_field_0x14a8;
-    struct param_encoding_8* param_encoding_ptr; // Created by Rename Structure Field action
+    struct param_encoding_8* param_encoding_ptr;
     undefined4* ram_table_expanded_ptr;
     int param_encoding_size;
     int ram_table_size;
@@ -94,9 +94,9 @@ ASSERT_SIZE(struct battle_assist_entry_rom, 50);
 // File structure of "param/BattleAssist.bin" and "param/BattleAssistPartner.bin"
 #pragma pack(push, 1) // This is usually stored as a 5042 byte struct.
 struct battle_assist_bin {
-    struct param_file_header header;
-    struct param_encoding_8 encodings[26];
-    struct battle_assist_entry_rom battle_assist_entries[100];
+    struct param_file_header header; // 0x0
+    struct param_encoding_8 encodings[26]; // 0x10
+    struct battle_assist_entry_rom battle_assist_entries[100]; // 0x2A
 };
 ASSERT_SIZE(struct battle_assist_bin, 5042);
 #pragma pack(pop) // Restore alignment
@@ -202,7 +202,7 @@ struct battle_pokemon_table_wrapper {
 };
 ASSERT_SIZE(struct battle_pokemon_table_wrapper, 8);
 
-#pragma pack(push, 1) // This is struct has intentionally bad alignment.
+#pragma pack(push, 1) // This struct has intentionally bad alignment.
 struct battle_pokemon_entry_rom {
     int8_t field0_0x0;
     int16_t friendship_gauge;
@@ -229,7 +229,7 @@ struct battle_pokemon_entry_rom {
 #pragma pack(pop) // Restore alignment
 ASSERT_SIZE(struct battle_pokemon_entry_rom, 24);
 
-#pragma pack(push, 1) // This is struct has intentionally bad alignment.
+#pragma pack(push, 1) // This struct has intentionally bad alignment.
 // File structure of "param/BattlePokemon.bin"
 struct battle_pokemon_bin {
     struct param_file_header header;
@@ -246,6 +246,7 @@ struct disk_hp_table_wrapper {
     undefined field2_0x2;
     undefined field3_0x3;
     // Unlike the others, this is NOT a disk_hp_entry_ram pointer!
+    // See poke_id_table_wrapper for reference, which has a poke_id_entry_ram pointer at this address.
     int8_t* unk_byte_a_table_0x4;
     int16_t* unk_hword_b_table_0x8;
     int16_t* unk_hword_c_table_0xC;

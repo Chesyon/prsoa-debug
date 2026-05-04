@@ -1281,7 +1281,7 @@ enum npc_sprite {
     NPC_MISMAGIUS = 0x9F,
     NPC_INFERNAPE = 0xA0
 };
-// A subset of this enum is rarely stored as an 8-bit integer.
+// A subset of this enum is rarely stored as an 16-bit integer.
 #pragma pack(push, 1)
 ENUM_16_BIT(npc_sprite);
 #pragma pack(pop)
