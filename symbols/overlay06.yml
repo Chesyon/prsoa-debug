@@ -41,3 +41,15 @@ overlay6:
       length:
         NA: 0xC
       description: Basic information for the COptionScene class. This class is a single-inheritance class.
+    - name: C_OPTION_SCENE_VFTABLE
+      address:
+        NA: 0x211DC7C
+      length:
+        NA: 0x34
+      description: Virtual function table for the COptionScene class.
+    - name: C_OPTION_SCENE_VFTABLE_FUNCS
+      address:
+        NA: 0x211DC84
+      length:
+        NA: 0x2C
+      description: Function pointers of the COptionScene class vftable.

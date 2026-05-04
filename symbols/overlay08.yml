@@ -47,3 +47,15 @@ overlay8:
       length:
         NA: 0xC
       description: Basic information for the CMissionQuestScene class. This class is a single-inheritance class.
+    - name: C_MISSION_QUEST_SCENE_VFTABLE
+      address:
+        NA: 0x211E404
+      length:
+        NA: 0x34
+      description: Virtual function table for the CMissionQuestScene class.
+    - name: C_MISSION_QUEST_SCENE_VFTABLE_FUNCS
+      address:
+        NA: 0x211E40C
+      length:
+        NA: 0x2C
+      description: Function pointers of the CMissionQuestScene class vftable.
