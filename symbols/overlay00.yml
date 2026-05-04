@@ -13,7 +13,7 @@ overlay0:
     JP: 0x5E740
   description: |-
     The main field mode overlay, responsible for overworlds and cutscenes.
-
+        
     The scene class is named "Field" internally.
   functions:
     - name: CFieldSceneConstructor
@@ -22,7 +22,7 @@ overlay0:
       description: |-
         Constructor of the CFieldScene class.
         The sole entry point of overlay_00, tasked with creating the respective overlay struct.
-
+        
         r0: ov_00_unk_struct pointer
         r1: megastruct pointer
     - name: CFieldSceneCompleteDestructor
@@ -32,7 +32,7 @@ overlay0:
       description: |-
         Destructor of the CFieldScene class.
         This is a complete object destructor.
-
+        
         r0: ov_00_unk_struct pointer
     - name: CFieldSceneDeletingDestructor
 #      namespace: c_field_scene
@@ -41,14 +41,14 @@ overlay0:
       description: |-
         Destructor of the CFieldScene class.
         This is a deleting destructor.
-
+        
         r0: ov_00_unk_struct pointer
     - name: ret_0211e958
       address:
         NA: 0x211E958
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-
+        
         No params.
     - name: AddEnemyFormToEncounterType2
       address:
@@ -65,7 +65,7 @@ overlay0:
         NA: 0x2124BD4
       description: |-
         Seems to run immediately before the actual entry point. Called by SetGameState.
-
+        
         r0: undefined4
         r1: megastruct pointer
         r2: undefined4
@@ -75,7 +75,7 @@ overlay0:
         NA: 0x2124D98
       description: |-
         Seems to open and initialize a file of the form: "data/Script/field/map/%s".
-
+        
         r0: unk_struct_size_0x80 pointer
         r1: int32_t
     - name: ret_02125334
@@ -84,14 +84,14 @@ overlay0:
         NA: 0x2125334
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-
+        
         No params.
     - name: MaybeOpenAndInitMapDatAndTexFiles
       address:
         NA: 0x2125D28
       description: |-
         Seems to open and initialize a file of the form: "data/field/map/%s.map.lz", "data/field/map/%s.map.dat.lz", or "data/field/map/%s.map.tex.lz".
-
+        
         r0: unk_struct_size_0x80 pointer
         r1: undefined4
         r2: char pointer. Maybe a file name?
@@ -102,7 +102,7 @@ overlay0:
         NA: 0x21266AC
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-
+        
         No params.
     - name: ret_021266b0
 #      namespace: c_field_map_layer_base
@@ -110,7 +110,7 @@ overlay0:
         NA: 0x21266B0
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-
+        
         No params.
     - name: ret_021266c4
 #      namespace: c_field_map_layer_base
@@ -118,7 +118,7 @@ overlay0:
         NA: 0x21266C4
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-
+        
         No params.
     - name: ret_021266c8
 #      namespace: c_field_map_layer_character_priority
@@ -126,21 +126,21 @@ overlay0:
         NA: 0x21266C8
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-
+        
         No params.
     - name: ret_0213524c
       address:
         NA: 0x213524C
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-
+        
         No params.
     - name: MaybeOpenAndInitTargetClearScript
       address:
         NA: 0x213E3E4
       description: |-
         Seems to open, init, and process a script file of the form "data/Script/field/poketargetclear/ptc%03d_%02d.fsb" into a struct.
-
+        
         r0: void pointer
         r1: int32_t
         r2: int32_t
@@ -149,7 +149,7 @@ overlay0:
         NA: 0x2141F88
       description: |-
         Seems to be used exclusively by FUN_overlay_00__021420ac to open, init, and process a script file of the form "data/Script/field/targetobject/to%02d/TargetObject%03d.fsb" or "data/Script/field/targettouch/tt%02d/TargetTouch%03d.fsb"
-
+        
         r0: unknown struct
         r1: file name
         r2: undefined2
@@ -159,7 +159,7 @@ overlay0:
         NA: 0x214234C
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-
+        
         No params.
     - name: ret_02142398
 #      namespace: c_field_effect
@@ -167,7 +167,7 @@ overlay0:
         NA: 0x2142398
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-
+        
         No params.
     - name: ret_021427ec
 #      namespace: c_field_effect_factory
@@ -175,7 +175,7 @@ overlay0:
         NA: 0x21427EC
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-
+        
         No params.
     - name: ret_02142ab0
 #      namespace: c_field_effect_factory
@@ -183,7 +183,7 @@ overlay0:
         NA: 0x2142AB0
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-
+        
         No params.
     - name: ret_0214340c
 #      namespace: c_field_effect_factory
@@ -191,7 +191,7 @@ overlay0:
         NA: 0x214340C
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-
+        
         No params.
     - name: ret_02143ae0
 #      namespace: c_field_effect_manage_c_resident_resource
@@ -199,7 +199,7 @@ overlay0:
         NA: 0x2143AE0
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-
+        
         No params.
     - name: ret_02144368
 #      namespace: c_field_effect_water_gun_c_emitter
@@ -207,7 +207,7 @@ overlay0:
         NA: 0x2144368
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-
+        
         No params.
     - name: ret_0214436c
 #      namespace: c_field_effect_water_gun_c_animator
@@ -215,7 +215,7 @@ overlay0:
         NA: 0x214436C
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-
+        
         No params.
     - name: ret_02145108
 #      namespace: c_field_effect_water_gun_factory
@@ -223,7 +223,7 @@ overlay0:
         NA: 0x2145108
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-
+        
         No params.
     - name: ret_02145134
 #      namespace: t_field_particle_emitter_c_software_sprite
@@ -231,7 +231,7 @@ overlay0:
         NA: 0x2145134
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-
+        
         No params.
     - name: ret_02145138
 #      namespace: t_field_particle_emitter_c_software_sprite
@@ -239,7 +239,7 @@ overlay0:
         NA: 0x2145138
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-
+        
         No params.
     - name: ret_02145804
 #      namespace: c_field_effect_bullet_factory
@@ -247,7 +247,7 @@ overlay0:
         NA: 0x2145804
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-
+        
         No params.
     - name: ret_02145b4c
 #      namespace: c_field_effect_sand_burial_cfp_emitter_sand_burial
@@ -255,7 +255,7 @@ overlay0:
         NA: 0x2145B4C
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-
+        
         No params.
     - name: ret_02145b50
 #      namespace: c_field_effect_sand_burial_cfp_force_field_sand_burial
@@ -263,7 +263,7 @@ overlay0:
         NA: 0x2145B50
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-
+        
         No params.
     - name: ret_02146168
 #      namespace: c_field_effect_sand_burial_factory
@@ -271,7 +271,7 @@ overlay0:
         NA: 0x2146168
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-
+        
         No params.
     - name: ret_021464bc
 #      namespace: c_field_effect_charge
@@ -279,7 +279,7 @@ overlay0:
         NA: 0x21464BC
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-
+        
         No params.
     - name: ret_02146698
 #      namespace: c_field_effect_charge_factory
@@ -287,7 +287,7 @@ overlay0:
         NA: 0x2146698
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-
+        
         No params.
     - name: ret_02146a18
 #      namespace: c_field_effect_flash
@@ -295,7 +295,7 @@ overlay0:
         NA: 0x2146A18
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-
+        
         No params.
     - name: ret_02146b20
 #      namespace: c_field_effect_flash_factory
@@ -303,7 +303,7 @@ overlay0:
         NA: 0x2146B20
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-
+        
         No params.
     - name: ret_02146f60
 #      namespace: c_field_effect_fogcut_cfp_emitter_fogcut
@@ -311,7 +311,7 @@ overlay0:
         NA: 0x2146F60
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-
+        
         No params.
     - name: ret_02146f64
 #      namespace: c_field_effect_fogcut_cfp_force_field_fogcut
@@ -319,7 +319,7 @@ overlay0:
         NA: 0x2146F64
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-
+        
         No params.
     - name: ret_02147564
 #      namespace: c_field_effect_fogcut
@@ -327,7 +327,7 @@ overlay0:
         NA: 0x2147564
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-
+        
         No params.
     - name: ret_02147634
 #      namespace: c_field_effect_fogcut_factory
@@ -335,7 +335,7 @@ overlay0:
         NA: 0x2147634
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-
+        
         No params.
     - name: ret_02147a74
 #      namespace: c_field_effect_flower_storm_cfp_emitter_flower_storm
@@ -343,7 +343,7 @@ overlay0:
         NA: 0x2147A74
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-
+        
         No params.
     - name: ret_02147a78
 #      namespace: c_field_effect_flower_storm_cfp_force_field_flower_storm
@@ -351,7 +351,7 @@ overlay0:
         NA: 0x2147A78
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-
+        
         No params.
     - name: ret_02147ffc
 #      namespace: c_field_effect_flower_storm
@@ -359,7 +359,7 @@ overlay0:
         NA: 0x2147FFC
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-
+        
         No params.
     - name: ret_021480cc
 #      namespace: c_field_effect_flower_storm_factory
@@ -367,154 +367,154 @@ overlay0:
         NA: 0x21480CC
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-
+        
         No params.
     - name: ret_021485c0
       address:
         NA: 0x21485C0
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-
+        
         No params.
     - name: ret_021485c4
       address:
         NA: 0x21485C4
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-
+        
         No params.
     - name: SetSysCallPage10
       address:
         NA: 0x21485C8
       description: |-
         Stores the pointer to SYSCALL_PAGE_10_OV_00 in slot 10 of SYSCALL_PAGE_PTRS.
-
+        
         No params.
     - name: SysCallReturnZero1000
       address:
         NA: 0x21485E0
       description: |-
         Syscall Function that always returns zero.
-
+        
         No params.
     - name: ret_02149118
       address:
         NA: 0x2149118
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-
+        
         No params.
     - name: ret_0214911c
       address:
         NA: 0x214911C
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-
+        
         No params.
     - name: SetSysCallPage11
       address:
         NA: 0x2149120
       description: |-
         Stores the pointer to SYSCALL_PAGE_11_OV_00 in slot 11 of SYSCALL_PAGE_PTRS.
-
+        
         No params.
     - name: SysCallReturnZero1100
       address:
         NA: 0x2149138
       description: |-
         Syscall Function that always returns zero.
-
+        
         No params.
     - name: ret_02149984
       address:
         NA: 0x2149984
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-
+        
         No params.
     - name: ret_02149988
       address:
         NA: 0x2149988
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-
+        
         No params.
     - name: SetSysCallPage12
       address:
         NA: 0x214998C
       description: |-
         Stores the pointer to SYSCALL_PAGE_12_OV_00 in slot 12 of SYSCALL_PAGE_PTRS.
-
+        
         No params.
     - name: SysCallReturnZero1200
       address:
         NA: 0x21499A4
       description: |-
         Syscall Function that always returns zero.
-
+        
         No params.
     - name: ret_02149a74
       address:
         NA: 0x2149A74
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-
+        
         No params.
     - name: ret_02149a78
       address:
         NA: 0x2149A78
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-
+        
         No params.
     - name: SetSysCallPage13
       address:
         NA: 0x2149A7C
       description: |-
         Stores the pointer to SYSCALL_PAGE_13_OV_00 in slot 13 of SYSCALL_PAGE_PTRS.
-
+        
         No params.
     - name: SysCallReturnZero1300
       address:
         NA: 0x2149A94
       description: |-
         Syscall Function that always returns zero.
-
+        
         No params.
     - name: ret_02149e58
       address:
         NA: 0x2149E58
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-
+        
         No params.
     - name: ret_02149e5c
       address:
         NA: 0x2149E5C
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-
+        
         No params.
     - name: SetSysCallPage14
       address:
         NA: 0x2149E60
       description: |-
         Stores the pointer to SYSCALL_PAGE_14_OV_00 in slot 14 of SYSCALL_PAGE_PTRS.
-
+        
         No params.
     - name: SysCallReturnZero1400
       address:
         NA: 0x2149E78
       description: |-
         Syscall Function that always returns zero.
-
+        
         No params.
     - name: SysCallMaybeCallsScriptFunctionByName
       address:
         NA: 0x2149E80
       description: |-
         Syscall function that seems to call a function by name from another loaded script.
-
+        
         r0: script stack ptr
         r1: unknown
     - name: SysCallInitCombatType2
@@ -522,7 +522,7 @@ overlay0:
         NA: 0x2149ED0
       description: |-
         Syscall function that seems to initialize a battle differently than SysCallInitCombatType1.
-
+        
         r0: script stack ptr
         r1: unknown
     - name: TryMountPokemon
@@ -530,14 +530,14 @@ overlay0:
         NA: 0x214A138
       description: |-
         Seems to handle mounting a specified pokemon. Seems to take a pokemon_data pointer.
-
+        
         r0: pokemon_data pointer
     - name: SysCallRetrievePokemonByFormId
       address:
         NA: 0x214A5D4
       description: |-
         Syscall function for RetrievePokemonByFormId.
-
+        
         r0: script stack ptr
         r1: unknown
     - name: SysCallGetFlyDestinationRoom
@@ -545,385 +545,385 @@ overlay0:
         NA: 0x214ABE4
       description: |-
         Syscall Function that retrieves the destination room_id for flying on Staraptor.
-
+        
         No params.
     - name: SysCallGetFlyXCoord
       address:
         NA: 0x214AC00
       description: |-
         Syscall Function that retrieves the destination x coordinate for flying on Staraptor.
-
+        
         No params.
     - name: SysCallGetFlyYCoord
       address:
         NA: 0x214AC1C
       description: |-
         Syscall Function that retrieves the destination y coordinate for flying on Staraptor.
-
+        
         No params.
     - name: ret_0214b6f0
       address:
         NA: 0x214B6F0
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-
+        
         No params.
     - name: ret_0214b6f4
       address:
         NA: 0x214B6F4
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-
+        
         No params.
     - name: SetSysCallPage16
       address:
         NA: 0x214B6F8
       description: |-
         Stores the pointer to SYSCALL_PAGE_16_OV_00 in slot 16 of SYSCALL_PAGE_PTRS.
-
+        
         No params.
     - name: SysCallReturnZero1600
       address:
         NA: 0x214B710
       description: |-
         Syscall Function that always returns zero.
-
+        
         No params.
     - name: ret_0214b93c
       address:
         NA: 0x214B93C
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-
+        
         No params.
     - name: ret_0214b940
       address:
         NA: 0x214B940
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-
+        
         No params.
     - name: SetSysCallPage15
       address:
         NA: 0x214B944
       description: |-
         Stores the pointer to SYSCALL_PAGE_15_OV_00 in slot 15 of SYSCALL_PAGE_PTRS.
-
+        
         No params.
     - name: SysCallReturnZero1500
       address:
         NA: 0x214B95C
       description: |-
         Syscall Function that always returns zero.
-
+        
         No params.
     - name: SysCallReturnZero1501
       address:
         NA: 0x214B964
       description: |-
         Syscall Function that always returns zero.
-
+        
         No params.
     - name: SysCallReturnZero1502
       address:
         NA: 0x214B96C
       description: |-
         Syscall Function that always returns zero.
-
+        
         No params.
     - name: SysCallReturnZero1503
       address:
         NA: 0x214B974
       description: |-
         Syscall Function that always returns zero.
-
+        
         No params.
     - name: SysCallReturnZero1504
       address:
         NA: 0x214B97C
       description: |-
         Syscall Function that always returns zero.
-
+        
         No params.
     - name: GetStylerLevel
       address:
         NA: 0x214C0C0
       description: |-
         Retrieves the current player styler level.
-
+        
         No params.
     - name: GetPartner1Status
       address:
         NA: 0x214D814
       description: |-
         Returns true if partner 1 is unlocked, and false otherwise.
-
+        
         No params.
     - name: SetPartner1Status
       address:
         NA: 0x214D830
       description: |-
         Assigns the status of partner 1 to "Met" or "Not Met".
-
+        
         r0: bool
     - name: GetPartner2Status
       address:
         NA: 0x214D860
       description: |-
         Returns true if partner 2 is unlocked, and false otherwise.
-
+        
         No params.
     - name: SetPartner2Status
       address:
         NA: 0x214D87C
       description: |-
         Assigns the status of partner 2 to "Met" or "Not Met".
-
+        
         r0: bool
     - name: GetPartner3Status
       address:
         NA: 0x214D8AC
       description: |-
         Returns true if partner 3 is unlocked, and false otherwise.
-
+        
         No params.
     - name: SetPartner3Status
       address:
         NA: 0x214D8C8
       description: |-
         Assigns the status of partner 3 to "Met" or "Not Met".
-
+        
         r0: bool
     - name: GetPartner4Status
       address:
         NA: 0x214D8F8
       description: |-
         Returns true if partner 4 is unlocked, and false otherwise.
-
+        
         No params.
     - name: SetPartner4Status
       address:
         NA: 0x214D914
       description: |-
         Assigns the status of partner 4 to "Met" or "Not Met".
-
+        
         r0: bool
     - name: GetPartner5Status
       address:
         NA: 0x214D944
       description: |-
         Returns true if partner 5 is unlocked, and false otherwise.
-
+        
         No params.
     - name: SetPartner5Status
       address:
         NA: 0x214D960
       description: |-
         Assigns the status of partner 5 to "Met" or "Not Met".
-
+        
         r0: bool
     - name: GetPartner6Status
       address:
         NA: 0x214D990
       description: |-
         Returns true if partner 6 is unlocked, and false otherwise.
-
+        
         No params.
     - name: SetPartner6Status
       address:
         NA: 0x214D9AC
       description: |-
         Assigns the status of partner 6 to "Met" or "Not Met".
-
+        
         r0: bool
     - name: GetPartner7Status
       address:
         NA: 0x214D9DC
       description: |-
         Returns true if partner 7 is unlocked, and false otherwise.
-
+        
         No params.
     - name: SetPartner7Status
       address:
         NA: 0x214D9F8
       description: |-
         Assigns the status of partner 7 to "Met" or "Not Met".
-
+        
         r0: bool
     - name: GetPartner8Status
       address:
         NA: 0x214DA28
       description: |-
         Returns true if partner 8 is unlocked, and false otherwise.
-
+        
         No params.
     - name: SetPartner8Status
       address:
         NA: 0x214DA44
       description: |-
         Assigns the status of partner 8 to "Met" or "Not Met".
-
+        
         r0: bool
     - name: GetPartner9Status
       address:
         NA: 0x214DA74
       description: |-
         Returns true if partner 9 is unlocked, and false otherwise.
-
+        
         No params.
     - name: SetPartner9Status
       address:
         NA: 0x214DA90
       description: |-
         Assigns the status of partner 9 to "Met" or "Not Met".
-
+        
         r0: bool
     - name: GetPartner10Status
       address:
         NA: 0x214DAC0
       description: |-
         Returns true if partner 10 is unlocked, and false otherwise.
-
+        
         No params.
     - name: SetPartner10Status
       address:
         NA: 0x214DADC
       description: |-
         Assigns the status of partner 10 to "Met" or "Not Met".
-
+        
         r0: bool
     - name: GetPartner11Status
       address:
         NA: 0x214DB0C
       description: |-
         Returns true if partner 11 is unlocked, and false otherwise.
-
+        
         No params.
     - name: SetPartner11Status
       address:
         NA: 0x214DB28
       description: |-
         Assigns the status of partner 11 to "Met" or "Not Met".
-
+        
         r0: bool
     - name: GetPartner12Status
       address:
         NA: 0x214DB58
       description: |-
         Returns true if partner 12 is unlocked, and false otherwise.
-
+        
         No params.
     - name: SetPartner12Status
       address:
         NA: 0x214DB74
       description: |-
         Assigns the status of partner 12 to "Met" or "Not Met".
-
+        
         r0: bool
     - name: GetPartner13Status
       address:
         NA: 0x214DBA4
       description: |-
         Returns true if partner 13 is unlocked, and false otherwise.
-
+        
         No params.
     - name: SetPartner13Status
       address:
         NA: 0x214DBC0
       description: |-
         Assigns the status of partner 13 to "Met" or "Not Met".
-
+        
         r0: bool
     - name: GetPartner14Status
       address:
         NA: 0x214DBF0
       description: |-
         Returns true if partner 14 is unlocked, and false otherwise.
-
+        
         No params.
     - name: SetPartner14Status
       address:
         NA: 0x214DC0C
       description: |-
         Assigns the status of partner 14 to "Met" or "Not Met".
-
+        
         r0: bool
     - name: GetPartner15Status
       address:
         NA: 0x214DC3C
       description: |-
         Returns true if partner 15 is unlocked, and false otherwise.
-
+        
         No params.
     - name: SetPartner15Status
       address:
         NA: 0x214DC58
       description: |-
         Assigns the status of partner 15 to "Met" or "Not Met".
-
+        
         r0: bool
     - name: GetPartner16Status
       address:
         NA: 0x214DC88
       description: |-
         Returns true if partner 16 is unlocked, and false otherwise.
-
+        
         No params.
     - name: SetPartner16Status
       address:
         NA: 0x214DCA4
       description: |-
         Assigns the status of partner 16 to "Met" or "Not Met".
-
+        
         r0: bool
     - name: GetPartner17Status
       address:
         NA: 0x214DCD4
       description: |-
         Returns true if partner 17 is unlocked, and false otherwise.
-
+        
         No params.
     - name: SetPartner17Status
       address:
         NA: 0x214DCF0
       description: |-
         Assigns the status of partner 17 to "Met" or "Not Met".
-
+        
         r0: bool
     - name: GetActiveQuestId
       address:
         NA: 0x214DD9C
       description: |-
         Returns the index of the currently active quest.
-
+        
         No params.
     - name: GetActiveMissionId
       address:
         NA: 0x214DDAC
       description: |-
         Returns the index of the currently active mission.
-
+        
         No params.
     - name: DebugGrabFileNameAndMsgId
       address:
         NA: 0x214DDBC
       description: |-
         Returns a pointer to a string "%s - %d" containing the current textbox script_kind and message_id. Eg: "BAT - 27"
-
+        
         No params.
     - name: DebugPrintAllScriptVars
       address:
         NA: 0x214E24C
       description: |-
         Seems to format and debug print many text strings of sequential fields of the settings_and_variables struct.
-
+        
         No params.
     - name: DebugPrintPartnerPokemonPokeAssists
       address:
         NA: 0x214F488
       description: |-
         Seems to be a debug function that prints partner poke assist record data.
-
+        
         r0: int32_t
         r1: undefined4
         r2: undefined4
@@ -933,84 +933,84 @@ overlay0:
         NA: 0x214F6E4
       description: |-
         Retrieves the capture line length record from RANGER_DATA.
-
+        
         No params.
     - name: SetCaptureLineLenRecordSimple
       address:
         NA: 0x214F708
       description: |-
         Writes to the capture line length record from RANGER_DATA.
-
+        
         r0: int32_t
     - name: GetNumLoopsRecordSimple
       address:
         NA: 0x214F738
       description: |-
         Retrieves the num loops record from RANGER_DATA.
-
+        
         No params.
     - name: SetNumLoopsRecordSimple
       address:
         NA: 0x214F748
       description: |-
         Writes to the num loops record from RANGER_DATA.
-
+        
         r0: undefined4
     - name: GetPokemonCapturedRecordSimple
       address:
         NA: 0x214F760
       description: |-
         Retrieves the pokemon captured record from RANGER_DATA.
-
+        
         No params.
     - name: SetPokemonCapturedRecordSimple
       address:
         NA: 0x214F770
       description: |-
         Writes to the pokemon captured record from RANGER_DATA.
-
+        
         r0: undefined2
     - name: GetPokemonFledRecordSimple
       address:
         NA: 0x214F78C
       description: |-
         Retrieves the pokemon fled record from RANGER_DATA.
-
+        
         No params.
     - name: SetPokemonFledRecordSimple
       address:
         NA: 0x214F79C
       description: |-
         Writes to the pokemon fled record from RANGER_DATA.
-
+        
         r0: undefined2
     - name: GetPokeAssistsUsedRecordSimple
       address:
         NA: 0x214F7B8
       description: |-
         Retrieves the poke assists used record from RANGER_DATA.
-
+        
         No params.
     - name: SetPokeAssistsUsedSimple
       address:
         NA: 0x214F7C8
       description: |-
         Writes to the poke assists used record from RANGER_DATA.
-
+        
         r0: undefined2
     - name: GetMaxPlayTimeSeconds
       address:
         NA: 0x214F7E4
       description: |-
         Retrieves the current play time in seconds from RANGER_DATA.
-
+        
         No params.
     - name: GetCurrentPartnerPokemonPokeAssists
       address:
         NA: 0x214F99C
       description: |-
         Retrieves the poke assist record for the current partner from RANGER_DATA.
-
+        
         No params.
     - name: ret_0215061c
 #      namespace: c_field_effect_foot_step_smoke_c_draw_object_particle
@@ -1018,14 +1018,14 @@ overlay0:
         NA: 0x215061C
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-
+        
         No params.
     - name: ret_02150620
       address:
         NA: 0x2150620
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-
+        
         No params.
     - name: ret_02150880
 #      namespace: c_field_effect_foot_step_smoke_c_field_particle_alpha_animator
@@ -1033,7 +1033,7 @@ overlay0:
         NA: 0x2150880
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-
+        
         No params.
     - name: ret_02151818
 #      namespace: c_field_effect_laser_factory
@@ -1041,7 +1041,7 @@ overlay0:
         NA: 0x2151818
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-
+        
         No params.
     - name: ret_0215181c
 #      namespace: c_field_effect_spread_smoke_factory
@@ -1049,7 +1049,7 @@ overlay0:
         NA: 0x215181C
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-
+        
         No params.
     - name: ret_02151820
 #      namespace: c_field_effect_steam_factory
@@ -1057,7 +1057,7 @@ overlay0:
         NA: 0x2151820
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-
+        
         No params.
     - name: ret_02151824
 #      namespace: c_field_effect_scatter_leaves_factory
@@ -1065,7 +1065,7 @@ overlay0:
         NA: 0x2151824
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-
+        
         No params.
     - name: ret_02151828
 #      namespace: c_field_effect_wave_bullet_factory
@@ -1073,7 +1073,7 @@ overlay0:
         NA: 0x2151828
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-
+        
         No params.
     - name: ret_0215182c
 #      namespace: c_field_effect_attack_cell_anime_factory
@@ -1081,7 +1081,7 @@ overlay0:
         NA: 0x215182C
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-
+        
         No params.
     - name: ret_02151830
 #      namespace: c_field_effect_parabola_bullet_factory
@@ -1089,7 +1089,7 @@ overlay0:
         NA: 0x2151830
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-
+        
         No params.
     - name: ret_02151834
 #      namespace: c_field_effect_spray_factory
@@ -1097,7 +1097,7 @@ overlay0:
         NA: 0x2151834
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-
+        
         No params.
     - name: ret_02151838
 #      namespace: c_field_effect_normal_cell_anime_factory
@@ -1105,7 +1105,7 @@ overlay0:
         NA: 0x2151838
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-
+        
         No params.
     - name: ret_0215183c
 #      namespace: c_field_effect_fire_factory
@@ -1113,7 +1113,7 @@ overlay0:
         NA: 0x215183C
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-
+        
         No params.
     - name: ret_02151840
 #      namespace: c_field_effect_spark_factory
@@ -1121,7 +1121,7 @@ overlay0:
         NA: 0x2151840
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-
+        
         No params.
     - name: ret_02151844
 #      namespace: c_field_effect_jumon_factory
@@ -1129,7 +1129,7 @@ overlay0:
         NA: 0x2151844
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-
+        
         No params.
     - name: ret_02151898
 #      namespace: c_field_effect_dark_cloud_factory
@@ -1137,7 +1137,7 @@ overlay0:
         NA: 0x2151898
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-
+        
         No params.
     - name: ret_0215189c
 #      namespace: c_field_effect_fireworks_factory
@@ -1145,7 +1145,7 @@ overlay0:
         NA: 0x215189C
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-
+        
         No params.
     - name: ret_021518a0
 #      namespace: c_field_effect_dark_shadow_factory
@@ -1153,7 +1153,7 @@ overlay0:
         NA: 0x21518A0
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-
+        
         No params.
     - name: ret_021518a4
 #      namespace: c_field_effect_darkness_clear_factory
@@ -1161,7 +1161,7 @@ overlay0:
         NA: 0x21518A4
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-
+        
         No params.
     - name: ret_021518a8
 #      namespace: c_field_effect_rising_photon_factory
@@ -1169,14 +1169,14 @@ overlay0:
         NA: 0x21518A8
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-
+        
         No params.
     - name: ret_0215215c
       address:
         NA: 0x215215C
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-
+        
         No params.
     - name: ret_02152ab8
 #      namespace: c_field_poke_move
@@ -1184,7 +1184,7 @@ overlay0:
         NA: 0x2152AB8
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-
+        
         No params.
     - name: ret_0215ad00
 #      namespace: c_field_particle_smoke_animator
@@ -1192,7 +1192,7 @@ overlay0:
         NA: 0x215AD00
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-
+        
         No params.
     - name: ret_0215b7fc
 #      namespace: t_field_particle_smoke_rect_emitter_c_software_sprite
@@ -1200,7 +1200,7 @@ overlay0:
         NA: 0x215B7FC
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-
+        
         No params.
     - name: ret_0215bdb4
 #      namespace: t_field_particle_rect_emitter_c_software_sprite
@@ -1208,7 +1208,7 @@ overlay0:
         NA: 0x215BDB4
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-
+        
         No params.
     - name: ret_0215be88
 #      namespace: c_field_particle_leaves_animator
@@ -1216,7 +1216,7 @@ overlay0:
         NA: 0x215BE88
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-
+        
         No params.
     - name: ret_0215be8c
 #      namespace: c_field_particle_leaves_emitter
@@ -1224,7 +1224,7 @@ overlay0:
         NA: 0x215BE8C
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-
+        
         No params.
     - name: ret_0215d108
 #      namespace: c_field_effect_wave_bullet_c_wave_particle_emitter
@@ -1232,7 +1232,7 @@ overlay0:
         NA: 0x215D108
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-
+        
         No params.
     - name: ret_0215d10c
 #      namespace: c_field_effect_wave_bullet_c_wave_particle_animator
@@ -1240,7 +1240,7 @@ overlay0:
         NA: 0x215D10C
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-
+        
         No params.
     - name: ret_0215f854
 #      namespace: c_field_effect_spray_c_wave_particle_emitter
@@ -1248,7 +1248,7 @@ overlay0:
         NA: 0x215F854
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-
+        
         No params.
     - name: ret_0215f858
 #      namespace: c_field_effect_spray_c_wave_particle_animator
@@ -1256,7 +1256,7 @@ overlay0:
         NA: 0x215F858
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-
+        
         No params.
     - name: ret_021603a8
 #      namespace: c_field_effect_fire_c_particle_emitter
@@ -1264,7 +1264,7 @@ overlay0:
         NA: 0x21603A8
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-
+        
         No params.
     - name: ret_021603ac
 #      namespace: c_field_effect_fire_c_particle_animator
@@ -1272,14 +1272,14 @@ overlay0:
         NA: 0x21603AC
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-
+        
         No params.
     - name: MaybeOpenAndInitEffectScriptFile
       address:
         NA: 0x2163904
       description: |-
         Seems to open an overworld effect script file. Specifically: "data/Script/field/effect/ef%03d.fsb"
-
+        
         r0: unknown struct
         r1: int32_t
     - name: ret_02163cf4
@@ -1288,7 +1288,7 @@ overlay0:
         NA: 0x2163CF4
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-
+        
         No params.
     - name: ret_02163cf8
 #      namespace: c_field_effect_manpu_anger_c_animator
@@ -1296,7 +1296,7 @@ overlay0:
         NA: 0x2163CF8
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-
+        
         No params.
     - name: ret_02165868
 #      namespace: c_field_effect_water_splash_c_effect_draw_object
@@ -1304,7 +1304,7 @@ overlay0:
         NA: 0x2165868
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-
+        
         No params.
     - name: ret_02165eac
 #      namespace: c_field_effect_manpu_gokigen_c_emitter
@@ -1312,7 +1312,7 @@ overlay0:
         NA: 0x2165EAC
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-
+        
         No params.
     - name: ret_02165eb0
 #      namespace: c_field_effect_manpu_gokigen_c_animator
@@ -1320,7 +1320,7 @@ overlay0:
         NA: 0x2165EB0
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-
+        
         No params.
     - name: ret_02167984
 #      namespace: c_field_effect_dark_cloud_c_animator
@@ -1328,7 +1328,7 @@ overlay0:
         NA: 0x2167984
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-
+        
         No params.
     - name: ret_02167988
 #      namespace: c_field_effect_dark_cloud_c_emitter
@@ -1336,7 +1336,7 @@ overlay0:
         NA: 0x2167988
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-
+        
         No params.
     - name: ret_0216798c
 #      namespace: c_field_effect_dark_cloud_c_remains_emitter
@@ -1344,7 +1344,7 @@ overlay0:
         NA: 0x216798C
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-
+        
         No params.
     - name: ret_02167990
 #      namespace: c_field_effect_dark_cloud_c_remains_animator
@@ -1352,7 +1352,7 @@ overlay0:
         NA: 0x2167990
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-
+        
         No params.
     - name: ret_0216a5d0
 #      namespace: c_field_effect_darkness_clear_c_force_field
@@ -1360,7 +1360,7 @@ overlay0:
         NA: 0x216A5D0
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-
+        
         No params.
     - name: ret_0216a5d4
 #      namespace: c_field_effect_darkness_clear_c_emitter
@@ -1368,7 +1368,7 @@ overlay0:
         NA: 0x216A5D4
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-
+        
         No params.
     - name: ret_0216ae74
 #      namespace: t_field_particle_emitter_c_simple_sprite_ntf
@@ -1376,7 +1376,7 @@ overlay0:
         NA: 0x216AE74
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-
+        
         No params.
     - name: ret_0216b52c
 #      namespace: c_field_effect_darkness_clear2_c_force_field
@@ -1384,7 +1384,7 @@ overlay0:
         NA: 0x216B52C
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-
+        
         No params.
     - name: ret_0216b530
 #      namespace: c_field_effect_darkness_clear2_c_emitter
@@ -1392,7 +1392,7 @@ overlay0:
         NA: 0x216B530
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-
+        
         No params.
     - name: ret_0216cb50
 #      namespace: t_field_particle_emitter_c_simple_sprite_ntf
@@ -1400,7 +1400,7 @@ overlay0:
         NA: 0x216CB50
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-
+        
         No params.
     - name: ret_0216cb68
 #      namespace: t_field_particle_emitter_c_simple_sprite_ntf
@@ -1408,7 +1408,7 @@ overlay0:
         NA: 0x216CB68
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-
+        
         No params.
     - name: ret_0216cb80
 #      namespace: t_field_particle_smoke_rect_emitter_c_simple_sprite_ntf
@@ -1416,7 +1416,7 @@ overlay0:
         NA: 0x216CB80
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-
+        
         No params.
     - name: ret_0216cc48
 #      namespace: c_field_effect_air_bubbles_c_bubble_force_field
@@ -1424,7 +1424,7 @@ overlay0:
         NA: 0x216CC48
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-
+        
         No params.
     - name: ret_0216cc4c
 #      namespace: c_field_effect_air_bubbles_c_bubble_emitter
@@ -1432,7 +1432,7 @@ overlay0:
         NA: 0x216CC4C
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-
+        
         No params.
     - name: ret_0216ebb4
 #      namespace: c_field_effect_volcanic_steam_c_animator_c_effect_draw_object
@@ -1440,7 +1440,7 @@ overlay0:
         NA: 0x216EBB4
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-
+        
         No params.
     - name: ret_0216ebb8
 #      namespace: c_field_effect_volcanic_steam_c_animator
@@ -1448,7 +1448,7 @@ overlay0:
         NA: 0x216EBB8
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-
+        
         No params.
     - name: ret_0216f640
 #      namespace: c_field_effect_fuwante_wind_c_emitter
@@ -1456,7 +1456,7 @@ overlay0:
         NA: 0x216F640
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-
+        
         No params.
     - name: ret_0216f644
 #      namespace: c_field_effect_fuwante_wind_c_animator
@@ -1464,7 +1464,7 @@ overlay0:
         NA: 0x216F644
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-
+        
         No params.
     - name: ret_02171b18
 #      namespace: c_field_effect_space_crevice_c_effect_draw_object
@@ -1472,7 +1472,7 @@ overlay0:
         NA: 0x2171B18
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-
+        
         No params.
   data:
     - name: OV0_STATIC_INITIALIZER
