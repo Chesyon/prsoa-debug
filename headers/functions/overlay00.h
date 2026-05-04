@@ -2,7 +2,7 @@
 #define HEADERS_FUNCTIONS_OVERLAY00_H_
 struct c_field_scene* CFieldSceneConstructor(struct c_field_scene* this,
                                              struct megastruct* param_2);
-struct c_field_scene* CFieldSceneBaseDestructor(struct c_field_scene* param_1);
+struct c_field_scene* CFieldSceneCompleteDestructor(struct c_field_scene* param_1);
 struct c_field_scene* CFieldSceneDeletingDestructor(struct c_field_scene* param_1);
 void ret_0211e958(void);
 void AddEnemyFormToEncounterType2(struct c_field_scene* param_1, unsigned int param_2, int param_3,
