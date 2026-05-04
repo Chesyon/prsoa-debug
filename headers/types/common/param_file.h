@@ -94,8 +94,8 @@ ASSERT_SIZE(struct battle_assist_entry_rom, 50);
 // File structure of "param/BattleAssist.bin" and "param/BattleAssistPartner.bin"
 #pragma pack(push, 1) // This is usually stored as a 5042 byte struct.
 struct battle_assist_bin {
-    struct param_file_header header; // 0x0
-    struct param_encoding_8 encodings[26]; // 0x10
+    struct param_file_header header;                           // 0x0
+    struct param_encoding_8 encodings[26];                     // 0x10
     struct battle_assist_entry_rom battle_assist_entries[100]; // 0x2A
 };
 ASSERT_SIZE(struct battle_assist_bin, 5042);
@@ -246,7 +246,8 @@ struct disk_hp_table_wrapper {
     undefined field2_0x2;
     undefined field3_0x3;
     // Unlike the others, this is NOT a disk_hp_entry_ram pointer!
-    // See poke_id_table_wrapper for reference, which has a poke_id_entry_ram pointer at this address.
+    // See poke_id_table_wrapper for reference, which has a poke_id_entry_ram pointer at this
+    // address.
     int8_t* unk_byte_a_table_0x4;
     int16_t* unk_hword_b_table_0x8;
     int16_t* unk_hword_c_table_0xC;
