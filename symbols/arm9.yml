@@ -77,14 +77,14 @@ arm9:
       description: |-
         [MANUAL DESCRIPTION]
         
-        No params.
+        r0: void pointer
     - name: OperatorDeleteArray
       address:
         NA: 0x200147C
       description: |-
         [MANUAL DESCRIPTION]
         
-        No params.
+        r0: void pointer
     - name: LoadOverlay
       address:
         NA: 0x2001488
@@ -154,7 +154,7 @@ arm9:
       description: |-
         [MANUAL DESCRIPTION]
         
-        No params.
+        r0: void pointer
     - name: InitTouchScreenWrapperOuter
       address:
         NA: 0x2002054
@@ -168,28 +168,29 @@ arm9:
       description: |-
         [MANUAL DESCRIPTION]
         
-        No params.
+        r0: uint32_t 
     - name: Heap_Alloc
       address:
         NA: 0x2002258
       description: |-
         [MANUAL DESCRIPTION]
         
-        No params.
+        r0: undefined4 
     - name: Heap_AllocWithAlignment
       address:
         NA: 0x20022A4
       description: |-
         [MANUAL DESCRIPTION]
         
-        No params.
+        r0: size_t 
+        r1: uint32_t 
     - name: Heap_Free
       address:
         NA: 0x20022F4
       description: |-
         [MANUAL DESCRIPTION]
         
-        No params.
+        r0: void pointer
     - name: Heap_GetMainHandle
       address:
         NA: 0x2002330
@@ -203,14 +204,14 @@ arm9:
       description: |-
         [MANUAL DESCRIPTION]
         
-        No params.
+        r0: size_t 
     - name: Heap_FreeSecondary
       address:
         NA: 0x200235C
       description: |-
         [MANUAL DESCRIPTION]
         
-        No params.
+        r0: void pointer
     - name: Heap_GetSecondaryHandle
       address:
         NA: 0x2002378
@@ -224,7 +225,8 @@ arm9:
       description: |-
         [MANUAL DESCRIPTION]
         
-        No params.
+        r0: void pointer
+        r1: size_t 
     - name: Heap_DestroyOverlay
       address:
         NA: 0x20023C0
@@ -2110,7 +2112,7 @@ arm9:
       description: |-
         [MANUAL DESCRIPTION]
         
-        No params.
+        r0: c_backup pointer
     - name: CBackupBaseDestructor
 #      namespace: c_backup
       address:
@@ -2118,7 +2120,7 @@ arm9:
       description: |-
         [MANUAL DESCRIPTION]
         
-        No params.
+        r0: c_backup pointer
     - name: CBackupDeletingDestructor
 #      namespace: c_backup
       address:
@@ -2126,7 +2128,7 @@ arm9:
       description: |-
         [MANUAL DESCRIPTION]
         
-        No params.
+        r0: c_backup pointer
     - name: InitUnkSaveStruct0x74
       address:
         NA: 0x2027FE8
@@ -2156,7 +2158,7 @@ arm9:
       description: |-
         [MANUAL DESCRIPTION]
         
-        No params.
+        r0: c_backup pointer
     - name: CBackupBaseBaseDestructor
 #      namespace: c_backup_base
       address:
@@ -2164,7 +2166,7 @@ arm9:
       description: |-
         [MANUAL DESCRIPTION]
         
-        No params.
+        r0: c_backup pointer
     - name: CBackupBaseDeletingDestructor
 #      namespace: c_backup_base
       address:
@@ -2172,14 +2174,14 @@ arm9:
       description: |-
         [MANUAL DESCRIPTION]
         
-        No params.
+        r0: c_backup pointer
     - name: InitCBackupSync
       address:
         NA: 0x202B8A4
       description: |-
         [MANUAL DESCRIPTION]
         
-        No params.
+        r0: c_backup_sync pointer
     - name: CBackupSyncBaseDestructor
 #      namespace: c_backup_sync
       address:
@@ -2187,7 +2189,7 @@ arm9:
       description: |-
         [MANUAL DESCRIPTION]
         
-        No params.
+        r0: c_backup_sync pointer
     - name: CBackupSyncDeletingDestructor
 #      namespace: c_backup_sync
       address:
@@ -2195,7 +2197,7 @@ arm9:
       description: |-
         [MANUAL DESCRIPTION]
         
-        No params.
+        r0: c_backup_sync pointer
     - name: SysCallReturnZero2353
       address:
         NA: 0x202BEA0
@@ -3184,35 +3186,36 @@ arm9:
       description: |-
         Clears unk_heap_2 of a specified audio_engine struct.
         
-        r0: audio_engine_ptr
+        r0: audio_engine pointer
     - name: AudioEngineClearUnkHeap1
       address:
         NA: 0x20345B8
       description: |-
         Clears unk_heap_1 of a specified audio_engine struct.
         
-        r0: audio_engine_ptr
+        r0: audio_engine pointer
     - name: MaybeLoadNextSequencedTrack
       address:
         NA: 0x2034954
       description: |-
         Seems to possibly load the next sequenced in-game audio track?
         
-        r0: audio_engine_ptr
+        r0: audio_engine pointer
     - name: AudioEngineMaybeCheckHeapSizes
       address:
         NA: 0x2034EEC
       description: |-
         Checks the sizes of all 3 heaps, then seems to do utterly nothing with that information? Maybe the return is wrong.
         
-        r0: audio_engine_ptr
+        r0: audio_engine pointer
     - name: SetSeqTrack3Volume
       address:
         NA: 0x2034F20
       description: |-
         Seems to set the volume of specifically sequenced track 3 of the audio engine. 
         
-        r0: audio_engine_ptr
+        r0: audio_engine pointer
+        r1: int 
     - name: IsFormIdPartnerPokemon
       address:
         NA: 0x2034F9C
