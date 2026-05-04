@@ -14,7 +14,7 @@ overlay11:
   description: |-
     Primarily implements the Ranger Net menu, but also seems to be used on boot (maybe for displaying logos?)
     Contains a fair amount of NitroSDK code related to WFC. It's believed that this is only region other than arm9 to contain SDK code.
-
+        
     There are three scene classes in this overlay, internally named "Ranger Net", "Ranger Net AGB", and "Company Logo". Each entry point likely corresponds to one of these.
   functions:
     - name: CRangerNetSceneConstructor
@@ -22,7 +22,7 @@ overlay11:
         NA: 0x211C9E0
       description: |-
         Constructor of the CRangerNetScene class.
-
+        
         r0: c_ranger_net_scene pointer
         r1: megastruct pointer
     - name: CRangerNetSceneInit
@@ -30,21 +30,21 @@ overlay11:
         NA: 0x211CAE4
       description: |-
         [MANUAL DESCRIPTION]
-
+        
         r0: c_ranger_net_scene pointer
     - name: ret_0211d860
       address:
         NA: 0x211D860
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-
+        
         No params.
     - name: CRangerNetAgbSceneConstructor
       address:
         NA: 0x211DEF8
       description: |-
         Constructor of the CRangerNetAgbScene class.
-
+        
         r0: c_ranger_net_agb_scene pointer
     - name: ret_0211df48
 #      namespace: c_ranger_net_agb_scene
@@ -52,7 +52,7 @@ overlay11:
         NA: 0x211DF48
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-
+        
         No params.
     - name: ret_0211df4c
 #      namespace: c_ranger_net_agb_scene
@@ -60,7 +60,7 @@ overlay11:
         NA: 0x211DF4C
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-
+        
         No params.
     - name: ret_0211df50
 #      namespace: c_ranger_net_agb_scene
@@ -68,14 +68,14 @@ overlay11:
         NA: 0x211DF50
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-
+        
         No params.
     - name: ret_0211df58
       address:
         NA: 0x211DF58
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-
+        
         No params.
     - name: ret_0211df5c
 #      namespace: c_ranger_net_agb_scene
@@ -83,7 +83,7 @@ overlay11:
         NA: 0x211DF5C
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-
+        
         No params.
     - name: ret_0211df60
 #      namespace: c_ranger_net_agb_scene
@@ -91,14 +91,14 @@ overlay11:
         NA: 0x211DF60
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-
+        
         No params.
     - name: Ov110x730Constructor
       address:
         NA: 0x211E05C
       description: |-
         [MANUAL DESCRIPTION]
-
+        
         r0: ov_11_unk_struct_0x730 pointer
         r1: megastruct pointer
         r2: int
@@ -107,84 +107,84 @@ overlay11:
         NA: 0x211E0E8
       description: |-
         [MANUAL DESCRIPTION]
-
+        
         r0: ov_11_unk_struct_0x730 pointer
     - name: Ov110x730InitSecondaryVeneer
       address:
         NA: 0x211E1DC
       description: |-
         [MANUAL DESCRIPTION]
-
+        
         r0: ov_11_unk_struct_0x730 pointer
     - name: Ov110x730InitSecondary
       address:
         NA: 0x211E1E8
       description: |-
         [MANUAL DESCRIPTION]
-
+        
         r0: ov_11_unk_struct_0x730 pointer
     - name: MaybeFreeRangerNetScene
       address:
         NA: 0x211F52C
       description: |-
         [MANUAL DESCRIPTION]
-
+        
         r0: ov_11_unk_struct_0x730 pointer
     - name: ret_021245a4
       address:
         NA: 0x21245A4
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-
+        
         No params.
     - name: Return0x2700
       address:
         NA: 0x2125FEC
       description: |-
         [MANUAL DESCRIPTION]
-
+        
         No params.
     - name: ret_02126964
       address:
         NA: 0x2126964
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-
+        
         No params.
     - name: ret_02126968
       address:
         NA: 0x2126968
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-
+        
         No params.
     - name: ret_0212697c
       address:
         NA: 0x212697C
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-
+        
         No params.
     - name: ret_02126980
       address:
         NA: 0x2126980
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-
+        
         No params.
     - name: ret_02126984
       address:
         NA: 0x2126984
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-
+        
         No params.
     - name: Ov110x3ecConstructor
       address:
         NA: 0x212CE58
       description: |-
         [MANUAL DESCRIPTION]
-
+        
         r0: ov_11_unk_struct_0x3ec pointer
         r1: megastruct pointer
         r2: ov_11_unk_struct_0x730 pointer
@@ -193,7 +193,7 @@ overlay11:
         NA: 0x212CEE8
       description: |-
         [MANUAL DESCRIPTION]
-
+        
         r0: int
         r1: char pointer
         r2: undefined4
@@ -203,14 +203,14 @@ overlay11:
         NA: 0x212D978
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-
+        
         No params.
     - name: Ov110x198Constructor
       address:
         NA: 0x212D97C
       description: |-
         [MANUAL DESCRIPTION]
-
+        
         r0: ov_11_unk_struct_0x198 pointer
         r1: ov_11_unk_struct_0x730 pointer
     - name: Ov110x18Constructor
@@ -218,7 +218,7 @@ overlay11:
         NA: 0x21302D8
       description: |-
         [MANUAL DESCRIPTION]
-
+        
         r0: ov_11_unk_struct_0x18 pointer
         r1: megastruct pointer
     - name: Ov110x4e4Constructor
@@ -226,7 +226,7 @@ overlay11:
         NA: 0x21304DC
       description: |-
         [MANUAL DESCRIPTION]
-
+        
         r0: ov_11_unk_struct_0x4e4 pointer
         r1: megastruct pointer
         r2: ov_11_unk_struct_0x18 pointer
@@ -236,7 +236,7 @@ overlay11:
         NA: 0x21319EC
       description: |-
         One of many entry points of overlay_11, tasked with creating an overlay struct.
-
+        
         r0: ov_11_unk_struct_2 pointer
     - name: ret_0213201c
 #      namespace: c_company_logo_scene
@@ -244,7 +244,7 @@ overlay11:
         NA: 0x213201C
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-
+        
         No params.
     - name: ret_02132020
 #      namespace: c_company_logo_scene
@@ -252,7 +252,7 @@ overlay11:
         NA: 0x2132020
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-
+        
         No params.
     - name: Dwc_AC_Process
       address:
@@ -955,23 +955,23 @@ overlay11:
         NA: 0x213E00C
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-
+        
         No params.
     - name: SocketVeneer
       address:
         NA: 0x213E010
       description: |-
         Veneer to Socket(); in arm9.
-
+        
         No params.
     - name: CloseVeneer
       address:
         NA: 0x213E024
       description: |-
         Likely a linker-generated veneer for close.
-
+        
         See https://developer.arm.com/documentation/dui0474/k/image-structure-and-generation/linker-generated-veneers/what-is-a-veneer-
-
+        
         r0: file descriptor
         return: 0 on success, or a negative value representing an error
     - name: Aoss_Htonl
@@ -1757,7 +1757,7 @@ overlay11:
         NA: 0x2147DBC
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-
+        
         No params.
     - name: Button
       address:
@@ -2004,7 +2004,7 @@ overlay11:
         NA: 0x21481A0
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-
+        
         No params.
     - name: Button
       address:
@@ -2234,7 +2234,7 @@ overlay11:
         NA: 0x2148518
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-
+        
         No params.
     - name: Button
       address:
@@ -2467,7 +2467,7 @@ overlay11:
         NA: 0x2148958
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-
+        
         No params.
     - name: Button
       address:
@@ -2697,7 +2697,7 @@ overlay11:
         NA: 0x2148E88
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-
+        
         No params.
     - name: Button
       address:
@@ -2917,14 +2917,14 @@ overlay11:
         NA: 0x21492A8
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-
+        
         No params.
     - name: ret_021492ac
       address:
         NA: 0x21492AC
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-
+        
         No params.
     - name: EndScene
       address:
@@ -3123,7 +3123,7 @@ overlay11:
         NA: 0x2149538
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-
+        
         No params.
     - name: Button
       address:
@@ -3353,7 +3353,7 @@ overlay11:
         NA: 0x2149758
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-
+        
         No params.
     - name: Button
       address:
@@ -3520,7 +3520,7 @@ overlay11:
         NA: 0x21499EC
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-
+        
         No params.
     - name: Button
       address:
@@ -3723,7 +3723,7 @@ overlay11:
         NA: 0x2149C8C
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-
+        
         No params.
     - name: EndScene
       address:
@@ -3926,7 +3926,7 @@ overlay11:
         NA: 0x2149F44
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-
+        
         No params.
     - name: Button
       address:
@@ -4103,14 +4103,14 @@ overlay11:
         NA: 0x214A308
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-
+        
         No params.
     - name: ret_0214a30c
       address:
         NA: 0x214A30C
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-
+        
         No params.
     - name: EndScene
       address:
@@ -4344,7 +4344,7 @@ overlay11:
         NA: 0x214A660
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-
+        
         No params.
     - name: Button
       address:
@@ -4610,7 +4610,7 @@ overlay11:
         NA: 0x214ABA8
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-
+        
         No params.
     - name: Button
       address:
@@ -4808,7 +4808,7 @@ overlay11:
         NA: 0x214AF68
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-
+        
         No params.
     - name: EndScene
       address:
@@ -5299,7 +5299,7 @@ overlay11:
         NA: 0x214CA98
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-
+        
         No params.
     - name: EndScene
       address:
@@ -5561,7 +5561,7 @@ overlay11:
         NA: 0x214D80C
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-
+        
         No params.
     - name: EndScene
       address:
@@ -5820,7 +5820,7 @@ overlay11:
         NA: 0x214E2B4
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-
+        
         No params.
     - name: Button
       address:
@@ -6337,14 +6337,14 @@ overlay11:
         NA: 0x2150A60
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-
+        
         No params.
     - name: ret_02150a64
       address:
         NA: 0x2150A64
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-
+        
         No params.
     - name: EndScene
       address:
@@ -6543,7 +6543,7 @@ overlay11:
         NA: 0x2150CBC
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-
+        
         No params.
     - name: Button
       address:
@@ -6781,7 +6781,7 @@ overlay11:
         NA: 0x21510D4
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-
+        
         No params.
     - name: Button
       address:
@@ -6958,7 +6958,7 @@ overlay11:
         NA: 0x215148C
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-
+        
         No params.
     - name: EndScene
       address:
@@ -7155,7 +7155,7 @@ overlay11:
         NA: 0x21517A8
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-
+        
         No params.
     - name: Button
       address:
@@ -7394,7 +7394,7 @@ overlay11:
         NA: 0x2151D30
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-
+        
         No params.
     - name: Button
       address:
@@ -7633,7 +7633,7 @@ overlay11:
         NA: 0x215232C
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-
+        
         No params.
     - name: Button
       address:
@@ -7913,7 +7913,7 @@ overlay11:
         NA: 0x2153088
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-
+        
         No params.
     - name: Button
       address:
@@ -8136,21 +8136,21 @@ overlay11:
         NA: 0x2153660
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-
+        
         No params.
     - name: ret_02153664
       address:
         NA: 0x2153664
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-
+        
         No params.
     - name: ret_02153668
       address:
         NA: 0x2153668
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-
+        
         No params.
     - name: EndScene
       address:
@@ -8284,7 +8284,7 @@ overlay11:
         NA: 0x21538E0
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-
+        
         No params.
     - name: EndScene
       address:
@@ -8463,14 +8463,14 @@ overlay11:
         NA: 0x2153C2C
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-
+        
         No params.
     - name: ret_02153c30
       address:
         NA: 0x2153C30
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-
+        
         No params.
     - name: EndScene
       address:
@@ -8608,7 +8608,7 @@ overlay11:
         NA: 0x2153DCC
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-
+        
         No params.
     - name: EndScene
       address:
@@ -8802,7 +8802,7 @@ overlay11:
         NA: 0x21540AC
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-
+        
         No params.
     - name: Button
       address:
@@ -9032,7 +9032,7 @@ overlay11:
         NA: 0x215446C
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-
+        
         No params.
     - name: Button
       address:
@@ -10041,7 +10041,7 @@ overlay11:
         NA: 0x215E1F4
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-
+        
         No params.
     - name: Nhttpi_CreateCommThread
       address:
@@ -10266,7 +10266,7 @@ overlay11:
         NA: 0x21626E0
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-
+        
         No params.
     - name: Dwci_Ndi_InitHttpCallback
       address:
@@ -10276,7 +10276,7 @@ overlay11:
         NA: 0x2162734
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-
+        
         No params.
     - name: Dwci_Ndi_PrepareHttpCallback
       address:
