@@ -13,9 +13,9 @@ arm9:
     JP: 0x8FC18
   description: |-
     The main ARM9 binary.
-    
+
     This is the main binary that gets loaded when the game is launched, and contains the core code that runs the game, low level facilities such as memory allocation, compression, other external dependencies (such as linked libraries), and the functions and tables necessary to load overlays and dispatch execution to them.
-    
+
     Speaking generally, this is the program run by the Nintendo DS's main ARM946E-S CPU, which handles all gameplay mechanisms and graphics rendering.
   functions:
     - name: _start
@@ -25,9 +25,9 @@ arm9:
         JP: 0x2000800
       description: |-
         The entrypoint for the ARM9 CPU. This is like the "main" function for the ARM9 subsystem.
-        
+
         Once the entry function reaches the end, a constant containing the address to NitroMain is loaded into a register (r1), and a `bx` branch will jump to NitroMain.
-        
+
         No params.
     - name: MIi_UncompressBackward
       address:
@@ -37,14 +37,14 @@ arm9:
         NA: 0x2000B98
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-        
+
         No params.
     - name: ret_02000b9c
       address:
         NA: 0x2000B9C
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-        
+
         No params.
     - name: NitroMain
       address:
@@ -55,42 +55,42 @@ arm9:
         NA: 0x200120C
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-        
+
         No params.
     - name: OperatorNew
       address:
         NA: 0x2001458
       description: |-
         [MANUAL DESCRIPTION]
-        
+
         No params.
     - name: OperatorNewArray
       address:
         NA: 0x2001464
       description: |-
         [MANUAL DESCRIPTION]
-        
+
         No params.
     - name: OperatorDelete
       address:
         NA: 0x2001470
       description: |-
         [MANUAL DESCRIPTION]
-        
+
         r0: void pointer
     - name: OperatorDeleteArray
       address:
         NA: 0x200147C
       description: |-
         [MANUAL DESCRIPTION]
-        
+
         r0: void pointer
     - name: LoadOverlay
       address:
         NA: 0x2001488
       description: |-
         Tries to load an overlay if it's not already loaded, and does some other (unknown) checks.
-        
+
         r0: Overlay number
         r1: Some bool, skips certain code if false
     - name: Scene_LoadById
@@ -99,7 +99,7 @@ arm9:
       description: |-
         Called when changing the game state. Always tries to load an overlay, and usually ends up callin g
         the entrypoint function for that overlay afterwards.
-        
+
         r0: New game state
         r1: megastruct ptr
     - name: InitControllerInputs
@@ -107,7 +107,7 @@ arm9:
         NA: 0x2001C04
       description: |-
         Seems to initialize what we believe to be the struct that stores player inputs.
-        
+
         r0: controller_inputs pointer
     - name: OperatorNewVeneer
       address:
@@ -117,21 +117,21 @@ arm9:
           - 0x20101A8
       description: |-
         Seems to allocate memory, returning a pointer to the newly allocated memory.
-        
+
         r0: num bytes to allocate
     - name: InitTouchScreenWrapper
       address:
         NA: 0x2001D34
       description: |-
         Seems to initialize a touch_screen_wrapper struct.
-        
+
         r0: touch_screen_wrapper pointer
     - name: InitTouchScreen
       address:
         NA: 0x2001DF4
       description: |-
         Seems to initialize a touch_screen struct.
-        
+
         r0: touch_screen pointer
     - name: ret_02001eb4
 #      namespace: c_touch_panel
@@ -139,107 +139,107 @@ arm9:
         NA: 0x2001EB4
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-        
+
         No params.
     - name: ret_02001ecc
       address:
         NA: 0x2001ECC
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-        
+
         No params.
     - name: Heap_FreeSecondaryVeneer
       address:
         NA: 0x2002048
       description: |-
         [MANUAL DESCRIPTION]
-        
+
         r0: void pointer
     - name: InitTouchScreenWrapperOuter
       address:
         NA: 0x2002054
       description: |-
         Seems to partially initialize a touch_screen_wrapper struct in tandem with InitTouchScreenWrapper.
-        
+
         r0: touch_screen_wrapper pointer
     - name: Heap_Init
       address:
         NA: 0x20021C8
       description: |-
         [MANUAL DESCRIPTION]
-        
-        r0: uint32_t 
+
+        r0: uint32_t
     - name: Heap_Alloc
       address:
         NA: 0x2002258
       description: |-
         [MANUAL DESCRIPTION]
-        
-        r0: undefined4 
+
+        r0: undefined4
     - name: Heap_AllocWithAlignment
       address:
         NA: 0x20022A4
       description: |-
         [MANUAL DESCRIPTION]
-        
-        r0: size_t 
-        r1: uint32_t 
+
+        r0: size_t
+        r1: uint32_t
     - name: Heap_Free
       address:
         NA: 0x20022F4
       description: |-
         [MANUAL DESCRIPTION]
-        
+
         r0: void pointer
     - name: Heap_GetMainHandle
       address:
         NA: 0x2002330
       description: |-
         [MANUAL DESCRIPTION]
-        
+
         No params.
     - name: Heap_AllocSecondary
       address:
         NA: 0x200233C
       description: |-
         [MANUAL DESCRIPTION]
-        
-        r0: size_t 
+
+        r0: size_t
     - name: Heap_FreeSecondary
       address:
         NA: 0x200235C
       description: |-
         [MANUAL DESCRIPTION]
-        
+
         r0: void pointer
     - name: Heap_GetSecondaryHandle
       address:
         NA: 0x2002378
       description: |-
         [MANUAL DESCRIPTION]
-        
+
         No params.
     - name: Heap_InitOverlay
       address:
         NA: 0x2002384
       description: |-
         [MANUAL DESCRIPTION]
-        
+
         r0: void pointer
-        r1: size_t 
+        r1: size_t
     - name: Heap_DestroyOverlay
       address:
         NA: 0x20023C0
       description: |-
         [MANUAL DESCRIPTION]
-        
+
         No params.
     - name: InitFileArchiveWrapper
       address:
         NA: 0x2002AEC
       description: |-
         Initializes a file_archive_wrapper struct.
-        
+
         r0: file_archive_wrapper pointer
         r1: undefined4
         r2: char pointer
@@ -252,7 +252,7 @@ arm9:
         NA: 0x2002BC4
       description: |-
         Seems to initialize a file_wrapper struct, properly handling file opening and closing.
-        
+
         r0: file_wrapper pointer
         r1: file name
         r2: int32_t
@@ -264,14 +264,14 @@ arm9:
         NA: 0x2003108
       description: |-
         Seems to be the higher level equivalent of FS_ConvertFilePathToId.
-        
+
         r0: file path
     - name: GetMsgLangSuffix
       address:
         NA: 0x2003124
       description: |-
         Retrieves the correct file suffix for the respective language. Presumed to interact with the megastruct in EU.
-        
+
         No params.
     - name: InitFileWrapperWithLangSuffix
       address:
@@ -287,7 +287,7 @@ arm9:
         NA: 0x200372C
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-        
+
         No params.
     - name: ret_0200396c
 #      namespace: c_primitive
@@ -295,21 +295,21 @@ arm9:
         NA: 0x200396C
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-        
+
         No params.
     - name: ret_02003984
       address:
         NA: 0x2003984
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-        
+
         No params.
     - name: StoreCSceneVfTable
       address:
         NA: 0x2007C98
       description: |-
         Seems to write a pointer to C_SCENE_VFTABLE_FUNCS.
-        
+
         r0: destination pointer
     - name: ret_02007ca8
 #      namespace: c_scene
@@ -317,56 +317,56 @@ arm9:
         NA: 0x2007CA8
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-        
+
         No params.
     - name: ret_02007cc0
       address:
         NA: 0x2007CC0
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-        
+
         No params.
     - name: ret_02008ed8
       address:
         NA: 0x2008ED8
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-        
+
         No params.
     - name: InitTextboxDataOuter
       address:
         NA: 0x20091E8
       description: |-
         Seems to initialize textbox_data, in tandem with InitTextboxData.
-        
+
         r0: textbox_data pointer
     - name: WipeTextboxData
       address:
         NA: 0x20092D4
       description: |-
         Seems to completely wipe a textbox_data struct.
-        
+
         r0: textbox_data pointer
     - name: ZeroInitTextboxData
       address:
         NA: 0x20093B4
       description: |-
         Seems to initialize textbox_data.
-        
+
         r0: textbox_data pointer
     - name: IsTextboxPrinting
       address:
         NA: 0x2009ECC
       description: |-
         Returns whether or not a textbox is printing.
-        
+
         r0: textbox_data pointer
     - name: CloseTextbox
       address:
         NA: 0x2009FB0
       description: |-
         Closes a textbox.
-        
+
         r0: textbox_data pointer
         r1: int32_t
         r2: int32_t
@@ -375,21 +375,21 @@ arm9:
         NA: 0x200A97C
       description: |-
         Checks if the player is pressing on the touch screen to advance a textbox.
-        
+
         r0: textbox_data pointer
     - name: IsPlayerHoldingButtonsTextbox
       address:
         NA: 0x200A9C0
       description: |-
         Checks if the player is holding specific buttons to advance a textbox.
-        
+
         r0: textbox_data pointer
     - name: SetCustomTextSpeed
       address:
         NA: 0x200AA04
       description: |-
         Overrides the default text speed setting with a custom value.
-        
+
         r0: textbox_data pointer
         r1: new text speed setting
     - name: SetDefaultTextSpeed
@@ -397,14 +397,14 @@ arm9:
         NA: 0x200AA14
       description: |-
         Reverts the text speed setting to the default value based on player settings.
-        
+
         r0: textbox_data pointer
     - name: EnableAutoAdvanceTextWithDelay
       address:
         NA: 0x200AA28
       description: |-
         Causes textboxes to auto-advance with a specified delay after printing completes. Does not impact auto-close.
-        
+
         r0: textbox_data pointer
         r1: delay length
     - name: DisableAutoAdvanceText
@@ -412,14 +412,14 @@ arm9:
         NA: 0x200AA38
       description: |-
         Prevents textboxes from auto-advancing. Does not impact auto-close.
-        
+
         r0: textbox_data pointer
     - name: EnableAutoCloseTextWithDelay
       address:
         NA: 0x200AA48
       description: |-
         Causes textboxes to auto-close with a specified delay after printing completes. Does not impact auto-advance.
-        
+
         r0: textbox_data pointer
         r1: delay length
     - name: DisableAutoCloseText
@@ -427,14 +427,14 @@ arm9:
         NA: 0x200AA58
       description: |-
         Prevents textboxes from auto-closing. Does not impact auto-advance.
-        
+
         r0: textbox_data pointer
     - name: PrintTextboxById
       address:
         NA: 0x200AA84
       description: |-
         Causes a textbox to print a specified message id pulled from one of the currently loaded scripts.
-        
+
         r0: textbox_data pointer
         r1: script kind to pull message id from
         r2: message id
@@ -446,7 +446,7 @@ arm9:
         NA: 0x200AB28
       description: |-
         Fills the system msg_wrapper with extracted strings and updates the system script_id in textbox_data.
-        
+
         r0: textbox_data pointer
         r1: script id
     - name: ClearSystemMsgWrapperAndId
@@ -454,14 +454,14 @@ arm9:
         NA: 0x200AC90
       description: |-
         Wipes the system msg_wrapper and system script_id in textbox_data.
-        
+
         r0: textbox_data pointer
     - name: PrintTextboxBySystemMessageId
       address:
         NA: 0x200AD34
       description: |-
         Causes a textbox to print a specified message id pulled from a system script.
-        
+
         r0: textbox_data pointer
         r1: message id
         r2: int32_t
@@ -472,7 +472,7 @@ arm9:
         NA: 0x200AD80
       description: |-
         Fills the area msg_wrapper with extracted strings and updates the area script_id in textbox_data.
-        
+
         r0: textbox_data pointer
         r1: script id
     - name: ClearAreaMsgWrapperAndId
@@ -480,14 +480,14 @@ arm9:
         NA: 0x200AED0
       description: |-
         Wipes the area msg_wrapper and area script_id in textbox_data.
-        
+
         r0: textbox_data pointer
     - name: PrintTextboxByAreaMessageId
       address:
         NA: 0x200AF74
       description: |-
         Causes a textbox to print a specified message id pulled from an area script.
-        
+
         r0: textbox_data pointer
         r1: message id
         r2: int32_t
@@ -498,7 +498,7 @@ arm9:
         NA: 0x200AFC0
       description: |-
         Fills the chapter msg_wrapper with extracted strings and updates the chapter script_id in textbox_data.
-        
+
         r0: textbox_data pointer
         r1: script id
     - name: ClearChapterMsgWrapperAndId
@@ -506,14 +506,14 @@ arm9:
         NA: 0x200B12C
       description: |-
         Wipes the chapter msg_wrapper and chapter script_id in textbox_data.
-        
+
         r0: textbox_data pointer
     - name: PrintTextboxByChapterMessageId
       address:
         NA: 0x200B1D0
       description: |-
         Causes a textbox to print a specified message id pulled from a chapter script.
-        
+
         r0: textbox_data pointer
         r1: message id
         r2: int32_t
@@ -524,7 +524,7 @@ arm9:
         NA: 0x200B21C
       description: |-
         Fills the quest msg_wrapper with extracted strings and updates the chapter script_id in textbox_data.
-        
+
         r0: textbox_data pointer
         r1: int32_t
     - name: ClearQuestMsgWrapperAndId
@@ -532,14 +532,14 @@ arm9:
         NA: 0x200B36C
       description: |-
         Wipes the quest msg_wrapper and ques script_id in textbox_data.
-        
+
         r0: textbox_data pointer
     - name: PrintTextboxByQuestMessageId
       address:
         NA: 0x200B410
       description: |-
         Causes a textbox to print a specified message id pulled from a quest script.
-        
+
         r0: textbox_data pointer
         r1: message id
         r2: int32_t
@@ -550,7 +550,7 @@ arm9:
         NA: 0x200B45C
       description: |-
         Fills the battle msg_wrapper with extracted strings and updates the battle script_id in textbox_data.
-        
+
         r0: textbox_data pointer
         r1: script id
     - name: ClearBattleMsgWrapperAndId
@@ -558,14 +558,14 @@ arm9:
         NA: 0x200B59C
       description: |-
         Wipes the battle msg_wrapper and battle script_id in textbox_data.
-        
+
         r0: textbox_data pointer
     - name: PrintTextboxByBattleMessageId
       address:
         NA: 0x200B640
       description: |-
         Causes a textbox to print a specified message id pulled from a battle script.
-        
+
         r0: textbox_data pointer
         r1: message id
         r2: int32_t
@@ -576,7 +576,7 @@ arm9:
         NA: 0x200B6A4
       description: |-
         Attempts to close a textbox, but only if it is done printing.
-        
+
         r0: textbox_data pointer
         r1: undefined4
     - name: GetYesNoMenuResult
@@ -584,49 +584,49 @@ arm9:
         NA: 0x200B6D4
       description: |-
         Returns the result from the most recent yes_no_menu.
-        
+
         r0: textbox_data pointer
     - name: ret_0200bbc0
       address:
         NA: 0x200BBC0
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-        
+
         No params.
     - name: ret_0200bbc4
       address:
         NA: 0x200BBC4
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-        
+
         No params.
     - name: ZeroInitTextboxSubData
       address:
         NA: 0x200BBC8
       description: |-
         Seems to initialize textbox_subdata.
-        
+
         r0: textbox_subdata pointer
     - name: ret_0200c404
       address:
         NA: 0x200C404
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-        
+
         No params.
     - name: InitFontFileData
       address:
         NA: 0x200CFF4
       description: |-
         Seems to initialize font_file_data.
-        
+
         r0: font_file_data pointer
     - name: ZeroInitParamFileData
       address:
         NA: 0x200D114
       description: |-
         Zeroes a param_file_data struct prior to use.
-        
+
         r0: param_file_data pointer
         r1: undefined4
     - name: MaybeDeallocateParamFileDataOuter
@@ -634,14 +634,14 @@ arm9:
         NA: 0x200D134
       description: |-
         Seems to assist in deallocating a param_file_data struct.
-        
+
         r0: param_file_data pointer
     - name: InitParamFileData
       address:
         NA: 0x200D148
       description: |-
         Seems to initialize a param_file_data struct prior to use.
-        
+
         r0: param_file_data pointer
         r1: param file name
     - name: MaybeDeallocateParamFileData
@@ -649,28 +649,28 @@ arm9:
         NA: 0x200D1A0
       description: |-
         Seems to assist in deallocating a param_file_data struct.
-        
+
         r0: param_file_data pointer
     - name: SchemaExpandParamFileData
       address:
         NA: 0x200D200
       description: |-
         Processes a param_file_data pointer, "schema-expanding" it. See param_file.h for details.
-        
+
         r0: param_file_data pointer
     - name: GetParamRamTableEntrySize
       address:
         NA: 0x200D390
       description: |-
         Retrieves the size of the final ram table from a param_file_data struct.
-        
+
         r0: param_file_data pointer
     - name: ParamGetExpandedRamTableFieldInner
       address:
         NA: 0x200D398
       description: |-
         Retrieves a schema-expanded element from a param_file_data pointer, at a given index and offset.
-        
+
         r0: param_file_data pointer
         r1: index
         r2: offset
@@ -680,7 +680,7 @@ arm9:
         NA: 0x200D3B8
       description: |-
         Assists and seemingly repeats parts of ParamGetExpandedRamTableFieldInner?
-        
+
         r0: param_file_data pointer
         r1: index
         r2: offset
@@ -690,7 +690,7 @@ arm9:
         NA: 0x200D414
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-        
+
         No params.
     - name: InitScreenFadeStructById
       address:
@@ -698,7 +698,7 @@ arm9:
       description: |-
         Seems to initialize a screen_fade struct.
         Is currently only confirmed to handle Iris Transitions.
-        
+
         r0: screen_fade pointer
         r1: undefined4 pointer
     - name: ScreenClampValueToRange
@@ -706,7 +706,7 @@ arm9:
         NA: 0x200E5AC
       description: |-
         While keeping a screen_fade pointer in r0, clamps an input to a minimum and maximum. Frequently used in relation to the size of the DS screen...
-        
+
         r0: screen_fade pointer
         r1: value
         r2: minimum
@@ -716,7 +716,7 @@ arm9:
         NA: 0x200E614
       description: |-
         Seems to be responsible for initializing the stripes table for an Iris Transition.
-        
+
         r0: screen_fade pointer
         r1: int32_t
         r2: int32_t
@@ -725,7 +725,7 @@ arm9:
         NA: 0x200E6F8
       description: |-
         Called repeatedly to adjust the radius of the Iris during an Iris Transition.
-        
+
         r0: screen_fade pointer
         r1: int32_t
         r2: int32_t
@@ -734,77 +734,77 @@ arm9:
         NA: 0x200E904
       description: |-
         Seems to be responsible for returning the current width of the Iris in an Iris Transition.
-        
+
         r0: screen_fade pointer
     - name: ret_0200ee10
       address:
         NA: 0x200EE10
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-        
+
         No params.
     - name: ret_0200fa58
       address:
         NA: 0x200FA58
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-        
+
         No params.
     - name: InitMegastruct
       address:
         NA: 0x200FB50
       description: |-
         Seems to initialize a megastruct, assigning most static pointers and allocating memory for the various places they point to.
-        
+
         r0: megastruct pointer
     - name: GetMegastructPointer
       address:
         NA: 0x201001C
       description: |-
         Retrieves a megastruct pointer.
-        
+
         return: megastruct pointer
     - name: SetTextboxWindowAndSpeedSettings
       address:
         NA: 0x201024C
       description: |-
         Stores the window and text speed settings to their appropriate places in the textbox_data struct in the megastruct.
-        
+
         r0: megastruct pointer
     - name: SetUnkAudioSettingVariables
       address:
         NA: 0x2010324
       description: |-
         Assigns settings variables from an unknown audio struct, pointed to by the megastruct.
-        
+
         r0: megastruct pointer
     - name: GetUnkAudioSettingVariables
       address:
         NA: 0x2010378
       description: |-
         Retrieves settings variables and stores them in an unknown audio struct, pointed to by the megastruct.
-        
+
         r0: megastruct pointer
     - name: InitUnkAudioSettingVariables
       address:
         NA: 0x2010400
       description: |-
         Initializes settings variables used by GetUnkAudioSettingVariables and SetUnkAudioSettingVariables.
-        
+
         r0: megastruct pointer
     - name: ret_02010448
       address:
         NA: 0x2010448
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-        
+
         No params.
     - name: InitPokeIdTableWrapper
       address:
         NA: 0x2010470
       description: |-
         Initializes a poke_id_table_wrapper struct, using "param/PokeId.bin".
-        
+
         r0: poke_id_table_wrapper pointer
         r1: undefined4
     - name: InitBattleCombatantsOuter
@@ -812,21 +812,21 @@ arm9:
         NA: 0x2010854
       description: |-
         Initializes battle_combatants, in tandem with InitializeBattlePokemonFields.
-        
+
         r0: battle_combatants pointer
     - name: InitializeBattlePokemonFields
       address:
         NA: 0x2010868
       description: |-
         Initializes the battle_combatants struct before a battle.
-        
+
         r0: battle_combatants pointer
     - name: BattleSetUnkField0x0
       address:
         NA: 0x201094C
       description: |-
         Assigns field 0x0 of the battle_combatants struct to the pointer to some other struct.
-        
+
         r0: battle_combatants pointer
         r1: int32_t pointer
     - name: BattleSetCurrentHp
@@ -834,7 +834,7 @@ arm9:
         NA: 0x2010954
       description: |-
         Sets the current HP of the ranger in the battle_combatants struct.
-        
+
         r0: battle_combatants pointer
         r1: int8_t
     - name: BattleSetStylerLevel
@@ -842,7 +842,7 @@ arm9:
         NA: 0x201095C
       description: |-
         Sets the styler level in the battle_combatants struct.
-        
+
         r0: battle_combatants pointer
         r1: int8_t
     - name: BattleSetPartnerAssistUnlockStatus
@@ -850,7 +850,7 @@ arm9:
         NA: 0x2010964
       description: |-
         Enables or disabled partner assists for the battle in the battle_combatants struct.
-        
+
         r0: battle_combatants pointer
         r1: 1 if partner assist unlocked, 0 if not.
     - name: GetPartnerGaugeCurrent
@@ -858,7 +858,7 @@ arm9:
         NA: 0x2010978
       description: |-
         Stores the current partner assist gauge in the battle_combatants struct.
-        
+
         r0: battle_combatants pointer
         r1: int32_t
     - name: BattleSetPartnerGaugeMax
@@ -866,7 +866,7 @@ arm9:
         NA: 0x2010980
       description: |-
         Stores the maximum for the partner assist gauge in the battle_combatants struct.
-        
+
         r0: battle_combatants pointer
         r1: int32_t
     - name: BattleSetPartnerGaugeFillRate
@@ -874,7 +874,7 @@ arm9:
         NA: 0x2010988
       description: |-
         Stores an index determining how much the partner assist gauge fills in the battle_combatants struct.
-        
+
         r0: battle_combatants pointer
         r1: int32_t
     - name: BattleAddPartyPokemon
@@ -882,7 +882,7 @@ arm9:
         NA: 0x2010990
       description: |-
         Adds a recruited pokemon to the battle_combatants struct.
-        
+
         r0: battle_combatants pointer
         r1: form_id
         r2: party_slot_status
@@ -891,7 +891,7 @@ arm9:
         NA: 0x20109C0
       description: |-
         Attempts to add an enemy form to the battle_combatants struct.
-        
+
         r0: battle_combatants pointer
         r1: enemy form_id
         r2: unknown uint32_t
@@ -900,7 +900,7 @@ arm9:
         NA: 0x2010A70
       description: |-
         Stores the index of the background for the battle in the battle_combatants struct.
-        
+
         r0: battle_combatants pointer
         r1: Arena Graphic index
     - name: BattleSetWeatherEffectId
@@ -908,7 +908,7 @@ arm9:
         NA: 0x2010A84
       description: |-
         Stores the index of the weather effect for the battle in the battle_combatants struct.
-        
+
         r0: battle_combatants pointer
         r1: Weather Effect index
     - name: BattleSetSequenceScriptId
@@ -923,7 +923,7 @@ arm9:
         NA: 0x2010AA0
       description: |-
         Stores the index of the tutorial script .fsb file id to be run on battle start in the battle_combatants struct.
-        
+
         r0: battle_combatants pointer
         r1: tutorial script id
     - name: BattleSetStartScriptId
@@ -931,7 +931,7 @@ arm9:
         NA: 0x2010AA8
       description: |-
         Stores the index of the start script .fsb file id to be run on battle start in the battle_combatants struct.
-        
+
         r0: battle_combatants pointer
         r1: start script id
     - name: BattleSetBgmId
@@ -939,7 +939,7 @@ arm9:
         NA: 0x2010AB0
       description: |-
         Stores the index of the bgm to play on battle start in the battle_combatants struct.
-        
+
         r0: battle_combatants pointer
         r1: bgm id
     - name: BattleSetViewPartyStatus
@@ -947,7 +947,7 @@ arm9:
         NA: 0x2010AC4
       description: |-
         Stores whether or not the player can view the party for poke-assists during the battle in the battle_combatants struct.
-        
+
         r0: battle_combatants pointer
         r1: 1 to allow viewing the party, 0 to disable.
     - name: BattleSetCanFleeStatus
@@ -955,7 +955,7 @@ arm9:
         NA: 0x2010AD8
       description: |-
         Stores whether or not the player can flee during the battle in the battle_combatants struct.
-        
+
         r0: battle_combatants pointer
         r1: 1 to allow fleeing, 0 otherwise.
     - name: BattleSetBossFightStatus
@@ -964,7 +964,7 @@ arm9:
       description: |-
         Stores whether or not a boss fight HP bar should show up during the battle in the battle_combatants struct.
         May have other effects pertaining to boss fight mechanics.
-        
+
         r0: battle_combatants pointer
         r1: 1 to show a HP bar, 0 otherwise.
     - name: BattleSetUnkField0x52
@@ -972,7 +972,7 @@ arm9:
         NA: 0x2010B00
       description: |-
         Sets an as of yet unknown field of the battle_combatants struct.
-        
+
         r0: battle_combatants pointer
         r1: int8_t
     - name: BattleSetUnkField0x54
@@ -980,7 +980,7 @@ arm9:
         NA: 0x2010B08
       description: |-
         Sets an as of yet unknown field of the battle_combatants struct.
-        
+
         r0: battle_combatants pointer
         r1: int8_t
     - name: BattleSetGenderAndUniform
@@ -988,7 +988,7 @@ arm9:
         NA: 0x2010B10
       description: |-
         Stores the current trainer gender and styler type (which determines the player appearance) in the battle_combatants struct.
-        
+
         r0: battle_combatants pointer
         r1: lowest bit is player gender, all others are styler type.
     - name: BattleGetUnkField0x0
@@ -996,63 +996,63 @@ arm9:
         NA: 0x2010B24
       description: |-
         Retrieves field 0x0 of the battle_combatants struct, which is the pointer to some other struct.
-        
+
         r0: battle_combatants pointer
     - name: BattleGetCurrentHp
       address:
         NA: 0x2010B2C
       description: |-
         Gets the current HP of the ranger from the battle_combatants struct.
-        
+
         r0: battle_combatants pointer
     - name: BattleGetStylerLevel
       address:
         NA: 0x2010B34
       description: |-
         Gets the styler level from the battle_combatants struct.
-        
+
         r0: battle_combatants pointer
     - name: BattleCanPartnerUsePokeAssist
       address:
         NA: 0x2010B3C
       description: |-
         Checks if partner assists for the battle are enabled or disabled from the battle_combatants struct.
-        
+
         r0: battle_combatants pointer
     - name: BattleGetPartnerGaugeCurrent
       address:
         NA: 0x2010B50
       description: |-
         Retrieves the current partner assist gauge from the battle_combatants struct.
-        
+
         r0: battle_combatants pointer
     - name: BattleGetPartnerGaugeMax
       address:
         NA: 0x2010B58
       description: |-
         Retrieves the maximum for the partner assist gauge in the battle_combatants struct.
-        
+
         r0: battle_combatants pointer
     - name: BattleGetPartnerGaugeFillRate
       address:
         NA: 0x2010B60
       description: |-
         Gets an index determining how much the partner assist gauge fills from the battle_combatants struct.
-        
+
         r0: battle_combatants pointer
     - name: BattleGetNumEnemyForms
       address:
         NA: 0x2010B68
       description: |-
         Retrieves the number of unique enemy forms there are in the battle. There will always be 4 or less.
-        
+
         r0: battle_combatants pointer
     - name: BattleGetEnemyFormId
       address:
         NA: 0x2010B70
       description: |-
         Gets the enemy form_id of a specific slot from the battle_combatants struct.
-        
+
         r0: battle_combatants pointer
         r1: enemy slot index
     - name: BattleGetEnemyCount
@@ -1060,14 +1060,14 @@ arm9:
         NA: 0x2010B7C
       description: |-
         Retrieves the total number of actual enemies from the battle_combatants struct.
-        
+
         r0: battle_combatants pointer
     - name: BattleGetUnkEnemyData0x41
       address:
         NA: 0x2010B84
       description: |-
         Retrieves an unknown property of enemy pokemon from the battle_combatants struct.
-        
+
         r0: battle_combatants pointer
         r1: enemy slot index
     - name: BattleGetPartyPokemonCount
@@ -1075,14 +1075,14 @@ arm9:
         NA: 0x2010B90
       description: |-
         Retrieves the number of party pokemon in the battle from the battle_combatants struct.
-        
+
         r0: battle_combatants pointer
     - name: BattleGetPartyFormIds
       address:
         NA: 0x2010B98
       description: |-
         Retrieves the form_id of a party pokemon from the battle_combatants struct.
-        
+
         r0: battle_combatants pointer
         r1: party slot index
     - name: BattleGetPartySlotStatusesById
@@ -1090,7 +1090,7 @@ arm9:
         NA: 0x2010BA4
       description: |-
         Retrieves the slot_status_field of a party pokemon from the battle_combatants struct.
-        
+
         r0: battle_combatants pointer
         r1: party slot index
     - name: BattleGetArenaGraphicId
@@ -1098,70 +1098,70 @@ arm9:
         NA: 0x2010BB0
       description: |-
         Retrieves the arena graphic id from the battle_combatants struct.
-        
+
         r0: battle_combatants pointer
     - name: BattleGetWeatherEffectId
       address:
         NA: 0x2010BB8
       description: |-
         Retrieves the index of the weather effect from the battle_combatants struct.
-        
+
         r0: battle_combatants pointer
     - name: BattleGetSequenceScriptId
       address:
         NA: 0x2010BC0
       description: |-
         Retrieves the sequence script id from the battle_combatants struct.
-        
+
         r0: battle_combatants pointer
     - name: BattleGetTutorialScriptId
       address:
         NA: 0x2010BC8
       description: |-
         Retrieves the tutorial script id from the battle_combatants struct.
-        
+
         r0: battle_combatants pointer
     - name: BattleGetStartScriptId
       address:
         NA: 0x2010BD0
       description: |-
         Retrieves the start script id from the battle_combatants struct.
-        
+
         r0: battle_combatants pointer
     - name: BattleGetBgmId
       address:
         NA: 0x2010BD8
       description: |-
         Retrieves the battle bgm from the battle_combatants struct.
-        
+
         r0: battle_combatants pointer
     - name: BattleGetViewPartyStatus
       address:
         NA: 0x2010BE0
       description: |-
         Retrieves whether or not the party is accessible for the battle from the battle_combatants struct.
-        
+
         r0: battle_combatants pointer
     - name: BattleGetCanFleeStatus
       address:
         NA: 0x2010BF4
       description: |-
         Retrieves whether or not the player can flee the battle from the battle_combatants struct.
-        
+
         r0: battle_combatants pointer
     - name: BattleGetBossFightStatus
       address:
         NA: 0x2010C08
       description: |-
         Retrieves whether or not a boss health bar should be shown from the battle_combatants struct.
-        
+
         r0: battle_combatants pointer
     - name: BattleGetUnkField0x52
       address:
         NA: 0x2010C1C
       description: |-
         Retrieves a currently unknown field from the battle_combatants struct.
-        
+
         r0: battle_combatants pointer
     - name: BattleGetFieldAllocBits
       address:
@@ -1169,28 +1169,28 @@ arm9:
       description: |-
         Retrieves a bitfield determining whether other fields have been set from the battle_combatants struct.
         Only certain fields, such as bgm, weather, and arena graphic actually have a flag in this bitfield.
-        
+
         r0: battle_combatants pointer
     - name: BattleGetUnkField0x54
       address:
         NA: 0x2010C2C
       description: |-
         Retrieves a currently unknown field from the battle_combatants struct.
-        
+
         r0: battle_combatants pointer
     - name: BattleGetGenderAndUniform
       address:
         NA: 0x2010C34
       description: |-
         Retrieves the current gender and uniform for the player from the battle_combatants struct.
-        
+
         r0: battle_combatants pointer
     - name: InitBattleExports
       address:
         NA: 0x2010CCC
       description: |-
         Initializes a battle_exports struct, and assigns a function pointer to field_0x0.
-        
+
         r0: battle_exports pointer
     - name: ret_02010cec
 #      namespace: c_battle_result_parameter
@@ -1198,21 +1198,21 @@ arm9:
         NA: 0x2010CEC
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-        
+
         No params.
     - name: ZeroBattleExports
       address:
         NA: 0x2010D04
       description: |-
         Zeroes the entirety of a battle_exports struct, except for the function pointer at field_0x0.
-        
+
         r0: battle_exports pointer
     - name: InitDiskHpTableWrapper
       address:
         NA: 0x2010D2C
       description: |-
         Initializes a disk_hp_table_wrapper struct, using "param/DiskHp.bin".
-        
+
         r0: disk_hp_table_wrapper pointer
         r1: undefined4
     - name: InitRangerNetMissionCompletionBits
@@ -1220,14 +1220,14 @@ arm9:
         NA: 0x201128C
       description: |-
         Seems to Initialize RANGER_NET_MISSION_COMPLETION_BITS to zero.
-        
+
         r0: pointer to RANGER_NET_MISSION_COMPLETION_BITS
     - name: SetRangerNetMissionCompletionBit
       address:
         NA: 0x20112DC
       description: |-
         Enables a bit in RANGER_NET_MISSION_COMPLETION_BITS.
-        
+
         r0: pointer to RANGER_NET_MISSION_COMPLETION_BITS
         r1: bit index. If less than zero, empties the entire field!
     - name: GetRangerNetMissionCompletionBit
@@ -1235,7 +1235,7 @@ arm9:
         NA: 0x2011318
       description: |-
         Checks if a bit in RANGER_NET_MISSION_COMPLETION_BITS is enabled.
-        
+
         r0: undefined4
         r1: bit index
     - name: ZeroQuestBody
@@ -1243,28 +1243,28 @@ arm9:
         NA: 0x201135C
       description: |-
         Zeroes the body struct of a quest struct.
-        
+
         r0: quest pointer
     - name: ZeroQuestBodyVeneer
       address:
         NA: 0x2011370
       description: |-
         Zeroes the body struct of a quest struct.
-        
+
         r0: mission_quest_header pointer
     - name: ZeroQuestFooter
       address:
         NA: 0x2011384
       description: |-
         Zeroes the footer struct of a quest struct.
-        
+
         r0: quest pointer
     - name: InitMissionQuestFooter
       address:
         NA: 0x2011394
       description: |-
         Initializes the footer of mission_quest_data to house pointers to other structs.
-        
+
         r0: mission_quest_data pointer
         r1: script_manager pointer
         r2: undefined pointer
@@ -1273,7 +1273,7 @@ arm9:
         NA: 0x20113B4
       description: |-
         Seems to start a mission, given a mission index.
-        
+
         r0: mission_quest_data pointer
         r1: int32_t
     - name: MaybeTryEndMission
@@ -1281,21 +1281,21 @@ arm9:
         NA: 0x201140C
       description: |-
         Might end the current mission?
-        
+
         r0: mission_quest_data pointer
     - name: MaybeExitMissionMode
       address:
         NA: 0x2011464
       description: |-
         Might exit "mission mode". Seems closely related to the above two, at least.
-        
+
         r0: mission_quest_data pointer
     - name: TryUnlockQuest
       address:
         NA: 0x20114C4
       description: |-
         Modifies the quest bitfield to unlock a specified quest by index
-        
+
         r0: mission_quest_data pointer
         r1: quest id
     - name: IsQuestAvailable
@@ -1303,7 +1303,7 @@ arm9:
         NA: 0x20114F8
       description: |-
         Checks if a quest is available using the quest bitfield.
-        
+
         r0: mission_quest_data pointer
         r1: quest id
     - name: MakeQuestNameVisible
@@ -1311,7 +1311,7 @@ arm9:
         NA: 0x2011514
       description: |-
         Sets the bit for whether the name of the quest should be visible in the quest bitfield.
-        
+
         r0: mission_quest_data pointer
         r1: quest id
     - name: HasClearedQuest
@@ -1319,7 +1319,7 @@ arm9:
         NA: 0x2011528
       description: |-
         Checks if the player has cleared a specified quest.
-        
+
         r0: mission_quest_data pointer
         r1: quest id
     - name: TryAcceptQuest
@@ -1327,7 +1327,7 @@ arm9:
         NA: 0x2011540
       description: |-
         Assigns relevant fields of mission_quest_data to accept a specified quest by index.
-        
+
         r0: mission_quest_data pointer
         r1: quest_id
     - name: TryClearQuest
@@ -1335,21 +1335,21 @@ arm9:
         NA: 0x20115A8
       description: |-
         Assigns relevant fields of mission_quest_data to complete the currently active quest.
-        
+
         r0: mission_quest_data pointer
     - name: TryBackOutOfQuest
       address:
         NA: 0x20115F8
       description: |-
         Backs out of the currently active quest without completing it.
-        
+
         r0: mission_quest_data pointer
     - name: ShouldShowQuestName
       address:
         NA: 0x2011630
       description: |-
         Checks if a specifiec quest name should be revealed to the player.
-        
+
         r0: mission_quest_data pointer
         r1: quest id
     - name: InitChapterById
@@ -1357,7 +1357,7 @@ arm9:
         NA: 0x201164C
       description: |-
         Seems to initialize a chapter by chapter index?
-        
+
         r0: mission_quest_data pointer
         r1: int32_t
     - name: CountClearedQuests
@@ -1365,14 +1365,14 @@ arm9:
         NA: 0x2011678
       description: |-
         Returns how many quests the player has cleared.
-        
+
         r0: mission_quest_data pointer
     - name: MissionQuestDataFillChapterMsgWrapper
       address:
         NA: 0x20116A8
       description: |-
         Fills a chapter msg_wrapper given an index and a mission_quest_data pointer.
-        
+
         r0: mission_quest_data pointer
         r1: int32_t
     - name: MaybeUnlockQuestsByChapter
@@ -1380,7 +1380,7 @@ arm9:
         NA: 0x20116C0
       description: |-
         Might be responsible for unlocking quests by the chapter index?
-        
+
         r0: mission_quest_data pointer
         r1: int32_t
     - name: ret_020117ac
@@ -1388,42 +1388,42 @@ arm9:
         NA: 0x20117AC
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-        
+
         No params.
     - name: ZeroPokemonData
       address:
         NA: 0x20150B8
       description: |-
         Zeroes an entire pokemon_data struct.
-        
+
         r0: pokemon_data pointer
     - name: ret_02015108
       address:
         NA: 0x2015108
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-        
+
         No params.
     - name: ret_02015120
       address:
         NA: 0x2015120
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-        
+
         No params.
     - name: MaybeInitRangerData
       address:
         NA: 0x2015198
       description: |-
         Seems to initialize ranger_data? Needs further analysis.
-        
+
         r0: ranger_data_old pointer
     - name: RetrievePokemonByFormId
       address:
         NA: 0x2015520
       description: |-
         Searches the team for a specific form_id, and returns the pokemon_data struct pointer if a match is found.
-        
+
         r0: ranger_data pointer
         r1: form_id
     - name: RetrievePokemonDataFromTable
@@ -1431,7 +1431,7 @@ arm9:
         NA: 0x20155FC
       description: |-
         Retrieves a pokemon_data pointer from a specified slot of the current party.
-        
+
         r0: ranger_data ptr
         r1: slot index
         return: pokemon_data pointer
@@ -1441,7 +1441,7 @@ arm9:
       description: |-
         Retrieves the party size for a specified ranger rank, excluding the partner if in the active team.
         Seems like the partner is intentionally excluded from the party size...
-        
+
         r0: ranger_data_old pointer
         r1: ranger rank to check party size for. If above 10, checks with the current ranger rank!
     - name: IsTriggerSpawnNibbleUnlocked
@@ -1449,7 +1449,7 @@ arm9:
         NA: 0x2015690
       description: |-
         Checks if a trigger nibble is 3 or more. In-game, this allows the trigger to spawn.
-        
+
         r0: ranger_data ptr
         r1: nibble_index
         r2: room_id
@@ -1458,7 +1458,7 @@ arm9:
         NA: 0x2015714
       description: |-
         Sets a trigger nibble to 3. In-game, this allows the trigger to spawn.
-        
+
         r0: ranger_data ptr
         r1: nibble_index
         r2: room_id
@@ -1467,7 +1467,7 @@ arm9:
         NA: 0x201577C
       description: |-
         Enables the least significant bit of a trigger nibble. In-game, this is true if the trigger could exist on the map.
-        
+
         r0: ranger_data ptr
         r1: nibble_index
         r2: room_id
@@ -1476,7 +1476,7 @@ arm9:
         NA: 0x2015A3C
       description: |-
         Checks if a pokemon nibble is 3 or more. In-game, this allows the pokemon to spawn.
-        
+
         r0: ranger_data ptr
         r1: nibble_index
         r2: room_id
@@ -1485,7 +1485,7 @@ arm9:
         NA: 0x2015AAC
       description: |-
         Enables the least significant bit of a pokemon nibble. In-game, this is true if the pokemon could exist on the map.
-        
+
         r0: ranger_data ptr
         r1: nibble_index
         r2: room_id
@@ -1494,7 +1494,7 @@ arm9:
         NA: 0x2015B1C
       description: |-
         Checks if an NPC nibble is 3 or more. In-game, this allows the NPC to spawn.
-        
+
         r0: ranger_data ptr
         r1: nibble_index
         r2: room_id
@@ -1503,7 +1503,7 @@ arm9:
         NA: 0x2015B98
       description: |-
         Sets an NPC nibble to 3. In-game, this allows the NPC to spawn.
-        
+
         r0: ranger_data ptr
         r1: nibble_index
         r2: room_id
@@ -1512,7 +1512,7 @@ arm9:
         NA: 0x2015C08
       description: |-
         Enables the least significant bit of an NPC nibble. In-game, this is true if the NPC could exist on the map.
-        
+
         r0: ranger_data ptr
         r1: nibble_index
         r2: room_id
@@ -1521,7 +1521,7 @@ arm9:
         NA: 0x2015E54
       description: |-
         Seems to be iterating over the following_npcs and party pokemon_data structs, and doing something. Validation is only an educated guess, but it seems plausible.
-        
+
         r0: ranger_data_old pointer
         r1: affects whether followers or party are being checked? Not a bool!
     - name: MaybeHandleStylerLevelUp
@@ -1529,7 +1529,7 @@ arm9:
         NA: 0x20160B8
       description: |-
         Seems to check if the styler has leveled up, and if so, process that level-up. More analysis is needed.
-        
+
         r0: ranger_data pointer
         r1: styler_level
     - name: CountValidPokemonInParty
@@ -1538,7 +1538,7 @@ arm9:
       description: |-
         Counts the number of valid pokemon in the specified party.
         If an invalid party index (less than zero or greater than 2) is input, the current party will be chosen.
-        
+
         r0: ranger_data_old pointer
         r1: party index
     - name: GetPartySizeSubtractPartner
@@ -1547,7 +1547,7 @@ arm9:
       description: |-
         Calls GetPartySize, then subtracts 1 from the result if the partner is in the party.
         Never returns less than zero.
-        
+
         r0: ranger_data_old pointer
         r1: ranger rank to use (if negative uses current)
         r2: team slot to use (if invalid uses current)
@@ -1557,7 +1557,7 @@ arm9:
       description: |-
         Calls CountValidPokemonInParty, then subtracts 1 from the result if the partner is in the party.
         Never returns less than zero.
-        
+
         r0: ranger_data_old pointer
         r1: team slot to use (if invalid uses current)
     - name: HasPartnerPokemonInParty
@@ -1565,7 +1565,7 @@ arm9:
         NA: 0x201621C
       description: |-
         Loops through the number of valid pokemon in the party for slot_status_field & 0x2, which seems to be true for the partner.
-        
+
         r0: ranger_data_old pointer
         r1: team slot to use (if invalid uses current)
     - name: GetPartnerIndexInParty
@@ -1573,7 +1573,7 @@ arm9:
         NA: 0x2016268
       description: |-
         Loops through the number of valid pokemon in the party for slot_status_field & 0x2, then calls and returns GetPartnerIndexFromFormId on the form_id of that species.
-        
+
         r0: ranger_data_old pointer
         r1: team slot to use (if invalid uses current)
     - name: CalcDateAndTime
@@ -1581,7 +1581,7 @@ arm9:
         NA: 0x201630C
       description: |-
         Seems to calculate a relative date/time from the absolute one given by the RTC? Might be something else, hard to tell.
-        
+
         r0: ranger_data_old pointer
         r1: rtc_time pointer
         r2: rtc_date pointer
@@ -1590,14 +1590,14 @@ arm9:
         NA: 0x201668C
       description: |-
         Copies the most recent play_time struct over the backup.
-        
+
         r0: ranger_data pointer
     - name: DebugPrint
       address:
         NA: 0x2016794
       description: |-
         Seems to be a debug print function. Accepts standard C string formatting.
-        
+
         r0: format
         ...: variadic
     - name: AssignPartnerMoods
@@ -1605,14 +1605,14 @@ arm9:
         NA: 0x20167B4
       description: |-
         Seems to assign the mood of each of the 17 pokemon partners. Details unknown.
-        
+
         r0: ranger_data pointer
     - name: GetStylerUpgradeById
       address:
         NA: 0x2016C14
       description: |-
         Seems to retrieve the current level of a styler_upgrade slot.
-        
+
         r0: ranger_data pointer
         r1: styler upgrade index
     - name: SetPlayerExp
@@ -1620,7 +1620,7 @@ arm9:
         NA: 0x2016D4C
       description: |-
         Writes to the player_exp field of RANGER_DATA.
-        
+
         r0: ranger_data pointer
         r1: value to assign
     - name: AddPlayerExp
@@ -1628,7 +1628,7 @@ arm9:
         NA: 0x2016D64
       description: |-
         Adds to the player_exp field of RANGER_DATA, then returns the result.
-        
+
         r0: ranger_data pointer
         r1: value to assign
     - name: SetMaxStepsRecord
@@ -1636,7 +1636,7 @@ arm9:
         NA: 0x2016D88
       description: |-
         Writes to the max_steps_record field of ranger_data->ranger_records.
-        
+
         r0: ranger_data pointer
         r1: uint
     - name: AddMaxStepsRecord
@@ -1644,7 +1644,7 @@ arm9:
         NA: 0x2016DA4
       description: |-
         Adds to the ranger_data->ranger_records.max_steps_record field, then returns the result.
-        
+
         r0: ranger_data pointer
         r1: int
     - name: SetConversationsRecord
@@ -1652,7 +1652,7 @@ arm9:
         NA: 0x2016DD0
       description: |-
         Writes to the conversations_record field of ranger_data->ranger_records.
-        
+
         r0: ranger_data pointer
         r1: uint
     - name: AddConversationsRecord
@@ -1660,7 +1660,7 @@ arm9:
         NA: 0x2016DEC
       description: |-
         Adds to the ranger_data->ranger_records.conversations_record field, then returns the result.
-        
+
         r0: ranger_data pointer
         r1: int
     - name: SetTargetsCheckedRecord
@@ -1668,7 +1668,7 @@ arm9:
         NA: 0x2016E18
       description: |-
         Writes to the targets_checked_record field of ranger_data->ranger_records.
-        
+
         r0: ranger_data pointer
         r1: uint
     - name: AddTargetsCheckedRecord
@@ -1676,7 +1676,7 @@ arm9:
         NA: 0x2016E34
       description: |-
         Adds to the ranger_data->ranger_records.targets_checked_record field, then returns the result.
-        
+
         r0: ranger_data pointer
         r1: int
     - name: SetGameSavesRecord
@@ -1684,7 +1684,7 @@ arm9:
         NA: 0x2016E60
       description: |-
         Writes to the games_saved_record field of ranger_data->ranger_records.
-        
+
         r0: ranger_data pointer
         r1: uint
     - name: AddGameSavesRecord
@@ -1692,7 +1692,7 @@ arm9:
         NA: 0x2016E7C
       description: |-
         Adds to the ranger_data->ranger_records.game_saves_record field, then returns the result.
-        
+
         r0: ranger_data pointer
         r1: int
     - name: SetPokemonRidesRecord
@@ -1700,7 +1700,7 @@ arm9:
         NA: 0x2016EA8
       description: |-
         Writes to the pokemon_rides_record field of ranger_data->ranger_records.
-        
+
         r0: ranger_data pointer
         r1: uint
     - name: AddPokemonRidesRecord
@@ -1708,7 +1708,7 @@ arm9:
         NA: 0x2016EC4
       description: |-
         Adds to the ranger_data->ranger_records.pokemon_rides_record field, then returns the result.
-        
+
         r0: ranger_data pointer
         r1: int
     - name: SetPartnerPokemonBestnessIfGreaterByIndex
@@ -1716,7 +1716,7 @@ arm9:
         NA: 0x2016EF0
       description: |-
         Seems to set the partner_poke_assists record, but only if larger? More research is needed.
-        
+
         r0: ranger_data pointer
         r1: partner index
         r2: value to assign
@@ -1725,7 +1725,7 @@ arm9:
         NA: 0x2016F18
       description: |-
         If the form_id matches a valid partner, will increment that partner's Poke Assists by some amount. Otherwise, will do nothing.
-        
+
         r0: ranger_data pointer
         r1: form_id
         r2: amount to increment by
@@ -1734,14 +1734,14 @@ arm9:
         NA: 0x2016F7C
       description: |-
         Seems to retrieve the best partner record from the ranger_data->ranger_records struct.
-        
+
         r0: ranger_data pointer
     - name: SetCaptureLineLenRecord
       address:
         NA: 0x2017020
       description: |-
         Writes to the capture_line_len_record field of ranger_data->ranger_records.
-        
+
         r0: ranger_data pointer
         r1: uint
     - name: AddCaptureLineLenRecord
@@ -1749,7 +1749,7 @@ arm9:
         NA: 0x201703C
       description: |-
         Adds to the ranger_data->ranger_records.capture_line_len_record field, then returns the result.
-        
+
         r0: ranger_data pointer
         r1: int
     - name: SetNumLoopsRecord
@@ -1757,7 +1757,7 @@ arm9:
         NA: 0x2017068
       description: |-
         Writes to the num_loops_record field of ranger_data->ranger_records.
-        
+
         r0: ranger_data pointer
         r1: uint
     - name: AddNumLoopsRecord
@@ -1765,7 +1765,7 @@ arm9:
         NA: 0x2017084
       description: |-
         Adds to the ranger_data->ranger_records.num_loops_record field, then returns the result.
-        
+
         r0: ranger_data pointer
         r1: int
     - name: SetPokemonCapturedRecord
@@ -1773,7 +1773,7 @@ arm9:
         NA: 0x20170B0
       description: |-
         Writes to the pokemon_captured_record field of ranger_data->ranger_records.
-        
+
         r0: ranger_data pointer
         r1: int16_t
     - name: AddPokemonCapturedRecord
@@ -1781,7 +1781,7 @@ arm9:
         NA: 0x20170D0
       description: |-
         Adds to the ranger_data->ranger_records.pokemon_captured_record field, then returns the result.
-        
+
         r0: ranger_data pointer
         r1: short
     - name: SetFledPokemonRecord
@@ -1789,7 +1789,7 @@ arm9:
         NA: 0x2017100
       description: |-
         Writes to the fled_pokemon_record field of ranger_data->ranger_records.
-        
+
         r0: ranger_data pointer
         r1: int16_t
     - name: AddFledPokemonRecord
@@ -1797,7 +1797,7 @@ arm9:
         NA: 0x2017120
       description: |-
         Adds to the ranger_data->ranger_records.fled_pokemon_record field, then returns the result.
-        
+
         r0: ranger_data pointer
         r1: short
     - name: SetPokeAssistsUsedRecord
@@ -1805,7 +1805,7 @@ arm9:
         NA: 0x2017150
       description: |-
         Writes to the poke_assists_used_record field of ranger_data->ranger_records.
-        
+
         r0: ranger_data pointer
         r1: int16_t
     - name: AddPokeAssistsUsedRecord
@@ -1813,7 +1813,7 @@ arm9:
         NA: 0x2017170
       description: |-
         Adds to the ranger_data->ranger_records.poke_assists_used_record field, then returns the result.
-        
+
         r0: ranger_data pointer
         r1: short
     - name: CountClearedQuestsSafe
@@ -1821,28 +1821,28 @@ arm9:
         NA: 0x20171A0
       description: |-
         Calls CountClearedQuests with a pointer to MISSION_QUEST_DATA.
-        
+
         No params.
     - name: GetSaveFileMagicWord
       address:
         NA: 0x2017298
       description: |-
         Checks if the save file constant is correct. If not, the save file will be corrupt. NOT a checksum!
-        
+
         No params.
     - name: SetSaveFileMagicWord
       address:
         NA: 0x20172BC
       description: |-
         Writes the save file constant to the correct value.
-        
+
         No params.
     - name: SetCurrentRangerPlaytime
       address:
         NA: 0x2018148
       description: |-
         Writes hour, minute, and second values to the current play_time struct.
-        
+
         r0: ranger_data_old pointer
         r1: hours
         r2: minutes
@@ -1852,21 +1852,21 @@ arm9:
         NA: 0x2018208
       description: |-
         Initializes a group_msg_wrapper_table struct.
-        
+
         r0: group_msg_wrapper_table pointer
     - name: FillPokemonNameMsgWrapper
       address:
         NA: 0x2018250
       description: |-
         Fills in the msg_wrapper for pokemon names in a group_msg_wrapper_table struct.
-        
+
         r0: group_msg_wrapper_table pointer
     - name: ZeroPkmnNameMsgWrapper
       address:
         NA: 0x2018374
       description: |-
         Zeroes the msg_wrapper for pokemon names in a group_msg_wrapper_table struct.
-        
+
         r0: group_msg_wrapper_table pointer
     - name: FillItemNameMsgWrapper
       address:
@@ -1874,14 +1874,14 @@ arm9:
       description: |-
         Fills in the msg_wrapper for item names in a group_msg_wrapper_table struct.
         Seemingly unused outside of a text tag. Perhaps the game was intended to have items at one point?
-        
+
         r0: group_msg_wrapper_table pointer
     - name: ZeroItemNameMsgWrapper
       address:
         NA: 0x2018534
       description: |-
         Zeroes the msg_wrapper for item names in a group_msg_wrapper_table struct.
-        
+
         r0: group_msg_wrapper_table pointer
     - name: FillTargetNameMsgWrapper
       address:
@@ -1889,14 +1889,14 @@ arm9:
       description: |-
         Fills in the msg_wrapper for target names in a group_msg_wrapper_table struct.
         Referred to internally as "yakumono".
-        
+
         r0: group_msg_wrapper_table pointer
     - name: ZeroTargetNameMsgWrapper
       address:
         NA: 0x20186F4
       description: |-
         Zeroes the msg_wrapper for target names in a group_msg_wrapper_table struct.
-        
+
         r0: group_msg_wrapper_table pointer
     - name: FillNpcNameMsgWrapper
       address:
@@ -1905,35 +1905,35 @@ arm9:
         Fills in the msg_wrapper for npc names in a group_msg_wrapper_table struct.
         While referred to internally as "npc_names", The message file this comes from actually
         seems to hold strings for ownership, such as "The wild []", "Kincaid's []", etc.
-        
+
         r0: group_msg_wrapper_table pointer
     - name: ZeroNpcNameMsgWrapper
       address:
         NA: 0x20188B4
       description: |-
         Zeroes the msg_wrapper for npc names in a group_msg_wrapper_table struct.
-        
+
         r0: group_msg_wrapper_table pointer
     - name: FillFieldMoveNameMsgWrapper
       address:
         NA: 0x2018950
       description: |-
         Fills in the msg_wrapper for field move names in a group_msg_wrapper_table struct.
-        
+
         r0: group_msg_wrapper_table pointer
     - name: ZeroFieldMoveNameMsgWrapper
       address:
         NA: 0x2018A74
       description: |-
         Zeroes the msg_wrapper for field move names in a group_msg_wrapper_table struct.
-        
+
         r0: group_msg_wrapper_table pointer
     - name: GetPokemonNameById
       address:
         NA: 0x2018B10
       description: |-
         Retrieves a Pokemon name string from group_msg_wrapper_table by index.
-        
+
         r0: group_msg_wrapper_table pointer
         r1: string index
     - name: GetItemNameById
@@ -1941,7 +1941,7 @@ arm9:
         NA: 0x2018B2C
       description: |-
         Retrieves an item name string from group_msg_wrapper_table by index.
-        
+
         r0: group_msg_wrapper_table pointer
         r1: string index
     - name: GetTargetNameById
@@ -1949,7 +1949,7 @@ arm9:
         NA: 0x2018B48
       description: |-
         Retrieves a target name string from group_msg_wrapper_table by index.
-        
+
         r0: group_msg_wrapper_table pointer
         r1: string index
     - name: GetNpcNameById
@@ -1958,7 +1958,7 @@ arm9:
       description: |-
         Retrieves a "NPC" name string from group_msg_wrapper_table by index.
         See FillNpcNameMsgWrapper for clarification.
-        
+
         r0: group_msg_wrapper_table pointer
         r1: string index
     - name: GetFieldMoveNameById
@@ -1966,7 +1966,7 @@ arm9:
         NA: 0x2018B80
       description: |-
         Retrieves a field move name from group_msg_wrapper_table by index.
-        
+
         r0: group_msg_wrapper_table pointer
         r1: string index
     - name: ZeroSettingsAndVariables
@@ -1974,21 +1974,21 @@ arm9:
         NA: 0x2018E1C
       description: |-
         Zero an entire settings_and_variables struct.
-        
+
         r0: settings_and_variables pointer
     - name: ZeroEventVariables
       address:
         NA: 0x2018E30
       description: |-
         Zero the event_variables table of a settings_and_variables struct.
-        
+
         r0: settings_and_variables pointer
     - name: SetEventVariable
       address:
         NA: 0x2018E4C
       description: |-
         Set a specified index of the event_variables table to a specified value.
-        
+
         r0: settings_and_variables pointer
         r1: index
         r2: value
@@ -1997,7 +1997,7 @@ arm9:
         NA: 0x2018E54
       description: |-
         Get the value of a specified index of the event_variables table.
-        
+
         r0: settings_and_variables pointer
         r1: index
     - name: ZeroQuestVariables
@@ -2005,14 +2005,14 @@ arm9:
         NA: 0x2018E5C
       description: |-
         Zero the quest_variables table of a settings_and_variables struct.
-        
+
         r0: settings_and_variables pointer
     - name: SetQuestVariable
       address:
         NA: 0x2018E7C
       description: |-
         Set a specified index of the quest_variables table to a specified value.
-        
+
         r0: settings_and_variables pointer
         r1: index
         r2: value
@@ -2021,7 +2021,7 @@ arm9:
         NA: 0x2018E88
       description: |-
         Get the value of a specified index of the quest_variables table.
-        
+
         r0: settings_and_variables pointer
         r1: index
     - name: SetSettingsVariable
@@ -2029,7 +2029,7 @@ arm9:
         NA: 0x201926C
       description: |-
         Set a specified index of the settings_variables table to a specified value.
-        
+
         r0: settings_and_variables pointer
         r1: index
         r2: value
@@ -2038,7 +2038,7 @@ arm9:
         NA: 0x2019278
       description: |-
         Get the value of a specified index of the settings_variables table.
-        
+
         r0: settings_and_variables pointer
         r1: index
     - name: ret_0201a40c
@@ -2047,14 +2047,14 @@ arm9:
         NA: 0x201A40C
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-        
+
         No params.
     - name: RetrieveStringIdFromMsgWrapperTable
       address:
         NA: 0x20215F8
       description: |-
         Returns a string from a given msg_wrapper struct.
-        
+
         r0: msg_wrapper pointer
         r1: msg_id
     - name: ret_020222c8
@@ -2062,56 +2062,56 @@ arm9:
         NA: 0x20222C8
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-        
+
         No params.
     - name: ret_020222cc
       address:
         NA: 0x20222CC
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-        
+
         No params.
     - name: ret_020222d0
       address:
         NA: 0x20222D0
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-        
+
         No params.
     - name: ret_020222d4
       address:
         NA: 0x20222D4
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-        
+
         No params.
     - name: ret_02022710
       address:
         NA: 0x2022710
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-        
+
         No params.
     - name: ret_020228c0
       address:
         NA: 0x20228C0
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-        
+
         No params.
     - name: ret_020237e0
       address:
         NA: 0x20237E0
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-        
+
         No params.
     - name: InitCBackup
       address:
         NA: 0x2027CC8
       description: |-
         [MANUAL DESCRIPTION]
-        
+
         r0: c_backup pointer
     - name: CBackupBaseDestructor
 #      namespace: c_backup
@@ -2119,7 +2119,7 @@ arm9:
         NA: 0x2027CF0
       description: |-
         [MANUAL DESCRIPTION]
-        
+
         r0: c_backup pointer
     - name: CBackupDeletingDestructor
 #      namespace: c_backup
@@ -2127,14 +2127,14 @@ arm9:
         NA: 0x2027D04
       description: |-
         [MANUAL DESCRIPTION]
-        
+
         r0: c_backup pointer
     - name: InitUnkSaveStruct0x74
       address:
         NA: 0x2027FE8
       description: |-
         Seems to initialize an unk_save_struct_0x74 struct. More research needed.
-        
+
         r0: unk_save_struct_0x74 ptr
         r1: unknown
     - name: ret_02029778
@@ -2143,21 +2143,21 @@ arm9:
         NA: 0x2029778
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-        
+
         No params.
     - name: ret_0202a5f8
       address:
         NA: 0x202A5F8
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-        
+
         No params.
     - name: InitCBackupBase
       address:
         NA: 0x202B5D0
       description: |-
         [MANUAL DESCRIPTION]
-        
+
         r0: c_backup pointer
     - name: CBackupBaseBaseDestructor
 #      namespace: c_backup_base
@@ -2165,7 +2165,7 @@ arm9:
         NA: 0x202B5F4
       description: |-
         [MANUAL DESCRIPTION]
-        
+
         r0: c_backup pointer
     - name: CBackupBaseDeletingDestructor
 #      namespace: c_backup_base
@@ -2173,14 +2173,14 @@ arm9:
         NA: 0x202B61C
       description: |-
         [MANUAL DESCRIPTION]
-        
+
         r0: c_backup pointer
     - name: InitCBackupSync
       address:
         NA: 0x202B8A4
       description: |-
         [MANUAL DESCRIPTION]
-        
+
         r0: c_backup_sync pointer
     - name: CBackupSyncBaseDestructor
 #      namespace: c_backup_sync
@@ -2188,7 +2188,7 @@ arm9:
         NA: 0x202B8D8
       description: |-
         [MANUAL DESCRIPTION]
-        
+
         r0: c_backup_sync pointer
     - name: CBackupSyncDeletingDestructor
 #      namespace: c_backup_sync
@@ -2196,14 +2196,14 @@ arm9:
         NA: 0x202B8EC
       description: |-
         [MANUAL DESCRIPTION]
-        
+
         r0: c_backup_sync pointer
     - name: SysCallReturnZero2353
       address:
         NA: 0x202BEA0
       description: |-
         Syscall Function that always returns zero.
-        
+
         No params.
     - name: SysCallPrintTextbox
       address:
@@ -2211,84 +2211,84 @@ arm9:
       description: |-
         SysCall Function for PrintTextbox.
         Parameter 4 is always zero.
-        
+
         r0: script stack pointer, interpreted as params.
     - name: SysCallIsTextboxPrinting
       address:
         NA: 0x202C8B0
       description: |-
         SysCall Function for IsTextboxPrinting.
-        
+
         No params.
     - name: SysCallCloseTextbox
       address:
         NA: 0x202C8D0
       description: |-
         SysCall Function for CloseTextbox.
-        
+
         No params.
     - name: SysCallSetCustomTextSpeed
       address:
         NA: 0x202C928
       description: |-
         SysCall Function for SetCustomTextSpeed.
-        
+
         r0: script stack pointer, interpreted as params.
     - name: SysCallSetDefaultTextSpeed
       address:
         NA: 0x202C950
       description: |-
         SysCall Function for SetDefaultTextSpeed.
-        
+
         No params.
     - name: SysCallEnableAutoAdvanceTextWithDelay
       address:
         NA: 0x202C974
       description: |-
         SysCall Function for EnableAutoAdvanceTextWithDelay.
-        
+
         r0: script stack pointer, interpreted as params.
     - name: SysCallDisableAutoAdvanceText
       address:
         NA: 0x202C99C
       description: |-
         SysCall Function for DisableAutoAdvanceText.
-        
+
         No params.
     - name: SysCallEnableAutoCloseTextWithDelay
       address:
         NA: 0x202C9C0
       description: |-
         SysCall Function for EnableAutoCloseTextWithDelay.
-        
+
         r0: script stack pointer, interpreted as params.
     - name: SysCallDisableAutoCloseText
       address:
         NA: 0x202C9E8
       description: |-
         SysCall Function for DisableAutoCloseText.
-        
+
         No params.
     - name: SysCallTryCloseTextbox
       address:
         NA: 0x202CA30
       description: |-
         SysCall function for TryCloseTextbox.
-        
+
         No params.
     - name: SysCallGetYesNoMenuResult
       address:
         NA: 0x202CA54
       description: |-
         SysCall Function for GetYesNoMenuResult.
-        
+
         No params.
     - name: SysCallPrintTextboxFull
       address:
         NA: 0x202CA74
       description: |-
         Similar to SysCallPrintTextbox, but the final param of PrintTextbox is actually pulled from the script stack.
-        
+
         r0: script stack pointer, interpreted as params.
     - name: ret_0202d394
 #      namespace: c_field_actor
@@ -2296,28 +2296,28 @@ arm9:
         NA: 0x202D394
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-        
+
         No params.
     - name: SysCallReturnZero2077
       address:
         NA: 0x202E060
       description: |-
         Syscall Function that always returns zero.
-        
+
         No params.
     - name: SysCallReturnZero2078
       address:
         NA: 0x202E068
       description: |-
         Syscall Function that always returns zero.
-        
+
         No params.
     - name: DebugPrintError
       address:
         NA: 0x202E1F0
       description: |-
         Identical to DebugPrint, but seems to be primarily used for error messages.
-        
+
         r0: format
         ...: variadic
     - name: SysCallReturnZero2081
@@ -2325,21 +2325,21 @@ arm9:
         NA: 0x202E548
       description: |-
         Syscall Function that always returns zero.
-        
+
         No params.
     - name: SysCallReturnZero2082
       address:
         NA: 0x202E550
       description: |-
         Syscall Function that always returns zero.
-        
+
         No params.
     - name: SysCallInitBattleCombatantsAndExports
       address:
         NA: 0x202F13C
       description: |-
         SysCall Function that calls InitializeBattlePokemonFields and ZeroBattleExports with their relevant structs.
-        
+
         No params.
     - name: SysCallCopyStringToRangerDebugBuffer
       address:
@@ -2348,14 +2348,14 @@ arm9:
           - 0x2030BB8
       description: |-
         Copies a text string to the debug buffer in RANGER_DATA. Both instances are separate SysCalls, but the functions are byte-for-byte identical.
-        
+
         r0: script stack pointer, interpreted as params.
     - name: SysCallAddEnemyFormToEncounterType2
       address:
         NA: 0x202F208
       description: |-
         SysCall Function for AddEnemyFormToEncounterType2.
-        
+
         r0: script stack pointer, interpreted as params.
     - name: SysCallBattleSetBgmId
       address:
@@ -2363,7 +2363,7 @@ arm9:
       description: |-
         Seems to assign a specified bgm id to a static battle_combatants structure in memory.
         Is a SysCall Function.
-        
+
         r0: script stack pointer, interpreted as params.
     - name: SysCallSetArenaGraphicId
       address:
@@ -2371,35 +2371,35 @@ arm9:
       description: |-
         Seems to assign a currently unknown field to a static battle_combatants structure in memory.
         Is a SysCall Function.
-        
+
         r0: script stack pointer, interpreted as params.
     - name: SysCallReturnZero2092
       address:
         NA: 0x202F294
       description: |-
         Syscall Function that always returns zero.
-        
+
         No params.
     - name: SysCallReturnZero2093
       address:
         NA: 0x202F29C
       description: |-
         Syscall Function that always returns zero.
-        
+
         No params.
     - name: SysCallReturnZero2094
       address:
         NA: 0x202F2A4
       description: |-
         Syscall Function that always returns zero.
-        
+
         No params.
     - name: SysCallReturnZero2095
       address:
         NA: 0x202F2AC
       description: |-
         Syscall Function that always returns zero.
-        
+
         No params.
     - name: SysCallGetBattleResult
       address:
@@ -2407,7 +2407,7 @@ arm9:
       description: |-
         Seems to retrieve the results of the battle from megastruct->battle_exports.
         Is a SysCall Function.
-        
+
         No params.
     - name: SysCallBattleDisableFleeing
       address:
@@ -2415,7 +2415,7 @@ arm9:
       description: |-
         Seems to disable fleeing in a static battle_combatants structure in memory.
         Is a SysCall Function.
-        
+
         No params.
     - name: SysCallBattleSetUnkField0x54
       address:
@@ -2423,7 +2423,7 @@ arm9:
       description: |-
         Seems to assign a currently unknown field to a static battle_combatants structure in memory.
         Is a SysCall Function.
-        
+
         r0: script stack pointer, interpreted as params.
     - name: SysCallBattleSetSequenceScriptId
       address:
@@ -2431,7 +2431,7 @@ arm9:
       description: |-
         Seems to assign a sequence script id to a static battle_combatants structure in memory.
         Is a SysCall Function.
-        
+
         r0: script stack pointer, interpreted as params.
     - name: SysCallBattleSetTutorialScriptId
       address:
@@ -2439,7 +2439,7 @@ arm9:
       description: |-
         Seems to assign a tutorial script id to a static battle_combatants structure in memory.
         Is a SysCall Function.
-        
+
         r0: script stack pointer, interpreted as params.
     - name: SysCallBattleSetStartScriptId
       address:
@@ -2447,7 +2447,7 @@ arm9:
       description: |-
         Seems to assign a start script id to a static battle_combatants structure in memory.
         Is a SysCall Function.
-        
+
         r0: script stack pointer, interpreted as params.
     - name: SysCallBattleSetStylerLevel
       address:
@@ -2455,7 +2455,7 @@ arm9:
       description: |-
         Seems to assign the styler level to a static battle_combatants structure in memory.
         Is a SysCall Function.
-        
+
         r0: script stack pointer, interpreted as params.
     - name: SysCallBattleAddPartyPokemon
       address:
@@ -2463,7 +2463,7 @@ arm9:
       description: |-
         Seems to add party pokemon to a static battle_combatants structure in memory.
         Is a SysCall Function.
-        
+
         r0: script stack pointer, interpreted as params.
     - name: SysCallAddEnemyFormToEncounterType1
       address:
@@ -2472,14 +2472,14 @@ arm9:
         Seems to add an enemy form to an encounter that's about to occur, modifying both the battle_combatants and the battle_exports struct.
         Unknown how it differs from AddEnemyFormToEncounterType2.
         Is a SysCall Function.
-        
+
         r0: script stack pointer, interpreted as params.
     - name: SysCallBattleSetGenderAndUniform
       address:
         NA: 0x202F4BC
       description: |-
         SysCall Function for BattleSetGenderAndUniform.
-        
+
         r0: script stack pointer, interpreted as params.
     - name: SysCallBattleSetBossFightStatus
       address:
@@ -2487,49 +2487,49 @@ arm9:
       description: |-
         Seems to set the boss fight status for a static battle_combatants structure in memory.
         Is a SysCall Function.
-        
+
         No params.
     - name: SysCallReturnZero2097
       address:
         NA: 0x202F784
       description: |-
         Syscall Function that always returns zero.
-        
+
         No params.
     - name: SysCallReturnZero2098
       address:
         NA: 0x202F78C
       description: |-
         Syscall Function that always returns zero.
-        
+
         No params.
     - name: SysCallReturnZero2099
       address:
         NA: 0x202F794
       description: |-
         Syscall Function that always returns zero.
-        
+
         No params.
     - name: SysCallReturnZero2100
       address:
         NA: 0x202F79C
       description: |-
         Syscall Function that always returns zero.
-        
+
         No params.
     - name: SysCallReturnZero2101
       address:
         NA: 0x202F7A4
       description: |-
         Syscall Function that always returns zero.
-        
+
         No params.
     - name: SysCallSetScriptSubroutine2ByName
       address:
         NA: 0x202F9FC
       description: |-
         SysCall Function for SetScriptSubroutine2ByName.
-        
+
         r0: script stack pointer, interpreted as params.
         r3: undefined4
     - name: SysCallGetPlayerGender
@@ -2537,7 +2537,7 @@ arm9:
         NA: 0x202FA44
       description: |-
         SysCall Function that returns the player gender.
-        
+
         No params.
     - name: SysCallGetRangerStylerRank
       address:
@@ -2545,7 +2545,7 @@ arm9:
       description: |-
         Retrieves the current styler rank from RANGER_DATA.
         Is a SysCall Function.
-        
+
         No params.
     - name: SysCallGetRangerStylerType
       address:
@@ -2553,14 +2553,14 @@ arm9:
       description: |-
         Retrieves the current styler type from RANGER_DATA.
         Is a SysCall Function.
-        
+
         No params.
     - name: SysCallReturnZero2166
       address:
         NA: 0x202FE28
       description: |-
         Syscall Function that always returns zero.
-        
+
         No params.
     - name: SysCallGetStylerLevel
       address:
@@ -2568,14 +2568,14 @@ arm9:
       description: |-
         Retrieves the current styler level from RANGER_DATA.
         Is a SysCall Function.
-        
+
         No params.
     - name: SysCallSetRangerCurrentHp
       address:
         NA: 0x202FEC0
       description: |-
         SysCall Function that sets the current HP of the player. If zero, will heal the player to their max HP.
-        
+
         r0: script stack pointer, interpreted as params.
     - name: SysCallGetRangerMaxHp
       address:
@@ -2583,7 +2583,7 @@ arm9:
       description: |-
         Retrieves the ranger max HP from RANGER_DATA.
         Is a SysCall Function.
-        
+
         No params.
     - name: SysCallGetRangerCurrentHp
       address:
@@ -2591,28 +2591,28 @@ arm9:
       description: |-
         Retrieves the current ranger HP from RANGER_DATA.
         Is a SysCall Function.
-        
+
         No params.
     - name: SysCallMaybeDoIrisTransition
       address:
         NA: 0x20309B4
       description: |-
         SysCall Function that seems to eventually call an Iris Transition?
-        
+
         r0: script stack pointer, interpreted as params.
     - name: SysCallReturnZero2112
       address:
         NA: 0x2030AD0
       description: |-
         Syscall Function that always returns zero.
-        
+
         No params.
     - name: SysCallSetPlayerSpawnData
       address:
         NA: 0x2030B40
       description: |-
         SysCall Function responsible for handling where the player spawns on loading zone transition, as well as where they face, and what room_id they're in.
-        
+
         r0: script stack pointer, interpreted as params.
         r1: int32_t
     - name: SysCallMaybeStartMissionWithFanfare
@@ -2620,77 +2620,77 @@ arm9:
         NA: 0x2030F8C
       description: |-
         SysCall Function that seems to call StartMissionById, then many audio-related functions.
-        
+
         r0: script stack pointer, interpreted as params.
     - name: SysCallMaybeEndMissionWithFanfare
       address:
         NA: 0x203117C
       description: |-
         SysCall Function that seems to call many audio-related/graphics functions, then MaybeTryEndMission.
-        
+
         r0: script stack pointer, interpreted as params.
     - name: SysCallMaybeEndMissionOnlyFanfare
       address:
         NA: 0x2031244
       description: |-
         SysCall Function that seems to call the same audio-related/graphics functions as SysCallMaybeEndMissionWithFanfare, but NOT MaybeTryEndMission.
-        
+
         No params.
     - name: SysCallMaybeExitMissionModeWithFanfare
       address:
         NA: 0x20312C4
       description: |-
         SysCall Function that seems to call a few audio-related functions, then MaybeExitMissionMode.
-        
+
         No params.
     - name: SysCallGetActiveMissionId
       address:
         NA: 0x20313E8
       description: |-
         SysCall Function that returns the active mission id.
-        
+
         No params.
     - name: SysCallMaybeTryEndMission
       address:
         NA: 0x2031404
       description: |-
         SysCall Function for MaybeTryEndMission.
-        
+
         No params.
     - name: SysCallTryStartMissionById
       address:
         NA: 0x2031428
       description: |-
         SysCall Function for TryStartMissionById.
-        
+
         r0: script stack pointer, interpreted as params.
     - name: SysCallMaybeExitMissionMode
       address:
         NA: 0x2031450
       description: |-
         SysCall Function for MaybeTryExitMissionMode.
-        
+
         No params.
     - name: SysCallTryAcceptQuestWithFanfare
       address:
         NA: 0x2031474
       description: |-
         SysCall Function that calls TryAcceptQuest, ZeroQuestVariables, then a few audio/visual/text functions.
-        
+
         r0: script stack pointer, interpreted as params.
     - name: SysCallTryClearQuest
       address:
         NA: 0x2031684
       description: |-
         SysCall function for TryClearQuest.
-        
+
         No params.
     - name: SysCallShouldShowQuestName
       address:
         NA: 0x20316A8
       description: |-
         SysCall function for ShouldShowQuestName.
-        
+
         r0: script stack pointer, interpreted as params.
     - name: SysCallGetActiveQuestId
       address:
@@ -2698,98 +2698,98 @@ arm9:
       description: |-
         Retrieves the active quest id, using a pointer to MISSION_QUEST_DATA.
         Is a SysCall Function.
-        
+
         No params.
     - name: SysCallTryBackOutOfQuest
       address:
         NA: 0x20316E8
       description: |-
         Is a SysCall Function for TryBackOutOfQuest.
-        
+
         No params.
     - name: SysCallTryUnlockQuest
       address:
         NA: 0x203170C
       description: |-
         Is a SysCall Function for TryUnlockQuest.
-        
+
         r0: script stack pointer, interpreted as params.
     - name: SysCallIsQuestAvailable
       address:
         NA: 0x2031734
       description: |-
         Is a SysCall Function for IsQuestAvailable.
-        
+
         r0: script stack pointer, interpreted as params.
     - name: SysCallMakeQuestNameVisible
       address:
         NA: 0x2031758
       description: |-
         Is a SysCall Function for MakeQuestNameVisible.
-        
+
         r0: script stack pointer, interpreted as params.
     - name: SysCallHasClearedQuest
       address:
         NA: 0x2031780
       description: |-
         Is a SysCall Function for HasClearedQuest.
-        
+
         r0: script stack pointer, interpreted as params.
     - name: SysCallReturnZero2130
       address:
         NA: 0x20319C4
       description: |-
         Syscall Function that always returns zero.
-        
+
         No params.
     - name: SysCallGetChapterNumber
       address:
         NA: 0x20319CC
       description: |-
         SysCall Function that retrieves the current chapter number from MISSION_QUEST_DATA.
-        
+
         No params.
     - name: SysCallGetEventVariable
       address:
         NA: 0x2031B60
       description: |-
         Is a SysCall Function for GetEventVariable.
-        
+
         r0: script stack pointer, interpreted as params.
     - name: SysCallSetEventVariable
       address:
         NA: 0x2031B84
       description: |-
         Is a SysCall Function for SetEventVariable.
-        
+
         r0: script stack pointer, interpreted as params.
     - name: SysCallGetSettingsVariable
       address:
         NA: 0x2031BB0
       description: |-
         Is a SysCall Function for GetSettingsVariable.
-        
+
         r0: script stack pointer, interpreted as params.
     - name: SysCallSetSettingsVariable
       address:
         NA: 0x2031BD4
       description: |-
         Is a SysCall Function for SetSettingsVariable.
-        
+
         r0: script stack pointer, interpreted as params.
     - name: SysCallGetQuestVariable
       address:
         NA: 0x2031C00
       description: |-
         Is a SysCall Function for GetQuestVariable.
-        
+
         r0: script stack pointer, interpreted as params.
     - name: SysCallSetQuestVariable
       address:
         NA: 0x2031C24
       description: |-
         Is a SysCall Function for SetQuestVariable.
-        
+
         r0: script stack pointer, interpreted as params.
     - name: SysCallEnableSlotStatusBit2
       address:
@@ -2797,7 +2797,7 @@ arm9:
       description: |-
         Enables slot status bit 2 on a pokemon. This seems to only be enabled on pokemon who cannot be released, such as doduo mid-ride, or your partner.
         Is a SysCall Function.
-        
+
         r0: script stack pointer, interpreted as params.
     - name: SysCallDisableSlotStatusBit2
       address:
@@ -2805,7 +2805,7 @@ arm9:
       description: |-
         Disables slot status bit 2 on a pokemon. This seems to only be enabled on pokemon who cannot be released, such as doduo mid-ride, or your partner.
         Is a SysCall Function.
-        
+
         r0: script stack pointer, interpreted as params.
     - name: SysCallEnableSlotStatusBit1
       address:
@@ -2813,7 +2813,7 @@ arm9:
       description: |-
         Enables slot status bit 1 on a pokemon. This seems to hide the pokemon from the release menu entirely, and is only known to be used by the partner.
         Is a SysCall Function.
-        
+
         r0: script stack pointer, interpreted as params.
     - name: SysCallDisableSlotStatusBit1
       address:
@@ -2821,7 +2821,7 @@ arm9:
       description: |-
         Disables slot status bit 1 on a pokemon. This seems to hide the pokemon from the release menu entirely, and is only known to be used by the partner.
         Is a SysCall Function.
-        
+
         r0: script stack pointer, interpreted as params.
     - name: SysCallBitorPartnerPokemonStatus
       address:
@@ -2829,7 +2829,7 @@ arm9:
       description: |-
         Bitwise OR on the partner status bitfield in RANGER_DATA.
         Is a SysCall Function.
-        
+
         r0: script stack pointer, interpreted as params.
     - name: SysCallBitandPartnerPokemonStatus
       address:
@@ -2837,7 +2837,7 @@ arm9:
       description: |-
         Bitwise AND on the partner status bitfield in RANGER_DATA.
         Is a SysCall Function.
-        
+
         r0: script stack pointer, interpreted as params.
     - name: SysCallGetPartnerPokemonMood
       address:
@@ -2845,14 +2845,14 @@ arm9:
       description: |-
         Retrieves the mood of a specified partner by index.
         Is a SysCall Function.
-        
+
         r0: script stack pointer, interpreted as params.
     - name: SysCallBattleSetPartnerGaugeFillRate
       address:
         NA: 0x2032828
       description: |-
         Is a SysCall Function.
-        
+
         r0: script stack pointer, interpreted as params.
     - name: ret_02032a44
 #      namespace: c_field_actor
@@ -2860,7 +2860,7 @@ arm9:
         NA: 0x2032A44
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-        
+
         No params.
     - name: ret_0203331c
 #      namespace: c_field_effect
@@ -2868,7 +2868,7 @@ arm9:
         NA: 0x203331C
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-        
+
         No params.
     - name: ret_02033388
 #      namespace: c_field_effect
@@ -2876,7 +2876,7 @@ arm9:
         NA: 0x2033388
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-        
+
         No params.
     - name: ret_020333d8
 #      namespace: c_field_effect
@@ -2884,7 +2884,7 @@ arm9:
         NA: 0x20333D8
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-        
+
         No params.
     - name: ret_02033440
 #      namespace: c_field_effect
@@ -2892,7 +2892,7 @@ arm9:
         NA: 0x2033440
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-        
+
         No params.
     - name: ret_0203365c
 #      namespace: c_field_effect
@@ -2900,112 +2900,112 @@ arm9:
         NA: 0x203365C
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-        
+
         No params.
     - name: SysCallDisableActiveTimersAndMore
       address:
         NA: 0x20337EC
       description: |-
         SysCall Function That resets the timer fields in RANGER_DATA, but seems to do something else too.
-        
+
         No params.
     - name: SysCallInitTimerType1
       address:
         NA: 0x203381C
       description: |-
         SysCall Function That begins a timer of type 1 by initializing relevant fields in RANGER_DATA.
-        
+
         r0: script stack pointer, interpreted as params.
     - name: SysCallInitTimerType2
       address:
         NA: 0x2033844
       description: |-
         SysCall Function That begins a timer of type 2 by initializing relevant fields in RANGER_DATA.
-        
+
         r0: script stack pointer, interpreted as params.
     - name: SysCallSetTimerTypeNone
       address:
         NA: 0x203386C
       description: |-
         SysCall Function That sets only the timer type field in RANGER_DATA to 0.
-        
+
         No params.
     - name: SysCallSetTimerType1
       address:
         NA: 0x2033884
       description: |-
         SysCall Function That sets only the timer type field in RANGER_DATA to 1.
-        
+
         No params.
     - name: SysCallSetTimerType2
       address:
         NA: 0x20338A0
       description: |-
         SysCall Function That sets only the timer type field in RANGER_DATA to 2.
-        
+
         No params.
     - name: SysCallEnableTimerDisplay
       address:
         NA: 0x20338BC
       description: |-
         SysCall Function that enables the timer used in timed events, causing it to appear on screen.
-        
+
         No params.
     - name: SysCallDisbleTimerDisplay
       address:
         NA: 0x20338DC
       description: |-
         SysCall Function that disables the timer used in timed events, causing it to disappear from the screen.
-        
+
         No params.
     - name: SysCallGetTimer1Duration
       address:
         NA: 0x20338FC
       description: |-
         SysCall Function That retrieves the current timer 1 duration in frames, from RANGER_DATA.
-        
+
         No params.
     - name: SysCallSetTimer1Duration
       address:
         NA: 0x2033918
       description: |-
         SysCall Function That sets only the current timer 1 duration in RANGER_DATA.
-        
+
         r0: script stack pointer, interpreted as params.
     - name: SysCallTimerIsActive
       address:
         NA: 0x2033934
       description: |-
         SysCall Function That returns true if the timer type is 1 or 2, but not 0.
-        
+
         No params.
     - name: SysCallIncrementPokemonRidesRecord
       address:
         NA: 0x2033B50
       description: |-
         SysCall Function that increments the pokemon_rides_record field of RANGER_DATA->ranger_records.
-        
+
         No params.
     - name: SysCallGetGameSavesRecord
       address:
         NA: 0x2033C30
       description: |-
         SysCall Function that retrieves the game_saves_record from RANGER_DATA->ranger_records.
-        
+
         No params.
     - name: InitScriptDataOuter
       address:
         NA: 0x2033C4C
       description: |-
         Assists in initializing a script_data struct.
-        
+
         r0: script_data pointer
     - name: OpenAndInitScriptFile
       address:
         NA: 0x2033C60
       description: |-
         Is called to open a script file, unpack it, and likely more.
-        
+
         r0: script_data pointer
         r1: script file name
     - name: OpenAndInitChXScript
@@ -3013,7 +3013,7 @@ arm9:
         NA: 0x2033D00
       description: |-
         A variant of OpenAndInitScriptFile run in place of it for exclusively "chx###" scripts.
-        
+
         r0: script_data pointer
         r1: script_file pointer
         r2: int32_t
@@ -3022,7 +3022,7 @@ arm9:
         NA: 0x2033D58
       description: |-
         Assigns a script subroutine to slot 1 of a script_data struct.
-        
+
         r0: script_data pointer
         r1: script name pointer
         r2: undefined4
@@ -3032,7 +3032,7 @@ arm9:
         NA: 0x2033DC0
       description: |-
         Assigns a script subroutine to slot 2 of a script_data struct.
-        
+
         r0: script_data pointer
         r1: script name pointer
         r2: undefined4
@@ -3042,28 +3042,28 @@ arm9:
         NA: 0x2033E50
       description: |-
         Seems to zero initialize a script_data struct.
-        
+
         r0: script_data pointer
     - name: InitScriptData
       address:
         NA: 0x2033EB0
       description: |-
         Assists in initializing a script_data struct.
-        
+
         r0: script_data pointer
     - name: MaybeCloseAndDeallocateScriptFile
       address:
         NA: 0x2033ED4
       description: |-
         Might be responsible for closing and removing a script file from ram.
-        
+
         r0: script_data pointer
     - name: InitScriptManagerOuter
       address:
         NA: 0x2033F04
       description: |-
         Seems to initialize a script_manager struct from the ground up.
-        
+
         r0: script_manager pointer
         r1: undefined4 pointer
     - name: TryInitSystemScript
@@ -3071,7 +3071,7 @@ arm9:
         NA: 0x2033F90
       description: |-
         Seems to initialize a system script by index to the system script_data slot.
-        
+
         r0: script_manager pointer
         r1: system script index
     - name: TryInitAreaScript
@@ -3079,7 +3079,7 @@ arm9:
         NA: 0x203401C
       description: |-
         Seems to initialize an area script by index to the area script_data slot.
-        
+
         r0: script_manager pointer
         r1: area script index
         r2: undefined4
@@ -3089,7 +3089,7 @@ arm9:
         NA: 0x2034084
       description: |-
         Seems to initialize a chapter script by index to the chapter script_data slot.
-        
+
         r0: script_manager pointer
         r1: chapter script index
         r2: undefined4
@@ -3099,7 +3099,7 @@ arm9:
         NA: 0x2034120
       description: |-
         Seems to initialize a quest script by index to the quest script_data slot.
-        
+
         r0: script_manager pointer
         r1: quest script index
     - name: SetScriptSubroutine1ByName
@@ -3107,7 +3107,7 @@ arm9:
         NA: 0x2034184
       description: |-
         Seems to determine the type of subroutine 1 (system, area, chapter, quest) and assigns it to the correct script_data slot.
-        
+
         r0: script_manager pointer
         r1: subroutine name ptr
     - name: SetScriptSubroutine2ByName
@@ -3115,7 +3115,7 @@ arm9:
         NA: 0x203421C
       description: |-
         Seems to determine the type of subroutine 2 (system, area, chapter, quest) and assigns it to the correct script_data slot.
-        
+
         r0: script_manager pointer
         r1: subroutine name ptr
         r2: megastruct pointer for some reason
@@ -3125,35 +3125,35 @@ arm9:
         NA: 0x2034290
       description: |-
         Zero Inits the system script_data slot.
-        
+
         r0: script_manager pointer
     - name: ZeroInitAreaScriptData
       address:
         NA: 0x20342A0
       description: |-
         Zero Inits the area script_data slot.
-        
+
         r0: script_manager pointer
     - name: ZeroInitChapterScriptData
       address:
         NA: 0x20342B0
       description: |-
         Zero Inits the chapter script_data slot.
-        
+
         r0: script_manager pointer
     - name: ZeroInitQuestScriptData
       address:
         NA: 0x20342C0
       description: |-
         Zero Inits the quest script_data slot.
-        
+
         r0: script_manager pointer
     - name: SetUnkRidingData
       address:
         NA: 0x2034374
       description: |-
         Seems to assign some data related to the current mount.
-        
+
         r0: script_manager pointer
         r1: undefined4
     - name: GetUnkRidingData
@@ -3161,21 +3161,21 @@ arm9:
         NA: 0x203437C
       description: |-
         Seem to retrieve some data related to the current mount.
-        
+
         r0: script_manager pointer
     - name: ZeroInitAllScriptData
       address:
         NA: 0x2034450
       description: |-
         Zero Inits the 4 script_data fields in sequence.
-        
+
         r0: script_manager pointer
     - name: InitAudioEngineOuter
       address:
         NA: 0x2034478
       description: |-
         Initializes the audio_engine struct. More research needed.
-        
+
         r0: audio_engine pointer
     - name: Nns_SndMainVeneer
       address:
@@ -3185,50 +3185,50 @@ arm9:
         NA: 0x20345A8
       description: |-
         Clears unk_heap_2 of a specified audio_engine struct.
-        
+
         r0: audio_engine pointer
     - name: AudioEngineClearUnkHeap1
       address:
         NA: 0x20345B8
       description: |-
         Clears unk_heap_1 of a specified audio_engine struct.
-        
+
         r0: audio_engine pointer
     - name: MaybeLoadNextSequencedTrack
       address:
         NA: 0x2034954
       description: |-
         Seems to possibly load the next sequenced in-game audio track?
-        
+
         r0: audio_engine pointer
     - name: AudioEngineMaybeCheckHeapSizes
       address:
         NA: 0x2034EEC
       description: |-
         Checks the sizes of all 3 heaps, then seems to do utterly nothing with that information? Maybe the return is wrong.
-        
+
         r0: audio_engine pointer
     - name: SetSeqTrack3Volume
       address:
         NA: 0x2034F20
       description: |-
-        Seems to set the volume of specifically sequenced track 3 of the audio engine. 
-        
+        Seems to set the volume of specifically sequenced track 3 of the audio engine.
+
         r0: audio_engine pointer
-        r1: int 
+        r1: int
     - name: IsFormIdPartnerPokemon
       address:
         NA: 0x2034F9C
       description: |-
         Checks if the given form_id corresponds to a vanilla partner form_id. Returns 1 if so, 0 if not.
-        
+
         r0: form_id
     - name: GetPartnerIndexFromFormId
       address:
         NA: 0x2035088
       description: |-
         Converts a form_id to the corresponding partner index, if possible.
-        
+
         r0: form_id
     - name: GetPartnerIndexFromFormIdAgain
       address:
@@ -3236,7 +3236,7 @@ arm9:
       description: |-
         Seems to also convert a form_id to the corresponding partneri index if possible.
         The code looks completely different, but appears to do the same thing...
-        
+
         r0: form_id
     - name: ret_020358fc
 #      namespace: c_field_screen_effect_object_base
@@ -3244,7 +3244,7 @@ arm9:
         NA: 0x20358FC
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-        
+
         No params.
     - name: ret_02035fe4
 #      namespace: c_field_screen_effect_object_base
@@ -3252,7 +3252,7 @@ arm9:
         NA: 0x2035FE4
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-        
+
         No params.
     - name: ret_0203e930
 #      namespace: c_field_draw_actor
@@ -3260,7 +3260,7 @@ arm9:
         NA: 0x203E930
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-        
+
         No params.
     - name: ret_0204078c
 #      namespace: c_draw_object
@@ -3268,7 +3268,7 @@ arm9:
         NA: 0x204078C
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-        
+
         No params.
     - name: ret_0204129c
 #      namespace: c_actor_data_partner
@@ -3276,21 +3276,21 @@ arm9:
         NA: 0x204129C
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-        
+
         No params.
     - name: ret_02041920
       address:
         NA: 0x2041920
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-        
+
         No params.
     - name: InitFieldData
       address:
         NA: 0x2041C80
       description: |-
         Initializes a field_data struct.
-        
+
         r0: field_data pointer
         r1: field_data.bin file name and path
         r2: undefined4
@@ -3300,7 +3300,7 @@ arm9:
       description: |-
         Actually retrieves the file data from field_data.bin and stores it in a field_data struct.
         Called by InitFieldData.
-        
+
         r0: field_data pointer
         r1: field_data.bin file name and path
         r2: undefined4
@@ -3309,7 +3309,7 @@ arm9:
         NA: 0x2041D44
       description: |-
         Retrieves a field_npc_data struct by the specified sprite index.
-        
+
         r0: field_data pointer
         r1: npc_sprite_id
     - name: GetFieldEnemyDataByFormId
@@ -3317,7 +3317,7 @@ arm9:
         NA: 0x2041D58
       description: |-
         Retrieves a field_enemy_data struct by the specified form_id index.
-        
+
         r0: field_data pointer
         r1: form_id
     - name: GetFieldTargetDataByIndex
@@ -3325,7 +3325,7 @@ arm9:
         NA: 0x2041D6C
       description: |-
         Retrieves a field_target_data struct by the specified target_object_id index.
-        
+
         r0: field_data pointer
         r1: target_object_id
     - name: GetFieldMapDataByRoomId
@@ -3333,7 +3333,7 @@ arm9:
         NA: 0x2041D80
       description: |-
         Retrieves a field_map_data struct by the specified room_id index.
-        
+
         r0: field_data pointer
         r1: room_id
     - name: ret_02043124
@@ -3342,7 +3342,7 @@ arm9:
         NA: 0x2043124
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-        
+
         No params.
     - name: ret_02043128
 #      namespace: c_download_mission_start_scene
@@ -3350,7 +3350,7 @@ arm9:
         NA: 0x2043128
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-        
+
         No params.
     - name: ret_020439c4
 #      namespace: c_download_mission_end_scene
@@ -3358,7 +3358,7 @@ arm9:
         NA: 0x20439C4
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-        
+
         No params.
     - name: ret_020439c8
 #      namespace: c_download_mission_end_scene
@@ -3366,7 +3366,7 @@ arm9:
         NA: 0x20439C8
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-        
+
         No params.
     - name: ret_02044144
 #      namespace: c_download_mission_restart_scene
@@ -3374,7 +3374,7 @@ arm9:
         NA: 0x2044144
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-        
+
         No params.
     - name: ret_02044148
 #      namespace: c_download_mission_restart_scene
@@ -3382,21 +3382,21 @@ arm9:
         NA: 0x2044148
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-        
+
         No params.
     - name: ret_020441ac
       address:
         NA: 0x20441AC
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-        
+
         No params.
     - name: DebugPrintInternal
       address:
         NA: 0x20442CC
       description: |-
         Called by DebugPrint and DebugPrintError; all(?) debug messages pass through here.
-        
+
         r0: format
         r1: ap
     - name: DebugPrintInternalVeneer
@@ -3404,9 +3404,9 @@ arm9:
         NA: 0x2044334
       description: |-
         Likely a linker-generated veneer for DebugPrintInternal.
-        
+
         See https://developer.arm.com/documentation/dui0474/k/image-structure-and-generation/linker-generated-veneers/what-is-a-veneer-
-        
+
         r0: format
         r1: ap
     - name: SetSysCallPageZero
@@ -3414,21 +3414,21 @@ arm9:
         NA: 0x2044440
       description: |-
         Stores a pointer to SysCall page zero in slot 0 of SYSCALL_PAGE_PTRS.
-        
+
         No params.
     - name: UnpackScriptFile
       address:
         NA: 0x2044AC8
       description: |-
         Seems to be responsible for unpacking a script file.
-        
+
         r0: script_file pointer
     - name: SetSysCallPage
       address:
         NA: 0x2044B38
       description: |-
         Stores a pointer to a SysCall Function page at a specified index in SYSCALL_PAGE_PTRS.
-        
+
         r0: page index
         r1: pointer to syscall function page.
     - name: SysCallReturnZero000
@@ -3436,14 +3436,14 @@ arm9:
         NA: 0x2046618
       description: |-
         Syscall Function that always returns zero.
-        
+
         No params.
     - name: SysCallPrintStrWithPrefix
       address:
         NA: 0x2046620
       description: |-
         SysCall Function that seems to print "s_[STRING]". It may be a debug print, more analysis needed.
-        
+
         r0: script stack pointer, interpreted as params.
         r1: undefined4
         r2: undefined4
@@ -3455,7 +3455,7 @@ arm9:
           - 0x2046654
       description: |-
         SysCall Function that seems to debug print a string. More analysis needed.
-        
+
         r0: script stack pointer, interpreted as params.
         r1: undefined4
         r2: undefined4
@@ -3465,49 +3465,49 @@ arm9:
         NA: 0x204666C
       description: |-
         SysCall Function that does fixed point multiplication for a pair of input values.
-        
+
         r0: script stack pointer, interpreted as params.
     - name: SysCallFixedPointDivide
       address:
         NA: 0x204668C
       description: |-
         SysCall Function for FixedPointDivide32.
-        
+
         r0: script stack pointer, interpreted as params.
     - name: SysCallGetTrigTableSin
       address:
         NA: 0x20466A0
       description: |-
         SysCall Function that retrieves a sine value from the SINE_COSINE_TABLE.
-        
+
         r0: script stack pointer, interpreted as params.
     - name: SysCallGetTrigTableCos
       address:
         NA: 0x20466C4
       description: |-
         SysCall Function that retrieves a cosine value from the SINE_COSINE_TABLE.
-        
+
         r0: script stack pointer, interpreted as params.
     - name: SysCallGetTaylorPackedSinCos
       address:
         NA: 0x20466F0
       description: |-
         SysCall Function for GetFixedPointSinCos. Returns the output as a packed 32 bit value.
-        
+
         r0: script stack pointer, interpreted as params.
     - name: SysCallGetTaylorPackedCosSin
       address:
         NA: 0x2046708
       description: |-
         SysCall Function for GetFixedPointCosSin. Returns the output as a packed 32 bit value.
-        
+
         r0: script stack pointer, interpreted as params.
     - name: SysCallGetLcrngHigh
       address:
         NA: 0x2046720
       description: |-
         SysCall Function that advances to the next LCRNG state then returns the 16 bit high of LCRNG_STATE.
-        
+
         r0: script stack pointer, interpreted as params.
     - name: SysCallFixedPointRandomScale
       address:
@@ -3515,7 +3515,7 @@ arm9:
       description: |-
         SysCall Function that advances to the next LCRNG state then scales the input by the result from LCRNG_STATE.
         Can only scale by a positive number.
-        
+
         r0: script stack pointer, interpreted as params.
     - name: SysCallFixedPointSignedRandomScale
       address:
@@ -3523,154 +3523,154 @@ arm9:
       description: |-
         SysCall Function that advances to the next LCRNG state then scales the input by the result from LCRNG_STATE.
         Can scale by either positive or negative number.
-        
+
         r0: script stack pointer, interpreted as params.
     - name: SysCallSqrt32
       address:
         NA: 0x20467F4
       description: |-
         SysCall Function for Sqrt32.
-        
+
         r0: script stack pointer, interpreted as params.
     - name: SysCallGetFixedPointReciprocal
       address:
         NA: 0x2046804
       description: |-
         SysCall Function for GetFixedPointReciprocal
-        
+
         r0: script stack pointer, interpreted as params.
     - name: SysCallInverseSqrt
       address:
         NA: 0x2046814
       description: |-
         SysCall Function for InverseSqrt.
-        
+
         r0: script stack pointer, interpreted as params.
     - name: SysCallFixedPointDegToRad
       address:
         NA: 0x2046824
       description: |-
         SysCall Function that converts an input fixed point angle from degrees to radians.
-        
+
         r0: script stack pointer, interpreted as params.
     - name: SysCallFixedPointRadToDeg
       address:
         NA: 0x2046840
       description: |-
         SysCall Function that converts an input fixed point angle from radians to degrees.
-        
+
         r0: script stack pointer, interpreted as params.
     - name: DegreesToFixedPointRotations
       address:
         NA: 0x2046874
       description: |-
         SysCall Function that converts an input fixed point angle from degrees to 1/65536ths of a rotation.
-        
+
         r0: script stack pointer, interpreted as params.
     - name: SysCallReturnZero047
       address:
         NA: 0x204688C
       description: |-
         Syscall Function that always returns zero.
-        
+
         No params.
     - name: SysCallReturnZero048
       address:
         NA: 0x2046894
       description: |-
         Syscall Function that always returns zero.
-        
+
         No params.
     - name: SysCallReturnZero049
       address:
         NA: 0x204689C
       description: |-
         Syscall Function that always returns zero.
-        
+
         No params.
     - name: SysCallReturnZero050
       address:
         NA: 0x20468A4
       description: |-
         Syscall Function that always returns zero.
-        
+
         No params.
     - name: SysCallReturnZero051
       address:
         NA: 0x20468AC
       description: |-
         Syscall Function that always returns zero.
-        
+
         No params.
     - name: SysCallGetFixedPointArcTanFromTable
       address:
         NA: 0x20468B4
       description: |-
         SysCall Function that takes a pair of fixed-point input coordinates, and computes an angle with their ratio.
-        
+
         r0: script stack pointer, interpreted as params.
     - name: SysCallGetFixedPointArcTan2FromTable
       address:
         NA: 0x20468C4
       description: |-
         SysCall Function that takes a pair of fixed-point input coordinates, and computes an angle with their ratio, accounting for quadrants and zero-based edgecases.
-        
+
         r0: script stack pointer, interpreted as params.
     - name: SysCallReturnZero052
       address:
         NA: 0x20468D8
       description: |-
         Syscall Function that always returns zero.
-        
+
         No params.
     - name: SysCallReturnZero053
       address:
         NA: 0x20468E0
       description: |-
         Syscall Function that always returns zero.
-        
+
         No params.
     - name: SysCallReturnZero054
       address:
         NA: 0x20468E8
       description: |-
         Syscall Function that always returns zero.
-        
+
         No params.
     - name: SysCallFloorFixedPoint
       address:
         NA: 0x20468F0
       description: |-
         Syscall Function that returns the floor of an input fixed-point value.
-        
+
         r0: script stack pointer, interpreted as params.
     - name: SysCallAbs
       address:
         NA: 0x2046904
       description: |-
         SysCall Function that takes the absolute value of an input.
-        
+
         r0: script stack pointer, interpreted as params.
     - name: SysCallIntToFixedPoint
       address:
         NA: 0x2046914
       description: |-
         SysCall Function that converts an int to a fixed point value.
-        
+
         r0: script stack pointer, interpreted as params.
     - name: SysCallFixedPointToInt
       address:
         NA: 0x2046920
       description: |-
         SysCall Function that converts a fixed point value to an int.
-        
+
         r0: script stack pointer, interpreted as params.
     - name: SysCallStrLen
       address:
         NA: 0x204692C
       description: |-
         SysCall Function for strlen. Verifies the string is not zero chars long before calling the function.
-        
+
         r0: script stack pointer, interpreted as params.
     - name: Wvr_StartUpAsync
       address:
@@ -3686,7 +3686,7 @@ arm9:
         NA: 0x2046D3C
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-        
+
         No params.
     - name: Crypto_RC4FastInit
       address:
@@ -3858,7 +3858,7 @@ arm9:
         NA: 0x2048C1C
       description: |-
         Closes a file descriptor.
-        
+
         r0: file descriptor
         return: 0 on success, or a negative value representing an error
     - name: Socli_CloseCallBack
@@ -3932,7 +3932,7 @@ arm9:
         NA: 0x20494F4
       description: |-
         Creates a socket file descriptor for network activity.
-        
+
         r0: domain
         r1: family
         r2: protocol
@@ -3942,7 +3942,7 @@ arm9:
         NA: 0x2049520
       description: |-
         Binds a socket to an address.
-        
+
         r0: socket file descriptor
         r1: address
         return: 0 on success, or a negative value representing an error
@@ -3951,7 +3951,7 @@ arm9:
         NA: 0x204954C
       description: |-
         Connects a socket to an address.
-        
+
         r0: socket file descriptor
         r1: address
         return: 0 on success, or a negative value representing an error
@@ -3960,7 +3960,7 @@ arm9:
         NA: 0x20495A8
       description: |-
         Receives a message from a connected socket.
-        
+
         r0: socket file descriptor
         r1: destination buffer
         r2: size of buffer
@@ -3971,7 +3971,7 @@ arm9:
         NA: 0x20495CC
       description: |-
         Receives a message from a connectionless socket, also returning the source address that sent data.
-        
+
         r0: socket file descriptor
         r1: destination buffer
         r2: size of buffer
@@ -3984,7 +3984,7 @@ arm9:
         NA: 0x204965C
       description: |-
         Sends a message to a connected socket.
-        
+
         r0: socket file descriptor
         r1: source buffer
         r2: size of buffer
@@ -3995,7 +3995,7 @@ arm9:
         NA: 0x2049680
       description: |-
         Sends a message to a connectionless socket.
-        
+
         r0: socket file descriptor
         r1: source buffer
         r2: size of buffer
@@ -4011,9 +4011,9 @@ arm9:
         NA: 0x2049710
       description: |-
         Likely a linker-generated veneer for close.
-        
+
         See https://developer.arm.com/documentation/dui0474/k/image-structure-and-generation/linker-generated-veneers/what-is-a-veneer-
-        
+
         r0: file descriptor
         return: 0 on success, or a negative value representing an error
     - name: Soc_GetHostID
@@ -4063,7 +4063,7 @@ arm9:
         NA: 0x2049D08
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-        
+
         No params.
     - name: Cps_Startup
       address:
@@ -5492,7 +5492,7 @@ arm9:
         NA: 0x205B968
       description: |-
         Seems to call Snd_Init, as well as a few more audio-related functions.
-        
+
         No params.
     - name: Nns_SndMain
       address:
@@ -5676,7 +5676,7 @@ arm9:
         NA: 0x205CCF8
       description: |-
         Initializes a substruct of the audio_engine struct. More research needed.
-        
+
         r0: unk_audio_engine_substruct_1 pointer
         r1: char pointer
         r2: void pointer
@@ -5959,7 +5959,7 @@ arm9:
         NA: 0x205FC98
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-        
+
         No params.
     - name: ReadMemoryStream
       address:
@@ -5969,7 +5969,7 @@ arm9:
         NA: 0x205FCB8
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-        
+
         No params.
     - name: StrmThread
       address:
@@ -6095,7 +6095,7 @@ arm9:
         NA: 0x206129C
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-        
+
         No params.
     - name: GX_Init
       address:
@@ -6561,7 +6561,7 @@ arm9:
         NA: 0x20647A0
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-        
+
         No params.
     - name: OSi_IrqCallback
       address:
@@ -6613,7 +6613,7 @@ arm9:
         NA: 0x2064A94
       description: |-
         Use unknown.
-        
+
         r0: uint
     - name: OS_DisableIrqMask
       address:
@@ -6686,7 +6686,7 @@ arm9:
         NA: 0x2064F28
       description: |-
         Seems to be copying a file name?
-        
+
         r0: destination
         r1: source
         r2: maybe num bytes?
@@ -7054,7 +7054,7 @@ arm9:
       description: |-
         Disables processor interrupts by setting the i flag in the program status register (cpsr).
         pmdsky-debug: EnableIrqFlag
-        
+
         return: Old value of cpsr & 0x80 (0x80 if interrupts were already disabled, 0x0 if they were enabled)
     - name: OS_RestoreInterrupts
       address:
@@ -7062,7 +7062,7 @@ arm9:
       description: |-
         Sets the value of the processor's interrupt flag according to the specified parameter.
         pmdsky-debug: SetIrqFlag
-        
+
         r0: Value to set the flag to (0x80 to set it, which disables interrupts; 0x0 to unset it, which enables interrupts)
         return: Old value of cpsr & 0x80 (0x80 if interrupts were disabled, 0x0 if they were enabled)
     - name: OS_EnableInterrupts_IrqAndFiq
@@ -7100,25 +7100,25 @@ arm9:
         NA: 0x206756C
       description: |-
         Gets the MAC address of the DS.
-        
+
         r0: [output] MAC address pointer
     - name: OS_GetOwnerInfo
       address:
         NA: 0x2067588
       description: |-
         Gets the user settings of the DS firmware.
-        
+
         See https://problemkaputt.de/gbatek.htm#dsfirmwareusersettings
-        
+
         pmdsky-debug: GetDsFirmwareUserSettings
-        
+
         r0: [output] user_settings pointer
     - name: Math_CountLeadingZeros
       address:
         NA: 0x206760C
       description: |-
         Counts the number of leading zeros in a 32-bit integer.
-        
+
         r0: x
         return: clz(x)
     - name: OSi_InitVramExclusive
@@ -7138,20 +7138,20 @@ arm9:
         NA: 0x2067860
       description: |-
         Calls OS_DisableInterrupts and OS_Halt in an infinite loop.
-        
+
         This is called on fatal errors to hang the program indefinitely.
         pmdsky-debug: WaitForever2
-        
+
         No params.
     - name: OS_Halt
       address:
         NA: 0x2067870
       description: |-
         Presumably blocks until the program receives an interrupt.
-        
+
         This just calls (in Ghidra terminology) coproc_moveto_Wait_for_interrupt(0). See https://en.wikipedia.org/wiki/ARM_architecture_family#Coprocessors.
         pmdsky-debug: WaitForInterrupt
-        
+
         No params.
     - name: MI_SetWramBank
       address:
@@ -7192,7 +7192,7 @@ arm9:
       description: |-
         Fills an array of 16-bit values with a given value.
         pmdsky-debug: ArrayFill16
-        
+
         r0: value
         r1: ptr
         r2: len (# bytes)
@@ -7202,7 +7202,7 @@ arm9:
       description: |-
         Copies an array of 16-bit values to another array of 16-bit values.
         pmdsky-debug: ArrayCopy16
-        
+
         r0: src
         r1: dest
         r2: len (# bytes)
@@ -7212,7 +7212,7 @@ arm9:
       description: |-
         Fills an array of 32-bit values with a given value.
         pmdsky-debug: ArrayFill32
-        
+
         r0: value
         r1: ptr
         r2: len (# bytes)
@@ -7222,7 +7222,7 @@ arm9:
       description: |-
         Copies an array of 32-bit values to another array of 32-bit values.
         pmdsky-debug: ArrayCopy32
-        
+
         r0: src
         r1: dest
         r2: len (# bytes)
@@ -7232,7 +7232,7 @@ arm9:
       description: |-
         Does the same thing as MIi_CpuClear32, except the implementation uses an unrolled loop that sets 8 values per iteration, taking advantage of the stmia instruction.
         pmdsky-debug: ArrayFill32Fast
-        
+
         r0: value
         r1: ptr
         r2: len (# bytes)
@@ -7242,7 +7242,7 @@ arm9:
       description: |-
         Does the same thing as MIi_CpuCopy32, except the implementation uses an unrolled loop that copies 8 values per iteration, taking advantage of the ldmia/stmia instructions.
         pmdsky-debug: ArrayCopy32Fast
-        
+
         r0: src
         r1: dest
         r2: len (# bytes)
@@ -7257,11 +7257,11 @@ arm9:
         NA: 0x2067F14
       description: |-
         A semi-optimized implementation of the memset(3) C library function.
-        
+
         This function is optimized to set values in 4-byte chunks, properly dealing with pointer alignment. However, unlike the libc memset, there are no loop unrolling optimizations.
-        
+
         pmdsky-debug: MemsetFast
-        
+
         r0: ptr
         r1: value
         r2: len (# bytes)
@@ -7270,11 +7270,11 @@ arm9:
         NA: 0x2067FD0
       description: |-
         Copies bytes from one buffer to another, similar to memcpy(3). Note that the source/destination buffer parameters swapped relative to the standard memcpy.
-        
+
         This function is optimized to copy values in 4-byte chunks, properly dealing with pointer alignment.
-        
+
         pmdsky-debug: MemcpyFast
-        
+
         r0: src
         r1: dest
         r2: n (# bytes)
@@ -7820,7 +7820,7 @@ arm9:
         NA: 0x206DC00
       description: |-
         Powers off the system.
-        
+
         return: ?
     - name: PM_GetBackLight
       address:
@@ -8355,7 +8355,7 @@ arm9:
         NA: 0x207484C
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-        
+
         No params.
     - name: MBi_ReadSegmentHeader
       address:
@@ -8701,7 +8701,7 @@ arm9:
         NA: 0x20794C8
       description: |-
         Takes the absolute value of an integer.
-        
+
         r0: x
         return: abs(x)
     - name: ret_020794d4
@@ -8709,7 +8709,7 @@ arm9:
         NA: 0x20794D4
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-        
+
         No params.
     - name: Msl_C_Buffer_Io_Prep_Buffer
       address:
@@ -8734,7 +8734,7 @@ arm9:
         NA: 0x2079A64
       description: |-
         The mbtowc(3) C library function.
-        
+
         r0: pwc
         r1: s
         r2: n
@@ -8744,7 +8744,7 @@ arm9:
         NA: 0x2079A9C
       description: |-
         Assign a byte to the target of a pointer if the pointer is non-null.
-        
+
         r0: pointer
         r1: value
         return: true on success, false on failure
@@ -8753,9 +8753,9 @@ arm9:
         NA: 0x2079AB0
       description: |-
         Wrapper around TryAssignByte.
-        
+
         Accesses the TryAssignByte function with a weird chain of pointer dereferences.
-        
+
         r0: pointer
         r1: value
         return: true on success, false on failure
@@ -8767,7 +8767,7 @@ arm9:
         NA: 0x2079B54
       description: |-
         The wcstombs(3) C library function.
-        
+
         r0: dest
         r1: src
         r2: n
@@ -8777,7 +8777,7 @@ arm9:
         NA: 0x2079BCC
       description: |-
         The memcpy(3) C library function.
-        
+
         r0: dest
         r1: src
         r2: n
@@ -8787,9 +8787,9 @@ arm9:
         NA: 0x2079BEC
       description: |-
         The memmove(3) C library function.
-        
+
         The implementation is nearly the same as memcpy, but it copies bytes from back to front if src < dst.
-        
+
         r0: dest
         r1: src
         r2: n
@@ -8832,9 +8832,9 @@ arm9:
         NA: 0x207B5D0
       description: |-
         This is what implements the bulk of __vsprintf_internal.
-        
+
         The __vsprintf_internal in the modern-day version of glibc relies on __vfprintf_internal; this function has a slightly different interface, but it serves a similar role.
-        
+
         r0: function pointer to append to the string being built (__vsprintf_internal uses TryAppendToSlice)
         r1: string buffer slice
         r2: format
@@ -8848,7 +8848,7 @@ arm9:
         NA: 0x207BE20
       description: |-
         Best-effort append the given data to a slice. If the slice's capacity is reached, any remaining data will be truncated.
-        
+
         r0: slice pointer
         r1: buffer of data to append
         r2: number of bytes in the data buffer
@@ -8861,7 +8861,7 @@ arm9:
         NA: 0x207BF7C
       description: |-
         This is what implements vsprintf. It's akin to __vsprintf_internal in the modern-day version of glibc (in fact, it's probably an older version of this).
-        
+
         r0: str
         r1: maxlen (vsprintf passes UINT32_MAX for this)
         r2: format
@@ -8872,7 +8872,7 @@ arm9:
         NA: 0x207BFE4
       description: |-
         The vsprintf(3) C library function.
-        
+
         r0: str
         r1: format
         r2: ap
@@ -8888,7 +8888,7 @@ arm9:
         NA: 0x207C1B0
       description: |-
         The strlen(3) C library function.
-        
+
         r0: s
         return: length of s
     - name: strcpy
@@ -8896,9 +8896,9 @@ arm9:
         NA: 0x207C1CC
       description: |-
         The strcpy(3) C library function.
-        
+
         This function is optimized to copy characters in aligned 4-byte chunks if possible, correctly handling any unaligned bytes at the front/back.
-        
+
         r0: dest
         r1: src
         return: dest
@@ -8907,7 +8907,7 @@ arm9:
         NA: 0x207C294
       description: |-
         The strncpy(3) C library function.
-        
+
         r0: dest
         r1: src
         r2: n
@@ -8917,7 +8917,7 @@ arm9:
         NA: 0x207C2E4
       description: |-
         The strcat(3) C library function.
-        
+
         r0: dest
         r1: src
         return: dest
@@ -8926,9 +8926,9 @@ arm9:
         NA: 0x207C314
       description: |-
         The strcmp(3) C library function.
-        
+
         Similarly to strcpy, this function is optimized to compare characters in aligned 4-byte chunks if possible.
-        
+
         r0: s1
         r1: s2
         return: comparison value
@@ -8937,7 +8937,7 @@ arm9:
         NA: 0x207C428
       description: |-
         The strncmp(3) C library function.
-        
+
         r0: s1
         r1: s2
         r2: n
@@ -8947,7 +8947,7 @@ arm9:
         NA: 0x207C45C
       description: |-
         The strchr(3) C library function.
-        
+
         r0: string
         r1: c
         return: pointer to the located byte c, or null pointer if no match
@@ -8956,7 +8956,7 @@ arm9:
         NA: 0x207C498
       description: |-
         The strstr(3) C library function.
-        
+
         r0: haystack
         r1: needle
         return: pointer into haystack where needle starts, or null pointer if no match
@@ -9070,7 +9070,7 @@ arm9:
         NA: 0x207F910
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-        
+
         No params.
     - name: get_deleter
       address:
@@ -9083,7 +9083,7 @@ arm9:
         NA: 0x207F9C0
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-        
+
         No params.
     - name: Msl_Cpp_Msl_Smart_Pointers_Shared_Ptr_Deleter_Common_Release
       address:
@@ -9120,11 +9120,11 @@ arm9:
         NA: 0x207FE5C
       description: |-
         Implements the addition operator for IEEE 754 double-precision floating-point numbers.
-        
+
         The result is returned in r0 and r1, in accordance with the Procedure Call Standard for the Arm Architecture (see https://github.com/ARM-software/abi-aa/blob/60a8eb8c55e999d74dac5e368fc9d7e36e38dda4/aapcs32/aapcs32.rst#result-return).
-        
+
         Analogous to __adddf3 in libgcc.
-        
+
         r0: a (low bits)
         r1: a (high bits)
         r2: b (low bits)
@@ -9135,11 +9135,11 @@ arm9:
         NA: 0x2080174
       description: |-
         Implements the double to unsigned long long cast operation for IEEE 754 floating-point numbers.
-        
+
         The result is returned in r0 and r1, in accordance with the Procedure Call Standard for the Arm Architecture (see https://github.com/ARM-software/abi-aa/blob/60a8eb8c55e999d74dac5e368fc9d7e36e38dda4/aapcs32/aapcs32.rst#result-return).
-        
+
         Analogous to __fixunsdfti in libgcc.
-        
+
         r0: double (low bits)
         r1: double (high bits)
     - name: _dmul
@@ -9147,11 +9147,11 @@ arm9:
         NA: 0x2080200
       description: |-
         Implements the multiplication operator for IEEE 754 double-precision floating-point numbers.
-        
+
         The result is returned in r0 and r1, in accordance with the Procedure Call Standard for the Arm Architecture (see https://github.com/ARM-software/abi-aa/blob/60a8eb8c55e999d74dac5e368fc9d7e36e38dda4/aapcs32/aapcs32.rst#result-return).
-        
+
         Analogous to __muldf3 in libgcc.
-        
+
         r0: a (low bits)
         r1: a (high bits)
         r2: b (low bits)
@@ -9162,11 +9162,11 @@ arm9:
         NA: 0x2080564
       description: |-
         The same as _dsub, but with the parameters reversed.
-        
+
         This simply swaps the first and second parameters, then falls through to _dsub.
-        
+
         The result is returned in r0 and r1, in accordance with the Procedure Call Standard for the Arm Architecture (see https://github.com/ARM-software/abi-aa/blob/60a8eb8c55e999d74dac5e368fc9d7e36e38dda4/aapcs32/aapcs32.rst#result-return).
-        
+
         r0: b (low bits)
         r1: b (high bits)
         r2: a (low bits)
@@ -9177,11 +9177,11 @@ arm9:
         NA: 0x208057C
       description: |-
         Implements the subtraction operator for IEEE 754 double-precision floating-point numbers.
-        
+
         The result is returned in r0 and r1, in accordance with the Procedure Call Standard for the Arm Architecture (see https://github.com/ARM-software/abi-aa/blob/60a8eb8c55e999d74dac5e368fc9d7e36e38dda4/aapcs32/aapcs32.rst#result-return).
-        
+
         Analogous to __subdf3 in libgcc.
-        
+
         r0: a (low bits)
         r1: a (high bits)
         r2: b (low bits)
@@ -9192,9 +9192,9 @@ arm9:
         NA: 0x2080930
       description: |-
         Implements the addition operator for IEEE 754 floating-point numbers.
-        
+
         Analogous to __addsf3 in libgcc.
-        
+
         r0: a
         r1: b
         return: a + b
@@ -9203,7 +9203,7 @@ arm9:
         NA: 0x2080B54
       description: |-
         Implements the < operator for IEEE 754 double-precision floating-point numbers.
-        
+
         r0: a (low bits)
         r1: a (high bits)
         r2: b (low bits)
@@ -9214,7 +9214,7 @@ arm9:
         NA: 0x2080BF0
       description: |-
         Implements the == operator for IEEE 754 double-precision floating-point numbers.
-        
+
         r0: a (low bits)
         r1: a (high bits)
         r2: b (low bits)
@@ -9225,7 +9225,7 @@ arm9:
         NA: 0x2080C7C
       description: |-
         Implements the < operator for IEEE 754 floating-point numbers.
-        
+
         r0: a
         r1: b
         return: a < b
@@ -9234,9 +9234,9 @@ arm9:
         NA: 0x2080CD8
       description: |-
         The same as _fdiv, but with the parameters reversed.
-        
+
         This simply swaps the first and second parameters, then falls through to _fdiv.
-        
+
         r0: divisor
         r1: dividend
         return: dividend / divisor
@@ -9245,9 +9245,9 @@ arm9:
         NA: 0x2080CE4
       description: |-
         Implements the division operator for IEEE 754 floating-point numbers.
-        
+
         Analogous to __divsf3 in libgcc.
-        
+
         r0: dividend
         r1: divisor
         return: dividend / divisor
@@ -9256,9 +9256,9 @@ arm9:
         NA: 0x208109C
       description: |-
         Implements the float to int cast operation for IEEE 754 floating-point numbers. The output saturates if the input is out of the representable range for the int type.
-        
+
         Analogous to __fixsfsi in libgcc.
-        
+
         r0: float
         return: (int)float
     - name: _fflt
@@ -9266,9 +9266,9 @@ arm9:
         NA: 0x20810D0
       description: |-
         Implements the int to float cast operation for IEEE 754 floating-point numbers.
-        
+
         Analogous to __floatsisf in libgcc.
-        
+
         r0: int
         return: (float)int
     - name: __f_lltof
@@ -9279,9 +9279,9 @@ arm9:
         NA: 0x2081184
       description: |-
         Implements the multiplication operator for IEEE 754 floating-point numbers.
-        
+
         Analogous to __mulsf3 in libgcc.
-        
+
         r0: a
         r1: b
         return: a * b
@@ -9293,9 +9293,9 @@ arm9:
         NA: 0x2081370
       description: |-
         Implements the subtraction operator for IEEE 754 floating-point numbers.
-        
+
         Analogous to __subsf3 in libgcc.
-        
+
         r0: a
         r1: b
         return: a - b
@@ -9304,11 +9304,11 @@ arm9:
         NA: 0x20815E8
       description: |-
         Implements the modulus operator for signed long longs.
-        
+
         The result is returned in r0 and r1, in accordance with the Procedure Call Standard for the Arm Architecture (see https://github.com/ARM-software/abi-aa/blob/60a8eb8c55e999d74dac5e368fc9d7e36e38dda4/aapcs32/aapcs32.rst#result-return).
-        
+
         Analogous to __modti3 in libgcc.
-        
+
         r0: dividend (low bits)
         r1: dividend (high bits)
         r2: divisor (low bits)
@@ -9322,11 +9322,11 @@ arm9:
         NA: 0x20815F8
       description: |-
         Implements the division operator for signed long longs.
-        
+
         The result is returned in r0 and r1, in accordance with the Procedure Call Standard for the Arm Architecture (see https://github.com/ARM-software/abi-aa/blob/60a8eb8c55e999d74dac5e368fc9d7e36e38dda4/aapcs32/aapcs32.rst#result-return).
-        
+
         Analogous to __divti3 in libgcc.
-        
+
         r0: dividend (low bits)
         r1: dividend (high bits)
         r2: divisor (low bits)
@@ -9337,11 +9337,11 @@ arm9:
         NA: 0x20817A8
       description: |-
         Implements the division operator for unsigned long longs.
-        
+
         The result is returned in r0 and r1, in accordance with the Procedure Call Standard for the Arm Architecture (see https://github.com/ARM-software/abi-aa/blob/60a8eb8c55e999d74dac5e368fc9d7e36e38dda4/aapcs32/aapcs32.rst#result-return).
-        
+
         Analogous to __udivti3 in libgcc.
-        
+
         r0: dividend (low bits)
         r1: dividend (high bits)
         r2: divisor (low bits)
@@ -9352,11 +9352,11 @@ arm9:
         NA: 0x20817B4
       description: |-
         Implements the modulus operator for unsigned long longs.
-        
+
         The result is returned in r0 and r1, in accordance with the Procedure Call Standard for the Arm Architecture (see https://github.com/ARM-software/abi-aa/blob/60a8eb8c55e999d74dac5e368fc9d7e36e38dda4/aapcs32/aapcs32.rst#result-return).
-        
+
         Analogous to __umodti3 in libgcc.
-        
+
         r0: dividend (low bits)
         r1: dividend (high bits)
         r2: divisor (low bits)
@@ -9367,11 +9367,11 @@ arm9:
         NA: 0x20817F0
       description: |-
         Implements the multiplication operator for signed long longs.
-        
+
         The result is returned in r0 and r1, in accordance with the Procedure Call Standard for the Arm Architecture (see https://github.com/ARM-software/abi-aa/blob/60a8eb8c55e999d74dac5e368fc9d7e36e38dda4/aapcs32/aapcs32.rst#result-return).
-        
+
         Analogous to __multi3 in libgcc.
-        
+
         r0: a (low bits)
         r1: a (high bits)
         r2: b (low bits)
@@ -9382,11 +9382,11 @@ arm9:
         NA: 0x2081810
       description: |-
         Implements the division operator for signed ints.
-        
+
         Analogous to __divsi3 in libgcc.
-        
+
         The return value is a 64-bit integer, with the quotient (dividend / divisor) in the lower 32 bits and the remainder (dividend % divisor) in the upper 32 bits. In accordance with the Procedure Call Standard for the Arm Architecture (see https://github.com/ARM-software/abi-aa/blob/60a8eb8c55e999d74dac5e368fc9d7e36e38dda4/aapcs32/aapcs32.rst#result-return), this means that the quotient is returned in r0 and the remainder is returned in r1.
-        
+
         r0: dividend
         r1: divisor
         return: (quotient) | (remainder << 32)
@@ -9395,12 +9395,12 @@ arm9:
         NA: 0x2081A1C
       description: |-
         Implements the division operator for unsigned ints.
-        
+
         Analogous to __udivsi3 in libgcc.
-        
+
         The return value is a 64-bit integer, with the quotient (dividend / divisor) in the lower 32 bits and the remainder (dividend % divisor) in the upper 32 bits. In accordance with the Procedure Call Standard for the Arm Architecture (see https://github.com/ARM-software/abi-aa/blob/60a8eb8c55e999d74dac5e368fc9d7e36e38dda4/aapcs32/aapcs32.rst#result-return), this means that the quotient is returned in r0 and the remainder is returned in r1.
         Note: This function falls through to _u32_div_not_0_f.
-        
+
         r0: dividend
         r1: divisor
         return: (quotient) | (remainder << 32)
@@ -9409,10 +9409,10 @@ arm9:
         NA: 0x2081A24
       description: |-
         Subsidiary function to _u32_div_f. Skips the initial check for divisor == 0.
-        
+
         The return value is a 64-bit integer, with the quotient (dividend / divisor) in the lower 32 bits and the remainder (dividend % divisor) in the upper 32 bits. In accordance with the Procedure Call Standard for the Arm Architecture (see https://github.com/ARM-software/abi-aa/blob/60a8eb8c55e999d74dac5e368fc9d7e36e38dda4/aapcs32/aapcs32.rst#result-return), this means that the quotient is returned in r0 and the remainder is returned in r1.
         This function appears to only be called internally.
-        
+
         r0: dividend
         r1: divisor
         return: (quotient) | (remainder << 32)
@@ -9421,7 +9421,7 @@ arm9:
         NA: 0x2081C00
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-        
+
         No params.
     - name: NRun_Semihosting_Sys_Writec
       address:
@@ -9476,7 +9476,7 @@ arm9:
         NA: 0x2082E20
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-        
+
         No params.
     - name: NRun_ExceptionHandler_HandleUnexpected
       address:
@@ -9522,7 +9522,7 @@ arm9:
         NA: 0x2083544
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
-        
+
         No params.
     - name: NRun_Dthandler
       address:
