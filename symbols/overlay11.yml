@@ -1301,9 +1301,11 @@ overlay11:
     - name: ChangePage
       address:
         NA: 0x214497C
-    - name: ChangeColor_02144a00
+    - name: ChangeColor
       address:
-        NA: 0x2144A00
+        NA:
+          - 0x2144A00
+          - 0x214636C
     - name: DispFocus
       address:
         NA:
@@ -1437,9 +1439,11 @@ overlay11:
     - name: DispVeneer
       address:
         NA: 0x214610C
-    - name: ChangeColor_0214636C
+    - name: ChangeColor
       address:
-        NA: 0x214636C
+        NA:
+          - 0x2144A00
+          - 0x214636C
     - name: DispFocus
       address:
         NA:
@@ -1755,9 +1759,30 @@ overlay11:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
-    - name: button_02147dc0
+    - name: Button
       address:
-        NA: 0x2147DC0
+        NA:
+          - 0x2147DC0
+          - 0x21481A4
+          - 0x214851C
+          - 0x214895C
+          - 0x2148E8C
+          - 0x214953C
+          - 0x214975C
+          - 0x21499F0
+          - 0x2149F48
+          - 0x214A664
+          - 0x214ABAC
+          - 0x214BA24
+          - 0x214E2B8
+          - 0x2150CC0
+          - 0x21510D8
+          - 0x21517AC
+          - 0x2151D34
+          - 0x2152330
+          - 0x215308C
+          - 0x21540B0
+          - 0x2154470
     - name: EndScene1
       address:
         NA:
@@ -1981,9 +2006,30 @@ overlay11:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
-    - name: button_021481a4
+    - name: Button
       address:
-        NA: 0x21481A4
+        NA:
+          - 0x2147DC0
+          - 0x21481A4
+          - 0x214851C
+          - 0x214895C
+          - 0x2148E8C
+          - 0x214953C
+          - 0x214975C
+          - 0x21499F0
+          - 0x2149F48
+          - 0x214A664
+          - 0x214ABAC
+          - 0x214BA24
+          - 0x214E2B8
+          - 0x2150CC0
+          - 0x21510D8
+          - 0x21517AC
+          - 0x2151D34
+          - 0x2152330
+          - 0x215308C
+          - 0x21540B0
+          - 0x2154470
     - name: EndScene1
       address:
         NA:
@@ -2190,9 +2236,30 @@ overlay11:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
-    - name: button_0214851c
+    - name: Button
       address:
-        NA: 0x214851C
+        NA:
+          - 0x2147DC0
+          - 0x21481A4
+          - 0x214851C
+          - 0x214895C
+          - 0x2148E8C
+          - 0x214953C
+          - 0x214975C
+          - 0x21499F0
+          - 0x2149F48
+          - 0x214A664
+          - 0x214ABAC
+          - 0x214BA24
+          - 0x214E2B8
+          - 0x2150CC0
+          - 0x21510D8
+          - 0x21517AC
+          - 0x2151D34
+          - 0x2152330
+          - 0x215308C
+          - 0x21540B0
+          - 0x2154470
     - name: EndScene1
       address:
         NA:
@@ -2402,9 +2469,30 @@ overlay11:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
-    - name: button_0214895c
+    - name: Button
       address:
-        NA: 0x214895C
+        NA:
+          - 0x2147DC0
+          - 0x21481A4
+          - 0x214851C
+          - 0x214895C
+          - 0x2148E8C
+          - 0x214953C
+          - 0x214975C
+          - 0x21499F0
+          - 0x2149F48
+          - 0x214A664
+          - 0x214ABAC
+          - 0x214BA24
+          - 0x214E2B8
+          - 0x2150CC0
+          - 0x21510D8
+          - 0x21517AC
+          - 0x2151D34
+          - 0x2152330
+          - 0x215308C
+          - 0x21540B0
+          - 0x2154470
     - name: EndScene1
       address:
         NA:
@@ -2611,9 +2699,30 @@ overlay11:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
-    - name: button_02148e8c
+    - name: Button
       address:
-        NA: 0x2148E8C
+        NA:
+          - 0x2147DC0
+          - 0x21481A4
+          - 0x214851C
+          - 0x214895C
+          - 0x2148E8C
+          - 0x214953C
+          - 0x214975C
+          - 0x21499F0
+          - 0x2149F48
+          - 0x214A664
+          - 0x214ABAC
+          - 0x214BA24
+          - 0x214E2B8
+          - 0x2150CC0
+          - 0x21510D8
+          - 0x21517AC
+          - 0x2151D34
+          - 0x2152330
+          - 0x215308C
+          - 0x21540B0
+          - 0x2154470
     - name: EndScene1
       address:
         NA:
@@ -2871,9 +2980,11 @@ overlay11:
           - 0x2153E0C
           - 0x2154120
           - 0x21544DC
-    - name: CbMov_0214936c
+    - name: CbMov
       address:
-        NA: 0x214936C
+        NA:
+          - 0x214936C
+          - 0x214A840
     - name: InitGraphics
       address:
         NA:
@@ -3014,9 +3125,30 @@ overlay11:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
-    - name: button_0214953c
+    - name: Button
       address:
-        NA: 0x214953C
+        NA:
+          - 0x2147DC0
+          - 0x21481A4
+          - 0x214851C
+          - 0x214895C
+          - 0x2148E8C
+          - 0x214953C
+          - 0x214975C
+          - 0x21499F0
+          - 0x2149F48
+          - 0x214A664
+          - 0x214ABAC
+          - 0x214BA24
+          - 0x214E2B8
+          - 0x2150CC0
+          - 0x21510D8
+          - 0x21517AC
+          - 0x2151D34
+          - 0x2152330
+          - 0x215308C
+          - 0x21540B0
+          - 0x2154470
     - name: EndScene1
       address:
         NA:
@@ -3223,9 +3355,30 @@ overlay11:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
-    - name: button_0214975c
+    - name: Button
       address:
-        NA: 0x214975C
+        NA:
+          - 0x2147DC0
+          - 0x21481A4
+          - 0x214851C
+          - 0x214895C
+          - 0x2148E8C
+          - 0x214953C
+          - 0x214975C
+          - 0x21499F0
+          - 0x2149F48
+          - 0x214A664
+          - 0x214ABAC
+          - 0x214BA24
+          - 0x214E2B8
+          - 0x2150CC0
+          - 0x21510D8
+          - 0x21517AC
+          - 0x2151D34
+          - 0x2152330
+          - 0x215308C
+          - 0x21540B0
+          - 0x2154470
     - name: Dwci_SceneOptMovConfirm1
       address:
         NA: 0x2149830
@@ -3369,9 +3522,30 @@ overlay11:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
-    - name: button_021499f0
+    - name: Button
       address:
-        NA: 0x21499F0
+        NA:
+          - 0x2147DC0
+          - 0x21481A4
+          - 0x214851C
+          - 0x214895C
+          - 0x2148E8C
+          - 0x214953C
+          - 0x214975C
+          - 0x21499F0
+          - 0x2149F48
+          - 0x214A664
+          - 0x214ABAC
+          - 0x214BA24
+          - 0x214E2B8
+          - 0x2150CC0
+          - 0x21510D8
+          - 0x21517AC
+          - 0x2151D34
+          - 0x2152330
+          - 0x215308C
+          - 0x21540B0
+          - 0x2154470
     - name: EndScene1
       address:
         NA:
@@ -3754,9 +3928,30 @@ overlay11:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
-    - name: button_02149f48
+    - name: Button
       address:
-        NA: 0x2149F48
+        NA:
+          - 0x2147DC0
+          - 0x21481A4
+          - 0x214851C
+          - 0x214895C
+          - 0x2148E8C
+          - 0x214953C
+          - 0x214975C
+          - 0x21499F0
+          - 0x2149F48
+          - 0x214A664
+          - 0x214ABAC
+          - 0x214BA24
+          - 0x214E2B8
+          - 0x2150CC0
+          - 0x21510D8
+          - 0x21517AC
+          - 0x2151D34
+          - 0x2152330
+          - 0x215308C
+          - 0x21540B0
+          - 0x2154470
     - name: EndScene1
       address:
         NA:
@@ -4151,9 +4346,30 @@ overlay11:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
-    - name: button_0214a664
+    - name: Button
       address:
-        NA: 0x214A664
+        NA:
+          - 0x2147DC0
+          - 0x21481A4
+          - 0x214851C
+          - 0x214895C
+          - 0x2148E8C
+          - 0x214953C
+          - 0x214975C
+          - 0x21499F0
+          - 0x2149F48
+          - 0x214A664
+          - 0x214ABAC
+          - 0x214BA24
+          - 0x214E2B8
+          - 0x2150CC0
+          - 0x21510D8
+          - 0x21517AC
+          - 0x2151D34
+          - 0x2152330
+          - 0x215308C
+          - 0x21540B0
+          - 0x2154470
     - name: EndScene
       address:
         NA:
@@ -4236,9 +4452,11 @@ overlay11:
           - 0x21536B8
           - 0x2154184
           - 0x2154548
-    - name: CbMov_0214a840
+    - name: CbMov
       address:
-        NA: 0x214A840
+        NA:
+          - 0x214936C
+          - 0x214A840
     - name: Dwci_SceneSetAossButton
       address:
         NA: 0x214A8BC
@@ -4394,9 +4612,30 @@ overlay11:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
-    - name: button_0214abac
+    - name: Button
       address:
-        NA: 0x214ABAC
+        NA:
+          - 0x2147DC0
+          - 0x21481A4
+          - 0x214851C
+          - 0x214895C
+          - 0x2148E8C
+          - 0x214953C
+          - 0x214975C
+          - 0x21499F0
+          - 0x2149F48
+          - 0x214A664
+          - 0x214ABAC
+          - 0x214BA24
+          - 0x214E2B8
+          - 0x2150CC0
+          - 0x21510D8
+          - 0x21517AC
+          - 0x2151D34
+          - 0x2152330
+          - 0x215308C
+          - 0x21540B0
+          - 0x2154470
     - name: EndScene
       address:
         NA:
@@ -4772,9 +5011,30 @@ overlay11:
         NA:
           - 0x214B7B4
           - 0x214EE20
-    - name: button_0214ba24
+    - name: Button
       address:
-        NA: 0x214BA24
+        NA:
+          - 0x2147DC0
+          - 0x21481A4
+          - 0x214851C
+          - 0x214895C
+          - 0x2148E8C
+          - 0x214953C
+          - 0x214975C
+          - 0x21499F0
+          - 0x2149F48
+          - 0x214A664
+          - 0x214ABAC
+          - 0x214BA24
+          - 0x214E2B8
+          - 0x2150CC0
+          - 0x21510D8
+          - 0x21517AC
+          - 0x2151D34
+          - 0x2152330
+          - 0x215308C
+          - 0x21540B0
+          - 0x2154470
     - name: EndScene1
       address:
         NA:
@@ -5131,9 +5391,11 @@ overlay11:
     - name: DrawSsid
       address:
         NA: 0x214CCC4
-    - name: DispCaret_0214cdb8
+    - name: DispCaret
       address:
-        NA: 0x214CDB8
+        NA:
+          - 0x214CDB8
+          - 0x214DA50
     - name: ProcWin
       address:
         NA:
@@ -5393,9 +5655,11 @@ overlay11:
         NA:
           - 0x214D98C
           - 0x214FA78
-    - name: DispCaret_0214da50
+    - name: DispCaret
       address:
-        NA: 0x214DA50
+        NA:
+          - 0x214CDB8
+          - 0x214DA50
     - name: ProcWin
       address:
         NA:
@@ -5558,9 +5822,30 @@ overlay11:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
-    - name: button_0214e2b8
+    - name: Button
       address:
-        NA: 0x214E2B8
+        NA:
+          - 0x2147DC0
+          - 0x21481A4
+          - 0x214851C
+          - 0x214895C
+          - 0x2148E8C
+          - 0x214953C
+          - 0x214975C
+          - 0x21499F0
+          - 0x2149F48
+          - 0x214A664
+          - 0x214ABAC
+          - 0x214BA24
+          - 0x214E2B8
+          - 0x2150CC0
+          - 0x21510D8
+          - 0x21517AC
+          - 0x2151D34
+          - 0x2152330
+          - 0x215308C
+          - 0x21540B0
+          - 0x2154470
     - name: EndScene1
       address:
         NA:
@@ -6115,9 +6400,11 @@ overlay11:
           - 0x2153E0C
           - 0x2154120
           - 0x21544DC
-    - name: Dwci_SceneSetRakuButton1_02150b20
+    - name: Dwci_SceneSetRakuButton1
       address:
-        NA: 0x2150B20
+        NA:
+          - 0x2150B20
+          - 0x2150F38
     - name: InitGraphics
       address:
         NA:
@@ -6258,9 +6545,30 @@ overlay11:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
-    - name: button_02150cc0
+    - name: Button
       address:
-        NA: 0x2150CC0
+        NA:
+          - 0x2147DC0
+          - 0x21481A4
+          - 0x214851C
+          - 0x214895C
+          - 0x2148E8C
+          - 0x214953C
+          - 0x214975C
+          - 0x21499F0
+          - 0x2149F48
+          - 0x214A664
+          - 0x214ABAC
+          - 0x214BA24
+          - 0x214E2B8
+          - 0x2150CC0
+          - 0x21510D8
+          - 0x21517AC
+          - 0x2151D34
+          - 0x2152330
+          - 0x215308C
+          - 0x21540B0
+          - 0x2154470
     - name: EndScene1
       address:
         NA:
@@ -6330,9 +6638,11 @@ overlay11:
           - 0x2150E48
           - 0x2151244
           - 0x2151934
-    - name: Dwci_SceneSetRakuButton1_02150f38
+    - name: Dwci_SceneSetRakuButton1
       address:
-        NA: 0x2150F38
+        NA:
+          - 0x2150B20
+          - 0x2150F38
     - name: InitGraphics
       address:
         NA:
@@ -6473,9 +6783,30 @@ overlay11:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
-    - name: button_021510d8
+    - name: Button
       address:
-        NA: 0x21510D8
+        NA:
+          - 0x2147DC0
+          - 0x21481A4
+          - 0x214851C
+          - 0x214895C
+          - 0x2148E8C
+          - 0x214953C
+          - 0x214975C
+          - 0x21499F0
+          - 0x2149F48
+          - 0x214A664
+          - 0x214ABAC
+          - 0x214BA24
+          - 0x214E2B8
+          - 0x2150CC0
+          - 0x21510D8
+          - 0x21517AC
+          - 0x2151D34
+          - 0x2152330
+          - 0x215308C
+          - 0x21540B0
+          - 0x2154470
     - name: EndScene1
       address:
         NA:
@@ -6826,9 +7157,30 @@ overlay11:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
-    - name: button_021517ac
+    - name: Button
       address:
-        NA: 0x21517AC
+        NA:
+          - 0x2147DC0
+          - 0x21481A4
+          - 0x214851C
+          - 0x214895C
+          - 0x2148E8C
+          - 0x214953C
+          - 0x214975C
+          - 0x21499F0
+          - 0x2149F48
+          - 0x214A664
+          - 0x214ABAC
+          - 0x214BA24
+          - 0x214E2B8
+          - 0x2150CC0
+          - 0x21510D8
+          - 0x21517AC
+          - 0x2151D34
+          - 0x2152330
+          - 0x215308C
+          - 0x21540B0
+          - 0x2154470
     - name: EndScene1
       address:
         NA:
@@ -7044,9 +7396,30 @@ overlay11:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
-    - name: button_02151d34
+    - name: Button
       address:
-        NA: 0x2151D34
+        NA:
+          - 0x2147DC0
+          - 0x21481A4
+          - 0x214851C
+          - 0x214895C
+          - 0x2148E8C
+          - 0x214953C
+          - 0x214975C
+          - 0x21499F0
+          - 0x2149F48
+          - 0x214A664
+          - 0x214ABAC
+          - 0x214BA24
+          - 0x214E2B8
+          - 0x2150CC0
+          - 0x21510D8
+          - 0x21517AC
+          - 0x2151D34
+          - 0x2152330
+          - 0x215308C
+          - 0x21540B0
+          - 0x2154470
     - name: EndScene1
       address:
         NA:
@@ -7262,9 +7635,30 @@ overlay11:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
-    - name: button_02152330
+    - name: Button
       address:
-        NA: 0x2152330
+        NA:
+          - 0x2147DC0
+          - 0x21481A4
+          - 0x214851C
+          - 0x214895C
+          - 0x2148E8C
+          - 0x214953C
+          - 0x214975C
+          - 0x21499F0
+          - 0x2149F48
+          - 0x214A664
+          - 0x214ABAC
+          - 0x214BA24
+          - 0x214E2B8
+          - 0x2150CC0
+          - 0x21510D8
+          - 0x21517AC
+          - 0x2151D34
+          - 0x2152330
+          - 0x215308C
+          - 0x21540B0
+          - 0x2154470
     - name: EndScene
       address:
         NA:
@@ -7521,9 +7915,30 @@ overlay11:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
-    - name: button_0215308c
+    - name: Button
       address:
-        NA: 0x215308C
+        NA:
+          - 0x2147DC0
+          - 0x21481A4
+          - 0x214851C
+          - 0x214895C
+          - 0x2148E8C
+          - 0x214953C
+          - 0x214975C
+          - 0x21499F0
+          - 0x2149F48
+          - 0x214A664
+          - 0x214ABAC
+          - 0x214BA24
+          - 0x214E2B8
+          - 0x2150CC0
+          - 0x21510D8
+          - 0x21517AC
+          - 0x2151D34
+          - 0x2152330
+          - 0x215308C
+          - 0x21540B0
+          - 0x2154470
     - name: EndScene1
       address:
         NA:
@@ -8389,9 +8804,30 @@ overlay11:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
-    - name: button_021540b0
+    - name: Button
       address:
-        NA: 0x21540B0
+        NA:
+          - 0x2147DC0
+          - 0x21481A4
+          - 0x214851C
+          - 0x214895C
+          - 0x2148E8C
+          - 0x214953C
+          - 0x214975C
+          - 0x21499F0
+          - 0x2149F48
+          - 0x214A664
+          - 0x214ABAC
+          - 0x214BA24
+          - 0x214E2B8
+          - 0x2150CC0
+          - 0x21510D8
+          - 0x21517AC
+          - 0x2151D34
+          - 0x2152330
+          - 0x215308C
+          - 0x21540B0
+          - 0x2154470
     - name: EndScene1
       address:
         NA:
@@ -8598,9 +9034,30 @@ overlay11:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
-    - name: button_02154470
+    - name: Button
       address:
-        NA: 0x2154470
+        NA:
+          - 0x2147DC0
+          - 0x21481A4
+          - 0x214851C
+          - 0x214895C
+          - 0x2148E8C
+          - 0x214953C
+          - 0x214975C
+          - 0x21499F0
+          - 0x2149F48
+          - 0x214A664
+          - 0x214ABAC
+          - 0x214BA24
+          - 0x214E2B8
+          - 0x2150CC0
+          - 0x21510D8
+          - 0x21517AC
+          - 0x2151D34
+          - 0x2152330
+          - 0x215308C
+          - 0x21540B0
+          - 0x2154470
     - name: EndScene1
       address:
         NA:
