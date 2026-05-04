@@ -1,5 +1,7 @@
 #ifndef HEADERS_FUNCTIONS_ARM9_ITCM_H_
 #define HEADERS_FUNCTIONS_ARM9_ITCM_H_
+void OS_IRQHandler(void);
+void OS_IRQHandler_ThreadSwitch(void);
 void OSi_DoResetSystem(void);
 void OSi_DoBoot(void);
 void OSi_CpuClear32(undefined4 param_1, undefined4* param_2, int32_t param_3);

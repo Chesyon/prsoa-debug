@@ -23,6 +23,12 @@ itcm:
     
     In Shadows of Almia, a portion of the ITCM is believed to be static. While not yet confirmed, it seems to be copied from a portion of the Arm9 binary, after which that portion is repurposed. 
   functions:
+    - name: OS_IRQHandler
+      address:
+        NA: 0x1FF8000
+    - name: OS_IRQHandler_ThreadSwitch
+      address:
+        NA: 0x1FF8068
     - name: OSi_DoResetSystem
       address:
         NA: 0x1FF81E4
@@ -77,4 +83,9 @@ itcm:
     - name: MIi_DmaSetParams_wait_src32
       address:
         NA: 0x1FF8554
-  data: []
+  data:
+    - name: OSI_ITCM_ARENA_LO_DEFAULT
+      address:
+        NA: 0x1FF8660
+      length:
+        NA: 0x79A0
