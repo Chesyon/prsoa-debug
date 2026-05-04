@@ -281,4 +281,16 @@ struct unk_map_struct_size_0x80 {
     undefined4 field112_0x7c;
 };
 ASSERT_SIZE(struct unk_map_struct_size_0x80, 128);
+
+struct loading_zone_exit_pos {
+    enum room_id new_room_id; // stores the new x new room id for after loading zone transition
+    uint32_t new_player_x;    // stores the new x coordinate for the player for after loading zone
+                              // transition
+    uint32_t new_player_y;    // stores the new y coordinate for the player for after loading zone
+                              // transition
+    int new_player_face_direction; // Generally -1, not changing the current value. Otherwise it is
+                                   // used to set the player facing direction after loading zone
+};
+ASSERT_SIZE(struct loading_zone_exit_pos, 16);
+
 #endif
