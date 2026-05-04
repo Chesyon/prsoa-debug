@@ -2188,7 +2188,7 @@ arm9:
         Constructor of the CBackupSync class.
 
         r0: c_backup_sync pointer
-    - name: CBackupSyncBaseDestructor
+    - name: CBackupSyncCompleteDestructor
 #      namespace: c_backup_sync
       address:
         NA: 0x202B8D8
