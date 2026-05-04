@@ -23,14 +23,15 @@ overlay11:
       description: |-
         [MANUAL DESCRIPTION]
         
-        No params.
+        r0: c_ranger_net_scene pointer
+        r1: megastruct pointer
     - name: CRangerNetSceneInit
       address:
         NA: 0x211CAE4
       description: |-
         [MANUAL DESCRIPTION]
         
-        No params.
+        r0: c_ranger_net_scene pointer
     - name: ret_0211d860
       address:
         NA: 0x211D860
@@ -98,35 +99,37 @@ overlay11:
       description: |-
         [MANUAL DESCRIPTION]
         
-        No params.
+        r0: ov_11_unk_struct_0x730 pointer
+        r1: megastruct pointer
+        r2: int 
     - name: Ov110x730InitPrimary
       address:
         NA: 0x211E0E8
       description: |-
         [MANUAL DESCRIPTION]
         
-        No params.
+        r0: ov_11_unk_struct_0x730 pointer
     - name: Ov110x730InitSecondaryVeneer
       address:
         NA: 0x211E1DC
       description: |-
         [MANUAL DESCRIPTION]
         
-        No params.
+        r0: ov_11_unk_struct_0x730 pointer
     - name: Ov110x730InitSecondary
       address:
         NA: 0x211E1E8
       description: |-
         [MANUAL DESCRIPTION]
         
-        No params.
+        r0: ov_11_unk_struct_0x730 pointer
     - name: MaybeFreeRangerNetScene
       address:
         NA: 0x211F52C
       description: |-
         [MANUAL DESCRIPTION]
         
-        No params.
+        r0: ov_11_unk_struct_0x730 pointer
     - name: ret_021245a4
       address:
         NA: 0x21245A4
@@ -182,14 +185,19 @@ overlay11:
       description: |-
         [MANUAL DESCRIPTION]
         
-        No params.
+        r0: ov_11_unk_struct_0x3ec pointer
+        r1: megastruct pointer
+        r2: ov_11_unk_struct_0x730 pointer
     - name: MaybeInitRsaKeyFileData
       address:
         NA: 0x212CEE8
       description: |-
         [MANUAL DESCRIPTION]
         
-        No params.
+        r0: int 
+        r1: char pointer
+        r2: undefined4 
+        r3: undefined4 
     - name: ret_0212d978
       address:
         NA: 0x212D978
@@ -203,21 +211,26 @@ overlay11:
       description: |-
         [MANUAL DESCRIPTION]
         
-        No params.
+        r0: ov_11_unk_struct_0x198 pointer
+        r1: ov_11_unk_struct_0x730 pointer
     - name: Ov110x18Constructor
       address:
         NA: 0x21302D8
       description: |-
         [MANUAL DESCRIPTION]
         
-        No params.
+        r0: ov_11_unk_struct_0x18 pointer
+        r1: megastruct pointer
     - name: Ov110x4e4Constructor
       address:
         NA: 0x21304DC
       description: |-
         [MANUAL DESCRIPTION]
         
-        No params.
+        r0: ov_11_unk_struct_0x4e4 pointer
+        r1: megastruct pointer
+        r2: ov_11_unk_struct_0x18 pointer
+        r3: ov_11_unk_struct_0x730 pointer
     - name: Overlay11EntryPoint2
       address:
         NA: 0x21319EC

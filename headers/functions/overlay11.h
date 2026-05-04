@@ -25,9 +25,7 @@ void ret_02126968(void);
 void ret_0212697c(void);
 void ret_02126980(void);
 void ret_02126984(void);
-struct ov_11_unk_struct_0x3ec* Ov110x3ecConstructor(struct ov_11_unk_struct_0x3ec* this,
-                                                    struct megastruct* megastruct_ptr_ptr,
-                                                    struct ov_11_unk_struct_0x730* parent);
+struct ov_11_unk_struct_0x3ec *Ov110x3ecConstructor(struct ov_11_unk_struct_0x3ec *this,struct megastruct *megastruct_ptr,struct ov_11_unk_struct_0x730 *parent);
 int MaybeInitRsaKeyFileData(int param_1, char* param_2, undefined4 param_3, undefined4 param_4);
 void ret_0212d978(void);
 struct ov_11_unk_struct_0x198* Ov110x198Constructor(struct ov_11_unk_struct_0x198* this,
