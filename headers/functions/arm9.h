@@ -301,10 +301,10 @@ struct unk_save_struct_0x74* InitUnkSaveStruct0x74(struct unk_save_struct_0x74* 
 void ret_02029778(void);
 void ret_0202a5f8(void);
 void CBackupBaseConstructor(struct c_backup* param_1);
-struct c_backup* CBackupBaseBaseDestructor(struct c_backup* param_1);
+struct c_backup* CBackupBaseCompleteDestructor(struct c_backup* param_1);
 struct c_backup* CBackupBaseDeletingDestructor(struct c_backup* param_1);
 struct c_backup_sync* CBackupSyncConstructor(struct c_backup_sync* param_1);
-struct c_backup_sync* CBackupBaseCompleteDestructor(struct c_backup_sync* param_1);
+struct c_backup_sync* CBackupSyncCompleteDestructor(struct c_backup_sync* param_1);
 struct c_backup_sync* CBackupSyncDeletingDestructor(struct c_backup_sync* param_1);
 undefined4 SysCallReturnZero2353(void);
 undefined4 SysCallPrintTextbox(undefined4* param_1);
