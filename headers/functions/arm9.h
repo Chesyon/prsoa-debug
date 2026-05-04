@@ -2449,7 +2449,6 @@ void ret_0207f910(void);
 int get_deleter(int param_1, undefined4 param_2);
 void dispose(int param_1);
 void ret_0207f9c0(void);
-undefined4 what(int param_1);
 void Msl_Cpp_Msl_Smart_Pointers_Shared_Ptr_Deleter_Common_Release(int* param_1);
 void Msl_Cpp_Msl_Smart_Pointers_Shared_Ptr_Deleter_Common_Release_Weak(int* param_1);
 void Msl_Cpp_Vector_ZnSt13_Vec_DeleterImSaImEE13sub_Push_BackErkmN10Metrowerks8int2typeILi1Eee(

@@ -9085,9 +9085,6 @@ arm9:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
-    - name: what
-      address:
-        NA: 0x207F9C4
     - name: Msl_Cpp_Msl_Smart_Pointers_Shared_Ptr_Deleter_Common_Release
       address:
         NA: 0x207FA3C
