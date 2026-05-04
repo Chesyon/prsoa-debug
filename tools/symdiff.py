@@ -357,7 +357,6 @@ class Symbol:
         self.file = filepath
         self.blockname = blockname
         self.name: str = symbol["name"]
-        self.namespace: List[str] = symbol.get("namespace", [])
         self.aliases: List[str] = symbol.get("aliases", [])
         self.address: Dict[str, List[int]] = {
             version: Symbol.listify(addrs)

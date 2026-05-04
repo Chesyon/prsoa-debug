@@ -134,7 +134,7 @@ arm9:
         
         r0: touch_screen pointer
     - name: ret_02001eb4
-      namespace: c_touch_panel
+#      namespace: c_touch_panel
       address:
         NA: 0x2001EB4
       description: |-
