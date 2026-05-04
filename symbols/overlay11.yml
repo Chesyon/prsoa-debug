@@ -21,7 +21,7 @@ overlay11:
       address:
         NA: 0x211C9E0
       description: |-
-        [MANUAL DESCRIPTION]
+        Constructor of the CRangerNetScene class.
 
         r0: c_ranger_net_scene pointer
         r1: megastruct pointer
@@ -43,9 +43,9 @@ overlay11:
       address:
         NA: 0x211DEF8
       description: |-
-        [MANUAL DESCRIPTION]
+        Constructor of the CRangerNetAgbScene class.
 
-        No params.
+        r0: c_ranger_net_agb_scene pointer
     - name: ret_0211df48
 #      namespace: c_ranger_net_agb_scene
       address:

@@ -20,26 +20,29 @@ overlay0:
       address:
         NA: 0x211C9E0
       description: |-
+        Constructor of the CFieldScene class.
         The sole entry point of overlay_00, tasked with creating the respective overlay struct.
 
         r0: ov_00_unk_struct pointer
         r1: megastruct pointer
-    - name: CFieldSceneBaseDestructor
+    - name: CFieldSceneCompleteDestructor
 #      namespace: c_field_scene
       address:
         NA: 0x211CAD0
       description: |-
-        [MANUAL DESCRIPTION]
+        Destructor of the CFieldScene class.
+        This is a complete object destructor.
 
-        No params.
+        r0: ov_00_unk_struct pointer
     - name: CFieldSceneDeletingDestructor
 #      namespace: c_field_scene
       address:
         NA: 0x211CB28
       description: |-
-        [MANUAL DESCRIPTION]
+        Destructor of the CFieldScene class.
+        This is a deleting destructor.
 
-        No params.
+        r0: ov_00_unk_struct pointer
     - name: ret_0211e958
       address:
         NA: 0x211E958

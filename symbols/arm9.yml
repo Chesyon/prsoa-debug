@@ -61,30 +61,32 @@ arm9:
       address:
         NA: 0x2001458
       description: |-
-        [MANUAL DESCRIPTION]
+        Replacement for the global C++ memory allocation function: `void* operator new(std::size_t size);`
+        Returns a pointer to the allocated memory.
 
-        No params.
+        r0: number of bytes to allocate
     - name: OperatorNewArray
       address:
         NA: 0x2001464
       description: |-
-        [MANUAL DESCRIPTION]
+        Replacement for the global C++ memory allocation function: `void* operator new[](std::size_t size);`
+        Returns a pointer to the allocated memory.
 
-        No params.
+        r0: number of bytes to allocate
     - name: OperatorDelete
       address:
         NA: 0x2001470
       description: |-
-        [MANUAL DESCRIPTION]
+        Replacement for the global C++ memory deallocation function: `void operator delete(void* ptr);`
 
-        r0: void pointer
+        r0: pointer to a memory block to deallocate
     - name: OperatorDeleteArray
       address:
         NA: 0x200147C
       description: |-
-        [MANUAL DESCRIPTION]
+        Replacement for the global C++ memory deallocation function: `void operator delete[](void* ptr);`
 
-        r0: void pointer
+        r0: pointer to a memory block to deallocate
     - name: LoadOverlay
       address:
         NA: 0x2001488
@@ -152,9 +154,9 @@ arm9:
       address:
         NA: 0x2002048
       description: |-
-        [MANUAL DESCRIPTION]
+        Class-specific overload for the global C++ memory deallocation function: `void CTouchPanel::operator delete(void* ptr);`
 
-        r0: void pointer
+        r0: pointer to a memory block to deallocate
     - name: InitTouchScreenWrapperOuter
       address:
         NA: 0x2002054
@@ -166,72 +168,72 @@ arm9:
       address:
         NA: 0x20021C8
       description: |-
-        [MANUAL DESCRIPTION]
+        Initializes the primary and secondary heaps.
 
-        r0: uint32_t
+        r0: size of the secondary heap
     - name: Heap_Alloc
       address:
         NA: 0x2002258
       description: |-
-        [MANUAL DESCRIPTION]
+        Allocates memory on the primary or overlay-specific heap.
 
-        r0: undefined4
+        r0: number of bytes to allocate
     - name: Heap_AllocWithAlignment
       address:
         NA: 0x20022A4
       description: |-
-        [MANUAL DESCRIPTION]
+        Allocates memory on the primary or overlay-specific heap, with the specified alignment.
 
-        r0: size_t
-        r1: uint32_t
+        r0: number of bytes to allocate
+        r1: alignment to use
     - name: Heap_Free
       address:
         NA: 0x20022F4
       description: |-
-        [MANUAL DESCRIPTION]
+        Deallocates memory on the primary or overlay-specific heap.
 
-        r0: void pointer
+        r0: pointer to a memory block to deallocate
     - name: Heap_GetMainHandle
       address:
         NA: 0x2002330
       description: |-
-        [MANUAL DESCRIPTION]
+        Returns a handle to the primary heap.
 
         No params.
     - name: Heap_AllocSecondary
       address:
         NA: 0x200233C
       description: |-
-        [MANUAL DESCRIPTION]
+        Allocates memory on the secondary heap.
 
-        r0: size_t
+        r0: number of bytes to allocate
     - name: Heap_FreeSecondary
       address:
         NA: 0x200235C
       description: |-
-        [MANUAL DESCRIPTION]
+        Deallocates memory on the secondary heap.
 
-        r0: void pointer
+        r0: pointer to a memory block to deallocate
     - name: Heap_GetSecondaryHandle
       address:
         NA: 0x2002378
       description: |-
-        [MANUAL DESCRIPTION]
+        Returns a handle to the secondary heap.
 
         No params.
     - name: Heap_InitOverlay
       address:
         NA: 0x2002384
       description: |-
-        [MANUAL DESCRIPTION]
+        Initializes the overlay-specific heap.
 
-        r0: void pointer
-        r1: size_t
+        r0: pointer to where the heap starts
+        r1: size of the heap
     - name: Heap_DestroyOverlay
       address:
         NA: 0x20023C0
       description: |-
-        [MANUAL DESCRIPTION]
+        Destroys the overlay-specific heap.
 
         No params.
     - name: InitFileArchiveWrapper
@@ -2106,19 +2108,20 @@ arm9:
         Does nothing but return. Likely a debug hook for a nearby function.
 
         No params.
-    - name: InitCBackup
+    - name: CBackupConstructor
       address:
         NA: 0x2027CC8
       description: |-
-        [MANUAL DESCRIPTION]
+        Constructor of the CBackup class.
 
         r0: c_backup pointer
-    - name: CBackupBaseDestructor
+    - name: CBackupCompleteDestructor
 #      namespace: c_backup
       address:
         NA: 0x2027CF0
       description: |-
-        [MANUAL DESCRIPTION]
+        Destructor of the CBackup class.
+        This is a complete object destructor.
 
         r0: c_backup pointer
     - name: CBackupDeletingDestructor
@@ -2126,7 +2129,8 @@ arm9:
       address:
         NA: 0x2027D04
       description: |-
-        [MANUAL DESCRIPTION]
+        Destructor of the CBackup class.
+        This is a deleting destructor.
 
         r0: c_backup pointer
     - name: InitUnkSaveStruct0x74
@@ -2152,34 +2156,36 @@ arm9:
         Does nothing but return. Likely a debug hook for a nearby function.
 
         No params.
-    - name: InitCBackupBase
+    - name: CBackupBaseConstructor
       address:
         NA: 0x202B5D0
       description: |-
-        [MANUAL DESCRIPTION]
+        Constructor of the CBackupBase class.
 
-        r0: c_backup pointer
-    - name: CBackupBaseBaseDestructor
+        r0: c_backup_base pointer
+    - name: CBackupBaseCompleteDestructor
 #      namespace: c_backup_base
       address:
         NA: 0x202B5F4
       description: |-
-        [MANUAL DESCRIPTION]
+        Destructor of the CBackupBase class.
+        This is a complete object destructor.
 
-        r0: c_backup pointer
+        r0: c_backup_base pointer
     - name: CBackupBaseDeletingDestructor
 #      namespace: c_backup_base
       address:
         NA: 0x202B61C
       description: |-
-        [MANUAL DESCRIPTION]
+        Destructor of the CBackupBase class.
+        This is a deleting destructor.
 
-        r0: c_backup pointer
-    - name: InitCBackupSync
+        r0: c_backup_base pointer
+    - name: CBackupSyncConstructor
       address:
         NA: 0x202B8A4
       description: |-
-        [MANUAL DESCRIPTION]
+        Constructor of the CBackupSync class.
 
         r0: c_backup_sync pointer
     - name: CBackupSyncBaseDestructor
@@ -2187,7 +2193,8 @@ arm9:
       address:
         NA: 0x202B8D8
       description: |-
-        [MANUAL DESCRIPTION]
+        Destructor of the CBackupSync class.
+        This is a complete object destructor.
 
         r0: c_backup_sync pointer
     - name: CBackupSyncDeletingDestructor
@@ -2195,7 +2202,8 @@ arm9:
       address:
         NA: 0x202B8EC
       description: |-
-        [MANUAL DESCRIPTION]
+        Destructor of the CBackupSync class.
+        This is a deleting destructor.
 
         r0: c_backup_sync pointer
     - name: SysCallReturnZero2353
