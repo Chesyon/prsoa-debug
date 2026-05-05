@@ -295,7 +295,7 @@ struct ov_11_unk_struct_0x4e4 {
     undefined field42_0x2a;
     undefined field43_0x2b;
     undefined2 unk_0x2c;
-    undefined field45_0x2e[1156];
+    undefined field45_0x2e[1158];
     undefined2 unk_0x4b4;
     undefined field1204_0x4b6;
     undefined field1205_0x4b7;

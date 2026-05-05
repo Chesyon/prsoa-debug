@@ -98,6 +98,9 @@ ASSERT_SIZE(struct nns_snd_arc_symbol, 40);
 struct nns_snd_arc {
     struct nns_snd_arc_header header;
     bool file_open;
+    undefined field0_0x31;
+    undefined field1_0x32;
+    undefined field2_0x33;
     struct fs_file file;
     struct fs_file_id file_id;
     struct nns_snd_arc_fat* fat;
