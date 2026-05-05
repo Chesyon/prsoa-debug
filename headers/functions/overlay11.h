@@ -253,7 +253,7 @@ void Aoss_Release(void);
 void Aoss_Data_Init(uint16_t* param_1);
 undefined4 Aoss_Seq_Data_Copy(uint16_t* param_1);
 undefined4 Aoss_Check_Str(int8_t* param_1, int param_2);
-undefined4 Aoss_CheckAp(uint *param_1);
+undefined4 Aoss_CheckAp(unsigned int *param_1);
 undefined4 Aoss_Set_ApInfo(undefined4* param_1);
 void MakeSendSeqID(int param_1, int param_2, undefined4 param_3);
 undefined4 Aoss_StatusExclusion(int param_1);
@@ -935,7 +935,7 @@ void SceneSetTestComplete_ProcScene(void *param_1);
 void SceneSetTestComplete_Draw(void);
 void SceneSetTestComplete_EndScene(void);
 void SceneSetTestComplete_EndScene1(void);
-__pid_t SceneSetTestComplete_Wait(void *__stat_loc);
+void SceneSetTestComplete_Wait(void *__stat_loc);
 void Dwci_SceneSetTestConfirm(void);
 void SceneSetTestConfirm_InitGraphics(undefined4 param_1,undefined4 param_2,undefined4 param_3,undefined4 param_4);
 void SceneSetTestConfirm_ProcInit(void);
@@ -1352,11 +1352,11 @@ undefined4 Nhttp_GetBodyAll(int param_1, undefined4* param_2);
 void Nhttpi_SetSsLseed(void);
 int Nhttpi_SocOpen(int param_1, undefined4 param_2, undefined4 param_3, undefined4 param_4);
 void Nhttpi_SocCloseWait(undefined4 param_1, int param_2);
-undefined4 Nhttpi_SocConnect(int param_1, int param_2, struct socklen_t param_3,
+undefined4 Nhttpi_SocConnect(int param_1, int param_2, socklen_t param_3,
                              unsigned int param_4);
-struct ssize_t Nhttpi_SocRecv(int param_1, int param_2, void* param_3, struct size_t param_4,
+struct ssize_t Nhttpi_SocRecv(int param_1, int param_2, void* param_3, size_t param_4,
                               int param_5);
-struct ssize_t Nhttpi_SocSend(int param_1, int param_2, void* param_3, struct size_t param_4,
+struct ssize_t Nhttpi_SocSend(int param_1, int param_2, void* param_3, size_t param_4,
                               int param_5);
 void Nhttpi_SocCancel(undefined4 param_1, int param_2, undefined4 param_3, undefined4 param_4);
 int Nhttpi_Strnicmp(char* param_1, char* param_2, int param_3);
