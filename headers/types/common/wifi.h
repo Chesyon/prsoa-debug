@@ -12,7 +12,7 @@ struct sockaddr {
 };
 ASSERT_SIZE(struct sockaddr, 16);
 
-struct DWCInetControl {
+struct dwci_net_control {
     int32_t ac_state; // the result of InitWFC is stored here!
     uint16_t state;
     uint16_t online;

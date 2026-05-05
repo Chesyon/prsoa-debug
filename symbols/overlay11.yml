@@ -1070,13 +1070,13 @@ overlay11:
     - name: Atermi_ApConfigStart
       address:
         NA: 0x2142384
-    - name: ATERMi_ApConfigEnd
+    - name: AtermiApConfigEnd
       address:
         NA: 0x214246C
     - name: Atermi_ApConfigGetState
       address:
         NA: 0x2142500
-    - name: ATERMi_ApConfigGetResult
+    - name: AtermiApConfigGetResult
       address:
         NA: 0x2142538
     - name: SendNotify
@@ -1385,10 +1385,10 @@ overlay11:
     - name: Dwci_AosslInit
       address:
         NA: 0x2146864
-    - name: Dwci_AOSSlEnd
+    - name: Dwci_AosslEnd
       address:
         NA: 0x2146974
-    - name: Dwci_AOSSlStart
+    - name: Dwci_AosslStart
       address:
         NA: 0x21469C4
     - name: LibAoss_AossAlloc
@@ -1445,7 +1445,7 @@ overlay11:
     - name: Dwci_MsglInit
       address:
         NA: 0x2147018
-    - name: Dwci_MSGlEnd
+    - name: Dwci_MsglEnd
       address:
         NA: 0x2147054
     - name: Dwci_MsglRead
@@ -1487,13 +1487,13 @@ overlay11:
     - name: Dwci_RakulInit
       address:
         NA: 0x2147570
-    - name: Dwci_RAKUlEnd
+    - name: Dwci_RakulEnd
       address:
         NA: 0x21475DC
-    - name: Dwci_RAKUlGetState
+    - name: Dwci_RakulGetState
       address:
         NA: 0x2147600
-    - name: Dwci_RAKUlSetResult
+    - name: Dwci_RakulSetResult
       address:
         NA: 0x21476BC
     - name: Rakuraku_CbConfig
@@ -1934,7 +1934,7 @@ overlay11:
     - name: SceneOptMovUser_ProcInit2
       address:
         NA: 0x214A274
-    - name: SceneOptMovUser_procScene
+    - name: SceneOptMovUser_ProcScene
       address:
         NA: 0x214A298
     - name: SceneOptMovUser_Input
@@ -2156,10 +2156,10 @@ overlay11:
     - name: SceneSetApList_DispPushButton
       address:
         NA: 0x214C564
-    - name: SceneSetApList_procError
+    - name: SceneSetApList_ProcError
       address:
         NA: 0x214C594
-    - name: SceneSetApList_procError1
+    - name: SceneSetApList_ProcError1
       address:
         NA: 0x214C5C0
     - name: Dwci_SceneSetEdit32
@@ -2279,7 +2279,7 @@ overlay11:
     - name: SceneSetEditAddress_ProcError
       address:
         NA: 0x214DD80
-    - name: SceneSetEditAddress_procError1
+    - name: SceneSetEditAddress_ProcError1
       address:
         NA: 0x214DDAC
     - name: Dwci_SceneSetError
@@ -3113,13 +3113,13 @@ overlay11:
     - name: Dwci_SettignlInit
       address:
         NA: 0x21555A8
-    - name: Dwci_SETTIGNlEnd
+    - name: Dwci_SettignlEnd
       address:
         NA: 0x21555EC
     - name: Dwci_SettignlGet
       address:
         NA: 0x2155600
-    - name: Dwci_SETTINGlSetIpAuto
+    - name: Dwci_SettinglSetIpAuto
       address:
         NA: 0x2155614
     - name: Dwci_SettinglSetDnsAuto
@@ -3131,28 +3131,28 @@ overlay11:
     - name: Dwci_SettinglSetWep
       address:
         NA: 0x215566C
-    - name: Dwci_SETTINGlSetIp
+    - name: Dwci_SettinglSetIp
       address:
         NA: 0x2155804
-    - name: Dwci_SETTINGlSetNetMask
+    - name: Dwci_SettinglSetNetMask
       address:
         NA: 0x2155820
-    - name: Dwci_SETTINGlSetGateway
+    - name: Dwci_SettinglSetGateway
       address:
         NA: 0x215583C
-    - name: Dwci_SETTINGlSetDnsP
+    - name: Dwci_SettinglSetDnsP
       address:
         NA: 0x215585C
-    - name: Dwci_SETTINGlSetDnsS
+    - name: Dwci_SettinglSetDnsS
       address:
         NA: 0x215587C
     - name: Dwci_SettinglGetSsid
       address:
         NA: 0x215589C
-    - name: Dwci_SETTINGlGetIp
+    - name: Dwci_SettinglGetIp
       address:
         NA: 0x21558C0
-    - name: Dwci_SETTINGlGetNetMask
+    - name: Dwci_SettinglGetNetMask
       address:
         NA: 0x2155900
     - name: Dwci_SettinglGetGateway
@@ -3179,7 +3179,7 @@ overlay11:
     - name: Dwci_SettinglSetAoss
       address:
         NA: 0x2155CF4
-    - name: Dwci_SETTINGlGetMemMap
+    - name: Dwci_SettinglGetMemMap
       address:
         NA: 0x2155E04
     - name: Dwci_SettinglErasePage
@@ -3344,7 +3344,7 @@ overlay11:
     - name: Dwci_Mov_Mbp_MemInit
       address:
         NA: 0x2157FE4
-    - name: Dwci_MOV_MBP_Init
+    - name: Dwci_Mov_Mbp_Init
       address:
         NA: 0x2158024
     - name: Dwci_Mov_Mbp_Start
@@ -3614,10 +3614,10 @@ overlay11:
     - name: Dwci_CelllDelete
       address:
         NA: 0x215B370
-    - name: Dwci_CELLlGetObj
+    - name: Dwci_CelllGetObj
       address:
         NA: 0x215B3F0
-    - name: Dwci_CELLlSetAttr
+    - name: Dwci_CelllSetAttr
       address:
         NA: 0x215B3FC
     - name: Dwci_CelllSetEffect
@@ -3668,7 +3668,7 @@ overlay11:
     - name: Dwci_EfflInit
       address:
         NA: 0x215B948
-    - name: Dwci_EFFlEnd
+    - name: Dwci_EfflEnd
       address:
         NA: 0x215B990
     - name: Dwci_EfflCheck
@@ -3767,7 +3767,7 @@ overlay11:
     - name: Dwci_HeaplFree
       address:
         NA: 0x215C8C0
-    - name: Dwci_HEAPlFree2
+    - name: Dwci_HeaplFree2
       address:
         NA: 0x215C904
     - name: Dwci_IptlInit
@@ -3785,13 +3785,13 @@ overlay11:
     - name: Input_ReadTouch
       address:
         NA: 0x215CB08
-    - name: Dwci_IPTlCheck_Key
+    - name: Dwci_IptlCheck_Key
       address:
         NA: 0x215CCA4
-    - name: Dwci_IPTlCheckTrigger_Key
+    - name: Dwci_IptlCheckTrigger_Key
       address:
         NA: 0x215CCC8
-    - name: Dwci_IPTlCheckRepeat_Key
+    - name: Dwci_IptlCheckRepeat_Key
       address:
         NA: 0x215CCEC
     - name: Dwci_TPlCheck
@@ -3836,10 +3836,10 @@ overlay11:
     - name: Dwci_LstlInsert
       address:
         NA: 0x215D128
-    - name: Dwci_LSTlPopBack
+    - name: Dwci_LstlPopBack
       address:
         NA: 0x215D158
-    - name: Dwci_LSTlPopFront
+    - name: Dwci_LstlPopFront
       address:
         NA: 0x215D168
     - name: Dwci_ObjlInit
@@ -3902,13 +3902,13 @@ overlay11:
     - name: Task_FormTask
       address:
         NA: 0x215DA3C
-    - name: Dwci_TSKlChangeFunc
+    - name: Dwci_TsklChangeFunc
       address:
         NA: 0x215DAC8
     - name: Dwci_TsklDelete
       address:
         NA: 0x215DAD0
-    - name: Dwci_TSKlDeleteEx
+    - name: Dwci_TsklDeleteEx
       address:
         NA: 0x215DAF0
     - name: Task_DeleteTcb
