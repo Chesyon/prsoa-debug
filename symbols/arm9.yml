@@ -111,6 +111,13 @@ arm9:
         Seems to initialize what we believe to be the struct that stores player inputs.
         
         r0: controller_inputs pointer
+    - name: UpdateControllerInputs
+      address:
+        NA: 0x2001C20
+      description: |-
+        Seems to be responsible for actually writing the player button inputs to a controller_inputs struct.
+        
+        r0: controller_inputs pointer
     - name: OperatorNewVeneer
       address:
         NA:
@@ -136,13 +143,21 @@ arm9:
         
         r0: touch_screen pointer
     - name: ret_02001eb4
-#      namespace: c_touch_panel
+      ##namespace: c_touch_panel
       address:
         NA: 0x2001EB4
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
+    - name: TouchScreenDestructor
+      ##namespace: c_touch_panel
+      address:
+        NA: 0x2001EB8
+      description: |-
+        Frees a touch_screen struct from memory.
+        
+        r0: touch_screen pointer
     - name: ret_02001ecc
       address:
         NA: 0x2001ECC
@@ -162,6 +177,14 @@ arm9:
         NA: 0x2002054
       description: |-
         Seems to partially initialize a touch_screen_wrapper struct in tandem with InitTouchScreenWrapper.
+        
+        r0: touch_screen_wrapper pointer
+    - name: TouchScreenWrapperDestructor
+      #namespace: c_tp_emulator
+      address:
+        NA: 0x2002088
+      description: |-
+        Frees a touch_screen_wrapper struct from memory.
         
         r0: touch_screen_wrapper pointer
     - name: Heap_Init
@@ -268,22 +291,82 @@ arm9:
         Seems to be the higher level equivalent of FS_ConvertFilePathToId.
         
         r0: file path
-    - name: GetMsgLangSuffix
+    - name: GetMesLangSuffix
       address:
         NA: 0x2003124
       description: |-
         Retrieves the correct file suffix for the respective language. Presumed to interact with the megastruct in EU.
         
         No params.
-    - name: InitFileWrapperWithLangSuffix
       address:
         NA: 0x200313C
       description: |-
-        Seems to initialize a file_wrapper struct, properly handling file opening and closing.
         Will append the correct language suffix to the file name.
         r0: file_wrapper pointer
         r1: file name
         r2: int32_t
+        Seems to initialize a file_wrapper struct for a .NCER file.
+        
+        r0: file_wrapper pointer
+        r1: file name
+        r2: int 
+        r3: undefined4 
+        stack[0]: int 
+    - name: InitFileWrapperNcgr
+      address:
+        NA: 0x20032CC
+      description: |-
+        Seems to initialize a file_wrapper struct for a .NCGR file.
+        
+        r0: file_wrapper pointer
+        r1: file name
+        r2: int 
+        r3: undefined4 
+        stack[0]: int 
+    - name: InitFileWrapperNclr
+      address:
+        NA: 0x20033B0
+      description: |-
+        Seems to initialize a file_wrapper struct for a .NCLR file.
+        
+        r0: file_wrapper pointer
+        r1: file name
+        r2: int 
+        r3: undefined4 
+        stack[0]: int 
+    - name: InitFileWrapperNscr
+      address:
+        NA: 0x2003494
+      description: |-
+        Seems to initialize a file_wrapper struct for a .NSCR file.
+        
+        r0: file_wrapper pointer
+        r1: file name
+        r2: int 
+        r3: undefined4 
+        stack[0]: int 
+    - name: InitFileWrapperNanr
+      address:
+        NA: 0x2003578
+      description: |-
+        Seems to initialize a file_wrapper struct for a .NANR file.
+        
+        r0: file_wrapper pointer
+        r1: file name
+        r2: int 
+        r3: undefined4 
+        stack[0]: int 
+    - name: InitFileWrapperBgNcgr
+      address:
+        NA: 0x200365C
+      description: |-
+        Seems to initialize a file_wrapper struct for a .BGNCGR file.
+        
+        r0: file_wrapper pointer
+        r1: file name
+        r2: int 
+        r3: undefined4 
+        stack[0]: int 
     - name: ret_0200372c
       address:
         NA: 0x200372C
@@ -292,7 +375,7 @@ arm9:
         
         No params.
     - name: ret_0200396c
-#      namespace: c_primitive
+      ##namespace: c_primitive
       address:
         NA: 0x200396C
       description: |-
@@ -314,7 +397,7 @@ arm9:
         
         r0: destination pointer
     - name: ret_02007ca8
-#      namespace: c_scene
+      ##namespace: c_scene
       address:
         NA: 0x2007CA8
       description: |-
@@ -1195,7 +1278,7 @@ arm9:
         
         r0: battle_exports pointer
     - name: ret_02010cec
-#      namespace: c_battle_result_parameter
+      ##namespace: c_battle_result_parameter
       address:
         NA: 0x2010CEC
       description: |-
@@ -2044,7 +2127,7 @@ arm9:
         r0: settings_and_variables pointer
         r1: index
     - name: ret_0201a40c
-#      namespace: c_player_hp_gauge
+      ##namespace: c_player_hp_gauge
       address:
         NA: 0x201A40C
       description: |-
@@ -2116,7 +2199,7 @@ arm9:
         
         r0: c_backup pointer
     - name: CBackupCompleteDestructor
-#      namespace: c_backup
+      ##namespace: c_backup
       address:
         NA: 0x2027CF0
       description: |-
@@ -2125,7 +2208,7 @@ arm9:
         
         r0: c_backup pointer
     - name: CBackupDeletingDestructor
-#      namespace: c_backup
+      ##namespace: c_backup
       address:
         NA: 0x2027D04
       description: |-
@@ -2142,7 +2225,7 @@ arm9:
         r0: unk_save_struct_0x74 ptr
         r1: unknown
     - name: ret_02029778
-#      namespace: c_effect_actor_data
+      ##namespace: c_effect_actor_data
       address:
         NA: 0x2029778
       description: |-
@@ -2164,7 +2247,7 @@ arm9:
         
         r0: c_backup_base pointer
     - name: CBackupBaseCompleteDestructor
-#      namespace: c_backup_base
+      ##namespace: c_backup_base
       address:
         NA: 0x202B5F4
       description: |-
@@ -2173,7 +2256,7 @@ arm9:
         
         r0: c_backup_base pointer
     - name: CBackupBaseDeletingDestructor
-#      namespace: c_backup_base
+      ##namespace: c_backup_base
       address:
         NA: 0x202B61C
       description: |-
@@ -2189,7 +2272,7 @@ arm9:
         
         r0: c_backup_sync pointer
     - name: CBackupSyncCompleteDestructor
-#      namespace: c_backup_sync
+      ##namespace: c_backup_sync
       address:
         NA: 0x202B8D8
       description: |-
@@ -2198,7 +2281,7 @@ arm9:
         
         r0: c_backup_sync pointer
     - name: CBackupSyncDeletingDestructor
-#      namespace: c_backup_sync
+      ##namespace: c_backup_sync
       address:
         NA: 0x202B8EC
       description: |-
@@ -2299,7 +2382,7 @@ arm9:
         
         r0: script stack pointer, interpreted as params.
     - name: ret_0202d394
-#      namespace: c_field_actor
+      ##namespace: c_field_actor
       address:
         NA: 0x202D394
       description: |-
@@ -2863,7 +2946,7 @@ arm9:
         
         r0: script stack pointer, interpreted as params.
     - name: ret_02032a44
-#      namespace: c_field_actor
+      ##namespace: c_field_actor
       address:
         NA: 0x2032A44
       description: |-
@@ -2871,7 +2954,7 @@ arm9:
         
         No params.
     - name: ret_0203331c
-#      namespace: c_field_effect
+      ##namespace: c_field_effect
       address:
         NA: 0x203331C
       description: |-
@@ -2879,7 +2962,7 @@ arm9:
         
         No params.
     - name: ret_02033388
-#      namespace: c_field_effect
+      ##namespace: c_field_effect
       address:
         NA: 0x2033388
       description: |-
@@ -2887,7 +2970,7 @@ arm9:
         
         No params.
     - name: ret_020333d8
-#      namespace: c_field_effect
+      ##namespace: c_field_effect
       address:
         NA: 0x20333D8
       description: |-
@@ -2895,7 +2978,7 @@ arm9:
         
         No params.
     - name: ret_02033440
-#      namespace: c_field_effect
+      ##namespace: c_field_effect
       address:
         NA: 0x2033440
       description: |-
@@ -2903,7 +2986,7 @@ arm9:
         
         No params.
     - name: ret_0203365c
-#      namespace: c_field_effect
+      ##namespace: c_field_effect
       address:
         NA: 0x203365C
       description: |-
@@ -3247,7 +3330,7 @@ arm9:
         
         r0: form_id
     - name: ret_020358fc
-#      namespace: c_field_screen_effect_object_base
+      ##namespace: c_field_screen_effect_object_base
       address:
         NA: 0x20358FC
       description: |-
@@ -3255,7 +3338,7 @@ arm9:
         
         No params.
     - name: ret_02035fe4
-#      namespace: c_field_screen_effect_object_base
+      ##namespace: c_field_screen_effect_object_base
       address:
         NA: 0x2035FE4
       description: |-
@@ -3263,7 +3346,7 @@ arm9:
         
         No params.
     - name: ret_0203e930
-#      namespace: c_field_draw_actor
+      ##namespace: c_field_draw_actor
       address:
         NA: 0x203E930
       description: |-
@@ -3271,7 +3354,7 @@ arm9:
         
         No params.
     - name: ret_0204078c
-#      namespace: c_draw_object
+      ##namespace: c_draw_object
       address:
         NA: 0x204078C
       description: |-
@@ -3279,7 +3362,7 @@ arm9:
         
         No params.
     - name: ret_0204129c
-#      namespace: c_actor_data_partner
+      ##namespace: c_actor_data_partner
       address:
         NA: 0x204129C
       description: |-
@@ -3345,7 +3428,7 @@ arm9:
         r0: field_data pointer
         r1: room_id
     - name: ret_02043124
-#      namespace: c_download_mission_start_scene
+      ##namespace: c_download_mission_start_scene
       address:
         NA: 0x2043124
       description: |-
@@ -3353,7 +3436,7 @@ arm9:
         
         No params.
     - name: ret_02043128
-#      namespace: c_download_mission_start_scene
+      ##namespace: c_download_mission_start_scene
       address:
         NA: 0x2043128
       description: |-
@@ -3361,7 +3444,7 @@ arm9:
         
         No params.
     - name: ret_020439c4
-#      namespace: c_download_mission_end_scene
+      ##namespace: c_download_mission_end_scene
       address:
         NA: 0x20439C4
       description: |-
@@ -3369,7 +3452,7 @@ arm9:
         
         No params.
     - name: ret_020439c8
-#      namespace: c_download_mission_end_scene
+      ##namespace: c_download_mission_end_scene
       address:
         NA: 0x20439C8
       description: |-
@@ -3377,7 +3460,7 @@ arm9:
         
         No params.
     - name: ret_02044144
-#      namespace: c_download_mission_restart_scene
+      ##namespace: c_download_mission_restart_scene
       address:
         NA: 0x2044144
       description: |-
@@ -3385,13 +3468,16 @@ arm9:
         
         No params.
     - name: ret_02044148
-#      namespace: c_download_mission_restart_scene
+      ##namespace: c_download_mission_restart_scene
       address:
         NA: 0x2044148
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
+    - name: OS_VsNPrintfExStub_Veneer
+      address:
+        NA: 0x20441A0
     - name: ret_020441ac
       address:
         NA: 0x20441AC
@@ -3417,6 +3503,13 @@ arm9:
         
         r0: format
         r1: ap
+    - name: InitLcRngFromTick
+      address:
+        NA: 0x204436C
+      description: |-
+        Initializes the LCRNG state, add, and mult using the current tick, and the add/mult constants.
+        
+        No params.
     - name: SetSysCallPageZero
       address:
         NA: 0x2044440
@@ -5586,7 +5679,7 @@ arm9:
     - name: Nnsi_SndPlayerAllocSeqPlayer
       address:
         NA: 0x205C064
-    - name: ShutdownPlayer
+    - name: ShutdownPlayer_SeqVeneer
       address:
         NA: 0x205C0FC
     - name: Nnsi_SndPlayerStartSeq
@@ -8479,6 +8572,9 @@ arm9:
     - name: MBi_CallReset
       address:
         NA: 0x20770E0
+    - name: MBi_OnReset
+      address:
+        NA: 0x2077118
     - name: MBi_CommEnd
       address:
         NA: 0x2077124
@@ -9573,7 +9669,7 @@ arm9:
         NA: 0x20839F8
     - name: NRun_N_Eabi_Init_ExitProcess
       address:
-        NA: 0x2083A44
+        NA: 0x2083A44  
   data:
     - name: SECURE
       address:
