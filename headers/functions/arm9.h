@@ -791,8 +791,8 @@ void finished_md5(int param_1, undefined4 param_2, unsigned int param_3, undefin
 void finished_sha1(int param_1, undefined4 param_2, unsigned int param_3, undefined4 param_4);
 void rcv_finished(int param_1, int param_2);
 void add1_be8(char* param_1);
-int decrypt(EVP_PKEY_CTX *ctx,uchar *out,size_t *outlen,uchar *in,size_t inlen);
-int make_plaintext(EVP_PKEY_CTX *param_1,int param_2);
+int decrypt(undefined *ctx,uchar *out,size_t *outlen,uchar *in,size_t inlen);
+int make_plaintext(undefined *param_1,int param_2);
 int make_ciphertext(int param_1, int param_2, undefined4 param_3, undefined4 param_4);
 undefined4 tcp_read_raw_nbytes(undefined4* param_1, unsigned int param_2, undefined4 param_3,
                                unsigned int param_4);
@@ -1382,7 +1382,7 @@ undefined4 PrepareStrm(undefined4 param_1, undefined4* param_2, undefined4 param
                        undefined4 param_10);
 void StopStrm(int param_1, int param_2);
 void ForceStopStrm_Arc(int param_1, int param_2); // sndarc_stream.c/ForceStopStrm
-void ShutdownPlayer_Seq(int param_1);
+void ShutdownPlayer_Strm(int param_1); // sndarc_stream.c/ShutdownPlayer
 undefined4 AllocChannel(int param_1);
 void FreeChannel(int param_1);
 void CreateThread(struct thread* param_1, undefined4 param_2);
