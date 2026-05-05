@@ -8,23 +8,23 @@ void ret_02000b98(void);
 void ret_02000b9c(void);
 void NitroMain(void);
 void ret_0200120c(void);
-void * OperatorNew(size_t size);
-void * OperatorNewArray(size_t size);
+void* OperatorNew(size_t size);
+void* OperatorNewArray(size_t size);
 void OperatorDelete(void* ptr);
 void OperatorDeleteArray(void* ptr);
 void LoadOverlay(enum game_state param_1, int param_2);
 void*** Scene_LoadById(undefined4 param_1, struct megastruct* param_2);
 void InitControllerInputs(struct controller_inputs* param_1);
-void UpdateControllerInputs(struct controller_inputs *param_1);
+void UpdateControllerInputs(struct controller_inputs* param_1);
 void* OperatorNewVeneer(size_t size);
 struct touch_screen_wrapper* InitTouchScreenWrapper(struct touch_screen_wrapper* param_1);
 struct touch_screen* InitTouchScreen(struct touch_screen* param_1);
 void ret_02001eb4(void);
-struct touch_screen * TouchScreenDestructor(struct touch_screen *param_1);
+struct touch_screen* TouchScreenDestructor(struct touch_screen* param_1);
 void ret_02001ecc(void);
 void Heap_FreeSecondaryVeneer(void* ptr);
 struct touch_screen_wrapper* InitTouchScreenWrapperOuter(struct touch_screen_wrapper* param_1);
-struct touch_screen_wrapper * TouchScreenWrapperDestructor(struct touch_screen_wrapper *param_1);
+struct touch_screen_wrapper* TouchScreenWrapperDestructor(struct touch_screen_wrapper* param_1);
 void Heap_Init(uint32_t secondarySize);
 void Heap_Alloc(undefined4 param_1);
 void* Heap_AllocWithAlignment(size_t size, uint32_t alignment);
@@ -43,13 +43,19 @@ struct file_wrapper* InitFileWrapper(struct file_wrapper* param_1, char* param_2
 bool ConvertFilePathToId(undefined4 param_1);
 undefined4 GetMesLangSuffix(void);
 struct file_wrapper* InitFileWrapperMes(struct file_wrapper* param_1, undefined4 param_2,
-                                                   int param_3);
-struct file_wrapper *InitFileWrapperNcer(struct file_wrapper *param_1,char *param_2,int param_3,undefined4 param_4,int param_5);
-struct file_wrapper *InitFileWrapperNcgr(struct file_wrapper *param_1,char *param_2,int param_3,undefined4 param_4,int param_5);
-struct file_wrapper *InitFileWrapperNclr(struct file_wrapper *param_1,char *param_2,int param_3,undefined4 param_4,int param_5);
-struct file_wrapper *InitFileWrapperNscr(struct file_wrapper *param_1,char *param_2,int param_3,undefined4 param_4,int param_5);
-struct file_wrapper *InitFileWrapperNanr(struct file_wrapper *param_1,char *param_2,int param_3,undefined4 param_4,int param_5);
-struct file_wrapper *InitFileWrapperBgNcgr(struct file_wrapper *param_1,char *param_2,int param_3,undefined4 param_4,int param_5);
+                                        int param_3);
+struct file_wrapper* InitFileWrapperNcer(struct file_wrapper* param_1, char* param_2, int param_3,
+                                         undefined4 param_4, int param_5);
+struct file_wrapper* InitFileWrapperNcgr(struct file_wrapper* param_1, char* param_2, int param_3,
+                                         undefined4 param_4, int param_5);
+struct file_wrapper* InitFileWrapperNclr(struct file_wrapper* param_1, char* param_2, int param_3,
+                                         undefined4 param_4, int param_5);
+struct file_wrapper* InitFileWrapperNscr(struct file_wrapper* param_1, char* param_2, int param_3,
+                                         undefined4 param_4, int param_5);
+struct file_wrapper* InitFileWrapperNanr(struct file_wrapper* param_1, char* param_2, int param_3,
+                                         undefined4 param_4, int param_5);
+struct file_wrapper* InitFileWrapperBgNcgr(struct file_wrapper* param_1, char* param_2, int param_3,
+                                           undefined4 param_4, int param_5);
 void ret_0200372c(void);
 void ret_0200396c(void);
 void ret_02003984(void);
@@ -136,7 +142,7 @@ void BattleSetPartnerAssistUnlockStatus(struct battle_combatants* param_1, int p
 void GetPartnerGaugeCurrent(struct battle_combatants* param_1, int param_2);
 void BattleSetPartnerGaugeMax(struct battle_combatants* param_1, int param_2);
 void BattleSetPartnerGaugeFillRate(struct battle_combatants* param_1, int param_2);
-void BattleAddPartyPokemon(struct battle_combatants *param_1,enum form_id param_2,int8_t param_3);
+void BattleAddPartyPokemon(struct battle_combatants* param_1, enum form_id param_2, int8_t param_3);
 void BattleTryAddNewEnemyForm(struct battle_combatants* param_1, unsigned int param_2,
                               unsigned int param_3);
 void BattleSetArenaGraphicId(struct battle_combatants* param_1, int8_t param_2);
@@ -350,7 +356,7 @@ undefined4 SysCallBattleSetSequenceScriptId(undefined4* param_1);
 undefined4 SysCallBattleSetTutorialScriptId(undefined4* param_1);
 undefined4 SysCallBattleSetStartScriptId(undefined4* param_1);
 undefined4 SysCallBattleSetStylerLevel(undefined4* param_1);
-undefined4 SysCallBattleAddPartyPokemon(enum form_id *param_1);
+undefined4 SysCallBattleAddPartyPokemon(enum form_id* param_1);
 void SysCallAddEnemyFormToEncounterType1(unsigned int* param_1);
 undefined4 SysCallBattleSetGenderAndUniform(undefined4* param_1);
 undefined4 SysCallBattleSetBossFightStatus(void);
@@ -791,8 +797,8 @@ void finished_md5(int param_1, undefined4 param_2, unsigned int param_3, undefin
 void finished_sha1(int param_1, undefined4 param_2, unsigned int param_3, undefined4 param_4);
 void rcv_finished(int param_1, int param_2);
 void add1_be8(char* param_1);
-int decrypt(undefined *ctx, char *out,size_t *outlen, char *in,size_t inlen);
-int make_plaintext(undefined *param_1,int param_2);
+int decrypt(undefined* ctx, char* out, size_t* outlen, char* in, size_t inlen);
+int make_plaintext(undefined* param_1, int param_2);
 int make_ciphertext(int param_1, int param_2, undefined4 param_3, undefined4 param_4);
 undefined4 tcp_read_raw_nbytes(undefined4* param_1, unsigned int param_2, undefined4 param_3,
                                unsigned int param_4);
@@ -1382,7 +1388,7 @@ undefined4 PrepareStrm(undefined4 param_1, undefined4* param_2, undefined4 param
                        undefined4 param_10);
 void StopStrm(int param_1, int param_2);
 void ForceStopStrm_Arc(int param_1, int param_2); // sndarc_stream.c/ForceStopStrm
-void ShutdownPlayer_Strm(int param_1); // sndarc_stream.c/ShutdownPlayer
+void ShutdownPlayer_Strm(int param_1);            // sndarc_stream.c/ShutdownPlayer
 undefined4 AllocChannel(int param_1);
 void FreeChannel(int param_1);
 void CreateThread(struct thread* param_1, undefined4 param_2);
