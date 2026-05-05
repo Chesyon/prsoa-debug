@@ -19,7 +19,7 @@ struct dwci_net_control {
     uint16_t dmaNo;
     uint16_t powerMode;
 };
-ASSERT_SIZE(struct DWCInetControl, 12);
+ASSERT_SIZE(struct dwci_net_control, 12);
 
 struct unk_wifi_struct_0x18 {
     void* unk_func_ptr;
