@@ -791,7 +791,7 @@ void finished_md5(int param_1, undefined4 param_2, unsigned int param_3, undefin
 void finished_sha1(int param_1, undefined4 param_2, unsigned int param_3, undefined4 param_4);
 void rcv_finished(int param_1, int param_2);
 void add1_be8(char* param_1);
-int decrypt(undefined *ctx,uchar *out,size_t *outlen,uchar *in,size_t inlen);
+int decrypt(undefined *ctx, char *out,size_t *outlen, char *in,size_t inlen);
 int make_plaintext(undefined *param_1,int param_2);
 int make_ciphertext(int param_1, int param_2, undefined4 param_3, undefined4 param_4);
 undefined4 tcp_read_raw_nbytes(undefined4* param_1, unsigned int param_2, undefined4 param_3,
