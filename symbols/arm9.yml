@@ -2116,8 +2116,6 @@ arm9:
         
         r0: c_backup pointer
     - name: CBackupCompleteDestructor
-      aliases: 
-        - c_backup::CBackupCompleteDestructor
 #      namespace: c_backup
       address:
         NA: 0x2027CF0
