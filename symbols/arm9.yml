@@ -6007,7 +6007,7 @@ arm9:
     - name: ForceStopStrm_Arc
       address:
         NA: 0x205ED00
-    - name: ShutdownPlayer_SeqVeneer
+    - name: ShutdownPlayer_Seq
       address:
         NA: 0x205ED98
     - name: AllocChannel

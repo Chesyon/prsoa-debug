@@ -1382,7 +1382,7 @@ undefined4 PrepareStrm(undefined4 param_1, undefined4* param_2, undefined4 param
                        undefined4 param_10);
 void StopStrm(int param_1, int param_2);
 void ForceStopStrm_Arc(int param_1, int param_2); // sndarc_stream.c/ForceStopStrm
-void ShutdownPlayer_SeqVeneer(int param_1);
+void ShutdownPlayer_Seq(int param_1);
 undefined4 AllocChannel(int param_1);
 void FreeChannel(int param_1);
 void CreateThread(struct thread* param_1, undefined4 param_2);
