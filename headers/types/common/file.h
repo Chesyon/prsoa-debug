@@ -68,6 +68,9 @@ struct file_wrapper {
     void* file_data;   // Data extracted from the file
     int file_data_len; // Length of the data extracted from the file
     bool file_is_open; // Whether or not the file is open.
+    undefined field0_0x55;
+    undefined field1_0x56;
+    undefined field2_0x57;
     char unk_buffer[96];
 };
 ASSERT_SIZE(struct file_wrapper, 184);
