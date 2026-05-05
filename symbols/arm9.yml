@@ -2115,7 +2115,8 @@ arm9:
         Constructor of the CBackup class.
         
         r0: c_backup pointer
-    - name: c_backup::CBackupCompleteDestructor
+    - name: CBackupCompleteDestructor
+    - aliases: c_backup::CBackupCompleteDestructor
 #      namespace: c_backup
       address:
         NA: 0x2027CF0
