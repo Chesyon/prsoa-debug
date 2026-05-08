@@ -3,12 +3,28 @@
 
 extern undefined4 OV22_STATIC_INITIALIZER;
 extern struct __class_type_info I_ENCYC_PUSH_BUTTON_LISTENER;
+extern undefined I_ENCYC_PUSH_BUTTON_LISTENER_VFTABLE;
+extern undefined I_ENCYC_PUSH_BUTTON_LISTENER_VFTABLE_FUNCS;
 extern undefined C_ENCYCLOPEDIA_SCENE;
+extern undefined C_ENCYCLOPEDIA_SCENE_VFTABLE;
+extern undefined C_ENCYCLOPEDIA_SCENE_VFTABLE_FUNCS;
 extern struct __class_type_info C_ENCYC_MENU_SCREEN;
 extern struct __class_type_info I_ENCYC_LIST_BOX_EVENT_LISTENER;
 extern struct __class_type_info I_ENCYC_RADIO_BUTTON_LISTENER;
+extern undefined I_ENCYC_RADIO_BUTTON_LISTENER_VFTABLE;
+extern undefined I_ENCYC_RADIO_BUTTON_LISTENER_VFTABLE_FUNCS;
+extern undefined I_ENCYC_LIST_BOX_EVENT_LISTENER_VFTABLE;
+extern undefined I_ENCYC_LIST_BOX_EVENT_LISTENER_VFTABLE_FUNCS;
+extern undefined C_ENCYC_MENU_SCREEN_VFTABLE;
+extern undefined C_ENCYC_MENU_SCREEN_VFTABLE_FUNCS;
 extern undefined C_ENCYC_ITEM_LIST_SCREEN;
+extern undefined C_ENCYC_ITEM_LIST_SCREEN_VFTABLE;
+extern undefined C_ENCYC_ITEM_LIST_SCREEN_VFTABLE_FUNCS;
 extern undefined C_ENCYC_ITEM_DESCRIPTION_SCREEN;
+extern undefined C_ENCYC_ITEM_DESCRIPTION_SCREEN_VFTABLE;
+extern undefined C_ENCYC_ITEM_DESCRIPTION_SCREEN_VFTABLE_FUNCS;
 extern struct __class_type_info C_ENCYC_LIST_BOX;
+extern undefined C_ENCYC_LIST_BOX_VFTABLE;
+extern undefined C_ENCYC_LIST_BOX_VFTABLE_FUNCS;
 
 #endif
