@@ -1610,7 +1610,7 @@ void G3_BeginMakeDL(int* param_1, int param_2, int param_3);
 int G3_EndMakeDL(int* param_1);
 undefined4* GX_SendFifo64B(undefined4* param_1, undefined4* param_2);
 void OS_WaitIrq(int param_1, unsigned int param_2);
-void ret_020647a0(void);
+void OS_IrqDummy(void);
 void OSi_IrqCallback(int param_1);
 void OSi_IrqDma0(void);
 void OSi_IrqDma1(void);

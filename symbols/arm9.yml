@@ -6663,13 +6663,9 @@ arm9:
     - name: OS_WaitIrq
       address:
         NA: 0x206472C
-    - name: ret_020647a0
+    - name: OS_IrqDummy
       address:
         NA: 0x20647A0
-      description: |-
-        Does nothing but return. Likely a debug hook for a nearby function.
-        
-        No params.
     - name: OSi_IrqCallback
       address:
         NA: 0x20647A4

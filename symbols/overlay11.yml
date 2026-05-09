@@ -192,7 +192,7 @@ overlay11:
       address:
         NA: 0x212CEE8
       description: |-
-        [MANUAL DESCRIPTION]
+        Seems to initialize an RSA Key for RSA decryption. 
         
         r0: int
         r1: char pointer
