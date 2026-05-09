@@ -1,59 +1,129 @@
 #ifndef HEADERS_TYPES_AUDIO_H_
 #define HEADERS_TYPES_AUDIO_H_
 
-struct unk_audio_engine_substruct_1 {
-    undefined field0_0x0;
-    undefined field1_0x1;
-    undefined field2_0x2;
-    undefined field3_0x3;
-    void* field4_0x4;
-    char magic_word_sdat[4];
-    undefined field6_0xc;
-    undefined field7_0xd;
-    undefined field8_0xe;
-    undefined field9_0xf;
-    undefined4 field10_0x10;
-    int field11_0x14;
-    undefined4 file_offset_1;
-    int read_len_1;
-    undefined4 field14_0x20;
-    int field15_0x24;
-    undefined field16_0x28;
-    undefined field17_0x29;
-    undefined field18_0x2a;
-    undefined field19_0x2b;
-    undefined field20_0x2c;
-    undefined field21_0x2d;
-    undefined field22_0x2e;
-    undefined field23_0x2f;
-    undefined4 field24_0x30;
+struct nnsi_gfd_lnk_vram_block {
+    uint32_t addr;
+    uint32_t sz_bytes;
+    struct nnsi_gfd_lnk_vram_block* blk_prev_ptr;
+    struct nnsi_gfd_lnk_vram_block* blk_next_ptr;
+};
+ASSERT_SIZE(struct nnsi_gfd_lnk_vram_block, 16);
+
+struct snd_binary_block_file_header {
+    uint32_t kind;
+    uint32_t size;
+};
+ASSERT_SIZE(struct snd_binary_block_file_header, 8);
+
+struct snd_bin_block_file_header {
+    uint32_t kind;
+    uint32_t size;
+};
+ASSERT_SIZE(struct snd_bin_block_file_header, 8);
+
+struct nns_snd_arc_info {
+    struct snd_bin_block_file_header block_header;
+    uint32_t seq_offset;
+    uint32_t seq_arc_offset;
+    uint32_t bank_offset;
+    uint32_t wave_arc_offset;
+    uint32_t player_info_offset;
+    uint32_t group_info_offset;
+    uint32_t strm_player_info_offset;
+    uint32_t strm_offset;
+};
+ASSERT_SIZE(struct nns_snd_arc_info, 40);
+
+struct nns_snd_strm_handle {
+    void* player; // NNSSndStrmPlayer
+};
+ASSERT_SIZE(struct nns_snd_strm_handle, 4);
+
+struct nns_snd_seq_handle {
+    void* player;
+};
+ASSERT_SIZE(struct nns_snd_seq_handle, 4);
+
+struct snd_binary_file_header {
+    char signature[4];
+    uint16_t byte_order;
+    uint16_t version;
+    uint32_t file_size;
+    uint16_t header_size;
+    uint16_t data_blocks;
+};
+ASSERT_SIZE(struct snd_binary_file_header, 16);
+
+struct nns_snd_arc_header {
+    struct snd_binary_file_header file_header;
+    uint32_t symbol_data_offset;
+    uint32_t symbol_data_size;
+    uint32_t info_offset;
+    uint32_t info_size;
+    uint32_t fat_offset;
+    uint32_t fat_size;
+    uint32_t file_image_offset;
+    uint32_t file_image_size;
+};
+ASSERT_SIZE(struct nns_snd_arc_header, 48);
+
+struct nns_snd_arc_file_info {
+    uint32_t offset;
+    uint32_t size;
+    void* mem;
+    uint32_t reserved;
+};
+ASSERT_SIZE(struct nns_snd_arc_file_info, 16);
+
+struct nns_snd_arc_fat {
+    struct snd_binary_block_file_header block_header;
+    uint32_t count;
+    struct nns_snd_arc_file_info files[0];
+};
+// No ASSERT_SIZE, this expands as files are added!
+
+struct nns_snd_arc_symbol {
+    struct snd_bin_block_file_header block_header;
+    uint32_t seq_offset;
+    uint32_t seq_arc_offset;
+    uint32_t bank_offset;
+    uint32_t wave_arc_offset;
+    uint32_t player_info_offset;
+    uint32_t group_info_offset;
+    uint32_t strm_player_info_offset;
+    uint32_t strm_offset;
+};
+ASSERT_SIZE(struct nns_snd_arc_symbol, 40);
+
+struct nns_snd_arc {
+    struct nns_snd_arc_header header;
+    bool file_open;
+    undefined field0_0x31;
+    undefined field1_0x32;
+    undefined field2_0x33;
     struct fs_file file;
     struct fs_file_id file_id;
-    int field27_0x84;
-    int field28_0x88;
-    void* file_data;
+    struct nns_snd_arc_fat* fat;
+    struct nns_snd_arc_symbol* symbol;
+    struct nns_snd_arc_info* info;
 };
+ASSERT_SIZE(struct nns_snd_arc, 144);
 
 struct audio_engine {
-    void* unk_heap_size_0x64000;
-    void* unk_heap_size_0x30000;
-    void* unk_heap_size_0xc000;
-    struct unk_audio_engine_substruct_1 unk_0x1ac_substruct;
-    void* unk_processed_struct_0x64000;
-    void* unk_processed_struct_0x30000;
-    void* unk_processed_struct_0xc000;
-    void* field7_0xa8;
-    void* field8_0xac;
-    void* field9_0xb0;
-    void* field10_0xb4;
-    void* field11_0xb8;
-    void* field12_0xbc;
-    void* field13_0xc0;
-    uint32_t unk_settings_var_field_0xc4;
-    uint32_t field15_0xc8;
+    void* unk_heap_1_ptr;       // Size 0x64000
+    void* unk_heap_2_ptr;       // Size 0x30000
+    void* strm_buffer_heap_ptr; // Size 0xc000
+    struct nns_snd_arc snd_archive;
+    void* unk_heap_1_handle_ptr;
+    void* unk_heap_2_handle_ptr;
+    void* strm_buffer_heap_handle_ptr;
+    struct nns_snd_strm_handle snd_strm_handle_table[2];
+    struct nns_snd_seq_handle snd_seq_handle_table[5];
+    uint32_t current_arc_group_num;
+    uint32_t next_arc_group_num;
     int unk_settings_var_field_0xcc;
-    uint32_t field17_0xd0;
-    uint32_t field18_0xd4;
+    uint32_t current_seq_num;
+    uint32_t next_seq_num;
     undefined4 field19_0xd8;
     undefined4 field20_0xdc;
     undefined4 field21_0xe0;
@@ -100,7 +170,7 @@ struct audio_engine {
     undefined field62_0x121;
     undefined field63_0x122;
     undefined field64_0x123;
-    void* unk_struct_off_0x124; // Seems related to sfx!
+    void* unk_struct_off_0x124;
     undefined field66_0x128;
     undefined field67_0x129;
     undefined field68_0x12a;
@@ -221,12 +291,13 @@ struct audio_engine {
     undefined field183_0x19d;
     undefined field184_0x19e;
     undefined field185_0x19f;
-    int field186_0x1a0;
+    int seq_3_volume;
     undefined field187_0x1a4;
     undefined field188_0x1a5;
     undefined field189_0x1a6;
     undefined field190_0x1a7;
-    undefined4 field191_0x1a8;
+    int unk_heap_1_state;
 };
+ASSERT_SIZE(struct audio_engine, 428);
 
 #endif

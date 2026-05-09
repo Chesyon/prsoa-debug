@@ -17,6 +17,7 @@ overlay2:
     The scene class is named "Battle To Field" internally.
   functions:
     - name: PostprocessBattleResults
+#      namespace: c_battle_to_field_scene
       address:
         NA: 0x211C9E0
       description: |-
@@ -24,6 +25,7 @@ overlay2:
         
         r0: ov_00_unk_struct pointer
     - name: ChooseReturnOverlayId
+#      namespace: c_battle_to_field_scene
       address:
         NA: 0x211D08C
       description: |-
@@ -31,6 +33,7 @@ overlay2:
         
         r0: ov_00_unk_struct pointer
     - name: ret_0211d124
+#      namespace: c_battle_to_field_scene
       address:
         NA: 0x211D124
       description: |-
@@ -38,6 +41,7 @@ overlay2:
         
         No params.
     - name: ret_0211d128
+#      namespace: c_battle_to_field_scene
       address:
         NA: 0x211D128
       description: |-
@@ -45,6 +49,7 @@ overlay2:
         
         No params.
     - name: ret_0211d12c
+#      namespace: c_battle_to_field_scene
       address:
         NA: 0x211D12C
       description: |-
@@ -52,6 +57,7 @@ overlay2:
         
         No params.
     - name: ret_0211d130
+#      namespace: c_battle_to_field_scene
       address:
         NA: 0x211D130
       description: |-
@@ -59,6 +65,7 @@ overlay2:
         
         No params.
     - name: ret_0211d134
+#      namespace: c_battle_to_field_scene
       address:
         NA: 0x211D134
       description: |-
@@ -66,6 +73,7 @@ overlay2:
         
         No params.
     - name: ret_0211d138
+#      namespace: c_battle_to_field_scene
       address:
         NA: 0x211D138
       description: |-
@@ -73,6 +81,7 @@ overlay2:
         
         No params.
     - name: ov_02_return_0x5
+#      namespace: c_battle_to_field_scene
       address:
         NA: 0x211D13C
       description: |-

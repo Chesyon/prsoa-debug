@@ -24,6 +24,7 @@ overlay26:
         
         r0: ov_26_unk_struct pointer
     - name: ret_0211cf10
+#      namespace: c_suite_picture_scene
       address:
         NA: 0x211CF10
       description: |-

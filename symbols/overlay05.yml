@@ -25,6 +25,7 @@ overlay5:
         r0: ov_05_unk_struct pointer
         r1: megastruct pointer
     - name: ret_0211ce0c
+#      namespace: c_styler_scene
       address:
         NA: 0x211CE0C
       description: |-
@@ -32,6 +33,7 @@ overlay5:
         
         No params.
     - name: ret_0211ead4
+#      namespace: c_styler_upper_screen
       address:
         NA: 0x211EAD4
       description: |-
@@ -39,6 +41,7 @@ overlay5:
         
         No params.
     - name: ret_0211ead8
+#      namespace: c_styler_upper_screen
       address:
         NA: 0x211EAD8
       description: |-
@@ -46,6 +49,7 @@ overlay5:
         
         No params.
     - name: ret_0211eadc
+#      namespace: c_styler_upper_screen
       address:
         NA: 0x211EADC
       description: |-
@@ -53,6 +57,7 @@ overlay5:
         
         No params.
     - name: ret_0211eae0
+#      namespace: c_styler_screen
       address:
         NA: 0x211EAE0
       description: |-
@@ -67,6 +72,7 @@ overlay5:
         
         No params.
     - name: ret_0211f550
+#      namespace: c_styler_status_screen
       address:
         NA: 0x211F550
       description: |-
@@ -74,6 +80,7 @@ overlay5:
         
         No params.
     - name: ret_0211f554
+#      namespace: c_styler_status_screen
       address:
         NA: 0x211F554
       description: |-
@@ -81,6 +88,7 @@ overlay5:
         
         No params.
     - name: ret_02120240
+#      namespace: c_styler_parts_screen
       address:
         NA: 0x2120240
       description: |-
@@ -88,6 +96,7 @@ overlay5:
         
         No params.
     - name: ret_02120244
+#      namespace: c_styler_parts_screen
       address:
         NA: 0x2120244
       description: |-

@@ -24,6 +24,7 @@ overlay27:
         
         r0: ov_27_unk_struct pointer
     - name: ret_0211cbf8
+#      namespace: c_quest_list_screen_base
       address:
         NA: 0x211CBF8
       description: |-
@@ -31,6 +32,7 @@ overlay27:
         
         No params.
     - name: ret_0211ceb0
+#      namespace: c_quest_list_screen_base
       address:
         NA: 0x211CEB0
       description: |-
@@ -38,6 +40,7 @@ overlay27:
         
         No params.
     - name: ret_0211e128
+#      namespace: c_quest_list_screen
       address:
         NA: 0x211E128
       description: |-
@@ -45,6 +48,7 @@ overlay27:
         
         No params.
     - name: ret_0211e12c
+#      namespace: c_quest_list_screen
       address:
         NA: 0x211E12C
       description: |-
@@ -52,6 +56,7 @@ overlay27:
         
         No params.
     - name: ret_0211e200
+#      namespace: c_quest_list_screen
       address:
         NA: 0x211E200
       description: |-
@@ -59,12 +64,20 @@ overlay27:
         
         No params.
     - name: ret_0211e250
+#      namespace: c_quest_list_screen_base
       address:
         NA: 0x211E250
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
+    - name: Ov27WipeMsgWrapper
+      address:
+        NA: 0x211FA5C
+      description: |-
+        Seems to reset a msg_wrapper struct such that it can be filled again?
+        
+        r0: msg_wrapper ptr.
     - name: FillQuestInfoMessageWrapper
       address:
         NA: 0x211FA84
@@ -89,6 +102,7 @@ overlay27:
         
         No params.
     - name: ret_02121078
+#      namespace: c_quest_list_map_screen
       address:
         NA: 0x2121078
       description: |-

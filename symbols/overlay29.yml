@@ -15,13 +15,23 @@ overlay29:
     This overlay is entirely missing from the JP release, for some reason. It's possible the code here is instead somewhere else (like arm9), but more research is needed.
   functions:
     - name: ret_0211c9e8
+#      namespace: c_card_access_error_scene
       address:
         NA: 0x211C9E8
       description: |-
-        Does nothing but return. Likely a debug hook for a nearby function.
+        Does nothing but return.
+        
+        No params.
+    - name: InitGraphicsOv29
+#      namespace: c_card_access_error_scene
+      address:
+        NA: 0x211C9EC
+      description: |-
+        Seems to handle initializing graphics for the overlay.
         
         No params.
     - name: PrintCartErrorMsg
+#      namespace: c_card_access_error_scene
       address:
         NA: 0x211CB54
       description: |-

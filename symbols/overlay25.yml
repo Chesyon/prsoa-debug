@@ -24,6 +24,7 @@ overlay25:
         
         r0: ov_25_unk_struct pointer
     - name: ret_0211ceec
+#      namespace: c_staffroll_scene
       address:
         NA: 0x211CEEC
       description: |-

@@ -14,9 +14,12 @@
 #include "file.h"
 #include "flying_menu.h"
 #include "glossary.h"
+#include "graphics.h"
+#include "inputs.h"
 #include "pokemon_and_followers.h"
 #include "settings_and_variables.h"
 #include "styler.h"
+#include "wifi.h"
 // Requires some of the above dependencies
 #include "audio.h"
 #include "field_data.h"
@@ -35,6 +38,9 @@
 
 // Requires ranger_data.h
 #include "save.h"
+
+// Requires save.h (for now...)
+#include "ranger_net.h"
 
 // Requires megastruct.h
 #include "battle.h"

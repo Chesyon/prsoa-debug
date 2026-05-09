@@ -24,6 +24,14 @@ overlay7:
         
         r0: ov_07_unk_struct pointer
         r1: megastruct pointer
+    - name: InitGraphicsOv7
+#      namespace: c_release_scene
+      address:
+        NA: 0x211CADC
+      description: |-
+        Seems to handle initializing everything graphics-related for the overlay.
+        
+        No params.
     - name: ret_0211cfb0
       address:
         NA: 0x211CFB0
@@ -31,6 +39,20 @@ overlay7:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
+    - name: StateCaseFunctionOv7Type1
+      address:
+        NA: 0x211D054
+      description: |-
+        Seems to be a state case function, likely run every frame, to manage menus and such in the overlay.
+        
+        r0: ov_07_unk_struct_size_0x280 ptr
+    - name: StateCaseFunctionOv7Type2
+      address:
+        NA: 0x211D38C
+      description: |-
+        Seems to be a state case function, likely run every frame, to manage menus and such in the overlay.
+        
+        r0: ov_07_unk_struct_size_0x280 ptr
     - name: IsOverPartyPokemonLimit
       address:
         NA: 0x211EFE4

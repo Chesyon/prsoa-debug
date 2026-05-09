@@ -1,15 +1,17 @@
 #ifndef HEADERS_FUNCTIONS_OVERLAY00_H_
 #define HEADERS_FUNCTIONS_OVERLAY00_H_
-struct ov_00_unk_struct* Overlay0EntryPoint(struct ov_00_unk_struct* param_1,
-                                            struct megastruct* param_2);
+struct c_field_scene* CFieldSceneConstructor(struct c_field_scene* this,
+                                             struct megastruct* param_2);
+struct c_field_scene* CFieldSceneCompleteDestructor(struct c_field_scene* param_1);
+struct c_field_scene* CFieldSceneDeletingDestructor(struct c_field_scene* param_1);
 void ret_0211e958(void);
-void AddEnemyFormToEncounterType2(struct ov_00_unk_struct* param_1, undefined4 param_2,
-                                  undefined4 param_3, undefined4 param_4);
+void AddEnemyFormToEncounterType2(struct c_field_scene* param_1, unsigned int param_2, int param_3,
+                                  unsigned int param_4);
 void Overlay00PreEntryPoint(undefined4 param_1, struct megastruct* param_2, undefined4 param_3,
                             undefined4 param_4);
-void OpenAndInitMapScriptFile(struct unk_map_struct_size_0x80* param_1, int param_2);
+void OpenAndInitMapScriptFile(struct unk_struct_size_0x80* param_1, int param_2);
 void ret_02125334(void);
-undefined4 MaybeOpenAndInitMapDatAndTexFiles(struct unk_map_struct_size_0x80* param_1,
+undefined4 MaybeOpenAndInitMapDatAndTexFiles(struct unk_struct_size_0x80* param_1,
                                              undefined4 param_2, char* param_3, int param_4);
 void ret_021266ac(void);
 void ret_021266b0(void);
@@ -48,20 +50,44 @@ void ret_02147ffc(void);
 void ret_021480cc(void);
 void ret_021485c0(void);
 void ret_021485c4(void);
+void SetSysCallPage10(void);
+undefined4 SysCallReturnZero1000(void);
 void ret_02149118(void);
 void ret_0214911c(void);
+void SetSysCallPage11(void);
+undefined4 SysCallReturnZero1100(void);
 void ret_02149984(void);
 void ret_02149988(void);
+void SetSysCallPage12(void);
+undefined4 SysCallReturnZero1200(void);
 void ret_02149a74(void);
 void ret_02149a78(void);
+void SetSysCallPage13(void);
+undefined4 SysCallReturnZero1300(void);
 void ret_02149e58(void);
 void ret_02149e5c(void);
+void SetSysCallPage14(void);
+undefined4 SysCallReturnZero1400(void);
+undefined4 SysCallMaybeCallsScriptFunctionByName(undefined4* param_1, int param_2);
+undefined4 SysCallInitCombatType2(undefined4* param_1, int param_2);
 undefined4 TryMountPokemon(struct pokemon_data* param_1);
+unsigned int SysCallRetrievePokemonByFormId(int* param_1);
+struct room_id_16 SysCallGetFlyDestinationRoom(void);
+int16_t SysCallGetFlyXCoord(void);
+int16_t SysCallGetFlyYCoord(void);
 void ret_0214b6f0(void);
 void ret_0214b6f4(void);
+void SetSysCallPage16(void);
+undefined4 SysCallReturnZero1600(void);
 void ret_0214b93c(void);
 void ret_0214b940(void);
-undefined GetStylerLevel(void);
+void SetSysCallPage15(void);
+undefined4 SysCallReturnZero1500(void);
+undefined4 SysCallReturnZero1501(void);
+undefined4 SysCallReturnZero1502(void);
+undefined4 SysCallReturnZero1503(void);
+undefined4 SysCallReturnZero1504(void);
+int8_t GetStylerLevel(void);
 bool GetPartner1Status(void);
 void SetPartner1Status(bool param_1);
 bool GetPartner2Status(void);
@@ -102,7 +128,7 @@ undefined* DebugGrabFileNameAndMsgId(void);
 void DebugPrintAllScriptVars(void);
 undefined* DebugPrintPartnerPokemonPokeAssists(int param_1, undefined4 param_2, undefined4 param_3,
                                                undefined4 param_4);
-long long GetCaptureLineLenRecordSimple(void);
+int64_t GetCaptureLineLenRecordSimple(void);
 void SetCaptureLineLenRecordSimple(int param_1);
 int32_t GetNumLoopsRecordSimple(void);
 void SetNumLoopsRecordSimple(undefined4 param_1);
@@ -112,7 +138,7 @@ int16_t GetPokemonFledRecordSimple(void);
 void SetPokemonFledRecordSimple(undefined2 param_1);
 int16_t GetPokeAssistsUsedRecordSimple(void);
 void SetPokeAssistsUsedSimple(undefined2 param_1);
-int32_t GetMaxPlayTimeSeconds(void);
+int GetMaxPlayTimeSeconds(void);
 int32_t GetCurrentPartnerPokemonPokeAssists(void);
 void ret_0215061c(void);
 void ret_02150620(void);
@@ -147,7 +173,7 @@ void ret_0215f854(void);
 void ret_0215f858(void);
 void ret_021603a8(void);
 void ret_021603ac(void);
-int32_t MaybeOpenAndInitEffectScriptFile(void* param_1, int32_t param_2);
+int MaybeOpenAndInitEffectScriptFile(int param_1, int param_2);
 void ret_02163cf4(void);
 void ret_02163cf8(void);
 void ret_02165868(void);

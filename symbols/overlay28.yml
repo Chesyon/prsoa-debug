@@ -25,6 +25,7 @@ overlay28:
         r0: ov_28_unk_struct pointer
         r1: megastruct pointer
     - name: ret_0211cc8c
+#      namespace: c_map_disp_scene
       address:
         NA: 0x211CC8C
       description: |-

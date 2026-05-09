@@ -13,9 +13,9 @@ arm9:
     JP: 0x8FC18
   description: |-
     The main ARM9 binary.
-    
+        
     This is the main binary that gets loaded when the game is launched, and contains the core code that runs the game, low level facilities such as memory allocation, compression, other external dependencies (such as linked libraries), and the functions and tables necessary to load overlays and dispatch execution to them.
-    
+        
     Speaking generally, this is the program run by the Nintendo DS's main ARM946E-S CPU, which handles all gameplay mechanisms and graphics rendering.
   functions:
     - name: _start
@@ -57,21 +57,36 @@ arm9:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
-    - name: MaybeMemAlloc
+    - name: OperatorNew
       address:
-        NA:
-          - 0x2001458
-          - 0x2002258
+        NA: 0x2001458
       description: |-
-        Seems to allocate memory, returning a pointer to the newly allocated memory.
+        Replacement for the global C++ memory allocation function: `void* operator new(std::size_t size);`
+        Returns a pointer to the allocated memory.
         
-        r0: num bytes to allocate
-        return: pointer to allocated memory
-    - name: MaybeMemFreeVeneer
+        r0: number of bytes to allocate
+    - name: OperatorNewArray
       address:
-        NA:
-          - 0x2001470
-          - 0x200147C
+        NA: 0x2001464
+      description: |-
+        Replacement for the global C++ memory allocation function: `void* operator new[](std::size_t size);`
+        Returns a pointer to the allocated memory.
+        
+        r0: number of bytes to allocate
+    - name: OperatorDelete
+      address:
+        NA: 0x2001470
+      description: |-
+        Replacement for the global C++ memory deallocation function: `void operator delete(void* ptr);`
+        
+        r0: pointer to a memory block to deallocate
+    - name: OperatorDeleteArray
+      address:
+        NA: 0x200147C
+      description: |-
+        Replacement for the global C++ memory deallocation function: `void operator delete[](void* ptr);`
+        
+        r0: pointer to a memory block to deallocate
     - name: LoadOverlay
       address:
         NA: 0x2001488
@@ -80,15 +95,15 @@ arm9:
         
         r0: Overlay number
         r1: Some bool, skips certain code if false
-    - name: SetGameState
+    - name: Scene_LoadById
       address:
         NA: 0x2001568
       description: |-
-        Called when changing the game state. Always tries to load an overlay, and usually ends up calling the entrypoint function for that overlay afterwards.
+        Called when changing the game state. Always tries to load an overlay, and usually ends up callin g
+        the entrypoint function for that overlay afterwards.
         
         r0: New game state
         r1: megastruct ptr
-        return: Unknown pointer
     - name: InitControllerInputs
       address:
         NA: 0x2001C04
@@ -96,11 +111,19 @@ arm9:
         Seems to initialize what we believe to be the struct that stores player inputs.
         
         r0: controller_inputs pointer
-    - name: MaybeMemAllocVeneer
+    - name: UpdateControllerInputs
+      address:
+        NA: 0x2001C20
+      description: |-
+        Seems to be responsible for actually writing the player button inputs to a controller_inputs struct.
+        
+        r0: controller_inputs pointer
+    - name: OperatorNewVeneer
       address:
         NA:
           - 0x2001D28
           - 0x200203C
+          - 0x20101A8
       description: |-
         Seems to allocate memory, returning a pointer to the newly allocated memory.
         
@@ -120,12 +143,21 @@ arm9:
         
         r0: touch_screen pointer
     - name: ret_02001eb4
+      #namespace: c_touch_panel
       address:
         NA: 0x2001EB4
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
+    - name: TouchScreenDestructor
+      #namespace: c_touch_panel
+      address:
+        NA: 0x2001EB8
+      description: |-
+        Frees a touch_screen struct from memory.
+        
+        r0: touch_screen pointer
     - name: ret_02001ecc
       address:
         NA: 0x2001ECC
@@ -133,6 +165,13 @@ arm9:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
+    - name: Heap_FreeSecondaryVeneer
+      address:
+        NA: 0x2002048
+      description: |-
+        Class-specific overload for the global C++ memory deallocation function: `void CTouchPanel::operator delete(void* ptr);`
+        
+        r0: pointer to a memory block to deallocate
     - name: InitTouchScreenWrapperOuter
       address:
         NA: 0x2002054
@@ -140,13 +179,86 @@ arm9:
         Seems to partially initialize a touch_screen_wrapper struct in tandem with InitTouchScreenWrapper.
         
         r0: touch_screen_wrapper pointer
-    - name: MaybeMemFree
+    - name: TouchScreenWrapperDestructor
+      #namespace: c_tp_emulator
+      address:
+        NA: 0x2002088
+      description: |-
+        Frees a touch_screen_wrapper struct from memory.
+        
+        r0: touch_screen_wrapper pointer
+    - name: Heap_Init
+      address:
+        NA: 0x20021C8
+      description: |-
+        Initializes the primary and secondary heaps.
+        
+        r0: size of the secondary heap
+    - name: Heap_Alloc
+      address:
+        NA: 0x2002258
+      description: |-
+        Allocates memory on the primary or overlay-specific heap.
+        
+        r0: number of bytes to allocate
+    - name: Heap_AllocWithAlignment
+      address:
+        NA: 0x20022A4
+      description: |-
+        Allocates memory on the primary or overlay-specific heap, with the specified alignment.
+        
+        r0: number of bytes to allocate
+        r1: alignment to use
+    - name: Heap_Free
       address:
         NA: 0x20022F4
       description: |-
-        Seems like it might deallocate memory?
+        Deallocates memory on the primary or overlay-specific heap.
         
-        r0: pointer to memory to deallocate?
+        r0: pointer to a memory block to deallocate
+    - name: Heap_GetMainHandle
+      address:
+        NA: 0x2002330
+      description: |-
+        Returns a handle to the primary heap.
+        
+        No params.
+    - name: Heap_AllocSecondary
+      address:
+        NA: 0x200233C
+      description: |-
+        Allocates memory on the secondary heap.
+        
+        r0: number of bytes to allocate
+    - name: Heap_FreeSecondary
+      address:
+        NA: 0x200235C
+      description: |-
+        Deallocates memory on the secondary heap.
+        
+        r0: pointer to a memory block to deallocate
+    - name: Heap_GetSecondaryHandle
+      address:
+        NA: 0x2002378
+      description: |-
+        Returns a handle to the secondary heap.
+        
+        No params.
+    - name: Heap_InitOverlay
+      address:
+        NA: 0x2002384
+      description: |-
+        Initializes the overlay-specific heap.
+        
+        r0: pointer to where the heap starts
+        r1: size of the heap
+    - name: Heap_DestroyOverlay
+      address:
+        NA: 0x20023C0
+      description: |-
+        Destroys the overlay-specific heap.
+        
+        No params.
     - name: InitFileArchiveWrapper
       address:
         NA: 0x2002AEC
@@ -179,22 +291,88 @@ arm9:
         Seems to be the higher level equivalent of FS_ConvertFilePathToId.
         
         r0: file path
-    - name: GetMsgLangSuffix
+    - name: GetMesLangSuffix
       address:
         NA: 0x2003124
       description: |-
         Retrieves the correct file suffix for the respective language. Presumed to interact with the megastruct in EU.
         
         No params.
-    - name: InitFileWrapperWithLangSuffix
+    - name: InitFileWrapperMes
       address:
         NA: 0x200313C
       description: |-
-        Seems to initialize a file_wrapper struct, properly handling file opening and closing.
+        Seems to initialize a file_wrapper struct for a .mes file, properly handling file opening and closing.
         Will append the correct language suffix to the file name.
         r0: file_wrapper pointer
         r1: file name
         r2: int32_t
+    - name: InitFileWrapperNcer
+      address:
+        NA: 0x20031E8
+      description: |-
+        Seems to initialize a file_wrapper struct for a .NCER file, properly handling file opening and closing.
+        
+        r0: file_wrapper pointer
+        r1: file name
+        r2: int 
+        r3: undefined4 
+        stack[0]: int 
+    - name: InitFileWrapperNcgr
+      address:
+        NA: 0x20032CC
+      description: |-
+        Seems to initialize a file_wrapper struct for a .NCGR file, properly handling file opening and closing.
+        
+        r0: file_wrapper pointer
+        r1: file name
+        r2: int 
+        r3: undefined4 
+        stack[0]: int 
+    - name: InitFileWrapperNclr
+      address:
+        NA: 0x20033B0
+      description: |-
+        Seems to initialize a file_wrapper struct for a .NCLR file, properly handling file opening and closing.
+        
+        r0: file_wrapper pointer
+        r1: file name
+        r2: int 
+        r3: undefined4 
+        stack[0]: int 
+    - name: InitFileWrapperNscr
+      address:
+        NA: 0x2003494
+      description: |-
+        Seems to initialize a file_wrapper struct for a .NSCR file, properly handling file opening and closing.
+        
+        r0: file_wrapper pointer
+        r1: file name
+        r2: int 
+        r3: undefined4 
+        stack[0]: int 
+    - name: InitFileWrapperNanr
+      address:
+        NA: 0x2003578
+      description: |-
+        Seems to initialize a file_wrapper struct for a .NANR file, properly handling file opening and closing.
+        
+        r0: file_wrapper pointer
+        r1: file name
+        r2: int 
+        r3: undefined4 
+        stack[0]: int 
+    - name: InitFileWrapperBgNcgr
+      address:
+        NA: 0x200365C
+      description: |-
+        Seems to initialize a file_wrapper struct for a .BGNCGR file, properly handling file opening and closing.
+        
+        r0: file_wrapper pointer
+        r1: file name
+        r2: int 
+        r3: undefined4 
+        stack[0]: int 
     - name: ret_0200372c
       address:
         NA: 0x200372C
@@ -203,6 +381,7 @@ arm9:
         
         No params.
     - name: ret_0200396c
+      #namespace: c_primitive
       address:
         NA: 0x200396C
       description: |-
@@ -216,7 +395,15 @@ arm9:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
+    - name: StoreCSceneVfTable
+      address:
+        NA: 0x2007C98
+      description: |-
+        Seems to write a pointer to C_SCENE_VFTABLE_FUNCS.
+        
+        r0: destination pointer
     - name: ret_02007ca8
+      #namespace: c_scene
       address:
         NA: 0x2007CA8
       description: |-
@@ -1097,6 +1284,7 @@ arm9:
         
         r0: battle_exports pointer
     - name: ret_02010cec
+      #namespace: c_battle_result_parameter
       address:
         NA: 0x2010CEC
       description: |-
@@ -1945,6 +2133,7 @@ arm9:
         r0: settings_and_variables pointer
         r1: index
     - name: ret_0201a40c
+      #namespace: c_player_hp_gauge
       address:
         NA: 0x201A40C
       description: |-
@@ -2008,8 +2197,41 @@ arm9:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
-        r1: int32_t
+    - name: CBackupConstructor
+      address:
+        NA: 0x2027CC8
+      description: |-
+        Constructor of the CBackup class.
+        
+        r0: c_backup pointer
+    - name: CBackupCompleteDestructor
+      #namespace: c_backup
+      address:
+        NA: 0x2027CF0
+      description: |-
+        Destructor of the CBackup class.
+        This is a complete object destructor.
+        
+        r0: c_backup pointer
+    - name: CBackupDeletingDestructor
+      #namespace: c_backup
+      address:
+        NA: 0x2027D04
+      description: |-
+        Destructor of the CBackup class.
+        This is a deleting destructor.
+        
+        r0: c_backup pointer
+    - name: InitUnkSaveStruct0x74
+      address:
+        NA: 0x2027FE8
+      description: |-
+        Seems to initialize an unk_save_struct_0x74 struct. More research needed.
+        
+        r0: unk_save_struct_0x74 ptr
+        r1: unknown
     - name: ret_02029778
+      #namespace: c_effect_actor_data
       address:
         NA: 0x2029778
       description: |-
@@ -2022,8 +2244,57 @@ arm9:
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
         
-        
         No params.
+    - name: CBackupBaseConstructor
+      address:
+        NA: 0x202B5D0
+      description: |-
+        Constructor of the CBackupBase class.
+        
+        r0: c_backup_base pointer
+    - name: CBackupBaseCompleteDestructor
+      #namespace: c_backup_base
+      address:
+        NA: 0x202B5F4
+      description: |-
+        Destructor of the CBackupBase class.
+        This is a complete object destructor.
+        
+        r0: c_backup_base pointer
+    - name: CBackupBaseDeletingDestructor
+      #namespace: c_backup_base
+      address:
+        NA: 0x202B61C
+      description: |-
+        Destructor of the CBackupBase class.
+        This is a deleting destructor.
+        
+        r0: c_backup_base pointer
+    - name: CBackupSyncConstructor
+      address:
+        NA: 0x202B8A4
+      description: |-
+        Constructor of the CBackupSync class.
+        
+        r0: c_backup_sync pointer
+    - name: CBackupSyncCompleteDestructor
+      #namespace: c_backup_sync
+      address:
+        NA: 0x202B8D8
+      description: |-
+        Destructor of the CBackupSync class.
+        This is a complete object destructor.
+        
+        r0: c_backup_sync pointer
+    - name: CBackupSyncDeletingDestructor
+      #namespace: c_backup_sync
+      address:
+        NA: 0x202B8EC
+      description: |-
+        Destructor of the CBackupSync class.
+        This is a deleting destructor.
+        
+        r0: c_backup_sync pointer
     - name: SysCallReturnZero2353
       address:
         NA: 0x202BEA0
@@ -2117,6 +2388,7 @@ arm9:
         
         r0: script stack pointer, interpreted as params.
     - name: ret_0202d394
+      #namespace: c_field_actor
       address:
         NA: 0x202D394
       description: |-
@@ -2680,6 +2952,7 @@ arm9:
         
         r0: script stack pointer, interpreted as params.
     - name: ret_02032a44
+      #namespace: c_field_actor
       address:
         NA: 0x2032A44
       description: |-
@@ -2687,6 +2960,7 @@ arm9:
         
         No params.
     - name: ret_0203331c
+      #namespace: c_field_effect
       address:
         NA: 0x203331C
       description: |-
@@ -2694,6 +2968,7 @@ arm9:
         
         No params.
     - name: ret_02033388
+      #namespace: c_field_effect
       address:
         NA: 0x2033388
       description: |-
@@ -2701,6 +2976,7 @@ arm9:
         
         No params.
     - name: ret_020333d8
+      #namespace: c_field_effect
       address:
         NA: 0x20333D8
       description: |-
@@ -2708,6 +2984,7 @@ arm9:
         
         No params.
     - name: ret_02033440
+      #namespace: c_field_effect
       address:
         NA: 0x2033440
       description: |-
@@ -2715,6 +2992,7 @@ arm9:
         
         No params.
     - name: ret_0203365c
+      #namespace: c_field_effect
       address:
         NA: 0x203365C
       description: |-
@@ -2996,6 +3274,45 @@ arm9:
         Initializes the audio_engine struct. More research needed.
         
         r0: audio_engine pointer
+    - name: Nns_SndMainVeneer
+      address:
+        NA: 0x203459C
+    - name: AudioEngineClearUnkHeap2
+      address:
+        NA: 0x20345A8
+      description: |-
+        Clears unk_heap_2 of a specified audio_engine struct.
+        
+        r0: audio_engine pointer
+    - name: AudioEngineClearUnkHeap1
+      address:
+        NA: 0x20345B8
+      description: |-
+        Clears unk_heap_1 of a specified audio_engine struct.
+        
+        r0: audio_engine pointer
+    - name: MaybeLoadNextSequencedTrack
+      address:
+        NA: 0x2034954
+      description: |-
+        Seems to possibly load the next sequenced in-game audio track?
+        
+        r0: audio_engine pointer
+    - name: AudioEngineMaybeCheckHeapSizes
+      address:
+        NA: 0x2034EEC
+      description: |-
+        Checks the sizes of all 3 heaps, then seems to do utterly nothing with that information? Maybe the return is wrong.
+        
+        r0: audio_engine pointer
+    - name: SetSeqTrack3Volume
+      address:
+        NA: 0x2034F20
+      description: |-
+        Seems to set the volume of specifically sequenced track 3 of the audio engine.
+        
+        r0: audio_engine pointer
+        r1: int
     - name: IsFormIdPartnerPokemon
       address:
         NA: 0x2034F9C
@@ -3019,6 +3336,7 @@ arm9:
         
         r0: form_id
     - name: ret_020358fc
+      #namespace: c_field_screen_effect_object_base
       address:
         NA: 0x20358FC
       description: |-
@@ -3026,6 +3344,7 @@ arm9:
         
         No params.
     - name: ret_02035fe4
+      #namespace: c_field_screen_effect_object_base
       address:
         NA: 0x2035FE4
       description: |-
@@ -3033,6 +3352,7 @@ arm9:
         
         No params.
     - name: ret_0203e930
+      #namespace: c_field_draw_actor
       address:
         NA: 0x203E930
       description: |-
@@ -3040,6 +3360,7 @@ arm9:
         
         No params.
     - name: ret_0204078c
+      #namespace: c_draw_object
       address:
         NA: 0x204078C
       description: |-
@@ -3047,6 +3368,7 @@ arm9:
         
         No params.
     - name: ret_0204129c
+      #namespace: c_actor_data_partner
       address:
         NA: 0x204129C
       description: |-
@@ -3112,6 +3434,7 @@ arm9:
         r0: field_data pointer
         r1: room_id
     - name: ret_02043124
+      #namespace: c_download_mission_start_scene
       address:
         NA: 0x2043124
       description: |-
@@ -3119,6 +3442,7 @@ arm9:
         
         No params.
     - name: ret_02043128
+      #namespace: c_download_mission_start_scene
       address:
         NA: 0x2043128
       description: |-
@@ -3126,6 +3450,7 @@ arm9:
         
         No params.
     - name: ret_020439c4
+      #namespace: c_download_mission_end_scene
       address:
         NA: 0x20439C4
       description: |-
@@ -3133,6 +3458,7 @@ arm9:
         
         No params.
     - name: ret_020439c8
+      #namespace: c_download_mission_end_scene
       address:
         NA: 0x20439C8
       description: |-
@@ -3140,6 +3466,7 @@ arm9:
         
         No params.
     - name: ret_02044144
+      #namespace: c_download_mission_restart_scene
       address:
         NA: 0x2044144
       description: |-
@@ -3147,12 +3474,16 @@ arm9:
         
         No params.
     - name: ret_02044148
+      #namespace: c_download_mission_restart_scene
       address:
         NA: 0x2044148
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
+    - name: OS_VsNPrintfExStub_Veneer
+      address:
+        NA: 0x20441A0
     - name: ret_020441ac
       address:
         NA: 0x20441AC
@@ -3178,6 +3509,13 @@ arm9:
         
         r0: format
         r1: ap
+    - name: InitLcRngFromTick
+      address:
+        NA: 0x204436C
+      description: |-
+        Initializes the LCRNG state, add, and mult using the current tick, and the add/mult constants.
+        
+        No params.
     - name: SetSysCallPageZero
       address:
         NA: 0x2044440
@@ -3457,6 +3795,171 @@ arm9:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
+    - name: Crypto_RC4FastInit
+      address:
+        NA: 0x2046D5C
+    - name: Crypto_RC4Init
+      address:
+        NA: 0x2046DF4
+    - name: Crypto_RC4FastEncrypt
+      address:
+        NA: 0x2046E84
+    - name: Crypto_RC4Encrypt
+      address:
+        NA: 0x2047060
+    - name: Socl_Startup
+      address:
+        NA: 0x20470D8
+    - name: Socli_StartupSocl
+      address:
+        NA: 0x2047114
+    - name: Socli_StartupCps
+      address:
+        NA: 0x2047154
+    - name: Socli_SetMyIP
+      address:
+        NA: 0x20472B0
+    - name: Socl_LinkIsOn
+      address:
+        NA: 0x2047334
+    - name: Socli_StartupCommandPacketQueue
+      address:
+        NA: 0x204734C
+    - name: Socli_CleanupCommandPacketQueue
+      address:
+        NA: 0x20473E0
+    - name: Socli_AllocCommandPacket
+      address:
+        NA: 0x2047428
+    - name: Socli_CreateCommandPacket
+      address:
+        NA: 0x2047450
+    - name: Socli_FreeCommandPacket
+      address:
+        NA: 0x2047490
+    - name: Socli_GetCtrlPipe
+      address:
+        NA: 0x20474B0
+    - name: Socli_SendCommandPacket
+      address:
+        NA: 0x20474C4
+    - name: Socli_SendCommandPacketToCtrlPipe
+      address:
+        NA: 0x2047510
+    - name: Socli_ExecCommandPacket
+      address:
+        NA: 0x2047528
+    - name: Socli_ExecCommandPacketInRecvPipe
+      address:
+        NA: 0x2047598
+    - name: Socli_ExecCommandPacketInSendPipe
+      address:
+        NA: 0x20475A8
+    - name: Socli_ExecCommandPacketInCtrlPipe
+      address:
+        NA: 0x20475B8
+    - name: Socli_CommandPacketHandler
+      address:
+        NA: 0x20475D0
+    - name: Socl_CreateSocket
+      address:
+        NA: 0x2047680
+    - name: Socli_StartupSocket
+      address:
+        NA: 0x2047730
+    - name: Socli_GetSizeSocket
+      address:
+        NA: 0x2047798
+    - name: Socli_GetSizeCommandPipe
+      address:
+        NA: 0x2047818
+    - name: Socli_InitSocket
+      address:
+        NA: 0x2047840
+    - name: Socli_InitSocketBuffer
+      address:
+        NA: 0x204793C
+    - name: Socli_InitCommandPipe
+      address:
+        NA: 0x2047964
+    - name: Socl_Bind
+      address:
+        NA: 0x20479D8
+    - name: Socl_Connect
+      address:
+        NA: 0x2047A48
+    - name: Socli_ExecBindCommand
+      address:
+        NA: 0x2047B30
+    - name: Socli_BindCallBack
+      address:
+        NA: 0x2047B88
+    - name: Socl_ReadFrom
+      address:
+        NA: 0x2047C0C
+    - name: Socli_ReadAndConsumeBuffer
+      address:
+        NA: 0x2047D54
+    - name: Socli_ReadBuffer
+      address:
+        NA: 0x2047DF0
+    - name: Socli_CopyCpsBuffer
+      address:
+        NA: 0x2047E64
+    - name: Socli_ReadCpsBuffer
+      address:
+        NA: 0x2047F6C
+    - name: Socli_ExecReadCommand
+      address:
+        NA: 0x2047FE0
+    - name: Socli_ReadCallBack
+      address:
+        NA: 0x204802C
+    - name: Socli_ConsumeBuffer
+      address:
+        NA: 0x204817C
+    - name: Socli_ConsumeCpsBuffer
+      address:
+        NA: 0x20481D8
+    - name: Socli_ReadUdpBuffer
+      address:
+        NA: 0x2048214
+    - name: Socli_UdpRecvCallback
+      address:
+        NA: 0x2048358
+    - name: Socl_WriteTo
+      address:
+        NA: 0x204846C
+    - name: Socli_WriteBuffer
+      address:
+        NA: 0x2048580
+    - name: Socli_AllocWriteBuffer
+      address:
+        NA: 0x2048684
+    - name: Socli_GetWriteBufferFreeSize
+      address:
+        NA: 0x2048708
+    - name: Socli_ExecWriteCommand
+      address:
+        NA: 0x204872C
+    - name: Socli_WriteCallBack
+      address:
+        NA: 0x20488A0
+    - name: Socli_GetOptimumSendBufLen
+      address:
+        NA: 0x20489D0
+    - name: Socli_MemCpy
+      address:
+        NA: 0x2048A74
+    - name: Socl_Shutdown
+      address:
+        NA: 0x2048B0C
+    - name: Socli_ShutdownCallBack
+      address:
+        NA: 0x2048BB8
+    - name: Socl_IsClosed
+      address:
+        NA: 0x2048BE8
     - name: close
       address:
         NA: 0x2048C1C
@@ -3465,6 +3968,72 @@ arm9:
         
         r0: file descriptor
         return: 0 on success, or a negative value representing an error
+    - name: Socli_CloseCallBack
+      address:
+        NA: 0x2048CEC
+    - name: Socli_CleanupSocket
+      address:
+        NA: 0x2048D84
+    - name: Socli_FreeCommandPipe
+      address:
+        NA: 0x2048E84
+    - name: Socli_TrashSocket
+      address:
+        NA: 0x2048F24
+    - name: Socl_Cleanup
+      address:
+        NA: 0x2048F60
+    - name: Socl_CloseAll
+      address:
+        NA: 0x2049004
+    - name: Socl_CalmDown
+      address:
+        NA: 0x20490AC
+    - name: Socl_Resolve
+      address:
+        NA: 0x2049128
+    - name: Socl_InetAtoH
+      address:
+        NA: 0x20491D8
+    - name: Socl_SetResolver
+      address:
+        NA: 0x2049224
+    - name: Socl_GetHostID
+      address:
+        NA: 0x2049258
+    - name: Socl_GetStatus
+      address:
+        NA: 0x20492C0
+    - name: Socli_GetReadBufferOccpiedSize
+      address:
+        NA: 0x2049390
+    - name: Socli_RoundUp4
+      address:
+        NA: 0x20493D8
+    - name: Socli_SocketRegister
+      address:
+        NA: 0x20493E4
+    - name: Socli_SocketRegisterList
+      address:
+        NA: 0x20493FC
+    - name: Socli_SocketRegisterTrash
+      address:
+        NA: 0x204940C
+    - name: Socli_SocketUnregister
+      address:
+        NA: 0x2049424
+    - name: Socli_SocketGetNextPtr
+      address:
+        NA: 0x2049458
+    - name: Socli_SocketUnregisterTrash
+      address:
+        NA: 0x2049484
+    - name: Socl_SocketIsInvalid
+      address:
+        NA: 0x204949C
+    - name: Socl_SocketIsInTrash
+      address:
+        NA: 0x20494D0
     - name: socket
       address:
         NA: 0x20494F4
@@ -3541,6 +4110,9 @@ arm9:
         stack[0]: target address
         stack[1]: length of target address
         return: number of bytes sent, or a negative value representing an error
+    - name: Soc_Shutdown
+      address:
+        NA: 0x2049704
     - name: CloseVeneer
       address:
         NA: 0x2049710
@@ -3551,6 +4123,48 @@ arm9:
         
         r0: file descriptor
         return: 0 on success, or a negative value representing an error
+    - name: Soc_GetHostID
+      address:
+        NA: 0x204971C
+    - name: Soc_SetResolver
+      address:
+        NA: 0x2049754
+    - name: AllocFunc_Socl
+      address:
+        NA: 0x20497C0
+    - name: FreeFunc_Socl
+      address:
+        NA: 0x20497EC
+    - name: Soc_Startup
+      address:
+        NA: 0x2049818
+    - name: Soc_Cleanup
+      address:
+        NA: 0x204998C
+    - name: Soc_InetAtoN
+      address:
+        NA: 0x2049998
+    - name: Soc_U32to4U8
+      address:
+        NA: 0x20499E8
+    - name: Soc_Poll
+      address:
+        NA: 0x2049A08
+    - name: Socl_EnableSsl
+      address:
+        NA: 0x2049ABC
+    - name: Socli_ExecEnableSslCommand
+      address:
+        NA: 0x2049B3C
+    - name: Socli_EnableSslCallBack
+      address:
+        NA: 0x2049B78
+    - name: reset_network_vars
+      address:
+        NA: 0x2049BDC
+    - name: OS_YieldThread2
+      address:
+        NA: 0x2049CE0
     - name: ret_02049d08
       address:
         NA: 0x2049D08
@@ -3558,6 +4172,921 @@ arm9:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
+    - name: Cps_Startup
+      address:
+        NA: 0x2049D14
+    - name: Cps_CalmDown
+      address:
+        NA: 0x2049F50
+    - name: Cps_SetScavengerCallback
+      address:
+        NA: 0x2049FA0
+    - name: Cps_Cleanup
+      address:
+        NA: 0x2049FB0
+    - name: Cps_SetThreadPriority
+      address:
+        NA: 0x2049FF8
+    - name: calc_checksum_do
+      address:
+        NA: 0x204A030
+    - name: invert_checksum
+      address:
+        NA: 0x204A0E4
+    - name: calc_checksum
+      address:
+        NA: 0x204A100
+    - name: check_tcpudpsum
+      address:
+        NA: 0x204A11C
+    - name: ip_islocal
+      address:
+        NA: 0x204A16C
+    - name: get_targetip
+      address:
+        NA: 0x204A1AC
+    - name: is_broadcast
+      address:
+        NA: 0x204A1D0
+    - name: is_multicast
+      address:
+        NA: 0x204A20C
+    - name: ip_isme
+      address:
+        NA: 0x204A220
+    - name: maccmp
+      address:
+        NA: 0x204A2A0
+    - name: send_packet
+      address:
+        NA: 0x204A2CC
+    - name: put_in_buffer
+      address:
+        NA: 0x204A338
+    - name: Cpsi_RecvCallbackFunc
+      address:
+        NA: 0x204A52C
+    - name: receive_packet
+      address:
+        NA: 0x204A584
+    - name: throw_packet
+      address:
+        NA: 0x204A644
+    - name: inq_arpcache
+      address:
+        NA: 0x204A688
+    - name: send_arprequest
+      address:
+        NA: 0x204A758
+    - name: arprequest
+      address:
+        NA: 0x204A854
+    - name: reg_arpcache
+      address:
+        NA: 0x204A8C4
+    - name: send_ether
+      address:
+        NA: 0x204AA00
+    - name: send_ip_frag
+      address:
+        NA: 0x204AAD0
+    - name: send_ip
+      address:
+        NA: 0x204ABF8
+    - name: send_ping
+      address:
+        NA: 0x204ADF0
+    - name: send_udp
+      address:
+        NA: 0x204AEA0
+    - name: send_tcp
+      address:
+        NA: 0x204AFDC
+    - name: reply_arp
+      address:
+        NA: 0x204B250
+    - name: dispatch_arp
+      address:
+        NA: 0x204B2F8
+    - name: reply_icmp
+      address:
+        NA: 0x204B43C
+    - name: process_icmp_reply
+      address:
+        NA: 0x204B520
+    - name: Valid_IP
+      address:
+        NA: 0x204B620
+    - name: dispatch_icmp
+      address:
+        NA: 0x204B640
+    - name: check_listener
+      address:
+        NA: 0x204B710
+    - name: check_socket
+      address:
+        NA: 0x204B7E4
+    - name: find_socket
+      address:
+        NA: 0x204B898
+    - name: parse_mss
+      address:
+        NA: 0x204B8FC
+    - name: no_need_inq
+      address:
+        NA: 0x204B980
+    - name: tcp_send_handshake
+      address:
+        NA: 0x204B99C
+    - name: tcp_send_ack
+      address:
+        NA: 0x204BA10
+    - name: tcp_send_finack
+      address:
+        NA: 0x204BA24
+    - name: tcp_send_rst
+      address:
+        NA: 0x204BA38
+    - name: Dt_Syn_Listen
+      address:
+        NA: 0x204BB74
+    - name: find_specific_socket
+      address:
+        NA: 0x204BC60
+    - name: dt_syn
+      address:
+        NA: 0x204BCE8
+    - name: dt_synack
+      address:
+        NA: 0x204BDC0
+    - name: dt_ack
+      address:
+        NA: 0x204BEB8
+    - name: dt_fin
+      address:
+        NA: 0x204C1D0
+    - name: dt_rst
+      address:
+        NA: 0x204C29C
+    - name: dispatch_tcp
+      address:
+        NA: 0x204C2D8
+    - name: dispatch_udp
+      address:
+        NA: 0x204C3F8
+    - name: check_frag
+      address:
+        NA: 0x204C604
+    - name: dispatch_ip
+      address:
+        NA: 0x204C8D0
+    - name: tcpip
+      address:
+        NA: 0x204CA94
+    - name: Cps_SocGetEport
+      address:
+        NA: 0x204CB04
+    - name: get_seqno
+      address:
+        NA: 0x204CBAC
+    - name: Cps_SocRegister
+      address:
+        NA: 0x204CBF0
+    - name: Cps_SocUnRegister
+      address:
+        NA: 0x204CC04
+    - name: Cps_SocDatagramMode
+      address:
+        NA: 0x204CC1C
+    - name: Cps_SocBind
+      address:
+        NA: 0x204CC48
+    - name: Cps_SocUse
+      address:
+        NA: 0x204CCA8
+    - name: Cps_SocRelease
+      address:
+        NA: 0x204CCDC
+    - name: Cps_SocDup
+      address:
+        NA: 0x204CCFC
+    - name: Cps_SetUdpCallback
+      address:
+        NA: 0x204CD14
+    - name: Cpsi_TcpConnectRaw
+      address:
+        NA: 0x204CD30
+    - name: Cps_TcpConnect
+      address:
+        NA: 0x204CDE4
+    - name: Cpsi_TcpShutdownRaw
+      address:
+        NA: 0x204CE24
+    - name: Cps_TcpShutdown
+      address:
+        NA: 0x204CE74
+    - name: Cps_TcpClose
+      address:
+        NA: 0x204CEB0
+    - name: udp_read_raw
+      address:
+        NA: 0x204CF38
+    - name: Cpsi_TcpReadRaw
+      address:
+        NA: 0x204CF8C
+    - name: Cps_SocRead
+      address:
+        NA: 0x204D008
+    - name: Cpsi_SocConsumeRaw
+      address:
+        NA: 0x204D06C
+    - name: Cps_SocConsume
+      address:
+        NA: 0x204D0FC
+    - name: tcp_write_do
+      address:
+        NA: 0x204D134
+    - name: tcp_write_do2
+      address:
+        NA: 0x204D1F8
+    - name: Cpsi_TcpWrite2Raw
+      address:
+        NA: 0x204D234
+    - name: Cpsi_SocWrite2
+      address:
+        NA: 0x204D43C
+    - name: Cps_SocWrite
+      address:
+        NA: 0x204D510
+    - name: Cps_SocGetLength
+      address:
+        NA: 0x204D5A8
+    - name: Cps_SocFlush
+      address:
+        NA: 0x204D618
+    - name: set_fixed_ip
+      address:
+        NA: 0x204D658
+    - name: scavenger
+      address:
+        NA: 0x204D6F8
+    - name: dhcp_setcommon
+      address:
+        NA: 0x204DA68
+    - name: pad_mem
+      address:
+        NA: 0x204DBF4
+    - name: dhcp_send_discover
+      address:
+        NA: 0x204DC28
+    - name: dhcp_send_request
+      address:
+        NA: 0x204DCEC
+    - name: dhcp_analyze_response
+      address:
+        NA: 0x204DDF4
+    - name: dhcp_discover_server
+      address:
+        NA: 0x204E144
+    - name: dhcp_request_server
+      address:
+        NA: 0x204E19C
+    - name: dhcp_release_server
+      address:
+        NA: 0x204E298
+    - name: dns_skipname
+      address:
+        NA: 0x204E304
+    - name: resolve_common
+      address:
+        NA: 0x204E334
+    - name: strtol10
+      address:
+        NA: 0x204E5DC
+    - name: rawip
+      address:
+        NA: 0x204E610
+    - name: resolve_sub
+      address:
+        NA: 0x204E6AC
+    - name: Cps_Resolve
+      address:
+        NA: 0x204E710
+    - name: find_session_from_id
+      address:
+        NA: 0x204E848
+    - name: Find_Session_From_IP
+      address:
+        NA: 0x204E8DC
+    - name: cache_session
+      address:
+        NA: 0x204E97C
+    - name: purge_session
+      address:
+        NA: 0x204EA68
+    - name: date2sec
+      address:
+        NA: 0x204EAD0
+    - name: Cps_SetSslHandshakePriority
+      address:
+        NA: 0x204EB08
+    - name: enter_computebound
+      address:
+        NA: 0x204EB18
+    - name: exit_computebound
+      address:
+        NA: 0x204EB64
+    - name: Cps_SetRootCa
+      address:
+        NA: 0x204EB88
+    - name: Get_RootCA
+      address:
+        NA: 0x204EBB0
+    - name: cert_item_len
+      address:
+        NA: 0x204EBFC
+    - name: make_dn
+      address:
+        NA: 0x204EC4C
+    - name: parse_time
+      address:
+        NA: 0x204ECB8
+    - name: cert_item
+      address:
+        NA: 0x204ED38
+    - name: validate_signature
+      address:
+        NA: 0x204F228
+    - name: auth_cert
+      address:
+        NA: 0x204F3D0
+    - name: chars_till_end
+      address:
+        NA: 0x204F4B4
+    - name: compare_fqdn
+      address:
+        NA: 0x204F4D8
+    - name: rcv_certificate
+      address:
+        NA: 0x204F544
+    - name: rcv_server_hello
+      address:
+        NA: 0x204F768
+    - name: has_method
+      address:
+        NA: 0x204F81C
+    - name: select_method
+      address:
+        NA: 0x204F868
+    - name: version_ok
+      address:
+        NA: 0x204F8C8
+    - name: client_hello_v2
+      address:
+        NA: 0x204F8D8
+    - name: client_hello
+      address:
+        NA: 0x204F9A0
+    - name: decrypt_premaster_secret
+      address:
+        NA: 0x204FA3C
+    - name: create_ms_sub
+      address:
+        NA: 0x204FC7C
+    - name: create_master_secret
+      address:
+        NA: 0x204FD18
+    - name: create_key_block
+      address:
+        NA: 0x204FD78
+    - name: rcv_client_key_exchange
+      address:
+        NA: 0x204FF44
+    - name: finished_md5
+      address:
+        NA: 0x204FF80
+    - name: finished_sha1
+      address:
+        NA: 0x205005C
+    - name: rcv_finished
+      address:
+        NA: 0x2050138
+    - name: add1_be8
+      address:
+        NA: 0x20501F8
+    - name: decrypt
+      address:
+        NA: 0x205021C
+    - name: make_plaintext
+      address:
+        NA: 0x2050234
+    - name: make_ciphertext
+      address:
+        NA: 0x2050464
+    - name: tcp_read_raw_nbytes
+      address:
+        NA: 0x2050668
+    - name: update_digest
+      address:
+        NA: 0x20506D4
+    - name: parse_record_in_buf
+      address:
+        NA: 0x2050700
+    - name: parse_record
+      address:
+        NA: 0x2050980
+    - name: set_random
+      address:
+        NA: 0x2050B20
+    - name: Cps_SslAddRandomSeed
+      address:
+        NA: 0x2050C50
+    - name: send_change_cipher_spec_and_finished
+      address:
+        NA: 0x2050CC0
+    - name: send_client_hello
+      address:
+        NA: 0x2050E18
+    - name: send_client_key_exchange
+      address:
+        NA: 0x2050FAC
+    - name: mustget_change_cipher_spec_and_finished
+      address:
+        NA: 0x205126C
+    - name: ssl_connect_try
+      address:
+        NA: 0x205129C
+    - name: Cpsi_SslConnect
+      address:
+        NA: 0x2051368
+    - name: Cpsi_SslRead
+      address:
+        NA: 0x20513BC
+    - name: Cpsi_SslConsume
+      address:
+        NA: 0x2051494
+    - name: try_fill_record
+      address:
+        NA: 0x20514E4
+    - name: Cpsi_SslGetLength
+      address:
+        NA: 0x2051628
+    - name: Cpsi_SslWrite2
+      address:
+        NA: 0x20516A4
+    - name: Cpsi_SslShutdown
+      address:
+        NA: 0x20517D8
+    - name: Cpsi_SslClose
+      address:
+        NA: 0x2051858
+    - name: Cps_SetSsl
+      address:
+        NA: 0x2051890
+    - name: Cpsi_SslPeriodical
+      address:
+        NA: 0x20518C0
+    - name: Cpsi_SslCleanup
+      address:
+        NA: 0x20519A0
+    - name: char_from_long_1
+      address:
+        NA: 0x20519BC
+    - name: long_from_char_1
+      address:
+        NA: 0x20519D4
+    - name: Cpsi_Md5_Block
+      address:
+        NA: 0x20519EC
+    - name: Cpsi_Md5_Init
+      address:
+        NA: 0x2051E08
+    - name: Cpsi_Md5_Calc
+      address:
+        NA: 0x2051E50
+    - name: Cpsi_Md5_Result
+      address:
+        NA: 0x2051F08
+    - name: R
+      address:
+        NA: 0x2051F70
+    - name: char_from_long_2
+      address:
+        NA: 0x2051FB4
+    - name: long_from_char_2
+      address:
+        NA: 0x2051FF8
+    - name: Cpsi_Sha1_Block
+      address:
+        NA: 0x2052040
+    - name: Cpsi_Sha1_Init
+      address:
+        NA: 0x20526C8
+    - name: Cpsi_Sha1_Calc
+      address:
+        NA: 0x205271C
+    - name: Cpsi_Sha1_Result
+      address:
+        NA: 0x20527D4
+    - name: Cpsi_Sha1_Result_Prng
+      address:
+        NA: 0x205283C
+    - name: Cpsi_Rc4_Init
+      address:
+        NA: 0x205286C
+    - name: Cpsi_Rc4_Crypt
+      address:
+        NA: 0x20528E0
+    - name: count_digits
+      address:
+        NA: 0x205294C
+    - name: Cpsi_Big_Sign
+      address:
+        NA: 0x2052974
+    - name: Cpsi_Big_Add
+      address:
+        NA: 0x20529A4
+    - name: Cpsi_Big_Add_Small
+      address:
+        NA: 0x2052A40
+    - name: Cpsi_Big_Negate
+      address:
+        NA: 0x2052AA4
+    - name: Cpsi_Big_Sub
+      address:
+        NA: 0x2052AE4
+    - name: Cpsi_Big_Sub_Small
+      address:
+        NA: 0x2052B8C
+    - name: Cpsi_Big_Compare
+      address:
+        NA: 0x2052BF4
+    - name: Cpsi_Big_Add_Part
+      address:
+        NA: 0x2052C2C
+    - name: Cpsi_Big_Mult
+      address:
+        NA: 0x2052C60
+    - name: Cpsi_Big_Mult_Small
+      address:
+        NA: 0x2052D0C
+    - name: Cpsi_Big_Sqr
+      address:
+        NA: 0x2052D84
+    - name: get48bits_1
+      address:
+        NA: 0x2052EB8
+    - name: get48bits_2
+      address:
+        NA: 0x2052EC4
+    - name: get48bits_3
+      address:
+        NA: 0x2052ED4
+    - name: get64bits
+      address:
+        NA: 0x2052EE8
+    - name: Cpsi_Big_Div
+      address:
+        NA: 0x2052F04
+    - name: Cpsi_Big_Power
+      address:
+        NA: 0x20530E4
+    - name: Cpsi_Big_Modinv
+      address:
+        NA: 0x2053278
+    - name: Cpsi_Big_Montmult
+      address:
+        NA: 0x20533C4
+    - name: Cpsi_Big_Montpower
+      address:
+        NA: 0x20534EC
+    - name: Cpsi_Big_From_Char
+      address:
+        NA: 0x20536F8
+    - name: Cpsi_Char_From_Big
+      address:
+        NA: 0x2053754
+    - name: Wcm_Init
+      address:
+        NA: 0x2053798
+    - name: Wcm_Finish
+      address:
+        NA: 0x20538B0
+    - name: Wcm_StartupAsync
+      address:
+        NA: 0x2053908
+    - name: Wcm_CleanupAsync
+      address:
+        NA: 0x2053B0C
+    - name: Wcm_SearchAsync
+      address:
+        NA: 0x2053BFC
+    - name: Wcm_BeginSearchAsync
+      address:
+        NA: 0x2053C1C
+    - name: Wcm_EndSearchAsync
+      address:
+        NA: 0x2053D94
+    - name: Wcm_ConnectAsync
+      address:
+        NA: 0x2053E38
+    - name: Wcm_DisconnectAsync
+      address:
+        NA: 0x205403C
+    - name: Wcm_TerminateAsync
+      address:
+        NA: 0x2054158
+    - name: Wcm_GetPhase
+      address:
+        NA: 0x2054368
+    - name: Wcm_UpdateOption
+      address:
+        NA: 0x2054398
+    - name: Wcmi_GetSystemWork
+      address:
+        NA: 0x2054434
+    - name: WcmConfigure
+      address:
+        NA: 0x2054444
+    - name: WcmEditScanExParam
+      address:
+        NA: 0x2054564
+    - name: WcmInitOption
+      address:
+        NA: 0x20546FC
+    - name: WcmGetNextScanChannel
+      address:
+        NA: 0x205471C
+    - name: WcmNotify
+      address:
+        NA: 0x20547AC
+    - name: WcmNotifyEx
+      address:
+        NA: 0x20547F0
+    - name: WcmSetPhase
+      address:
+        NA: 0x2054844
+    - name: Wcmi_ResetKeepAliveAlarm
+      address:
+        NA: 0x20548DC
+    - name: WcmCountBits
+      address:
+        NA: 0x2054960
+    - name: WcmCountLeadingZero
+      address:
+        NA: 0x205498C
+    - name: WcmWmReset
+      address:
+        NA: 0x2054994
+    - name: WcmWmcbIndication
+      address:
+        NA: 0x20549F0
+    - name: WcmWmcbStartDcf
+      address:
+        NA: 0x20553AC
+    - name: WcmWmcbReset
+      address:
+        NA: 0x20555D8
+    - name: Wcm_ClearApList
+      address:
+        NA: 0x2055904
+    - name: Wcm_CountApList
+      address:
+        NA: 0x2055958
+    - name: Wcm_LockApList
+      address:
+        NA: 0x20559B0
+    - name: Wcm_PointApList
+      address:
+        NA: 0x2055A2C
+    - name: Wcmi_EntryApList
+      address:
+        NA: 0x2055A84
+    - name: WcmAllocApList
+      address:
+        NA: 0x2055B10
+    - name: WcmGetOldestApList
+      address:
+        NA: 0x2055BDC
+    - name: WcmSearchApList
+      address:
+        NA: 0x2055C0C
+    - name: WcmSearchIndexedApList
+      address:
+        NA: 0x2055C78
+    - name: WcmAppendApList
+      address:
+        NA: 0x2055CC8
+    - name: Wcmi_InitCpsif
+      address:
+        NA: 0x2055D84
+    - name: Wcmi_CpsifRecvCallback
+      address:
+        NA: 0x2055DC4
+    - name: Wcmi_CpsifSendNullPacket
+      address:
+        NA: 0x2055DF8
+    - name: Wcm_GetApMacAddress
+      address:
+        NA: 0x2055E68
+    - name: Wcm_GetApEssid
+      address:
+        NA: 0x2055EAC
+    - name: Wcm_SetRecvDcfCallback
+      address:
+        NA: 0x2055F0C
+    - name: Wcm_SendDcfData
+      address:
+        NA: 0x2055F2C
+    - name: WcmCpsifWmCallback
+      address:
+        NA: 0x205608C
+    - name: WcmCpsifTryLockMutexInIrq
+      address:
+        NA: 0x20560E0
+    - name: WcmCpsifUnlockMutexInIrq
+      address:
+        NA: 0x2056130
+    - name: Wcm_CompareBssID
+      address:
+        NA: 0x2056168
+    - name: Wcm_GetLinkLevel
+      address:
+        NA: 0x2056194
+    - name: Wcmi_GetRssiAverage
+      address:
+        NA: 0x20561D8
+    - name: WcmGetLinkLevel
+      address:
+        NA: 0x2056258
+    - name: Wcmi_ShelterRssi
+      address:
+        NA: 0x205628C
+    - name: Nns_FndInitList
+      address:
+        NA: 0x20562EC
+    - name: NSys_SetFirstObject
+      address:
+        NA: 0x2056304
+    - name: Nns_FndAppendListObject
+      address:
+        NA: 0x2056330
+    - name: Nns_FndPrependListObject
+      address:
+        NA: 0x2056384
+    - name: Nns_FndInsertListObject
+      address:
+        NA: 0x20563D4
+    - name: Nns_FndRemoveListObject
+      address:
+        NA: 0x2056438
+    - name: Nns_FndGetNextListObject
+      address:
+        NA: 0x2056498
+    - name: Nns_FndGetPrevListObject
+      address:
+        NA: 0x20564B0
+    - name: NSys_FindContainHeap
+      address:
+        NA: 0x20564C4
+    - name: NSys_FindListContainHeap
+      address:
+        NA: 0x205652C
+    - name: Nnsi_FndInitHeapHead
+      address:
+        NA: 0x2056554
+    - name: Nnsi_FndFinalizeHeap
+      address:
+        NA: 0x20565D0
+    - name: NSys_GetRegionOfMBlock
+      address:
+        NA: 0x20565E8
+    - name: NSys_RemoveMBlock
+      address:
+        NA: 0x2056614
+    - name: NSys_InsertMBlock
+      address:
+        NA: 0x205663C
+    - name: NSys_InitMBlock
+      address:
+        NA: 0x205666C
+    - name: NSys_InitExpHeap
+      address:
+        NA: 0x2056698
+    - name: NSys_AllocUsedBlockFromFreeBlock
+      address:
+        NA: 0x205670C
+    - name: ExpHeap_AllocFromHead
+      address:
+        NA: 0x205688C
+    - name: ExpHeap_AllocFromTail
+      address:
+        NA: 0x2056940
+    - name: NSys_RecycleRegion
+      address:
+        NA: 0x20569F0
+    - name: Nns_FndCreateExpHeapEx
+      address:
+        NA: 0x2056AE0
+    - name: Nnsi_FndFinalizeHeapVeneer
+      address:
+        NA: 0x2056B18
+    - name: Nns_FndAllocFromExpHeapEx
+      address:
+        NA: 0x2056B24
+    - name: Nns_FndFreeToExpHeap
+      address:
+        NA: 0x2056B54
+    - name: Nns_FndGetTotalFreeSizeForExpHeap
+      address:
+        NA: 0x2056B90
+    - name: Nns_FndGetAllocatableSizeForExpHeapEx
+      address:
+        NA: 0x2056BB8
+    - name: NSys_InitFrameHeap
+      address:
+        NA: 0x2056C3C
+    - name: Nns_FrmHeap_AllocFromHead
+      address:
+        NA: 0x2056C84
+    - name: Nns_FrmHeap_AllocFromTail
+      address:
+        NA: 0x2056CE0
+    - name: Nns_FrmHeap_FreeHead
+      address:
+        NA: 0x2056D38
+    - name: Nns_FrmHeap_FreeTail
+      address:
+        NA: 0x2056D4C
+    - name: Nns_FndCreateFrmHeapEx
+      address:
+        NA: 0x2056D78
+    - name: Nns_FndDestroyFrmHeap
+      address:
+        NA: 0x2056DB0
+    - name: Nns_FndAllocFromFrmHeapEx
+      address:
+        NA: 0x2056DBC
+    - name: Nns_FndFreeToFrmHeap
+      address:
+        NA: 0x2056DF0
+    - name: Nns_FndRecordStateForFrmHeap
+      address:
+        NA: 0x2056E1C
+    - name: Nns_FndFreeByStateToFrmHeap
+      address:
+        NA: 0x2056E6C
+    - name: NSys_IsValidArchiveBinary
+      address:
+        NA: 0x2056EBC
+    - name: Nns_FndMountArchive
+      address:
+        NA: 0x2056F00
+    - name: Nns_FndUnmountArchive
+      address:
+        NA: 0x2057048
+    - name: Nns_FndGetArchiveFileByName
+      address:
+        NA: 0x2057070
+    - name: Nns_FndGetArchiveFileByIndex
+      address:
+        NA: 0x20570C0
+    - name: Nns_FndOpenArchiveFileByIndex
+      address:
+        NA: 0x20570EC
+    - name: NSysGfd_VramManagerAllocTexVram
+      address:
+        NA: 0x205712C
+    - name: NSysGfd_VramManagerFreeTexVram
+      address:
+        NA: 0x2057134
+    - name: NSysGfd_VramManagerAllocPlttVram
+      address:
+        NA: 0x205713C
+    - name: NSysGfd_VramManagerFreePlttVram
+      address:
+        NA: 0x2057144
+    - name: NSysGfd_VramTransferManGetNextIndex
+      address:
+        NA: 0x205714C
+    - name: NSysGfd_VramTransferManIsVramTransferTaskQueueFull
+      address:
+        NA: 0x205716C
+    - name: NSysGfd_IsVramTransferTaskQueueEmpty
+      address:
+        NA: 0x2057184
+    - name: NSysGfd_VramTransferManDoTransfer3dTex
+      address:
+        NA: 0x2057198
+    - name: NSysGfd_VramTransferManDoTransfer3dTexPltt
+      address:
+        NA: 0x20571C4
+    - name: NSysGfd_VramTransferManDoTransfer3dClearImageColor
+      address:
+        NA: 0x20571F0
+    - name: NSysGfd_VramTransferManDoTransfer3dClearImageDepth
+      address:
+        NA: 0x2057214
     - name: GX_LoadBg0CharVeneer
       address:
         NA: 0x2057238
@@ -3576,6 +5105,12 @@ arm9:
     - name: GX_LoadBg1ScrVeneer
       address:
         NA: 0x2057274
+    - name: NSysGfd_VramTransferManDoTransfer2dBG2ScrMain
+      address:
+        NA: 0x2057280
+    - name: NSysGfd_VramTransferManDoTransfer2dBG3ScrMain
+      address:
+        NA: 0x205728C
     - name: GX_LoadBg2ScrVeneer
       address:
         NA: 0x2057298
@@ -3588,12 +5123,477 @@ arm9:
     - name: GX_LoadBgPlttVeneer
       address:
         NA: 0x20572BC
+    - name: NSysGfd_VramTransferManDoTransfer2dObjExtPlttMain
+      address:
+        NA: 0x20572C8
+    - name: NSysGfd_VramTransferManDoTransfer2dBgExtPlttMain
+      address:
+        NA: 0x20572F4
+    - name: NSysGfd_VramTransferManDoTransfer2dObjOamMain
+      address:
+        NA: 0x2057320
+    - name: NSysGfd_VramTransferManDoTransfer2dObjCharMain
+      address:
+        NA: 0x205732C
+    - name: NSysGfd_VramTransferManDoTransfer2dBG0CharSub
+      address:
+        NA: 0x2057338
+    - name: NSysGfd_VramTransferManDoTransfer2dBG1CharSub
+      address:
+        NA: 0x2057344
+    - name: NSysGfd_VramTransferManDoTransfer2dBG2CharSub
+      address:
+        NA: 0x2057350
+    - name: NSysGfd_VramTransferManDoTransfer2dBG3CharSub
+      address:
+        NA: 0x205735C
+    - name: NSysGfd_VramTransferManDoTransfer2dBG0ScrSub
+      address:
+        NA: 0x2057368
+    - name: NSysGfd_VramTransferManDoTransfer2dBG1ScrSub
+      address:
+        NA: 0x2057374
+    - name: NSysGfd_VramTransferManDoTransfer2dBG2ScrSub
+      address:
+        NA: 0x2057380
+    - name: NSysGfd_VramTransferManDoTransfer2dBG3ScrSub
+      address:
+        NA: 0x205738C
     - name: GXs_LoadBg2ScrVeneer
       address:
         NA: 0x2057398
     - name: GXs_LoadBg3ScrVeneer
       address:
         NA: 0x20573A4
+    - name: NSysGfd_VramTransferManDoTransfer2dObjPlttSub
+      address:
+        NA: 0x20573B0
+    - name: NSysGfd_VramTransferManDoTransfer2dBgPlttSub
+      address:
+        NA: 0x20573BC
+    - name: NSysGfd_VramTransferManDoTransfer2dObjExtPlttSub
+      address:
+        NA: 0x20573C8
+    - name: NSysGfd_VramTransferManDoTransfer2dBgExtPlttSub
+      address:
+        NA: 0x20573F4
+    - name: NSysGfd_VramTransferManDoTransfer2dObjOamSub
+      address:
+        NA: 0x2057420
+    - name: NSysGfd_VramTransferManDoTransfer2dObjCharSub
+      address:
+        NA: 0x205742C
+    - name: NSysGfd_VramTransferManDoTransfer
+      address:
+        NA: 0x2057438
+    - name: NSysGfd_VramTransferManResetTaskQueue
+      address:
+        NA: 0x2057468
+    - name: Nnsi_GfdPushVramTransferTaskQueue
+      address:
+        NA: 0x2057480
+    - name: Nnsi_GfdGetFrontVramTransferTaskQueue
+      address:
+        NA: 0x20574BC
+    - name: Nnsi_GfdGetEndVramTransferTaskQueue
+      address:
+        NA: 0x20574CC
+    - name: Nnsi_GfdPopVramTransferTaskQueue
+      address:
+        NA: 0x20574DC
+    - name: Nns_GfdInitVramTransferManager
+      address:
+        NA: 0x2057518
+    - name: Nns_GfdDoVramTransfer
+      address:
+        NA: 0x205753C
+    - name: Nns_GfdRegisterNewVramTransferTask
+      address:
+        NA: 0x205759C
+    - name: Nns_GfdGetVramTransferTaskTotalSize
+      address:
+        NA: 0x2057604
+    - name: NSysGfd_VramManagerDefaultDumpCallBack
+      address:
+        NA: 0x2057614
+    - name: Nnsi_GfdDumpLnkVramManFreeListInfo
+      address:
+        NA: 0x2057628
+    - name: Nnsi_GfdDumpLnkVramManFreeListInfoEx
+      address:
+        NA: 0x2057648
+    - name: Nnsi_GfdInitLnkVramMan
+      address:
+        NA: 0x2057678
+    - name: Nnsi_GfdInitLnkVramBlockPool
+      address:
+        NA: 0x2057684
+    - name: Nnsi_GfdAddNewFreeBlock
+      address:
+        NA: 0x20576D0
+    - name: Nnsi_GfdAllocLnkVram
+      address:
+        NA: 0x205772C
+    - name: Nnsi_GfdAllocLnkVramAligned
+      address:
+        NA: 0x2057740
+    - name: Nnsi_GfdFreeLnkVram
+      address:
+        NA: 0x2057880
+    - name: Nns_GfdDumpLnkTexVramManager
+      address:
+        NA: 0x20579D0
+    - name: Nns_GfdGetLnkTexVramManagerWorkSize
+      address:
+        NA: 0x2057A04
+    - name: Nns_GfdInitLnkTexVramManager
+      address:
+        NA: 0x2057A0C
+    - name: Nns_GfdAllocLnkTexVram
+      address:
+        NA: 0x2057A64
+    - name: Nns_GfdFreeLnkTexVram
+      address:
+        NA: 0x2057AF4
+    - name: Nns_GfdResetLnkTexVramState
+      address:
+        NA: 0x2057B68
+    - name: Nns_GfdDumpLnkPlttVramManager
+      address:
+        NA: 0x2057D50
+    - name: Nns_GfdGetLnkPlttVramManagerWorkSize
+      address:
+        NA: 0x2057D6C
+    - name: Nns_GfdInitLnkPlttVramManager
+      address:
+        NA: 0x2057D74
+    - name: Nns_GfdAllocLnkPlttVram
+      address:
+        NA: 0x2057DC8
+    - name: Nns_GfdFreeLnkPlttVram
+      address:
+        NA: 0x2057E94
+    - name: Nns_GfdResetLnkPlttVramState
+      address:
+        NA: 0x2057ED8
+    - name: NSysG2d_NanloadGetUnpackedAnimBankImpl
+      address:
+        NA: 0x2057F28
+    - name: Nns_G2dGetUnpackedAnimBank
+      address:
+        NA: 0x2057F64
+    - name: Nns_G2dUnpackNan
+      address:
+        NA: 0x2057F70
+    - name: Nns_G2dGetAnimSequenceByIdx
+      address:
+        NA: 0x20580C0
+    - name: NSysG2d_NobloadGetPtrOamArrayHead
+      address:
+        NA: 0x20580D8
+    - name: NSysG2d_NobloadUnPackExtendedData
+      address:
+        NA: 0x20580F8
+    - name: Nns_G2dGetUnpackedCellBank
+      address:
+        NA: 0x2058108
+    - name: Nns_G2dGetCellDataByIdx
+      address:
+        NA: 0x2058144
+    - name: Nns_G2dUnpackNce
+      address:
+        NA: 0x205816C
+    - name: Nns_G2dGetUnpackedCharacterData
+      address:
+        NA: 0x2058208
+    - name: Nns_G2dUnpackNcg
+      address:
+        NA: 0x2058244
+    - name: Nns_G2dGetUnpackedBgCharacterData
+      address:
+        NA: 0x2058254
+    - name: Nns_G2dUnpackBgNcg
+      address:
+        NA: 0x2058290
+    - name: Nns_G2dGetUnpackedPaletteData
+      address:
+        NA: 0x20582A0
+    - name: Nns_G2dUnpackNcl
+      address:
+        NA: 0x20582DC
+    - name: Nns_G2dGetUnpackedScreenData
+      address:
+        NA: 0x20582EC
+    - name: Nns_G2dFindBinaryBlock
+      address:
+        NA: 0x2058320
+    - name: Nnsi_G2dUnpackUserExCellAttrBank
+      address:
+        NA: 0x2058368
+    - name: NSysG2d_AnimationSequenceEdgeHandle
+      address:
+        NA: 0x20583B0
+    - name: Nns_G2dGetAnimCtrlCurrentElement
+      address:
+        NA: 0x20584C4
+    - name: Nns_G2dTickAnimCtrl
+      address:
+        NA: 0x20584D0
+    - name: Nns_G2dInitAnimCtrl
+      address:
+        NA: 0x2058684
+    - name: Nns_G2dInitAnimCallBackFunctor
+      address:
+        NA: 0x20586C4
+    - name: Nns_G2dResetAnimCtrlState
+      address:
+        NA: 0x20586DC
+    - name: Nns_G2dBindAnimCtrl
+      address:
+        NA: 0x205873C
+    - name: Nns_G2dInitImageProxy
+      address:
+        NA: 0x205874C
+    - name: Nns_G2dSetImageLocation
+      address:
+        NA: 0x2058768
+    - name: Nns_G2dGetImageLocation
+      address:
+        NA: 0x2058770
+    - name: Nns_G2dInitImagePaletteProxy
+      address:
+        NA: 0x2058778
+    - name: Nns_G2dSetImagePaletteLocation
+      address:
+        NA: 0x2058798
+    - name: Nns_G2dGetImagePaletteLocation
+      address:
+        NA: 0x20587A4
+    - name: Nns_G2dLoadImage2DMapping
+      address:
+        NA: 0x20587B0
+    - name: Nns_G2dLoadPalette
+      address:
+        NA: 0x20589DC
+    - name: Nnsi_G2dSrtcSetTrans
+      address:
+        NA: 0x2058AD4
+    - name: Nnsi_G2dSrtcSetSrtRotZ
+      address:
+        NA: 0x2058AF8
+    - name: Nnsi_G2dSrtcSetSrtScale
+      address:
+        NA: 0x2058B18
+    - name: Nnsi_G2dSrtcInitControl
+      address:
+        NA: 0x2058B38
+    - name: Nnsi_G2dSrtcSetInitialValue
+      address:
+        NA: 0x2058B48
+    - name: NSysG2d_CellAnimationApplyCurrentAnimResult
+      address:
+        NA: 0x2058B70
+    - name: Nns_G2dInitCellAnimation
+      address:
+        NA: 0x2058C60
+    - name: Nns_G2dSetCellAnimationSequence
+      address:
+        NA: 0x2058C9C
+    - name: Nns_G2dTickCellAnimation
+      address:
+        NA: 0x2058CB4
+    - name: Nnsi_G2dGetCellTransferState
+      address:
+        NA: 0x2058CD4
+    - name: Nns_G2dSetCellTransferStateRequested
+      address:
+        NA: 0x2058CEC
+    - name: NSysG2d_ScreenSelectScnSize
+      address:
+        NA: 0x2058D10
+    - name: NSysG2d_ScreenChangeBgModeByTableMain
+      address:
+        NA: 0x2058D50
+    - name: NSysG2d_ScreenChangeBgModeByTableSub
+      address:
+        NA: 0x2058D94
+    - name: NSysG2d_ScreenLoadBgPlttToExtendedPltt
+      address:
+        NA: 0x2058DBC
+    - name: NSysG2d_ScreenLoadBgPlttToNormalPltt
+      address:
+        NA: 0x2058EEC
+    - name: NSysG2d_ScreenGetBgExtPlttSlot
+      address:
+        NA: 0x2058FFC
+    - name: NSysG2d_ScreenSetBGnControlToText
+      address:
+        NA: 0x2059028
+    - name: NSysG2d_ScreenSetBGnControlToAffine
+      address:
+        NA: 0x20590BC
+    - name: NSysG2d_ScreenSetBGnControlTo256x16Pltt
+      address:
+        NA: 0x2059138
+    - name: NSysG2d_ScreenSetBgControlText
+      address:
+        NA: 0x20591B4
+    - name: NSysG2d_ScreenSetBgControlAffine
+      address:
+        NA: 0x20591F4
+    - name: NSysG2d_ScreenSetBgControl256x16Pltt
+      address:
+        NA: 0x2059234
+    - name: NSysG2d_ScreenLoadBgPaletteSelect
+      address:
+        NA: 0x2059274
+    - name: NSysG2d_ScreenLoadBgPalette
+      address:
+        NA: 0x20592AC
+    - name: NSysG2d_ScreenLoadBgCharacter
+      address:
+        NA: 0x2059320
+    - name: NSysG2d_ScreenLoadBgScreen
+      address:
+        NA: 0x20593E4
+    - name: NSysG2d_ScreenSetBgControlAuto
+      address:
+        NA: 0x20594B0
+    - name: NSysG2d_ScreenLoadScreenPartText
+      address:
+        NA: 0x2059540
+    - name: NSysG2d_ScreenLoadScreenPartAffine
+      address:
+        NA: 0x2059768
+    - name: NSysG2d_ScreenLoadScreenPart256x16Pltt
+      address:
+        NA: 0x20597D0
+    - name: Nns_G2dBgLoadElementsEx
+      address:
+        NA: 0x205983C
+    - name: Nns_G2dBgSetupEx
+      address:
+        NA: 0x2059898
+    - name: Nns_G2dBgLoadScreenRect
+      address:
+        NA: 0x2059914
+    - name: NSysG2d_FontGetGlyphIndex
+      address:
+        NA: 0x2059A78
+    - name: Nns_G2dFontInitAuto
+      address:
+        NA: 0x2059B40
+    - name: Nns_G2dFontInitUtf16
+      address:
+        NA: 0x2059B70
+    - name: Nns_G2dFontFindGlyphIndex
+      address:
+        NA: 0x2059B94
+    - name: Nns_G2dFontGetCharWidthsFromIndex
+      address:
+        NA: 0x2059BDC
+    - name: Nnsi_G2dFontGetStringWidth
+      address:
+        NA: 0x2059C28
+    - name: Nnsi_G2dFontGetTextHeight
+      address:
+        NA: 0x2059CD4
+    - name: Nnsi_G2dFontGetTextWidth
+      address:
+        NA: 0x2059D48
+    - name: Nnsi_G2dFontGetTextRect
+      address:
+        NA: 0x2059DA0
+    - name: NSysG2d_CharCanvasGetCharIndex1D
+      address:
+        NA: 0x2059E34
+    - name: NSysG2d_CharCanvasObjSizeToShape
+      address:
+        NA: 0x2059F2C
+    - name: NSysG2d_CharCanvasClearChar
+      address:
+        NA: 0x2059F48
+    - name: NSysG2d_CharCanvasLetterChar
+      address:
+        NA: 0x205A080
+    - name: NSysG2d_CharCanvasDrawGlyphLine
+      address:
+        NA: 0x205A2C0
+    - name: NSysG2d_CharCanvasDrawGlyph1D
+      address:
+        NA: 0x205A458
+    - name: NSysG2d_CharCanvasClearContinuous
+      address:
+        NA: 0x205A668
+    - name: NSysG2d_CharCanvasClearLine
+      address:
+        NA: 0x205A6B8
+    - name: NSysG2d_CharCanvasClearAreaLine
+      address:
+        NA: 0x205A738
+    - name: NSysG2d_CharCanvasClearArea1D
+      address:
+        NA: 0x205A8D4
+    - name: NSysG2d_CharCanvasInitCharCanvas
+      address:
+        NA: 0x205AAC8
+    - name: Nns_G2dCharCanvasDrawChar
+      address:
+        NA: 0x205AAF0
+    - name: Nns_G2dCharCanvasInitForBG
+      address:
+        NA: 0x205AC14
+    - name: Nns_G2dCharCanvasInitForObj1D
+      address:
+        NA: 0x205AC40
+    - name: Nns_G2dMapScrToCharText
+      address:
+        NA: 0x205ACC8
+    - name: Nns_G2dMapScrToChar256x16Pltt
+      address:
+        NA: 0x205AD78
+    - name: Nnsi_G2dCalcRequiredObj
+      address:
+        NA: 0x205ADD4
+    - name: Nns_G2dArrangeObj1D
+      address:
+        NA: 0x205AE30
+    - name: Nnsi_G2dTextCanvasDrawString
+      address:
+        NA: 0x205B128
+    - name: Nnsi_G2dTextCanvasDrawTextAlign
+      address:
+        NA: 0x205B1DC
+    - name: Nnsi_G2dTextCanvasDrawText
+      address:
+        NA: 0x205B344
+    - name: Nnsi_G2dTextCanvasDrawTextRect
+      address:
+        NA: 0x205B468
+    - name: Nnsi_G2dGetUnpackedFont
+      address:
+        NA: 0x205B548
+    - name: Nnsi_G2dUnpackNft
+      address:
+        NA: 0x205B69C
+    - name: Nnsi_G2dBitReaderRead
+      address:
+        NA: 0x205B778
+    - name: Nnsi_G2dSplitCharUtf16
+      address:
+        NA: 0x205B7D8
+    - name: Nnsi_G2dSplitCharUtf8
+      address:
+        NA: 0x205B7EC
+    - name: Nnsi_G2dSplitCharShiftJis
+      address:
+        NA: 0x205B868
+    - name: Nnsi_G2dSplitChar1Byte
+      address:
+        NA: 0x205B8BC
+    - name: Nnsi_G2dBgGetCharSize
+      address:
+        NA: 0x205B8D0
     - name: InitSndAndMore
       address:
         NA: 0x205B968
@@ -3601,6 +5601,183 @@ arm9:
         Seems to call Snd_Init, as well as a few more audio-related functions.
         
         No params.
+    - name: Nns_SndMain
+      address:
+        NA: 0x205B9F0
+    - name: Nns_SndMainBeginSleep
+      address:
+        NA: 0x205BA20
+    - name: Nns_SndMainEndSleep
+      address:
+        NA: 0x205BA58
+    - name: Nns_SndLockChannel
+      address:
+        NA: 0x205BA64
+    - name: Nns_SndUnlockChannel
+      address:
+        NA: 0x205BAAC
+    - name: Nns_SndUnlockCapture
+      address:
+        NA: 0x205BADC
+    - name: Nns_SndAllocAlarm
+      address:
+        NA: 0x205BAF8
+    - name: Nns_SndFreeAlarm
+      address:
+        NA: 0x205BB40
+    - name: Nnsi_SndInitResourceMgr
+      address:
+        NA: 0x205BB60
+    - name: Nns_SndPlayerSetPlayableSeqCount
+      address:
+        NA: 0x205BB7C
+    - name: Nns_SndPlayerSetAllocatableChannel
+      address:
+        NA: 0x205BB9C
+    - name: Nns_SndPlayerCreateHeap
+      address:
+        NA: 0x205BBB4
+    - name: Nns_SndPlayerStopSeq
+      address:
+        NA: 0x205BC48
+    - name: Nns_SndPlayerStopSeqBySeqArcIdx
+      address:
+        NA: 0x205BC58
+    - name: Nns_SndHandleInit
+      address:
+        NA: 0x205BCBC
+    - name: Nns_SndHandleReleaseSeq
+      address:
+        NA: 0x205BCC8
+    - name: Nns_SndPlayerCountPlayingSeqBySeqArcIdx
+      address:
+        NA: 0x205BCE8
+    - name: Nns_SndPlayerSetVolume
+      address:
+        NA: 0x205BD48
+    - name: Nns_SndPlayerSetInitialVolume
+      address:
+        NA: 0x205BD5C
+    - name: Nns_SndPlayerMoveVolume
+      address:
+        NA: 0x205BD70
+    - name: Nns_SndPlayerSetChannelPriority
+      address:
+        NA: 0x205BD9C
+    - name: Nns_SndPlayerSetTrackPitch
+      address:
+        NA: 0x205BDBC
+    - name: Nns_SndPlayerSetTempoRatio
+      address:
+        NA: 0x205BDDC
+    - name: Nns_SndPlayerSetSeqNo
+      address:
+        NA: 0x205BDFC
+    - name: Nns_SndPlayerSetSeqArcNo
+      address:
+        NA: 0x205BE20
+    - name: Nnsi_SndPlayerInit
+      address:
+        NA: 0x205BE4C
+    - name: Nnsi_SndPlayerMain
+      address:
+        NA: 0x205BF00
+    - name: Nnsi_SndPlayerAllocSeqPlayer
+      address:
+        NA: 0x205C064
+    - name: ShutdownPlayer_SeqVeneer
+      address:
+        NA: 0x205C0FC
+    - name: Nnsi_SndPlayerStartSeq
+      address:
+        NA: 0x205C108
+    - name: Nnsi_SndPlayerStopSeq
+      address:
+        NA: 0x205C158
+    - name: Nnsi_SndPlayerAllocHeap
+      address:
+        NA: 0x205C1A4
+    - name: InitPlayer
+      address:
+        NA: 0x205C1F8
+    - name: InsertPlayerList
+      address:
+        NA: 0x205C240
+    - name: InsertPrioList
+      address:
+        NA: 0x205C290
+    - name: ForceStopSeq
+      address:
+        NA: 0x205C2E4
+    - name: AllocSeqPlayer
+      address:
+        NA: 0x205C31C
+    - name: ShutdownPlayer_Seq
+      address:
+        NA: 0x205C384
+    - name: PlayerHeapDisposeCallback
+      address:
+        NA: 0x205C408
+    - name: SetPlayerPriority
+      address:
+        NA: 0x205C458
+    - name: Nns_SndStrmInit
+      address:
+        NA: 0x205C4B8
+    - name: Nns_SndStrmAllocChannel
+      address:
+        NA: 0x205C530
+    - name: Nns_SndStrmFreeChannel
+      address:
+        NA: 0x205C590
+    - name: Nns_SndStrmSetup
+      address:
+        NA: 0x205C5B8
+    - name: Nns_SndStrmStart
+      address:
+        NA: 0x205C758
+    - name: Nns_SndStrmStop
+      address:
+        NA: 0x205C7AC
+    - name: Nns_SndStrmSetVolume
+      address:
+        NA: 0x205C7C8
+    - name: Nns_SndStrmSetChannelPan
+      address:
+        NA: 0x205C834
+    - name: ForceStopStrm
+      address:
+        NA: 0x205C864
+    - name: ShutdownStrm
+      address:
+        NA: 0x205C8D8
+    - name: Nns_AlarmCallback
+      address:
+        NA: 0x205C908
+    - name: StrmCallback_Prepare
+      address:
+        NA: 0x205C918
+    - name: BeginSleep
+      address:
+        NA: 0x205C9C8
+    - name: EndSleep
+      address:
+        NA: 0x205CA14
+    - name: Nnsi_SndCaptureInit
+      address:
+        NA: 0x205CA84
+    - name: Nnsi_SndCaptureMain
+      address:
+        NA: 0x205CA9C
+    - name: Nnsi_SndCaptureStop
+      address:
+        NA: 0x205CB24
+    - name: Nnsi_SndCaptureBeginSleep
+      address:
+        NA: 0x205CC14
+    - name: Nnsi_SndCaptureEndSleep
+      address:
+        NA: 0x205CC74
     - name: InitAudioSubstructFileData
       address:
         NA: 0x205CCF8
@@ -3611,6 +5788,279 @@ arm9:
         r1: char pointer
         r2: void pointer
         r3: int32_t
+    - name: Nns_SndArcSetup
+      address:
+        NA: 0x205CD74
+    - name: Nns_SndArcInitOnMemory
+      address:
+        NA: 0x205CF4C
+    - name: Nns_SndArcSetCurrent
+      address:
+        NA: 0x205D00C
+    - name: Nns_SndArcGetCurrent
+      address:
+        NA: 0x205D024
+    - name: Nns_SndArcGetSeqInfo
+      address:
+        NA: 0x205D034
+    - name: Nns_SndArcGetSeqArcInfo
+      address:
+        NA: 0x205D098
+    - name: Nns_SndArcGetBankInfo
+      address:
+        NA: 0x205D0FC
+    - name: Nns_SndArcGetWaveArcInfo
+      address:
+        NA: 0x205D160
+    - name: Nns_SndArcGetStrmInfo
+      address:
+        NA: 0x205D1C4
+    - name: Nns_SndArcGetPlayerInfo
+      address:
+        NA: 0x205D228
+    - name: Nns_SndArcGetStrmPlayerInfo
+      address:
+        NA: 0x205D28C
+    - name: Nns_SndArcGetGroupInfo
+      address:
+        NA: 0x205D2F0
+    - name: Nns_SndArcGetFileOffset
+      address:
+        NA: 0x205D354
+    - name: Nns_SndArcGetFileSize
+      address:
+        NA: 0x205D37C
+    - name: Nns_SndArcReadFile
+      address:
+        NA: 0x205D3A4
+    - name: Nns_SndArcGetFileID
+      address:
+        NA: 0x205D41C
+    - name: Nns_SndArcGetFileAddress
+      address:
+        NA: 0x205D43C
+    - name: Nns_SndArcSetFileAddress
+      address:
+        NA: 0x205D464
+    - name: Nns_InfoDisposeCallback
+      address:
+        NA: 0x205D480
+    - name: Nns_FatDisposeCallback
+      address:
+        NA: 0x205D48C
+    - name: Nns_SymbolDisposeCallback
+      address:
+        NA: 0x205D498
+    - name: Nns_SndHeapCreate
+      address:
+        NA: 0x205D4A4
+    - name: Nns_SndHeapDestroy
+      address:
+        NA: 0x205D514
+    - name: Nns_SndHeapClear
+      address:
+        NA: 0x205D52C
+    - name: Nns_SndHeapAlloc
+      address:
+        NA: 0x205D5E8
+    - name: Nns_SndHeapSaveState
+      address:
+        NA: 0x205D650
+    - name: Nns_SndHeapLoadState
+      address:
+        NA: 0x205D69C
+    - name: Nns_SndHeapGetSize
+      address:
+        NA: 0x205D770
+    - name: InitHeapSection
+      address:
+        NA: 0x205D780
+    - name: InitHeap
+      address:
+        NA: 0x205D790
+    - name: NewSection
+      address:
+        NA: 0x205D7C4
+    - name: EraseSync
+      address:
+        NA: 0x205D800
+    - name: Nns_SndArcLoadGroup
+      address:
+        NA: 0x205D820
+    - name: Nnsi_SndArcLoadGroup
+      address:
+        NA: 0x205D838
+    - name: Nnsi_SndArcLoadSeq
+      address:
+        NA: 0x205D93C
+    - name: Nnsi_SndArcLoadSeqArc
+      address:
+        NA: 0x205D9C0
+    - name: Nnsi_SndArcLoadBank
+      address:
+        NA: 0x205DA20
+    - name: Nnsi_SndArcLoadWaveArc
+      address:
+        NA: 0x205DB60
+    - name: Nnsi_SndArcLoadFile
+      address:
+        NA: 0x205DBEC
+    - name: LoadSeq
+      address:
+        NA: 0x205DC8C
+    - name: LoadSeqArc
+      address:
+        NA: 0x205DCF8
+    - name: LoadBank
+      address:
+        NA: 0x205DD64
+    - name: LoadWaveArc
+      address:
+        NA: 0x205DDD0
+    - name: LoadWaveArcTable
+      address:
+        NA: 0x205DE3C
+    - name: DisposeCallback_Arc
+      address:
+        NA: 0x205DF44
+    - name: SeqDisposeCallback
+      address:
+        NA: 0x205DF9C
+    - name: BankDisposeCallback
+      address:
+        NA: 0x205DFC4
+    - name: WaveArcDisposeCallback
+      address:
+        NA: 0x205DFF4
+    - name: WaveArcTableDisposeCallback
+      address:
+        NA: 0x205E024
+    - name: SingleWaveDisposeCallback
+      address:
+        NA: 0x205E044
+    - name: LoadSingleWave
+      address:
+        NA: 0x205E08C
+    - name: LoadSingleWaves
+      address:
+        NA: 0x205E154
+    - name: Nns_SndArcPlayerSetup
+      address:
+        NA: 0x205E214
+    - name: Nns_SndArcPlayerStartSeq
+      address:
+        NA: 0x205E2B0
+    - name: Nns_SndArcPlayerStartSeqArc
+      address:
+        NA: 0x205E2F8
+    - name: StartSeq
+      address:
+        NA: 0x205E378
+    - name: StartSeqArc
+      address:
+        NA: 0x205E474
+    - name: Nns_SndArcStrmInit
+      address:
+        NA: 0x205E538
+    - name: Nns_SndArcStrmSetupPlayer
+      address:
+        NA: 0x205E63C
+    - name: Nns_SndArcStrmPrepareEx
+      address:
+        NA: 0x205E704
+    - name: Nns_SndArcStrmStartPrepared
+      address:
+        NA: 0x205E77C
+    - name: Nns_SndArcStrmStartEx
+      address:
+        NA: 0x205E79C
+    - name: Nns_SndArcStrmStop
+      address:
+        NA: 0x205E7D8
+    - name: Nns_SndArcStrmSetChannelPan
+      address:
+        NA: 0x205E7F4
+    - name: Nns_SndStrmHandleInit
+      address:
+        NA: 0x205E810
+    - name: Nns_SndStrmHandleRelease
+      address:
+        NA: 0x205E81C
+    - name: Nns_SndArcStrmGetCurrentPlayingPos
+      address:
+        NA: 0x205E834
+    - name: Nnsi_SndArcStrmMain
+      address:
+        NA: 0x205E870
+    - name: AllocPlayer
+      address:
+        NA: 0x205E980
+    - name: FreePlayer
+      address:
+        NA: 0x205EA0C
+    - name: PrepareStrm
+      address:
+        NA: 0x205EA38
+    - name: StopStrm
+      address:
+        NA: 0x205ECA8
+    - name: ForceStopStrm_Arc
+      address:
+        NA: 0x205ED00
+    - name: ShutdownPlayer_Strm
+      address:
+        NA: 0x205ED98
+    - name: AllocChannel
+      address:
+        NA: 0x205EDFC
+    - name: FreeChannel
+      address:
+        NA: 0x205EE34
+    - name: CreateThread
+      address:
+        NA: 0x205EE58
+    - name: RemoveCommandByPlayer
+      address:
+        NA: 0x205EEB8
+    - name: ReadCommandBuffer
+      address:
+        NA: 0x205EF28
+    - name: AllocCommandBuffer
+      address:
+        NA: 0x205EF78
+    - name: FreeCommandBuffer
+      address:
+        NA: 0x205EFB8
+    - name: DisposeCallback
+      address:
+        NA: 0x205EFE4
+    - name: StrmCallback_Alarm
+      address:
+        NA: 0x205F080
+    - name: OnDataEnd
+      address:
+        NA: 0x205F1B8
+    - name: MakeWaveData
+      address:
+        NA: 0x205F2FC
+    - name: SetupStreamFunction
+      address:
+        NA: 0x205FB24
+    - name: OpenFileStream
+      address:
+        NA: 0x205FBA4
+    - name: Nns_CloseFileStream
+      address:
+        NA: 0x205FC18
+    - name: ReadFileStream
+      address:
+        NA: 0x205FC28
+    - name: Nns_CancelFileStream
+      address:
+        NA: 0x205FC60
+    - name: OpenMemoryStream
+      address:
+        NA: 0x205FC70
     - name: ret_0205fc98
       address:
         NA: 0x205FC98
@@ -3618,6 +6068,9 @@ arm9:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
+    - name: ReadMemoryStream
+      address:
+        NA: 0x205FC9C
     - name: ret_0205fcb8
       address:
         NA: 0x205FCB8
@@ -3625,6 +6078,15 @@ arm9:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
+    - name: StrmThread
+      address:
+        NA: 0x205FCBC
+    - name: Nnsi_SndSeqArcGetSeqInfo
+      address:
+        NA: 0x205FD0C
+    - name: Nnsi_SndFaderInit
+      address:
+        NA: 0x205FD4C
     - name: MaybeLinearInterpolationInit
       address:
         NA: 0x205FD64
@@ -4189,19 +6651,21 @@ arm9:
     - name: GX_EndLoadClearImage
       address:
         NA: 0x2064600
+    - name: G3_BeginMakeDL
+      address:
+        NA: 0x2064644
+    - name: G3_EndMakeDL
+      address:
+        NA: 0x2064664
     - name: GX_SendFifo64B
       address:
         NA: 0x2064710
     - name: OS_WaitIrq
       address:
         NA: 0x206472C
-    - name: ret_020647a0
+    - name: OS_IrqDummy
       address:
         NA: 0x20647A0
-      description: |-
-        Does nothing but return. Likely a debug hook for a nearby function.
-        
-        No params.
     - name: OSi_IrqCallback
       address:
         NA: 0x20647A4
@@ -6001,9 +8465,7 @@ arm9:
         NA: 0x2074850
     - name: MB_RegisterFile
       address:
-        NA:
-          - 0x20748C8
-          - 0x20776B0
+        NA: 0x20748C8
     - name: MBi_MakeDownloadFileInfo
       address:
         NA: 0x2074B58
@@ -6112,6 +8574,9 @@ arm9:
     - name: MBi_CallReset
       address:
         NA: 0x20770E0
+    - name: MBi_OnReset
+      address:
+        NA: 0x2077118
     - name: MBi_CommEnd
       address:
         NA: 0x2077124
@@ -6154,6 +8619,9 @@ arm9:
     - name: MBi_ReadFromCache
       address:
         NA: 0x2077618
+    - name: MBi_TaskThread
+      address:
+        NA: 0x20776B0
     - name: MBi_InitTaskThread
       address:
         NA: 0x20777C8
@@ -6301,11 +8769,12 @@ arm9:
     - name: Std_ConcatenateString
       address:
         NA: 0x20788E0
+    - name: Std_CompareStringVeneer
+      address:
+        NA: 0x2078904
     - name: Std_CompareString
       address:
-        NA:
-          - 0x2078904
-          - 0x2078910
+        NA: 0x2078910
     - name: Std_CompareNString
       address:
         NA: 0x2078930
@@ -6321,6 +8790,18 @@ arm9:
     - name: OS_VsNPrintfEx
       address:
         NA: 0x2078A4C
+    - name: Msl_C_Abort_Exit_Abort
+      address:
+        NA: 0x20792C8
+    - name: Msl_C_Abort_Exit_Exit
+      address:
+        NA: 0x20792EC
+    - name: Msl_C_Abort_Exit_Exit2
+      address:
+        NA: 0x2079338
+    - name: Msl_C_Ansi_Files_Flush_All
+      address:
+        NA: 0x2079460
     - name: abs
       address:
         NA: 0x20794C8
@@ -6336,6 +8817,24 @@ arm9:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
+    - name: Msl_C_Buffer_Io_Prep_Buffer
+      address:
+        NA: 0x20794D8
+    - name: Msl_C_Buffer_Io_Flush_Buffer
+      address:
+        NA: 0x2079508
+    - name: Msl_C_Direct_Io_Fwrite
+      address:
+        NA: 0x2079590
+    - name: Msl_C_Direct_Io_Fwrite2
+      address:
+        NA: 0x20796B0
+    - name: Msl_C_File_Io_Fflush
+      address:
+        NA: 0x2079960
+    - name: Msl_C_Mbstring_Mbtowc
+      address:
+        NA: 0x2079A48
     - name: mbtowc
       address:
         NA: 0x2079A64
@@ -6366,6 +8865,9 @@ arm9:
         r0: pointer
         r1: value
         return: true on success, false on failure
+    - name: Msl_C_Mbstring_Mbstowcs
+      address:
+        NA: 0x2079ACC
     - name: wcstombs
       address:
         NA: 0x2079B54
@@ -6398,6 +8900,39 @@ arm9:
         r1: src
         r2: n
         return: dest
+    - name: Msl_C_Mem_Memset
+      address:
+        NA: 0x2079C38
+    - name: Msl_C_Mem_Memchr
+      address:
+        NA: 0x2079C4C
+    - name: Msl_C_Mem_Memrchr
+      address:
+        NA: 0x2079C78
+    - name: Msl_C_Mem_Memcmp
+      address:
+        NA: 0x2079CA4
+    - name: Msl_C_Mem_Funcs_Fill_Mem
+      address:
+        NA: 0x2079CE4
+    - name: Msl_C_Printf_Parse_Format
+      address:
+        NA: 0x2079D94
+    - name: Msl_C_Printf_Long2str
+      address:
+        NA: 0x207A324
+    - name: Msl_C_Printf_Longlong2str
+      address:
+        NA: 0x207A570
+    - name: Msl_C_Printf_Double2hex
+      address:
+        NA: 0x207A86C
+    - name: Msl_C_Printf_Round_Decimal
+      address:
+        NA: 0x207AD48
+    - name: Msl_C_Printf_Float2str
+      address:
+        NA: 0x207AE6C
     - name: __vsprintf_internal_slice
       address:
         NA: 0x207B5D0
@@ -6411,6 +8946,9 @@ arm9:
         r2: format
         r3: ap
         return: number of characters printed, excluding the null-terminator
+    - name: Msl_C_Printf_FileWrite
+      address:
+        NA: 0x207BDF4
     - name: TryAppendToSlice
       address:
         NA: 0x207BE20
@@ -6421,6 +8959,9 @@ arm9:
         r1: buffer of data to append
         r2: number of bytes in the data buffer
         return: true
+    - name: Msl_C_Printf_Printf
+      address:
+        NA: 0x207BE64
     - name: __vsprintf_internal
       address:
         NA: 0x207BF7C
@@ -6442,6 +8983,12 @@ arm9:
         r1: format
         r2: ap
         return: number of characters printed, excluding the null-terminator
+    - name: Msl_C_Scanf_StringRead
+      address:
+        NA: 0x207BFFC
+    - name: Msl_C_Signal_Raise
+      address:
+        NA: 0x207C080
     - name: strlen
       address:
         NA: 0x207C1B0
@@ -6519,6 +9066,111 @@ arm9:
         r0: haystack
         r1: needle
         return: pointer into haystack where needle starts, or null pointer if no match
+    - name: Msl_C_Strtoul_Strtoul
+      address:
+        NA: 0x207C504
+    - name: Msl_C_Strtoul_Strtol
+      address:
+        NA: 0x207C8EC
+    - name: Msl_C_Strtoul_Atol
+      address:
+        NA: 0x207C9B4
+    - name: Msl_C_Wchar_Io_Fwide
+      address:
+        NA: 0x207C9C8
+    - name: Msl_C_Wmem_Wmemcpy
+      address:
+        NA: 0x207CA3C
+    - name: Msl_C_Wmem_Wmemchr
+      address:
+        NA: 0x207CA4C
+    - name: Msl_C_Wprintf_Parse_Format
+      address:
+        NA: 0x207CA74
+    - name: Msl_C_Wprintf_Long2str
+      address:
+        NA: 0x207CFEC
+    - name: Msl_C_Wprintf_Longlong2str
+      address:
+        NA: 0x207D23C
+    - name: Msl_C_Wprintf_Double2hex
+      address:
+        NA: 0x207D53C
+    - name: Msl_C_Wprintf_Round_Decimal
+      address:
+        NA: 0x207D8D4
+    - name: Msl_C_Wprintf_Float2str
+      address:
+        NA: 0x207D9F8
+    - name: Msl_C_Wprintf_Wpformatter
+      address:
+        NA: 0x207E044
+    - name: Msl_C_Wprintf_WStringWrite
+      address:
+        NA: 0x207E934
+    - name: Msl_C_Wprintf_Swprintf
+      address:
+        NA: 0x207E974
+    - name: Msl_C_Wprintf_Vswprintf
+      address:
+        NA: 0x207E99C
+    - name: Msl_C_Wstring_Wcslen
+      address:
+        NA: 0x207EA0C
+    - name: Msl_C_Wstring_Wcscpy
+      address:
+        NA: 0x207EA28
+    - name: Msl_C_Wstring_Wcschr
+      address:
+        NA: 0x207EA48
+    - name: Msl_C_S_Copysign
+      address:
+        NA: 0x207EA7C
+    - name: Msl_C_S_Fabs
+      address:
+        NA: 0x207EAA4
+    - name: Msl_C_S_Frexp
+      address:
+        NA: 0x207EAC4
+    - name: Msl_C_S_Ldexp
+      address:
+        NA: 0x207EB80
+    - name: Msl_C_Ansi_Fp_Must_Round
+      address:
+        NA: 0x207EDCC
+    - name: Msl_C_Ansi_Fp_Dorounddecup
+      address:
+        NA: 0x207EE38
+    - name: Msl_C_Ansi_Fp_Rounddec
+      address:
+        NA: 0x207EE88
+    - name: Msl_C_Ansi_Fp_Ull2dec
+      address:
+        NA: 0x207EEC8
+    - name: Msl_C_Ansi_Fp_Timesdec
+      address:
+        NA: 0x207EF94
+    - name: Msl_C_Ansi_Fp_Str2dec
+      address:
+        NA: 0x207F118
+    - name: Msl_C_Ansi_Fp_Two_Exp
+      address:
+        NA: 0x207F1B4
+    - name: Msl_C_Ansi_Fp_Num2dec_Internal
+      address:
+        NA: 0x207F538
+    - name: Msl_C_Ansi_Fp_Num2dec
+      address:
+        NA: 0x207F6B8
+    - name: Msl_C_Math_Api_Msl_Generic_Count_Bits64
+      address:
+        NA: 0x207F760
+    - name: Msl_C_Math_Api_Signbitd
+      address:
+        NA: 0x207F7F4
+    - name: Msl_C_Math_Api_Fpclassifyd
+      address:
+        NA: 0x207F808
     - name: ret_0207f910
       address:
         NA: 0x207F910
@@ -6526,6 +9178,12 @@ arm9:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
+    - name: get_deleter
+      address:
+        NA: 0x207F914
+    - name: dispose
+      address:
+        NA: 0x207F93C
     - name: ret_0207f9c0
       address:
         NA: 0x207F9C0
@@ -6533,7 +9191,36 @@ arm9:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
-        r1: uint32_t
+    - name: Msl_Cpp_Msl_Smart_Pointers_Shared_Ptr_Deleter_Common_Release
+      address:
+        NA: 0x207FA3C
+    - name: Msl_Cpp_Msl_Smart_Pointers_Shared_Ptr_Deleter_Common_Release_Weak
+      address:
+        NA: 0x207FA6C
+    - name: Msl_Cpp_Vector_ZnSt13_Vec_DeleterImSaImEE13sub_Push_BackErkmN10Metrowerks8int2typeILi1Eee
+      address:
+        NA: 0x207FA98
+    - name: Msl_Cpp_Vector_ZnSt13_Vec_DeleterImSaImEed2Ev
+      address:
+        NA: 0x207FAC8
+    - name: Msl_Cpp_Vector_ZnSt13_Vec_DeleterImSaImEE7grow_ByEm
+      address:
+        NA: 0x207FB0C
+    - name: Msl_Cpp_Vector_ZnSt13_Vec_DeleterImSaImEE14append_ReallocEmRKm
+      address:
+        NA: 0x207FBD8
+    - name: Msl_Cpp_Vector_ZnSt20_Vec_Deleter_HelperImRSaImEed1Ev
+      address:
+        NA: 0x207FD3C
+    - name: Msl_Cpp_Vector_ZnSt15_Vector_CommonILb1EE18throw_Length_ErrorEv
+      address:
+        NA: 0x207FD58
+    - name: Msl_Cpp_Vector_ZnSt13_Vec_DeleterImRSaImEE8allocateEmN10Metrowerks8int2typeILi1Eee
+      address:
+        NA: 0x207FDE8
+    - name: Msl_Cpp_Vector_ZnSt13_Vec_DeleterImRSaImEed2Ev
+      address:
+        NA: 0x207FE18
     - name: _dadd
       address:
         NA: 0x207FE5C
@@ -6690,6 +9377,9 @@ arm9:
         
         r0: int
         return: (float)int
+    - name: __f_lltof
+      address:
+        NA: 0x2081118
     - name: _fmul
       address:
         NA: 0x2081184
@@ -6701,6 +9391,9 @@ arm9:
         r0: a
         r1: b
         return: a * b
+    - name: __frsb
+      address:
+        NA: 0x2081364
     - name: _fsub
       address:
         NA: 0x2081370
@@ -6727,6 +9420,9 @@ arm9:
         r2: divisor (low bits)
         r3: divisor (high bits)
         return: dividend % divisor
+    - name: __ull_mod
+      address:
+        NA: 0x20815F4
     - name: _ll_sdiv
       address:
         NA: 0x20815F8
@@ -6833,6 +9529,54 @@ arm9:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
+    - name: NRun_Semihosting_Sys_Writec
+      address:
+        NA: 0x2081C04
+    - name: NRun_Semihosting_Sys_Readc
+      address:
+        NA: 0x2081C18
+    - name: NRun_Semihosting_Sys_Exit
+      address:
+        NA: 0x2081C2C
+    - name: NRun_Semihosting_Read_Console
+      address:
+        NA: 0x2081C3C
+    - name: NRun_Semihosting_Write_Console
+      address:
+        NA: 0x2081C8C
+    - name: NRun_CompressedNumbers_DecodeSignedNumber
+      address:
+        NA: 0x2081CC8
+    - name: NRun_CompressedNumbers_DecodeUnsignedNumber
+      address:
+        NA: 0x2081D54
+    - name: NRun_ExceptionHandler_BinarySearch
+      address:
+        NA: 0x2081DE0
+    - name: NRun_ExceptionHandler_FindExceptionRecord
+      address:
+        NA: 0x2081E44
+    - name: NRun_ExceptionHandler_CurrentAction
+      address:
+        NA: 0x2081F4C
+    - name: NRun_ExceptionHandler_NextAction
+      address:
+        NA: 0x2081F68
+    - name: NRun_ExceptionHandler_UnwindStack
+      address:
+        NA: 0x20822F0
+    - name: NRun_ExceptionHandler_FindMostRecentException
+      address:
+        NA: 0x2082BA0
+    - name: NRun_ExceptionHandler_IsInSpecification
+      address:
+        NA: 0x2082CF4
+    - name: NRun_ExceptionHandler_Unexpected
+      address:
+        NA: 0x2082D78
+    - name: NRun_ExceptionHandler_Unexpected_Catch
+      address:
+        NA: 0x2082D94
     - name: ret_02082e20
       address:
         NA: 0x2082E20
@@ -6840,6 +9584,45 @@ arm9:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
+    - name: NRun_ExceptionHandler_HandleUnexpected
+      address:
+        NA: 0x2082E24
+    - name: NRun_ExceptionHandler_FindExceptionHandler
+      address:
+        NA: 0x2082E84
+    - name: NRun_ExceptionHandler_SetupCatchInfo
+      address:
+        NA: 0x2083060
+    - name: NRun_ExceptionHandler_ThrowHandler
+      address:
+        NA: 0x20830BC
+    - name: NRun_ExceptionHandler_End_Catch
+      address:
+        NA: 0x20831A8
+    - name: __call_static_initializers
+      address:
+        NA: 0x20831F0
+    - name: __destroy_global_chain
+      address:
+        NA: 0x208321C
+    - name: NRun_DestroyArrayRange
+      address:
+        NA: 0x2083260
+    - name: NRun_Cxa_Vec_New
+      address:
+        NA: 0x20832BC
+    - name: NRun_Cxa_Vec_Ctor
+      address:
+        NA: 0x2083374
+    - name: NRun_Cxa_Vec_Dtor
+      address:
+        NA: 0x2083424
+    - name: NRun_Cxa_Vec_Cleanup
+      address:
+        NA: 0x20834B4
+    - name: NRun_Cxa_Vec_Delete
+      address:
+        NA: 0x2083510
     - name: ret_02083544
       address:
         NA: 0x2083544
@@ -6847,6 +9630,48 @@ arm9:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
+    - name: NRun_Dthandler
+      address:
+        NA: 0x208361C
+    - name: NRun_Duhandler
+      address:
+        NA: 0x2083628
+    - name: NRun_MwException_Terminate
+      address:
+        NA: 0x2083634
+    - name: NRun_MwException_Unexpected
+      address:
+        NA: 0x208364C
+    - name: NRun_MwException_Register_Global_Object
+      address:
+        NA: 0x2083664
+    - name: NRun_MwException_Throw_Catch_Compare
+      address:
+        NA: 0x2083684
+    - name: NRun_ExceptionHandlerTScp_PopStackFrame
+      address:
+        NA: 0x2083834
+    - name: NRun_ExceptionHandlerTScp_SetupFrameInfo
+      address:
+        NA: 0x2083890
+    - name: NRun_ExceptionHandlerTScp_FindExceptionTable
+      address:
+        NA: 0x2083930
+    - name: NRun_ExceptionHandlerTScp_SkipUnwindInfo
+      address:
+        NA: 0x2083950
+    - name: NRun_ExceptionHandlerTScp_TransferControl
+      address:
+        NA: 0x2083980
+    - name: NRun_ExceptionHandlerTScp_Throw
+      address:
+        NA: 0x20839B0
+    - name: NRun_ExceptionHandlerTScp_Rethrow
+      address:
+        NA: 0x20839F8
+    - name: NRun_N_Eabi_Init_ExitProcess
+      address:
+        NA: 0x2083A44  
   data:
     - name: SECURE
       address:
@@ -8005,13 +10830,13 @@ arm9:
         NA: 0x208F210
       length:
         NA: 0xC
-      description: Basic information for the __cxxabiv1__vmi_class_type_info class. This class is a single-inheritance class.
+      description: Basic information for the _cxxabiv1_vmi_class_type_info class. This class is a single-inheritance class.
     - name: CXXABIV1_SI_CLASS_TYPE_INFO
       address:
         NA: 0x208F21C
       length:
         NA: 0xC
-      description: Basic information for the __cxxabiv1__si_class_type_info class. This class is a single-inheritance class.
+      description: Basic information for the _cxxabiv1_si_class_type_info class. This class is a single-inheritance class.
     - name: CXXABIV1_CLASS_TYPE_INFO
       address:
         NA: 0x208F228

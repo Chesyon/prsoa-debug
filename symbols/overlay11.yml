@@ -14,17 +14,24 @@ overlay11:
   description: |-
     Primarily implements the Ranger Net menu, but also seems to be used on boot (maybe for displaying logos?)
     Contains a fair amount of NitroSDK code related to WFC. It's believed that this is only region other than arm9 to contain SDK code.
-    
+        
     There are three scene classes in this overlay, internally named "Ranger Net", "Ranger Net AGB", and "Company Logo". Each entry point likely corresponds to one of these.
   functions:
-    - name: Overlay11EntryPoint0
+    - name: CRangerNetSceneConstructor
       address:
         NA: 0x211C9E0
       description: |-
-        One of many entry points of overlay_11, tasked with creating an overlay struct.
+        Constructor of the CRangerNetScene class.
         
-        r0: ov_11_unk_struct_0 pointer
+        r0: c_ranger_net_scene pointer
         r1: megastruct pointer
+    - name: CRangerNetSceneInit
+      address:
+        NA: 0x211CAE4
+      description: |-
+        Initializes the CRangerNetScene class. Called by CRangerNetSceneConstructor.
+        
+        r0: c_ranger_net_scene pointer
     - name: ret_0211d860
       address:
         NA: 0x211D860
@@ -32,14 +39,15 @@ overlay11:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
-    - name: Overlay11EntryPoint1
+    - name: CRangerNetAgbSceneConstructor
       address:
         NA: 0x211DEF8
       description: |-
-        One of many entry points of overlay_11, tasked with creating an overlay struct.
+        Constructor of the CRangerNetAgbScene class.
         
-        r0: ov_11_unk_struct_1 pointer
+        r0: c_ranger_net_agb_scene pointer
     - name: ret_0211df48
+      #namespace: c_ranger_net_agb_scene
       address:
         NA: 0x211DF48
       description: |-
@@ -47,6 +55,7 @@ overlay11:
         
         No params.
     - name: ret_0211df4c
+      #namespace: c_ranger_net_agb_scene
       address:
         NA: 0x211DF4C
       description: |-
@@ -54,6 +63,7 @@ overlay11:
         
         No params.
     - name: ret_0211df50
+      #namespace: c_ranger_net_agb_scene
       address:
         NA: 0x211DF50
       description: |-
@@ -68,6 +78,7 @@ overlay11:
         
         No params.
     - name: ret_0211df5c
+      #namespace: c_ranger_net_agb_scene
       address:
         NA: 0x211DF5C
       description: |-
@@ -75,17 +86,62 @@ overlay11:
         
         No params.
     - name: ret_0211df60
+      #namespace: c_ranger_net_agb_scene
       address:
         NA: 0x211DF60
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
+    - name: Ov110x730Constructor
+      address:
+        NA: 0x211E05C
+      description: |-
+        Constructs an ov_11_unk_struct_0x730.
+        
+        r0: ov_11_unk_struct_0x730 pointer
+        r1: megastruct pointer
+        r2: int
+    - name: Ov110x730InitPrimary
+      address:
+        NA: 0x211E0E8
+      description: |-
+        Partially initializes an ov_11_unk_struct_0x730.
+        
+        r0: ov_11_unk_struct_0x730 pointer
+    - name: Ov110x730InitSecondaryVeneer
+      address:
+        NA: 0x211E1DC
+      description: |-
+        Finishes initializing an ov_11_unk_struct_0x730.
+        
+        r0: ov_11_unk_struct_0x730 pointer
+    - name: Ov110x730InitSecondary
+      address:
+        NA: 0x211E1E8
+      description: |-
+        Finishes initializing an ov_11_unk_struct_0x730.
+        
+        r0: ov_11_unk_struct_0x730 pointer
+    - name: Ov110x730Destructor
+      address:
+        NA: 0x211F52C
+      description: |-
+        Destructor of an ov_11_unk_struct_0x730 struct.
+        
+        r0: ov_11_unk_struct_0x730 pointer
     - name: ret_021245a4
       address:
         NA: 0x21245A4
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
+        
+        No params.
+    - name: Return0x2700
+      address:
+        NA: 0x2125FEC
+      description: |-
+        [MANUAL DESCRIPTION]
         
         No params.
     - name: ret_02126964
@@ -123,6 +179,25 @@ overlay11:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
+    - name: Ov110x3ecConstructor
+      address:
+        NA: 0x212CE58
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: ov_11_unk_struct_0x3ec pointer
+        r1: megastruct pointer
+        r2: ov_11_unk_struct_0x730 pointer
+    - name: MaybeInitRsaKeyFileData
+      address:
+        NA: 0x212CEE8
+      description: |-
+        Seems to initialize an RSA Key for RSA decryption. 
+        
+        r0: int
+        r1: char pointer
+        r2: undefined4
+        r3: undefined4
     - name: ret_0212d978
       address:
         NA: 0x212D978
@@ -130,6 +205,32 @@ overlay11:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
+    - name: Ov110x198Constructor
+      address:
+        NA: 0x212D97C
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: ov_11_unk_struct_0x198 pointer
+        r1: ov_11_unk_struct_0x730 pointer
+    - name: Ov110x18Constructor
+      address:
+        NA: 0x21302D8
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: ov_11_unk_struct_0x18 pointer
+        r1: megastruct pointer
+    - name: Ov110x4e4Constructor
+      address:
+        NA: 0x21304DC
+      description: |-
+        [MANUAL DESCRIPTION]
+        
+        r0: ov_11_unk_struct_0x4e4 pointer
+        r1: megastruct pointer
+        r2: ov_11_unk_struct_0x18 pointer
+        r3: ov_11_unk_struct_0x730 pointer
     - name: Overlay11EntryPoint2
       address:
         NA: 0x21319EC
@@ -138,6 +239,7 @@ overlay11:
         
         r0: ov_11_unk_struct_2 pointer
     - name: ret_0213201c
+      #namespace: c_company_logo_scene
       address:
         NA: 0x213201C
       description: |-
@@ -145,19 +247,709 @@ overlay11:
         
         No params.
     - name: ret_02132020
+      #namespace: c_company_logo_scene
       address:
         NA: 0x2132020
       description: |-
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
-    - name: InitWfc
+    - name: Dwc_AC_Process
       address:
         NA: 0x213270C
-      description: |-
-        Just a guess. Repeatedly calling this eventually results in a DNS query for conntest.nintendowifi.net and allows for use of the socket functions.
-        
-        return: status?
+    - name: Dwc_AC_GetStatus
+      address:
+        NA: 0x21327DC
+    - name: Dwc_AC_GetApType
+      address:
+        NA: 0x2132848
+    - name: Dwc_AC_Destroy
+      address:
+        NA: 0x213291C
+    - name: Dwci_AC_InsertApInfo
+      address:
+        NA: 0x2132958
+    - name: Dwci_AC_Alloc
+      address:
+        NA: 0x2132984
+    - name: Dwci_AC_GetMemPtr
+      address:
+        NA: 0x2132B1C
+    - name: Dwci_AC_SetPhase
+      address:
+        NA: 0x2132B74
+    - name: MaybeGetWfcInitCase
+      address:
+        NA: 0x2132BD4
+    - name: Dwci_AC_SetError
+      address:
+        NA: 0x2132BE8
+    - name: Dwci_AC_GetError
+      address:
+        NA: 0x2132C0C
+    - name: Dwci_ConvConnectApType
+      address:
+        NA: 0x2132C3C
+    - name: Free_Disused
+      address:
+        NA: 0x2132C4C
+    - name: CheckDuplicate
+      address:
+        NA: 0x2132C84
+    - name: Dwci_AC_CheckNintendoSsid
+      address:
+        NA: 0x2132E90
+    - name: CompareList
+      address:
+        NA: 0x2132F24
+    - name: CompareListDiff
+      address:
+        NA: 0x2132FA0
+    - name: AddList
+      address:
+        NA: 0x2133030
+    - name: SetDataListTail
+      address:
+        NA: 0x21330F8
+    - name: UpDateList
+      address:
+        NA: 0x2133144
+    - name: SortList
+      address:
+        NA: 0x21331B0
+    - name: Dwci_AC_CallBackWcm
+      address:
+        NA: 0x21332A0
+    - name: Dwci_AC_ConnectAP
+      address:
+        NA: 0x213332C
+    - name: ConnectStart
+      address:
+        NA: 0x2133370
+    - name: ConnectAP
+      address:
+        NA: 0x2133468
+    - name: GetConnectType
+      address:
+        NA: 0x21335A4
+    - name: GetPowerMode
+      address:
+        NA: 0x2133740
+    - name: GetAuthMode
+      address:
+        NA: 0x213375C
+    - name: Dwci_AC_CloseNetwork
+      address:
+        NA: 0x213386C
+    - name: DisConnectAP
+      address:
+        NA: 0x21338F4
+    - name: CloseSocket
+      address:
+        NA: 0x2133984
+    - name: Dwci_AC_Error
+      address:
+        NA: 0x21339B4
+    - name: Dwci_AC_GetResult
+      address:
+        NA: 0x21339D8
+    - name: GetProgramaError
+      address:
+        NA: 0x2133A28
+    - name: GetNotFoundAP
+      address:
+        NA: 0x2133A74
+    - name: Dwci_AC_MakeSearchList
+      address:
+        NA: 0x2133BE4
+    - name: Dwci_AC_CheckFreespot
+      address:
+        NA: 0x2133C78
+    - name: MakeAroundList
+      address:
+        NA: 0x2133CC4
+    - name: MakeStealthList
+      address:
+        NA: 0x2133D24
+    - name: MakeUserList
+      address:
+        NA: 0x2133E10
+    - name: MakeDifferChannelList
+      address:
+        NA: 0x2133F18
+    - name: CheckDifferChannelStart
+      address:
+        NA: 0x2133FA8
+    - name: Dwci_AC_ConnectRetryAP
+      address:
+        NA: 0x2133FEC
+    - name: Dwci_AC_SearchAP
+      address:
+        NA: 0x21340C8
+    - name: Dwci_AC_SetStealthChannel
+      address:
+        NA: 0x213418C
+    - name: Dwci_AC_GetStealthChannel
+      address:
+        NA: 0x21341C0
+    - name: Dwci_AC_SearchReStart
+      address:
+        NA: 0x2134228
+    - name: SearchStart
+      address:
+        NA: 0x2134308
+    - name: SearchAround
+      address:
+        NA: 0x2134358
+    - name: SearchAround2ndLap
+      address:
+        NA: 0x21343FC
+    - name: SearchDifferChannel
+      address:
+        NA: 0x2134444
+    - name: SearchStealth
+      address:
+        NA: 0x213456C
+    - name: NextSearchCheck
+      address:
+        NA: 0x213468C
+    - name: SearchEndCheck
+      address:
+        NA: 0x2134750
+    - name: CheckStartStealthSearch
+      address:
+        NA: 0x2134814
+    - name: ScanStart
+      address:
+        NA: 0x2134874
+    - name: Dwci_AC_Start
+      address:
+        NA: 0x2134898
+    - name: Dwci_AC_ConnectTest
+      address:
+        NA: 0x2134920
+    - name: ConnectTestStart
+      address:
+        NA: 0x2134A1C
+    - name: GetIpAddress
+      address:
+        NA: 0x2134A80
+    - name: ConnectTestCreate
+      address:
+        NA: 0x2134B10
+    - name: ConnectTestProcess
+      address:
+        NA: 0x2134B3C
+    - name: ConnectTestEnd
+      address:
+        NA: 0x2134BA8
+    - name: ConnectTestRetry
+      address:
+        NA: 0x2134BBC
+    - name: MakeSocConfig
+      address:
+        NA: 0x2134BEC
+    - name: ConvAddress
+      address:
+        NA: 0x2134CAC
+    - name: ConvNetMask
+      address:
+        NA: 0x2134D00
+    - name: CheckSetDns
+      address:
+        NA: 0x2134D54
+    - name: Dwci_AC_CheckNintendoShopAP
+      address:
+        NA: 0x2134DDC
+    - name: Dwci_AC_GetNintendoShopWepKey
+      address:
+        NA: 0x2134E14
+    - name: Dwci_AC_GetPostalCode
+      address:
+        NA: 0x2134E3C
+    - name: Dwci_AC_CheckNintendoUsbAP
+      address:
+        NA: 0x2134E88
+    - name: DecodeSsid
+      address:
+        NA: 0x2134EBC
+    - name: MakeShopWepKey
+      address:
+        NA: 0x2134FC0
+    - name: MakeUsbWepKey
+      address:
+        NA: 0x213500C
+    - name: Codetovalue
+      address:
+        NA: 0x21351B8
+    - name: Db64
+      address:
+        NA: 0x2135228
+    - name: Dwc_Auth_SetCustomNas
+      address:
+        NA: 0x2135390
+    - name: Dwc_Auth_Create
+      address:
+        NA: 0x21353A0
+    - name: Dwci_Auth_StartThread
+      address:
+        NA: 0x21354C4
+    - name: Dwc_Auth_Abort
+      address:
+        NA: 0x2135578
+    - name: Dwc_Auth_Destroy
+      address:
+        NA: 0x2135604
+    - name: Dwc_Auth_GetError
+      address:
+        NA: 0x213568C
+    - name: Dwc_Auth_GetResult
+      address:
+        NA: 0x21356D8
+    - name: Dwci_Auth_Start
+      address:
+        NA: 0x2135768
+    - name: Dwci_Auth_Thread
+      address:
+        NA: 0x2135878
+    - name: Dwci_Auth_ParseHttp
+      address:
+        NA: 0x2135B2C
+    - name: Dwci_Auth_FillResult
+      address:
+        NA: 0x2135D04
+    - name: Dwci_Auth_Prepare_FirstPost
+      address:
+        NA: 0x2135FCC
+    - name: Dwci_Auth_SetError
+      address:
+        NA: 0x2136170
+    - name: Dwc_Auth_GetCalInfoFromNVram
+      address:
+        NA: 0x21361B4
+    - name: Dwc_Auth_SetCalInfoToHttp
+      address:
+        NA: 0x213647C
+    - name: Dwc_Http_Create
+      address:
+        NA: 0x21367C0
+    - name: Dwc_Http_FinishHeader
+      address:
+        NA: 0x21368DC
+    - name: Dwc_Http_StartThread
+      address:
+        NA: 0x2136974
+    - name: Dwc_Http_Abort
+      address:
+        NA: 0x2136A30
+    - name: Dwci_Http_Yield
+      address:
+        NA: 0x2136A8C
+    - name: Dwci_Http_InitCpsSocket
+      address:
+        NA: 0x2136B04
+    - name: Dwci_Http_Resolve
+      address:
+        NA: 0x2136B5C
+    - name: Dwci_Http_CheckHeaderReceived
+      address:
+        NA: 0x2136B70
+    - name: Dwci_Http_Thread
+      address:
+        NA: 0x2136C58
+    - name: Dwc_Http_Destroy
+      address:
+        NA: 0x2136F74
+    - name: Dwci_Http_WriteBasicHeader
+      address:
+        NA: 0x2137028
+    - name: Dwc_Http_Add_HeaderItem
+      address:
+        NA: 0x21370E8
+    - name: Dwc_Http_Add_PostBase64Item
+      address:
+        NA: 0x21371C4
+    - name: Dwc_Http_Add_Body
+      address:
+        NA: 0x21372D0
+    - name: Dwci_Http_AllocBuffer
+      address:
+        NA: 0x2137364
+    - name: Dwci_Http_FreeBuffer
+      address:
+        NA: 0x21373BC
+    - name: Dwci_Http_ReallocBuffer
+      address:
+        NA: 0x21373FC
+    - name: Dwci_Http_SetHostinfo
+      address:
+        NA: 0x21374A4
+    - name: Dwci_Http_AddResult
+      address:
+        NA: 0x21375F8
+    - name: Dwc_Http_ParseResult
+      address:
+        NA: 0x213774C
+    - name: Dwc_Http_GetResult
+      address:
+        NA: 0x21379EC
+    - name: Dwc_Http_GetBase64DecodedResult
+      address:
+        NA: 0x2137A44
+    - name: Dwc_Http_GetRawResult
+      address:
+        NA: 0x2137A98
+    - name: Dwci_Http_DestroyResult
+      address:
+        NA: 0x2137AD8
+    - name: Dwc_Netcheck_Create
+      address:
+        NA: 0x2137B60
+    - name: Dwc_Netcheck_Destroy
+      address:
+        NA: 0x2137C40
+    - name: Dwc_Netcheck_Abort
+      address:
+        NA: 0x2137D38
+    - name: Dwc_Netcheck_GetError
+      address:
+        NA: 0x2137DA0
+    - name: Dwc_Netcheck_GetReturnCode
+      address:
+        NA: 0x2137DE0
+    - name: Dwci_Netcheck_StartThread
+      address:
+        NA: 0x2137DF8
+    - name: Dwci_Netcheck_SetError
+      address:
+        NA: 0x2138D84
+    - name: Dwc_Auth_SetNasTimeDiff
+      address:
+        NA: 0x2138DC8
+    - name: Dwc_Svl_Init
+      address:
+        NA: 0x2138FE4
+    - name: Dwc_Svl_Cleanup
+      address:
+        NA: 0x213907C
+    - name: Dwc_Svl_GetTokenAsync
+      address:
+        NA: 0x21390C8
+    - name: Dwc_Svl_Process
+      address:
+        NA: 0x2139330
+    - name: Dwci_Svl_ParseHttp
+      address:
+        NA: 0x2139404
+    - name: Dwc_Auth_Base64Encode
+      address:
+        NA: 0x2139620
+    - name: Dwc_Auth_Base64Decode
+      address:
+        NA: 0x21397A8
+    - name: Dwci_BM_GetWiFiInfo
+      address:
+        NA: 0x2139940
+    - name: Dwci_BM_SetWiFiInfo
+      address:
+        NA: 0x2139A18
+    - name: Dwci_BackuplInit
+      address:
+        NA: 0x2139AF4
+    - name: Dwci_BackuplRead
+      address:
+        NA: 0x2139B38
+    - name: Dwci_BackuplWritePage
+      address:
+        NA: 0x2139B64
+    - name: Dwci_BackuplWriteAll
+      address:
+        NA: 0x2139BEC
+    - name: Dwci_BackuplSetWiFi
+      address:
+        NA: 0x2139C80
+    - name: Dwci_BackuplConvMaskCidr
+      address:
+        NA: 0x2139C98
+    - name: Dwci_BackuplConvMaskAddr
+      address:
+        NA: 0x2139CDC
+    - name: Dwc_BackuplCheckSsid
+      address:
+        NA: 0x2139D0C
+    - name: Dwc_BackuplCheckIp
+      address:
+        NA: 0x2139D34
+    - name: Dwc_BackuplCheckAddress
+      address:
+        NA: 0x2139DB0
+    - name: Verify
+      address:
+        NA: 0x213A354
+    - name: Callback_NVram
+      address:
+        NA: 0x213A40C
+    - name: Dwci_BackuplConvWifiInfo
+      address:
+        NA: 0x213A43C
+    - name: Dwc_BM_Init
+      address:
+        NA: 0x213A508
+    - name: CheckAp
+      address:
+        NA: 0x213A810
+    - name: Init
+      address:
+        NA: 0x213A910
+    - name: InitPage
+      address:
+        NA: 0x213A990
+    - name: Dwci_Util_WiFiId_ScrambleUid
+      address:
+        NA: 0x213A9BC
+    - name: Dwci_Auth_GetNewWiFiInfo
+      address:
+        NA: 0x213AB40
+    - name: Dwci_Auth_MakeWiFiID
+      address:
+        NA: 0x213AD1C
+    - name: Dwci_Auth_UpDateWiFiID
+      address:
+        NA: 0x213AD60
+    - name: Dwci_Auth_RemakeWiFiID
+      address:
+        NA: 0x213ADB0
+    - name: Dwc_Auth_CheckWiFiIdNeedCreate
+      address:
+        NA: 0x213AF50
+    - name: Dwc_GetLastError
+      address:
+        NA: 0x213AFA0
+    - name: Dwc_GetLastErrorEx
+      address:
+        NA: 0x213AFC0
+    - name: Dwci_IsError
+      address:
+        NA: 0x213B0D4
+    - name: Dwci_SetError
+      address:
+        NA: 0x213B0F0
+    - name: Dwc_InitInetEx
+      address:
+        NA: 0x213B1BC
+    - name: Dwc_InitInet
+      address:
+        NA: 0x213B21C
+    - name: Dwc_SetAuthServer
+      address:
+        NA: 0x213B234
+    - name: Dwc_CheckInet
+      address:
+        NA: 0x213B334
+    - name: Dwc_ProcessInet
+      address:
+        NA: 0x213B374
+    - name: Dwc_GetInetStatus
+      address:
+        NA: 0x213B3EC
+    - name: Dwc_CleanupInet
+      address:
+        NA: 0x213B49C
+    - name: Dwc_CleanupInetAsync
+      address:
+        NA: 0x213B4FC
+    - name: Dwci_CheckDisconnected
+      address:
+        NA: 0x213B56C
+    - name: Wcm_GetLinkLevelVeneer
+      address:
+        NA: 0x213B598
+    - name: Dwc_UpdateConnection
+      address:
+        NA: 0x213B6D0
+    - name: Dwc_SvlgetTokenAsync
+      address:
+        NA: 0x213B71C
+    - name: Dwc_Svlprocess
+      address:
+        NA: 0x213B790
+    - name: Dwc_NasloginAsync
+      address:
+        NA: 0x213B7B4
+    - name: Dwc_NasloginProcess
+      address:
+        NA: 0x213B878
+    - name: Dwci_NdAlloc
+      address:
+        NA: 0x213B970
+    - name: Dwci_NdFree
+      address:
+        NA: 0x213B988
+    - name: Dwci_NdCallback
+      address:
+        NA: 0x213B9A0
+    - name: Dwci_NdCleanupCallback
+      address:
+        NA: 0x213BA98
+    - name: Dwci_SvltokenWaitThread
+      address:
+        NA: 0x213BADC
+    - name: Dwc_NdInitAsync
+      address:
+        NA: 0x213BC94
+    - name: Dwc_NdCleanupAsync
+      address:
+        NA: 0x213BDAC
+    - name: Dwc_NdSetAttr
+      address:
+        NA: 0x213BDF8
+    - name: Dwc_NdGetFileListNumAsync
+      address:
+        NA: 0x213BE2C
+    - name: Dwc_NdGetFileListAsync
+      address:
+        NA: 0x213BE50
+    - name: Dwc_NdGetFileAsync
+      address:
+        NA: 0x213BE98
+    - name: Dwc_NdGetProgress
+      address:
+        NA: 0x213BECC
+    - name: Aoss_Malloc
+      address:
+        NA: 0x213BEF8
+    - name: Aoss_Free
+      address:
+        NA: 0x213BF08
+    - name: Aossi_Init
+      address:
+        NA: 0x213BF18
+    - name: Aoss_Release
+      address:
+        NA: 0x213CA38
+    - name: Aoss_Data_Init
+      address:
+        NA: 0x213CA64
+    - name: Aoss_Seq_Data_Copy
+      address:
+        NA: 0x213CAD4
+    - name: Aoss_Check_Str
+      address:
+        NA: 0x213CCCC
+    - name: Aoss_CheckAp
+      address:
+        NA: 0x213CCF0
+    - name: Aoss_Set_ApInfo
+      address:
+        NA: 0x213CD6C
+    - name: MakeSendSeqID
+      address:
+        NA: 0x213CDB0
+    - name: Aoss_StatusExclusion
+      address:
+        NA: 0x213CDE0
+    - name: RecvMessage
+      address:
+        NA: 0x213CE0C
+    - name: AstsSetInitRes
+      address:
+        NA: 0x213CEAC
+    - name: AstsSetSecureRes
+      address:
+        NA: 0x213CF88
+    - name: AstsRestartRes
+      address:
+        NA: 0x213D060
+    - name: DecodePacket
+      address:
+        NA: 0x213D104
+    - name: CheckSeqID
+      address:
+        NA: 0x213D1F8
+    - name: CheckRecvSeqID
+      address:
+        NA: 0x213D23C
+    - name: GetProductInfo
+      address:
+        NA: 0x213D288
+    - name: Aoss_Get_Bin
+      address:
+        NA: 0x213D344
+    - name: GetWepData
+      address:
+        NA: 0x213D368
+    - name: GetWpaData
+      address:
+        NA: 0x213D4BC
+    - name: GetBssidData
+      address:
+        NA: 0x213D574
+    - name: GetSecurityData
+      address:
+        NA: 0x213D5A4
+    - name: GetSecurityType
+      address:
+        NA: 0x213D6B4
+    - name: SendMessage
+      address:
+        NA: 0x213D6C4
+    - name: AstsSetInitReq
+      address:
+        NA: 0x213D718
+    - name: AstsSetSecureReq
+      address:
+        NA: 0x213D85C
+    - name: AstsRestartReq
+      address:
+        NA: 0x213D938
+    - name: SetStaData
+      address:
+        NA: 0x213D9A4
+    - name: PacketDataSet
+      address:
+        NA: 0x213DA30
+    - name: SetPacketHeader
+      address:
+        NA: 0x213DA84
+    - name: SendPacketUdp
+      address:
+        NA: 0x213DADC
+    - name: EncodeRC4
+      address:
+        NA: 0x213DB44
+    - name: DecodeRC4
+      address:
+        NA: 0x213DBC0
+    - name: RC4encrypt
+      address:
+        NA: 0x213DCAC
+    - name: Crc
+      address:
+        NA: 0x213DD18
+    - name: Update_Crc
+      address:
+        NA: 0x213DD40
+    - name: Make_Crc_Table
+      address:
+        NA: 0x213DD78
+    - name: CryptSeqNo
+      address:
+        NA: 0x213DDB0
+    - name: AddKey
+      address:
+        NA: 0x213DE60
+    - name: Rotate
+      address:
+        NA: 0x213DE84
+    - name: Aoss_Memcmp
+      address:
+        NA: 0x213DF58
+    - name: Aoss_Memcpy
+      address:
+        NA: 0x213DF78
+    - name: Aoss_Memset
+      address:
+        NA: 0x213DF88
     - name: ret_0213e00c
       address:
         NA: 0x213E00C
@@ -182,209 +974,1833 @@ overlay11:
         
         r0: file descriptor
         return: 0 on success, or a negative value representing an error
-    - name: ret_02147dbc
+    - name: Aoss_Htonl
+      address:
+        NA: 0x213E02C
+    - name: Aoss_Htons
+      address:
+        NA: 0x213E054
+    - name: Aoss_Ntohl
+      address:
+        NA: 0x213E06C
+    - name: Aoss_Ntohs
+      address:
+        NA: 0x213E094
+    - name: Aoss_Strlen
+      address:
+        NA: 0x213E0AC
+    - name: Aossi_InitLocal
+      address:
+        NA: 0x213E22C
+    - name: OS_SleepVeneer
+      address:
+        NA: 0x213E708
+    - name: Aossi_Status
+      address:
+        NA: 0x213E710
+    - name: GetFrameData
+      address:
+        NA: 0x213FC34
+    - name: GetElementData
+      address:
+        NA: 0x213FCA4
+    - name: GetFirstElement
+      address:
+        NA: 0x213FCF4
+    - name: SetSingleElement
+      address:
+        NA: 0x213FE4C
+    - name: IsSearchCommand
+      address:
+        NA: 0x213FE74
+    - name: SetSearchRes
+      address:
+        NA: 0x213FF98
+    - name: AsciiToHex
+      address:
+        NA: 0x2140310
+    - name: Aeskw_Xor64
+      address:
+        NA: 0x2140CD8
+    - name: RijndaelKeySetupEnc
+      address:
+        NA: 0x2140D20
+    - name: RijndaelKeySetupDec
+      address:
+        NA: 0x2140FD8
+    - name: RijndaelEncrypt
+      address:
+        NA: 0x2141168
+    - name: RijndaelDecrypt
+      address:
+        NA: 0x2141524
+    - name: MY_MD5Init
+      address:
+        NA: 0x21418E0
+    - name: MY_MD5Update
+      address:
+        NA: 0x2141908
+    - name: MY_MD5Final
+      address:
+        NA: 0x2141980
+    - name: MD5Transform
+      address:
+        NA: 0x21419D4
+    - name: Encode
+      address:
+        NA: 0x214221C
+    - name: Decode
+      address:
+        NA: 0x2142248
+    - name: MD5_Memcpy
+      address:
+        NA: 0x2142274
+    - name: MD5_Memset
+      address:
+        NA: 0x214228C
+    - name: MD5Encode
+      address:
+        NA: 0x21422A4
+    - name: PutHex
+      address:
+        NA: 0x214231C
+    - name: PutMac
+      address:
+        NA: 0x2142350
+    - name: Atermi_ApConfigStart
+      address:
+        NA: 0x2142384
+    - name: AtermiApConfigEnd
+      address:
+        NA: 0x214246C
+    - name: Atermi_ApConfigGetState
+      address:
+        NA: 0x2142500
+    - name: AtermiApConfigGetResult
+      address:
+        NA: 0x2142538
+    - name: SendNotify
+      address:
+        NA: 0x214254C
+    - name: Dwci_AnimelInitEx
+      address:
+        NA: 0x2142568
+    - name: Dwci_AnimelEnd
+      address:
+        NA: 0x2142638
+    - name: Anime_TaskAnime
+      address:
+        NA: 0x2142674
+    - name: Dwci_BtnlInit
+      address:
+        NA: 0x2142740
+    - name: Dwci_BtnlEnd
+      address:
+        NA: 0x2142838
+    - name: Dwci_BtnlGet
+      address:
+        NA: 0x2142868
+    - name: Dwci_BtnlSet
+      address:
+        NA: 0x214287C
+    - name: Dwci_BtnlSetForce
+      address:
+        NA: 0x214289C
+    - name: Dwci_BtnlIsEnd
+      address:
+        NA: 0x21428B0
+    - name: Dwci_BtnlEnable
+      address:
+        NA: 0x21428DC
+    - name: Dwci_BtnlDisable
+      address:
+        NA: 0x21428F4
+    - name: Button_Disp
+      address:
+        NA: 0x214290C
+    - name: Button_TaskStart
+      address:
+        NA: 0x21429A0
+    - name: Button_TaskStart1
+      address:
+        NA: 0x2142A0C
+    - name: Button_TaskMain
+      address:
+        NA: 0x2142A5C
+    - name: Button_TaskEnd
+      address:
+        NA: 0x2142BE8
+    - name: Button_TaskEnd1
+      address:
+        NA: 0x2142C4C
+    - name: Button_TaskRelease
+      address:
+        NA: 0x2142CC4
+    - name: Dwci_CommentlInit
+      address:
+        NA: 0x2142DB4
+    - name: Dwci_CommentlDispEx
+      address:
+        NA: 0x2142DC8
+    - name: Dwci_CommentlDelete
+      address:
+        NA: 0x2142E9C
+    - name: Dwci_Char
+      address:
+        NA: 0x2142ED4
+    - name: Dwci_CmnlLoadResource
+      address:
+        NA: 0x2142F34
+    - name: Dwci_CmnlStep
+      address:
+        NA: 0x2142F74
+    - name: Dwci_CmnlButton
+      address:
+        NA: 0x2142FC4
+    - name: Dwci_CmnlMsgDraw
+      address:
+        NA: 0x2142FFC
+    - name: Dwci_CmnlMsgNameDraw
+      address:
+        NA: 0x2143070
+    - name: Dwci_CmnlFontFlag
+      address:
+        NA: 0x214312C
+    - name: Dwci_FocuslInit
+      address:
+        NA: 0x2143144
+    - name: Dwci_FocuslEnd
+      address:
+        NA: 0x2143164
+    - name: Dwci_FocuslDisp
+      address:
+        NA: 0x214317C
+    - name: Dwci_FocuslDisp4
+      address:
+        NA: 0x2143238
+    - name: Dwci_FocuslDelete
+      address:
+        NA: 0x2143328
+    - name: Dwci_HLlInit
+      address:
+        NA: 0x2143368
+    - name: Dwci_HLlEnd
+      address:
+        NA: 0x21433E0
+    - name: Dwci_HLlLoad
+      address:
+        NA: 0x21433F4
+    - name: Dwci_HLlLoadSet
+      address:
+        NA: 0x2143450
+    - name: Dwci_HLlLoadList
+      address:
+        NA: 0x2143468
+    - name: Headline_TaskLoad
+      address:
+        NA: 0x2143480
+    - name: Dwci_IconlInit
+      address:
+        NA: 0x21434C0
+    - name: Dwci_IconlEnd
+      address:
+        NA: 0x2143578
+    - name: Icon_TaskRenew
+      address:
+        NA: 0x21435BC
+    - name: Dwci_KBlInit
+      address:
+        NA: 0x2143664
+    - name: Dwci_KBlEnd
+      address:
+        NA: 0x21439C8
+    - name: Dwci_KBlGet
+      address:
+        NA: 0x21439FC
+    - name: Dwci_KBlSetErase
+      address:
+        NA: 0x2143A10
+    - name: Dwci_KBlSetInput
+      address:
+        NA: 0x2143A24
+    - name: Dwci_KBlIsInit
+      address:
+        NA: 0x2143A38
+    - name: Keyboard_TaskStart0
+      address:
+        NA: 0x2143A54
+    - name: Keyboard_TaskStart1
+      address:
+        NA: 0x2143AE8
+    - name: Keyboard_TaskStart2
+      address:
+        NA: 0x2143B7C
+    - name: Keyboard_TaskStart3
+      address:
+        NA: 0x2143C10
+    - name: Keyboard_TaskStart4
+      address:
+        NA: 0x2143CA4
+    - name: Keyboard_TaskMain
+      address:
+        NA: 0x2143D30
+    - name: Keyboard_TouchTriger
+      address:
+        NA: 0x2143D48
+    - name: Keyboard_TouchRelease
+      address:
+        NA: 0x2143F30
+    - name: Keyboard_PushCaps
+      address:
+        NA: 0x2144218
+    - name: Keyboard_PushShift
+      address:
+        NA: 0x2144248
+    - name: Keyboard_Touch
+      address:
+        NA: 0x2144278
+    - name: Keyboard_ExchangeBack
+      address:
+        NA: 0x214447C
+    - name: Keyboard_Key
+      address:
+        NA: 0x21444D0
+    - name: Keyboard_Disp
+      address:
+        NA: 0x2144700
+    - name: Keyboard_ChangePage
+      address:
+        NA: 0x214497C
+    - name: Keyboard_ChangeColor
+      address:
+        NA: 0x2144A00
+    - name: Keyboard_DispFocus
+      address:
+        NA: 0x2144AC8
+    - name: Keyboard_MoveFocus
+      address:
+        NA: 0x2144BA4
+    - name: Keyboard_TaskEnd0
+      address:
+        NA: 0x2144FDC
+    - name: Keyboard_TaskEnd1
+      address:
+        NA: 0x2145060
+    - name: Keyboard_TaskEnd2
+      address:
+        NA: 0x21450D4
+    - name: Keyboard_TaskEnd3
+      address:
+        NA: 0x2145148
+    - name: Keyboard_TaskEnd4
+      address:
+        NA: 0x21451BC
+    - name: Keyboard_TaskEnd5
+      address:
+        NA: 0x2145230
+    - name: Dwci_KB10lInit
+      address:
+        NA: 0x2145310
+    - name: Dwci_KB10lEnd
+      address:
+        NA: 0x214564C
+    - name: Dwci_KB10lGet
+      address:
+        NA: 0x2145680
+    - name: Dwci_KB10lSetErase
+      address:
+        NA: 0x2145694
+    - name: Dwci_KB10lSetInput
+      address:
+        NA: 0x21456A8
+    - name: Dwci_KB10lSetShift
+      address:
+        NA: 0x21456BC
+    - name: Dwci_KB10lIsInit
+      address:
+        NA: 0x21456D0
+    - name: Keyboard10_TaskStart0
+      address:
+        NA: 0x21456EC
+    - name: Keyboard10_TaskStart1
+      address:
+        NA: 0x2145770
+    - name: Keyboard10_TaskStart2
+      address:
+        NA: 0x21457F4
+    - name: Keyboard10_TaskStart3
+      address:
+        NA: 0x2145878
+    - name: Keyboard10_TaskStart4
+      address:
+        NA: 0x21458FC
+    - name: Keyboard10_TaskMain
+      address:
+        NA: 0x2145970
+    - name: Keyboard10_TouchTriger
+      address:
+        NA: 0x2145988
+    - name: Keyboard10_TouchRelease
+      address:
+        NA: 0x2145B64
+    - name: Keyboard10_Touch
+      address:
+        NA: 0x2145D34
+    - name: Keyboard10_ExchangeBack
+      address:
+        NA: 0x2145F24
+    - name: Keyboard10_Key
+      address:
+        NA: 0x2145F70
+    - name: Keyboard10_Disp
+      address:
+        NA: 0x214610C
+    - name: Keyboard10_ChangeColor
+      address:
+        NA: 0x214636C
+    - name: Keyboard10_DispFocus
+      address:
+        NA: 0x2146434
+    - name: Keyboard10_MoveFocus
+      address:
+        NA: 0x21464C0
+    - name: Keyboard10_TaskEnd0
+      address:
+        NA: 0x214656C
+    - name: Keyboard10_TaskEnd1
+      address:
+        NA: 0x21465E4
+    - name: Keyboard10_TaskEnd2
+      address:
+        NA: 0x2146654
+    - name: Keyboard10_TaskEnd3
+      address:
+        NA: 0x21466C4
+    - name: Keyboard10_TaskEnd4
+      address:
+        NA: 0x2146734
+    - name: Keyboard10_TaskEnd5
+      address:
+        NA: 0x21467A4
+    - name: Dwci_AosslInit
+      address:
+        NA: 0x2146864
+    - name: Dwci_AosslEnd
+      address:
+        NA: 0x2146974
+    - name: Dwci_AosslStart
+      address:
+        NA: 0x21469C4
+    - name: LibAoss_AossAlloc
+      address:
+        NA: 0x2146A24
+    - name: LibAoss_AossFree
+      address:
+        NA: 0x2146A34
+    - name: Dwc_StartUtility
+      address:
+        NA: 0x2146A40
+    - name: Main_CheckParam
+      address:
+        NA: 0x2146ACC
+    - name: Main_InitGame
+      address:
+        NA: 0x2146B68
+    - name: Main_InitGraph
+      address:
+        NA: 0x2146C30
+    - name: Main_ProcEnd
+      address:
+        NA: 0x2146EA8
+    - name: Dwci_ChangeScene
+      address:
+        NA: 0x2146EF8
+    - name: Dwci_SetParam
+      address:
+        NA: 0x2146F08
+    - name: Dwci_GetParam
+      address:
+        NA: 0x2146F1C
+    - name: Dwci_SetParam2
+      address:
+        NA: 0x2146F44
+    - name: Dwci_GetParam2
+      address:
+        NA: 0x2146F58
+    - name: Dwci_Language
+      address:
+        NA: 0x2146F80
+    - name: Dwci_Entry
+      address:
+        NA: 0x2146F90
+    - name: Dwci_Flag
+      address:
+        NA: 0x2146FA8
+    - name: Dwci_EndUtility
+      address:
+        NA: 0x2146FC4
+    - name: KDwci_Language
+      address:
+        NA: 0x2146FD8
+    - name: Dwci_MsglInit
+      address:
+        NA: 0x2147018
+    - name: Dwci_MsglEnd
+      address:
+        NA: 0x2147054
+    - name: Dwci_MsglRead
+      address:
+        NA: 0x2147068
+    - name: Dwci_MsglRelease
+      address:
+        NA: 0x21470C0
+    - name: Dwci_MsglGet
+      address:
+        NA: 0x21470EC
+    - name: Dwci_MsglGetEx
+      address:
+        NA: 0x2147104
+    - name: Dwci_MovlInit
+      address:
+        NA: 0x2147130
+    - name: Dwci_MovlEnd
+      address:
+        NA: 0x214721C
+    - name: Move_TaskEnd
+      address:
+        NA: 0x214723C
+    - name: Dwci_MovlIsEnd
+      address:
+        NA: 0x2147278
+    - name: Dwci_MovlChangeCallback
+      address:
+        NA: 0x2147294
+    - name: Dwci_MovStartDownloadandBootChild
+      address:
+        NA: 0x21472AC
+    - name: Dwci_MovlGetChild
+      address:
+        NA: 0x21472B8
+    - name: Move_TaskFramework
+      address:
+        NA: 0x21472D0
+    - name: Dwci_RakulInit
+      address:
+        NA: 0x2147570
+    - name: Dwci_RakulEnd
+      address:
+        NA: 0x21475DC
+    - name: Dwci_RakulGetState
+      address:
+        NA: 0x2147600
+    - name: Dwci_RakulSetResult
+      address:
+        NA: 0x21476BC
+    - name: Rakuraku_CbConfig
+      address:
+        NA: 0x21476E8
+    - name: Rakuraku_MemAlloc
+      address:
+        NA: 0x2147700
+    - name: RakuRaku_MemFree
+      address:
+        NA: 0x2147710
+    - name: Dwci_SceneEnd
+      address:
+        NA: 0x214771C
+    - name: SceneEnd_EndScene
+      address:
+        NA: 0x2147758
+    - name: Dwci_SceneInit
+      address:
+        NA: 0x21477CC
+    - name: SceneInit_ProcFade
+      address:
+        NA: 0x21479AC
+    - name: SceneInit_ProcWait
+      address:
+        NA: 0x21479E8
+    - name: Dwci_SceneMenu
+      address:
+        NA: 0x2147A5C
+    - name: SceneMenu_InitGraphics
+      address:
+        NA: 0x2147AD8
+    - name: SceneMenu_ProcInit
+      address:
+        NA: 0x2147BC4
+    - name: SceneMenu_ProcInit1
+      address:
+        NA: 0x2147C18
+    - name: SceneMenu_ProcInit2
+      address:
+        NA: 0x2147C54
+    - name: SceneMenu_ProcScene
+      address:
+        NA: 0x2147C7C
+    - name: SceneMenu_Input
+      address:
+        NA: 0x2147C90
+    - name: SceneMenu_Draw
       address:
         NA: 0x2147DBC
-      description: |-
-        Does nothing but return. Likely a debug hook for a nearby function.
-        
-        No params.
-    - name: ret_021481a0
+    - name: SceneMenu_Button
+      address:
+        NA: 0x2147DC0
+    - name: SceneMenu_EndScene
+      address:
+        NA: 0x2147E10
+    - name: SceneMenu_EndScene1
+      address:
+        NA: 0x2147E30
+    - name: SceneMenu_EndScene2
+      address:
+        NA: 0x2147E7C
+    - name: SceneMenu_MoveFocus
+      address:
+        NA: 0x2147F24
+    - name: SceneMenu_DispPushButton
+      address:
+        NA: 0x2147F94
+    - name: Dwci_SceneOptErase
+      address:
+        NA: 0x2147FD4
+    - name: SceneOptErase_InitGraphics
+      address:
+        NA: 0x214801C
+    - name: SceneOptErase_ProcInit
+      address:
+        NA: 0x214809C
+    - name: SceneOptErase_ProcInit1
+      address:
+        NA: 0x21480F0
+    - name: SceneOptErase_ProcInit2
+      address:
+        NA: 0x214812C
+    - name: SceneOptErase_ProcScene
+      address:
+        NA: 0x2148154
+    - name: SceneOptErase_Input
+      address:
+        NA: 0x2148168
+    - name: SceneOptErase_Draw
       address:
         NA: 0x21481A0
-      description: |-
-        Does nothing but return. Likely a debug hook for a nearby function.
-        
-        No params.
-    - name: ret_02148518
+    - name: SceneOptErase_Button
+      address:
+        NA: 0x21481A4
+    - name: SceneOptErase_EndScene
+      address:
+        NA: 0x214820C
+    - name: SceneOptErase_EndScene1
+      address:
+        NA: 0x214822C
+    - name: SceneOptErase_EndScene2
+      address:
+        NA: 0x2148290
+    - name: SceneOptErase_ProcConfirm
+      address:
+        NA: 0x2148348
+    - name: SceneOptErase_ProcConfirm1
+      address:
+        NA: 0x2148398
+    - name: Dwci_SceneOptErase1
+      address:
+        NA: 0x21483B8
+    - name: SceneOptErase1_InitGraphics
+      address:
+        NA: 0x21483DC
+    - name: SceneOptErase1_ProcInit
+      address:
+        NA: 0x214845C
+    - name: SceneOptErase1_ProcInit1
+      address:
+        NA: 0x2148490
+    - name: SceneOptErase1_ProcInit2
+      address:
+        NA: 0x21484BC
+    - name: SceneOptErase1_ProcScene
+      address:
+        NA: 0x21484E4
+    - name: SceneOptErase1_Input
+      address:
+        NA: 0x21484F8
+    - name: SceneOptErase1_Draw
       address:
         NA: 0x2148518
-      description: |-
-        Does nothing but return. Likely a debug hook for a nearby function.
-        
-        No params.
-    - name: ret_02148958
+    - name: SceneOptErase1_Button
+      address:
+        NA: 0x214851C
+    - name: SceneOptErase1_EndScene
+      address:
+        NA: 0x2148544
+    - name: SceneOptErase1_EndScene1
+      address:
+        NA: 0x2148564
+    - name: SceneOptErase1_EndScene2
+      address:
+        NA: 0x21485B0
+    - name: Dwci_SceneOptInfo
+      address:
+        NA: 0x21485E4
+    - name: SceneOptInfo_InitGraphics
+      address:
+        NA: 0x2148618
+    - name: SceneOptInfo_DrawInfo
+      address:
+        NA: 0x2148698
+    - name: SceneOptInfo_ProcInit
+      address:
+        NA: 0x214886C
+    - name: SceneOptInfo_ProcInit1
+      address:
+        NA: 0x21488C0
+    - name: SceneOptInfo_ProcInit2
+      address:
+        NA: 0x21488FC
+    - name: SceneOptInfo_ProcScene
+      address:
+        NA: 0x2148924
+    - name: SceneOptInfo_Input
+      address:
+        NA: 0x2148938
+    - name: SceneOptInfo_Draw
       address:
         NA: 0x2148958
-      description: |-
-        Does nothing but return. Likely a debug hook for a nearby function.
-        
-        No params.
-    - name: ret_02148e88
+    - name: SceneOptInfo_Button
+      address:
+        NA: 0x214895C
+    - name: SceneOptInfo_EndScene
+      address:
+        NA: 0x2148984
+    - name: SceneOptInfo_EndScene1
+      address:
+        NA: 0x21489A4
+    - name: SceneOptInfo_EndScene2
+      address:
+        NA: 0x21489F4
+    - name: Dwci_SceneOptMenu
+      address:
+        NA: 0x2148A64
+    - name: SceneOptMenu_InitGraphics
+      address:
+        NA: 0x2148B2C
+    - name: SceneOptMenu_ProcInit
+      address:
+        NA: 0x2148CC8
+    - name: SceneOptMenu_ProcInit1
+      address:
+        NA: 0x2148D1C
+    - name: SceneOptMenu_ProcInit2
+      address:
+        NA: 0x2148D58
+    - name: SceneOptMenu_ProcScene
+      address:
+        NA: 0x2148D80
+    - name: SceneOptMenu_Input
+      address:
+        NA: 0x2148D94
+    - name: SceneOptMenu_Draw
       address:
         NA: 0x2148E88
-      description: |-
-        Does nothing but return. Likely a debug hook for a nearby function.
-        
-        No params.
-    - name: ret_021492a8
+    - name: SceneOptMenu_Button
+      address:
+        NA: 0x2148E8C
+    - name: SceneOptMenu_EndScene
+      address:
+        NA: 0x2148F30
+    - name: SceneOptMenu_EndScene1
+      address:
+        NA: 0x2148F50
+    - name: SceneOptMenu_EndScene2
+      address:
+        NA: 0x2148FB4
+    - name: SceneOptMenu_MoveFocus
+      address:
+        NA: 0x21490C0
+    - name: SceneOptMenu_DispPush
+      address:
+        NA: 0x2149150
+    - name: Dwci_SceneOptMovComm
+      address:
+        NA: 0x214917C
+    - name: SceneOptMovComm_InitGraphics
+      address:
+        NA: 0x21491B4
+    - name: SceneOptMovComm_ProcInit
+      address:
+        NA: 0x2149234
+    - name: SceneOptMovComm_ProcInit1
+      address:
+        NA: 0x2149268
+    - name: SceneOptMovComm_ProcScene
+      address:
+        NA: 0x2149298
+    - name: SceneOptMovComm_Input
       address:
         NA: 0x21492A8
-      description: |-
-        Does nothing but return. Likely a debug hook for a nearby function.
-        
-        No params.
-    - name: ret_021492ac
+    - name: SceneOptMovComm_Draw
       address:
         NA: 0x21492AC
-      description: |-
-        Does nothing but return. Likely a debug hook for a nearby function.
-        
-        No params.
-    - name: ret_02149538
+    - name: SceneOptMovComm_EndScene
+      address:
+        NA: 0x21492B0
+    - name: SceneOptMovComm_EndScene1
+      address:
+        NA: 0x21492D8
+    - name: SceneOptMovComm_CbMov
+      address:
+        NA: 0x214936C
+    - name: SceneOptMovComplete_InitGraphics
+      address:
+        NA: 0x2149414
+    - name: SceneOptMovComplete_ProcInit
+      address:
+        NA: 0x214947C
+    - name: SceneOptMovComplete_ProcInit1
+      address:
+        NA: 0x21494B0
+    - name: SceneOptMovComplete_ProcInit2
+      address:
+        NA: 0x21494DC
+    - name: SceneOptMovComplete_ProcScene
+      address:
+        NA: 0x2149504
+    - name: SceneOptMovComplete_Input
+      address:
+        NA: 0x2149518
+    - name: SceneOptMovComplete_Draw
       address:
         NA: 0x2149538
-      description: |-
-        Does nothing but return. Likely a debug hook for a nearby function.
-        
-        No params.
-    - name: ret_02149758
+    - name: SceneOptMovComplete_Button
+      address:
+        NA: 0x214953C
+    - name: SceneOptMovComplete_EndScene
+      address:
+        NA: 0x2149564
+    - name: SceneOptMovComplete_EndScene1
+      address:
+        NA: 0x2149584
+    - name: SceneOptMovComplete_EndScene2
+      address:
+        NA: 0x21495D0
+    - name: Dwci_SceneOptMovConfirm
+      address:
+        NA: 0x2149604
+    - name: SceneOptMovConfirm_InitGraphics
+      address:
+        NA: 0x2149624
+    - name: SceneOptMovConfirm_ProcInit
+      address:
+        NA: 0x214968C
+    - name: SceneOptMovConfirm_ProcInit1
+      address:
+        NA: 0x21496C0
+    - name: SceneOptMovConfirm_ProcInit2
+      address:
+        NA: 0x21496FC
+    - name: SceneOptMovConfirm_ProcScene
+      address:
+        NA: 0x2149724
+    - name: SceneOptMovConfirm_Input
+      address:
+        NA: 0x2149738
+    - name: SceneOptMovConfirm_Draw
       address:
         NA: 0x2149758
-      description: |-
-        Does nothing but return. Likely a debug hook for a nearby function.
-        
-        No params.
-    - name: ret_021499ec
+    - name: SceneOptMovConfirm_Button
+      address:
+        NA: 0x214975C
+    - name: SceneOptMovConfirm_EndScene
+      address:
+        NA: 0x2149784
+    - name: SceneOptMovConfirm_EndScene1
+      address:
+        NA: 0x21497A4
+    - name: SceneOptMovConfirm_EndScene2
+      address:
+        NA: 0x21497E0
+    - name: Dwci_SceneOptMovConfirm1
+      address:
+        NA: 0x2149830
+    - name: SceneOptMovConfirm1_InitGraphics
+      address:
+        NA: 0x2149878
+    - name: SceneOptMovConfirm1_ProcInit
+      address:
+        NA: 0x21498F8
+    - name: SceneOptMovConfirm1_ProcInit1
+      address:
+        NA: 0x214994C
+    - name: SceneOptMovConfirm1_ProcInit2
+      address:
+        NA: 0x2149978
+    - name: SceneOptMovConfirm1_ProcScene
+      address:
+        NA: 0x21499A0
+    - name: SceneOptMovConfirm1_Input
+      address:
+        NA: 0x21499B4
+    - name: SceneOptMovConfirm1_Draw
       address:
         NA: 0x21499EC
-      description: |-
-        Does nothing but return. Likely a debug hook for a nearby function.
-        
-        No params.
-    - name: ret_02149c8c
+    - name: SceneOptMovConfirm1_Button
+      address:
+        NA: 0x21499F0
+    - name: SceneOptMovConfirm1_EndScene
+      address:
+        NA: 0x2149A40
+    - name: SceneOptMovConfirm1_EndScene1
+      address:
+        NA: 0x2149A60
+    - name: SceneOptMovConfirm1_EndScene2
+      address:
+        NA: 0x2149AC4
+    - name: Dwci_SceneOptMovDisconnect
+      address:
+        NA: 0x2149B7C
+    - name: SceneOptMovDisconnect_InitGraphics
+      address:
+        NA: 0x2149BAC
+    - name: SceneOptMovDisconnect_ProcInit
+      address:
+        NA: 0x2149C18
+    - name: SceneOptMovDisconnect_ProcInit1
+      address:
+        NA: 0x2149C4C
+    - name: SceneOptMovDisconnect_ProcScene
+      address:
+        NA: 0x2149C7C
+    - name: SceneOptMovDisconnect_Draw
       address:
         NA: 0x2149C8C
-      description: |-
-        Does nothing but return. Likely a debug hook for a nearby function.
-        
-        No params.
-    - name: ret_02149f44
+    - name: SceneOptMovDisconnect_EndScene
+      address:
+        NA: 0x2149C90
+    - name: SceneOptMovDisconnect_EndScene1
+      address:
+        NA: 0x2149CCC
+    - name: SceneOptMovDisconnect_Wait
+      address:
+        NA: 0x2149D30
+    - name: Dwci_SceneOptMovFailure
+      address:
+        NA: 0x2149D64
+    - name: SceneOptMovFailure_InitGraphics
+      address:
+        NA: 0x2149DA0
+    - name: SceneOptMovFailure_ProcInit
+      address:
+        NA: 0x2149E20
+    - name: SceneOptMovFailure_ProcInit1
+      address:
+        NA: 0x2149E88
+    - name: SceneOptMovFailure_ProcInit2
+      address:
+        NA: 0x2149EC4
+    - name: SceneOptMovFailure_ProcScene
+      address:
+        NA: 0x2149EF8
+    - name: SceneOptMovFailure_Input
+      address:
+        NA: 0x2149F0C
+    - name: SceneOptMovFailure_Draw
       address:
         NA: 0x2149F44
-      description: |-
-        Does nothing but return. Likely a debug hook for a nearby function.
-        
-        No params.
-    - name: ret_0214a308
+    - name: SceneOptMovFailure_Button
+      address:
+        NA: 0x2149F48
+    - name: SceneOptMovFailure_EndScene
+      address:
+        NA: 0x2149FA0
+    - name: SceneOptMovFailure_EndScene1
+      address:
+        NA: 0x2149FC0
+    - name: SceneOptMovFailure_EndScene2
+      address:
+        NA: 0x214A024
+    - name: Dwci_SceneOptMovUser
+      address:
+        NA: 0x214A0CC
+    - name: SceneOptMovUser_InitGraphics
+      address:
+        NA: 0x214A19C
+    - name: SceneOptMovUser_ProcInit
+      address:
+        NA: 0x214A21C
+    - name: SceneOptMovUser_ProcInit1
+      address:
+        NA: 0x214A250
+    - name: SceneOptMovUser_ProcInit2
+      address:
+        NA: 0x214A274
+    - name: SceneOptMovUser_ProcScene
+      address:
+        NA: 0x214A298
+    - name: SceneOptMovUser_Input
       address:
         NA: 0x214A308
-      description: |-
-        Does nothing but return. Likely a debug hook for a nearby function.
-        
-        No params.
-    - name: ret_0214a30c
+    - name: SceneOptMovUser_Draw
       address:
         NA: 0x214A30C
-      description: |-
-        Does nothing but return. Likely a debug hook for a nearby function.
-        
-        No params.
-    - name: ret_0214a660
+    - name: SceneOptMovUser_EndScene
+      address:
+        NA: 0x214A310
+    - name: SceneOptMovUser_EndScene1
+      address:
+        NA: 0x214A36C
+    - name: SceneOptMovUser_EndScene2
+      address:
+        NA: 0x214A3C8
+    - name: SceneOptMovUser_ObMov
+      address:
+        NA: 0x214A490
+    - name: Dwci_IsFold_SceneOptMovWait
+      address:
+        NA: 0x214A4A4
+    - name: Dwci_SceneOptMovWait
+      address:
+        NA: 0x214A4C4
+    - name: SceneOptMovWait_InitGraphics
+      address:
+        NA: 0x214A510
+    - name: SceneOptMovWait_ProcInit
+      address:
+        NA: 0x214A590
+    - name: SceneOptMovWait_ProcInit1
+      address:
+        NA: 0x214A5C4
+    - name: SceneOptMovWait_ProcInit2
+      address:
+        NA: 0x214A5F0
+    - name: SceneOptMovWait_ProcScene
+      address:
+        NA: 0x214A614
+    - name: SceneOptMovWait_Input
+      address:
+        NA: 0x214A628
+    - name: SceneOptMovWait_Draw
       address:
         NA: 0x214A660
-      description: |-
-        Does nothing but return. Likely a debug hook for a nearby function.
-        
-        No params.
-    - name: ret_0214aba8
+    - name: SceneOptMovWait_Button
+      address:
+        NA: 0x214A664
+    - name: SceneOptMovWait_EndScene
+      address:
+        NA: 0x214A690
+    - name: SceneOptMovWait_EndScene1
+      address:
+        NA: 0x214A6C8
+    - name: SceneOptMovWait_EndScene2
+      address:
+        NA: 0x214A748
+    - name: SceneOptMovWait_CbMov
+      address:
+        NA: 0x214A840
+    - name: Dwci_IsFold_SceneSetAossButton
+      address:
+        NA: 0x214A89C
+    - name: Dwci_SceneSetAossButton
+      address:
+        NA: 0x214A8BC
+    - name: SceneSetAossButton_InitGraphics
+      address:
+        NA: 0x214A91C
+    - name: SceneSetAossButton_ProcInit
+      address:
+        NA: 0x214A9C4
+    - name: SceneSetAossButton_ProcInit1
+      address:
+        NA: 0x214AA18
+    - name: SceneSetAossButton_ProcInit2
+      address:
+        NA: 0x214AA54
+    - name: SceneSetAossButton_ProcScene
+      address:
+        NA: 0x214AA9C
+    - name: SceneSetAossButton_Input
+      address:
+        NA: 0x214AB70
+    - name: SceneSetAossButton_Draw
       address:
         NA: 0x214ABA8
-      description: |-
-        Does nothing but return. Likely a debug hook for a nearby function.
-        
-        No params.
-    - name: ret_0214af68
+    - name: SceneSetAossButton_Button
+      address:
+        NA: 0x214ABAC
+    - name: SceneSetAossButton_EndScene
+      address:
+        NA: 0x214ABF8
+    - name: SceneSetAossButton_EndScene1
+      address:
+        NA: 0x214AC34
+    - name: SceneSetAossButton_EndScene2
+      address:
+        NA: 0x214AC98
+    - name: SceneSetAossButton_TaskVBlank
+      address:
+        NA: 0x214AD74
+    - name: SceneSetAossButton_ProcError
+      address:
+        NA: 0x214AD90
+    - name: SceneSetAossButton_ProcError1
+      address:
+        NA: 0x214ADBC
+    - name: SceneSetAossButton_ProcWait
+      address:
+        NA: 0x214ADDC
+    - name: SceneSetAossButton_ProcCancel
+      address:
+        NA: 0x214AE28
+    - name: Dwci_SceneSetAossComplete
+      address:
+        NA: 0x214AE58
+    - name: SceneSetAossComplete_InitGraphics
+      address:
+        NA: 0x214AE94
+    - name: SceneSetAossComplete_ProcInit
+      address:
+        NA: 0x214AF00
+    - name: SceneSetAossComplete_ProcInit1
+      address:
+        NA: 0x214AF34
+    - name: SceneSetAossComplete_ProcScene
+      address:
+        NA: 0x214AF58
+    - name: SceneSetAossComplete_Draw
       address:
         NA: 0x214AF68
-      description: |-
-        Does nothing but return. Likely a debug hook for a nearby function.
-        
-        No params.
-    - name: ret_0214ca98
+    - name: SceneSetAossComplete_EndScene
+      address:
+        NA: 0x214AF6C
+    - name: SceneSetAossComplete_EndScene1
+      address:
+        NA: 0x214AFA8
+    - name: SceneSetAossComplete_Wait
+      address:
+        NA: 0x214B018
+    - name: Dwci_SceneSetApList
+      address:
+        NA: 0x214B04C
+    - name: SceneSetApList_InitGraphics
+      address:
+        NA: 0x214B124
+    - name: SceneSetApList_InitScrollBar
+      address:
+        NA: 0x214B278
+    - name: SceneSetApList_GetCharName
+      address:
+        NA: 0x214B320
+    - name: SceneSetApList_ProcInit
+      address:
+        NA: 0x214B494
+    - name: SceneSetApList_ProcInit1
+      address:
+        NA: 0x214B4E8
+    - name: SceneSetApList_ProcInit2
+      address:
+        NA: 0x214B524
+    - name: SceneSetApList_ProcScene
+      address:
+        NA: 0x214B54C
+    - name: SceneSetApList_Input
+      address:
+        NA: 0x214B560
+    - name: SceneSetApList_Draw
+      address:
+        NA: 0x214B7B4
+    - name: SceneSetApList_Button
+      address:
+        NA: 0x214BA24
+    - name: SceneSetApList_EndScene
+      address:
+        NA: 0x214BB30
+    - name: SceneSetApList_EndScene1
+      address:
+        NA: 0x214BB50
+    - name: SceneSetApList_EndScene2
+      address:
+        NA: 0x214BBC0
+    - name: SceneSetApList_DrawApInfo
+      address:
+        NA: 0x214BDBC
+    - name: SceneSetApList_DrawAp
+      address:
+        NA: 0x214BE64
+    - name: SceneSetApList_DrapApObj
+      address:
+        NA: 0x214BFDC
+    - name: SceneSetApList_SetOffset
+      address:
+        NA: 0x214C068
+    - name: SceneSetApList_TaskUp
+      address:
+        NA: 0x214C124
+    - name: SceneSetApList_TaskDown
+      address:
+        NA: 0x214C1E0
+    - name: SceneSetApList_TaskVBlank
+      address:
+        NA: 0x214C278
+    - name: SceneSetApList_DispFocus
+      address:
+        NA: 0x214C2D4
+    - name: SceneSetApList_MoveFocus
+      address:
+        NA: 0x214C320
+    - name: SceneSetApList_ScrollUp
+      address:
+        NA: 0x214C46C
+    - name: SceneSetApList_ScrollDown
+      address:
+        NA: 0x214C4E0
+    - name: SceneSetApList_DispPushButton
+      address:
+        NA: 0x214C564
+    - name: SceneSetApList_ProcError
+      address:
+        NA: 0x214C594
+    - name: SceneSetApList_ProcError1
+      address:
+        NA: 0x214C5C0
+    - name: Dwci_SceneSetEdit32
+      address:
+        NA: 0x214C5E8
+    - name: SceneSetEdit32_InitGraphics
+      address:
+        NA: 0x214C71C
+    - name: SceneSetEdit32_ProcInit
+      address:
+        NA: 0x214C7D8
+    - name: SceneSetEdit32_ProcInit1
+      address:
+        NA: 0x214C82C
+    - name: SceneSetEdit32_ProcInit2
+      address:
+        NA: 0x214C8A8
+    - name: SceneSetEdit32_ProcScene
+      address:
+        NA: 0x214C8C8
+    - name: SceneSetEdit32_Input
+      address:
+        NA: 0x214C8D8
+    - name: SceneSetEdit32_Draw
       address:
         NA: 0x214CA98
-      description: |-
-        Does nothing but return. Likely a debug hook for a nearby function.
-        
-        No params.
-    - name: ret_0214d80c
+    - name: SceneSetEdit32_EndScene
+      address:
+        NA: 0x214CA9C
+    - name: SceneSetEdit32_EndScene1
+      address:
+        NA: 0x214CAB8
+    - name: SceneSetEdit32_EndScene2
+      address:
+        NA: 0x214CAE8
+    - name: SceneSetEdit32_EndScene3
+      address:
+        NA: 0x214CBC0
+    - name: SceneSetEdit32_DrawSsid
+      address:
+        NA: 0x214CCC4
+    - name: SceneSetEdit32_DispCaret
+      address:
+        NA: 0x214CDB8
+    - name: SceneSetEdit32_ProcWin
+      address:
+        NA: 0x214CE20
+    - name: SceneSetEdit32_ProcWin1
+      address:
+        NA: 0x214CE7C
+    - name: SceneSetEdit32_IsCorrect
+      address:
+        NA: 0x214CF2C
+    - name: SceneSetEdit32_ProcError
+      address:
+        NA: 0x214D0B8
+    - name: SceneSetEdit32_ProcError1
+      address:
+        NA: 0x214D0E4
+    - name: Dwci_SceneSetEditAddress
+      address:
+        NA: 0x214D128
+    - name: SceneSetEditAddress_InitGraphics
+      address:
+        NA: 0x214D29C
+    - name: SceneSetEditAddress_ProcInit
+      address:
+        NA: 0x214D358
+    - name: SceneSetEditAddress_ProcInit1
+      address:
+        NA: 0x214D3AC
+    - name: SceneSetEditAddress_ProcInit2
+      address:
+        NA: 0x214D438
+    - name: SceneSetEditAddress_ProcScene
+      address:
+        NA: 0x214D458
+    - name: SceneSetEditAddress_Input
+      address:
+        NA: 0x214D468
+    - name: SceneSetEditAddress_IsOver
+      address:
+        NA: 0x214D778
+    - name: SceneSetEditAddress_Draw
       address:
         NA: 0x214D80C
-      description: |-
-        Does nothing but return. Likely a debug hook for a nearby function.
-        
-        No params.
-    - name: ret_0214e2b4
+    - name: SceneSetEditAddress_EndScene
+      address:
+        NA: 0x214D810
+    - name: SceneSetEditAddress_EndScene1
+      address:
+        NA: 0x214D82C
+    - name: SceneSetEditAddress_EndScene2
+      address:
+        NA: 0x214D85C
+    - name: SceneSetEditAddress_EndScene3
+      address:
+        NA: 0x214D8E8
+    - name: SceneSetEditAddress_DrawAddress
+      address:
+        NA: 0x214D98C
+    - name: SceneSetEditAddress_DispCaret
+      address:
+        NA: 0x214DA50
+    - name: SceneSetEditAddress_ProcWin
+      address:
+        NA: 0x214DAA4
+    - name: SceneSetEditAddress_ProcWin1
+      address:
+        NA: 0x214DB00
+    - name: SceneSetEditAddress_ArrangeAddress
+      address:
+        NA: 0x214DBB4
+    - name: SceneSetEditAddress_IsCorrect
+      address:
+        NA: 0x214DC2C
+    - name: SceneSetEditAddress_ProcError
+      address:
+        NA: 0x214DD80
+    - name: SceneSetEditAddress_ProcError1
+      address:
+        NA: 0x214DDAC
+    - name: Dwci_SceneSetError
+      address:
+        NA: 0x214DDF0
+    - name: SceneSetError_InitGraphics
+      address:
+        NA: 0x214DE0C
+    - name: SceneSetError_DrawMessage
+      address:
+        NA: 0x214DE8C
+    - name: SceneSetError_ProcInit
+      address:
+        NA: 0x214E1E8
+    - name: SceneSetError_ProcInit1
+      address:
+        NA: 0x214E21C
+    - name: SceneSetError_ProcInit2
+      address:
+        NA: 0x214E258
+    - name: SceneSetError_ProcScene
+      address:
+        NA: 0x214E280
+    - name: SceneSetError_Input
+      address:
+        NA: 0x214E294
+    - name: SceneSetError_Draw
       address:
         NA: 0x214E2B4
-      description: |-
-        Does nothing but return. Likely a debug hook for a nearby function.
-        
-        No params.
-    - name: ret_02150a60
+    - name: SceneSetError_Button
+      address:
+        NA: 0x214E2B8
+    - name: SceneSetError_EndScene
+      address:
+        NA: 0x214E2E0
+    - name: SceneSetError_EndScene1
+      address:
+        NA: 0x214E300
+    - name: SceneSetError_EndScene2
+      address:
+        NA: 0x214E350
+    - name: Dwci_SetErrorCode
+      address:
+        NA: 0x214E404
+    - name: Dwci_SceneSetList
+      address:
+        NA: 0x214E414
+    - name: SceneSetList_InitGraphics
+      address:
+        NA: 0x214E610
+    - name: SceneSetList_CalcParam
+      address:
+        NA: 0x214E824
+    - name: SceneSetList_ProcInit
+      address:
+        NA: 0x214E860
+    - name: SceneSetList_ProcInit1
+      address:
+        NA: 0x214E8B4
+    - name: SceneSetList_ProcScene
+      address:
+        NA: 0x214E8E8
+    - name: SceneSetList_Input
+      address:
+        NA: 0x214E8F8
+    - name: SceneSetList_InputWinButton
+      address:
+        NA: 0x214EB78
+    - name: SceneSetList_PushWinButton
+      address:
+        NA: 0x214EBFC
+    - name: SceneSetList_PushIpAuto
+      address:
+        NA: 0x214ED7C
+    - name: SceneSetList_PushDnsAuto
+      address:
+        NA: 0x214EDE8
+    - name: SceneSetList_Draw
+      address:
+        NA: 0x214EE20
+    - name: SceneSetList_EndScene
+      address:
+        NA: 0x214F07C
+    - name: SceneSetList_EndScene1
+      address:
+        NA: 0x214F09C
+    - name: SceneSetList_EndScene2
+      address:
+        NA: 0x214F0E8
+    - name: SceneSetList_DrawWindow
+      address:
+        NA: 0x214F3DC
+    - name: SceneSetList_DrawColumnChar
+      address:
+        NA: 0x214F49C
+    - name: SceneSetList_DrawColumnObj
+      address:
+        NA: 0x214F638
+    - name: SceneSetList_IsEnablePush
+      address:
+        NA: 0x214F78C
+    - name: SceneSetList_DispObj
+      address:
+        NA: 0x214F820
+    - name: SceneSetList_DrawString
+      address:
+        NA: 0x214F924
+    - name: SceneSetList_DrawAddress
+      address:
+        NA: 0x214FA78
+    - name: SceneSetList_SetOffset
+      address:
+        NA: 0x214FB00
+    - name: SceneSetList_IsPush
+      address:
+        NA: 0x214FD10
+    - name: SceneSetList_CalcColumnIdx
+      address:
+        NA: 0x214FF84
+    - name: SceneSetList_CalcIdxColumn
+      address:
+        NA: 0x214FFC8
+    - name: SceneSetList_TaskUp
+      address:
+        NA: 0x214FFEC
+    - name: SceneSetList_TaskDown
+      address:
+        NA: 0x21500B4
+    - name: SceneSetList_TaskVBlank
+      address:
+        NA: 0x2150158
+    - name: SceneSetList_DispFocus
+      address:
+        NA: 0x21501DC
+    - name: SceneSetList_ApplyForcus
+      address:
+        NA: 0x21502B4
+    - name: SceneSetList_ApplyForcus1
+      address:
+        NA: 0x2150364
+    - name: SceneSetList_MoveFocus
+      address:
+        NA: 0x2150394
+    - name: SceneSetList_DispPushButton
+      address:
+        NA: 0x2150684
+    - name: SceneSetList_TaskPushCount
+      address:
+        NA: 0x21506B8
+    - name: SceneSetList_PushButtonYesNo
+      address:
+        NA: 0x215070C
+    - name: SceneSetList_IsCorrect
+      address:
+        NA: 0x21507D0
+    - name: SceneSetList_ProcError
+      address:
+        NA: 0x2150870
+    - name: SceneSetList_ProcError1
+      address:
+        NA: 0x21508B0
+    - name: Dwci_SetListReturn
+      address:
+        NA: 0x21508D0
+    - name: Dwci_SceneSetListSave
+      address:
+        NA: 0x21508E0
+    - name: SceneSetListSave_InitGraphics
+      address:
+        NA: 0x2150900
+    - name: SceneSetListSave_ProcInit
+      address:
+        NA: 0x2150994
+    - name: SceneSetListSave_ProcInit1
+      address:
+        NA: 0x21509E8
+    - name: SceneSetListSave_ProcScene
+      address:
+        NA: 0x2150A38
+    - name: SceneSetListSave_Input
       address:
         NA: 0x2150A60
-      description: |-
-        Does nothing but return. Likely a debug hook for a nearby function.
-        
-        No params.
-    - name: ret_02150a64
+    - name: SceneSetListSave_Draw
       address:
         NA: 0x2150A64
-      description: |-
-        Does nothing but return. Likely a debug hook for a nearby function.
-        
-        No params.
-    - name: ret_02150cbc
+    - name: SceneSetListSave_EndScene
+      address:
+        NA: 0x2150A68
+    - name: SceneSetListSave_EndScene1
+      address:
+        NA: 0x2150AA4
+    - name: Dwci_IsFold_SceneSetRakuButton
+      address:
+        NA: 0x2150B00
+    - name: Dwci_SceneSetRakuButton
+      address:
+        NA: 0x2150B20
+    - name: SceneSetRakuButton_InitGraphics
+      address:
+        NA: 0x2150B5C
+    - name: SceneSetRakuButton_ProcInit
+      address:
+        NA: 0x2150BDC
+    - name: SceneSetRakuButton_ProcInit1
+      address:
+        NA: 0x2150C10
+    - name: SceneSetRakuButton_ProcInit2
+      address:
+        NA: 0x2150C3C
+    - name: SceneSetRakuButton_ProcScene
+      address:
+        NA: 0x2150C64
+    - name: SceneSetRakuButton_Input
+      address:
+        NA: 0x2150C84
+    - name: SceneSetRakuButton_Draw
       address:
         NA: 0x2150CBC
-      description: |-
-        Does nothing but return. Likely a debug hook for a nearby function.
-        
-        No params.
-    - name: ret_021510d4
+    - name: SceneSetRakuButton_Button
+      address:
+        NA: 0x2150CC0
+    - name: SceneSetRakuButton_EndScene
+      address:
+        NA: 0x2150CEC
+    - name: SceneSetRakuButton_EndScene1
+      address:
+        NA: 0x2150D0C
+    - name: SceneSetRakuButton_EndScene2
+      address:
+        NA: 0x2150D80
+    - name: SceneSetRakuButton_CheckRaku
+      address:
+        NA: 0x2150E48
+    - name: SceneSetRakuButton_ProcError
+      address:
+        NA: 0x2150ECC
+    - name: SceneSetRakuButton_ProcError1
+      address:
+        NA: 0x2150EF8
+    - name: Dwci_IsFold_SceneSetRakuButton1
+      address:
+        NA: 0x2150F18
+    - name: SceneSetRakuButton1_InitGraphics
+      address:
+        NA: 0x2150F74
+    - name: SceneSetRakuButton1_ProcInit
+      address:
+        NA: 0x2150FF4
+    - name: SceneSetRakuButton1_ProcInit1
+      address:
+        NA: 0x2151028
+    - name: SceneSetRakuButton1_ProcInit2
+      address:
+        NA: 0x2151054
+    - name: SceneSetRakuButton1_ProcScene
+      address:
+        NA: 0x215107C
+    - name: SceneSetRakuButton1_Input
+      address:
+        NA: 0x215109C
+    - name: SceneSetRakuButton1_Draw
       address:
         NA: 0x21510D4
-      description: |-
-        Does nothing but return. Likely a debug hook for a nearby function.
-        
-        No params.
-    - name: ret_0215148c
+    - name: SceneSetRakuButton1_Button
+      address:
+        NA: 0x21510D8
+    - name: SceneSetRakuButton1_EndScene
+      address:
+        NA: 0x2151104
+    - name: SceneSetRakuButton1_EndScene1
+      address:
+        NA: 0x2151124
+    - name: SceneSetRakuButton1_EndScene2
+      address:
+        NA: 0x2151188
+    - name: SceneSetRakuButton1_CheckRaku
+      address:
+        NA: 0x2151244
+    - name: SceneSetRakuButton1_ProcError
+      address:
+        NA: 0x215131C
+    - name: SceneSetRakuButton1_ProcError1
+      address:
+        NA: 0x2151348
+    - name: Dwci_SceneSetRakuComplete
+      address:
+        NA: 0x2151368
+    - name: SceneSetRakuComplete_InitGraphics
+      address:
+        NA: 0x21513A4
+    - name: SceneSetRakuComplete_ProcInit
+      address:
+        NA: 0x2151424
+    - name: SceneSetRakuComplete_ProcInit1
+      address:
+        NA: 0x2151458
+    - name: SceneSetRakuComplete_ProcScene
+      address:
+        NA: 0x215147C
+    - name: SceneSetRakuComplete_Draw
       address:
         NA: 0x215148C
-      description: |-
-        Does nothing but return. Likely a debug hook for a nearby function.
-        
-        No params.
-    - name: ret_021517a8
+    - name: SceneSetRakuComplete_EndScene
+      address:
+        NA: 0x2151490
+    - name: SceneSetRakuComplete_EndScene1
+      address:
+        NA: 0x21514CC
+    - name: SceneSetRakuComplete_Wait
+      address:
+        NA: 0x215153C
+    - name: Dwci_IsFold_SceneSetRakuReady
+      address:
+        NA: 0x2151570
+    - name: Dwci_SceneSetRakuReady
+      address:
+        NA: 0x2151590
+    - name: SceneSetRakuReady_InitGraphics
+      address:
+        NA: 0x21515EC
+    - name: SceneSetRakuReady_ProcInit
+      address:
+        NA: 0x2151694
+    - name: SceneSetRakuReady_ProcInit1
+      address:
+        NA: 0x21516E8
+    - name: SceneSetRakuReady_ProcInit2
+      address:
+        NA: 0x2151728
+    - name: SceneSetRakuReady_ProcScene
+      address:
+        NA: 0x2151750
+    - name: SceneSetRakuReady_Input
+      address:
+        NA: 0x2151770
+    - name: SceneSetRakuReady_Draw
       address:
         NA: 0x21517A8
-      description: |-
-        Does nothing but return. Likely a debug hook for a nearby function.
-        
-        No params.
-    - name: ret_02151d30
+    - name: SceneSetRakuReady_Button
+      address:
+        NA: 0x21517AC
+    - name: SceneSetRakuReady_EndScene
+      address:
+        NA: 0x21517D8
+    - name: SceneSetRakuReady_EndScene1
+      address:
+        NA: 0x21517F8
+    - name: SceneSetRakuReady_EndScene2
+      address:
+        NA: 0x215186C
+    - name: SceneSetRakuReady_CheckRaku
+      address:
+        NA: 0x2151934
+    - name: SceneSetRakuReady_ProcError
+      address:
+        NA: 0x21519B8
+    - name: SceneSetRakuReady_ProcError1
+      address:
+        NA: 0x21519E4
+    - name: Dwci_SceneSetSearch
+      address:
+        NA: 0x2151A04
+    - name: SceneSetSearch_InitGraphics
+      address:
+        NA: 0x2151A6C
+    - name: SceneSetSearch_ProcInit
+      address:
+        NA: 0x2151B14
+    - name: SceneSetSearch_ProcInit1
+      address:
+        NA: 0x2151B68
+    - name: SceneSetSearch_ProcInit2
+      address:
+        NA: 0x2151BA4
+    - name: SceneSetSearch_ProcScene
+      address:
+        NA: 0x2151BCC
+    - name: SceneSetSearch_IsEnd
+      address:
+        NA: 0x2151BE4
+    - name: SceneSetSearch_Input
+      address:
+        NA: 0x2151D0C
+    - name: SceneSetSearch_Draw
       address:
         NA: 0x2151D30
-      description: |-
-        Does nothing but return. Likely a debug hook for a nearby function.
-        
-        No params.
-    - name: ret_0215232c
+    - name: SceneSetSearch_Button
+      address:
+        NA: 0x2151D34
+    - name: SceneSetSearch_EndScene
+      address:
+        NA: 0x2151D60
+    - name: SceneSetSearch_EndScene1
+      address:
+        NA: 0x2151D80
+    - name: SceneSetSearch_EndScene2
+      address:
+        NA: 0x2151DD0
+    - name: SceneSetSearch_ProcError
+      address:
+        NA: 0x2151E9C
+    - name: SceneSetSearch_ProcError1
+      address:
+        NA: 0x2151EC8
+    - name: Dwci_SceneSetSelectAp
+      address:
+        NA: 0x2151EE8
+    - name: SceneSetSelectAp_InitGraphics
+      address:
+        NA: 0x2151F48
+    - name: SceneSetSelectAp_InitObj
+      address:
+        NA: 0x2152058
+    - name: SceneSetSelectAp_ProcInit
+      address:
+        NA: 0x2152160
+    - name: SceneSetSelectAp_ProcInit1
+      address:
+        NA: 0x21521B4
+    - name: SceneSetSelectAp_ProcInit2
+      address:
+        NA: 0x21521F0
+    - name: SceneSetSelectAp_ProcScene
+      address:
+        NA: 0x2152224
+    - name: SceneSetSelectAp_Input
+      address:
+        NA: 0x2152238
+    - name: SceneSetSelectAp_Draw
       address:
         NA: 0x215232C
-      description: |-
-        Does nothing but return. Likely a debug hook for a nearby function.
-        
-        No params.
-    - name: ret_02153088
+    - name: SceneSetSelectAp_Button
+      address:
+        NA: 0x2152330
+    - name: SceneSetSelectAp_EndScene
+      address:
+        NA: 0x2152464
+    - name: SceneSetSelectAp_EndScene1
+      address:
+        NA: 0x21524A0
+    - name: SceneSetSelectAp_EndScene2
+      address:
+        NA: 0x2152524
+    - name: SceneSetSelectAp_DispFocus
+      address:
+        NA: 0x21526C8
+    - name: SceneSetSelectAp_MoveFocus
+      address:
+        NA: 0x2152744
+    - name: SceneSetSelectAp_DispPushClear
+      address:
+        NA: 0x2152938
+    - name: SceneSetSelectAp_ProcErase
+      address:
+        NA: 0x21529C8
+    - name: SceneSetSelectAp_ProcErase1
+      address:
+        NA: 0x2152B34
+    - name: SceneSetSelectAp_DispPush
+      address:
+        NA: 0x2152B58
+    - name: Dwci_SceneSetSelectWay
+      address:
+        NA: 0x2152C28
+    - name: SceneSetSelectWay_InitGraphics
+      address:
+        NA: 0x2152D4C
+    - name: SceneSetSelectWay_ProcInit
+      address:
+        NA: 0x2152E38
+    - name: SceneSetSelectWay_ProcInit1
+      address:
+        NA: 0x2152E8C
+    - name: SceneSetSelectWay_ProcInit2
+      address:
+        NA: 0x2152EC8
+    - name: SceneSetSelectWay_ProcScene
+      address:
+        NA: 0x2152EF0
+    - name: SceneSetSelectWay_Input
+      address:
+        NA: 0x2152F04
+    - name: SceneSetSelectWay_Draw
       address:
         NA: 0x2153088
-      description: |-
-        Does nothing but return. Likely a debug hook for a nearby function.
-        
-        No params.
+    - name: SceneSetSelectWay_Button
+      address:
+        NA: 0x215308C
+    - name: SceneSetSelectWay_EndScene
+      address:
+        NA: 0x21530E0
+    - name: SceneSetSelectWay_EndScene1
+      address:
+        NA: 0x2153100
+    - name: SceneSetSelectWay_EndScene2
+      address:
+        NA: 0x2153164
+    - name: SceneSetSelectWay_MoveFocus
+      address:
+        NA: 0x2153294
+    - name: SceneSetSelectWay_DispPush
+      address:
+        NA: 0x2153388
+    - name: Dwci_SceneSetTest
+      address:
+        NA: 0x21533E0
+    - name: SceneSetTest_InitGraphics
+      address:
+        NA: 0x215346C
+    - name: SceneSetTest_InitAc
+      address:
+        NA: 0x2153514
+    - name: SceneSetTest_ProcInit
+      address:
+        NA: 0x21535AC
+    - name: SceneSetTest_ProcInit1
+      address:
+        NA: 0x2153618
+    - name: SceneSetTest_ProcScene
+      address:
+        NA: 0x215364C
     - name: ret_02153660
       address:
         NA: 0x2153660
@@ -406,48 +2822,1146 @@ overlay11:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
-    - name: ret_021538e0
+    - name: SceneSetTest_EndScene
+      address:
+        NA: 0x215366C
+    - name: SceneSetTest_EndScene1
+      address:
+        NA: 0x2153694
+    - name: SceneSetTest_EndScene2
+      address:
+        NA: 0x21536B8
+    - name: SceneSetTest_TaskAc
+      address:
+        NA: 0x215374C
+    - name: SceneSetTest_AcAlloc
+      address:
+        NA: 0x21537B8
+    - name: SceneSetTest_AcFree
+      address:
+        NA: 0x21537CC
+    - name: Dwci_SceneSetTestComplete
+      address:
+        NA: 0x21537DC
+    - name: SceneSetTestComplete_InitGraphics
+      address:
+        NA: 0x215380C
+    - name: SceneSetTestComplete_ProcInit
+      address:
+        NA: 0x2153878
+    - name: SceneSetTestComplete_ProcInit2
+      address:
+        NA: 0x21538AC
+    - name: SceneSetTestComplete_ProcScene
+      address:
+        NA: 0x21538D0
+    - name: SceneSetTestComplete_Draw
       address:
         NA: 0x21538E0
-      description: |-
-        Does nothing but return. Likely a debug hook for a nearby function.
-        
-        No params.
-    - name: ret_02153c2c
+    - name: SceneSetTestComplete_EndScene
+      address:
+        NA: 0x21538E4
+    - name: SceneSetTestComplete_EndScene1
+      address:
+        NA: 0x215393C
+    - name: SceneSetTestComplete_Wait
+      address:
+        NA: 0x21539E0
+    - name: Dwci_SceneSetTestConfirm
+      address:
+        NA: 0x2153A50
+    - name: SceneSetTestConfirm_InitGraphics
+      address:
+        NA: 0x2153AA8
+    - name: SceneSetTestConfirm_ProcInit
+      address:
+        NA: 0x2153B14
+    - name: SceneSetTestConfirm_ProcInit1
+      address:
+        NA: 0x2153B68
+    - name: SceneSetTestConfirm_ProcScene
+      address:
+        NA: 0x2153BF0
+    - name: SceneSetTestConfirm_Input
       address:
         NA: 0x2153C2C
-      description: |-
-        Does nothing but return. Likely a debug hook for a nearby function.
-        
-        No params.
-    - name: ret_02153c30
+    - name: SceneSetTestConfirm_Draw
       address:
         NA: 0x2153C30
-      description: |-
-        Does nothing but return. Likely a debug hook for a nearby function.
-        
-        No params.
-    - name: ret_02153dcc
+    - name: SceneSetTestConfirm_EndScene
+      address:
+        NA: 0x2153C34
+    - name: SceneSetTestConfirm_EndScene1
+      address:
+        NA: 0x2153C68
+    - name: Dwci_SceneSetUsbComplete
+      address:
+        NA: 0x2153CA4
+    - name: SceneSetUsbComplete_InitGraphics
+      address:
+        NA: 0x2153CE4
+    - name: SceneSetUsbComplete_ProcInit
+      address:
+        NA: 0x2153D64
+    - name: SceneSetUsbComplete_ProcInit1
+      address:
+        NA: 0x2153D98
+    - name: SceneSetUsbComplete_ProcScene
+      address:
+        NA: 0x2153DBC
+    - name: SceneSetUsbComplete_Draw
       address:
         NA: 0x2153DCC
-      description: |-
-        Does nothing but return. Likely a debug hook for a nearby function.
-        
-        No params.
-    - name: ret_021540ac
+    - name: SceneSetUsbComplete_EndScene
+      address:
+        NA: 0x2153DD0
+    - name: SceneSetUsbComplete_EndScene1
+      address:
+        NA: 0x2153E0C
+    - name: SceneSetUsbComplete_Wait
+      address:
+        NA: 0x2153E7C
+    - name: Dwci_SceneSetUsbReady
+      address:
+        NA: 0x2153EB0
+    - name: SceneSetUsbReady_InitGraphics
+      address:
+        NA: 0x2153F00
+    - name: SceneSetUsbReady_ProcInit
+      address:
+        NA: 0x2153FA8
+    - name: SceneSetUsbReady_ProcInit1
+      address:
+        NA: 0x2153FFC
+    - name: SceneSetUsbReady_ProcInit2
+      address:
+        NA: 0x2154038
+    - name: SceneSetUsbReady_ProcScene
+      address:
+        NA: 0x2154060
+    - name: SceneSetUsbReady_Input
+      address:
+        NA: 0x2154074
+    - name: SceneSetUsbReady_Draw
       address:
         NA: 0x21540AC
-      description: |-
-        Does nothing but return. Likely a debug hook for a nearby function.
-        
-        No params.
-    - name: ret_0215446c
+    - name: SceneSetUsbReady_Button
+      address:
+        NA: 0x21540B0
+    - name: SceneSetUsbReady_EndScene
+      address:
+        NA: 0x2154100
+    - name: SceneSetUsbReady_EndScene1
+      address:
+        NA: 0x2154120
+    - name: SceneSetUsbReady_EndScene2
+      address:
+        NA: 0x2154184
+    - name: Dwci_IsFold_SceneSetUsbReady1
+      address:
+        NA: 0x215423C
+    - name: Dwci_SceneSetUsbReady1
+      address:
+        NA: 0x215425C
+    - name: SceneSetUsbReady1_InitGraphics
+      address:
+        NA: 0x21542F0
+    - name: SceneSetUsbReady1_ProcInit
+      address:
+        NA: 0x2154398
+    - name: SceneSetUsbReady1_ProcInit1
+      address:
+        NA: 0x21543CC
+    - name: SceneSetUsbReady1_ProcInit2
+      address:
+        NA: 0x21543F8
+    - name: SceneSetUsbReady1_ProcScene
+      address:
+        NA: 0x2154420
+    - name: SceneSetUsbReady1_Input
+      address:
+        NA: 0x2154434
+    - name: SceneSetUsbReady1_Draw
       address:
         NA: 0x215446C
-      description: |-
-        Does nothing but return. Likely a debug hook for a nearby function.
-        
-        No params.
+    - name: SceneSetUsbReady1_Button
+      address:
+        NA: 0x2154470
+    - name: SceneSetUsbReady1_EndScene
+      address:
+        NA: 0x21544BC
+    - name: SceneSetUsbReady1_EndScene1
+      address:
+        NA: 0x21544DC
+    - name: SceneSetUsbReady1_EndScene2
+      address:
+        NA: 0x2154548
+    - name: SceneSetUsbReady1_CbUsb
+      address:
+        NA: 0x215463C
+    - name: SceneSetUsbReady1_ProcNotFound
+      address:
+        NA: 0x2154728
+    - name: SceneSetUsbReady1_ProcNotFound1
+      address:
+        NA: 0x2154754
+    - name: SceneSetUsbReady1_ProcBoth
+      address:
+        NA: 0x2154774
+    - name: SceneSetUsbReady1_ProcBoth1
+      address:
+        NA: 0x21547D0
+    - name: Dwci_ScreenlInit
+      address:
+        NA: 0x2154838
+    - name: Dwci_ScreenlEnd
+      address:
+        NA: 0x2154898
+    - name: Dwci_ScreenlRenew
+      address:
+        NA: 0x21548C4
+    - name: Dwci_ScreenlCopy
+      address:
+        NA: 0x21548DC
+    - name: Screen_TaskLoad
+      address:
+        NA: 0x2154934
+    - name: Dwci_ScreenlCopyPalette
+      address:
+        NA: 0x2154988
+    - name: Screen_TaskCopyPltt
+      address:
+        NA: 0x21549C4
+    - name: Dwci_ScreenlSetPalette
+      address:
+        NA: 0x21549F0
+    - name: Screen_TaskSetPltt
+      address:
+        NA: 0x2154A1C
+    - name: Dwci_SBlInit
+      address:
+        NA: 0x2154A4C
+    - name: Dwci_SBlEnd
+      address:
+        NA: 0x2154B24
+    - name: Dwci_SBlGet
+      address:
+        NA: 0x2154B60
+    - name: Dwci_SBlGetState
+      address:
+        NA: 0x2154B74
+    - name: Dwci_SBlSet
+      address:
+        NA: 0x2154B88
+    - name: Dwci_SBlEnable
+      address:
+        NA: 0x2154B94
+    - name: Dwci_SBlDisable
+      address:
+        NA: 0x2154BAC
+    - name: ScrollBar_TaskMain
+      address:
+        NA: 0x2154BC4
+    - name: ScrollBar_MoveBar
+      address:
+        NA: 0x2154D48
+    - name: ScrollBar_PlaySound
+      address:
+        NA: 0x2154E18
+    - name: ScrollBar_StepBar
+      address:
+        NA: 0x2154E90
+    - name: ScrollBar_SetBar
+      address:
+        NA: 0x2154EBC
+    - name: ScrollBar_IsTrigger
+      address:
+        NA: 0x2154F24
+    - name: ScrollBar_IsTouch
+      address:
+        NA: 0x2154FB0
+    - name: ScrollBar_CalcRect
+      address:
+        NA: 0x2154FFC
+    - name: ScrollBar_Disp
+      address:
+        NA: 0x21550D4
+    - name: Dwci_SearchlInit
+      address:
+        NA: 0x2155110
+    - name: Dwci_SearchlEnd
+      address:
+        NA: 0x2155144
+    - name: Dwci_SearchlBegin
+      address:
+        NA: 0x2155178
+    - name: Search_StartScan
+      address:
+        NA: 0x2155244
+    - name: Dwci_SearchlStop
+      address:
+        NA: 0x2155278
+    - name: Dwci_SearchlGetApInfo
+      address:
+        NA: 0x2155314
+    - name: Search_Callback
+      address:
+        NA: 0x2155370
+    - name: Search_RenewInfo
+      address:
+        NA: 0x21553D4
+    - name: Dwci_SettignlInit
+      address:
+        NA: 0x21555A8
+    - name: Dwci_SettignlEnd
+      address:
+        NA: 0x21555EC
+    - name: Dwci_SettignlGet
+      address:
+        NA: 0x2155600
+    - name: Dwci_SettinglSetIpAuto
+      address:
+        NA: 0x2155614
+    - name: Dwci_SettinglSetDnsAuto
+      address:
+        NA: 0x2155628
+    - name: Dwci_SettinglSetSsid
+      address:
+        NA: 0x215563C
+    - name: Dwci_SettinglSetWep
+      address:
+        NA: 0x215566C
+    - name: Dwci_SettinglSetIp
+      address:
+        NA: 0x2155804
+    - name: Dwci_SettinglSetNetMask
+      address:
+        NA: 0x2155820
+    - name: Dwci_SettinglSetGateway
+      address:
+        NA: 0x215583C
+    - name: Dwci_SettinglSetDnsP
+      address:
+        NA: 0x215585C
+    - name: Dwci_SettinglSetDnsS
+      address:
+        NA: 0x215587C
+    - name: Dwci_SettinglGetSsid
+      address:
+        NA: 0x215589C
+    - name: Dwci_SettinglGetIp
+      address:
+        NA: 0x21558C0
+    - name: Dwci_SettinglGetNetMask
+      address:
+        NA: 0x2155900
+    - name: Dwci_SettinglGetGateway
+      address:
+        NA: 0x2155940
+    - name: Dwci_SettinglGetDnsP
+      address:
+        NA: 0x2155984
+    - name: Dwci_SettinglGetDnsS
+      address:
+        NA: 0x21559C8
+    - name: Dwci_SettinglGetSetType
+      address:
+        NA: 0x2155A0C
+    - name: Dwci_SettinglSetSetting
+      address:
+        NA: 0x2155A24
+    - name: Dwci_SettinglSet
+      address:
+        NA: 0x2155B04
+    - name: Dwci_SettinglSetRaku
+      address:
+        NA: 0x2155BE0
+    - name: Dwci_SettinglSetAoss
+      address:
+        NA: 0x2155CF4
+    - name: Dwci_SettinglGetMemMap
+      address:
+        NA: 0x2155E04
+    - name: Dwci_SettinglErasePage
+      address:
+        NA: 0x2155E14
+    - name: Dwci_SettinglEraseAll
+      address:
+        NA: 0x2155E50
+    - name: Setting_Write
+      address:
+        NA: 0x2155F00
+    - name: Dwci_SettinglConvAddress
+      address:
+        NA: 0x2156068
+    - name: Setting_Ascii2Hex
+      address:
+        NA: 0x21560F0
+    - name: Dwci_SndlInit
+      address:
+        NA: 0x215610C
+    - name: Dwci_SndlEnd
+      address:
+        NA: 0x215619C
+    - name: Dwci_SndlPlay
+      address:
+        NA: 0x21561C8
+    - name: Dwci_SndlSetVolume
+      address:
+        NA: 0x21561EC
+    - name: Dwci_SndlSetPitch
+      address:
+        NA: 0x215620C
+    - name: Dwci_SndlStop
+      address:
+        NA: 0x2156230
+    - name: Nns_SndMainVeneer
+      address:
+        NA: 0x2156250
+    - name: Dwci_SteplBegin
+      address:
+        NA: 0x215625C
+    - name: Step_TaskBegin0
+      address:
+        NA: 0x2156358
+    - name: Step_TaskBegin1
+      address:
+        NA: 0x215643C
+    - name: Step_TaskBegin2
+      address:
+        NA: 0x2156520
+    - name: Step_TaskBegin3
+      address:
+        NA: 0x2156604
+    - name: Step_TaskBegin4
+      address:
+        NA: 0x21566E8
+    - name: Step_TaskBegin5
+      address:
+        NA: 0x2156788
+    - name: Dwci_SteplEnd
+      address:
+        NA: 0x21567B0
+    - name: Dwci_SteplChange
+      address:
+        NA: 0x21567F0
+    - name: Dwci_SteplGet
+      address:
+        NA: 0x21568B8
+    - name: Step_TaskEnd0
+      address:
+        NA: 0x21568D8
+    - name: Step_TaskEnd1
+      address:
+        NA: 0x215696C
+    - name: Step_TaskEnd2
+      address:
+        NA: 0x2156A48
+    - name: Step_TaskEnd3
+      address:
+        NA: 0x2156B24
+    - name: Step_TaskEnd4
+      address:
+        NA: 0x2156C00
+    - name: Dwci_SteplIsEnd
+      address:
+        NA: 0x2156CD8
+    - name: Dwci_SteplChangeScr
+      address:
+        NA: 0x2156D04
+    - name: Step_TaskChange
+      address:
+        NA: 0x2156D4C
+    - name: Dwci_UsbaplBegin
+      address:
+        NA: 0x2156D98
+    - name: UsbAp_StartScan
+      address:
+        NA: 0x2156F1C
+    - name: Dwci_UsbaplEnd
+      address:
+        NA: 0x2156F50
+    - name: Dwci_UsbaplSetCallback
+      address:
+        NA: 0x2157034
+    - name: UsbAp_CbWm
+      address:
+        NA: 0x215704C
+    - name: UsbAp_ScanFirst
+      address:
+        NA: 0x21570DC
+    - name: UsbAp_ScanWait
+      address:
+        NA: 0x2157234
+    - name: UsbAp_TaskFirst
+      address:
+        NA: 0x2157340
+    - name: Dwci_WinlInitEx
+      address:
+        NA: 0x215747C
+    - name: Dwci_WinlEnd
+      address:
+        NA: 0x21577A8
+    - name: Dwci_WinlGet
+      address:
+        NA: 0x21577EC
+    - name: Dwci_WinlIsInit
+      address:
+        NA: 0x2157800
+    - name: Window_TaskV
+      address:
+        NA: 0x215781C
+    - name: Window_TaskMove
+      address:
+        NA: 0x215787C
+    - name: Window_TaskMain
+      address:
+        NA: 0x2157950
+    - name: Window_TaskMain1
+      address:
+        NA: 0x2157AAC
+    - name: Window_Disp
+      address:
+        NA: 0x2157B18
+    - name: Window_DispCell
+      address:
+        NA: 0x2157CC0
+    - name: Window_PushButton
+      address:
+        NA: 0x2157D4C
+    - name: Window_TaskEnd
+      address:
+        NA: 0x2157E0C
+    - name: Window_TaskEnd1
+      address:
+        NA: 0x2157E48
+    - name: Window_TaskEnd2
+      address:
+        NA: 0x2157ED8
+    - name: Window_TaskEnd3
+      address:
+        NA: 0x2157F34
+    - name: Dwci_Mov_Mbp_MemInit
+      address:
+        NA: 0x2157FE4
+    - name: Dwci_Mov_Mbp_Init
+      address:
+        NA: 0x2158024
+    - name: Dwci_Mov_Mbp_Start
+      address:
+        NA: 0x2158144
+    - name: Dwci_Mov_Mbp_RegistFile
+      address:
+        NA: 0x215818C
+    - name: Dwci_Mov_Mbp_AcceptChild
+      address:
+        NA: 0x2158260
+    - name: Dwci_Mov_Mbp_KickChild
+      address:
+        NA: 0x2158300
+    - name: Dwci_Mov_Mbp_StartDownload
+      address:
+        NA: 0x21583D8
+    - name: Dwci_Mov_Mbp_StartDownloadAll
+      address:
+        NA: 0x21584B0
+    - name: Dwci_Mov_Mbp_IsBootableAll
+      address:
+        NA: 0x2158590
+    - name: Dwci_Mov_Mbp_StartRebootAll
+      address:
+        NA: 0x21585F8
+    - name: Dwci_Mov_Mbp_Cancel
+      address:
+        NA: 0x21586F0
+    - name: ParentStateCallback
+      address:
+        NA: 0x2158734
+    - name: Dwci_Mov_Mbp_ChangeState
+      address:
+        NA: 0x2158A58
+    - name: Dwci_Mov_Mbp_GetState
+      address:
+        NA: 0x2158A6C
+    - name: Dwci_Mov_Mbp_GetChildBmp
+      address:
+        NA: 0x2158A80
+    - name: Dwci_Mov_Mbp_GetChildState
+      address:
+        NA: 0x2158AD8
+    - name: Dwci_Mov_Mbp_GetChildInfo
+      address:
+        NA: 0x2158BA0
+    - name: Dwci_Mov_Mbp_GetPlayerNo
+      address:
+        NA: 0x2158BD4
+    - name: Dwci_Mov_WH_MemInit
+      address:
+        NA: 0x2158C7C
+    - name: Dwci_Mov_WH_ChangeSysState
+      address:
+        NA: 0x2158CB8
+    - name: Dwci_Mov_WH_SetError
+      address:
+        NA: 0x2158D34
+    - name: Dwci_Mov_WH_StateInSetParentParam
+      address:
+        NA: 0x2158D54
+    - name: Dwci_Mov_WH_StateOutSetParentParam
+      address:
+        NA: 0x2158D98
+    - name: Dwci_Mov_WH_StateInSetParentWepKey
+      address:
+        NA: 0x2158E04
+    - name: Dwci_Mov_WH_StateOutSetParentWepKey
+      address:
+        NA: 0x2158E68
+    - name: Dwci_Mov_WH_StateInStartParent
+      address:
+        NA: 0x2158EA0
+    - name: Dwci_Mov_WH_StateOutStartParent
+      address:
+        NA: 0x2158F04
+    - name: Dwci_Mov_WH_StateInStartParentMP
+      address:
+        NA: 0x2159074
+    - name: Dwci_Mov_WH_StateOutStartParentMP
+      address:
+        NA: 0x215910C
+    - name: Dwci_Mov_WH_StateInStartParentKeyShare
+      address:
+        NA: 0x2159238
+    - name: Dwci_Mov_WH_StateInEndParentKeyShare
+      address:
+        NA: 0x2159274
+    - name: Dwci_Mov_WH_StateInEndParentMP
+      address:
+        NA: 0x21592A4
+    - name: Dwci_Mov_WH_StateOutEndParentMP
+      address:
+        NA: 0x21592D4
+    - name: Dwci_Mov_WH_StateInEndParent
+      address:
+        NA: 0x2159328
+    - name: Dwci_Mov_WH_StateInEndChildKeyShare
+      address:
+        NA: 0x2159374
+    - name: Dwci_Mov_WH_StateInEndChildMP
+      address:
+        NA: 0x21593C4
+    - name: Dwci_Mov_WH_StateOutEndChildMP
+      address:
+        NA: 0x21593F4
+    - name: Dwci_Mov_WH_StateInEndChild
+      address:
+        NA: 0x2159428
+    - name: Dwci_Mov_WH_StateInReset
+      address:
+        NA: 0x2159484
+    - name: Dwci_Mov_WH_StateOutReset
+      address:
+        NA: 0x21594B4
+    - name: Dwci_Mov_WH_StateOutEnd
+      address:
+        NA: 0x21594E8
+    - name: Dwci_Mov_WH_SetGgid
+      address:
+        NA: 0x2159510
+    - name: Dwci_Mov_WH_GetBitmap
+      address:
+        NA: 0x2159524
+    - name: Dwci_Mov_WH_GetSystemState
+      address:
+        NA: 0x2159538
+    - name: Dwci_Mov_WH_StartMeasureChannel
+      address:
+        NA: 0x215954C
+    - name: Dwci_Mov_WH_StateInMeasureChannel
+      address:
+        NA: 0x2159624
+    - name: Dwci_Mov_WH_StateOutMeasureChannel
+      address:
+        NA: 0x21596C0
+    - name: WHi_MeasureChannel
+      address:
+        NA: 0x2159798
+    - name: Dwci_Mov_WH_GetMeasureChannel
+      address:
+        NA: 0x21597B8
+    - name: SelectChannel
+      address:
+        NA: 0x2159830
+    - name: Dwci_Mov_WH_Initialize
+      address:
+        NA: 0x2159918
+    - name: Dwci_Mov_WH_StateInInitialize
+      address:
+        NA: 0x21599B0
+    - name: Dwci_Mov_WH_StateOutInitialize
+      address:
+        NA: 0x21599FC
+    - name: Dwci_Mov_WH_ParentConnect
+      address:
+        NA: 0x2159A4C
+    - name: Dwci_Mov_WH_GetSharedDataAdr
+      address:
+        NA: 0x2159BD8
+    - name: Dwci_Mov_WH_StepDS
+      address:
+        NA: 0x2159C00
+    - name: Dwci_Mov_WH_Reset
+      address:
+        NA: 0x2159CA8
+    - name: Dwci_Mov_WH_Finalize
+      address:
+        NA: 0x2159CC4
+    - name: Dwci_Mov_WH_End
+      address:
+        NA: 0x2159DCC
+    - name: Dwci_MovInit
+      address:
+        NA: 0x2159E1C
+    - name: Dwci_MovFinalize
+      address:
+        NA: 0x2159F0C
+    - name: Dwci_MovPrepare
+      address:
+        NA: 0x2159FE8
+    - name: Dwci_MovStartAdmitChild
+      address:
+        NA: 0x215A068
+    - name: Dwci_MovStartDownloadandBootChildVeneer
+      address:
+        NA: 0x215A0B0
+    - name: Dwci_MovFramework
+      address:
+        NA: 0x215A0E4
+    - name: Dwci_MovGetStatus
+      address:
+        NA: 0x215A468
+    - name: Dwci_MovSearchChannel
+      address:
+        NA: 0x215A4BC
+    - name: Dwci_MovStartWaitChild
+      address:
+        NA: 0x215A564
+    - name: Dwci_Mov_WaitandDownloadandBoot_Child
+      address:
+        NA: 0x215A588
+    - name: Dwci_Mov_ReadyMovUserID
+      address:
+        NA: 0x215A740
+    - name: Dwci_Mov_MovUserID
+      address:
+        NA: 0x215A76C
+    - name: Dwci_Mov_EraseFlashData
+      address:
+        NA: 0x215A948
+    - name: Dwci_MovEnd
+      address:
+        NA: 0x215A960
+    - name: JudgeConnectableChild
+      address:
+        NA: 0x215A990
+    - name: Parent_InitDataShare
+      address:
+        NA: 0x215A9CC
+    - name: Parent_StepDataShare
+      address:
+        NA: 0x215AA10
+    - name: Parent_Data_Receive_Progress
+      address:
+        NA: 0x215AB78
+    - name: Parent_Get_Child_Data_Kind
+      address:
+        NA: 0x215AC5C
+    - name: Dwci_ArclInit
+      address:
+        NA: 0x215AC74
+    - name: Dwci_ArclEnd
+      address:
+        NA: 0x215AE24
+    - name: Archive_UserProc
+      address:
+        NA: 0x215AEB0
+    - name: Archive_CbRead
+      address:
+        NA: 0x215AF14
+    - name: Archive_CbReadRom
+      address:
+        NA: 0x215AF54
+    - name: Archive_CbWrite
+      address:
+        NA: 0x215AF64
+    - name: Dwci_ArclReadEx
+      address:
+        NA: 0x215AF6C
+    - name: Dwci_ArclRelease
+      address:
+        NA: 0x215B060
+    - name: Archive_CmpBack
+      address:
+        NA: 0x215B094
+    - name: Dwci_CelllInit
+      address:
+        NA: 0x215B0EC
+    - name: Dwci_CelllEnd
+      address:
+        NA: 0x215B1C0
+    - name: Dwci_CelllForm
+      address:
+        NA: 0x215B214
+    - name: Dwci_CelllDelete
+      address:
+        NA: 0x215B370
+    - name: Dwci_CelllGetObj
+      address:
+        NA: 0x215B3F0
+    - name: Dwci_CelllSetAttr
+      address:
+        NA: 0x215B3FC
+    - name: Dwci_CelllSetEffect
+      address:
+        NA: 0x215B404
+    - name: Dwci_CelllSetPalette
+      address:
+        NA: 0x215B4A8
+    - name: Dwci_CelllSetPosition
+      address:
+        NA: 0x215B528
+    - name: Dwci_CelllSetPriority
+      address:
+        NA: 0x215B618
+    - name: Dwci_CelllGetPosition
+      address:
+        NA: 0x215B678
+    - name: Dwci_CeinlRead
+      address:
+        NA: 0x215B6A8
+    - name: Dwci_CeinlRelease
+      address:
+        NA: 0x215B6D8
+    - name: Dwci_CeinlSet
+      address:
+        NA: 0x215B700
+    - name: Dwci_CeinlSetExObj
+      address:
+        NA: 0x215B794
+    - name: Dwci_CeinlSetExCell
+      address:
+        NA: 0x215B7C0
+    - name: Dwci_QuelForm
+      address:
+        NA: 0x215B808
+    - name: Dwci_QuelFormEx
+      address:
+        NA: 0x215B83C
+    - name: Dwci_QuelDelete
+      address:
+        NA: 0x215B87C
+    - name: Dwci_QuelPushBack
+      address:
+        NA: 0x215B898
+    - name: Dwci_QuelPopBack
+      address:
+        NA: 0x215B8F0
+    - name: Dwci_EfflInit
+      address:
+        NA: 0x215B948
+    - name: Dwci_EfflEnd
+      address:
+        NA: 0x215B990
+    - name: Dwci_EfflCheck
+      address:
+        NA: 0x215B9A4
+    - name: Dwci_EfflFade
+      address:
+        NA: 0x215B9C8
+    - name: Effect_TaskFade
+      address:
+        NA: 0x215BAA0
+    - name: Dwci_EfflWait
+      address:
+        NA: 0x215BBC8
+    - name: Effect_TaskWait
+      address:
+        NA: 0x215BC20
+    - name: Dwci_FntlInit
+      address:
+        NA: 0x215BC58
+    - name: Dwci_FntlEnd
+      address:
+        NA: 0x215BD5C
+    - name: Dwci_FntlFormEx
+      address:
+        NA: 0x215BDA8
+    - name: Dwci_FntlDelete
+      address:
+        NA: 0x215BE84
+    - name: Dwci_FntlFormBgEx
+      address:
+        NA: 0x215BEB0
+    - name: Effect_TaskLoad
+      address:
+        NA: 0x215C028
+    - name: Dwci_FntlDeleteBg
+      address:
+        NA: 0x215C0B0
+    - name: Dwci_FntlDeleteBgLcd
+      address:
+        NA: 0x215C114
+    - name: Dwci_FntlDraw
+      address:
+        NA: 0x215C138
+    - name: Dwci_FntlDrawCharEx
+      address:
+        NA: 0x215C1E8
+    - name: Dwci_FntlDrawStringEx
+      address:
+        NA: 0x215C224
+    - name: Dwci_FntlDrawRect
+      address:
+        NA: 0x215C2D0
+    - name: Dwci_FntlClear
+      address:
+        NA: 0x215C390
+    - name: Dwci_FntlDisp
+      address:
+        NA: 0x215C3A4
+    - name: Dwci_FntlRenewBg
+      address:
+        NA: 0x215C43C
+    - name: Dwci_InputCoord
+      address:
+        NA: 0x215C460
+    - name: Dwci_InputRect
+      address:
+        NA: 0x215C46C
+    - name: Dwci_Coord2Rect
+      address:
+        NA: 0x215C484
+    - name: Dwci_GXlVisible
+      address:
+        NA: 0x215C4B8
+    - name: Dwci_GXlInvisible
+      address:
+        NA: 0x215C50C
+    - name: Dwci_GXlSetWndPosition
+      address:
+        NA: 0x215C568
+    - name: Dwci_GXlSetWndPlane
+      address:
+        NA: 0x215C680
+    - name: Dwci_HeaplInit
+      address:
+        NA: 0x215C7EC
+    - name: Dwci_HeaplEnd
+      address:
+        NA: 0x215C82C
+    - name: Dwci_HeaplAlloc
+      address:
+        NA: 0x215C850
+    - name: Dwci_HeaplAllocEx
+      address:
+        NA: 0x215C89C
+    - name: Dwci_HeaplFree
+      address:
+        NA: 0x215C8C0
+    - name: Dwci_HeaplFree2
+      address:
+        NA: 0x215C904
+    - name: Dwci_IptlInit
+      address:
+        NA: 0x215C940
+    - name: Dwci_IptlEnd
+      address:
+        NA: 0x215C9BC
+    - name: Dwci_IptlRead
+      address:
+        NA: 0x215C9F4
+    - name: Input_ReadKey
+      address:
+        NA: 0x215CA04
+    - name: Input_ReadTouch
+      address:
+        NA: 0x215CB08
+    - name: Dwci_IptlCheck_Key
+      address:
+        NA: 0x215CCA4
+    - name: Dwci_IptlCheckTrigger_Key
+      address:
+        NA: 0x215CCC8
+    - name: Dwci_IptlCheckRepeat_Key
+      address:
+        NA: 0x215CCEC
+    - name: Dwci_TPlCheck
+      address:
+        NA: 0x215CD10
+    - name: Dwci_TPlCheckTrigger
+      address:
+        NA: 0x215CD7C
+    - name: Dwci_TPlCheckRepeat
+      address:
+        NA: 0x215CDE8
+    - name: Dwci_TPlCheckRelease
+      address:
+        NA: 0x215CE54
+    - name: Dwci_TPlCheckATrigger
+      address:
+        NA: 0x215CEC0
+    - name: Dwci_TPlGet
+      address:
+        NA: 0x215CF08
+    - name: Dwci_IptlCheckFold
+      address:
+        NA: 0x215CF54
+    - name: Dwci_ItrlIntr
+      address:
+        NA: 0x215CFD0
+    - name: Dwci_ItrlEnd
+      address:
+        NA: 0x215D044
+    - name: Interrupt_IntrVBlank
+      address:
+        NA: 0x215D080
+    - name: Dwci_LstlForm
+      address:
+        NA: 0x215D0A8
+    - name: Dwci_LstlDelete
+      address:
+        NA: 0x215D0D4
+    - name: Dwci_LstlErase
+      address:
+        NA: 0x215D0F0
+    - name: Dwci_LstlInsert
+      address:
+        NA: 0x215D128
+    - name: Dwci_LstlPopBack
+      address:
+        NA: 0x215D158
+    - name: Dwci_LstlPopFront
+      address:
+        NA: 0x215D168
+    - name: Dwci_ObjlInit
+      address:
+        NA: 0x215D178
+    - name: Obj_TaskTransfer
+      address:
+        NA: 0x215D214
+    - name: Dwci_ObjlEnd
+      address:
+        NA: 0x215D25C
+    - name: Dwci_ObjlFormGx
+      address:
+        NA: 0x215D288
+    - name: Dwci_ObjlDelete
+      address:
+        NA: 0x215D2A8
+    - name: Dwci_ObjlGetOam
+      address:
+        NA: 0x215D2F4
+    - name: Dwci_OvrlInit
+      address:
+        NA: 0x215D30C
+    - name: Dwci_OvrlAlloc
+      address:
+        NA: 0x215D3CC
+    - name: Dwci_OvrlFree
+      address:
+        NA: 0x215D544
+    - name: Dwci_StrlNLen
+      address:
+        NA: 0x215D584
+    - name: Dwci_ClearVram
+      address:
+        NA: 0x215D5B0
+    - name: Dwci_RepairVram
+      address:
+        NA: 0x215D664
+    - name: Sub_ClearVram
+      address:
+        NA: 0x215D75C
+    - name: Dwci_SetLedWireless
+      address:
+        NA: 0x215D7E0
+    - name: Dwci_SetLedNormal
+      address:
+        NA: 0x215D80C
+    - name: Dwci_TsklInit
+      address:
+        NA: 0x215D81C
+    - name: Dwci_TsklEnd
+      address:
+        NA: 0x215D930
+    - name: Dwci_TsklAct
+      address:
+        NA: 0x215D978
+    - name: Dwci_TsklForm
+      address:
+        NA: 0x215DA28
+    - name: Task_FormTask
+      address:
+        NA: 0x215DA3C
+    - name: Dwci_TsklChangeFunc
+      address:
+        NA: 0x215DAC8
+    - name: Dwci_TsklDelete
+      address:
+        NA: 0x215DAD0
+    - name: Dwci_TsklDeleteEx
+      address:
+        NA: 0x215DAF0
+    - name: Task_DeleteTcb
+      address:
+        NA: 0x215DAFC
+    - name: Dwci_TsklOperate
+      address:
+        NA: 0x215DB40
+    - name: Dwc_Init
+      address:
+        NA: 0x215DB58
+    - name: Nhttp_Startup
+      address:
+        NA: 0x215DBBC
+    - name: Nhttpi_CleanupThreadProc
+      address:
+        NA: 0x215DCCC
+    - name: AddHdrList
+      address:
+        NA: 0x215DD08
+    - name: Nhttpi_GetHdrFromList
+      address:
+        NA: 0x215DE20
+    - name: IncAscii
+      address:
+        NA: 0x215DE64
+    - name: CheckTagPost
+      address:
+        NA: 0x215DE98
+    - name: Nhttp_AddHeaderField
+      address:
+        NA: 0x215DF38
+    - name: Nhttp_AddPostDataAscii
+      address:
+        NA: 0x215DF5C
+    - name: Nhttp_SetCaChain
+      address:
+        NA: 0x215DFD0
+    - name: Nhttpi_SetReqQueue
+      address:
+        NA: 0x215DFEC
+    - name: Nhttpi_FindReqQueue
+      address:
+        NA: 0x215E0A0
+    - name: Nhttpi_FreeReqQueue
+      address:
+        NA: 0x215E0F8
+    - name: Nhttpi_AllFreeReqQueue
+      address:
+        NA: 0x215E198
+    - name: Nhttpi_InitLockReqList
+      address:
+        NA: 0x215E1DC
     - name: ret_0215e1f4
       address:
         NA: 0x215E1F4
@@ -455,6 +3969,224 @@ overlay11:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
+    - name: Nhttpi_CreateCommThread
+      address:
+        NA: 0x215E220
+    - name: Nhttpi_DestroyCommThread
+      address:
+        NA: 0x215E298
+    - name: Nhttpi_KickCommThread
+      address:
+        NA: 0x215E2DC
+    - name: SetupGetcharFromHdrRecvBuf
+      address:
+        NA: 0x215E2F8
+    - name: GetcharFromHdrRecvBuf
+      address:
+        NA: 0x215E354
+    - name: Nhttpi_FindNextLineHdrRecvBuf
+      address:
+        NA: 0x215E3D0
+    - name: Nhttpi_SkipSpaceHdrRecvBuf
+      address:
+        NA: 0x215E4A0
+    - name: Nhttpi_CompareTokenN_HdrRecvBuf
+      address:
+        NA: 0x215E510
+    - name: Nhttpi_LoadFromHdrRecvBuf
+      address:
+        NA: 0x215E5E0
+    - name: Nhttpi_IsRecvBufFull
+      address:
+        NA: 0x215E6CC
+    - name: Nhttpi_RecvBuf
+      address:
+        NA: 0x215E6E0
+    - name: Nhttpi_RecvBufN
+      address:
+        NA: 0x215E708
+    - name: Nhttp_CreateRequest
+      address:
+        NA: 0x215E778
+    - name: Nhttp_DestroyRequest
+      address:
+        NA: 0x215ECDC
+    - name: DeleteStrList
+      address:
+        NA: 0x215ED04
+    - name: Nhttpi_DestroyRequestObject
+      address:
+        NA: 0x215ED58
+    - name: Nhttp_SendRequestAsync
+      address:
+        NA: 0x215EDD0
+    - name: Nhttpi_CancelAllRequests
+      address:
+        NA: 0x215EE5C
+    - name: Nhttpi_ResolveHostname
+      address:
+        NA: 0x215EEB0
+    - name: Nhttp_DestroyResponse
+      address:
+        NA: 0x215EF48
+    - name: Nhttpi_GetHeaderValue
+      address:
+        NA: 0x215EFC0
+    - name: Nhttp_GetHeaderField
+      address:
+        NA: 0x215F0CC
+    - name: Nhttp_GetBodyAll
+      address:
+        NA: 0x215F1D0
+    - name: Nhttpi_SetSsLseed
+      address:
+        NA: 0x215F200
+    - name: Nhttpi_SocOpen
+      address:
+        NA: 0x215F220
+    - name: Nhttpi_SocCloseWait
+      address:
+        NA: 0x215F2B0
+    - name: Nhttpi_SocConnect
+      address:
+        NA: 0x215F2EC
+    - name: Nhttpi_SocRecv
+      address:
+        NA: 0x215F368
+    - name: Nhttpi_SocSend
+      address:
+        NA: 0x215F3B4
+    - name: Nhttpi_SocCancel
+      address:
+        NA: 0x215F400
+    - name: Nhttpi_Strnicmp
+      address:
+        NA: 0x215F428
+    - name: Std_GetStringLengthVeneer
+      address:
+        NA:
+          - 0x215F490
+          - 0x2162820
+    - name: Nhttpi_Memclr
+      address:
+        NA: 0x215F49C
+    - name: Nhttpi_Memcpy
+      address:
+        NA: 0x215F4B0
+    - name: Nhttp_GetProgress
+      address:
+        NA: 0x215F4C8
+    - name: SaveBuf
+      address:
+        NA: 0x215F568
+    - name: SkipLineBuf
+      address:
+        NA: 0x215F61C
+    - name: FreeSslConnection
+      address:
+        NA: 0x215F6A8
+    - name: PutSocketToCloseQue
+      address:
+        NA: 0x215F6E4
+    - name: ClearCloseQue
+      address:
+        NA: 0x215F784
+    - name: Nhttpi_GetUrlEncodedSize
+      address:
+        NA: 0x2160AC0
+    - name: Nhttpi_EncodeUrlChar
+      address:
+        NA: 0x2160B28
+    - name: Nhttpi_StrToHex
+      address:
+        NA: 0x2160BB8
+    - name: Nhttpi_StrToInt
+      address:
+        NA: 0x2160CA0
+    - name: Nhttpi_IntToStr
+      address:
+        NA: 0x2160D38
+    - name: Nhttpi_CompareToken
+      address:
+        NA: 0x2160DF4
+    - name: Nhttpi_Strtonum
+      address:
+        NA: 0x2160E78
+    - name: Nhttpi_Memfind
+      address:
+        NA: 0x2160EE8
+    - name: Dwci_Ndi_FreeAttr
+      address:
+        NA: 0x2160F6C
+    - name: SetAttr
+      address:
+        NA: 0x2160FB0
+    - name: Dwci_NdSetAttr
+      address:
+        NA: 0x2161080
+    - name: GetNchar
+      address:
+        NA: 0x21610F0
+    - name: DecodeChar
+      address:
+        NA: 0x2161138
+    - name: Dwci_Ndi_GetEncodeLenBase64
+      address:
+        NA: 0x216119C
+    - name: Dwci_Ndi_EncodeBase64
+      address:
+        NA: 0x21611B8
+    - name: StrAlloc
+      address:
+        NA: 0x21613E0
+    - name: Dwci_NdStartup
+      address:
+        NA: 0x216142C
+    - name: NhttpCleanupCallback
+      address:
+        NA: 0x21615D4
+    - name: Dwci_NdCleanupAsync
+      address:
+        NA: 0x2161618
+    - name: Dwci_Ndi_GetDSdesc
+      address:
+        NA: 0x2161738
+    - name: Dwci_Ndi_GetUserAgent
+      address:
+        NA: 0x21617C4
+    - name: Req_Callback
+      address:
+        NA: 0x21617E4
+    - name: FreeHttp
+      address:
+        NA: 0x2161B14
+    - name: SetupHttp
+      address:
+        NA: 0x2161B40
+    - name: RunHttp
+      address:
+        NA: 0x2161E6C
+    - name: Dwci_NdGetFileListNumAsync
+      address:
+        NA: 0x2161ECC
+    - name: Dwci_NdGetFileListAsync
+      address:
+        NA: 0x2161F40
+    - name: Dwci_NdGetFileAsync
+      address:
+        NA: 0x2162200
+    - name: Nhttp_GetProgressVeneer
+      address:
+        NA: 0x21623BC
+    - name: Dwci_Ndi_Response_Count
+      address:
+        NA: 0x21623C8
+    - name: Dwci_Ndi_Response_Contents
+      address:
+        NA: 0x216241C
+    - name: Dwci_Ndi_InitLockGlobal
+      address:
+        NA: 0x21626C8
     - name: ret_021626e0
       address:
         NA: 0x21626E0
@@ -462,6 +4194,9 @@ overlay11:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
+    - name: Dwci_Ndi_InitHttpCallback
+      address:
+        NA: 0x216270C
     - name: ret_02162734
       address:
         NA: 0x2162734
@@ -469,6 +4204,36 @@ overlay11:
         Does nothing but return. Likely a debug hook for a nearby function.
         
         No params.
+    - name: Dwci_Ndi_PrepareHttpCallback
+      address:
+        NA: 0x2162738
+    - name: Dwci_Ndi_UnprepareHttpCallback
+      address:
+        NA: 0x2162780
+    - name: Dwci_Ndi_KickThread
+      address:
+        NA: 0x21627AC
+    - name: Dwci_Ndi_GetMacAddress
+      address:
+        NA: 0x21627C0
+    - name: Std_CompareNStringVeneer
+      address:
+        NA: 0x216282C
+    - name: Dwci_Ndi_Memclr
+      address:
+        NA: 0x2162838
+    - name: Dwci_Ndi_Memcpy
+      address:
+        NA: 0x216284C
+    - name: Nhttpi_StrToIntVeneer
+      address:
+        NA: 0x2162864
+    - name: Nhttpi_IntToStrVeneer
+      address:
+        NA: 0x2162870
+    - name: Dwci_Ndi_HexToStrFigure
+      address:
+        NA: 0x216295C  
   data:
     - name: OV11_STATIC_INITIALIZER
       address:

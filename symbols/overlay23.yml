@@ -24,6 +24,7 @@ overlay23:
         
         r0: ov_23_unk_struct pointer
     - name: ret_0211d0bc
+#      namespace: c_record_scene
       address:
         NA: 0x211D0BC
       description: |-
