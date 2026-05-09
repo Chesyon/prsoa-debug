@@ -3,7 +3,11 @@
 
 extern undefined4 OV28_STATIC_INITIALIZER;
 extern struct __si_class_type_info C_MAP_DISP_SCENE;
+extern undefined C_MAP_DISP_SCENE_VFTABLE;
+extern undefined C_MAP_DISP_SCENE_VFTABLE_FUNCS;
 extern struct __class_type_info I_MAP_DISP_RSC_PATH_BUILDER;
 extern struct __si_class_type_info C_MAP_DISP_SCREEN_C_PATH_BUILDER;
+extern undefined C_MAP_DISP_SCREEN_C_PATH_BUILDER_VFTABLE;
+extern undefined C_MAP_DISP_SCREEN_C_PATH_BUILDER_VFTABLE_FUNCS;
 
 #endif

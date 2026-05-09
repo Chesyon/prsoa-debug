@@ -3,7 +3,13 @@
 
 extern undefined4 OV11_STATIC_INITIALIZER;
 extern struct __si_class_type_info C_RANGER_NET_SCENE;
+extern undefined C_RANGER_NET_SCENE_VFTABLE;
+extern undefined C_RANGER_NET_SCENE_VFTABLE_FUNCS;
 extern struct __si_class_type_info C_RANGER_NET_AGB_SCENE;
+extern undefined C_RANGER_NET_AGB_SCENE_VFTABLE;
+extern undefined C_RANGER_NET_AGB_SCENE_VFTABLE_FUNCS;
 extern struct __si_class_type_info C_COMPANY_LOGO_SCENE;
+extern undefined C_COMPANY_LOGO_SCENE_VFTABLE;
+extern undefined C_COMPANY_LOGO_SCENE_VFTABLE_FUNCS;
 
 #endif

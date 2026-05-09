@@ -3,16 +3,36 @@
 
 extern undefined4 OV21_STATIC_INITIALIZER;
 extern struct __si_class_type_info C_BROWSER_SCENE;
+extern undefined C_BROWSER_SCENE_VFTABLE;
+extern undefined C_BROWSER_SCENE_VFTABLE_FUNCS;
 extern struct __class_type_info C_BROWSER_MENU_MANAGER;
+extern undefined C_BROWSER_MENU_MANAGER_VFTABLE;
+extern undefined C_BROWSER_MENU_MANAGER_VFTABLE_FUNCS;
 extern struct __class_type_info C_BROWSER_MENU_ITEM;
 extern struct __class_type_info C_BROWSER_MENU_CURSOR;
 extern struct __si_class_type_info C_BROWSER_MENU_CURSOR_POKEMON;
 extern struct __si_class_type_info C_BROWSER_MENU_ITEM_POKEMON;
 extern struct __si_class_type_info C_BROWSER_MENU_MANAGER_POKEMON;
+extern undefined C_BROWSER_MENU_CURSOR_POKEMON_VFTABLE;
+extern undefined C_BROWSER_MENU_CURSOR_POKEMON_VFTABLE_FUNCS;
+extern undefined C_BROWSER_MENU_MANAGER_POKEMON_VFTABLE;
+extern undefined C_BROWSER_MENU_MANAGER_POKEMON_VFTABLE_FUNCS;
+extern undefined C_BROWSER_MENU_ITEM_POKEMON_VFTABLE;
+extern undefined C_BROWSER_MENU_ITEM_POKEMON_VFTABLE_FUNCS;
 extern struct __si_class_type_info C_BROWSER_MENU_CURSOR_ICON;
 extern struct __si_class_type_info C_BROWSER_MENU_ITEM_ICON;
 extern struct __si_class_type_info C_BROWSER_MENU_MANAGER_ICON;
+extern undefined C_BROWSER_MENU_CURSOR_ICON_VFTABLE;
+extern undefined C_BROWSER_MENU_CURSOR_ICON_VFTABLE_FUNCS;
+extern undefined C_BROWSER_MENU_MANAGER_ICON_VFTABLE;
+extern undefined C_BROWSER_MENU_MANAGER_ICON_VFTABLE_FUNCS;
+extern undefined C_BROWSER_MENU_ITEM_ICON_VFTABLE;
+extern undefined C_BROWSER_MENU_ITEM_ICON_VFTABLE_FUNCS;
 extern struct __si_class_type_info C_BROWSER_MENU_ITEM_TYPE;
 extern struct __si_class_type_info C_BROWSER_MENU_MANAGER_TYPE;
+extern undefined C_BROWSER_MENU_MANAGER_TYPE_VFTABLE;
+extern undefined C_BROWSER_MENU_MANAGER_TYPE_VFTABLE_FUNCS;
+extern undefined C_BROWSER_MENU_ITEM_TYPE_VFTABLE;
+extern undefined C_BROWSER_MENU_ITEM_TYPE_VFTABLE_FUNCS;
 
 #endif
